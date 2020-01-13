@@ -1,0 +1,31 @@
+++++++++++++++++++++++++++++++++
+LaTex notes
+++++++++++++++++++++++++++++++++
+.. |clearer|  raw:: html
+
+    <div class="clearer"></div>
+
+.. image:: images/logoLatex.jpg
+   :scale: 50 %
+   :alt: Logo LaTex
+   :align: left
+   
+|clearer|
+
+.. index::
+    pair: Latex; Documentation
+    see: doc; Documentation
+
+    
+
+:Auteur: J.Soranzo
+:Date: Octobre 2019
+:Societe: VoLAB
+:Entity: VoRoBoTics
+
+.. contents:: Table des matières articles LaTex
+
+================================
+Installation
+================================
+Comme il est dit sur le site du projet, LaTex n'est pas une application au sens Windows du terme.

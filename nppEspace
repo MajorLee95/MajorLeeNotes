@@ -1,0 +1,28 @@
+<NotepadPlus>
+    <Project name="MyNotes">
+        <File name="index.rst" />
+        <File name="astuceInformatiques\astuceInformatiques.rst" />
+        <File name="sphinx\sphinx.rst" />
+        <File name="latex\latex.rst" />
+        <File name="pandoc\pandoc.rst" />
+        <File name="Synchronisation\Synchronisation.rst" />
+        <File name="linux\linux.rst" />
+        <File name="hardware\hardware.rst" />
+        <File name="hardware\fpga\fpga.rst" />
+        <File name="hardware\merureDistance.rst" />
+        <File name="C++\cpp.rst" />
+        <File name="C++\visualCpp\visual.rst" />
+        <File name="C++\Qt\Qt.rst" />
+        <File name="lesObjetsConnectes\lesObjetsConnectes.rst" />
+        <File name="lesObjetsConnectes\plateformServiceServeur\plateformServiceServeur.rst" />
+        <File name="documenter\documenter.rst" />
+        <File name="git\git.rst" />
+        <File name="docker\docker.rst" />
+        <File name="glossaire.rst" />
+        <Folder name="Personnal">
+            <File name="C:\MountWD\Donnees\ODJ\008_iao_wrk\VoRoboticsAsso\00-ProjetsPerso\053-compileNotes\project\_01-docs\_01-privateDoc\source\index.rst" />
+            <File name="C:\MountWD\Donnees\ODJ\008_iao_wrk\VoRoboticsAsso\00-ProjetsPerso\053-compileNotes\project\_01-docs\_01-privateDoc\source\linuxForYourEyesOnly.rst" />
+            <File name="C:\MountWD\Donnees\ODJ\008_iao_wrk\VoRoboticsAsso\00-ProjetsPerso\053-compileNotes\project\_01-docs\_01-privateDoc\source\visualForYourEyesOnly.rst" />
+        </Folder>
+    </Project>
+</NotepadPlus>
