@@ -9,6 +9,7 @@ Astuces informatiques
 :Entity: VoRoBoTics
 
 .. contents:: Table_name
+    :backlinks: top
 
 
 .. index::
@@ -18,7 +19,7 @@ Astuces informatiques
 ================================
 Microsoft
 ================================
-Connaître le type de licence Windwos10 
+Connaître le type de licence Windows10 
 ======================================
 slmgr -dli
 

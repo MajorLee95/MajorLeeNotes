@@ -4,8 +4,8 @@
    contain the root `toctree` directive.
    
    
-Welcome to MajorLee's notes's documentation!
-============================================
+Bienvenue to MajorLee's notes documentation!
+===============================================
 
 .. toctree::
    :maxdepth: 2
@@ -26,6 +26,7 @@ Welcome to MajorLee's notes's documentation!
    /git/git
    /docker/docker
    glossaire
+   Readme
 
 Licence
 ============
@@ -36,7 +37,7 @@ proviennent d'autres auteurs.
 Je m'efforce de respecter en toute bonne fois leur licence respective.
 
 Mes écrits copiés, utilisés à d'autres fins ne sauraient engager ma responsabilité.
-J'assume ce que j'écris pas ce que les autres pourraient en faire.
+J'assume ce que j'écris pas ce que les autres pourraient en faire de manière détournée.
 
 
 

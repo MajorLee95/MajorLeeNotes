@@ -1,5 +1,5 @@
 ++++++++++++++++++++++++++++++++
-Mon utilisation de Sphinx
+Sphinx
 ++++++++++++++++++++++++++++++++
 
 :Auteur: J.Soranzo
@@ -27,6 +27,8 @@ Sphinx pour la documentation
    :align: left
 
 |clearer|
+
+Voici mon utilisation de Sphinx !
 
 Pourquoi ?
 ======================================
@@ -109,6 +111,12 @@ Retouches de index.rst
     single: Sphinx; liens locaux
     single: Sphinx; download
 
+================================
+css pas dans gh-pages
+================================
+Mettre de le fichier .nojekill dans le répertoire source et pas dans le répertoire html ;-)
+
+Ce fichier est utilisé par make html
 
 ================================
 Liens externe locaux
