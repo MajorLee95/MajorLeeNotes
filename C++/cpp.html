@@ -1,11 +1,9 @@
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
   <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
     <title>Mes notes sur C++ &#8212; Documentation MajorLee&#39;s notes </title>
     <link rel="stylesheet" href="../_static/nature.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -43,63 +41,69 @@
             
   <div class="section" id="mes-notes-sur-c">
 <span id="index-0"></span><h1><a class="toc-backref" href="#sommaire">Mes notes sur C++</a><a class="headerlink" href="#mes-notes-sur-c" title="Lien permanent vers ce titre">¶</a></h1>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Auteur:</th><td class="field-body">J.Soranzo</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Date:</th><td class="field-body">Novembre 2019</td>
-</tr>
-<tr class="field-odd field"><th class="field-name">Societe:</th><td class="field-body">VoLAB</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Entity:</th><td class="field-body">VoRoBoTics</td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple">
+<dt class="field-odd">Auteur</dt>
+<dd class="field-odd"><p>J.Soranzo</p>
+</dd>
+<dt class="field-even">Date</dt>
+<dd class="field-even"><p>Novembre 2019</p>
+</dd>
+<dt class="field-odd">Societe</dt>
+<dd class="field-odd"><p>VoLAB</p>
+</dd>
+<dt class="field-even">Entity</dt>
+<dd class="field-even"><p>VoRoBoTics</p>
+</dd>
+</dl>
 <div class="contents topic" id="sommaire">
 <p class="topic-title first">Sommaire</p>
 <ul class="simple">
-<li><a class="reference internal" href="#mes-notes-sur-c" id="id12">Mes notes sur C++</a><ul>
-<li><a class="reference internal" href="#c-operators-surcharge" id="id13">C++ opérators (surcharge)</a><ul>
-<li><a class="reference internal" href="#surcharge-operateur" id="id14">Surcharge opérateur ==, &gt;, …</a></li>
-<li><a class="reference internal" href="#surcharge-des-operateurs-arithmetiques" id="id15">Surcharge des opérateurs arithmétiques</a></li>
-<li><a class="reference internal" href="#surcharge-de-l-operateur" id="id16">Surcharge de l’opérateur &lt;&lt;</a></li>
+<li><p><a class="reference internal" href="#mes-notes-sur-c" id="id12">Mes notes sur C++</a></p>
+<ul>
+<li><p><a class="reference internal" href="#c-operators-surcharge" id="id13">C++ opérators (surcharge)</a></p>
+<ul>
+<li><p><a class="reference internal" href="#surcharge-operateur" id="id14">Surcharge opérateur ==, &gt;, …</a></p></li>
+<li><p><a class="reference internal" href="#surcharge-des-operateurs-arithmetiques" id="id15">Surcharge des opérateurs arithmétiques</a></p></li>
+<li><p><a class="reference internal" href="#surcharge-de-l-operateur" id="id16">Surcharge de l’opérateur &lt;&lt;</a></p></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#namespace" id="id17">Namespace</a></li>
-<li><a class="reference internal" href="#template" id="id18">Template</a><ul>
-<li><a class="reference internal" href="#specialisation" id="id19">Spécialisation</a></li>
+<li><p><a class="reference internal" href="#namespace" id="id17">Namespace</a></p></li>
+<li><p><a class="reference internal" href="#template" id="id18">Template</a></p>
+<ul>
+<li><p><a class="reference internal" href="#specialisation" id="id19">Spécialisation</a></p></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#membres-statiques" id="id20">Membres statiques</a></li>
-<li><a class="reference internal" href="#passage-par-reference" id="id21">Passage par référence</a></li>
-<li><a class="reference internal" href="#heritage" id="id22">Héritage</a></li>
-<li><a class="reference internal" href="#polymorphisme" id="id23">Polymorphisme</a></li>
-<li><a class="reference internal" href="#classe-amie-et-fonction-amie" id="id24">Classe amie et fonction amie</a></li>
-<li><a class="reference internal" href="#vector" id="id25">Vector</a><ul>
-<li><a class="reference internal" href="#iterer-un-tableau-rappel" id="id26">Itérer un tableau rappel</a></li>
+<li><p><a class="reference internal" href="#membres-statiques" id="id20">Membres statiques</a></p></li>
+<li><p><a class="reference internal" href="#passage-par-reference" id="id21">Passage par référence</a></p></li>
+<li><p><a class="reference internal" href="#heritage" id="id22">Héritage</a></p></li>
+<li><p><a class="reference internal" href="#polymorphisme" id="id23">Polymorphisme</a></p></li>
+<li><p><a class="reference internal" href="#classe-amie-et-fonction-amie" id="id24">Classe amie et fonction amie</a></p></li>
+<li><p><a class="reference internal" href="#vector" id="id25">Vector</a></p>
+<ul>
+<li><p><a class="reference internal" href="#iterer-un-tableau-rappel" id="id26">Itérer un tableau rappel</a></p></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#classe-abstraite-et-methodes-virtuelles-pures" id="id27">Classe abstraite et méthodes virtuelles pures</a></li>
-<li><a class="reference internal" href="#fonctions-qui-retourne-un-reference" id="id28">Fonctions qui retourne un référence</a></li>
-<li><a class="reference internal" href="#constructeur-de-copie" id="id29">Constructeur de copie</a><ul>
-<li><a class="reference internal" href="#id1" id="id30">Surcharge de l’opérateur =</a></li>
+<li><p><a class="reference internal" href="#classe-abstraite-et-methodes-virtuelles-pures" id="id27">Classe abstraite et méthodes virtuelles pures</a></p></li>
+<li><p><a class="reference internal" href="#fonctions-qui-retourne-un-reference" id="id28">Fonctions qui retourne un référence</a></p></li>
+<li><p><a class="reference internal" href="#constructeur-de-copie" id="id29">Constructeur de copie</a></p>
+<ul>
+<li><p><a class="reference internal" href="#id1" id="id30">Surcharge de l’opérateur =</a></p></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#printf-format" id="id31">printf format</a></li>
-<li><a class="reference internal" href="#typedef-struct-co" id="id32">Typedef, struct &amp; co</a><ul>
-<li><a class="reference internal" href="#typedef" id="id33">Typedef</a></li>
-<li><a class="reference internal" href="#struct" id="id34">struct</a></li>
-<li><a class="reference internal" href="#enum" id="id35">enum</a></li>
-<li><a class="reference internal" href="#typedef-et-les-fonctions" id="id36">typedef et les fonctions</a></li>
-<li><a class="reference internal" href="#champs-de-bits" id="id37">Champs de bits</a></li>
-<li><a class="reference internal" href="#exemple-trame-serie" id="id38">Exemple trame série</a></li>
+<li><p><a class="reference internal" href="#printf-format" id="id31">printf format</a></p></li>
+<li><p><a class="reference internal" href="#typedef-struct-co" id="id32">Typedef, struct &amp; co</a></p>
+<ul>
+<li><p><a class="reference internal" href="#typedef" id="id33">Typedef</a></p></li>
+<li><p><a class="reference internal" href="#struct" id="id34">struct</a></p></li>
+<li><p><a class="reference internal" href="#enum" id="id35">enum</a></p></li>
+<li><p><a class="reference internal" href="#typedef-et-les-fonctions" id="id36">typedef et les fonctions</a></p></li>
+<li><p><a class="reference internal" href="#champs-de-bits" id="id37">Champs de bits</a></p></li>
+<li><p><a class="reference internal" href="#exemple-trame-serie" id="id38">Exemple trame série</a></p></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#smart-pointer" id="id39">Smart pointer</a></li>
-<li><a class="reference internal" href="#callback-how-to" id="id40">callback how to</a></li>
-<li><a class="reference internal" href="#weblinks" id="id41">Weblinks</a></li>
+<li><p><a class="reference internal" href="#smart-pointer" id="id39">Smart pointer</a></p></li>
+<li><p><a class="reference internal" href="#callback-how-to" id="id40">callback how to</a></p></li>
+<li><p><a class="reference internal" href="#weblinks" id="id41">Weblinks</a></p></li>
 </ul>
 </li>
 </ul>
@@ -139,38 +143,38 @@
 </ul>
 </div>
 <p>Ceci n’est pas un cours sur le C++, il y en a déjà plein et de très bons voir celui par exemple de
-<a class="reference external" href="https://openclassrooms.com/fr/courses/1894236-programmez-avec-le-langage-c">Openclassrooms</a> <a class="footnote-reference" href="#id2" id="id3">[1]</a></p>
+<a class="reference external" href="https://openclassrooms.com/fr/courses/1894236-programmez-avec-le-langage-c">Openclassrooms</a> <a class="footnote-reference brackets" href="#id2" id="id3">1</a></p>
 <p><strong>Voir aussi la map cpp_notes.xmind</strong></p>
 <div class="section" id="c-operators-surcharge">
 <h2><a class="toc-backref" href="#sommaire">C++ opérators (surcharge)</a><a class="headerlink" href="#c-operators-surcharge" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Même si l’on parle de classe, ceci n’est pas une méthode.
 C’est une fonction normale située à l’extérieur de toute classe.</p>
 <p>Exemple:</p>
-<div class="code cpp highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">bool</span> <span class="n">operator</span><span class="o">==</span><span class="p">(</span><span class="n">Duree</span> <span class="n">const</span><span class="o">&amp;</span> <span class="n">a</span><span class="p">,</span> <span class="n">Duree</span> <span class="n">const</span><span class="o">&amp;</span> <span class="n">b</span><span class="p">);</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">bool</span> <span class="k">operator</span><span class="o">==</span><span class="p">(</span><span class="n">Duree</span> <span class="k">const</span><span class="o">&amp;</span> <span class="n">a</span><span class="p">,</span> <span class="n">Duree</span> <span class="k">const</span><span class="o">&amp;</span> <span class="n">b</span><span class="p">);</span>
 </pre></div>
 </div>
 <div class="section" id="surcharge-operateur">
 <h3><a class="toc-backref" href="#sommaire">Surcharge opérateur ==, &gt;, …</a><a class="headerlink" href="#surcharge-operateur" title="Lien permanent vers ce titre">¶</a></h3>
 <p>Exemple complet:</p>
-<div class="code cpp highlight-default notranslate"><div class="highlight"><pre><span></span>bool Duree::estEgale(const Duree &amp;a) const
-{
-return (m_heures == a.m_heures &amp;&amp; m_minutes == a.m_minutes &amp;&amp; m_secondes == a.m_secondes );
-}
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">bool</span> <span class="n">Duree</span><span class="o">::</span><span class="n">estEgale</span><span class="p">(</span><span class="k">const</span> <span class="n">Duree</span> <span class="o">&amp;</span><span class="n">a</span><span class="p">)</span> <span class="k">const</span>
+<span class="p">{</span>
+<span class="k">return</span> <span class="p">(</span><span class="n">m_heures</span> <span class="o">==</span> <span class="n">a</span><span class="p">.</span><span class="n">m_heures</span> <span class="o">&amp;&amp;</span> <span class="n">m_minutes</span> <span class="o">==</span> <span class="n">a</span><span class="p">.</span><span class="n">m_minutes</span> <span class="o">&amp;&amp;</span> <span class="n">m_secondes</span> <span class="o">==</span> <span class="n">a</span><span class="p">.</span><span class="n">m_secondes</span> <span class="p">);</span>
+<span class="p">}</span>
 
-bool operator==(const Duree &amp;a, const Duree &amp;b)
-{
-return a.estEgale(b);
-}
+<span class="kt">bool</span> <span class="k">operator</span><span class="o">==</span><span class="p">(</span><span class="k">const</span> <span class="n">Duree</span> <span class="o">&amp;</span><span class="n">a</span><span class="p">,</span> <span class="k">const</span> <span class="n">Duree</span> <span class="o">&amp;</span><span class="n">b</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="k">return</span> <span class="n">a</span><span class="p">.</span><span class="n">estEgale</span><span class="p">(</span><span class="n">b</span><span class="p">);</span>
+<span class="p">}</span>
 
-bool operator!=(const Duree &amp;a, const Duree &amp;b)
-{
-return !(a==b);
-}
+<span class="kt">bool</span> <span class="k">operator</span><span class="o">!=</span><span class="p">(</span><span class="k">const</span> <span class="n">Duree</span> <span class="o">&amp;</span><span class="n">a</span><span class="p">,</span> <span class="k">const</span> <span class="n">Duree</span> <span class="o">&amp;</span><span class="n">b</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="k">return</span> <span class="o">!</span><span class="p">(</span><span class="n">a</span><span class="o">==</span><span class="n">b</span><span class="p">);</span>
+<span class="p">}</span>
 </pre></div>
 </div>
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">Attention au mot clé const à la fin de la méthode estEgale !</p>
+<p class="admonition-title">Note</p>
+<p>Attention au mot clé const à la fin de la méthode estEgale !</p>
 </div>
 </div>
 <div class="section" id="surcharge-des-operateurs-arithmetiques">
@@ -178,34 +182,34 @@ return !(a==b);
 <p>Exemple avec +, on commence par surcharger l’opérateur de raccourci +=.</p>
 <p>Comme il modifie l’objet lui-même cette surcharge est un méthode de l’objet.</p>
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">La première méthode fonctionnerait très pour la surcharge de l’opérateur +</p>
+<p class="admonition-title">Note</p>
+<p>La première méthode fonctionnerait très pour la surcharge de l’opérateur +</p>
 </div>
-<div class="code cpp highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Duree</span><span class="o">&amp;</span> <span class="n">Duree</span><span class="p">::</span><span class="n">operator</span><span class="o">+=</span><span class="p">(</span><span class="n">const</span> <span class="n">Duree</span><span class="o">&amp;</span> <span class="n">a</span><span class="p">)</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">Duree</span><span class="o">&amp;</span> <span class="n">Duree</span><span class="o">::</span><span class="k">operator</span><span class="o">+=</span><span class="p">(</span><span class="k">const</span> <span class="n">Duree</span><span class="o">&amp;</span> <span class="n">a</span><span class="p">)</span>
 <span class="p">{</span>
-    <span class="o">//</span> <span class="n">Comme</span> <span class="n">avant</span><span class="o">...</span> <span class="n">rien</span> <span class="n">à</span> <span class="n">changer</span> <span class="n">ici</span>
-    <span class="k">return</span> <span class="o">*</span><span class="n">this</span><span class="p">;</span>
+    <span class="c1">// Comme avant... rien à changer ici</span>
+    <span class="k">return</span> <span class="o">*</span><span class="k">this</span><span class="p">;</span>
 <span class="p">}</span>
-<span class="o">//</span><span class="n">Cette</span> <span class="n">portion</span> <span class="n">de</span> <span class="n">code</span> <span class="n">vient</span> <span class="n">du</span> <span class="n">site</span> <span class="n">Openclassrooms</span> <span class="p">(</span><span class="n">licence</span> <span class="n">CC</span> <span class="n">BY</span><span class="p">,</span><span class="n">SA</span><span class="p">)</span> <span class="n">cours</span> <span class="n">C</span><span class="o">++</span>
+<span class="c1">//Cette portion de code vient du site Openclassrooms (licence CC BY,SA) cours C++</span>
 </pre></div>
 </div>
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">return *this retourne une instance de l’objet !</p>
+<p class="admonition-title">Note</p>
+<p>return *this retourne une instance de l’objet !</p>
 </div>
 <p>Puis on peut surcharger + avec une fonction classique</p>
-<div class="code cpp highlight-default notranslate"><div class="highlight"><pre><span></span>Duree operator+(Duree const&amp; a, Duree const&amp; b)
-{
-    Duree copie(a);   //On utilise le constructeur de copie de la classe Duree !
-    copie += b;       //On appelle la méthode d&#39;addition qui modifie l&#39;objet &#39;copie&#39;
-    return copie;     //Et on renvoie le résultat. Ni a ni b n&#39;ont changé.
-}
-//Cette portion de code vient du site Openclassrooms (licence CC BY,SA) cours C++
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">Duree</span> <span class="k">operator</span><span class="o">+</span><span class="p">(</span><span class="n">Duree</span> <span class="k">const</span><span class="o">&amp;</span> <span class="n">a</span><span class="p">,</span> <span class="n">Duree</span> <span class="k">const</span><span class="o">&amp;</span> <span class="n">b</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="n">Duree</span> <span class="n">copie</span><span class="p">(</span><span class="n">a</span><span class="p">);</span>   <span class="c1">//On utilise le constructeur de copie de la classe Duree !</span>
+    <span class="n">copie</span> <span class="o">+=</span> <span class="n">b</span><span class="p">;</span>       <span class="c1">//On appelle la méthode d&#39;addition qui modifie l&#39;objet &#39;copie&#39;</span>
+    <span class="k">return</span> <span class="n">copie</span><span class="p">;</span>     <span class="c1">//Et on renvoie le résultat. Ni a ni b n&#39;ont changé.</span>
+<span class="p">}</span>
+<span class="c1">//Cette portion de code vient du site Openclassrooms (licence CC BY,SA) cours C++</span>
 </pre></div>
 </div>
 <div class="admonition warning">
-<p class="first admonition-title">Avertissement</p>
-<p class="last">Puisque a est passée sous forme de constante, on ne peut écrire a +=b d’où la copie qui utilise
+<p class="admonition-title">Avertissement</p>
+<p>Puisque a est passée sous forme de constante, on ne peut écrire a +=b d’où la copie qui utilise
 le constructeur de copie.</p>
 </div>
 </div>
@@ -213,20 +217,20 @@ le constructeur de copie.</p>
 <h3><a class="toc-backref" href="#sommaire">Surcharge de l’opérateur &lt;&lt;</a><a class="headerlink" href="#surcharge-de-l-operateur" title="Lien permanent vers ce titre">¶</a></h3>
 <p>Cette surcharge est un peu particulière. On commence, normalement pas créer un méthode dans l’objet</p>
 <p>Exemple la méthode affiche()</p>
-<div class="code cpp highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">void</span> <span class="n">Duree</span><span class="p">::</span><span class="n">afficher</span><span class="p">(</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="n">flux</span><span class="p">)</span> <span class="n">const</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="n">Duree</span><span class="o">::</span><span class="n">afficher</span><span class="p">(</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="n">flux</span><span class="p">)</span> <span class="k">const</span>
 <span class="p">{</span>
-    <span class="n">flux</span> <span class="o">&lt;&lt;</span> <span class="n">m_heures</span> <span class="o">&lt;&lt;</span> <span class="s2">&quot;h&quot;</span> <span class="o">&lt;&lt;</span> <span class="n">m_minutes</span> <span class="o">&lt;&lt;</span> <span class="s2">&quot;m&quot;</span> <span class="o">&lt;&lt;</span> <span class="n">m_secondes</span> <span class="o">&lt;&lt;</span> <span class="s2">&quot;s&quot;</span><span class="p">;</span>
+    <span class="n">flux</span> <span class="o">&lt;&lt;</span> <span class="n">m_heures</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;h&quot;</span> <span class="o">&lt;&lt;</span> <span class="n">m_minutes</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;m&quot;</span> <span class="o">&lt;&lt;</span> <span class="n">m_secondes</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;s&quot;</span><span class="p">;</span>
 <span class="p">}</span>
-<span class="o">//</span><span class="n">Cette</span> <span class="n">portion</span> <span class="n">de</span> <span class="n">code</span> <span class="n">vient</span> <span class="n">du</span> <span class="n">site</span> <span class="n">Openclassrooms</span> <span class="p">(</span><span class="n">licence</span> <span class="n">CC</span> <span class="n">BY</span><span class="p">,</span><span class="n">SA</span><span class="p">)</span> <span class="n">cours</span> <span class="n">C</span><span class="o">++</span>
+<span class="c1">//Cette portion de code vient du site Openclassrooms (licence CC BY,SA) cours C++</span>
 </pre></div>
 </div>
 <p>puis on surcharge l’opérateur. Presque normalement si ce n’est le flux en entrée et en sortie.</p>
-<div class="code cpp highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ostream</span> <span class="o">&amp;</span><span class="n">operator</span><span class="o">&lt;&lt;</span><span class="p">(</span> <span class="n">ostream</span> <span class="o">&amp;</span><span class="n">flux</span><span class="p">,</span> <span class="n">Duree</span> <span class="n">const</span><span class="o">&amp;</span> <span class="n">duree</span><span class="p">)</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">ostream</span> <span class="o">&amp;</span><span class="k">operator</span><span class="o">&lt;&lt;</span><span class="p">(</span> <span class="n">ostream</span> <span class="o">&amp;</span><span class="n">flux</span><span class="p">,</span> <span class="n">Duree</span> <span class="k">const</span><span class="o">&amp;</span> <span class="n">duree</span><span class="p">)</span>
 <span class="p">{</span>
-    <span class="n">duree</span><span class="o">.</span><span class="n">afficher</span><span class="p">(</span><span class="n">flux</span><span class="p">)</span> <span class="p">;</span>
+    <span class="n">duree</span><span class="p">.</span><span class="n">afficher</span><span class="p">(</span><span class="n">flux</span><span class="p">)</span> <span class="p">;</span>
     <span class="k">return</span> <span class="n">flux</span><span class="p">;</span>
 <span class="p">}</span>
-<span class="o">//</span><span class="n">Cette</span> <span class="n">portion</span> <span class="n">de</span> <span class="n">code</span> <span class="n">vient</span> <span class="n">du</span> <span class="n">site</span> <span class="n">Openclassrooms</span> <span class="p">(</span><span class="n">licence</span> <span class="n">CC</span> <span class="n">BY</span><span class="p">,</span><span class="n">SA</span><span class="p">)</span> <span class="n">cours</span> <span class="n">C</span><span class="o">++</span>
+<span class="c1">//Cette portion de code vient du site Openclassrooms (licence CC BY,SA) cours C++</span>
 </pre></div>
 </div>
 <hr class="docutils" />
@@ -263,15 +267,15 @@ pour différentes classes en argument.</p>
 </div>
 <p>Template et typename sont des mots clés. T devient le type de variable utilisé dans la fonction.</p>
 <p>Il faut que le corps de la fonction soit strictement identique pour tous les objets traités.</p>
-<p>Voir l”<a class="reference external" href="https://openclassrooms.com/fr/courses/1894236-programmez-avec-le-langage-c/1903999-creez-des-templates">exemple de la fonction maximum sur Openclassroom</a> <a class="footnote-reference" href="#id4" id="id5">[2]</a></p>
+<p>Voir l”<a class="reference external" href="https://openclassrooms.com/fr/courses/1894236-programmez-avec-le-langage-c/1903999-creez-des-templates">exemple de la fonction maximum sur Openclassroom</a> <a class="footnote-reference brackets" href="#id4" id="id5">2</a></p>
 <p>Au niveau appel, on précise à chaque appel de la fonction,
 le type qu’on veut utiliser entre &lt; et &gt;:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">_fontion</span><span class="o">&lt;</span><span class="n">type_utilisé</span><span class="o">&gt;</span><span class="p">(</span><span class="n">param1</span><span class="p">,</span> <span class="n">param2</span><span class="p">,</span> <span class="o">...</span><span class="p">)</span>
 </pre></div>
 </div>
 <div class="admonition warning">
-<p class="first admonition-title">Avertissement</p>
-<p class="last">Prototype et corps de la fonction template DOIVENT se trouver dans le .h</p>
+<p class="admonition-title">Avertissement</p>
+<p>Prototype et corps de la fonction template DOIVENT se trouver dans le .h</p>
 </div>
 <div class="section" id="specialisation">
 <h3><a class="toc-backref" href="#sommaire">Spécialisation</a><a class="headerlink" href="#specialisation" title="Lien permanent vers ce titre">¶</a></h3>
@@ -304,28 +308,26 @@ variable passée et en plus pas la syntaxe -&gt; si il s’agit d’un objet.</p
 <p>Voir ci-dessus dans <a class="reference internal" href="#c-operators-surcharge">C++ opérators (surcharge)</a></p>
 <blockquote>
 <div><ul class="simple">
-<li><dl class="first docutils">
-<dt>ne change rien au niveau de l’appel de la fonction</dt>
-<dd><ul class="first last">
-<li>à condition d’un apel avec variable</li>
+<li><dl class="simple">
+<dt>ne change rien au niveau de l’appel de la fonction</dt><dd><ul>
+<li><p>à condition d’un apel avec variable</p></li>
 </ul>
 </dd>
 </dl>
 </li>
-<li><dl class="first docutils">
-<dt>le paramètre doit être un emplacment mémoir modifiable</dt>
-<dd><ul class="first last">
-<li>incr10( 20 ); ne marche pas car 20 n’est pas modifiable dans la fonction</li>
-<li>sauf si on utilise const dans la déclaration : int incr10(const int&amp; num)</li>
-<li>ou le double déréférencement int incr10(int&amp;&amp; num);</li>
+<li><dl class="simple">
+<dt>le paramètre doit être un emplacment mémoir modifiable</dt><dd><ul>
+<li><p>incr10( 20 ); ne marche pas car 20 n’est pas modifiable dans la fonction</p></li>
+<li><p>sauf si on utilise const dans la déclaration : int incr10(const int&amp; num)</p></li>
+<li><p>ou le double déréférencement int incr10(int&amp;&amp; num);</p></li>
 </ul>
 </dd>
 </dl>
 </li>
-<li>ne change rien dans le corps de la fonction</li>
-<li>Ne pas confondre avec le fait de passer un pointeur à une fonction ( on passe par copie d’un pointeur certe )</li>
-<li>Prototype : int incr10(int&amp; num) noter le &amp;</li>
-<li>appel : result = incr10(value);</li>
+<li><p>ne change rien dans le corps de la fonction</p></li>
+<li><p>Ne pas confondre avec le fait de passer un pointeur à une fonction ( on passe par copie d’un pointeur certe )</p></li>
+<li><p>Prototype : int incr10(int&amp; num) noter le &amp;</p></li>
+<li><p>appel : result = incr10(value);</p></li>
 </ul>
 </div></blockquote>
 <hr class="docutils" />
@@ -347,7 +349,7 @@ comportement en fonction de la nature de l’objet qui lui est passé.</p>
 ou une référence</strong>).</p>
 <p>On parle aussi de <span class="target" id="index-7"></span>résolution dynamique de liens.</p>
 <p>Le destructeur doit toujours être virtuel si on utilise le polymorphisme.</p>
-<p><a class="reference external" href="https://openclassrooms.com/fr/courses/1894236-programmez-avec-le-langage-c/1898632-mettez-en-oeuvre-le-polymorphisme#/id/r-1908359">Plus d’informations sur Openclassroom</a> <a class="footnote-reference" href="#id6" id="id7">[3]</a></p>
+<p><a class="reference external" href="https://openclassrooms.com/fr/courses/1894236-programmez-avec-le-langage-c/1898632-mettez-en-oeuvre-le-polymorphisme#/id/r-1908359">Plus d’informations sur Openclassroom</a> <a class="footnote-reference brackets" href="#id6" id="id7">3</a></p>
 </div>
 <div class="section" id="classe-amie-et-fonction-amie">
 <span id="index-8"></span><h2><a class="toc-backref" href="#sommaire">Classe amie et fonction amie</a><a class="headerlink" href="#classe-amie-et-fonction-amie" title="Lien permanent vers ce titre">¶</a></h2>
@@ -357,15 +359,15 @@ méthodes privées de la classe.</p>
 <p>friend <em>type fonction();</em> <strong>que l’on place à l’intérieur de la déclaration de la classe</strong></p>
 <p>Pour une classe, il faut indiqué dans le header de quelle classe elle est amie</p>
 <p>friend class <em>monAmie;</em></p>
-<p><a class="reference external" href="https://openclassrooms.com/fr/courses/1894236-programmez-avec-le-langage-c/1898734-utilisez-les-elements-statiques-et-lamitie#/id/r-1908555">Exemple sur OCRoom</a> <a class="footnote-reference" href="#id8" id="id9">[4]</a></p>
+<p><a class="reference external" href="https://openclassrooms.com/fr/courses/1894236-programmez-avec-le-langage-c/1898734-utilisez-les-elements-statiques-et-lamitie#/id/r-1908555">Exemple sur OCRoom</a> <a class="footnote-reference brackets" href="#id8" id="id9">4</a></p>
 <hr class="docutils" />
 </div>
 <div class="section" id="vector">
 <span id="index-9"></span><h2><a class="toc-backref" href="#sommaire">Vector</a><a class="headerlink" href="#vector" title="Lien permanent vers ce titre">¶</a></h2>
 <p>la syntaxe vector&lt;int&gt; tableau(10) permet de créer des tableau dynamique.</p>
 <div class="admonition warning">
-<p class="first admonition-title">Avertissement</p>
-<p class="last">Ne pas oublier : <strong>#include &lt;vector&gt;</strong></p>
+<p class="admonition-title">Avertissement</p>
+<p>Ne pas oublier : <strong>#include &lt;vector&gt;</strong></p>
 </div>
 <p>vector&lt;int&gt; tableau(10, 6) crée un tableau de 10 entiers valant tous 6</p>
 <p>vector&lt;int&gt; tableau crée un tableau d’entier vide.</p>
@@ -373,7 +375,7 @@ méthodes privées de la classe.</p>
 <p>Pour ajouter des éléemtns, on utilise la méthode push_back()</p>
 <p>Pour supprimer des éléments, on utilise la méthode pop_back()</p>
 <p>Pour connaître la taille, on utilise la méthode size()</p>
-<p>Voir sur <a class="reference external" href="https://fr.cppreference.com/w/cpp/container/vector">vector sur cppreference.com</a> <a class="footnote-reference" href="#id10" id="id11">[5]</a> cette classe est beaucoup plus riche.</p>
+<p>Voir sur <a class="reference external" href="https://fr.cppreference.com/w/cpp/container/vector">vector sur cppreference.com</a> <a class="footnote-reference brackets" href="#id10" id="id11">5</a> cette classe est beaucoup plus riche.</p>
 <p>Une petite paranthèse sur iterator : introduit les fonctions next(), prev(), advance()</p>
 <p>#include &lt;iterator&gt; (fait partie de std::)</p>
 <p>On pourrait aussi parler de list</p>
@@ -387,11 +389,11 @@ méthodes privées de la classe.</p>
 </div>
 <div class="section" id="iterer-un-tableau-rappel">
 <span id="index-10"></span><h3><a class="toc-backref" href="#sommaire">Itérer un tableau rappel</a><a class="headerlink" href="#iterer-un-tableau-rappel" title="Lien permanent vers ce titre">¶</a></h3>
-<div class="code cpp highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">int</span> <span class="n">tableau</span><span class="p">[]</span> <span class="o">...</span>
-<span class="k">for</span> <span class="p">(</span><span class="nb">int</span> <span class="n">x</span> <span class="p">:</span> <span class="n">tableau</span><span class="p">)</span> <span class="n">focntionne</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span> <span class="n">tableau</span><span class="p">[]</span> <span class="p">...</span>
+<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="nl">x</span> <span class="p">:</span> <span class="n">tableau</span><span class="p">)</span> <span class="n">focntionne</span>
 
-<span class="n">std</span><span class="p">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="nb">int</span><span class="o">&gt;</span> <span class="n">v</span> <span class="o">=</span> <span class="p">{</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">};</span>
-<span class="k">for</span> <span class="p">(</span><span class="n">const</span> <span class="nb">int</span><span class="o">&amp;</span> <span class="n">i</span> <span class="p">:</span> <span class="n">v</span><span class="p">)</span>  <span class="o">//</span><span class="n">subtilité</span> <span class="o">&amp;</span>
+<span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">v</span> <span class="o">=</span> <span class="p">{</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">};</span>
+<span class="k">for</span> <span class="p">(</span><span class="k">const</span> <span class="kt">int</span><span class="o">&amp;</span> <span class="nl">i</span> <span class="p">:</span> <span class="n">v</span><span class="p">)</span>  <span class="c1">//subtilité &amp;</span>
 </pre></div>
 </div>
 </div>
@@ -433,50 +435,50 @@ Donc oui c’est hyperdangereux !</p>
 <p>Comme le <span class="target" id="index-13"></span>constructeur par défaut, tout compilateur qui se respect crée automatiquement
 un <span class="target" id="index-14"></span>constructeur de copie. Ainsi qu’un opérateur d’affectation par défaut qui peut être très
 dangereux pour des objets qui affecte de la memoire dynamique à leur attributs !</p>
-<div class="code cpp highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">MaClasse</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">MaClasse</span>
 <span class="p">{</span>
-<span class="n">public</span><span class="p">:</span>
-    <span class="n">MaClasse</span><span class="p">(</span> <span class="n">const</span> <span class="n">MaClasse</span> <span class="o">&amp;</span> <span class="p">);</span> <span class="o">//</span> <span class="n">ceci</span> <span class="n">est</span> <span class="n">le</span> <span class="n">constructeur</span> <span class="n">de</span> <span class="n">copie</span>
+<span class="k">public</span><span class="o">:</span>
+    <span class="n">MaClasse</span><span class="p">(</span> <span class="k">const</span> <span class="n">MaClasse</span> <span class="o">&amp;</span> <span class="p">);</span> <span class="c1">// ceci est le constructeur de copie</span>
 <span class="p">};</span>
 </pre></div>
 </div>
 <p>Cas des objets à allocation de mémoire dynamique. En d’autres termes ceux qui ont des <strong>attrributs
 sous forme de pointeurs</strong>. Il est alors <strong>nécessaire</strong> de faire cette surcharge pour ne pas que les
 2 objets (la copie et le copié) pointent sur le même objet attribut.</p>
-<div class="code cpp highlight-default notranslate"><div class="highlight"><pre><span></span>//constructeur de copie
-Personnage::Personnage(const Personnage &amp;personnageACopier): m_vie(personnageACopier.m_vie), m_mana(personnageACopier.m_mana), marme(0)
-{
-   // m_arme = new Arme(personnageACopier.m_arme); // utilisation du constructeur de copie de la classe Arme
-   //balaise !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-   //presque sauf que m_arme est un pointeur et que sont constructeur de copie attend en entrée un objet pas un pointeur !
-   //Donc la syntaxe correcte est :
-   m_arme = new Arme( *(personnageACopier.m_arme) );
-   //super balaise !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-   // personnageAcopier.m_arme est une adresse
-   // *personnageAcopier.m_arme est une instance !!!!!!!!!!!!!!!!!!!!!!!!!!
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">//constructeur de copie</span>
+<span class="n">Personnage</span><span class="o">::</span><span class="n">Personnage</span><span class="p">(</span><span class="k">const</span> <span class="n">Personnage</span> <span class="o">&amp;</span><span class="n">personnageACopier</span><span class="p">)</span><span class="o">:</span> <span class="n">m_vie</span><span class="p">(</span><span class="n">personnageACopier</span><span class="p">.</span><span class="n">m_vie</span><span class="p">),</span> <span class="n">m_mana</span><span class="p">(</span><span class="n">personnageACopier</span><span class="p">.</span><span class="n">m_mana</span><span class="p">),</span> <span class="n">marme</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="p">{</span>
+   <span class="c1">// m_arme = new Arme(personnageACopier.m_arme); // utilisation du constructeur de copie de la classe Arme</span>
+   <span class="c1">//balaise !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!</span>
+   <span class="c1">//presque sauf que m_arme est un pointeur et que sont constructeur de copie attend en entrée un objet pas un pointeur !</span>
+   <span class="c1">//Donc la syntaxe correcte est :</span>
+   <span class="n">m_arme</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Arme</span><span class="p">(</span> <span class="o">*</span><span class="p">(</span><span class="n">personnageACopier</span><span class="p">.</span><span class="n">m_arme</span><span class="p">)</span> <span class="p">);</span>
+   <span class="c1">//super balaise !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!</span>
+   <span class="c1">// personnageAcopier.m_arme est une adresse</span>
+   <span class="c1">// *personnageAcopier.m_arme est une instance !!!!!!!!!!!!!!!!!!!!!!!!!!</span>
 
-}
-//Cette portion de code vient du site Openclassrooms (licence CC BY,SA) cours C++
-//Sauf les commentaires !
+<span class="p">}</span>
+<span class="c1">//Cette portion de code vient du site Openclassrooms (licence CC BY,SA) cours C++</span>
+<span class="c1">//Sauf les commentaires !</span>
 </pre></div>
 </div>
 <div class="section" id="id1">
 <h3><a class="toc-backref" href="#sommaire">Surcharge de l’opérateur =</a><a class="headerlink" href="#id1" title="Lien permanent vers ce titre">¶</a></h3>
 <p>Si il s’avère nécessaire de surcharger l’opérateur de copie, c’est qu’il est nécessaire de le faire
 également pour l’opérateur =</p>
-<div class="code cpp highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Classe</span><span class="o">&amp;</span> <span class="n">Classe</span><span class="p">::</span><span class="n">operator</span><span class="o">=</span><span class="p">(</span><span class="n">Classe</span> <span class="n">const</span><span class="o">&amp;</span> <span class="n">objetACopier</span><span class="p">)</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">Classe</span><span class="o">&amp;</span> <span class="n">Classe</span><span class="o">::</span><span class="k">operator</span><span class="o">=</span><span class="p">(</span><span class="n">Classe</span> <span class="k">const</span><span class="o">&amp;</span> <span class="n">objetACopier</span><span class="p">)</span>
 <span class="p">{</span>
-    <span class="k">if</span><span class="p">(</span><span class="n">this</span> <span class="o">!=</span> <span class="o">&amp;</span><span class="n">objetACopier</span><span class="p">)</span>
-    <span class="o">//</span><span class="n">On</span> <span class="n">vérifie</span> <span class="n">que</span> <span class="n">l</span><span class="s1">&#39;objet n&#39;</span><span class="n">est</span> <span class="n">pas</span> <span class="n">le</span> <span class="n">même</span> <span class="n">que</span> <span class="n">celui</span> <span class="n">reçu</span> <span class="n">en</span> <span class="n">argument</span>
+    <span class="k">if</span><span class="p">(</span><span class="k">this</span> <span class="o">!=</span> <span class="o">&amp;</span><span class="n">objetACopier</span><span class="p">)</span>
+    <span class="c1">//On vérifie que l&#39;objet n&#39;est pas le même que celui reçu en argument</span>
     <span class="p">{</span>
-        <span class="n">attribut1</span> <span class="o">=</span> <span class="n">objetACopier</span><span class="o">.</span><span class="n">attribut1</span><span class="p">;</span> <span class="o">//</span><span class="n">Copie</span> <span class="n">des</span> <span class="n">attributs</span> <span class="n">non</span> <span class="n">pointeurs</span>
-        <span class="n">attribut2</span> <span class="o">=</span> <span class="o">...</span> <span class="p">;</span>
-        <span class="n">delete</span> <span class="n">attributPointeur1</span><span class="p">;</span>
-        <span class="n">attributPointeur1</span> <span class="o">=</span> <span class="n">new</span> <span class="n">ClassAttributPointeur1</span><span class="p">(</span><span class="o">*</span><span class="p">(</span><span class="n">objetACopier</span><span class="o">.</span><span class="n">attributPointeur1</span><span class="p">));</span>
-        <span class="o">//</span><span class="n">idem</span> <span class="n">pour</span> <span class="n">les</span> <span class="n">autres</span> <span class="n">attributs</span> <span class="n">pointeurs</span>
+        <span class="n">attribut1</span> <span class="o">=</span> <span class="n">objetACopier</span><span class="p">.</span><span class="n">attribut1</span><span class="p">;</span> <span class="c1">//Copie des attributs non pointeurs</span>
+        <span class="n">attribut2</span> <span class="o">=</span> <span class="p">...</span> <span class="p">;</span>
+        <span class="k">delete</span> <span class="n">attributPointeur1</span><span class="p">;</span>
+        <span class="n">attributPointeur1</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ClassAttributPointeur1</span><span class="p">(</span><span class="o">*</span><span class="p">(</span><span class="n">objetACopier</span><span class="p">.</span><span class="n">attributPointeur1</span><span class="p">));</span>
+        <span class="c1">//idem pour les autres attributs pointeurs</span>
 
     <span class="p">}</span>
-    <span class="k">return</span> <span class="o">*</span><span class="n">this</span><span class="p">;</span> <span class="o">//</span><span class="n">On</span> <span class="n">renvoie</span> <span class="n">l</span><span class="s1">&#39;objet lui-même</span>
+    <span class="k">return</span> <span class="o">*</span><span class="k">this</span><span class="p">;</span> <span class="c1">//On renvoie l&#39;objet lui-même</span>
 <span class="p">}</span>
 </pre></div>
 </div>
@@ -489,7 +491,7 @@ Personnage::Personnage(const Personnage &amp;personnageACopier): m_vie(personnag
 <p>%05d pour un entier signé précédé de 0</p>
 <p>%05lu entier long non signé précédé de 0</p>
 <p>autres possibilitées : les fonctions du style ultoa()</p>
-<p>%c : pour que cela fonctionne bie, il faut que la chaine soit de la forme “x” et pas «&nbsp;x&nbsp;» au moins
+<p>%c : pour que cela fonctionne bie, il faut que la chaine soit de la forme “x” et pas « x » au moins
 dans le monde ARDUINO</p>
 </div>
 <div class="section" id="typedef-struct-co">
@@ -500,22 +502,22 @@ dans le monde ARDUINO</p>
 </div>
 <div class="section" id="struct">
 <h3><a class="toc-backref" href="#sommaire">struct</a><a class="headerlink" href="#struct" title="Lien permanent vers ce titre">¶</a></h3>
-<div class="code cpp highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">struct</span> <span class="n">_structName</span> <span class="p">{</span> <span class="n">_elelments</span><span class="p">;</span> <span class="p">};</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">struct</span> <span class="n">_structName</span> <span class="p">{</span> <span class="n">_elelments</span><span class="p">;</span> <span class="p">};</span>
 </pre></div>
 </div>
 <p>Utilisation : struct _structName _variableName;</p>
 <p>on peut également combiné la création de la structure avec celle d’une varaible et sont init
 comme dans:</p>
-<div class="code cpp highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">struct</span> <span class="n">temps</span> <span class="p">{</span>
-<span class="n">unsigned</span> <span class="n">heures</span><span class="p">;</span>
-<span class="n">unsigned</span> <span class="n">minutes</span><span class="p">;</span>
-<span class="n">double</span> <span class="n">secondes</span><span class="p">;</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">struct</span> <span class="n">temps</span> <span class="p">{</span>
+<span class="kt">unsigned</span> <span class="n">heures</span><span class="p">;</span>
+<span class="kt">unsigned</span> <span class="n">minutes</span><span class="p">;</span>
+<span class="kt">double</span> <span class="n">secondes</span><span class="p">;</span>
 <span class="p">}</span> <span class="n">t1</span> <span class="o">=</span> <span class="p">{</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">45</span><span class="p">,</span> <span class="mf">30.560</span> <span class="p">};</span>
 </pre></div>
 </div>
 <p>Dans ce cas si on ne le réutilise pas on peut omettre le nom de la structure.</p>
 <p>Avec un typedef cela donne:</p>
-<div class="code cpp highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">typedef</span> <span class="n">struct</span> <span class="n">_structName</span> <span class="n">_aliasName</span><span class="p">;</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">typedef</span> <span class="k">struct</span> <span class="n">_structName</span> <span class="n">_aliasName</span><span class="p">;</span>
 <span class="n">_aliasName</span> <span class="n">_variable</span><span class="p">;</span>
 </pre></div>
 </div>
@@ -523,14 +525,14 @@ comme dans:</p>
 <p>typedef struct _structName{ _elements; } _aliasName ;</p>
 <p>Je crois même que dans ce cas on peut omettre le nom de la structure. oui: vérifié sur une compile
 arduino</p>
-<div class="code cpp highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">struct</span> <span class="n">point</span> <span class="p">{</span>
-    <span class="nb">int</span> <span class="n">x</span><span class="p">;</span>
-    <span class="nb">int</span> <span class="n">y</span> <span class="p">;</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">struct</span> <span class="n">point</span> <span class="p">{</span>
+    <span class="kt">int</span> <span class="n">x</span><span class="p">;</span>
+    <span class="kt">int</span> <span class="n">y</span> <span class="p">;</span>
 <span class="p">};</span>
-<span class="n">typedef</span> <span class="n">point</span> <span class="n">point_T</span><span class="p">;</span>
+<span class="k">typedef</span> <span class="n">point</span> <span class="n">point_T</span><span class="p">;</span>
 <span class="n">point_T</span> <span class="n">monPoint</span><span class="p">;</span>
 
-<span class="n">typedef</span> <span class="n">struct</span> <span class="p">{</span> <span class="nb">int</span> <span class="n">x</span><span class="p">;</span> <span class="nb">int</span> <span class="n">y</span><span class="p">;</span> <span class="p">}</span> <span class="n">autrePoint_T</span><span class="p">;</span>
+<span class="k">typedef</span> <span class="k">struct</span> <span class="p">{</span> <span class="kt">int</span> <span class="n">x</span><span class="p">;</span> <span class="kt">int</span> <span class="n">y</span><span class="p">;</span> <span class="p">}</span> <span class="n">autrePoint_T</span><span class="p">;</span>
 <span class="n">autrePoint_T</span> <span class="n">deuxeimePoint</span><span class="p">;</span>
 </pre></div>
 </div>
@@ -539,13 +541,14 @@ arduino</p>
 <h3><a class="toc-backref" href="#sommaire">enum</a><a class="headerlink" href="#enum" title="Lien permanent vers ce titre">¶</a></h3>
 <p>Même schéma que struct</p>
 <blockquote>
-<div>enum _enumName { _elements;  };</div></blockquote>
+<div><p>enum _enumName { _elements;  };</p>
+</div></blockquote>
 </div>
 <div class="section" id="typedef-et-les-fonctions">
 <h3><a class="toc-backref" href="#sommaire">typedef et les fonctions</a><a class="headerlink" href="#typedef-et-les-fonctions" title="Lien permanent vers ce titre">¶</a></h3>
 <p>typedef pour déclarer des profile de fonction (souvent avec des pointeur sur fonction):</p>
-<div class="code cpp highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">typedef</span> <span class="nb">int</span> <span class="p">(</span><span class="o">*</span><span class="n">t_somefunc</span><span class="p">)(</span><span class="nb">int</span><span class="p">,</span><span class="nb">int</span><span class="p">);</span>
-<span class="nb">int</span> <span class="n">product</span><span class="p">(</span><span class="nb">int</span> <span class="n">u</span><span class="p">,</span> <span class="nb">int</span> <span class="n">v</span><span class="p">)</span> <span class="p">{</span> <span class="k">return</span> <span class="n">u</span><span class="o">*</span><span class="n">v</span><span class="p">;</span> <span class="p">}</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">typedef</span> <span class="nf">int</span> <span class="p">(</span><span class="o">*</span><span class="n">t_somefunc</span><span class="p">)(</span><span class="kt">int</span><span class="p">,</span><span class="kt">int</span><span class="p">);</span>
+<span class="kt">int</span> <span class="nf">product</span><span class="p">(</span><span class="kt">int</span> <span class="n">u</span><span class="p">,</span> <span class="kt">int</span> <span class="n">v</span><span class="p">)</span> <span class="p">{</span> <span class="k">return</span> <span class="n">u</span><span class="o">*</span><span class="n">v</span><span class="p">;</span> <span class="p">}</span>
 <span class="n">t_somefunc</span> <span class="n">afunc</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">product</span><span class="p">;</span>
 </pre></div>
 </div>
@@ -553,14 +556,14 @@ arduino</p>
 <div class="section" id="champs-de-bits">
 <h3><a class="toc-backref" href="#sommaire">Champs de bits</a><a class="headerlink" href="#champs-de-bits" title="Lien permanent vers ce titre">¶</a></h3>
 <p>Union champs de bits</p>
-<div class="code cpp highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">union</span> <span class="n">CINAStatHyb_t</span><span class="p">{</span>
-<span class="n">struct</span> <span class="p">{</span>
-    <span class="n">unsigned</span> <span class="nb">int</span> <span class="n">bit0</span> <span class="p">:</span> <span class="mi">1</span><span class="p">;</span>
-    <span class="n">unsigned</span> <span class="nb">int</span> <span class="n">bit1</span> <span class="p">:</span> <span class="mi">1</span><span class="p">;</span>
-    <span class="n">unsigned</span> <span class="nb">int</span> <span class="n">bit2</span> <span class="p">:</span> <span class="mi">1</span><span class="p">;</span>
-    <span class="n">unsigned</span> <span class="nb">int</span> <span class="n">bit3</span> <span class="p">:</span> <span class="mi">1</span><span class="p">;</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">union</span> <span class="n">CINAStatHyb_t</span><span class="p">{</span>
+<span class="k">struct</span> <span class="p">{</span>
+    <span class="kt">unsigned</span> <span class="kt">int</span> <span class="nl">bit0</span> <span class="p">:</span> <span class="mi">1</span><span class="p">;</span>
+    <span class="kt">unsigned</span> <span class="kt">int</span> <span class="nl">bit1</span> <span class="p">:</span> <span class="mi">1</span><span class="p">;</span>
+    <span class="kt">unsigned</span> <span class="kt">int</span> <span class="nl">bit2</span> <span class="p">:</span> <span class="mi">1</span><span class="p">;</span>
+    <span class="kt">unsigned</span> <span class="kt">int</span> <span class="nl">bit3</span> <span class="p">:</span> <span class="mi">1</span><span class="p">;</span>
 <span class="p">};</span>
-    <span class="n">unsigned</span> <span class="nb">int</span> <span class="n">val32</span><span class="p">;</span>
+    <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">val32</span><span class="p">;</span>
 <span class="p">};</span>
 
 <span class="n">CINAStatHyb_t</span> <span class="n">CINAStatHyb</span><span class="p">;</span>
@@ -570,49 +573,49 @@ arduino</p>
 </div>
 <div class="section" id="exemple-trame-serie">
 <h3><a class="toc-backref" href="#sommaire">Exemple trame série</a><a class="headerlink" href="#exemple-trame-serie" title="Lien permanent vers ce titre">¶</a></h3>
-<div class="code cpp highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">typedef</span> <span class="n">union</span><span class="p">{</span>
-    <span class="n">struct</span><span class="p">{</span>
-        <span class="n">uint8_t</span> <span class="n">DHTstatus</span><span class="p">;</span>
-        <span class="n">uint8_t</span> <span class="n">temp</span><span class="p">;</span>
-        <span class="n">uint8_t</span> <span class="n">tempDeci</span><span class="p">;</span>
-        <span class="n">uint8_t</span> <span class="n">humidity</span><span class="p">;</span>
-        <span class="n">uint8_t</span> <span class="n">humidityDeci</span><span class="p">;</span>
-        <span class="n">unsigned</span> <span class="nb">int</span> <span class="n">analog0</span><span class="p">;</span>
-        <span class="n">unsigned</span> <span class="nb">int</span> <span class="n">analog1</span><span class="p">;</span>
-        <span class="n">unsigned</span> <span class="nb">int</span> <span class="n">analog2</span><span class="p">;</span>
-        <span class="n">unsigned</span> <span class="nb">int</span> <span class="n">analog3</span><span class="p">;</span>
-        <span class="n">uint8_t</span> <span class="n">jour</span><span class="p">;</span>
-        <span class="n">uint8_t</span> <span class="n">mois</span><span class="p">;</span>
-        <span class="n">unsigned</span> <span class="nb">int</span> <span class="n">annee</span><span class="p">;</span>
-        <span class="n">uint8_t</span> <span class="n">heure</span><span class="p">;</span>
-        <span class="n">uint8_t</span> <span class="n">minute</span><span class="p">;</span>
-        <span class="n">uint8_t</span> <span class="n">seconde</span><span class="p">;</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">typedef</span> <span class="k">union</span><span class="p">{</span>
+    <span class="k">struct</span><span class="p">{</span>
+        <span class="kt">uint8_t</span> <span class="n">DHTstatus</span><span class="p">;</span>
+        <span class="kt">uint8_t</span> <span class="n">temp</span><span class="p">;</span>
+        <span class="kt">uint8_t</span> <span class="n">tempDeci</span><span class="p">;</span>
+        <span class="kt">uint8_t</span> <span class="n">humidity</span><span class="p">;</span>
+        <span class="kt">uint8_t</span> <span class="n">humidityDeci</span><span class="p">;</span>
+        <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">analog0</span><span class="p">;</span>
+        <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">analog1</span><span class="p">;</span>
+        <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">analog2</span><span class="p">;</span>
+        <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">analog3</span><span class="p">;</span>
+        <span class="kt">uint8_t</span> <span class="n">jour</span><span class="p">;</span>
+        <span class="kt">uint8_t</span> <span class="n">mois</span><span class="p">;</span>
+        <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">annee</span><span class="p">;</span>
+        <span class="kt">uint8_t</span> <span class="n">heure</span><span class="p">;</span>
+        <span class="kt">uint8_t</span> <span class="n">minute</span><span class="p">;</span>
+        <span class="kt">uint8_t</span> <span class="n">seconde</span><span class="p">;</span>
     <span class="p">};</span>
-    <span class="n">uint8_t</span> <span class="n">_trame</span><span class="p">[</span> <span class="mi">20</span> <span class="p">];</span>
+    <span class="kt">uint8_t</span> <span class="n">_trame</span><span class="p">[</span> <span class="mi">20</span> <span class="p">];</span>
 <span class="p">}</span> <span class="n">trame_u</span><span class="p">;</span>
 
 <span class="n">trame_u</span> <span class="n">trame</span><span class="p">;</span>
 
-<span class="n">void</span> <span class="n">setup</span><span class="p">()</span> <span class="p">{</span>
-  <span class="o">//</span> <span class="n">put</span> <span class="n">your</span> <span class="n">setup</span> <span class="n">code</span> <span class="n">here</span><span class="p">,</span> <span class="n">to</span> <span class="n">run</span> <span class="n">once</span><span class="p">:</span>
-  <span class="n">trame</span><span class="o">.</span><span class="n">jour</span> <span class="o">=</span> <span class="mi">14</span><span class="p">;</span>
-  <span class="n">trame</span><span class="o">.</span><span class="n">mois</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span>
-  <span class="n">trame</span><span class="o">.</span><span class="n">annee</span> <span class="o">=</span> <span class="mi">2017</span><span class="p">;</span> <span class="o">//</span><span class="mi">2017</span> <span class="o">=</span> <span class="mi">7</span><span class="o">*</span><span class="mi">256</span><span class="o">+</span><span class="mi">225</span>
-  <span class="n">trame</span><span class="o">.</span><span class="n">DHTstatus</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
-  <span class="n">trame</span><span class="o">.</span><span class="n">temp</span> <span class="o">=</span><span class="mi">23</span><span class="p">;</span>
-  <span class="n">trame</span><span class="o">.</span><span class="n">humidity</span> <span class="o">=</span> <span class="mi">85</span><span class="p">;</span>
-  <span class="n">trame</span><span class="o">.</span><span class="n">seconde</span> <span class="o">=</span> <span class="mi">25</span><span class="p">;</span>
-  <span class="n">trame</span><span class="o">.</span><span class="n">analog0</span> <span class="o">=</span> <span class="mi">13</span><span class="o">*</span><span class="mi">256</span><span class="o">+</span><span class="mi">6</span><span class="p">;</span>
-  <span class="n">trame</span><span class="o">.</span><span class="n">analog3</span> <span class="o">=</span> <span class="mi">22</span><span class="o">*</span><span class="mi">256</span><span class="o">+</span><span class="mi">11</span><span class="p">;</span>
-  <span class="n">Serial</span><span class="o">.</span><span class="n">begin</span><span class="p">(</span><span class="mi">9600</span><span class="p">);</span>
-  <span class="k">for</span> <span class="p">(</span><span class="nb">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;</span> <span class="mi">20</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">){</span>
-    <span class="n">Serial</span><span class="o">.</span><span class="n">println</span><span class="p">(</span><span class="n">trame</span><span class="o">.</span><span class="n">_trame</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
+<span class="kt">void</span> <span class="nf">setup</span><span class="p">()</span> <span class="p">{</span>
+  <span class="c1">// put your setup code here, to run once:</span>
+  <span class="n">trame</span><span class="p">.</span><span class="n">jour</span> <span class="o">=</span> <span class="mi">14</span><span class="p">;</span>
+  <span class="n">trame</span><span class="p">.</span><span class="n">mois</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span>
+  <span class="n">trame</span><span class="p">.</span><span class="n">annee</span> <span class="o">=</span> <span class="mi">2017</span><span class="p">;</span> <span class="c1">//2017 = 7*256+225</span>
+  <span class="n">trame</span><span class="p">.</span><span class="n">DHTstatus</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
+  <span class="n">trame</span><span class="p">.</span><span class="n">temp</span> <span class="o">=</span><span class="mi">23</span><span class="p">;</span>
+  <span class="n">trame</span><span class="p">.</span><span class="n">humidity</span> <span class="o">=</span> <span class="mi">85</span><span class="p">;</span>
+  <span class="n">trame</span><span class="p">.</span><span class="n">seconde</span> <span class="o">=</span> <span class="mi">25</span><span class="p">;</span>
+  <span class="n">trame</span><span class="p">.</span><span class="n">analog0</span> <span class="o">=</span> <span class="mi">13</span><span class="o">*</span><span class="mi">256</span><span class="o">+</span><span class="mi">6</span><span class="p">;</span>
+  <span class="n">trame</span><span class="p">.</span><span class="n">analog3</span> <span class="o">=</span> <span class="mi">22</span><span class="o">*</span><span class="mi">256</span><span class="o">+</span><span class="mi">11</span><span class="p">;</span>
+  <span class="n">Serial</span><span class="p">.</span><span class="n">begin</span><span class="p">(</span><span class="mi">9600</span><span class="p">);</span>
+  <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;</span> <span class="mi">20</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">){</span>
+    <span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="n">trame</span><span class="p">.</span><span class="n">_trame</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
   <span class="p">}</span>
 
 <span class="p">}</span>
 
-<span class="n">void</span> <span class="n">loop</span><span class="p">()</span> <span class="p">{</span>
-  <span class="o">//</span> <span class="n">put</span> <span class="n">your</span> <span class="n">main</span> <span class="n">code</span> <span class="n">here</span><span class="p">,</span> <span class="n">to</span> <span class="n">run</span> <span class="n">repeatedly</span><span class="p">:</span>
+<span class="kt">void</span> <span class="nf">loop</span><span class="p">()</span> <span class="p">{</span>
+  <span class="c1">// put your main code here, to run repeatedly:</span>
 
 <span class="p">}</span>
 </pre></div>
@@ -637,36 +640,23 @@ arduino</p>
 </div>
 <div class="section" id="weblinks">
 <h2><a class="toc-backref" href="#sommaire">Weblinks</a><a class="headerlink" href="#weblinks" title="Lien permanent vers ce titre">¶</a></h2>
-<table class="docutils footnote" frame="void" id="id2" rules="none">
-<colgroup><col class="label" /><col /></colgroup>
-<tbody valign="top">
-<tr><td class="label"><a class="fn-backref" href="#id3">[1]</a></td><td><a class="reference external" href="https://openclassrooms.com/fr/courses/1894236-programmez-avec-le-langage-c">https://openclassrooms.com/fr/courses/1894236-programmez-avec-le-langage-c</a></td></tr>
-</tbody>
-</table>
-<table class="docutils footnote" frame="void" id="id4" rules="none">
-<colgroup><col class="label" /><col /></colgroup>
-<tbody valign="top">
-<tr><td class="label"><a class="fn-backref" href="#id5">[2]</a></td><td><a class="reference external" href="https://openclassrooms.com/fr/courses/1894236-programmez-avec-le-langage-c/1903999-creez-des-templates">https://openclassrooms.com/fr/courses/1894236-programmez-avec-le-langage-c/1903999-creez-des-templates</a></td></tr>
-</tbody>
-</table>
-<table class="docutils footnote" frame="void" id="id6" rules="none">
-<colgroup><col class="label" /><col /></colgroup>
-<tbody valign="top">
-<tr><td class="label"><a class="fn-backref" href="#id7">[3]</a></td><td><a class="reference external" href="https://openclassrooms.com/fr/courses/1894236-programmez-avec-le-langage-c/1898632-mettez-en-oeuvre-le-polymorphisme#/id/r-1908359">https://openclassrooms.com/fr/courses/1894236-programmez-avec-le-langage-c/1898632-mettez-en-oeuvre-le-polymorphisme#/id/r-1908359</a></td></tr>
-</tbody>
-</table>
-<table class="docutils footnote" frame="void" id="id8" rules="none">
-<colgroup><col class="label" /><col /></colgroup>
-<tbody valign="top">
-<tr><td class="label"><a class="fn-backref" href="#id9">[4]</a></td><td><a class="reference external" href="https://openclassrooms.com/fr/courses/1894236-programmez-avec-le-langage-c/1898734-utilisez-les-elements-statiques-et-lamitie#/id/r-1908555">https://openclassrooms.com/fr/courses/1894236-programmez-avec-le-langage-c/1898734-utilisez-les-elements-statiques-et-lamitie#/id/r-1908555</a></td></tr>
-</tbody>
-</table>
-<table class="docutils footnote" frame="void" id="id10" rules="none">
-<colgroup><col class="label" /><col /></colgroup>
-<tbody valign="top">
-<tr><td class="label"><a class="fn-backref" href="#id11">[5]</a></td><td><a class="reference external" href="https://fr.cppreference.com/w/cpp/container/vector">https://fr.cppreference.com/w/cpp/container/vector</a></td></tr>
-</tbody>
-</table>
+<dl class="footnote brackets">
+<dt class="label" id="id2"><span class="brackets"><a class="fn-backref" href="#id3">1</a></span></dt>
+<dd><p><a class="reference external" href="https://openclassrooms.com/fr/courses/1894236-programmez-avec-le-langage-c">https://openclassrooms.com/fr/courses/1894236-programmez-avec-le-langage-c</a></p>
+</dd>
+<dt class="label" id="id4"><span class="brackets"><a class="fn-backref" href="#id5">2</a></span></dt>
+<dd><p><a class="reference external" href="https://openclassrooms.com/fr/courses/1894236-programmez-avec-le-langage-c/1903999-creez-des-templates">https://openclassrooms.com/fr/courses/1894236-programmez-avec-le-langage-c/1903999-creez-des-templates</a></p>
+</dd>
+<dt class="label" id="id6"><span class="brackets"><a class="fn-backref" href="#id7">3</a></span></dt>
+<dd><p><a class="reference external" href="https://openclassrooms.com/fr/courses/1894236-programmez-avec-le-langage-c/1898632-mettez-en-oeuvre-le-polymorphisme#/id/r-1908359">https://openclassrooms.com/fr/courses/1894236-programmez-avec-le-langage-c/1898632-mettez-en-oeuvre-le-polymorphisme#/id/r-1908359</a></p>
+</dd>
+<dt class="label" id="id8"><span class="brackets"><a class="fn-backref" href="#id9">4</a></span></dt>
+<dd><p><a class="reference external" href="https://openclassrooms.com/fr/courses/1894236-programmez-avec-le-langage-c/1898734-utilisez-les-elements-statiques-et-lamitie#/id/r-1908555">https://openclassrooms.com/fr/courses/1894236-programmez-avec-le-langage-c/1898734-utilisez-les-elements-statiques-et-lamitie#/id/r-1908555</a></p>
+</dd>
+<dt class="label" id="id10"><span class="brackets"><a class="fn-backref" href="#id11">5</a></span></dt>
+<dd><p><a class="reference external" href="https://fr.cppreference.com/w/cpp/container/vector">https://fr.cppreference.com/w/cpp/container/vector</a></p>
+</dd>
+</dl>
 </div>
 </div>
 
@@ -676,7 +666,7 @@ arduino</p>
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-  <h3><a href="../index.html">Table of Contents</a></h3>
+  <h3><a href="../index.html">Table des matières</a></h3>
   <ul>
 <li><a class="reference internal" href="#">Mes notes sur C++</a><ul>
 <li><a class="reference internal" href="#c-operators-surcharge">C++ opérators (surcharge)</a><ul>
@@ -736,13 +726,11 @@ arduino</p>
     </ul>
    </div>
 <div id="searchbox" style="display: none" role="search">
-  <h3>Recherche rapide</h3>
+  <h3 id="searchlabel">Recherche rapide</h3>
     <div class="searchformwrapper">
     <form class="search" action="../search.html" method="get">
-      <input type="text" name="q" />
+      <input type="text" name="q" aria-labelledby="searchlabel" />
       <input type="submit" value="Go" />
-      <input type="hidden" name="check_keywords" value="yes" />
-      <input type="hidden" name="area" value="default" />
     </form>
     </div>
 </div>
@@ -768,7 +756,7 @@ arduino</p>
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2019, J.SORANZO.
-      Créé avec <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.5.
+      Créé avec <a href="http://sphinx-doc.org/">Sphinx</a> 2.2.0.
     </div>
   </body>
 </html>

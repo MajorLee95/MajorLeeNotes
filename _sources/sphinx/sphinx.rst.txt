@@ -1,5 +1,5 @@
 ++++++++++++++++++++++++++++++++
-Mon utilisation de Sphinx
+Sphinx
 ++++++++++++++++++++++++++++++++
 
 :Auteur: J.Soranzo
@@ -27,6 +27,8 @@ Sphinx pour la documentation
    :align: left
 
 |clearer|
+
+Voici mon utilisation de Sphinx !
 
 Pourquoi ?
 ======================================

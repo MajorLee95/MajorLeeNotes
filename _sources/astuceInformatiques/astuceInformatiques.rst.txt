@@ -9,6 +9,7 @@ Astuces informatiques
 :Entity: VoRoBoTics
 
 .. contents:: Table_name
+    :backlinks: top
 
 
 .. index::

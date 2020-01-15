@@ -1,11 +1,9 @@
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
   <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
     <title>Notes sur Qt &#8212; Documentation MajorLee&#39;s notes </title>
     <link rel="stylesheet" href="../../_static/nature.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
@@ -45,93 +43,102 @@
   <div class="section" id="notes-sur-qt">
 <h1><a class="toc-backref" href="#table-des-matieres-qt">Notes sur Qt</a><a class="headerlink" href="#notes-sur-qt" title="Lien permanent vers ce titre">¶</a></h1>
 <a class="reference internal image-reference" href="../../_images/qtLogo.jpg"><img alt="Qt logo" class="align-left" src="../../_images/qtLogo.jpg" style="height: 100px;" /></a>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Auteur:</th><td class="field-body">J.Soranzo</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Date:</th><td class="field-body">Novembre 2019</td>
-</tr>
-<tr class="field-odd field"><th class="field-name">Société:</th><td class="field-body">VoLAB</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Entity:</th><td class="field-body">VoRoBoTics</td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple">
+<dt class="field-odd">Auteur</dt>
+<dd class="field-odd"><p>J.Soranzo</p>
+</dd>
+<dt class="field-even">Date</dt>
+<dd class="field-even"><p>Novembre 2019</p>
+</dd>
+<dt class="field-odd">Société</dt>
+<dd class="field-odd"><p>VoLAB</p>
+</dd>
+<dt class="field-even">Entity</dt>
+<dd class="field-even"><p>VoRoBoTics</p>
+</dd>
+</dl>
 <p><div class="clearer"></div></p>
 <div class="contents topic" id="table-des-matieres-qt">
 <p class="topic-title first">Table des matières Qt</p>
 <ul class="simple">
-<li><a class="reference internal" href="#notes-sur-qt" id="id49">Notes sur Qt</a><ul>
-<li><a class="reference internal" href="#presentation" id="id50">Présentation</a><ul>
-<li><a class="reference internal" href="#les-outils-qt" id="id51">Les outils Qt</a></li>
+<li><p><a class="reference internal" href="#notes-sur-qt" id="id49">Notes sur Qt</a></p>
+<ul>
+<li><p><a class="reference internal" href="#presentation" id="id50">Présentation</a></p>
+<ul>
+<li><p><a class="reference internal" href="#les-outils-qt" id="id51">Les outils Qt</a></p></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#installation" id="id52">Installation</a></li>
-<li><a class="reference internal" href="#service-minimum" id="id53">Service minimum</a><ul>
-<li><a class="reference internal" href="#appli-console" id="id54">Appli console</a></li>
-<li><a class="reference internal" href="#appli-graphique" id="id55">Appli graphique</a></li>
-<li><a class="reference internal" href="#utilisation-avec-qt-designer" id="id56">Utilisation avec Qt Designer</a></li>
+<li><p><a class="reference internal" href="#installation" id="id52">Installation</a></p></li>
+<li><p><a class="reference internal" href="#service-minimum" id="id53">Service minimum</a></p>
+<ul>
+<li><p><a class="reference internal" href="#appli-console" id="id54">Appli console</a></p></li>
+<li><p><a class="reference internal" href="#appli-graphique" id="id55">Appli graphique</a></p></li>
+<li><p><a class="reference internal" href="#utilisation-avec-qt-designer" id="id56">Utilisation avec Qt Designer</a></p></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#autres-choses" id="id57">Autres choses</a><ul>
-<li><a class="reference internal" href="#qt-et-repertoires" id="id58">Qt et répertoires</a></li>
-<li><a class="reference internal" href="#mode-debug" id="id59">Mode debug</a></li>
+<li><p><a class="reference internal" href="#autres-choses" id="id57">Autres choses</a></p>
+<ul>
+<li><p><a class="reference internal" href="#qt-et-repertoires" id="id58">Qt et répertoires</a></p></li>
+<li><p><a class="reference internal" href="#mode-debug" id="id59">Mode debug</a></p></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#classes-qui-me-semblent-les-plus-utiles" id="id60">Classes qui me semblent les plus utiles</a><ul>
-<li><a class="reference internal" href="#de-base" id="id61">De base</a></li>
-<li><a class="reference internal" href="#advanced" id="id62">Advanced</a></li>
+<li><p><a class="reference internal" href="#classes-qui-me-semblent-les-plus-utiles" id="id60">Classes qui me semblent les plus utiles</a></p>
+<ul>
+<li><p><a class="reference internal" href="#de-base" id="id61">De base</a></p></li>
+<li><p><a class="reference internal" href="#advanced" id="id62">Advanced</a></p></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#apres-modification-du-fichier-pro" id="id63">Après modification du fichier pro</a></li>
-<li><a class="reference internal" href="#qt-widgets-vs-qt-quick-application" id="id64">Qt widgets vs Qt Quick application</a></li>
-<li><a class="reference internal" href="#comprendre-signals-et-slots" id="id65">Comprendre signals et slots</a><ul>
-<li><a class="reference internal" href="#id1" id="id66">Présentation</a></li>
-<li><a class="reference internal" href="#utilisation" id="id67">Utilisation</a></li>
-<li><a class="reference internal" href="#connaitre-l-emetteur-d-un-signal-dans-un-slot" id="id68">Connaître l’émetteur d’un signal dans un slot</a></li>
-<li><a class="reference internal" href="#creation" id="id69">Création</a></li>
-<li><a class="reference internal" href="#autoconnect" id="id70">Autoconnect</a></li>
+<li><p><a class="reference internal" href="#apres-modification-du-fichier-pro" id="id63">Après modification du fichier pro</a></p></li>
+<li><p><a class="reference internal" href="#qt-widgets-vs-qt-quick-application" id="id64">Qt widgets vs Qt Quick application</a></p></li>
+<li><p><a class="reference internal" href="#comprendre-signals-et-slots" id="id65">Comprendre signals et slots</a></p>
+<ul>
+<li><p><a class="reference internal" href="#id1" id="id66">Présentation</a></p></li>
+<li><p><a class="reference internal" href="#utilisation" id="id67">Utilisation</a></p></li>
+<li><p><a class="reference internal" href="#connaitre-l-emetteur-d-un-signal-dans-un-slot" id="id68">Connaître l’émetteur d’un signal dans un slot</a></p></li>
+<li><p><a class="reference internal" href="#creation" id="id69">Création</a></p></li>
+<li><p><a class="reference internal" href="#autoconnect" id="id70">Autoconnect</a></p></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#petits-tracas" id="id71">Petits tracas</a></li>
-<li><a class="reference internal" href="#cout" id="id72">cout</a><ul>
-<li><a class="reference internal" href="#undifined-cout" id="id73">undifined cout</a></li>
-<li><a class="reference internal" href="#qstring-vs-cout" id="id74">QString vs cout</a></li>
+<li><p><a class="reference internal" href="#petits-tracas" id="id71">Petits tracas</a></p></li>
+<li><p><a class="reference internal" href="#cout" id="id72">cout</a></p>
+<ul>
+<li><p><a class="reference internal" href="#undifined-cout" id="id73">undifined cout</a></p></li>
+<li><p><a class="reference internal" href="#qstring-vs-cout" id="id74">QString vs cout</a></p></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#boite-de-dialogue-standard" id="id75">Boîte de dialogue standard</a></li>
-<li><a class="reference internal" href="#qt-layout" id="id76">Qt layout</a></li>
-<li><a class="reference internal" href="#communication-reseau" id="id77">Communication réseau</a><ul>
-<li><a class="reference internal" href="#architecture-client-serveur" id="id78">Architecture client/serveur</a></li>
+<li><p><a class="reference internal" href="#boite-de-dialogue-standard" id="id75">Boîte de dialogue standard</a></p></li>
+<li><p><a class="reference internal" href="#qt-layout" id="id76">Qt layout</a></p></li>
+<li><p><a class="reference internal" href="#communication-reseau" id="id77">Communication réseau</a></p>
+<ul>
+<li><p><a class="reference internal" href="#architecture-client-serveur" id="id78">Architecture client/serveur</a></p></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#tips" id="id79">Tips</a></li>
-<li><a class="reference internal" href="#deploiement" id="id80">Deploiement</a><ul>
-<li><a class="reference internal" href="#qt-static-linking" id="id81">Qt static linking</a></li>
+<li><p><a class="reference internal" href="#tips" id="id79">Tips</a></p></li>
+<li><p><a class="reference internal" href="#deploiement" id="id80">Deploiement</a></p>
+<ul>
+<li><p><a class="reference internal" href="#qt-static-linking" id="id81">Qt static linking</a></p></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#weblinks" id="id82">Weblinks</a></li>
+<li><p><a class="reference internal" href="#weblinks" id="id82">Weblinks</a></p></li>
 </ul>
 </li>
 </ul>
 </div>
 <div class="section" id="presentation">
 <h2><a class="toc-backref" href="#table-des-matieres-qt">Présentation</a><a class="headerlink" href="#presentation" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Bon <a class="reference external" href="https://openclassrooms.com/fr/courses/1894236-programmez-avec-le-langage-c/1898935-initiez-vous-a-qt">cours sur Openclassroom</a> <a class="footnote-reference" href="#id4" id="id5">[2]</a></p>
-<p>Une <a class="reference external" href="https://www.youtube.com/watch?v=050zzD4c-5c">vidéo globale</a> <a class="footnote-reference" href="#id2" id="id3">[1]</a> sur Youtube (traite seulement des applications QWidget)</p>
+<p>Bon <a class="reference external" href="https://openclassrooms.com/fr/courses/1894236-programmez-avec-le-langage-c/1898935-initiez-vous-a-qt">cours sur Openclassroom</a> <a class="footnote-reference brackets" href="#id4" id="id5">2</a></p>
+<p>Une <a class="reference external" href="https://www.youtube.com/watch?v=050zzD4c-5c">vidéo globale</a> <a class="footnote-reference brackets" href="#id2" id="id3">1</a> sur Youtube (traite seulement des applications QWidget)</p>
 <p>Plus qu’une bibliothèque Qt est un framework multiplateforme. Il vient de l’écosystème KDE.</p>
 <p>Il est composé de modules: core, GUI, dessin, reseau, xml, script, SVG, SQL… SerialPort</p>
-<p id="index-1">la <a class="reference external" href="https://doc.qt.io/">doc de Qt</a> <a class="footnote-reference" href="#id7" id="id8">[3]</a> est ici.</p>
+<p id="index-1">la <a class="reference external" href="https://doc.qt.io/">doc de Qt</a> <a class="footnote-reference brackets" href="#id7" id="id8">3</a> est ici.</p>
 <div class="admonition warning">
-<p class="first admonition-title">Avertissement</p>
-<p class="last">Les getteurs ne s’appellent pas getAttribut() mais directement attribut(). En revanche les
+<p class="admonition-title">Avertissement</p>
+<p>Les getteurs ne s’appellent pas getAttribut() mais directement attribut(). En revanche les
 setteurs s’appellent bien setAttribut.</p>
 </div>
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">La règle de nommage est le lowerCamelCase</p>
+<p class="admonition-title">Note</p>
+<p>La règle de nommage est le lowerCamelCase</p>
 </div>
 <div class="section" id="les-outils-qt">
 <h3><a class="toc-backref" href="#table-des-matieres-qt">Les outils Qt</a><a class="headerlink" href="#les-outils-qt" title="Lien permanent vers ce titre">¶</a></h3>
@@ -144,7 +151,7 @@ setteurs s’appellent bien setAttribut.</p>
 <p>Qt Designer permet de dessiner ses fenêtres. Bien qu’on puisse le faire directement en codant dans
 Qt creator, avec Qt Designer on s’évite d’avoir à fournir des positions en pixel pour chaque élément
 de sa/ses boîte de dialogues.</p>
-<p>Les premiers chapitres dédiés à Qt dans les <a class="reference external" href="https://openclassrooms.com/fr/courses/1894236-programmez-avec-le-langage-c/1898935-initiez-vous-a-qt">cours sur Openclassroom</a> <a class="footnote-reference" href="#id4" id="id6">[2]</a> n’utilisent pas Qt Designer et montrent
+<p>Les premiers chapitres dédiés à Qt dans les <a class="reference external" href="https://openclassrooms.com/fr/courses/1894236-programmez-avec-le-langage-c/1898935-initiez-vous-a-qt">cours sur Openclassroom</a> <a class="footnote-reference brackets" href="#id4" id="id6">2</a> n’utilisent pas Qt Designer et montrent
 comment faire sans.</p>
 </div>
 </div>
@@ -152,25 +159,25 @@ comment faire sans.</p>
 <span id="index-2"></span><h2><a class="toc-backref" href="#table-des-matieres-qt">Installation</a><a class="headerlink" href="#installation" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Il faut son permis de conduire ! Bien que certaines case soient déjà cochées cela ne suffit pas.</p>
 <p>Il faut choisir au moins un environnement (kits) mingw par exemple (32 et 64 bits).</p>
-<p>Ne pas hésiter à consulter : <a class="reference external" href="https://guillaumebelz.github.io/qtinstall/">Installation et premiers pas avec Qt 5.12</a> <a class="footnote-reference" href="#id9" id="id10">[4]</a></p>
+<p>Ne pas hésiter à consulter : <a class="reference external" href="https://guillaumebelz.github.io/qtinstall/">Installation et premiers pas avec Qt 5.12</a> <a class="footnote-reference brackets" href="#id9" id="id10">4</a></p>
 </div>
 <div class="section" id="service-minimum">
 <h2><a class="toc-backref" href="#table-des-matieres-qt">Service minimum</a><a class="headerlink" href="#service-minimum" title="Lien permanent vers ce titre">¶</a></h2>
 <div class="section" id="appli-console">
 <h3><a class="toc-backref" href="#table-des-matieres-qt">Appli console</a><a class="headerlink" href="#appli-console" title="Lien permanent vers ce titre">¶</a></h3>
-<div class="code cpp highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#include &lt;QCoreApplication&gt;</span>
-    <span class="c1">#include &lt;iostream&gt;</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;QCoreApplication&gt;</span><span class="cp"></span>
+    <span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
 
-    <span class="n">using</span> <span class="n">namespace</span> <span class="n">std</span><span class="p">;</span>
+    <span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
 
 
-    <span class="nb">int</span> <span class="n">main</span><span class="p">(</span><span class="nb">int</span> <span class="n">argc</span><span class="p">,</span> <span class="n">char</span> <span class="o">*</span><span class="n">argv</span><span class="p">[])</span>
+    <span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span> <span class="o">*</span><span class="n">argv</span><span class="p">[])</span>
     <span class="p">{</span>
             <span class="n">QCoreApplication</span> <span class="n">a</span><span class="p">(</span><span class="n">argc</span><span class="p">,</span> <span class="n">argv</span><span class="p">);</span>
 
-            <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s2">&quot;hello&quot;</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+            <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;hello&quot;</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
 
-            <span class="k">return</span> <span class="n">a</span><span class="o">.</span><span class="n">exec</span><span class="p">();</span>
+            <span class="k">return</span> <span class="n">a</span><span class="p">.</span><span class="n">exec</span><span class="p">();</span>
     <span class="p">}</span>
 </pre></div>
 </div>
@@ -180,7 +187,7 @@ comment faire sans.</p>
 <p>N’importe quel QWidget peut faire office de fénêtre. Donc pour créer un fenêtre minimum,
 il suffit de créer un QWidget : <em>QWidget fen;</em> suivi d’un <em>fen.show();</em></p>
 <p>Fichier .pro</p>
-<div class="code highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">QT</span> <span class="o">+=</span> <span class="n">widgets</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">QT</span> <span class="o">+=</span> <span class="n">widgets</span>
 
 <span class="n">SOURCES</span> <span class="o">+=</span> \
    <span class="n">main</span><span class="o">.</span><span class="n">cpp</span> \
@@ -191,84 +198,84 @@ il suffit de créer un QWidget : <em>QWidget fen;</em> suivi d’un <em>fen.show
 </pre></div>
 </div>
 <p>Fichier main.cpp:</p>
-<div class="code cpp highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#include &lt;QApplication&gt;</span>
-<span class="c1">#include &lt;QPushButton&gt;</span>
-<span class="c1">#include &quot;mafenetre.h&quot;</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;QApplication&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;QPushButton&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&quot;mafenetre.h&quot;</span><span class="cp"></span>
 
 
-<span class="nb">int</span> <span class="n">main</span><span class="p">(</span><span class="nb">int</span> <span class="n">argc</span><span class="p">,</span> <span class="n">char</span> <span class="o">*</span><span class="n">argv</span><span class="p">[]){</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span> <span class="o">*</span><span class="n">argv</span><span class="p">[]){</span>
    <span class="n">QApplication</span> <span class="n">app</span><span class="p">(</span><span class="n">argc</span><span class="p">,</span> <span class="n">argv</span><span class="p">);</span>
 
    <span class="n">MaFenetre</span> <span class="n">fen</span><span class="p">;</span>
-   <span class="n">fen</span><span class="o">.</span><span class="n">show</span><span class="p">();</span>
+   <span class="n">fen</span><span class="p">.</span><span class="n">show</span><span class="p">();</span>
 
-   <span class="k">return</span> <span class="n">app</span><span class="o">.</span><span class="n">exec</span><span class="p">();</span>
+   <span class="k">return</span> <span class="n">app</span><span class="p">.</span><span class="n">exec</span><span class="p">();</span>
 
 <span class="p">}</span>
 </pre></div>
 </div>
 <p>Fichier mafenetre.h:</p>
-<div class="code cpp highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#ifndef DEF_MAFENETRE</span>
-<span class="c1">#define DEF_MAFENETRE</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#ifndef DEF_MAFENETRE</span>
+<span class="cp">#define DEF_MAFENETRE</span>
 
-<span class="c1">#include &lt;QWidget&gt;</span>
-<span class="c1">#include &lt;QPushButton&gt;</span>
+<span class="cp">#include</span> <span class="cpf">&lt;QWidget&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;QPushButton&gt;</span><span class="cp"></span>
 
-<span class="k">class</span> <span class="nc">MaFenetre</span> <span class="p">:</span> <span class="n">public</span> <span class="n">QWidget</span> <span class="o">//</span> <span class="n">On</span> <span class="n">hérite</span> <span class="n">de</span> <span class="n">QWidget</span> <span class="p">(</span><span class="n">IMPORTANT</span><span class="p">)</span>
+<span class="k">class</span> <span class="nc">MaFenetre</span> <span class="o">:</span> <span class="k">public</span> <span class="n">QWidget</span> <span class="c1">// On hérite de QWidget (IMPORTANT)</span>
 <span class="p">{</span>
-   <span class="n">public</span><span class="p">:</span>
+   <span class="k">public</span><span class="o">:</span>
    <span class="n">MaFenetre</span><span class="p">();</span>
    <span class="o">~</span><span class="n">MaFenetre</span><span class="p">();</span>
 
-   <span class="n">private</span><span class="p">:</span>
+   <span class="k">private</span><span class="o">:</span>
    <span class="n">QPushButton</span> <span class="o">*</span><span class="n">m_bouton</span><span class="p">;</span>
 <span class="p">};</span>
 
-<span class="c1">#endif</span>
+<span class="cp">#endif</span>
 </pre></div>
 </div>
 <p>Fichier mafenetre.cpp</p>
-<div class="code cpp highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#include &quot;mafenetre.h&quot;</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&quot;mafenetre.h&quot;</span><span class="cp"></span>
 
-<span class="n">MaFenetre</span><span class="p">::</span><span class="n">MaFenetre</span><span class="p">()</span>
+<span class="n">MaFenetre</span><span class="o">::</span><span class="n">MaFenetre</span><span class="p">()</span>
 <span class="p">{</span>
    <span class="n">setFixedSize</span><span class="p">(</span><span class="mi">200</span><span class="p">,</span><span class="mi">100</span><span class="p">);</span>
-   <span class="n">m_bouton</span> <span class="o">=</span> <span class="n">new</span> <span class="n">QPushButton</span><span class="p">(</span><span class="s2">&quot;OK button&quot;</span><span class="p">,</span> <span class="n">this</span><span class="p">);</span>
+   <span class="n">m_bouton</span> <span class="o">=</span> <span class="k">new</span> <span class="n">QPushButton</span><span class="p">(</span><span class="s">&quot;OK button&quot;</span><span class="p">,</span> <span class="k">this</span><span class="p">);</span>
 
 <span class="p">}</span>
 
-<span class="n">MaFenetre</span><span class="p">::</span><span class="o">~</span><span class="n">MaFenetre</span><span class="p">(){</span>
-   <span class="n">delete</span> <span class="n">m_bouton</span><span class="p">;</span>
+<span class="n">MaFenetre</span><span class="o">::~</span><span class="n">MaFenetre</span><span class="p">(){</span>
+   <span class="k">delete</span> <span class="n">m_bouton</span><span class="p">;</span>
 <span class="p">}</span>
 </pre></div>
 </div>
 <p>On peut également créer une application minimum sans QDesigner et donc sans fichier .ui en décochant
-la case <em>Generate form</em> on a alors une appliminimum qui utilise la <a class="reference external" href="https://doc.qt.io/qt-5/qmainwindow.html">classe QMainWindow</a> <a class="footnote-reference" href="#id11" id="id12">[5]</a></p>
+la case <em>Generate form</em> on a alors une appliminimum qui utilise la <a class="reference external" href="https://doc.qt.io/qt-5/qmainwindow.html">classe QMainWindow</a> <a class="footnote-reference brackets" href="#id11" id="id12">5</a></p>
 <p>Ou encore basée sur les classes QWidget ou QDialog comme sur la copie d’écran ci-dessous:</p>
 <a class="reference internal image-reference" href="../../_images/screenNewApp.jpg"><img alt="alternate text" class="align-center" src="../../_images/screenNewApp.jpg" style="width: 500px;" /></a>
 <div class="admonition warning">
-<p class="first admonition-title">Avertissement</p>
-<dl class="last docutils">
-<dt>Quand on uilise un ui generé par QtDesigner, il faut faire précédé ses widget par ui-&gt;.</dt>
-<dd>Pas forcément il suffit de faire hérité en private sa fenetre de l’ui comme dans l’exemple OpenClassRoom</dd>
+<p class="admonition-title">Avertissement</p>
+<dl class="simple">
+<dt>Quand on uilise un ui generé par QtDesigner, il faut faire précédé ses widget par ui-&gt;.</dt><dd><p>Pas forcément il suffit de faire hérité en private sa fenetre de l’ui comme dans l’exemple OpenClassRoom</p>
+</dd>
 </dl>
 </div>
-<p>Exemple <a class="reference external" href="https://openclassrooms.com/fr/courses/1894236-programmez-avec-le-langage-c/1902751-communiquez-en-reseau-avec-son-programme">openclassroom ui</a> <a class="footnote-reference" href="#id13" id="id14">[6]</a> chat client</p>
-<div class="code cpp highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#ifndef HEADER_FENCLIENT</span>
-    <span class="c1">#define HEADER_FENCLIENT</span>
+<p>Exemple <a class="reference external" href="https://openclassrooms.com/fr/courses/1894236-programmez-avec-le-langage-c/1902751-communiquez-en-reseau-avec-son-programme">openclassroom ui</a> <a class="footnote-reference brackets" href="#id13" id="id14">6</a> chat client</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#ifndef HEADER_FENCLIENT</span>
+    <span class="cp">#define HEADER_FENCLIENT</span>
 
-    <span class="c1">#include &lt;QtWidgets&gt;</span>
-    <span class="c1">#include &lt;QtNetwork&gt;</span>
-    <span class="c1">#include &quot;ui_FenClient.h&quot;</span>
+    <span class="cp">#include</span> <span class="cpf">&lt;QtWidgets&gt;</span><span class="cp"></span>
+    <span class="cp">#include</span> <span class="cpf">&lt;QtNetwork&gt;</span><span class="cp"></span>
+    <span class="cp">#include</span> <span class="cpf">&quot;ui_FenClient.h&quot;</span><span class="cp"></span>
 
 
-    <span class="k">class</span> <span class="nc">FenClient</span> <span class="p">:</span> <span class="n">public</span> <span class="n">QWidget</span><span class="p">,</span> <span class="n">private</span> <span class="n">Ui</span><span class="p">::</span><span class="n">FenClient</span>
+    <span class="k">class</span> <span class="nc">FenClient</span> <span class="o">:</span> <span class="k">public</span> <span class="n">QWidget</span><span class="p">,</span> <span class="k">private</span> <span class="n">Ui</span><span class="o">::</span><span class="n">FenClient</span>
     <span class="p">{</span>
             <span class="n">Q_OBJECT</span>
 
-            <span class="n">public</span><span class="p">:</span>
+            <span class="k">public</span><span class="o">:</span>
                     <span class="n">FenClient</span><span class="p">();</span>
-    <span class="o">//...</span>
+    <span class="c1">//...</span>
 </pre></div>
 </div>
 </div>
@@ -279,7 +286,7 @@ la case <em>Generate form</em> on a alors une appliminimum qui utilise la <a cla
 <p>Pb dans l’exemple client chat d’Openclassroom, il y a un fichier auto généré ui_fenclient.h
 mais je ne sais plus comment ?</p>
 <p>Ce n’est pas dans les tuto Qt que cette technique est expliquée.</p>
-<p>On le retrouve dans l’aide Qt : <a class="reference external" href="https://doc.qt.io/qt-5/designer-using-a-ui-file.html">using a Designer UI File inYour Application</a> <a class="footnote-reference" href="#id15" id="id16">[7]</a></p>
+<p>On le retrouve dans l’aide Qt : <a class="reference external" href="https://doc.qt.io/qt-5/designer-using-a-ui-file.html">using a Designer UI File inYour Application</a> <a class="footnote-reference brackets" href="#id15" id="id16">7</a></p>
 <p>Il s’agit en fait d’un fichier auto généré par qmake au moment de la compilation.</p>
 <p>Nécessite d’avoir dans le fichier .pro QT += widgets.</p>
 <p>Ce fichier est placé dans le répertoire de compilation pas dans les sources !!!</p>
@@ -294,8 +301,8 @@ Qt Desinger…</p>
 <h3><a class="toc-backref" href="#table-des-matieres-qt">Qt et répertoires</a><a class="headerlink" href="#qt-et-repertoires" title="Lien permanent vers ce titre">¶</a></h3>
 <p>Qt a tendance à prendre ses aises dans le répertoire du projet:</p>
 <ul class="simple">
-<li>les fichiers compilés se trouvent à un niveau supérieur par rapport au projet</li>
-<li>les noms de ces répertoires sont <strong>excessivement long</strong> !</li>
+<li><p>les fichiers compilés se trouvent à un niveau supérieur par rapport au projet</p></li>
+<li><p>les noms de ces répertoires sont <strong>excessivement long</strong> !</p></li>
 </ul>
 <p>Le fait que les fichiers compilés se trouve à un niveau supérieur peut être déroutant au début mais
 a l’usage cela peut s’avérer utile quand, par exemple, on veut récupérer ses fichiers sources
@@ -304,9 +311,9 @@ de plusieurs projets en méme temps pour les déplacer sur une autre machine.</p
 <div class="section" id="mode-debug">
 <span id="index-3"></span><h3><a class="toc-backref" href="#table-des-matieres-qt">Mode debug</a><a class="headerlink" href="#mode-debug" title="Lien permanent vers ce titre">¶</a></h3>
 <a class="reference internal image-reference" href="../../_images/ScreenshotdebugBoutons.png"><img alt="boutons de debug" class="align-center" src="../../_images/ScreenshotdebugBoutons.png" style="width: 500.0px; height: 268.0px;" /></a>
-<dl class="docutils">
-<dt>Attention ces boutons verts ne sont pas identiques. Celui du haut lance un nouveau debug</dt>
-<dd>Celui du bas refait la même cession !</dd>
+<dl class="simple">
+<dt>Attention ces boutons verts ne sont pas identiques. Celui du haut lance un nouveau debug</dt><dd><p>Celui du bas refait la même cession !</p>
+</dd>
 </dl>
 </div>
 </div>
@@ -315,34 +322,34 @@ de plusieurs projets en méme temps pour les déplacer sur une autre machine.</p
 <h2><a class="toc-backref" href="#table-des-matieres-qt">Classes qui me semblent les plus utiles</a><a class="headerlink" href="#classes-qui-me-semblent-les-plus-utiles" title="Lien permanent vers ce titre">¶</a></h2>
 <div class="section" id="de-base">
 <h3><a class="toc-backref" href="#table-des-matieres-qt">De base</a><a class="headerlink" href="#de-base" title="Lien permanent vers ce titre">¶</a></h3>
-<p><a class="reference external" href="https://doc.qt.io/qt-5/qwidget.html">QWidget</a> <a class="footnote-reference" href="#id19" id="id20">[9]</a> : une fenêtre est un widget, donc .show() s’applique.</p>
-<p><a class="reference external" href="https://doc.qt.io/qt-5/qpushbutton.html">QPushButton</a> <a class="footnote-reference" href="#id21" id="id22">[10]</a> est aussi un widget</p>
-<p><a class="reference external" href="https://doc.qt.io/qt-5/qlineedit.html">QLineEdit</a> <a class="footnote-reference" href="#id17" id="id18">[8]</a> pour entrer du texte</p>
+<p><a class="reference external" href="https://doc.qt.io/qt-5/qwidget.html">QWidget</a> <a class="footnote-reference brackets" href="#id19" id="id20">9</a> : une fenêtre est un widget, donc .show() s’applique.</p>
+<p><a class="reference external" href="https://doc.qt.io/qt-5/qpushbutton.html">QPushButton</a> <a class="footnote-reference brackets" href="#id21" id="id22">10</a> est aussi un widget</p>
+<p><a class="reference external" href="https://doc.qt.io/qt-5/qlineedit.html">QLineEdit</a> <a class="footnote-reference brackets" href="#id17" id="id18">8</a> pour entrer du texte</p>
 <p>QTextEdit + les layouts.</p>
 </div>
 <div class="section" id="advanced">
 <h3><a class="toc-backref" href="#table-des-matieres-qt">Advanced</a><a class="headerlink" href="#advanced" title="Lien permanent vers ce titre">¶</a></h3>
-<p><a class="reference external" href="https://doc.qt.io/qt-5/qfilesystemmodel.html#example-usage">QFileSystemModel</a> <a class="footnote-reference" href="#id23" id="id24">[11]</a> et <a class="reference external" href="https://doc.qt.io/qt-5/qfilesystemmodel.html#example-usage">QTreeView</a> <a class="footnote-reference" href="#id23" id="id25">[11]</a> permettent de faire une arborescence disque en quelques lignes…</p>
-<p>Il y a l”<a class="reference external" href="https://openclassrooms.com/fr/courses/1894236-programmez-avec-le-langage-c/1902176-decouvrez-l-architecture-mvc-avec-les-widgets-complexes#/id/r-1902175">exemple de QStringList</a> <a class="footnote-reference" href="#id26" id="id27">[12]</a> avec sélection dans OpenClassroom</p>
+<p><a class="reference external" href="https://doc.qt.io/qt-5/qfilesystemmodel.html#example-usage">QFileSystemModel</a> <a class="footnote-reference brackets" href="#id23" id="id24">11</a> et <a class="reference external" href="https://doc.qt.io/qt-5/qfilesystemmodel.html#example-usage">QTreeView</a> <a class="footnote-reference brackets" href="#id23" id="id25">11</a> permettent de faire une arborescence disque en quelques lignes…</p>
+<p>Il y a l”<a class="reference external" href="https://openclassrooms.com/fr/courses/1894236-programmez-avec-le-langage-c/1902176-decouvrez-l-architecture-mvc-avec-les-widgets-complexes#/id/r-1902175">exemple de QStringList</a> <a class="footnote-reference brackets" href="#id26" id="id27">12</a> avec sélection dans OpenClassroom</p>
 <p>More advenced :</p>
 <p>QDataStream, QTcpSocket, QTcpServer</p>
 <p id="index-4">qobject_cast&lt;&gt;() : pas vraiment une classe mais fort utile ! Permet de faire du dynamique_cast mais
 seulement sur des QObjet (et ses dérivées) sans utiliser le Run Time Type Information (RTTI).</p>
 <p><span class="target" id="index-5"></span>RTTI donc dynamic_cast&lt;&gt;() qui de plus est compilo dépendant !</p>
-<p>Référence : <a class="reference external" href="https://stackoverflow.com/questions/43994584/what-is-qobject-cast">qobject_cast sur stackoverflow</a> <a class="footnote-reference" href="#id28" id="id29">[13]</a></p>
+<p>Référence : <a class="reference external" href="https://stackoverflow.com/questions/43994584/what-is-qobject-cast">qobject_cast sur stackoverflow</a> <a class="footnote-reference brackets" href="#id28" id="id29">13</a></p>
 <p>Exemple classique d’utilisation dans un slot sender() renvoi un pointeur sur QObject qu’on peut
 alors cast sur un QPushButton par exemple:</p>
-<div class="code cpp highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">QObject</span><span class="p">::</span><span class="n">connect</span><span class="p">(</span> <span class="n">btn</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">QPushButton</span><span class="p">::</span><span class="n">clicked</span><span class="p">,</span> <span class="n">this</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">MyClass</span><span class="p">::</span><span class="n">onClicked</span> <span class="p">);</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">QObject</span><span class="o">::</span><span class="n">connect</span><span class="p">(</span> <span class="n">btn</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">QPushButton</span><span class="o">::</span><span class="n">clicked</span><span class="p">,</span> <span class="k">this</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">MyClass</span><span class="o">::</span><span class="n">onClicked</span> <span class="p">);</span>
 
-<span class="n">void</span> <span class="n">MyClass</span><span class="p">::</span><span class="n">onClicked</span><span class="p">()</span>
+<span class="kt">void</span> <span class="n">MyClass</span><span class="o">::</span><span class="n">onClicked</span><span class="p">()</span>
 <span class="p">{</span>
-    <span class="o">//</span> <span class="n">How</span> <span class="n">to</span> <span class="n">get</span> <span class="n">pointer</span> <span class="n">to</span> <span class="n">a</span> <span class="n">button</span><span class="p">:</span>
+    <span class="c1">// How to get pointer to a button:</span>
     <span class="n">QObject</span> <span class="o">*</span><span class="n">p</span> <span class="o">=</span> <span class="n">sender</span><span class="p">();</span>
-    <span class="o">//</span> <span class="n">It</span><span class="s1">&#39;s QObject. Now we need to cast it to button:</span>
+    <span class="c1">// It&#39;s QObject. Now we need to cast it to button:</span>
     <span class="n">QPushButton</span> <span class="o">*</span><span class="n">btn</span> <span class="o">=</span> <span class="n">qobject_cast</span><span class="o">&lt;</span><span class="n">QPushButon</span> <span class="o">*&gt;</span><span class="p">(</span> <span class="n">p</span> <span class="p">);</span>
-    <span class="n">Q_ASSERT</span><span class="p">(</span> <span class="n">btn</span> <span class="o">!=</span> <span class="n">nullptr</span> <span class="p">);</span> <span class="o">//</span> <span class="n">Check</span> <span class="n">that</span> <span class="n">a</span> <span class="n">cast</span> <span class="n">was</span> <span class="n">successfull</span>
-    <span class="o">//</span> <span class="n">Now</span> <span class="n">we</span> <span class="n">can</span> <span class="n">use</span> <span class="n">a</span> <span class="n">QObject</span> <span class="k">as</span> <span class="n">a</span> <span class="n">button</span><span class="p">:</span>
-    <span class="n">btn</span><span class="o">-&gt;</span><span class="n">setText</span><span class="p">(</span> <span class="s2">&quot;We just clicked on a button!&quot;</span> <span class="p">);</span>
+    <span class="n">Q_ASSERT</span><span class="p">(</span> <span class="n">btn</span> <span class="o">!=</span> <span class="k">nullptr</span> <span class="p">);</span> <span class="c1">// Check that a cast was successfull</span>
+    <span class="c1">// Now we can use a QObject as a button:</span>
+    <span class="n">btn</span><span class="o">-&gt;</span><span class="n">setText</span><span class="p">(</span> <span class="s">&quot;We just clicked on a button!&quot;</span> <span class="p">);</span>
 <span class="p">}</span>
 </pre></div>
 </div>
@@ -373,34 +380,34 @@ alors cast sur un QPushButton par exemple:</p>
 <h3><a class="toc-backref" href="#table-des-matieres-qt">Utilisation</a><a class="headerlink" href="#utilisation" title="Lien permanent vers ce titre">¶</a></h3>
 <p>Pour connecter un signal à un slot, on utilise la méthode connect() <strong>(méthode statique de QObject)</strong></p>
 <p>Exemple:</p>
-<div class="code cpp highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">QObject</span><span class="p">::</span><span class="n">connect</span><span class="p">(</span><span class="n">m_bouton</span><span class="p">,</span> <span class="n">SIGNAL</span><span class="p">(</span><span class="n">clicked</span><span class="p">()),</span> <span class="n">qApp</span><span class="p">,</span> <span class="n">SLOT</span><span class="p">(</span><span class="n">quit</span><span class="p">()));</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">QObject</span><span class="o">::</span><span class="n">connect</span><span class="p">(</span><span class="n">m_bouton</span><span class="p">,</span> <span class="n">SIGNAL</span><span class="p">(</span><span class="n">clicked</span><span class="p">()),</span> <span class="n">qApp</span><span class="p">,</span> <span class="n">SLOT</span><span class="p">(</span><span class="n">quit</span><span class="p">()));</span>
 </pre></div>
 </div>
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">SIGNAL() et SLOT() sont des macros obligatoires.</p>
+<p class="admonition-title">Note</p>
+<p>SIGNAL() et SLOT() sont des macros obligatoires.</p>
 </div>
 <p>C’est l’équivalent de DoDataExchange et de ses macros DDX_control, DDX_Text et de la macro
 BEGIN_MESSAGE_MAP de VisualCpp</p>
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">qApp est un pointeur sur l’objet QApplication créé automatiquement (#include &lt;QApplication&gt;).</p>
+<p class="admonition-title">Note</p>
+<p>qApp est un pointeur sur l’objet QApplication créé automatiquement (#include &lt;QApplication&gt;).</p>
 </div>
 <p>On peut passer des paramètres aux travers des signaux/slots</p>
 <p>Exemples:</p>
-<div class="code cpp highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">QObject</span><span class="p">::</span><span class="n">connect</span><span class="p">(</span><span class="n">m_slider</span><span class="p">,</span> <span class="n">SIGNAL</span><span class="p">(</span><span class="n">valueChanged</span><span class="p">(</span><span class="nb">int</span><span class="p">)),</span> <span class="n">m_lcd</span><span class="p">,</span> <span class="n">SLOT</span><span class="p">(</span><span class="n">display</span><span class="p">(</span><span class="nb">int</span><span class="p">)))</span> <span class="p">;</span>
-<span class="n">QObject</span><span class="p">::</span><span class="n">connect</span><span class="p">(</span><span class="n">m_slider</span><span class="p">,</span> <span class="n">SIGNAL</span><span class="p">(</span><span class="n">valueChanged</span><span class="p">(</span><span class="nb">int</span><span class="p">)),</span> <span class="n">m_bar</span><span class="p">,</span> <span class="n">SLOT</span><span class="p">(</span><span class="n">setValue</span><span class="p">(</span><span class="nb">int</span><span class="p">)))</span> <span class="p">;</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">QObject</span><span class="o">::</span><span class="n">connect</span><span class="p">(</span><span class="n">m_slider</span><span class="p">,</span> <span class="n">SIGNAL</span><span class="p">(</span><span class="n">valueChanged</span><span class="p">(</span><span class="kt">int</span><span class="p">)),</span> <span class="n">m_lcd</span><span class="p">,</span> <span class="n">SLOT</span><span class="p">(</span><span class="n">display</span><span class="p">(</span><span class="kt">int</span><span class="p">)))</span> <span class="p">;</span>
+<span class="n">QObject</span><span class="o">::</span><span class="n">connect</span><span class="p">(</span><span class="n">m_slider</span><span class="p">,</span> <span class="n">SIGNAL</span><span class="p">(</span><span class="n">valueChanged</span><span class="p">(</span><span class="kt">int</span><span class="p">)),</span> <span class="n">m_bar</span><span class="p">,</span> <span class="n">SLOT</span><span class="p">(</span><span class="n">setValue</span><span class="p">(</span><span class="kt">int</span><span class="p">)))</span> <span class="p">;</span>
 </pre></div>
 </div>
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">Ne pas oublier que les slot et les signaux s’héritent</p>
+<p class="admonition-title">Note</p>
+<p>Ne pas oublier que les slot et les signaux s’héritent</p>
 </div>
 </div>
 <div class="section" id="connaitre-l-emetteur-d-un-signal-dans-un-slot">
 <span id="index-8"></span><h3><a class="toc-backref" href="#table-des-matieres-qt">Connaître l’émetteur d’un signal dans un slot</a><a class="headerlink" href="#connaitre-l-emetteur-d-un-signal-dans-un-slot" title="Lien permanent vers ce titre">¶</a></h3>
 <p>Pour déterminer l’objet à l’origine d’un signal (cas de plusieurs objetc connecté au même slot),
-on utilise la méthode <a class="reference external" href="https://doc.qt.io/qt-5/qobject.html#sender">sender()</a> <a class="footnote-reference" href="#id30" id="id31">[14]</a> de la class QObject</p>
+on utilise la méthode <a class="reference external" href="https://doc.qt.io/qt-5/qobject.html#sender">sender()</a> <a class="footnote-reference brackets" href="#id30" id="id31">14</a> de la class QObject</p>
 </div>
 <div class="section" id="creation">
 <h3><a class="toc-backref" href="#table-des-matieres-qt">Création</a><a class="headerlink" href="#creation" title="Lien permanent vers ce titre">¶</a></h3>
@@ -408,33 +415,33 @@ on utilise la méthode <a class="reference external" href="https://doc.qt.io/qt-
 directement ou indirectement de QObject (un QWidget c’est bon par exemple)</p>
 <blockquote>
 <div><ul class="simple">
-<li>Créer la macro Q_OBJECT dans le header de la classe</li>
-<li>Exécuter qmake</li>
-<li>Ajouter <em>public slots:</em> dans le header de la classe suivi d’une ou plusieurs méthodes pour définir les slots.</li>
-<li>Pour un signal ajouter <em>signals:</em> suivi du prototype de la méthodes</li>
+<li><p>Créer la macro Q_OBJECT dans le header de la classe</p></li>
+<li><p>Exécuter qmake</p></li>
+<li><p>Ajouter <em>public slots:</em> dans le header de la classe suivi d’une ou plusieurs méthodes pour définir les slots.</p></li>
+<li><p>Pour un signal ajouter <em>signals:</em> suivi du prototype de la méthodes</p></li>
 </ul>
 </div></blockquote>
 <div class="admonition warning">
-<p class="first admonition-title">Avertissement</p>
-<p class="last">Les méthodes signals: ne sont pas à implémenter dans le .cpp</p>
+<p class="admonition-title">Avertissement</p>
+<p>Les méthodes signals: ne sont pas à implémenter dans le .cpp</p>
 </div>
 <p>Pour émettre un signal dempuis le code on utilise le mot clé <em>emit</em> suivi du nom de la
 méthode avec ses paramètre (on sépare de <em>emit</em> avec un espace - pas de parenthèses !)</p>
 <p>Oserai-je un petit exemple ! Tiré du cours c++ de Openclassroom:</p>
-<div class="code cpp highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#include &quot;mafenetre.h&quot;</span>
-<span class="c1">#include &lt;QPushButton&gt;</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&quot;mafenetre.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;QPushButton&gt;</span><span class="cp"></span>
 
 
-<span class="n">MaFenetre</span><span class="p">::</span><span class="n">MaFenetre</span><span class="p">()</span>
+<span class="n">MaFenetre</span><span class="o">::</span><span class="n">MaFenetre</span><span class="p">()</span>
 <span class="p">{</span>
    <span class="n">setFixedSize</span><span class="p">(</span><span class="mi">200</span><span class="p">,</span><span class="mi">200</span><span class="p">);</span>
-   <span class="n">m_bouton</span> <span class="o">=</span> <span class="n">new</span> <span class="n">QPushButton</span><span class="p">(</span><span class="s2">&quot;Quit&quot;</span><span class="p">,</span> <span class="n">this</span><span class="p">);</span>
-   <span class="n">m_bouton</span><span class="o">-&gt;</span><span class="n">setFont</span><span class="p">(</span><span class="n">QFont</span><span class="p">(</span><span class="s2">&quot;Comic Sans MS&quot;</span><span class="p">,</span> <span class="mi">14</span><span class="p">));</span>
+   <span class="n">m_bouton</span> <span class="o">=</span> <span class="k">new</span> <span class="n">QPushButton</span><span class="p">(</span><span class="s">&quot;Quit&quot;</span><span class="p">,</span> <span class="k">this</span><span class="p">);</span>
+   <span class="n">m_bouton</span><span class="o">-&gt;</span><span class="n">setFont</span><span class="p">(</span><span class="n">QFont</span><span class="p">(</span><span class="s">&quot;Comic Sans MS&quot;</span><span class="p">,</span> <span class="mi">14</span><span class="p">));</span>
    <span class="n">m_bouton</span><span class="o">-&gt;</span><span class="n">move</span><span class="p">(</span><span class="mi">40</span><span class="p">,</span> <span class="mi">150</span><span class="p">);</span>
 
 
 
-   <span class="n">m_slider</span> <span class="o">=</span> <span class="n">new</span> <span class="n">QSlider</span><span class="p">(</span><span class="n">Qt</span><span class="p">::</span><span class="n">Horizontal</span><span class="p">,</span> <span class="n">this</span><span class="p">);</span>
+   <span class="n">m_slider</span> <span class="o">=</span> <span class="k">new</span> <span class="n">QSlider</span><span class="p">(</span><span class="n">Qt</span><span class="o">::</span><span class="n">Horizontal</span><span class="p">,</span> <span class="k">this</span><span class="p">);</span>
    <span class="n">m_slider</span><span class="o">-&gt;</span><span class="n">setRange</span><span class="p">(</span><span class="mi">200</span><span class="p">,</span><span class="mi">600</span><span class="p">);</span>
    <span class="n">m_slider</span><span class="o">-&gt;</span><span class="n">setGeometry</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">60</span><span class="p">,</span><span class="mi">150</span><span class="p">,</span><span class="mi">20</span><span class="p">);</span>
 
@@ -442,60 +449,60 @@ méthode avec ses paramètre (on sépare de <em>emit</em> avec un espace - pas d
 
 
 
-   <span class="n">QObject</span><span class="p">::</span><span class="n">connect</span><span class="p">(</span><span class="n">m_bouton</span><span class="p">,</span> <span class="n">SIGNAL</span><span class="p">(</span><span class="n">clicked</span><span class="p">()),</span> <span class="n">qApp</span><span class="p">,</span> <span class="n">SLOT</span><span class="p">(</span><span class="n">quit</span><span class="p">()));</span>
-   <span class="n">QObject</span><span class="p">::</span><span class="n">connect</span><span class="p">(</span><span class="n">m_slider</span><span class="p">,</span> <span class="n">SIGNAL</span><span class="p">(</span><span class="n">valueChanged</span><span class="p">(</span><span class="nb">int</span><span class="p">)),</span> <span class="n">this</span><span class="p">,</span> <span class="n">SLOT</span><span class="p">(</span><span class="n">changerLargeur</span><span class="p">(</span><span class="nb">int</span><span class="p">)));</span>
+   <span class="n">QObject</span><span class="o">::</span><span class="n">connect</span><span class="p">(</span><span class="n">m_bouton</span><span class="p">,</span> <span class="n">SIGNAL</span><span class="p">(</span><span class="n">clicked</span><span class="p">()),</span> <span class="n">qApp</span><span class="p">,</span> <span class="n">SLOT</span><span class="p">(</span><span class="n">quit</span><span class="p">()));</span>
+   <span class="n">QObject</span><span class="o">::</span><span class="n">connect</span><span class="p">(</span><span class="n">m_slider</span><span class="p">,</span> <span class="n">SIGNAL</span><span class="p">(</span><span class="n">valueChanged</span><span class="p">(</span><span class="kt">int</span><span class="p">)),</span> <span class="k">this</span><span class="p">,</span> <span class="n">SLOT</span><span class="p">(</span><span class="n">changerLargeur</span><span class="p">(</span><span class="kt">int</span><span class="p">)));</span>
 
 <span class="p">}</span>
-<span class="n">MaFenetre</span><span class="p">::</span><span class="o">~</span><span class="n">MaFenetre</span><span class="p">(){</span>
-   <span class="n">delete</span> <span class="n">m_bouton</span><span class="p">;</span>
+<span class="n">MaFenetre</span><span class="o">::~</span><span class="n">MaFenetre</span><span class="p">(){</span>
+   <span class="k">delete</span> <span class="n">m_bouton</span><span class="p">;</span>
 <span class="p">}</span>
 
-<span class="n">void</span> <span class="n">MaFenetre</span><span class="p">::</span><span class="n">changerLargeur</span><span class="p">(</span><span class="nb">int</span> <span class="n">largeur</span><span class="p">)</span> <span class="p">{</span>
+<span class="kt">void</span> <span class="n">MaFenetre</span><span class="o">::</span><span class="n">changerLargeur</span><span class="p">(</span><span class="kt">int</span> <span class="n">largeur</span><span class="p">)</span> <span class="p">{</span>
    <span class="n">setFixedSize</span><span class="p">(</span><span class="n">largeur</span><span class="p">,</span> <span class="mi">200</span><span class="p">);</span>
    <span class="k">if</span> <span class="p">(</span><span class="n">largeur</span> <span class="o">==</span> <span class="mi">600</span> <span class="p">)</span> <span class="n">emit</span> <span class="n">largeurMax</span><span class="p">();</span>
 <span class="p">}</span>
 
-<span class="o">//</span><span class="n">le</span> <span class="n">header</span><span class="p">:</span>
-<span class="c1">#ifndef MAFENETRE_H</span>
-<span class="c1">#define MAFENETRE_H</span>
-<span class="c1">#include &lt;QApplication&gt;</span>
-<span class="c1">#include &lt;QPushButton&gt;</span>
-<span class="c1">#include &lt;QWidget&gt;</span>
-<span class="c1">#include &lt;QSlider&gt;</span>
+<span class="c1">//le header:</span>
+<span class="cp">#ifndef MAFENETRE_H</span>
+<span class="cp">#define MAFENETRE_H</span>
+<span class="cp">#include</span> <span class="cpf">&lt;QApplication&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;QPushButton&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;QWidget&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;QSlider&gt;</span><span class="cp"></span>
 
-<span class="k">class</span> <span class="nc">MaFenetre</span> <span class="p">:</span> <span class="n">public</span> <span class="n">QWidget</span>
+<span class="k">class</span> <span class="nc">MaFenetre</span> <span class="o">:</span> <span class="k">public</span> <span class="n">QWidget</span>
 <span class="p">{</span>
    <span class="n">Q_OBJECT</span>
 
-<span class="n">public</span><span class="p">:</span>
+<span class="k">public</span><span class="o">:</span>
    <span class="n">MaFenetre</span><span class="p">();</span>
    <span class="o">~</span><span class="n">MaFenetre</span><span class="p">();</span>
 
-<span class="n">public</span> <span class="n">slots</span><span class="p">:</span>
-   <span class="n">void</span> <span class="n">changerLargeur</span><span class="p">(</span><span class="nb">int</span> <span class="n">largeur</span><span class="p">);</span>
+<span class="k">public</span> <span class="nl">slots</span><span class="p">:</span>
+   <span class="kt">void</span> <span class="n">changerLargeur</span><span class="p">(</span><span class="kt">int</span> <span class="n">largeur</span><span class="p">);</span>
 
-<span class="n">signals</span><span class="p">:</span>
-   <span class="n">void</span> <span class="n">largeurMax</span><span class="p">();</span>
+<span class="nl">signals</span><span class="p">:</span>
+   <span class="kt">void</span> <span class="n">largeurMax</span><span class="p">();</span>
 
-<span class="n">private</span><span class="p">:</span>
+<span class="k">private</span><span class="o">:</span>
    <span class="n">QPushButton</span> <span class="o">*</span><span class="n">m_bouton</span><span class="p">;</span>
    <span class="n">QSlider</span> <span class="o">*</span><span class="n">m_slider</span><span class="p">;</span>
 <span class="p">};</span>
-<span class="c1">#endif // MAFENETRE_H</span>
+<span class="cp">#endif </span><span class="c1">// MAFENETRE_H</span>
 </pre></div>
 </div>
 <div class="admonition warning">
-<p class="first admonition-title">Avertissement</p>
-<p class="last">Après avoir ajouté la macro Q_OBJECT, faire un qmake sinon erreur vTable</p>
+<p class="admonition-title">Avertissement</p>
+<p>Après avoir ajouté la macro Q_OBJECT, faire un qmake sinon erreur vTable</p>
 </div>
-<p>Pour plus de détails voir <a class="reference external" href="https://openclassrooms.com/fr/courses/1894236-programmez-avec-le-langage-c/1899731-utilisez-les-signaux-et-les-slots#/id/r-1909507">signaux et slot dans OpenClassroom</a> <a class="footnote-reference" href="#id32" id="id33">[15]</a></p>
+<p>Pour plus de détails voir <a class="reference external" href="https://openclassrooms.com/fr/courses/1894236-programmez-avec-le-langage-c/1899731-utilisez-les-signaux-et-les-slots#/id/r-1909507">signaux et slot dans OpenClassroom</a> <a class="footnote-reference brackets" href="#id32" id="id33">15</a></p>
 </div>
 <div class="section" id="autoconnect">
 <span id="index-9"></span><h3><a class="toc-backref" href="#table-des-matieres-qt">Autoconnect</a><a class="headerlink" href="#autoconnect" title="Lien permanent vers ce titre">¶</a></h3>
 <p>Il n’est pas nécessaire de réaliser la connexion dans le cas d’un bouton par exemple.</p>
 <p>Si on respecte une certaine convention, Qt reconnait et fait la connexion pour nous.</p>
 <p>on_bouton_clicked() ( dommage se n’est pas du lowerCamelCase ! )</p>
-<p>La <a class="reference external" href="https://openclassrooms.com/fr/courses/1894236-programmez-avec-le-langage-c/1901673-modelisez-ses-fenetres-avec-qt-designer#/id/r-1911443">méthode auto-connect</a> <a class="footnote-reference" href="#id34" id="id35">[16]</a> est expliquée sur Openclassroom</p>
+<p>La <a class="reference external" href="https://openclassrooms.com/fr/courses/1894236-programmez-avec-le-langage-c/1901673-modelisez-ses-fenetres-avec-qt-designer#/id/r-1911443">méthode auto-connect</a> <a class="footnote-reference brackets" href="#id34" id="id35">16</a> est expliquée sur Openclassroom</p>
 </div>
 </div>
 <hr class="docutils" />
@@ -526,27 +533,27 @@ Il faut opérer une conversion comme par exemple:</p>
 <div class="section" id="boite-de-dialogue-standard">
 <span id="index-12"></span><h2><a class="toc-backref" href="#table-des-matieres-qt">Boîte de dialogue standard</a><a class="headerlink" href="#boite-de-dialogue-standard" title="Lien permanent vers ce titre">¶</a></h2>
 <a class="reference internal image-reference" href="../../_images/standardDialog.jpg"><img alt="QtStandard dialog" class="align-left" src="../../_images/standardDialog.jpg" style="width: 500px;" /></a>
-<dl class="docutils">
-<dt>Juste un petit mémo pour signaler que les boîtes de dialogue standard (sélectionner fichier,</dt>
-<dd>sélectionner font, sélectionner une couleur, simple message d’alerte…)
+<dl class="simple">
+<dt>Juste un petit mémo pour signaler que les boîtes de dialogue standard (sélectionner fichier,</dt><dd><p>sélectionner font, sélectionner une couleur, simple message d’alerte…)
 peuvent s’utiliser en statique (sans instance) tout au moins pour certaines cf. la doc rubriques
-Static Public Members.</dd>
+Static Public Members.</p>
+</dd>
 </dl>
-<div class="code cpp highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#include &lt;QFileDialog&gt;</span>
-<span class="c1">#include &lt;QMessageBox&gt;</span>
-<span class="c1">#include &lt;QColorDialog&gt;</span>
-<span class="c1">#include &lt;QFontDialog&gt;</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;QFileDialog&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;QMessageBox&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;QColorDialog&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;QFontDialog&gt;</span><span class="cp"></span>
 </pre></div>
 </div>
 <p><div class="clearer"></div></p>
-<p>Dans la <a class="reference external" href="https://doc.qt.io/qt-5.9/standard-dialogs.html">doc officielle ici</a> <a class="footnote-reference" href="#id36" id="id37">[17]</a></p>
+<p>Dans la <a class="reference external" href="https://doc.qt.io/qt-5.9/standard-dialogs.html">doc officielle ici</a> <a class="footnote-reference brackets" href="#id36" id="id37">17</a></p>
 <p>Exemple:</p>
-<div class="code cpp highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">int</span> <span class="n">ret</span> <span class="o">=</span> <span class="n">QMessageBox</span><span class="p">::</span><span class="n">warning</span><span class="p">(</span><span class="n">this</span><span class="p">,</span> <span class="n">tr</span><span class="p">(</span><span class="s2">&quot;My Application&quot;</span><span class="p">),</span>
-           <span class="n">tr</span><span class="p">(</span><span class="s2">&quot;The document has been modified.</span><span class="se">\n</span><span class="s2">&quot;</span>
-              <span class="s2">&quot;Do you want to save your changes?&quot;</span><span class="p">),</span>
-           <span class="n">QMessageBox</span><span class="p">::</span><span class="n">Save</span> <span class="o">|</span> <span class="n">QMessageBox</span><span class="p">::</span><span class="n">Discard</span>
-           <span class="o">|</span> <span class="n">QMessageBox</span><span class="p">::</span><span class="n">Cancel</span><span class="p">,</span>
-           <span class="n">QMessageBox</span><span class="p">::</span><span class="n">Save</span><span class="p">);</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span> <span class="n">ret</span> <span class="o">=</span> <span class="n">QMessageBox</span><span class="o">::</span><span class="n">warning</span><span class="p">(</span><span class="k">this</span><span class="p">,</span> <span class="n">tr</span><span class="p">(</span><span class="s">&quot;My Application&quot;</span><span class="p">),</span>
+           <span class="n">tr</span><span class="p">(</span><span class="s">&quot;The document has been modified.</span><span class="se">\n</span><span class="s">&quot;</span>
+              <span class="s">&quot;Do you want to save your changes?&quot;</span><span class="p">),</span>
+           <span class="n">QMessageBox</span><span class="o">::</span><span class="n">Save</span> <span class="o">|</span> <span class="n">QMessageBox</span><span class="o">::</span><span class="n">Discard</span>
+           <span class="o">|</span> <span class="n">QMessageBox</span><span class="o">::</span><span class="n">Cancel</span><span class="p">,</span>
+           <span class="n">QMessageBox</span><span class="o">::</span><span class="n">Save</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>Les niveaux de sévérité de QMessageBox : question, information, warning, critical  qui correspondent
@@ -555,60 +562,57 @@ Static Public Members.</dd>
 <hr class="docutils" />
 <div class="section" id="qt-layout">
 <h2><a class="toc-backref" href="#table-des-matieres-qt">Qt layout</a><a class="headerlink" href="#qt-layout" title="Lien permanent vers ce titre">¶</a></h2>
-<dl class="docutils">
-<dt>La classe QLayout est un classe abastraite ayant de nombreuses classes filles:</dt>
-<dd><ul class="first last simple">
-<li>QBoxLayout</li>
-<li>QGridLayout</li>
-<li>QFormLayout</li>
-<li>QStackLayout</li>
-<li>QVBoxLayout</li>
-<li>QHBoxLayout</li>
+<dl class="simple">
+<dt>La classe QLayout est un classe abastraite ayant de nombreuses classes filles:</dt><dd><ul class="simple">
+<li><p>QBoxLayout</p></li>
+<li><p>QGridLayout</p></li>
+<li><p>QFormLayout</p></li>
+<li><p>QStackLayout</p></li>
+<li><p>QVBoxLayout</p></li>
+<li><p>QHBoxLayout</p></li>
 </ul>
 </dd>
 </dl>
 <p>L’intérêt majeur d’utiliser des Layout est leur faculté de redimensionnent automatique.</p>
 <div class="admonition warning">
-<p class="first admonition-title">Avertissement</p>
-<p class="last">Les layout ne sont pas des Widgets, des QObject oui mais pas  des QWidget donc ils n’héritent
+<p class="admonition-title">Avertissement</p>
+<p>Les layout ne sont pas des Widgets, des QObject oui mais pas  des QWidget donc ils n’héritent
 pas de QWidget.</p>
 </div>
-<dl class="docutils">
-<dt>Méthodes importantes:</dt>
-<dd><ul class="first last simple">
-<li>addWidget</li>
+<dl class="simple">
+<dt>Méthodes importantes:</dt><dd><ul class="simple">
+<li><p>addWidget</p></li>
 </ul>
 </dd>
-<dt>Méthode fondamentale de la classe Widget en lien avec les layouts:</dt>
-<dd><ul class="first last simple">
-<li>setLayout</li>
+<dt>Méthode fondamentale de la classe Widget en lien avec les layouts:</dt><dd><ul class="simple">
+<li><p>setLayout</p></li>
 </ul>
 </dd>
 </dl>
 <div class="admonition tip">
-<p class="first admonition-title">Astuce</p>
-<p class="last">La classe QFormLayout possède une méthode addRow qui permet d’ajouter en un coup un QlineEdit et
+<p class="admonition-title">Astuce</p>
+<p>La classe QFormLayout possède une méthode addRow qui permet d’ajouter en un coup un QlineEdit et
 sont étiquette.</p>
 </div>
 <hr class="docutils" id="index-13" />
 </div>
 <div class="section" id="communication-reseau">
 <span id="index-14"></span><h2><a class="toc-backref" href="#table-des-matieres-qt">Communication réseau</a><a class="headerlink" href="#communication-reseau" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Référence : <a class="reference external" href="https://openclassrooms.com/fr/courses/1894236-programmez-avec-le-langage-c/1902751-communiquez-en-reseau-avec-son-programme">OpenClassRoom Communiquez en réseau</a> <a class="footnote-reference" href="#id13" id="id38">[6]</a></p>
+<p>Référence : <a class="reference external" href="https://openclassrooms.com/fr/courses/1894236-programmez-avec-le-langage-c/1902751-communiquez-en-reseau-avec-son-programme">OpenClassRoom Communiquez en réseau</a> <a class="footnote-reference brackets" href="#id13" id="id38">6</a></p>
 <div class="section" id="architecture-client-serveur">
 <h3><a class="toc-backref" href="#table-des-matieres-qt">Architecture client/serveur</a><a class="headerlink" href="#architecture-client-serveur" title="Lien permanent vers ce titre">¶</a></h3>
 <p>Côté serveur:</p>
 <ol class="arabic simple">
-<li>Créer une instance de QTcpServer, ex : serveur</li>
-<li>Utiliser la méthode listen( QHostAdress::Any, numPort)</li>
-<li>Connecter SIGNAL/SLOT entre le signal newConnection et un slot, ex: nouvelleConnexion()</li>
+<li><p>Créer une instance de QTcpServer, ex : serveur</p></li>
+<li><p>Utiliser la méthode listen( QHostAdress::Any, numPort)</p></li>
+<li><p>Connecter SIGNAL/SLOT entre le signal newConnection et un slot, ex: nouvelleConnexion()</p></li>
 </ol>
 <p>QHostAdress::Any : permet d’écouter sur toutes les adresses de la machine.</p>
 <p>Tout réside dans le slot nouvelleConnection</p>
 <p>Chaque nouveau client est une instance d’un pointeur sur QTcpSocket (initialisé avec le retour de
 serveur-&gt;nextPendingConnexion() ) et rangé dans un tableau, de préférence, dynamique.</p>
 <p>Une QList de pointeurs sur QTcpSocket par exemple.</p>
-<div class="code cpp highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">QList</span><span class="o">&lt;</span><span class="n">QTcpSocket</span> <span class="o">*&gt;</span> <span class="n">clients</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">QList</span><span class="o">&lt;</span><span class="n">QTcpSocket</span> <span class="o">*&gt;</span> <span class="n">clients</span>
 </pre></div>
 </div>
 <p>On connect alors les signaux readyRead() et disconnected() de chacune de ces instances à 2 slots
@@ -616,17 +620,17 @@ exemple : receiveData() et deconnectClient()</p>
 <p>Réception des données : QTcpSocket émet donc pour chaque instance (client connecté) un signal
 readyRead connecté à la seule méthode (slot) de réception. C’est là qu’intervient la méthode
 sender() de la classe QObject.</p>
-<div class="code cpp highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">QTcpSocket</span> <span class="o">*</span><span class="n">socket</span> <span class="o">=</span> <span class="n">qobject_cast</span><span class="o">&lt;</span><span class="n">QTcpSocket</span> <span class="o">*&gt;</span><span class="p">(</span><span class="n">sender</span><span class="p">());</span>
-<span class="o">...</span>
-<span class="n">QDataStream</span> <span class="ow">in</span><span class="p">(</span><span class="n">socket</span><span class="p">);</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">QTcpSocket</span> <span class="o">*</span><span class="n">socket</span> <span class="o">=</span> <span class="n">qobject_cast</span><span class="o">&lt;</span><span class="n">QTcpSocket</span> <span class="o">*&gt;</span><span class="p">(</span><span class="n">sender</span><span class="p">());</span>
+<span class="p">...</span>
+<span class="n">QDataStream</span> <span class="n">in</span><span class="p">(</span><span class="n">socket</span><span class="p">);</span>
 </pre></div>
 </div>
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">QDataStream : accepte en entrée QTcpSocket car cette dernière est conforme à la classe abstraite
+<p class="admonition-title">Note</p>
+<p>QDataStream : accepte en entrée QTcpSocket car cette dernière est conforme à la classe abstraite
 QIODevice.</p>
 </div>
-<p><a class="reference external" href="https://doc.qt.io/qt-5/qdatastream.html#details">Doc officielle QDataStream</a> <a class="footnote-reference" href="#id39" id="id40">[18]</a></p>
+<p><a class="reference external" href="https://doc.qt.io/qt-5/qdatastream.html#details">Doc officielle QDataStream</a> <a class="footnote-reference brackets" href="#id39" id="id40">18</a></p>
 </div>
 </div>
 <hr class="docutils" />
@@ -635,15 +639,15 @@ QIODevice.</p>
 <p>#include &lt;QtWidgets&gt; évite de faire des includes un à un en fonction des Widgets utilisés. C’est un
 méga include.</p>
 <p>Une alternative à setLayout( layout ) est de passer l’adresse du widget au constructeur du layout.</p>
-<p>Voir la <a class="reference external" href="https://doc.qt.io/qt-5/qwidget.html#setLayout">documentation de setlayout</a> <a class="footnote-reference" href="#id41" id="id42">[19]</a></p>
+<p>Voir la <a class="reference external" href="https://doc.qt.io/qt-5/qwidget.html#setLayout">documentation de setlayout</a> <a class="footnote-reference brackets" href="#id41" id="id42">19</a></p>
 <p>Slot auto-connect : voir <a class="reference internal" href="#autoconnect">Autoconnect</a></p>
 <hr class="docutils" />
 </div>
 <div class="section" id="deploiement">
 <span id="index-15"></span><h2><a class="toc-backref" href="#table-des-matieres-qt">Deploiement</a><a class="headerlink" href="#deploiement" title="Lien permanent vers ce titre">¶</a></h2>
 <p>deployment en anglais</p>
-<p>Il y a bien évidement la page de référence de la <a class="reference external" href="https://doc.qt.io/qt-5/windows-deployment.html">documentation Qt sur le déploiement</a> <a class="footnote-reference" href="#id43" id="id44">[20]</a></p>
-<p>Mais aussi : sur le site de <a class="reference external" href="http://guillaume.belz.free.fr/doku.php?id=deployer_une_application_qt">Guillaume Beltz</a> <a class="footnote-reference" href="#id45" id="id46">[21]</a></p>
+<p>Il y a bien évidement la page de référence de la <a class="reference external" href="https://doc.qt.io/qt-5/windows-deployment.html">documentation Qt sur le déploiement</a> <a class="footnote-reference brackets" href="#id43" id="id44">20</a></p>
+<p>Mais aussi : sur le site de <a class="reference external" href="http://guillaume.belz.free.fr/doku.php?id=deployer_une_application_qt">Guillaume Beltz</a> <a class="footnote-reference brackets" href="#id45" id="id46">21</a></p>
 <p>Pour moi windeployqt.exe se trouve dans :</p>
 <p>QtQt5.12.65.12.6mingw73_64bin : donc il est dépendant du kit utilisé !</p>
 <p>J’ai ajouté le chemin directement dans la cosole (la mano)</p>
@@ -660,7 +664,7 @@ méga include.</p>
 #. Identifier le kit utilisé (et sa bonne version), ex MinGW.7.30 64bits
 #. Copier toutes les dll de QtQt5.12.65.12.6mingw73_64bin vers le nouveau répertoire
 #. Virer petit à petit celle qui ne serve pas et relancer l’exe a chaque fois.</p>
-<p>Cette technique est inspirée du site <a class="reference external" href="https://wiki.qt.io/Deploy_an_Application_on_Windows/fr">wiki.qt.io</a> <a class="footnote-reference" href="#id47" id="id48">[22]</a></p>
+<p>Cette technique est inspirée du site <a class="reference external" href="https://wiki.qt.io/Deploy_an_Application_on_Windows/fr">wiki.qt.io</a> <a class="footnote-reference brackets" href="#id47" id="id48">22</a></p>
 <p>On pourra soit bosser directement dans le dossier realese avec windeployqt soit dans un nouveau
 dossier en y recopiant le .exe (inutile de chercher à spécifier un source dir et un dest dir)</p>
 <div class="section" id="qt-static-linking">
@@ -671,138 +675,74 @@ dossier en y recopiant le .exe (inutile de chercher à spécifier un source dir 
 </div>
 <div class="section" id="weblinks">
 <h2><a class="toc-backref" href="#table-des-matieres-qt">Weblinks</a><a class="headerlink" href="#weblinks" title="Lien permanent vers ce titre">¶</a></h2>
-<table class="docutils footnote" frame="void" id="id2" rules="none">
-<colgroup><col class="label" /><col /></colgroup>
-<tbody valign="top">
-<tr><td class="label"><a class="fn-backref" href="#id3">[1]</a></td><td><a class="reference external" href="https://www.youtube.com/watch?v=050zzD4c-5c">https://www.youtube.com/watch?v=050zzD4c-5c</a></td></tr>
-</tbody>
-</table>
-<table class="docutils footnote" frame="void" id="id4" rules="none">
-<colgroup><col class="label" /><col /></colgroup>
-<tbody valign="top">
-<tr><td class="label">[2]</td><td><em>(<a class="fn-backref" href="#id5">1</a>, <a class="fn-backref" href="#id6">2</a>)</em> <a class="reference external" href="https://openclassrooms.com/fr/courses/1894236-programmez-avec-le-langage-c/1898935-initiez-vous-a-qt">https://openclassrooms.com/fr/courses/1894236-programmez-avec-le-langage-c/1898935-initiez-vous-a-qt</a></td></tr>
-</tbody>
-</table>
-<table class="docutils footnote" frame="void" id="id7" rules="none">
-<colgroup><col class="label" /><col /></colgroup>
-<tbody valign="top">
-<tr><td class="label"><a class="fn-backref" href="#id8">[3]</a></td><td><a class="reference external" href="https://doc.qt.io/">https://doc.qt.io/</a></td></tr>
-</tbody>
-</table>
-<table class="docutils footnote" frame="void" id="id9" rules="none">
-<colgroup><col class="label" /><col /></colgroup>
-<tbody valign="top">
-<tr><td class="label"><a class="fn-backref" href="#id10">[4]</a></td><td><a class="reference external" href="https://guillaumebelz.github.io/qtinstall/">https://guillaumebelz.github.io/qtinstall/</a></td></tr>
-</tbody>
-</table>
-<table class="docutils footnote" frame="void" id="id11" rules="none">
-<colgroup><col class="label" /><col /></colgroup>
-<tbody valign="top">
-<tr><td class="label"><a class="fn-backref" href="#id12">[5]</a></td><td><a class="reference external" href="https://doc.qt.io/qt-5/qmainwindow.html">https://doc.qt.io/qt-5/qmainwindow.html</a></td></tr>
-</tbody>
-</table>
-<table class="docutils footnote" frame="void" id="id13" rules="none">
-<colgroup><col class="label" /><col /></colgroup>
-<tbody valign="top">
-<tr><td class="label">[6]</td><td><em>(<a class="fn-backref" href="#id14">1</a>, <a class="fn-backref" href="#id38">2</a>)</em> <a class="reference external" href="https://openclassrooms.com/fr/courses/1894236-programmez-avec-le-langage-c/1902751-communiquez-en-reseau-avec-son-programme">https://openclassrooms.com/fr/courses/1894236-programmez-avec-le-langage-c/1902751-communiquez-en-reseau-avec-son-programme</a></td></tr>
-</tbody>
-</table>
-<table class="docutils footnote" frame="void" id="id15" rules="none">
-<colgroup><col class="label" /><col /></colgroup>
-<tbody valign="top">
-<tr><td class="label"><a class="fn-backref" href="#id16">[7]</a></td><td><a class="reference external" href="https://doc.qt.io/qt-5/designer-using-a-ui-file.html">https://doc.qt.io/qt-5/designer-using-a-ui-file.html</a></td></tr>
-</tbody>
-</table>
-<table class="docutils footnote" frame="void" id="id17" rules="none">
-<colgroup><col class="label" /><col /></colgroup>
-<tbody valign="top">
-<tr><td class="label"><a class="fn-backref" href="#id18">[8]</a></td><td><a class="reference external" href="https://doc.qt.io/qt-5/qlineedit.html">https://doc.qt.io/qt-5/qlineedit.html</a></td></tr>
-</tbody>
-</table>
-<table class="docutils footnote" frame="void" id="id19" rules="none">
-<colgroup><col class="label" /><col /></colgroup>
-<tbody valign="top">
-<tr><td class="label"><a class="fn-backref" href="#id20">[9]</a></td><td><a class="reference external" href="https://doc.qt.io/qt-5/qwidget.html">https://doc.qt.io/qt-5/qwidget.html</a></td></tr>
-</tbody>
-</table>
-<table class="docutils footnote" frame="void" id="id21" rules="none">
-<colgroup><col class="label" /><col /></colgroup>
-<tbody valign="top">
-<tr><td class="label"><a class="fn-backref" href="#id22">[10]</a></td><td><a class="reference external" href="https://doc.qt.io/qt-5/qpushbutton.html">https://doc.qt.io/qt-5/qpushbutton.html</a></td></tr>
-</tbody>
-</table>
-<table class="docutils footnote" frame="void" id="id23" rules="none">
-<colgroup><col class="label" /><col /></colgroup>
-<tbody valign="top">
-<tr><td class="label">[11]</td><td><em>(<a class="fn-backref" href="#id24">1</a>, <a class="fn-backref" href="#id25">2</a>)</em> <a class="reference external" href="https://doc.qt.io/qt-5/qfilesystemmodel.html#example-usage">https://doc.qt.io/qt-5/qfilesystemmodel.html#example-usage</a></td></tr>
-</tbody>
-</table>
-<table class="docutils footnote" frame="void" id="id26" rules="none">
-<colgroup><col class="label" /><col /></colgroup>
-<tbody valign="top">
-<tr><td class="label"><a class="fn-backref" href="#id27">[12]</a></td><td><a class="reference external" href="https://openclassrooms.com/fr/courses/1894236-programmez-avec-le-langage-c/1902176-decouvrez-l-architecture-mvc-avec-les-widgets-complexes#/id/r-1902175">https://openclassrooms.com/fr/courses/1894236-programmez-avec-le-langage-c/1902176-decouvrez-l-architecture-mvc-avec-les-widgets-complexes#/id/r-1902175</a></td></tr>
-</tbody>
-</table>
-<table class="docutils footnote" frame="void" id="id28" rules="none">
-<colgroup><col class="label" /><col /></colgroup>
-<tbody valign="top">
-<tr><td class="label"><a class="fn-backref" href="#id29">[13]</a></td><td><a class="reference external" href="https://stackoverflow.com/questions/43994584/what-is-qobject-cast">https://stackoverflow.com/questions/43994584/what-is-qobject-cast</a></td></tr>
-</tbody>
-</table>
-<table class="docutils footnote" frame="void" id="id30" rules="none">
-<colgroup><col class="label" /><col /></colgroup>
-<tbody valign="top">
-<tr><td class="label"><a class="fn-backref" href="#id31">[14]</a></td><td><a class="reference external" href="https://doc.qt.io/qt-5/qobject.html#sender">https://doc.qt.io/qt-5/qobject.html#sender</a></td></tr>
-</tbody>
-</table>
-<table class="docutils footnote" frame="void" id="id32" rules="none">
-<colgroup><col class="label" /><col /></colgroup>
-<tbody valign="top">
-<tr><td class="label"><a class="fn-backref" href="#id33">[15]</a></td><td><a class="reference external" href="https://openclassrooms.com/fr/courses/1894236-programmez-avec-le-langage-c/1899731-utilisez-les-signaux-et-les-slots#/id/r-1909507">https://openclassrooms.com/fr/courses/1894236-programmez-avec-le-langage-c/1899731-utilisez-les-signaux-et-les-slots#/id/r-1909507</a></td></tr>
-</tbody>
-</table>
-<table class="docutils footnote" frame="void" id="id34" rules="none">
-<colgroup><col class="label" /><col /></colgroup>
-<tbody valign="top">
-<tr><td class="label"><a class="fn-backref" href="#id35">[16]</a></td><td><a class="reference external" href="https://openclassrooms.com/fr/courses/1894236-programmez-avec-le-langage-c/1901673-modelisez-ses-fenetres-avec-qt-designer#/id/r-1911443">https://openclassrooms.com/fr/courses/1894236-programmez-avec-le-langage-c/1901673-modelisez-ses-fenetres-avec-qt-designer#/id/r-1911443</a></td></tr>
-</tbody>
-</table>
-<table class="docutils footnote" frame="void" id="id36" rules="none">
-<colgroup><col class="label" /><col /></colgroup>
-<tbody valign="top">
-<tr><td class="label"><a class="fn-backref" href="#id37">[17]</a></td><td><a class="reference external" href="https://doc.qt.io/qt-5.9/standard-dialogs.html">https://doc.qt.io/qt-5.9/standard-dialogs.html</a></td></tr>
-</tbody>
-</table>
-<table class="docutils footnote" frame="void" id="id39" rules="none">
-<colgroup><col class="label" /><col /></colgroup>
-<tbody valign="top">
-<tr><td class="label"><a class="fn-backref" href="#id40">[18]</a></td><td><a class="reference external" href="https://doc.qt.io/qt-5/qdatastream.html#details">https://doc.qt.io/qt-5/qdatastream.html#details</a></td></tr>
-</tbody>
-</table>
-<table class="docutils footnote" frame="void" id="id41" rules="none">
-<colgroup><col class="label" /><col /></colgroup>
-<tbody valign="top">
-<tr><td class="label"><a class="fn-backref" href="#id42">[19]</a></td><td><a class="reference external" href="https://doc.qt.io/qt-5/qwidget.html#setLayout">https://doc.qt.io/qt-5/qwidget.html#setLayout</a></td></tr>
-</tbody>
-</table>
-<table class="docutils footnote" frame="void" id="id43" rules="none">
-<colgroup><col class="label" /><col /></colgroup>
-<tbody valign="top">
-<tr><td class="label"><a class="fn-backref" href="#id44">[20]</a></td><td><a class="reference external" href="https://doc.qt.io/qt-5/windows-deployment.html">https://doc.qt.io/qt-5/windows-deployment.html</a></td></tr>
-</tbody>
-</table>
-<table class="docutils footnote" frame="void" id="id45" rules="none">
-<colgroup><col class="label" /><col /></colgroup>
-<tbody valign="top">
-<tr><td class="label"><a class="fn-backref" href="#id46">[21]</a></td><td><a class="reference external" href="http://guillaume.belz.free.fr/doku.php?id=deployer_une_application_qt">http://guillaume.belz.free.fr/doku.php?id=deployer_une_application_qt</a></td></tr>
-</tbody>
-</table>
-<table class="docutils footnote" frame="void" id="id47" rules="none">
-<colgroup><col class="label" /><col /></colgroup>
-<tbody valign="top">
-<tr><td class="label"><a class="fn-backref" href="#id48">[22]</a></td><td><a class="reference external" href="https://wiki.qt.io/Deploy_an_Application_on_Windows/fr">https://wiki.qt.io/Deploy_an_Application_on_Windows/fr</a></td></tr>
-</tbody>
-</table>
+<dl class="footnote brackets">
+<dt class="label" id="id2"><span class="brackets"><a class="fn-backref" href="#id3">1</a></span></dt>
+<dd><p><a class="reference external" href="https://www.youtube.com/watch?v=050zzD4c-5c">https://www.youtube.com/watch?v=050zzD4c-5c</a></p>
+</dd>
+<dt class="label" id="id4"><span class="brackets">2</span><span class="fn-backref">(<a href="#id5">1</a>,<a href="#id6">2</a>)</span></dt>
+<dd><p><a class="reference external" href="https://openclassrooms.com/fr/courses/1894236-programmez-avec-le-langage-c/1898935-initiez-vous-a-qt">https://openclassrooms.com/fr/courses/1894236-programmez-avec-le-langage-c/1898935-initiez-vous-a-qt</a></p>
+</dd>
+<dt class="label" id="id7"><span class="brackets"><a class="fn-backref" href="#id8">3</a></span></dt>
+<dd><p><a class="reference external" href="https://doc.qt.io/">https://doc.qt.io/</a></p>
+</dd>
+<dt class="label" id="id9"><span class="brackets"><a class="fn-backref" href="#id10">4</a></span></dt>
+<dd><p><a class="reference external" href="https://guillaumebelz.github.io/qtinstall/">https://guillaumebelz.github.io/qtinstall/</a></p>
+</dd>
+<dt class="label" id="id11"><span class="brackets"><a class="fn-backref" href="#id12">5</a></span></dt>
+<dd><p><a class="reference external" href="https://doc.qt.io/qt-5/qmainwindow.html">https://doc.qt.io/qt-5/qmainwindow.html</a></p>
+</dd>
+<dt class="label" id="id13"><span class="brackets">6</span><span class="fn-backref">(<a href="#id14">1</a>,<a href="#id38">2</a>)</span></dt>
+<dd><p><a class="reference external" href="https://openclassrooms.com/fr/courses/1894236-programmez-avec-le-langage-c/1902751-communiquez-en-reseau-avec-son-programme">https://openclassrooms.com/fr/courses/1894236-programmez-avec-le-langage-c/1902751-communiquez-en-reseau-avec-son-programme</a></p>
+</dd>
+<dt class="label" id="id15"><span class="brackets"><a class="fn-backref" href="#id16">7</a></span></dt>
+<dd><p><a class="reference external" href="https://doc.qt.io/qt-5/designer-using-a-ui-file.html">https://doc.qt.io/qt-5/designer-using-a-ui-file.html</a></p>
+</dd>
+<dt class="label" id="id17"><span class="brackets"><a class="fn-backref" href="#id18">8</a></span></dt>
+<dd><p><a class="reference external" href="https://doc.qt.io/qt-5/qlineedit.html">https://doc.qt.io/qt-5/qlineedit.html</a></p>
+</dd>
+<dt class="label" id="id19"><span class="brackets"><a class="fn-backref" href="#id20">9</a></span></dt>
+<dd><p><a class="reference external" href="https://doc.qt.io/qt-5/qwidget.html">https://doc.qt.io/qt-5/qwidget.html</a></p>
+</dd>
+<dt class="label" id="id21"><span class="brackets"><a class="fn-backref" href="#id22">10</a></span></dt>
+<dd><p><a class="reference external" href="https://doc.qt.io/qt-5/qpushbutton.html">https://doc.qt.io/qt-5/qpushbutton.html</a></p>
+</dd>
+<dt class="label" id="id23"><span class="brackets">11</span><span class="fn-backref">(<a href="#id24">1</a>,<a href="#id25">2</a>)</span></dt>
+<dd><p><a class="reference external" href="https://doc.qt.io/qt-5/qfilesystemmodel.html#example-usage">https://doc.qt.io/qt-5/qfilesystemmodel.html#example-usage</a></p>
+</dd>
+<dt class="label" id="id26"><span class="brackets"><a class="fn-backref" href="#id27">12</a></span></dt>
+<dd><p><a class="reference external" href="https://openclassrooms.com/fr/courses/1894236-programmez-avec-le-langage-c/1902176-decouvrez-l-architecture-mvc-avec-les-widgets-complexes#/id/r-1902175">https://openclassrooms.com/fr/courses/1894236-programmez-avec-le-langage-c/1902176-decouvrez-l-architecture-mvc-avec-les-widgets-complexes#/id/r-1902175</a></p>
+</dd>
+<dt class="label" id="id28"><span class="brackets"><a class="fn-backref" href="#id29">13</a></span></dt>
+<dd><p><a class="reference external" href="https://stackoverflow.com/questions/43994584/what-is-qobject-cast">https://stackoverflow.com/questions/43994584/what-is-qobject-cast</a></p>
+</dd>
+<dt class="label" id="id30"><span class="brackets"><a class="fn-backref" href="#id31">14</a></span></dt>
+<dd><p><a class="reference external" href="https://doc.qt.io/qt-5/qobject.html#sender">https://doc.qt.io/qt-5/qobject.html#sender</a></p>
+</dd>
+<dt class="label" id="id32"><span class="brackets"><a class="fn-backref" href="#id33">15</a></span></dt>
+<dd><p><a class="reference external" href="https://openclassrooms.com/fr/courses/1894236-programmez-avec-le-langage-c/1899731-utilisez-les-signaux-et-les-slots#/id/r-1909507">https://openclassrooms.com/fr/courses/1894236-programmez-avec-le-langage-c/1899731-utilisez-les-signaux-et-les-slots#/id/r-1909507</a></p>
+</dd>
+<dt class="label" id="id34"><span class="brackets"><a class="fn-backref" href="#id35">16</a></span></dt>
+<dd><p><a class="reference external" href="https://openclassrooms.com/fr/courses/1894236-programmez-avec-le-langage-c/1901673-modelisez-ses-fenetres-avec-qt-designer#/id/r-1911443">https://openclassrooms.com/fr/courses/1894236-programmez-avec-le-langage-c/1901673-modelisez-ses-fenetres-avec-qt-designer#/id/r-1911443</a></p>
+</dd>
+<dt class="label" id="id36"><span class="brackets"><a class="fn-backref" href="#id37">17</a></span></dt>
+<dd><p><a class="reference external" href="https://doc.qt.io/qt-5.9/standard-dialogs.html">https://doc.qt.io/qt-5.9/standard-dialogs.html</a></p>
+</dd>
+<dt class="label" id="id39"><span class="brackets"><a class="fn-backref" href="#id40">18</a></span></dt>
+<dd><p><a class="reference external" href="https://doc.qt.io/qt-5/qdatastream.html#details">https://doc.qt.io/qt-5/qdatastream.html#details</a></p>
+</dd>
+<dt class="label" id="id41"><span class="brackets"><a class="fn-backref" href="#id42">19</a></span></dt>
+<dd><p><a class="reference external" href="https://doc.qt.io/qt-5/qwidget.html#setLayout">https://doc.qt.io/qt-5/qwidget.html#setLayout</a></p>
+</dd>
+<dt class="label" id="id43"><span class="brackets"><a class="fn-backref" href="#id44">20</a></span></dt>
+<dd><p><a class="reference external" href="https://doc.qt.io/qt-5/windows-deployment.html">https://doc.qt.io/qt-5/windows-deployment.html</a></p>
+</dd>
+<dt class="label" id="id45"><span class="brackets"><a class="fn-backref" href="#id46">21</a></span></dt>
+<dd><p><a class="reference external" href="http://guillaume.belz.free.fr/doku.php?id=deployer_une_application_qt">http://guillaume.belz.free.fr/doku.php?id=deployer_une_application_qt</a></p>
+</dd>
+<dt class="label" id="id47"><span class="brackets"><a class="fn-backref" href="#id48">22</a></span></dt>
+<dd><p><a class="reference external" href="https://wiki.qt.io/Deploy_an_Application_on_Windows/fr">https://wiki.qt.io/Deploy_an_Application_on_Windows/fr</a></p>
+</dd>
+</dl>
 </div>
 </div>
 
@@ -812,7 +752,7 @@ dossier en y recopiant le .exe (inutile de chercher à spécifier un source dir 
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-  <h3><a href="../../index.html">Table of Contents</a></h3>
+  <h3><a href="../../index.html">Table des matières</a></h3>
   <ul>
 <li><a class="reference internal" href="#">Notes sur Qt</a><ul>
 <li><a class="reference internal" href="#presentation">Présentation</a><ul>
@@ -882,13 +822,11 @@ dossier en y recopiant le .exe (inutile de chercher à spécifier un source dir 
     </ul>
    </div>
 <div id="searchbox" style="display: none" role="search">
-  <h3>Recherche rapide</h3>
+  <h3 id="searchlabel">Recherche rapide</h3>
     <div class="searchformwrapper">
     <form class="search" action="../../search.html" method="get">
-      <input type="text" name="q" />
+      <input type="text" name="q" aria-labelledby="searchlabel" />
       <input type="submit" value="Go" />
-      <input type="hidden" name="check_keywords" value="yes" />
-      <input type="hidden" name="area" value="default" />
     </form>
     </div>
 </div>
@@ -915,7 +853,7 @@ dossier en y recopiant le .exe (inutile de chercher à spécifier un source dir 
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2019, J.SORANZO.
-      Créé avec <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.5.
+      Créé avec <a href="http://sphinx-doc.org/">Sphinx</a> 2.2.0.
     </div>
   </body>
 </html>

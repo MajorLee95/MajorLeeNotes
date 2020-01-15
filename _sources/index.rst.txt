@@ -4,7 +4,7 @@
    contain the root `toctree` directive.
    
    
-Bienvenue to MajorLee's notes's documentation!
+Bienvenue to MajorLee's notes documentation!
 ===============================================
 
 .. toctree::
@@ -26,6 +26,7 @@ Bienvenue to MajorLee's notes's documentation!
    /git/git
    /docker/docker
    glossaire
+   Readme
 
 Licence
 ============
