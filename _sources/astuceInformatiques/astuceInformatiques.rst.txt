@@ -18,7 +18,7 @@ Astuces informatiques
 ================================
 Microsoft
 ================================
-Connaître le type de licence Windos10 
+Connaître le type de licence Windows10 
 ======================================
 slmgr -dli
 

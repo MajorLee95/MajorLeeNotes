@@ -42,7 +42,7 @@
           <div class="body" role="main">
             
   <div class="section" id="notes-sur-git">
-<span id="index-0"></span><h1><a class="toc-backref" href="#sommaire">Notes sur git</a><a class="headerlink" href="#notes-sur-git" title="Lien permanent vers ce titre">¶</a></h1>
+<h1><a class="toc-backref" href="#sommaire">Notes sur git</a><a class="headerlink" href="#notes-sur-git" title="Lien permanent vers ce titre">¶</a></h1>
 <a class="reference internal image-reference" href="../_images/gitLogo.png"><img alt="git logo" class="align-left" src="../_images/gitLogo.png" style="height: 100px;" /></a>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -58,20 +58,27 @@
 </tr>
 </tbody>
 </table>
+<p><div class="clearer"></div></p>
 <div class="contents topic" id="sommaire">
 <p class="topic-title first">Sommaire</p>
 <ul class="simple">
 <li><a class="reference internal" href="#notes-sur-git" id="id3">Notes sur git</a><ul>
 <li><a class="reference internal" href="#git" id="id4">git</a></li>
 <li><a class="reference internal" href="#petits-trucs-utiles" id="id5">petits trucs utiles</a><ul>
-<li><a class="reference internal" href="#suppression-d-un-fichier" id="id6">Suppression d’un fichier</a></li>
-<li><a class="reference internal" href="#lister-les-fichiers-indexe" id="id7">lister les fichiers indexé</a></li>
-<li><a class="reference internal" href="#mais-vers-ou-pointe-origine" id="id8">Mais vers ou pointe origine</a></li>
-<li><a class="reference internal" href="#merger-un-seul-fichier" id="id9">merger un seul fichier</a></li>
-<li><a class="reference internal" href="#ecraser-les-derniere-modif-qui-n-ont-pas-ete-commitees" id="id10">Ecraser les dernière modif qui n’ont pas été commitées</a></li>
+<li><a class="reference internal" href="#logiciels" id="id6">Logiciels</a></li>
+<li><a class="reference internal" href="#suppression-d-un-fichier" id="id7">Suppression d’un fichier</a></li>
+<li><a class="reference internal" href="#lister-les-fichiers-indexe" id="id8">lister les fichiers indexé</a></li>
+<li><a class="reference internal" href="#mais-vers-ou-pointe-origine" id="id9">Mais vers ou pointe origine</a></li>
+<li><a class="reference internal" href="#merger-un-seul-fichier" id="id10">merger un seul fichier</a></li>
+<li><a class="reference internal" href="#ecraser-les-derniere-modif-qui-n-ont-pas-ete-commitees" id="id11">Ecraser les dernière modif qui n’ont pas été commitées</a></li>
+<li><a class="reference internal" href="#retirer-un-repertoire-de-l-index" id="id12">Retirer un répertoire de l’index</a></li>
+<li><a class="reference internal" href="#lister-les-fichier-dossier-ignores" id="id13">lister les fichier dossier ignorés ?</a></li>
+<li><a class="reference internal" href="#ratacher-la-tete" id="id14">Ratacher la tête</a></li>
+<li><a class="reference internal" href="#annuler-le-dernier-commit" id="id15">Annuler le dernier commit</a></li>
+<li><a class="reference internal" href="#lister-les-commit-d-une-branche-distante" id="id16">Lister les commit d’une branche distante</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#weblinks" id="id11">Weblinks</a></li>
+<li><a class="reference internal" href="#weblinks" id="id17">Weblinks</a></li>
 </ul>
 </li>
 </ul>
@@ -82,26 +89,21 @@
 </div>
 <div class="section" id="petits-trucs-utiles">
 <h2><a class="toc-backref" href="#sommaire">petits trucs utiles</a><a class="headerlink" href="#petits-trucs-utiles" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="section" id="logiciels">
+<h3><a class="toc-backref" href="#sommaire">Logiciels</a><a class="headerlink" href="#logiciels" title="Lien permanent vers ce titre">¶</a></h3>
 <p>gitKraken</p>
 <p><a class="reference external" href="https://tortoisegit.org/">tortoisegit</a> <a class="footnote-reference" href="#id1" id="id2">[1]</a></p>
 <blockquote>
 <div><ul class="simple">
 <li>dl dans outils/conception</li>
-</ul>
-</div></blockquote>
-<dl class="docutils">
-<dt>::</dt>
-<dd><blockquote class="first">
-<div>instal pc boulot</div></blockquote>
-<ul class="last simple">
 <li><dl class="first docutils">
 <dt>Ajoute un menu contextuel</dt>
 <dd>avec plein de commandes</dd>
 </dl>
 </li>
 </ul>
-</dd>
-</dl>
+</div></blockquote>
+</div>
 <div class="section" id="suppression-d-un-fichier">
 <h3><a class="toc-backref" href="#sommaire">Suppression d’un fichier</a><a class="headerlink" href="#suppression-d-un-fichier" title="Lien permanent vers ce titre">¶</a></h3>
 <p>git rm</p>
@@ -151,41 +153,68 @@ sous-entendu sans le chemin complet.</p>
 <li>git rebase -i HEAD~10</li>
 </ul>
 </div></blockquote>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>retirer un répertoire de l&#39;index (pour qu&#39;il soit pris en compte par le git ignore)
-        git rm --cached -r build
-                à condition de faire le add avant
-                puis de les retirer après de l&#39;index
-        lister les fichier dossier ignorés ?
-                git ls-files --others -i --exclude-standard
-        attention dans .gitignore un répertoire se termine par / et pas \
-        git ls-files --stage
-Ratacher la tête
-        git checkout -b temp
-        git branch -f master temp
-        git checkout master
-        git branch -d temp
-annuler le dernier commit
-        Situation :
-                des fichiers modifiés
-                un fichier ajouté
-        commandes
-                git add fichierajouté
-                git commit -m &quot;texte&quot;
-                        ne commit que le nouveau fichier
-                        la bonne commande eut été git commit -am &quot;texte&quot;
-                        ou avant git add --all
-        besoin
-                supprimer ce commit pour le refaire avec l&#39;option -am
-        surtout pas git reset --hard HEAD
-                a tout ecrasé les modifs
-                Cette commmande permet de revenir à l&#39;état du dernier commit (ne pas confondre)
-        git revert
-        ou git add . suivi d&#39;un git commit --amend
-Lister les commit d&#39;une branche distante
-        Utile quand on est out of date
-        git remote show
-        git ls-remote
-une ch&#39;tite commande sympa git log --pretty=oneline --abbrev-commit --graph --decorate
+</div>
+<div class="section" id="retirer-un-repertoire-de-l-index">
+<h3><a class="toc-backref" href="#sommaire">Retirer un répertoire de l’index</a><a class="headerlink" href="#retirer-un-repertoire-de-l-index" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Pour qu’il soit pris en compte par le git ignore:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">rm</span> <span class="o">--</span><span class="n">cached</span> <span class="o">-</span><span class="n">r</span> <span class="n">build</span>
+</pre></div>
+</div>
+<p>A condition de faire le add avant</p>
+<p>Puis de les retirer après de l’index</p>
+</div>
+<div class="section" id="lister-les-fichier-dossier-ignores">
+<h3><a class="toc-backref" href="#sommaire">lister les fichier dossier ignorés ?</a><a class="headerlink" href="#lister-les-fichier-dossier-ignores" title="Lien permanent vers ce titre">¶</a></h3>
+<p>git ls-files –others -i –exclude-standard:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">ls</span><span class="o">-</span><span class="n">files</span> <span class="o">--</span><span class="n">stage</span>
+</pre></div>
+</div>
+<p>attention dans .gitignore un répertoire se termine par / et pas </p>
+</div>
+<div class="section" id="ratacher-la-tete">
+<h3><a class="toc-backref" href="#sommaire">Ratacher la tête</a><a class="headerlink" href="#ratacher-la-tete" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Procédure:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">checkout</span> <span class="o">-</span><span class="n">b</span> <span class="n">temp</span>
+<span class="n">git</span> <span class="n">branch</span> <span class="o">-</span><span class="n">f</span> <span class="n">master</span> <span class="n">temp</span>
+<span class="n">git</span> <span class="n">checkout</span> <span class="n">master</span>
+<span class="n">git</span> <span class="n">branch</span> <span class="o">-</span><span class="n">d</span> <span class="n">temp</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="annuler-le-dernier-commit">
+<h3><a class="toc-backref" href="#sommaire">Annuler le dernier commit</a><a class="headerlink" href="#annuler-le-dernier-commit" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Situation :
+- des fichiers modifiés
+- un fichier ajouté</p>
+<p>Commandes:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">add</span> <span class="n">fichierajouté</span>
+<span class="n">git</span> <span class="n">commit</span> <span class="o">-</span><span class="n">m</span> <span class="s2">&quot;texte&quot;</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li>ne commit que le nouveau fichier</li>
+<li>la bonne commande eut été git commit -am «&nbsp;texte&nbsp;»</li>
+<li>ou avant git add –all</li>
+</ul>
+<p>Besoin: supprimer ce commit pour le refaire avec l’option -am</p>
+<div class="admonition warning">
+<p class="first admonition-title">Avertissement</p>
+<p class="last">Surtout pas git reset –hard HEAD, écrase toutes les modifs
+Cette commmande permet de revenir à l’état du dernier commit (ne pas confondre)</p>
+</div>
+<p>Autres possibilités:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">revert</span>
+<span class="n">ou</span> <span class="n">git</span> <span class="n">add</span> <span class="o">.</span> <span class="n">suivi</span> <span class="n">d</span><span class="s1">&#39;un git commit --amend</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="lister-les-commit-d-une-branche-distante">
+<h3><a class="toc-backref" href="#sommaire">Lister les commit d’une branche distante</a><a class="headerlink" href="#lister-les-commit-d-une-branche-distante" title="Lien permanent vers ce titre">¶</a></h3>
+<blockquote>
+<div>Utile quand on est out of date
+git remote show
+git ls-remote</div></blockquote>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>une ch&#39;tite commande sympa git log --pretty=oneline --abbrev-commit --graph --decorate
         trace l&#39;arborescence sous forme textuelle
 clé SSH
         visiblement dépendante de l&#39;ordinateur non ?
@@ -264,11 +293,17 @@ Déplacer le dernier commit d&#39;une branche vers une autre branche
 <li><a class="reference internal" href="#">Notes sur git</a><ul>
 <li><a class="reference internal" href="#git">git</a></li>
 <li><a class="reference internal" href="#petits-trucs-utiles">petits trucs utiles</a><ul>
+<li><a class="reference internal" href="#logiciels">Logiciels</a></li>
 <li><a class="reference internal" href="#suppression-d-un-fichier">Suppression d’un fichier</a></li>
 <li><a class="reference internal" href="#lister-les-fichiers-indexe">lister les fichiers indexé</a></li>
 <li><a class="reference internal" href="#mais-vers-ou-pointe-origine">Mais vers ou pointe origine</a></li>
 <li><a class="reference internal" href="#merger-un-seul-fichier">merger un seul fichier</a></li>
 <li><a class="reference internal" href="#ecraser-les-derniere-modif-qui-n-ont-pas-ete-commitees">Ecraser les dernière modif qui n’ont pas été commitées</a></li>
+<li><a class="reference internal" href="#retirer-un-repertoire-de-l-index">Retirer un répertoire de l’index</a></li>
+<li><a class="reference internal" href="#lister-les-fichier-dossier-ignores">lister les fichier dossier ignorés ?</a></li>
+<li><a class="reference internal" href="#ratacher-la-tete">Ratacher la tête</a></li>
+<li><a class="reference internal" href="#annuler-le-dernier-commit">Annuler le dernier commit</a></li>
+<li><a class="reference internal" href="#lister-les-commit-d-une-branche-distante">Lister les commit d’une branche distante</a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#weblinks">Weblinks</a></li>

@@ -21,6 +21,7 @@ Mes notes sur C++
    /C++/Qt/Qt
 
 
+
 Ceci n'est pas un cours sur le C++, il y en a déjà plein et de très bons voir celui par exemple de
 `Openclassrooms`_
 

@@ -1,6 +1,10 @@
 .. index::
     single: git
 
+.. |clearer|  raw:: html
+
+    <div class="clearer"></div>    
+    
 ++++++++++++++++++++++++++++++++
 Notes sur git
 ++++++++++++++++++++++++++++++++
@@ -9,10 +13,14 @@ Notes sur git
    :alt: git logo
    :align: left
    
+   
 :Auteur: J.Soranzo
 :Date: Novembre 2019
 :Societe: VoLAB
 :Entity: VoRoBoTics
+
+
+|clearer|
 
 .. contents::
     :backlinks: top
@@ -27,15 +35,14 @@ penser au fichier xmind
 ================================
 petits trucs utiles 
 ================================
+Logiciels 
+======================================
+
 gitKraken
 
 `tortoisegit`_
 
- - dl dans outils/conception
-
-::
-    instal pc boulot
-        
+ - dl dans outils/conception       
  - Ajoute un menu contextuel
 			avec plein de commandes
             
@@ -76,42 +83,73 @@ Ecraser les dernière modif qui n'ont pas été commitées
  - git reset --hard HEAD~1 (retour à l'avant dernier commit)
  - git rebase -i HEAD~10
 
-::
+Retirer un répertoire de l'index  
+======================================
+Pour qu'il soit pris en compte par le git ignore::
 
-	retirer un répertoire de l'index (pour qu'il soit pris en compte par le git ignore)
-		git rm --cached -r build
-			à condition de faire le add avant
-			puis de les retirer après de l'index
-		lister les fichier dossier ignorés ?
-			git ls-files --others -i --exclude-standard
-		attention dans .gitignore un répertoire se termine par / et pas \
+    git rm --cached -r build
+    
+A condition de faire le add avant
+
+Puis de les retirer après de l'index
+
+lister les fichier dossier ignorés ? 
+======================================
+git ls-files --others -i --exclude-standard::
+            
 		git ls-files --stage
-	Ratacher la tête
-		git checkout -b temp
-		git branch -f master temp
-		git checkout master
-		git branch -d temp
-	annuler le dernier commit
-		Situation :
-			des fichiers modifiés
-			un fichier ajouté
-		commandes
-			git add fichierajouté
-			git commit -m "texte"
-				ne commit que le nouveau fichier
-				la bonne commande eut été git commit -am "texte"
-				ou avant git add --all
-		besoin
-			supprimer ce commit pour le refaire avec l'option -am
-		surtout pas git reset --hard HEAD
-			a tout ecrasé les modifs
-			Cette commmande permet de revenir à l'état du dernier commit (ne pas confondre)
-		git revert
-		ou git add . suivi d'un git commit --amend
-	Lister les commit d'une branche distante
+        
+attention dans .gitignore un répertoire se termine par / et pas \
+        
+Ratacher la tête 
+======================================
+Procédure::
+
+    git checkout -b temp
+    git branch -f master temp
+    git checkout master
+    git branch -d temp
+        
+      
+        
+Annuler le dernier commit 
+======================================
+    
+Situation :
+- des fichiers modifiés
+- un fichier ajouté
+
+Commandes::
+
+    git add fichierajouté
+    git commit -m "texte"
+    
+- ne commit que le nouveau fichier
+- la bonne commande eut été git commit -am "texte"
+- ou avant git add --all
+        
+Besoin: supprimer ce commit pour le refaire avec l'option -am
+
+.. WARNING::  
+
+    Surtout pas git reset --hard HEAD, écrase toutes les modifs
+    Cette commmande permet de revenir à l'état du dernier commit (ne pas confondre)
+
+Autres possibilités::
+
+    git revert
+    ou git add . suivi d'un git commit --amend
+        
+        
+        
+Lister les commit d'une branche distante 
+=========================================
 		Utile quand on est out of date
 		git remote show
 		git ls-remote
+        
+::  
+        
 	une ch'tite commande sympa git log --pretty=oneline --abbrev-commit --graph --decorate
 		trace l'arborescence sous forme textuelle
 	clé SSH
