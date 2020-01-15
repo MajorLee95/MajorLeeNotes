@@ -6,7 +6,7 @@ Major LEE note's repository readme file
 
     <div class="clearer"></div>
 
-.. image:: images/qtLogo.jpg
+.. image:: logoVoLAB_200x200.jpg
    :height: 100px
    :alt: Qt logo
    :align: left
