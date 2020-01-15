@@ -13,7 +13,7 @@ Major LEE note's repository readme file
    
 :Auteur:        `Major Lee <https://github.com/MajorLee95>`_
 :Societe:       VoLAB
-:Entity:        VoRoBoTics <http://www.vorobotics.com/wp/>`_
+:Entity:        `VoRoBoTics <http://www.vorobotics.com/wp/>`_
 :Projet:        Notes personnelles     
 :dépôt GitHub:  https://github.com/MajorLee95/MajorLeeNotes     
 :documentation: https://majorlee95.github.io/MajorLeeNotes/
