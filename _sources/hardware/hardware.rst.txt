@@ -26,3 +26,12 @@ Rien non plus dans les carac.
 
 Température d'utilisation : à priori -40/+85°C seule inconnu : l'oscillateur.
 ref : 6360 T8406 ? 16MHz 
+
+================================
+Connecteur Wifi
+================================
+IPEX ou IPX : petits connecteurs coaxiaux des cartes FriendlyArM nanoPC-T4 par exemple
+MHF connecteur
+
+SMA connecteur des antennes Wifi
+

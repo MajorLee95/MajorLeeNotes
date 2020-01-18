@@ -243,7 +243,7 @@ Utilisation avec Qt Designer
 ======================================
 C'est pas aussi trivial qu'il n'y parait !
 
-Il n'y a pas vraiment de tuto internet C++/Qt Designer ceux qu'on trouve c'st pour Python !
+Il n'y a pas vraiment de tuto internet C++/Qt Designer ceux qu'on trouve c'est pour Python !
 
 Pb dans l'exemple client chat d'Openclassroom, il y a un fichier auto généré ui_fenclient.h
 mais je ne sais plus comment ?
