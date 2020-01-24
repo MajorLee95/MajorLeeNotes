@@ -38,7 +38,11 @@ petits trucs utiles
 Logiciels 
 ======================================
 
-gitKraken
+`gitKraken`_
+
+.. _`gitKraken` : https://www.gitkraken.com/
+
+Nécessite de créer un compte sur leur site ? Pourquoi au juste ?
 
 `tortoisegit`_
 
@@ -80,8 +84,18 @@ sous-entendu sans le chemin complet.
                 
 Ecraser les dernière modif qui n'ont pas été commitées 
 ===========================================================
- - git reset --hard HEAD~1 (retour à l'avant dernier commit)
+ - git checkout -- <file> (comme le signal la commande git status)
+ - git reset --hard HEAD~1 (retour au dernier commit)
  - git rebase -i HEAD~10
+ 
+ A propos de git reset --hard HEAD~1::
+ 
+    When using git reset --hard HEAD~1 you will lose all uncommited changes in addition to the 
+    changes introduced in the last commit. The changes won't stay in your working tree so doing 
+    a git status command will tell you that you don't have any changes in your repository.
+    Tread carefully with this one. If you accidentally remove uncommited changes which were never 
+    tracked by git (speak: committed or at least added to the index), you have no way of getting 
+    them back using git.
 
 Retirer un répertoire de l'index  
 ======================================
@@ -144,9 +158,20 @@ Autres possibilités::
         
 Lister les commit d'une branche distante 
 =========================================
-		Utile quand on est out of date
-		git remote show
-		git ls-remote
+- Utile quand on est out of date
+- git remote show
+- git ls-remote
+
+Dépôt git sur clé usb 
+======================================
+
+Créer `un dépôt git sur une clé usb, sur wikibook`_
+
+.. _`un dépôt git sur une clé usb, sur wikibook` : https://en.wikibooks.org/wiki/Git/Repository_on_a_USB_stick
+
+=====================================
+Reste des notes xmind a transformer
+===================================== 
         
 ::  
         

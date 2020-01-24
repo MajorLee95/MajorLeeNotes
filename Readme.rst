@@ -18,7 +18,7 @@ Major LEE note's repository readme file
 :dépôt GitHub:  https://github.com/MajorLee95/MajorLeeNotes     
 :documentation: https://majorlee95.github.io/MajorLeeNotes/
 :Licence:       `CC0 <https://creativecommons.org/share-your-work/public-domain/cc0/>`_
-:Liens:         
+        
 
 |clearer|
 
