@@ -238,6 +238,10 @@ Exemple `openclassroom ui`_ chat client
 			FenClient();
 	//...
 
+----------------------------------------------------------------------------------------------------
+
+.. index::
+    single: Qt; uic
 
 Utilisation avec Qt Designer
 ======================================
@@ -263,7 +267,12 @@ Ce fichier est placé dans le répertoire de compilation pas dans les sources !!
 Pour le moment, je vais continuer d'utiliser la syntaxe ui-> devant tous les objets créés dans 
 Qt Desinger...
 
-#####    
+.. NOTE::
+    A propos de la mise à jour du fichier d'entête ui_claasFenetre.h : ce n'est pas qmake qui met à 
+    jour ce fichier mais bien le processus de compilation et donc le make file...
+
+
+----------------------------------------------------------------------------------------------------    
 
 ================================
 Autres choses
@@ -801,6 +810,42 @@ Qt static linking
 Cela se passe dans le fichier .pro principalement donc inutile de chercher une cas à cocher !
 
 Semble très complexe et déconseillé.
+
+----------------------------------------------------------------------------------------------------
+
+.. index::
+    single: Qt; snippets
+
+================================
+Qt and snippets
+================================
+Les snippets Doxygen simple existent nativement dans Qt suffit de commencer à taper @pour que la 
+liste de complétion de code les affiche.
+
+Création 
+======================================
+Menu Outils/options...
+
+Ligne : Editeur de texte/onglets Extraits de code
+
+Là on peut créer ses propres extraits de code.
+
+Utilisation 
+======================================
+L'utilisation des snippets dans Qt passe par le même procédé que la complétion de code.
+Il suffit de commencer à taper le nom du snippet. On pourra par exemple faire précéder tous les 
+snippet Doxygen par \doxy_. Ainsi en tapant \doxy_ on obtient dans l'éditeur la liste de tout ses
+snippets Doxygen.
+
+Sauvegardes 
+======================================
+Les snippets ne se trouvent pas dans 
+
+%QTINSTALLDIR%\Tools\QtCreator\share\qtcreator\snippets
+
+mais dans 
+
+C:\Users\_votreLogin\AppData\Roaming\QtProject\qtcreator\snippets
     
 =========
 Weblinks

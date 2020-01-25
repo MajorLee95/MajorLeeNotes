@@ -1,7 +1,7 @@
 .. index:: Linux
 
 ++++++++++++++++++++++++++++++++
-LINUX
+LINUX *
 ++++++++++++++++++++++++++++++++
 
 :Auteur: J.Soranzo
@@ -55,7 +55,7 @@ Mes commandes interressantes
 ================================
 
 .. index ::
-   single: Linux; Commandes system
+   pair: Linux; Commandes system
    
 System
 ===========
@@ -164,6 +164,24 @@ Là c'est différent l'appli n'est lancée qu'une seule fois au démarrage.
 				source : livre : Linux Embarqué page 20
 			Il a pour but d'offrir un meilleur cadre pour la gestion des dépendances entre services, de permettre le chargement en parallèle des services au démarrage, et de réduire les appels aux scripts shell.
 				src wikipedia
+
+================================
+Samba
+================================
+Tout est dit dans le `JdMdP rubrique SAMBA`_
+
+.. _`JdMdP rubrique SAMBA` : https://poltergeist42.github.io/JDM/Linux.html#creer-un-dossier-partage-avec-samba
+
+
+.. WARNING::
+    Ne pas taper smbpasswd sans rien !
+	
+La `doc officielle Samba`_ mais n'apporte pas grand chose ! Trop complexe.
+
+.. _`doc officielle Samba` : https://wiki.samba.org/index.php/Main_Page
+
+Même si samba gère des mdp différents du système il n'empêcha que l'utilisateur samba doit existé en
+ tant qu'utilisateur système. Par défaut Samba partage le home dir de l'utlisateur en read only. 
 
 =========
 Weblinks

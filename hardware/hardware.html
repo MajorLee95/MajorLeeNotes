@@ -15,8 +15,8 @@
     <script type="text/javascript" src="../_static/translations.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Recherche" href="../search.html" />
-    <link rel="next" title="Robotique : mesure de sitance" href="merureDistance.html" />
-    <link rel="prev" title="LINUX" href="../linux/linux.html" /> 
+    <link rel="next" title="Robotique : mesure de distance" href="merureDistance.html" />
+    <link rel="prev" title="LINUX *" href="../linux/linux.html" /> 
   </head><body>
     <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
@@ -25,10 +25,10 @@
           <a href="../genindex.html" title="Index général"
              accesskey="I">index</a></li>
         <li class="right" >
-          <a href="merureDistance.html" title="Robotique : mesure de sitance"
+          <a href="merureDistance.html" title="Robotique : mesure de distance"
              accesskey="N">suivant</a> |</li>
         <li class="right" >
-          <a href="../linux/linux.html" title="LINUX"
+          <a href="../linux/linux.html" title="LINUX *"
              accesskey="P">précédent</a> |</li>
         <li class="nav-item nav-item-0"><a href="../index.html">Documentation MajorLee&#39;s notes </a> &#187;</li> 
       </ul>
@@ -58,7 +58,7 @@
 <div class="toctree-wrapper compound">
 <p class="caption"><span class="caption-text">Sous-articles:</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="merureDistance.html">Robotique : mesure de sitance</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="merureDistance.html">Robotique : mesure de distance</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="merureDistance.html#vocablaire">Vocablaire</a></li>
 <li class="toctree-l2"><a class="reference internal" href="merureDistance.html#lidar">Lidar</a></li>
 <li class="toctree-l2"><a class="reference internal" href="merureDistance.html#capteur-tof">Capteur ToF</a></li>
@@ -75,15 +75,23 @@
 <li class="toctree-l2"><a class="reference internal" href="fpga/fpga.html#weblinks">Weblinks</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="raspberry/raspberry.html">Raspberry pi</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="raspberry/raspberry.html#boitier">Boîtier</a></li>
+<li class="toctree-l2"><a class="reference internal" href="raspberry/raspberry.html#disque-dur-sympa">Disque dur sympa</a></li>
+<li class="toctree-l2"><a class="reference internal" href="raspberry/raspberry.html#weblinks">Weblinks</a></li>
+</ul>
+</li>
 </ul>
 </div>
 <div class="contents topic" id="hardware-tdm">
-<p class="topic-title">Hardware tdm</p>
+<p class="topic-title first">Hardware tdm</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="#hardware-notes" id="id1">Hardware notes</a></p>
+<li><p><a class="reference internal" href="#hardware-notes" id="id3">Hardware notes</a></p>
 <ul>
-<li><p><a class="reference internal" href="#teensy-3-5" id="id2">Teensy (3.5)</a></p></li>
-<li><p><a class="reference internal" href="#connecteur-wifi" id="id3">Connecteur Wifi</a></p></li>
+<li><p><a class="reference internal" href="#teensy-3-5" id="id4">Teensy (3.5)</a></p></li>
+<li><p><a class="reference internal" href="#connecteur-wifi" id="id5">Connecteur Wifi</a></p></li>
+<li><p><a class="reference internal" href="#esp8266" id="id6">ESP8266</a></p></li>
+<li><p><a class="reference internal" href="#weblinks" id="id7">Weblinks</a></p></li>
 </ul>
 </li>
 </ul>
@@ -102,6 +110,20 @@ ref : 6360 T8406 ? 16MHz</p>
 MHF connecteur</p>
 <p>SMA connecteur des antennes Wifi</p>
 </div>
+<div class="section" id="esp8266">
+<h2><a class="toc-backref" href="#hardware-tdm">ESP8266</a><a class="headerlink" href="#esp8266" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Attention toutes les broches ne sont pas utilisables  pour faire ce qu’on veut!
+Il y a des contrainte.</p>
+<p>Voir sur le site <a class="reference external" href="https://randomnerdtutorials.com/esp8266-pinout-reference-gpios/">randomTutorial ESP8266 pinout</a> <a class="footnote-reference brackets" href="#id1" id="id2">1</a></p>
+</div>
+<div class="section" id="weblinks">
+<h2><a class="toc-backref" href="#hardware-tdm">Weblinks</a><a class="headerlink" href="#weblinks" title="Lien permanent vers ce titre">¶</a></h2>
+<dl class="footnote brackets">
+<dt class="label" id="id1"><span class="brackets"><a class="fn-backref" href="#id2">1</a></span></dt>
+<dd><p><a class="reference external" href="https://randomnerdtutorials.com/esp8266-pinout-reference-gpios/">https://randomnerdtutorials.com/esp8266-pinout-reference-gpios/</a></p>
+</dd>
+</dl>
+</div>
 </div>
 
 
@@ -115,16 +137,18 @@ MHF connecteur</p>
 <li><a class="reference internal" href="#">Hardware notes</a><ul>
 <li><a class="reference internal" href="#teensy-3-5">Teensy (3.5)</a></li>
 <li><a class="reference internal" href="#connecteur-wifi">Connecteur Wifi</a></li>
+<li><a class="reference internal" href="#esp8266">ESP8266</a></li>
+<li><a class="reference internal" href="#weblinks">Weblinks</a></li>
 </ul>
 </li>
 </ul>
 
   <h4>Sujet précédent</h4>
   <p class="topless"><a href="../linux/linux.html"
-                        title="Chapitre précédent">LINUX</a></p>
+                        title="Chapitre précédent">LINUX *</a></p>
   <h4>Sujet suivant</h4>
   <p class="topless"><a href="merureDistance.html"
-                        title="Chapitre suivant">Robotique : mesure de sitance</a></p>
+                        title="Chapitre suivant">Robotique : mesure de distance</a></p>
   <div role="note" aria-label="source link">
     <h3>Cette page</h3>
     <ul class="this-page-menu">
@@ -153,17 +177,17 @@ MHF connecteur</p>
           <a href="../genindex.html" title="Index général"
              >index</a></li>
         <li class="right" >
-          <a href="merureDistance.html" title="Robotique : mesure de sitance"
+          <a href="merureDistance.html" title="Robotique : mesure de distance"
              >suivant</a> |</li>
         <li class="right" >
-          <a href="../linux/linux.html" title="LINUX"
+          <a href="../linux/linux.html" title="LINUX *"
              >précédent</a> |</li>
         <li class="nav-item nav-item-0"><a href="../index.html">Documentation MajorLee&#39;s notes </a> &#187;</li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2019, J.SORANZO.
-      Créé avec <a href="http://sphinx-doc.org/">Sphinx</a> 2.3.1.
+      Créé avec <a href="http://sphinx-doc.org/">Sphinx</a> 2.2.0.
     </div>
   </body>
 </html>

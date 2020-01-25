@@ -1,5 +1,5 @@
 ++++++++++++++++++++++++++++++++
-Note concernant Visal C++ 2013
+Note concernant Visal C++ 2013 *
 ++++++++++++++++++++++++++++++++
 
 :Auteur: J.Soranzo

@@ -35,6 +35,11 @@ Stateful et Stateless
 
 Immutable
 
+Commandes principales
+======================================
+
+Voir sur `Note Docker Pierre`_ il y a tout ce qu'il faut !
+
 =========
 Weblinks
 =========

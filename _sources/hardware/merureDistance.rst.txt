@@ -1,5 +1,5 @@
 ++++++++++++++++++++++++++++++++
-Robotique : mesure de sitance
+Robotique : mesure de distance
 ++++++++++++++++++++++++++++++++
 :Auteur: J.Soranzo
 :Date: Novembre 2019

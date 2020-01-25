@@ -4,12 +4,12 @@
    contain the root `toctree` directive.
    
    
-Bienvenue to MajorLee's notes documentation!
+Bienvenue dans les notes de  MajorLee's
 ===============================================
 
 .. toctree::
    :maxdepth: 2
-   :caption: Articles:
+   :caption: Articles
    :titlesonly:
 
 
