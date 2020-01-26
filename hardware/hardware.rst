@@ -13,6 +13,7 @@ Hardware notes
 
    merureDistance
    fpga/fpga
+   raspberry/raspberry
 
 .. contents:: Hardware tdm
     :backlinks: top
@@ -35,3 +36,19 @@ MHF connecteur
 
 SMA connecteur des antennes Wifi
 
+================================
+ESP8266
+================================
+Attention toutes les broches ne sont pas utilisables  pour faire ce qu'on veut!
+Il y a des contrainte.
+
+Voir sur le site `randomTutorial ESP8266 pinout`_
+
+.. _`randomTutorial ESP8266 pinout` : https://randomnerdtutorials.com/esp8266-pinout-reference-gpios/
+
+================================
+Weblinks
+================================
+
+
+.. target-notes::
