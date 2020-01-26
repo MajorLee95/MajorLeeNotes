@@ -8,7 +8,7 @@
     <div class="clearer"></div>
     
 ++++++++++++++++++++++++++++++++
-Notes sur Qt
+Notes sur Qt *
 ++++++++++++++++++++++++++++++++
 .. image:: images/qtLogo.jpg
    :height: 100px
@@ -772,23 +772,30 @@ Mais aussi : sur le site de `Guillaume Beltz`_
 
 .. _`documentation Qt sur le déploiement` : https://doc.qt.io/qt-5/windows-deployment.html
 
-Pour moi windeployqt.exe se trouve dans :
+Pour moi windeployqt.exe se trouve dans::
 
-\Qt\Qt5.12.6\5.12.6\mingw73_64\bin : donc il est dépendant du kit utilisé !
+	\Qt\Qt5.12.6\5.12.6\mingw73_64\bin : donc il est dépendant du kit utilisé !
 
 J'ai ajouté le chemin directement dans la cosole (la mano)
 
 ::
 
-    windeploy --list target nom_appli.exe 
+	set PATH=%PATH%;D:\Qt\5.12.6\mingw73_64\bin
+    windeployqt --list target nom_appli.exe 
 
 Ne se contente pas de lister les fichier mais fais réellement la copie.
 
 Pour ne pas faire la copie il faut faire::
 
-    windeploy --dry-run --list target nom_appli.exe
+    windeployqt --dry-run --list target nom_appli.exe
+	
+.. NOTE::
+	
+	Il faut bien taper le target. Il se peut qu'il manque alors encore 3 ou 4 dll libgcc quelque chose. Les ajouter à la main.
 
-
+- libgcc_s_seh-1.dll
+- libstdc++-6.dll
+- libwinpthread-1.dll
 
 .. _`Guillaume Beltz` : http://guillaume.belz.free.fr/doku.php?id=deployer_une_application_qt
 
@@ -804,6 +811,8 @@ Cette technique est inspirée du site `wiki.qt.io`_
 
 On pourra soit bosser directement dans le dossier realese avec windeployqt soit dans un nouveau 
 dossier en y recopiant le .exe (inutile de chercher à spécifier un source dir et un dest dir)
+
+La technique exposée ci-dessus ne fonctionne pas toujour ! Mieux vaut passer par windeployqt.
 
 Qt static linking
 ======================================
