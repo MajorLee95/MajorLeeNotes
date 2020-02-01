@@ -131,7 +131,7 @@ puis on surcharge l'opérateur. Presque normalement si ce n'est le flux en entr�
 ----------------------------------------------------------------------------------------------------
 
 .. index::
-    single: C++; Namespace
+    pair: C++; Namespace
 
 ================================
 Namespace
@@ -663,6 +663,20 @@ Un truc sympa c'est de déclarer un nouveau type::
 Après on peut l'utiliser comme paramètre d'une autre fonction ::
 
     int setInterval(long d, timer_callback f);
+    
+----------------------------------------------------------------------------------------------------
+
+.. index::
+    pair: Doxygen; Arduino
+    
+================================
+Doxygen avec Arduino
+================================
+Il y 2 parmaètres à fixer dans Doxygen pour prendre en compte les fichiers .ino::
+
+    FILE_PATTERNS = [...] *.ino sous Input
+    EXTENSION_MAPPING = ino=c under "Project" 
+
 
 =========
 Weblinks

@@ -16,3 +16,5 @@ Major LEE Glossaire
         est l'abréviation de Model-View-Controller, ce qui signifie en français
         "Modèle-Vue-Contrôleur"
    
+    MERN
+        MongoDB, Express js, React, Node.js
