@@ -40,6 +40,16 @@ Commandes principales
 
 Voir sur `Note Docker Pierre`_ il y a tout ce qu'il faut !
 
+Cheatsheet ?
+
+::
+
+    docker run -d -p 8080:80 nginx
+    docker images <=> docker image ls
+    docker ps -a
+    docker rmi : remove specific image
+    docker restart
+
 =========
 Weblinks
 =========
