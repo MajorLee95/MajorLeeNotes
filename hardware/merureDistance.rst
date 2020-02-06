@@ -20,17 +20,20 @@ SLAM = Simultaneous Localization and Mapping
 Lidar 
 ================================
 
-LIDAR tournant
+LIDAR tournant 
 ======================================
-`LIDAR lite v3HP`_ 150USD sans les frais de port 216€ chez ali - interface I2C
 
-LIDAR-Lite V3 179€ chez `Go-Tronic`_
+Chez DF-Robot : 99$ (prix au 2/3/20) `A1-M8 DF ROBOT`_
 
-Range 4cm à 40m !
+.. _`A1-M8 DF ROBOT` : https://www.dfrobot.com/product-1125.html
 
-Spread of the beam:
-Distance/100 = beam diameter at that distance
-Environ 1/2 ° ou 8 milliradian
+`YDLIDAR`_ à moins de 100€ sur ALiexpress
+
+.. _`YDLIDAR` : https://fr.aliexpress.com/item/4000393240317.html?src=google&src=google&albch=shopping&acnt=494-037-6276&isdl=y&slnk=&plac=&mtctp=&albbt=Google_7_shopping&aff_platform=google&aff_short_key=UneMJZVf&&albagn=888888&albcp=6459793138&albag=77316928277&trgt=743612850714&crea=fr4000393240317&netw=u&device=c&gclid=Cj0KCQiApt_xBRDxARIsAAMUMu8TlG0-RCEyXrrduUi5lkIxgdoq5SNSeYpcCNwFAwR4xSERS6RbwkgaAlOsEALw_wcB&gclsrc=aw.ds
+
+
+LIDAR tournant Home made
+======================================
 
 `Homemade LIDAR sensor with Arduino`_ & Processing sur Youtube
 
@@ -69,6 +72,18 @@ Utilise un capteur TSL1401 assez original ! Full instruction provided !!!!
 
 Les fixes (Plus près des TOF)
 ======================================
+`LIDAR lite v3HP`_ 150USD sans les frais de port 216€ chez ali - interface I2C
+
+LIDAR-Lite V3 179€ chez `Go-Tronic`_
+
+Range 4cm à 40m !
+
+Spread of the beam:
+Distance/100 = beam diameter at that distance
+Environ 1/2 ° ou 8 milliradian
+
+----------------------------------------------------------------------------------------------------
+
 La série des TF de chez Benewake
 
 `TF mini : 27.33€ Banggood`_ (en promo): FOV 2.3° max 12m
@@ -87,13 +102,13 @@ TF-mini plus: 41.16€ chez ali FOV 3.6° 0.1 à 12m
    :alt: Benewake TF mini plus dimensions
    :align: center
 
-TF-03 : 0.1 à 100m FOV 0.5° Prix 408.76€ banggood et 190€ chez Robotshop
+TF-03 : 0.1 à 100m FOV 0.5° Prix 408.76€ banggood et 190€ chez `Robotshop`_ ...
 
-...
-
-https://www.robotshop.com/eu/fr/scanner-laser-360-ydlidar-x2.html?gclid=Cj0KCQiA5dPuBRCrARIsAJL7oejQtDc9_YCCkfvmHWWn4Qu7373e6-FC7K3W6UB8-6410JZqWl3jM0EaAjoaEALw_wcB
+.. _`Robotshop` : https://www.robotshop.com/eu/fr/scanner-laser-360-ydlidar-x2.html?gclid=Cj0KCQiA5dPuBRCrARIsAJL7oejQtDc9_YCCkfvmHWWn4Qu7373e6-FC7K3W6UB8-6410JZqWl3jM0EaAjoaEALw_wcB
 
 76€
+
+----------------------------------------------------------------------------------------------------
 
 `Un Lidar à 30€`_ exemple d'utilisation très complet sur `le site de ROS`_
 
