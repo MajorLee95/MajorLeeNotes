@@ -18,3 +18,6 @@ Major LEE Glossaire
    
     MERN
         MongoDB, Express js, React, Node.js
+        
+    SLAM
+        Simultaneous Localization and Mapping

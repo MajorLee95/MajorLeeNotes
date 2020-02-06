@@ -137,17 +137,36 @@ Autre :download:`utilisation avec un word <exemple_roleDL.docx>`
 ================================
 Themes
 ================================
-Recherche d'un thème avec bare de navigation fixe
+Recherche d'un thème avec barre de navigation fixe
 
 .. note::
 
 	Ce serait l'option stickysidebar  bar https://www.sphinx-doc.org/en/master/usage/theming.html
 	au moins pour le theme classic
+    
+Le pb est que les options ne sont pas commune d'un thème à l'autre.
 
 testés 
 ======================================
-- guzzle : 
-- cloud
+- PSphinxTheme : dans les premier ! Avec sidebar rétractable 5 colorations fournies. Theme difficile à installer sous Windows !!! Erreur dans setup.py (os supported arch Linux ! )
+
+**guzzle**
+
+Ne support pas body_max_width dommage
+
+.. image:: images/guzzle.jpg
+   :width: 300 px
+   :align: center
+
+**cloud**
+
+.. image:: images/cloud.jpg
+   :width: 300 px
+   :align: center
+
+**murray**
+
+Trop blanc mais intéressant pour son menu repliable.
  
 A tester 
 ======================================
