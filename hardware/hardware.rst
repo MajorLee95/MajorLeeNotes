@@ -36,6 +36,12 @@ MHF connecteur
 
 SMA connecteur des antennes Wifi
 
+----------------------------------------------------------------------------------------------------
+
+.. index::
+    single: ESP8266; pinout limite
+    single: ESP8266; broches disponibles
+
 ================================
 ESP8266
 ================================
@@ -45,6 +51,38 @@ Il y a des contrainte.
 Voir sur le site `randomTutorial ESP8266 pinout`_
 
 .. _`randomTutorial ESP8266 pinout` : https://randomnerdtutorials.com/esp8266-pinout-reference-gpios/
+
+----------------------------------------------------------------------------------------------------
+
+.. index::
+    single: Hardware; Cable SATA to USB3
+    
+================================
+SATA to USB3
+================================    
+Solution testée et maintes fois utilisées  `sur AMAZON SABERENT`_ à 9€90
+
+.. _`sur AMAZON SABERENT` : https://www.amazon.fr/Sabrent-Adaptateur-Optimis%C3%A9-support-EC-SSHD/dp/B011M8YACM/ref=sr_1_8?keywords=Sabrent&qid=1581088661&sr=8-8
+
+====================================================================================================
+MIPI CSI prolangateur
+====================================================================================================
+`Pi Camera HDMI Cable Extension`_
+
+.. _`Pi Camera HDMI Cable Extension` : https://www.tindie.com/products/freto/pi-camera-hdmi-cable-extension/
+
+`Subtilitées sur Petit Studio`_
+
+.. _`Subtilitées sur Petit Studio` : http://petitstudio.blogspot.com/2015/05/hdmi-cables-are-not-all-same.html
+
+`Sur Amazon`_
+
+.. _`Sur Amazon` : https://www.amazon.com/Arducam-Extension-Module-Raspberry-Specific/dp/B06XDNBM63
+
+Et enfin `sur le site de BATC`_
+
+.. _`sur le site de BATC` : https://wiki.batc.org.uk/CSI-2_to_HDMI
+
 
 ================================
 Weblinks

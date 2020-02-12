@@ -21,3 +21,20 @@ Major LEE Glossaire
         
     SLAM
         Simultaneous Localization and Mapping
+        
+    SLA
+        Stereolithography (SLA)
+        
+    FDM
+        Fused deposition modeling - imprimante 3D à filament
+        
+    FFF
+        Fused filament fabrication
+        
+    DLP
+        Digital Light Processing
+        
+    SLM
+        Selective laser melting - imprimante 3D à poudre
+        
+        
