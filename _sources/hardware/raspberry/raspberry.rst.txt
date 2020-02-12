@@ -34,6 +34,20 @@ Disque dur sympa
 
 .. _`SSD de petite taille sur Aliexpress` : https://fr.aliexpress.com/item/32848432283.html
 
+----------------------------------------------------------------------------------------------------
+
+.. index::
+    pair: Raspberry; install ext hdd
+
+================================
+Boot from external HDD
+================================
+
+`Un tuto qui m'a l'air facile`_
+
+.. _`Un tuto qui m'a l'air facile` : https://www.maketecheasier.com/boot-up-raspberry-pi-3-external-hard-disk/
+
+
 =========
 Weblinks
 =========

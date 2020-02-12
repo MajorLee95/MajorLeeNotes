@@ -20,11 +20,14 @@ il s'agit principalement ici de lignes commandes que j'ai trouvé intéressantes
 ================================
 Doc
 ================================
-Avant que de n'aller plus loin, jeter un oeil au `journal de manip de Pierre partie Linux`_
+Avant que de n'aller plus loin, jeter un oeil au `journal de manip de Pierre partie Linux`_ . 
+Dans la suite abrégé JdMdP
+
+`Un cours complets sur Linux France.org`_
 
 .. _`journal de manip de Pierre partie Linux` : https://poltergeist42.github.io/JDM/Linux.html
 
-Dans la suite abrégé JdMdP
+.. _`Un cours complets sur Linux France.org` : http://www.linux-france.org/prj/edu/archinet/systeme/index.html 
 
 ----------------------------------------------------------------------------------------------------
 

@@ -56,16 +56,42 @@ Immutable
 
 Ce que c'est ::
 
-	Docker is a platform for developers and sysadmins to build, share, and run applications.
-	
+    Docker is a platform for developers and sysadmins to build, share, and run applications.
+    
 ça c'est la `définition officielle`_ . Cela ne dit pas développer de quelles applications. Le gros sous 
 entendu c'est que ce sont des applications plutôt à forte propention WEB.
 
 .. _`définition officielle` : https://docs.docker.com/get-started/
 
-================================
+
+====================================================================================================
+Documentation
+====================================================================================================
+Officiellement c'est là : `Docker's documentation`_
+
+
+Mais c'est mieux de commencer par l'`onglet Product manual`_ et plus particulièrement avec les 
+
+`docker for Windows`_, `docker for Mac`_
+
+La référence pour les options et commandes de la ligne de commande est:
+`Use the Docker command line`_
+
+.. _`Docker's documentation` : https://docs.docker.com/
+
+.. _`onglet Product manual` : https://docs.docker.com/install/
+
+.. _`docker for Windows` : https://docs.docker.com/docker-for-windows/
+
+.. _`docker for Mac` : https://docs.docker.com/docker-for-mac/
+
+.. _`Use the Docker command line` : https://docs.docker.com/engine/reference/commandline/cli/
+
+
+====================================================================================================
 Commandes principales
-================================
+====================================================================================================
+
 
 Voir sur `Note Docker Pierre`_ il y a tout ce qu'il faut !
 
@@ -79,8 +105,82 @@ Cheatsheet ?
     docker rmi : remove specific image
     docker restart
     docker build -t _nom .
-	docker container prune
-	
+    docker container prune
+    docker run --interactive --tty ubuntu bash
+
+    
+On ne le dira jamais assez :
+
+Do not use PowerShell ISE
+
+Interactive terminals do not work in PowerShell ISE (but they do in PowerShell).
+See docker/for-win/issues/223.
+
+====================================================================================================
+Créer une images
+====================================================================================================
+Dans un répertoire vierge créer un fichier nommer Dosckerfile
+
+Lancer la commande docker build (éventuellement avec -t pour préciser un nom d'image)
+
+Syntaxe des fichiers Dockerfile 
+===========================================================
+
+`Docker file ref`_
+
+La commande pour compiler ET lancer, la plus simple, est alors ::
+
+    docker build .
+    
+Il est bon aussi de bien lire : `Best practices for writing Dockerfiles`_
+
+.. _`Docker file ref` : https://docs.docker.com/engine/reference/builder/
+
+.. _`Best practices for writing Dockerfiles` :  https://docs.docker.com/develop/develop-images/dockerfile_best-practices/
+
+====================================================================================================
+Syntaxe des fichiers Docker compose
+====================================================================================================    
+Docker compose permet de lancer plusieurs images en même temps.
+
+Dans un répertoire vide (conseillé) créer un fichier docker-compose.yml
+
+`Compose file version 3 reference`_
+
+.. _`Compose file version 3 reference` : https://docs.docker.com/compose/compose-file/
+
+====================================================================================================
+Piloter un port série de la machine hote
+====================================================================================================
+
+https://www.losant.com/blog/how-to-access-serial-devices-in-docker
+
+
+
+
+
+====================================================================================================
+My tips
+====================================================================================================
+.. index::
+    single: Docker; Disk image locations tips
+
+    
+Disque image locations : peut-être configurer dans la fenêtre setting de docker onglet Ressources/
+advanced
+
+.. index::
+    single: Docker; File sharing tips
+
+Partage de données entre hôte et containers ::
+    File sharing is required for mounting volumes in Linux containers, not for Windows containers.
+    For Linux containers, you need to share the drive where the Dockerfile and volume are located. 
+    Otherwise, you get file not found or cannot start service errors at runtime. 
+    See Volume mounting requires shared drives for Linux containers.
+
+Docker dashboard : gestion interractive graphique des container/appli compose 
+**en cours d'éxécution**
+
 
 =========
 Weblinks
