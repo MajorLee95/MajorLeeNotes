@@ -133,6 +133,10 @@ Exemple :download:`doc pdf sphinx<sphinx.pdf>`
 
 Autre :download:`utilisation avec un word <exemple_roleDL.docx>`
 
+Quoique après relecture j'ai un gros doute `sur only`_
+
+.. _`sur only` : https://www.sphinx-doc.org/en/master/usage/restructuredtext/directives.html#directive-only
+
 
 ================================
 Themes
