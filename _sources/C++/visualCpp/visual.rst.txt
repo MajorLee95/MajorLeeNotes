@@ -124,6 +124,43 @@ multitache
 ===========================
 A écrire...
 
+====================================================================================================
+Tips
+====================================================================================================
+
+.. index::
+    pair: MFC; Enter key
+    
+
+Déconnecter la touche ENTER du bouton quit
+====================================================================================================
+`Sur stackoverflow`_
+
+.. _`Sur stackoverflow` : https://stackoverflow.com/questions/17828258/how-to-prevent-mfc-dialog-closing-on-enter-and-escape-keys
+
+::
+
+    When the user presses Enter key in a dialog two things can happen:
+
+    The dialog has a default control (see CDialog::SetDefID()). Then a WM_COMMAND with the ID of this 
+    control is sent to the dialog.
+    The dialog does not have a default control. Then WM_COMMAND with ID = IDOK is sent to the dialog.
+    With the first option, it may happen that the default control has a ID equal to IDOK. Then the
+    results will be the same that in the second option.
+
+    By default, class CDialog has a handler for the WM_COMMAND(IDOK) that is to call to CDialog::OnOk(),
+     that is a virtual function, and by default it calls EndDialog(IDOK) that closes the dialog.
+
+    So, if you want to avoid the dialog being closed, do one of the following.
+
+    Set the default control to other than IDOK.
+    Set a handler to the WM_COMMAND(IDOK) that does not call EndDialog().
+    Override CDialog::OnOk() and do not call the base implementation.
+    About IDCANCEL, it is similar but there is not equivalent SetDefID() and the ESC key is hardcoded.
+    So to avoid the dialog being closed:
+
+    Set a handler to the WM_COMMAND(IDCANCEL) that does not call EndDialog().
+    Override CDialog::OnCancel() and do not call the base implementation.
 
 =========
 Weblinks
