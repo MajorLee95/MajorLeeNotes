@@ -42,6 +42,9 @@ Un bon tut, je crois : `docker-curriculum`_
 
 .. _`docker-curriculum` : https://docker-curriculum.com/
 
+Au cours de ce tutoriel en englais on apprends à déployer une apppli web static et 
+2 appli dynamiques
+
 ================================
 Notes
 ================================
@@ -172,7 +175,8 @@ advanced
 .. index::
     single: Docker; File sharing tips
 
-Partage de données entre hôte et containers ::
+Partage de données entre hôte et containers::
+
     File sharing is required for mounting volumes in Linux containers, not for Windows containers.
     For Linux containers, you need to share the drive where the Dockerfile and volume are located. 
     Otherwise, you get file not found or cannot start service errors at runtime. 

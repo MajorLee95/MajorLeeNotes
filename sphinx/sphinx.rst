@@ -124,14 +124,18 @@ Liens externe locaux
 
 directive .. only et role :download:
 
-`Page Sphinx sur only`_
+`Page Sphinx sur download`_
 
-.. _`Page Sphinx sur only` : http://www.sphinx-doc.org/en/master/usage/restructuredtext/roles.html#role-download
+.. _`Page Sphinx sur download` : http://www.sphinx-doc.org/en/master/usage/restructuredtext/roles.html#role-download
 
 
 Exemple :download:`doc pdf sphinx<sphinx.pdf>`
 
 Autre :download:`utilisation avec un word <exemple_roleDL.docx>`
+
+Quoique après relecture j'ai un gros doute `sur only`_
+
+.. _`sur only` : https://www.sphinx-doc.org/en/master/usage/restructuredtext/directives.html#directive-only
 
 
 ================================
