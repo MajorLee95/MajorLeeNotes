@@ -56,7 +56,7 @@
 </dd>
 </dl>
 <div class="contents topic" id="sommaire">
-<p class="topic-title first">Sommaire</p>
+<p class="topic-title">Sommaire</p>
 <ul class="simple">
 <li><p><a class="reference internal" href="#docker" id="id26">Docker</a></p>
 <ul>
@@ -72,7 +72,8 @@
 <li><p><a class="reference internal" href="#syntaxe-des-fichiers-docker-compose" id="id33">Syntaxe des fichiers Docker compose</a></p></li>
 <li><p><a class="reference internal" href="#piloter-un-port-serie-de-la-machine-hote" id="id34">Piloter un port série de la machine hote</a></p></li>
 <li><p><a class="reference internal" href="#my-tips" id="id35">My tips</a></p></li>
-<li><p><a class="reference internal" href="#weblinks" id="id36">Weblinks</a></p></li>
+<li><p><a class="reference internal" href="#vocabullaire" id="id36">Vocabullaire</a></p></li>
+<li><p><a class="reference internal" href="#weblinks" id="id37">Weblinks</a></p></li>
 </ul>
 </li>
 </ul>
@@ -177,6 +178,21 @@ advanced</p>
 <p>Docker dashboard : gestion interractive graphique des container/appli compose
 <strong>en cours d’éxécution</strong></p>
 </div>
+<div class="section" id="vocabullaire">
+<h2><a class="toc-backref" href="#sommaire">Vocabullaire</a><a class="headerlink" href="#vocabullaire" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Statefull</p>
+<p>Stateless</p>
+<p>Images :</p>
+<blockquote>
+<div><p><strong>Base images</strong> are images that have no parent image, usually images with an OS like ubuntu, busybox or debian.</p>
+<p><strong>Child images</strong> are images that build on base images and add additional functionality.</p>
+</div></blockquote>
+<p>Then there are official and user images, which can be both base and child images.</p>
+<blockquote>
+<div><p><strong>Official images</strong> are images that are officially maintained and supported by the folks at Docker. These are typically one word long. In the list of images above, the python, ubuntu, busybox and hello-world images are official images.</p>
+<p><strong>User images</strong> are images created and shared by users like you and me. They build on base images and ad</p>
+</div></blockquote>
+</div>
 <div class="section" id="weblinks">
 <h2><a class="toc-backref" href="#sommaire">Weblinks</a><a class="headerlink" href="#weblinks" title="Lien permanent vers ce titre">¶</a></h2>
 <dl class="footnote brackets">
@@ -240,6 +256,7 @@ advanced</p>
 <li><a class="reference internal" href="#syntaxe-des-fichiers-docker-compose">Syntaxe des fichiers Docker compose</a></li>
 <li><a class="reference internal" href="#piloter-un-port-serie-de-la-machine-hote">Piloter un port série de la machine hote</a></li>
 <li><a class="reference internal" href="#my-tips">My tips</a></li>
+<li><a class="reference internal" href="#vocabullaire">Vocabullaire</a></li>
 <li><a class="reference internal" href="#weblinks">Weblinks</a></li>
 </ul>
 </li>
@@ -289,7 +306,7 @@ advanced</p>
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2019, J.SORANZO.
-      Créé avec <a href="http://sphinx-doc.org/">Sphinx</a> 2.2.0.
+      Créé avec <a href="http://sphinx-doc.org/">Sphinx</a> 2.3.1.
     </div>
   </body>
 </html>

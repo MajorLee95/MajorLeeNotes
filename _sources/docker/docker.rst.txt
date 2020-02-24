@@ -186,6 +186,25 @@ Docker dashboard : gestion interractive graphique des container/appli compose
 **en cours d'éxécution**
 
 
+================================
+Vocabullaire
+================================
+Statefull
+
+Stateless
+
+Images : 
+
+    **Base images** are images that have no parent image, usually images with an OS like ubuntu, busybox or debian.
+
+    **Child images** are images that build on base images and add additional functionality.
+
+Then there are official and user images, which can be both base and child images.
+
+    **Official images** are images that are officially maintained and supported by the folks at Docker. These are typically one word long. In the list of images above, the python, ubuntu, busybox and hello-world images are official images.
+
+    **User images** are images created and shared by users like you and me. They build on base images and ad
+
 =========
 Weblinks
 =========

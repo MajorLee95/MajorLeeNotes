@@ -34,6 +34,22 @@ Disque dur sympa
 
 .. _`SSD de petite taille sur Aliexpress` : https://fr.aliexpress.com/item/32848432283.html
 
+.. index::
+    single: Raspberry; SSD HDD boot
+
+====================================================================================================
+Comment booter sur SSD
+====================================================================================================
+
+`Vidéo du gaz avec l'accent Suisse`_
+
+.. _`Vidéo du gaz avec l'accent Suisse` : https://www.youtube.com/watch?v=gp6XW-fGVjo
+
+`Puis le site de James A. Chambers`_ Legandary Technology Blog moi j'ai eu des pb de certificats 
+pour visiter ce site
+
+.. _`Puis le site de James A. Chambers` : https://jamesachambers.com
+
 ----------------------------------------------------------------------------------------------------
 
 .. index::

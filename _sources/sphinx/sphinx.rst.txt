@@ -177,6 +177,38 @@ A tester
 - catalystcloud
 - rtd Read The Doc https://sphinx-rtd-theme.readthedocs.io/en/stable/installing.html
 
+
+====================================================================================================
+Petits trucs
+====================================================================================================
+
+.. index::
+    single: Sphinx; Doxylink
+
+Liens Doxygen
+====================================================================================================
+doxylink : contributed extension
+
+`Doxylink documentation`_
+
+.. _`Doxylink documentation` : https://sphinxcontrib-doxylink.readthedocs.io/en/stable/
+
+----------------------------------------------------------------------------------------------------
+
+.. index::
+    single: Sphinx; clearer
+    single! Sphinx; Séparateur html
+
+Séparateur html
+====================================================================================================
+Clearer::
+
+    .. |clearer|  raw:: html
+
+        <div class="clearer"></div>
+    _usage : |clearer|
+ 
+ 
  
 =========
 Weblinks
