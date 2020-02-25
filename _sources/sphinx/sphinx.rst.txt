@@ -164,6 +164,15 @@ Ne support pas body_max_width dommage
 
 **cloud**
 
+Plutôt pas mal, beaucoup d'option mais je trouve l'écartement entre les lignes de mon header
+
+:Auteur: J.Soranzo
+:Date: Octobre 2019
+:Societe: VoLAB
+:Entity: VoRoBoTics
+
+trop important !
+
 .. image:: images/cloud.jpg
    :width: 300 px
    :align: center
