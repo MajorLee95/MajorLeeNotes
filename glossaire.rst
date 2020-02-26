@@ -37,4 +37,5 @@ Major LEE Glossaire
     SLM
         Selective laser melting - imprimante 3D à poudre
         
-        
+    RPC
+        Remote Procedure Call
