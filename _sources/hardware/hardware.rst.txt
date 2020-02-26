@@ -84,6 +84,28 @@ Et enfin `sur le site de BATC`_
 .. _`sur le site de BATC` : https://wiki.batc.org.uk/CSI-2_to_HDMI
 
 
+====================================================================================================
+LES CAPTEURS
+====================================================================================================
+Eau 
+====================================================================================================
+`Analog TDS Sensor/Meter for Arduino`_ 26/02/2020
+
+.. _`Analog TDS Sensor/Meter for Arduino` : https://www.dfrobot.com/product-1662.html
+
+TDS (Total Dissolved Solids) indicates that how many milligrams of soluble solids dissolved in 
+one liter of water.
+
+`Example d'utilisation sur Hackster.io`_
+
+.. _`Example d'utilisation sur Hackster.io` : https://www.hackster.io/robotics-bangladesh/portable-liquids-classification-device-d207a3?utm_campaign=new_projects&utm_content=3&utm_medium=email&utm_source=hackster&utm_term=project_name 
+
+----------------------------------------------------------------------------------------------------
+
+Air
+====================================================================================================
+A retranscrire ici projet 035-tempDataLogger document de conception 26/02/2020 ...
+
 ================================
 Weblinks
 ================================
