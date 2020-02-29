@@ -48,6 +48,11 @@ Au cours de ce tutoriel en englais on apprends à déployer une apppli web stati
 ================================
 Notes
 ================================
+J'aime bien cette définition :
+Quand une application tourne dans un conteneur, elle a l’illusion d’être la seule à avoir accès 
+au **système** (sous-entendu l'OS). Ceci n’est pas sans rappeler la virtualisation, où un OS invité
+a l’illusion d’être le seul à exploiter le **hardware** sous-jacent.
+
 Par principe Docker ne doit faire tourner qu'un seul processus.
 
 Ainsi, dans le cas d'une stack LAMP (Linux, Apache, MySQL, PHP), nous devons créer 3 conteneurs 
@@ -61,8 +66,8 @@ Ce que c'est ::
 
     Docker is a platform for developers and sysadmins to build, share, and run applications.
     
-ça c'est la `définition officielle`_ . Cela ne dit pas développer de quelles applications. Le gros sous 
-entendu c'est que ce sont des applications plutôt à forte propention WEB.
+ça c'est la `définition officielle`_ . Cela ne dit pas développer de quelles applications. Le gros
+sous entendu c'est que ce sont des applications plutôt à forte propention WEB.
 
 .. _`définition officielle` : https://docs.docker.com/get-started/
 
@@ -110,6 +115,7 @@ Cheatsheet ?
     docker build -t _nom .
     docker container prune
     docker run --interactive --tty ubuntu bash
+    docker stop _nom
 
     
 On ne le dira jamais assez :
@@ -131,11 +137,13 @@ Syntaxe des fichiers Dockerfile
 
 `Docker file ref`_
 
-La commande pour compiler ET lancer, la plus simple, est alors ::
+La commande pour compiler, la plus simple, est alors ::
 
     docker build .
     
 Il est bon aussi de bien lire : `Best practices for writing Dockerfiles`_
+
+Le build ne dispense pas de faire un run ensuite
 
 .. _`Docker file ref` : https://docs.docker.com/engine/reference/builder/
 

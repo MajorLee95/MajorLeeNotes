@@ -26,7 +26,7 @@ Notes personnelles en informatique et électronique, projets DiY, Arduino Raspbe
 
 Sauf mention contraire, je mets ces notes dans le domaine public grâce à la licence CC0.
 
-Cela ne conserne uniquement mes écrits et non ceux qui se trouveraient au bout de lien hors de ce
+Cela conserne uniquement mes écrits et non ceux qui se trouveraient au bout de lien hors de ce
 site : https://majorlee95.github.io/MajorLeeNotes/
 
 
