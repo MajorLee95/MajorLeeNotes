@@ -43,9 +43,9 @@ En anglais sur `wikipédia Web developpement`_
 
 .. _`wikipédia Web developpement` :  https://en.wikipedia.org/wiki/Web_development
 
-D'après cette page, il s'agit de développer un site internet ou intranet, jusque là rien de neuf,
-depuis la simple page statique de texte jusqu'aux applications internet web complexes, on est dans
-le vif du sujet ! Cette page cite à titre e-Business, e-commerce, réseau sociaux.
+D'après cette page, il s'agit de développer un site internet ou intranet, jusque là rien de neuf !
+Depuis la simple page statique de texte jusqu'aux applications internet web complexes, on est dans
+le vif du sujet ! Cette page cite à titre d'exemples : e-Business, e-commerce, réseau sociaux.
 
 On apprend que cela fait intervenir un certain nombre de tâches comme:
 
@@ -68,14 +68,14 @@ au sens large ont de plus en plus souvent leur interface homme machine fournie s
 accessible via un navigateur WEB. Dès lors que le moteur de ces applications tourne sur une bécane
 accesible au travers d'un réseau et qu'on l'interroge, la pilote depuis une autre machine, on peut
 parle d'appli web. Or la demande de qualité de ces interfaces homme-machine IHM, en terme d'estétique
-de réactivité est de plus en plsu exaigente c'est pourquoi il convient de s'aider de librairies qui
-ont pris de part leurs complexités et leurs fonctionnalités respective des tailles parfois
+de réactivité est de plus en plus exigente c'est pourquoi il convient de s'aider de librairies qui
+ont pris de part leurs complexités et leurs fonctionnalités respectives des tailles parfois
 gigantesques.
 
 On ne parle alors plus de librairies mais de frameworks.
 
-Mais il ne faut pas oublie que derrière ces libairies, il y a toujours un langage informatique comme
-Python, java, javscript, C++
+Mais il ne faut pas oublier que derrière ces libairies, il y a toujours un langage informatique
+comme Python, java, javscript, Perl, C++
 
 Parmis les modules auquels répondent ces Frameworks, on peut retenir:
 
@@ -84,7 +84,7 @@ Parmis les modules auquels répondent ces Frameworks, on peut retenir:
 - des interface pour les base de données (car oui souvent ces appli s'appuies sur des BdD),
 - gestionnaires de transactions commerciales...
 
-Un peu de termes en anglais, parmis es fonctionnalités rencontrées:
+Un peu de termes en anglais, parmis ces fonctionnalités rencontrées:
 
 - Web template system
 - Caching
