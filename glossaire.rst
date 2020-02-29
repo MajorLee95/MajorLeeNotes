@@ -39,3 +39,9 @@ Major LEE Glossaire
         
     RPC
         Remote Procedure Call
+        
+    TSD
+        Total Dissolved Solids
+		
+	CMS
+		Content Managment System : Wordpress, Joomla et Drupal

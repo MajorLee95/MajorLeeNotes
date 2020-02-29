@@ -137,7 +137,7 @@ Syntaxe des fichiers Dockerfile
 
 `Docker file ref`_
 
-La commande pour compiler ET lancer, la plus simple, est alors ::
+La commande pour compiler, la plus simple, est alors ::
 
     docker build .
     
