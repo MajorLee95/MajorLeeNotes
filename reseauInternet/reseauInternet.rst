@@ -179,6 +179,18 @@ voir la page par défaut d'un site après l'installation::
 
     The default Debian document root is /var/www/html. You can make your own virtual hosts under
     /var/www. This is different to previous releases which provides better security out of the box.
+    
+Il semblerait que ci-dessus on ait oublié le fichier ports.conf. Ah non j'avais pas vu.
+
+====================================================================================================
+LINUX : monter un répertoire d'une autre machine
+====================================================================================================
+.. code::
+
+    mkdir /mnt/partage_nfs
+    # Montage d'un partage en NFS
+    mount -t nfs 192.168.1.12:/dossier/partage /mnt/partage_nfs
+
 
 ====================================================================================================
 Cients dynDNS
