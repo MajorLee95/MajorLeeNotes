@@ -116,15 +116,18 @@ APACHE
 
 .. _`Page officielle version courante` : http://httpd.apache.org/docs/current/
 
-Démarrer
-====================================================================================================
+Ces commandes ne focntionnentpas sur le serveur Proliant::
 
+    apachectl  start : Démarrer
+    apachectl  restart : Relancer
+    apachectl status : Voir son état
 
-Relancer le server
-====================================================================================================
+Ce qui marche pour moi::
 
-Voir son état
-====================================================================================================
+    systemctl status apache2
+    apache2ctl -t -D DUMP_VHOSTS : vérifie les hôts déclarés
+    
+
 
 Configuration
 ====================================================================================================
@@ -177,8 +180,24 @@ voir la page par défaut d'un site après l'installation::
     The default Debian document root is /var/www/html. You can make your own virtual hosts under
     /var/www. This is different to previous releases which provides better security out of the box.
 
+====================================================================================================
+Cients dynDNS
+====================================================================================================
+Possible de faire un `dynDNS chez OVH`_
 
+.. _`dynDNS chez OVH` : https://docs.ovh.com/gb/en/domains/hosting_dynhost/
 
+Une des conditions pour que cela fonctionne est d'avoir un client sur sa machine mais ovh ne fournis
+ pas de référence !
+ 
+.. code::
+
+    apt install ddclient
+    Mais attention il demande toutes les infos y compris le protocole utilisé.
+    
+Page concernant l'`intall de ddclient`_
+
+.. _`intall de ddclient` : https://perhonen.fr/blog/2016/03/dynhost-dyndns-de-chez-ovh-2446
 
 ====================================================================================================
 Weblinks
