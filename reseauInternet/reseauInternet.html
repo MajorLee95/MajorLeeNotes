@@ -56,12 +56,20 @@
 </dd>
 </dl>
 <div class="contents topic" id="sommaire">
-<p class="topic-title first">Sommaire</p>
+<p class="topic-title">Sommaire</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="#reseaux-et-internet" id="id1">Réseaux et Internet</a></p>
+<li><p><a class="reference internal" href="#reseaux-et-internet" id="id11">Réseaux et Internet</a></p>
 <ul>
-<li><p><a class="reference internal" href="#ovh-rediection" id="id2">OVH rediection</a></p></li>
-<li><p><a class="reference internal" href="#developpement-web-en-2020" id="id3">Développement web en 2020</a></p></li>
+<li><p><a class="reference internal" href="#ovh-rediection" id="id12">OVH rediection</a></p></li>
+<li><p><a class="reference internal" href="#developpement-web-en-2020" id="id13">Développement web en 2020</a></p></li>
+<li><p><a class="reference internal" href="#apache" id="id14">APACHE</a></p>
+<ul>
+<li><p><a class="reference internal" href="#configuration" id="id15">Configuration</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#linux-monter-un-repertoire-d-une-autre-machine" id="id16">LINUX : monter un répertoire d’une autre machine</a></p></li>
+<li><p><a class="reference internal" href="#cients-dyndns" id="id17">Cients dynDNS</a></p></li>
+<li><p><a class="reference internal" href="#weblinks" id="id18">Weblinks</a></p></li>
 </ul>
 </li>
 </ul>
@@ -82,7 +90,7 @@
 <p>J’entends parler de REACT, FLASK, DJANGO, Bootstrap qu’est-ce que c’est que tout ce merdié !</p>
 <p>Visiblement et aussi étonnant que cela puisse paraître le net n’est pas d’un très grand secours
 pour répondre à cette qustion en français du moins.</p>
-<p>En anglais sur <a class="reference external" href="https://en.wikipedia.org/wiki/Web_development">wikipédia Web developpement</a></p>
+<p>En anglais sur <a class="reference external" href="https://en.wikipedia.org/wiki/Web_development">wikipédia Web developpement</a> <a class="footnote-reference brackets" href="#id1" id="id2">1</a></p>
 <p>D’après cette page, il s’agit de développer un site internet ou intranet, jusque là rien de neuf !
 Depuis la simple page statique de texte jusqu’aux applications internet web complexes, on est dans
 le vif du sujet ! Cette page cite à titre d’exemples : e-Business, e-commerce, réseau sociaux.</p>
@@ -130,8 +138,118 @@ comme Python, java, javscript, Perl, C++</p>
 <li><p>Web resources</p></li>
 </ul>
 <p>Wikipedia nous présnte un comparatif de ces frameworks.</p>
-<p><a class="reference external" href="https://en.wikipedia.org/wiki/Comparison_of_web_frameworks">Comparatif Frameworks sur wikipédia</a></p>
+<p><a class="reference external" href="https://en.wikipedia.org/wiki/Comparison_of_web_frameworks">Comparatif Frameworks sur wikipédia</a> <a class="footnote-reference brackets" href="#id3" id="id4">2</a></p>
 <p>Et c’est là qu’on trouve les REACT, FLASK, BOOTSTRAP et autre JANGO…</p>
+<hr class="docutils" />
+</div>
+<div class="section" id="apache">
+<span id="index-0"></span><h2><a class="toc-backref" href="#sommaire">APACHE</a><a class="headerlink" href="#apache" title="Lien permanent vers ce titre">¶</a></h2>
+<p><a class="reference external" href="http://httpd.apache.org/docs/current/">Page officielle version courante</a> <a class="footnote-reference brackets" href="#id5" id="id6">3</a></p>
+<p>Ces commandes ne focntionnentpas sur le serveur Proliant:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">apachectl</span>  <span class="n">start</span> <span class="p">:</span> <span class="n">Démarrer</span>
+<span class="n">apachectl</span>  <span class="n">restart</span> <span class="p">:</span> <span class="n">Relancer</span>
+<span class="n">apachectl</span> <span class="n">status</span> <span class="p">:</span> <span class="n">Voir</span> <span class="n">son</span> <span class="n">état</span>
+</pre></div>
+</div>
+<p>Ce qui marche pour moi:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">systemctl</span> <span class="n">status</span> <span class="n">apache2</span>
+<span class="n">apache2ctl</span> <span class="o">-</span><span class="n">t</span> <span class="o">-</span><span class="n">D</span> <span class="n">DUMP_VHOSTS</span> <span class="p">:</span> <span class="n">vérifie</span> <span class="n">les</span> <span class="n">hôts</span> <span class="n">déclarés</span>
+</pre></div>
+</div>
+<div class="section" id="configuration">
+<h3><a class="toc-backref" href="#sommaire">Configuration</a><a class="headerlink" href="#configuration" title="Lien permanent vers ce titre">¶</a></h3>
+<p>voir la page par défaut d’un site après l’installation:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Configuration Overview
+
+Debian&#39;s Apache2 default configuration is different from the upstream default configuration, and
+split into several files optimized for interaction with Debian tools. The configuration system
+is fully documented in /usr/share/doc/apache2/README.Debian.gz. Refer to this for the full
+documentation. Documentation for the web server itself can be found by accessing the manual
+if the apache2-doc package was installed on this server.
+
+The configuration layout for an Apache2 web server installation on Debian systems is as follows:
+
+/etc/apache2/
+|-- apache2.conf
+|       `--  ports.conf
+|-- mods-enabled
+|       |-- *.load
+|       `-- *.conf
+|-- conf-enabled
+|       `-- *.conf
+|-- sites-enabled
+|       `-- *.conf
+
+
+    apache2.conf is the main configuration file. It puts the pieces together by including all
+    remaining configuration files when starting up the web server.
+    ports.conf is always included from the main configuration file. It is used to determine the
+    listening ports for incoming connections, and this file can be customized anytime.
+    Configuration files in the mods-enabled/, conf-enabled/ and sites-enabled/ directories
+    contain particular configuration snippets which manage modules, global configuration
+    fragments, or virtual host configurations, respectively.
+    They are activated by symlinking available configuration files from their respective
+    *-available/ counterparts. These should be managed by using our helpers a2enmod,
+    a2dismod, a2ensite, a2dissite, and a2enconf, a2disconf . See their respective man pages
+    for detailed information.
+    The binary is called apache2. Due to the use of environment variables, in the default
+    configuration, apache2 needs to be started/stopped with /etc/init.d/apache2 or apache2ctl.
+    Calling /usr/bin/apache2 directly will not work with the default configuration.
+
+Document Roots
+
+By default, Debian does not allow access through the web browser to any file apart of those
+located in /var/www, public_html directories (when enabled) and /usr/share (for web
+applications). If your site is using a web document root located elsewhere (such as in /srv)
+you may need to whitelist your document root directory in /etc/apache2/apache2.conf.
+
+The default Debian document root is /var/www/html. You can make your own virtual hosts under
+/var/www. This is different to previous releases which provides better security out of the box.
+</pre></div>
+</div>
+<p>Il semblerait que ci-dessus on ait oublié le fichier ports.conf. Ah non j’avais pas vu.</p>
+</div>
+</div>
+<div class="section" id="linux-monter-un-repertoire-d-une-autre-machine">
+<h2><a class="toc-backref" href="#sommaire">LINUX : monter un répertoire d’une autre machine</a><a class="headerlink" href="#linux-monter-un-repertoire-d-une-autre-machine" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mkdir</span> <span class="o">/</span><span class="n">mnt</span><span class="o">/</span><span class="n">partage_nfs</span>
+<span class="c1"># Montage d&#39;un partage en NFS</span>
+<span class="n">mount</span> <span class="o">-</span><span class="n">t</span> <span class="n">nfs</span> <span class="mf">192.168</span><span class="o">.</span><span class="mf">1.12</span><span class="p">:</span><span class="o">/</span><span class="n">dossier</span><span class="o">/</span><span class="n">partage</span> <span class="o">/</span><span class="n">mnt</span><span class="o">/</span><span class="n">partage_nfs</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="cients-dyndns">
+<h2><a class="toc-backref" href="#sommaire">Cients dynDNS</a><a class="headerlink" href="#cients-dyndns" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Possible de faire un <a class="reference external" href="https://docs.ovh.com/gb/en/domains/hosting_dynhost/">dynDNS chez OVH</a> <a class="footnote-reference brackets" href="#id7" id="id8">4</a></p>
+<dl class="simple">
+<dt>Une des conditions pour que cela fonctionne est d’avoir un client sur sa machine mais ovh ne fournis</dt><dd><p>pas de référence !</p>
+</dd>
+</dl>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">apt</span> <span class="n">install</span> <span class="n">ddclient</span>
+<span class="n">Mais</span> <span class="n">attention</span> <span class="n">il</span> <span class="n">demande</span> <span class="n">toutes</span> <span class="n">les</span> <span class="n">infos</span> <span class="n">y</span> <span class="n">compris</span> <span class="n">le</span> <span class="n">protocole</span> <span class="n">utilisé</span><span class="o">.</span>
+</pre></div>
+</div>
+<p>Page concernant l”<a class="reference external" href="https://perhonen.fr/blog/2016/03/dynhost-dyndns-de-chez-ovh-2446">intall de ddclient</a> <a class="footnote-reference brackets" href="#id9" id="id10">5</a></p>
+</div>
+<div class="section" id="weblinks">
+<h2><a class="toc-backref" href="#sommaire">Weblinks</a><a class="headerlink" href="#weblinks" title="Lien permanent vers ce titre">¶</a></h2>
+<dl class="footnote brackets">
+<dt class="label" id="id1"><span class="brackets"><a class="fn-backref" href="#id2">1</a></span></dt>
+<dd><p><a class="reference external" href="https://en.wikipedia.org/wiki/Web_development">https://en.wikipedia.org/wiki/Web_development</a></p>
+</dd>
+<dt class="label" id="id3"><span class="brackets"><a class="fn-backref" href="#id4">2</a></span></dt>
+<dd><p><a class="reference external" href="https://en.wikipedia.org/wiki/Comparison_of_web_frameworks">https://en.wikipedia.org/wiki/Comparison_of_web_frameworks</a></p>
+</dd>
+<dt class="label" id="id5"><span class="brackets"><a class="fn-backref" href="#id6">3</a></span></dt>
+<dd><p><a class="reference external" href="http://httpd.apache.org/docs/current/">http://httpd.apache.org/docs/current/</a></p>
+</dd>
+<dt class="label" id="id7"><span class="brackets"><a class="fn-backref" href="#id8">4</a></span></dt>
+<dd><p><a class="reference external" href="https://docs.ovh.com/gb/en/domains/hosting_dynhost/">https://docs.ovh.com/gb/en/domains/hosting_dynhost/</a></p>
+</dd>
+<dt class="label" id="id9"><span class="brackets"><a class="fn-backref" href="#id10">5</a></span></dt>
+<dd><p><a class="reference external" href="https://perhonen.fr/blog/2016/03/dynhost-dyndns-de-chez-ovh-2446">https://perhonen.fr/blog/2016/03/dynhost-dyndns-de-chez-ovh-2446</a></p>
+</dd>
+</dl>
 </div>
 </div>
 
@@ -146,6 +264,13 @@ comme Python, java, javscript, Perl, C++</p>
 <li><a class="reference internal" href="#">Réseaux et Internet</a><ul>
 <li><a class="reference internal" href="#ovh-rediection">OVH rediection</a></li>
 <li><a class="reference internal" href="#developpement-web-en-2020">Développement web en 2020</a></li>
+<li><a class="reference internal" href="#apache">APACHE</a><ul>
+<li><a class="reference internal" href="#configuration">Configuration</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#linux-monter-un-repertoire-d-une-autre-machine">LINUX : monter un répertoire d’une autre machine</a></li>
+<li><a class="reference internal" href="#cients-dyndns">Cients dynDNS</a></li>
+<li><a class="reference internal" href="#weblinks">Weblinks</a></li>
 </ul>
 </li>
 </ul>
@@ -194,7 +319,7 @@ comme Python, java, javscript, Perl, C++</p>
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2019, J.SORANZO.
-      Créé avec <a href="http://sphinx-doc.org/">Sphinx</a> 2.2.1.
+      Créé avec <a href="http://sphinx-doc.org/">Sphinx</a> 2.3.1.
     </div>
   </body>
 </html>

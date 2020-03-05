@@ -14,19 +14,17 @@ Bienvenue dans les notes de  MajorLee's
 
 
    /astuceInformatiques/astuceInformatiques
-   /sphinx/sphinx
-   /latex/latex
-   /pandoc/pandoc
+   /documenter/documenter
    /Synchronisation/Synchronisation
    /linux/linux.rst
    /hardware/hardware
    /C++/cpp
    /lesObjetsConnectes/lesObjetsConnectes
-   /documenter/documenter
    /git/git
    /docker/docker
    arduino/arduino
    reseauInternet/reseauInternet
+   rtos/rtos.rst
    glossaire
    Readme
 
