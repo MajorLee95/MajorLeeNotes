@@ -217,8 +217,16 @@ Clearer::
         <div class="clearer"></div>
     _usage : |clearer|
  
- 
- 
+Autres astuces difficilement classable 
+==================================================================================================== 
+7/3/20 J'ai trouvé ce site ou plutot ce MOOT de l'université de Grenoble : 
+
+`ReFlexPro, Univ. Grenoble Alpes`_
+
+.. _`ReFlexPro, Univ. Grenoble Alpes` :  http://espe-rtd-reflexpro.u-ga.fr/docs/sandbox2/fr/latest/syntaxe_sphinx.html#les-bases-de-la-syntaxe-de-sphinx
+
+
+
 =========
 Weblinks
 =========

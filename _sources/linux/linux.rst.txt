@@ -139,9 +139,9 @@ Dans le journal de manip de Pierre, `créer une tâche planifiée`_
 
 .. _`créer une tâche planifiée` : https://poltergeist42.github.io/JDM/Linux.html#creer-une-tache-planifie-cron
 
-================================
+====================================================================================================
 Comment lancer une appli au boot
-================================
+====================================================================================================
 Là c'est différent l'appli n'est lancée qu'une seule fois au démarrage.
 
 `JdMdP partie lancer une appli au boot`_
@@ -185,6 +185,24 @@ La `doc officielle Samba`_ mais n'apporte pas grand chose ! Trop complexe.
 
 Même si samba gère des mdp différents du système il n'empêcha que l'utilisateur samba doit existé en
  tant qu'utilisateur système. Par défaut Samba partage le home dir de l'utlisateur en read only. 
+
+----------------------------------------------------------------------------------------------------
+
+.. index::
+    pair: Linux; Partage
+
+====================================================================================================
+LINUX Partage de répertoire
+====================================================================================================
+Ou monter un répertoire d'une autre machine
+
+.. code::
+
+    mkdir /mnt/partage_nfs
+    # Montage d'un partage en NFS
+    mount -t nfs 192.168.1.12:/dossier/partage /mnt/partage_nfs
+
+----------------------------------------------------------------------------------------------------
 
 =========
 Weblinks

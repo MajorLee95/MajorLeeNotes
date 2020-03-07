@@ -139,9 +139,16 @@ Fichiers importants::
     /etc/apache2/sites-enabled/ liens symboliques créés par a2ensite, a2dissite
 
 
-Héberger plusieurs site sur plusieurs machines derrière la même IP
+Héberger plusieurs site sur plusieurs machines derrière la même IP avec APACHE2
 ====================================================================================================
-Virtual Host    
+Typiquement derrière une box internet (Livebox, Freebox en consor...) 2 serveurs hébergeant chacun
+un ou plusieurs site intrenet.
+
+Pour le cas d'une machine unique hébergeant plusieurs sites, cela se résoud avec des Virtual Host 
+
+  
+
+  
 
 
 Site par défaut
@@ -151,7 +158,7 @@ d'où le 000-default.cong ;-)
 
 Pour savoir quel site est celui par défaut : apache2ctl -S
 
-Cette commande lu=iste tous les serveurs avec en plus une lige qui dit::
+Cette commande liste tous les serveurs avec en plus une lige qui dit::
 
     default server...
 
@@ -211,11 +218,10 @@ Il semblerait que ci-dessus on ait oublié le fichier ports.conf. Ah non j'avais
 ====================================================================================================
 LINUX : monter un répertoire d'une autre machine
 ====================================================================================================
-.. code::
+Cela pourait être utile à la place du mécanisme de mandat APACHE
 
-    mkdir /mnt/partage_nfs
-    # Montage d'un partage en NFS
-    mount -t nfs 192.168.1.12:/dossier/partage /mnt/partage_nfs
+`LINUX Partage de répertoire`_
+
 
 ----------------------------------------------------------------------------------------------------
 

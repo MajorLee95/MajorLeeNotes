@@ -8,10 +8,10 @@ Hardware notes
 :Entity: VoRoBoTics
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 3
    :caption: Sous-articles:
 
-   merureDistance
+   robotique/robotique
    fpga/fpga
    raspberry/raspberry
 

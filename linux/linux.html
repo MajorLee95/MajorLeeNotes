@@ -56,7 +56,7 @@
 </dd>
 </dl>
 <div class="contents topic" id="tdm-linux">
-<p class="topic-title">TdM LINUX</p>
+<p class="topic-title first">TdM LINUX</p>
 <ul class="simple">
 <li><p><a class="reference internal" href="#linux" id="id13">LINUX *</a></p>
 <ul>
@@ -75,7 +75,8 @@
 <li><p><a class="reference internal" href="#cron" id="id20">Cron</a></p></li>
 <li><p><a class="reference internal" href="#comment-lancer-une-appli-au-boot" id="id21">Comment lancer une appli au boot</a></p></li>
 <li><p><a class="reference internal" href="#samba" id="id22">Samba</a></p></li>
-<li><p><a class="reference internal" href="#weblinks" id="id23">Weblinks</a></p></li>
+<li><p><a class="reference internal" href="#linux-partage-de-repertoire" id="id23">LINUX Partage de répertoire</a></p></li>
+<li><p><a class="reference internal" href="#weblinks" id="id24">Weblinks</a></p></li>
 </ul>
 </li>
 </ul>
@@ -217,7 +218,18 @@ Dans la suite abrégé JdMdP</p>
 <dt>Même si samba gère des mdp différents du système il n’empêcha que l’utilisateur samba doit existé en</dt><dd><p>tant qu’utilisateur système. Par défaut Samba partage le home dir de l’utlisateur en read only.</p>
 </dd>
 </dl>
+<hr class="docutils" />
 </div>
+<div class="section" id="linux-partage-de-repertoire">
+<span id="index-9"></span><h2><a class="toc-backref" href="#tdm-linux">LINUX Partage de répertoire</a><a class="headerlink" href="#linux-partage-de-repertoire" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Ou monter un répertoire d’une autre machine</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mkdir</span> <span class="o">/</span><span class="n">mnt</span><span class="o">/</span><span class="n">partage_nfs</span>
+<span class="c1"># Montage d&#39;un partage en NFS</span>
+<span class="n">mount</span> <span class="o">-</span><span class="n">t</span> <span class="n">nfs</span> <span class="mf">192.168</span><span class="o">.</span><span class="mf">1.12</span><span class="p">:</span><span class="o">/</span><span class="n">dossier</span><span class="o">/</span><span class="n">partage</span> <span class="o">/</span><span class="n">mnt</span><span class="o">/</span><span class="n">partage_nfs</span>
+</pre></div>
+</div>
+</div>
+<hr class="docutils" />
 <div class="section" id="weblinks">
 <h2><a class="toc-backref" href="#tdm-linux">Weblinks</a><a class="headerlink" href="#weblinks" title="Lien permanent vers ce titre">¶</a></h2>
 <dl class="footnote brackets">
@@ -265,6 +277,7 @@ Dans la suite abrégé JdMdP</p>
 <li><a class="reference internal" href="#cron">Cron</a></li>
 <li><a class="reference internal" href="#comment-lancer-une-appli-au-boot">Comment lancer une appli au boot</a></li>
 <li><a class="reference internal" href="#samba">Samba</a></li>
+<li><a class="reference internal" href="#linux-partage-de-repertoire">LINUX Partage de répertoire</a></li>
 <li><a class="reference internal" href="#weblinks">Weblinks</a></li>
 </ul>
 </li>
@@ -314,7 +327,7 @@ Dans la suite abrégé JdMdP</p>
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2019, J.SORANZO.
-      Créé avec <a href="http://sphinx-doc.org/">Sphinx</a> 2.3.1.
+      Créé avec <a href="http://sphinx-doc.org/">Sphinx</a> 2.2.1.
     </div>
   </body>
 </html>
