@@ -7,6 +7,15 @@ Documenter
 :Societe: VoLAB
 :Entity: VoRoBoTics
 
+.. toctree::
+   :maxdepth: 2
+   :caption: Sous articles
+   :titlesonly:
+
+   /sphinx/sphinx
+   /latex/latex
+   /pandoc/pandoc
+
 .. contents::
 
 ================================
