@@ -17,6 +17,25 @@ FreeRTOS
 
 NuuttX : l'Os qui se cache dans PIXHAWK
 
+ChibiOS
+
+QNX
+
+RT Linux
+
+VRTX
+
+VxWorks
+
+Xenomai
+
+====================================================================================================
+La liste
+====================================================================================================
+Elle est impressionante voir `RTOS sur Wikipedia`_
+
+.. _`RTOS sur Wikipedia` : https://en.wikipedia.org/wiki/Comparison_of_real-time_operating_systems
+
 ====================================================================================================
 Weblinks
 ====================================================================================================

@@ -9,7 +9,11 @@ Réseaux et Internet
 
 .. contents::
     :backlinks: top
-	
+    
+    
+.. index::
+    single: OVH; Redirection
+    
 ================================
 OVH rediection
 ================================
@@ -116,7 +120,7 @@ APACHE
 
 .. _`Page officielle version courante` : http://httpd.apache.org/docs/current/
 
-Ces commandes ne focntionnentpas sur le serveur Proliant::
+Ces commandes ne focntionnent pas sur le serveur Proliant::
 
     apachectl  start : Démarrer
     apachectl  restart : Relancer
@@ -126,8 +130,30 @@ Ce qui marche pour moi::
 
     systemctl status apache2
     apache2ctl -t -D DUMP_VHOSTS : vérifie les hôts déclarés
-    
 
+Fichiers importants::
+
+    /etc/apach2/apache2.conf : fonctionne avec des includes des autres fichiers
+    /etc/apach2/ports.conf
+    /etc/apache2/sites-available/*.conf : un par site
+    /etc/apache2/sites-enabled/ liens symboliques créés par a2ensite, a2dissite
+
+
+Héberger plusieurs site sur plusieurs machines derrière la même IP
+====================================================================================================
+Virtual Host    
+
+
+Site par défaut
+====================================================================================================
+Apache2 traite les fichiers par ordre alphabétique.
+d'où le 000-default.cong ;-)
+
+Pour savoir quel site est celui par défaut : apache2ctl -S
+
+Cette commande lu=iste tous les serveurs avec en plus une lige qui dit::
+
+    default server...
 
 Configuration
 ====================================================================================================
@@ -191,6 +217,10 @@ LINUX : monter un répertoire d'une autre machine
     # Montage d'un partage en NFS
     mount -t nfs 192.168.1.12:/dossier/partage /mnt/partage_nfs
 
+----------------------------------------------------------------------------------------------------
+
+.. index::
+    single: DynDNS
 
 ====================================================================================================
 Cients dynDNS
