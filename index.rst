@@ -8,7 +8,7 @@ Bienvenue dans les notes de  MajorLee's
 ===============================================
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 3
    :caption: Articles
    :titlesonly:
 

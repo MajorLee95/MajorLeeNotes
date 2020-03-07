@@ -59,3 +59,31 @@ Il s'agit d'un grand projet dans lequel sont apparus de petits sous projet.
 Comment faut-il versionné tout cela ? Un gros monolithe ou plein de petits projets ?
 
 Je n'ai pas encore (Février 2020) trouvé de réponse satisfaisante...
+
+----------------------------------------------------------------------------------------------------
+
+.. index::
+    single: Documenter; MOOT
+
+====================================================================================================
+MOOT
+====================================================================================================
+7 Mars 2020, en cherchant pour la nième fois des éléments de syntaxe Sphinx, je tombe ce ce site:
+
+`ReFlexPro, Univ. Grenoble Alpes`_ même si le début est brouillon et semble-t-il en cours de 
+construction;, la suite en vaut la peine !
+
+.. _`ReFlexPro, Univ. Grenoble Alpes` : http://espe-rtd-reflexpro.u-ga.fr/docs/sandbox2/fr/latest/essais_sophie.html
+
+Cela me conforte dans mon cheminement.
+
+Après une rapide recherche sur le net, il semble que l'acronyme MOOT ne soit pas très répendu, mais
+j'aime concepte.
+
+On parle également de Open Text tout simplement.
+
+====================================================================================================
+Weblinks
+====================================================================================================
+
+.. target-notes::

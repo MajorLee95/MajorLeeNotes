@@ -2,7 +2,6 @@
 Astuces informatiques
 ++++++++++++++++++++++++++++++++
 
-
 :Auteur: J.Soranzo
 :Date: Novembre 2019
 :Societe: VoLAB
