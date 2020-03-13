@@ -14,6 +14,7 @@ Hardware notes
    robotique/robotique
    fpga/fpga
    raspberry/raspberry
+   nucleo/nucleo
 
 .. contents:: Hardware tdm
     :backlinks: top
