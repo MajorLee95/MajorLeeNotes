@@ -118,6 +118,8 @@ System
  
 .. index ::
    single: Linux; Commandes utilisateur
+   
+- les appli installées :command:`dpkg -l`
  
 Pour les utilisateurs
 ======================================
@@ -190,6 +192,8 @@ Même si samba gère des mdp différents du système il n'empêcha que l'utilisa
 
 .. index::
     pair: Linux; Partage
+
+.. _ref_linuxPartage:
 
 ====================================================================================================
 LINUX Partage de répertoire

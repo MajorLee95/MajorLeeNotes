@@ -220,8 +220,7 @@ LINUX : monter un répertoire d'une autre machine
 ====================================================================================================
 Cela pourait être utile à la place du mécanisme de mandat APACHE
 
-`LINUX Partage de répertoire`_
-
+:ref:`LINUX Partage de répertoire<ref_linuxPartage>`
 
 ----------------------------------------------------------------------------------------------------
 
