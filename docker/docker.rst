@@ -66,7 +66,7 @@ Ce que c'est ::
 
     Docker is a platform for developers and sysadmins to build, share, and run applications.
     
-ça c'est la `définition officielle`_ . Cela ne dit pas développer de quelles applications. Le gros
+ça c'est la `définition officielle`_ . Cela ne dit pas "développer" de quelles applications. Le gros
 sous entendu c'est que ce sont des applications plutôt à forte propention WEB.
 
 .. _`définition officielle` : https://docs.docker.com/get-started/

@@ -2,7 +2,7 @@
     single: NUCLEO; Board
     
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-NUCLEO board
+NUCLEO board *
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 :Auteur: J.Soranzo
@@ -30,6 +30,19 @@ LQFP64 package, LQFP144 package
 
 .. _`NUCLEO-144_MOUSER` : https://www.mouser.fr/new/stmicroelectronics/stm-stm32-nucleo-144-dev-boards/
 
+====================================================================================================
+Outils de développement
+====================================================================================================
+STM32 workbench développé par ACSYSY ou AC6. Dans la litérature ST cette suite logiciel se nome
+SW4STM32. Il en est question sur la `page officiielle SW4STM32`_ qui renvoie vers
+`la page openstm32`_
+
+Cet outil est basé sur Eclipse. Je ne suis pas fan. Je trouve que tout cela est très lourd ! Mais 
+comme ces petits microcontroleurs ont l'air plein de potentiel, je fais l'effort...
+
+.. _`page officiielle SW4STM32` : https://www.st.com/en/development-tools/sw4stm32.html
+
+.. _`la page openstm32` : https://www.openstm32.org/HomePage
 
 ====================================================================================================
 Mes manips
@@ -69,6 +82,10 @@ Installation des outils::
 
 Manip micro Python cf journal au 25/12/2015 (à récupérer pour mettre ici)
 
+Et `STM32duino`_ ?
+
+.. _`STM32duino` : https://github.com/stm32duino/wiki/wiki/Getting-Started
+
 ====================================================================================================
 FreeRTOS sur NUCLEO
 ====================================================================================================
@@ -80,3 +97,5 @@ Weblinks
 ====================================================================================================
 
 .. target-notes::
+
+

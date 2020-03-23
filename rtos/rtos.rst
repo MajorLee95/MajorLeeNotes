@@ -33,6 +33,9 @@ Xenomai
 
 ----------------------------------------------------------------------------------------------------
 
+.. index::
+    single: RTOS; System workbench
+
 .. _refFreeRtosStm32:
 
 ====================================================================================================
@@ -40,9 +43,18 @@ FreeRTOS STM32
 ====================================================================================================
 Avec STM32Workbench
 ====================================================================================================
-`STM32Workbench`_ site officiel ST Microelectronics
+`STM32Workbench`_ site officiel ST Microelectronics.
+
+System Worbench for STM32 : vers qui faut-il se trouner pour avoir de l'aide ?
+
+Eclipse, Acsys ou ST ? ou peut-ête vers `le site openstm32.org`_ (ce qui reviens à peut près 
+au même que AC6)
+
+ 
 
 .. _`STM32Workbench` : https://www.st.com/en/development-tools/sw4stm32.html
+
+.. _`le site openstm32.org` : https://www.openstm32.org/HomePage 
 
 Avec VisualSudio
 ====================================================================================================

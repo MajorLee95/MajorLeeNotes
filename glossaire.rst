@@ -8,6 +8,7 @@ Major LEE Glossaire
 :Entity: VoRoBoTics
 
 .. glossary::
+    :sorted:
     
     CDN
         Content Delivary Network, réseau de distribution de contenu. Exemple pour bootstrap
@@ -42,9 +43,12 @@ Major LEE Glossaire
         
     TSD
         Total Dissolved Solids
-		
-	CMS
-		Content Managment System : Wordpress, Joomla et Drupal
-		
-	MOOT
-		Massive Open Online Textbook
+        
+    CMS
+        Content Managment System : Wordpress, Joomla et Drupal
+        
+    MOOT
+        Massive Open Online Textbook
+        
+    BSP
+        Board Support Package (voir Wikipédia)
