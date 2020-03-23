@@ -120,7 +120,7 @@ APACHE
 
 .. _`Page officielle version courante` : http://httpd.apache.org/docs/current/
 
-Ces commandes ne focntionnent pas sur le serveur Proliant::
+Ces commandes **ne focntionnent** pas sur le serveur Proliant::
 
     apachectl  start : Démarrer
     apachectl  restart : Relancer
@@ -138,18 +138,78 @@ Fichiers importants::
     /etc/apache2/sites-available/*.conf : un par site
     /etc/apache2/sites-enabled/ liens symboliques créés par a2ensite, a2dissite
 
+Les logs
+====================================================================================================
+::
+
+	ErrorLog ${APACHE_LOG_DIR}/error.log
+
+	/etc/apache2/envvars
+	# for supporting multiple apache2 instances
+	if [ "${APACHE_CONFDIR##/etc/apache2-}" != "${APACHE_CONFDIR}" ] ; then
+			SUFFIX="-${APACHE_CONFDIR##/etc/apache2-}"
+	else
+			SUFFIX=
+	fi
+
+	export APACHE_RUN_USER=www-data
+	export APACHE_RUN_GROUP=www-data
+	export APACHE_PID_FILE=/var/run/apache2$SUFFIX/apache2.pid
+	export APACHE_RUN_DIR=/var/run/apache2$SUFFIX
+	export APACHE_LOCK_DIR=/var/lock/apache2$SUFFIX
+	export APACHE_LOG_DIR=/var/log/apache2$SUFFIX
+	export LANG=C
+	export LANG
+
+	#export APACHE_LYNX='www-browser -dump'
+	#APACHE_ULIMIT_MAX_FILES='ulimit -n 65536'
+	#export APACHE_ARGUMENTS=''
+	#export APACHE2_MAINTSCRIPT_DEBUG=1
+
+
+
 
 Héberger plusieurs site sur plusieurs machines derrière la même IP avec APACHE2
 ====================================================================================================
 Typiquement derrière une box internet (Livebox, Freebox en consor...) 2 serveurs hébergeant chacun
 un ou plusieurs site intrenet.
 
-Pour le cas d'une machine unique hébergeant plusieurs sites, cela se résoud avec des Virtual Host 
+Pour le cas d'une machine unique hébergeant plusieurs sites, cela se résoud avec des Virtuals Hosts 
 
+Je cherche ...
+
+Pour l'instant, ceci::
+
+	ServerAdmin joel@vorobotics.com
+	#DocumentRoot /var/www/html
+	#DocumentRoot /media/raid/www/ser
+	ServerName test001.joel.soranzo.club
+	ServerAlias www.test001.joel.soranzo.club
+	ProxyPass / http://192.168.1.20:80/
+	ProxyPassReverse / http://192.168.1.20:80/
+	ProxyRequests Off
+
+Ne fonctionne pas.
+
+Erreur  de la commande :apache2ctl -t -D DUMP_VHOSTS retourne::
+
+	[Sat Mar 14 10:50:07.748594 2020] [core:trace3] [pid 23062] core.c(3355): Setting
+	LogLevel for all modules to trace8
+	AH00526: Syntax error on line 7 of /etc/apache2/sites-enabled/serverTest.conf:
+	Invalid command 'ProxyPass', perhaps misspelled or defined by a module not included 
+	in the server configuration
+	Action '-t -D DUMP_VHOSTS' failed.
+	The Apache error log may have more information.
   
+.. WARNING::
+    
+	N'activez pas la fonctionnalité de mandataire avec la directive ProxyRequests avant d'avoir 
+	sécurisé votre serveur. Les serveurs mandataires ouverts sont dangereux pour votre réseau, 
+	mais aussi pour l'Internet au sens large.
 
-  
+Souce : `Doc appache module proxy`_
 
+.. _`Doc appache module proxy`: https://httpd.apache.org/docs/2.4/mod/mod_proxy.html#access
 
 Site par défaut
 ====================================================================================================

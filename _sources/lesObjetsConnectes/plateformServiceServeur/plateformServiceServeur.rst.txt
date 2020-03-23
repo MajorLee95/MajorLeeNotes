@@ -404,7 +404,7 @@ Site officiel : `https://www.ovh.com/world/iot/`_
 
 ::
 
-			compatible Graphana
+			compatible Grafana
 				mais on peut se faire son propre dashboard
 			2$/mois
 				100k requet
@@ -747,31 +747,31 @@ MySensor
 				pimatic
 				Vera
 				XTension
+
+----------------------------------------------------------------------------------------------------
+
+.. index::
+    single: Objets connectés; Grafana
+
+
                 
 Grafana
 ======================================
+`Granfana site officiel`_
+
+.. _`Granfana site officiel` : https://grafana.com/
+
+Grafana is the open source analytics and **monitoring** solution for every **database**.
+
+un exemple, `tuto très complet sur hackster.io`_, le 26/062018 je me suis promis de le revoir !
+
+.. _`tuto très complet sur hackster.io` : https://www.hackster.io/erictsai/lora-tooth-small-ble-sensors-over-wifi-lora-gateways-0aa109?utm_campaign=new_projects&utm_content=0&utm_medium=email&utm_source=hackster&utm_term=project_name
+
+Grafana is an open source, feature rich metrics dashboard and graph editor for Graphite, 
+Elasticsearch, OpenTSDB, Prometheus and InfluxDB.
+
 ::
 
-			un exemple
-				tuto très complet
-				A revoir
-			The open platform for beautiful 
-            analytics and monitoring
-				open source
-				installable
-				hosted
-			Grafana is an open source, feature rich metrics dashboard and graph editor for Graphite, Elasticsearch, OpenTSDB, Prometheus and InfluxDB.
-				Graphite
-					.supinfo.com monitorer-son-serveur-avec-grafana-graphite-collectd
-					Graphite est logiciel de surveillance. Le logiciel est séparé en deux activités :
-            •Le stockage des données
-            •Le rendu graphique ou par API de ces données
-
-            Graphite fonctionne à l'aide de trois composants :
-            •Carbon : Le démon écoutant les nouvelles données
-            •Whisper : Une simple base de données
-            •Graphite-web : Une application web pour la création de graphique, et la gestion de l'API. L'application nécessite un serveur Web (Apache ou Nginx)
-                            Graphite is an enterprise-ready monitoring tool that runs equally well on cheap hardware or Cloud infrastructure.
 				Eleasticsearch
 				OpenTSDB
 					Store and serve massive amounts of time series data without losing granularity
@@ -784,12 +784,47 @@ Grafana
                 open-source monitoring solution.
 				InfluxDB
 					Try it for 14days !
-			https://grafana.com/cloud/grafana
-				une offre gratuite one user
-				jusqu'à 5 dasboard
+					
+	https://grafana.com/cloud/grafana
+		une offre gratuite one user
+		jusqu'à 5 dasboard
+
+
+----------------------------------------------------------------------------------------------------
+
+.. index::
+    single: Objets connectés; Graphite
+
+Graphite
+====================================================================================================
+`Graphite site officiel`_ 
+
+`.supinfo.com monitorer-son-serveur-avec-grafana-graphite-collectd`_
+
+Graphite est logiciel de surveillance. Le logiciel est séparé en deux activités :
+
+- Le stockage des données
+- Le rendu graphique ou par API de ces données
+
+Graphite fonctionne à l'aide de trois composants :
+
+- Carbon : Le démon écoutant les nouvelles données
+- Whisper : Une simple base de données
+- Graphite-web : Une application web pour la création de graphique, et la gestion de l'API.
+
+L'application nécessite un serveur Web (Apache ou Nginx)
+
+Graphite is an enterprise-ready monitoring tool that runs equally well on cheap hardware 
+or Cloud infrastructure.
+
+.. _`Graphite site officiel` : https://graphiteapp.org/
+
+.. _`.supinfo.com monitorer-son-serveur-avec-grafana-graphite-collectd` : https://www.supinfo.com/articles/single/325-monitorer-son-serveur-avec-grafana-graphite-collectd
+
+
                 
 ===============                
-Appli
+Appli et outils
 ===============
 NodeRed
 ======================================

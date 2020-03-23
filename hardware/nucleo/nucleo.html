@@ -4,7 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
   <head>
     <meta charset="utf-8" />
-    <title>NUCLEO board &#8212; Documentation MajorLee&#39;s notes </title>
+    <title>NUCLEO board * &#8212; Documentation MajorLee&#39;s notes </title>
     <link rel="stylesheet" href="../../_static/nature.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
@@ -41,7 +41,7 @@
           <div class="body" role="main">
             
   <div class="section" id="nucleo-board">
-<span id="index-0"></span><h1><a class="toc-backref" href="#sommaire">NUCLEO board</a><a class="headerlink" href="#nucleo-board" title="Lien permanent vers ce titre">¶</a></h1>
+<span id="index-0"></span><h1><a class="toc-backref" href="#sommaire">NUCLEO board *</a><a class="headerlink" href="#nucleo-board" title="Lien permanent vers ce titre">¶</a></h1>
 <dl class="field-list simple">
 <dt class="field-odd">Auteur</dt>
 <dd class="field-odd"><p>J.Soranzo</p>
@@ -57,14 +57,15 @@
 </dd>
 </dl>
 <div class="contents topic" id="sommaire">
-<p class="topic-title first">Sommaire</p>
+<p class="topic-title">Sommaire</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="#nucleo-board" id="id7">NUCLEO board</a></p>
+<li><p><a class="reference internal" href="#nucleo-board" id="id13">NUCLEO board *</a></p>
 <ul>
-<li><p><a class="reference internal" href="#presentation" id="id8">Présentation</a></p></li>
-<li><p><a class="reference internal" href="#mes-manips" id="id9">Mes manips</a></p></li>
-<li><p><a class="reference internal" href="#freertos-sur-nucleo" id="id10">FreeRTOS sur NUCLEO</a></p></li>
-<li><p><a class="reference internal" href="#weblinks" id="id11">Weblinks</a></p></li>
+<li><p><a class="reference internal" href="#presentation" id="id14">Présentation</a></p></li>
+<li><p><a class="reference internal" href="#outils-de-developpement" id="id15">Outils de développement</a></p></li>
+<li><p><a class="reference internal" href="#mes-manips" id="id16">Mes manips</a></p></li>
+<li><p><a class="reference internal" href="#freertos-sur-nucleo" id="id17">FreeRTOS sur NUCLEO</a></p></li>
+<li><p><a class="reference internal" href="#weblinks" id="id18">Weblinks</a></p></li>
 </ul>
 </li>
 </ul>
@@ -76,9 +77,17 @@
 <p><a class="reference external" href="https://www.st.com/en/evaluation-tools/stm32-nucleo-boards.html#overview">NUCLEO-overview</a> <a class="footnote-reference brackets" href="#id1" id="id2">1</a></p>
 <p><a class="reference external" href="https://www.mouser.fr/new/stmicroelectronics/stm-stm32-nucleo-144-dev-boards/">NUCLEO-144_MOUSER</a> <a class="footnote-reference brackets" href="#id3" id="id4">2</a></p>
 </div>
+<div class="section" id="outils-de-developpement">
+<h2><a class="toc-backref" href="#sommaire">Outils de développement</a><a class="headerlink" href="#outils-de-developpement" title="Lien permanent vers ce titre">¶</a></h2>
+<p>STM32 workbench développé par ACSYSY ou AC6. Dans la litérature ST cette suite logiciel se nome
+SW4STM32. Il en est question sur la <a class="reference external" href="https://www.st.com/en/development-tools/sw4stm32.html">page officiielle SW4STM32</a> <a class="footnote-reference brackets" href="#id5" id="id6">3</a> qui renvoie vers
+<a class="reference external" href="https://www.openstm32.org/HomePage">la page openstm32</a> <a class="footnote-reference brackets" href="#id7" id="id8">4</a></p>
+<p>Cet outil est basé sur Eclipse. Je ne suis pas fan. Je trouve que tout cela est très lourd ! Mais
+comme ces petits microcontroleurs ont l’air plein de potentiel, je fais l’effort…</p>
+</div>
 <div class="section" id="mes-manips">
 <h2><a class="toc-backref" href="#sommaire">Mes manips</a><a class="headerlink" href="#mes-manips" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Décembre 2015, journal de manip en version OpenOffice, aidé du <a class="reference external" href="http://leanpub.com/mastering-stm32">livre de Carmine Noviello</a> <a class="footnote-reference brackets" href="#id5" id="id6">3</a></p>
+<p>Décembre 2015, journal de manip en version OpenOffice, aidé du <a class="reference external" href="http://leanpub.com/mastering-stm32">livre de Carmine Noviello</a> <a class="footnote-reference brackets" href="#id9" id="id10">5</a></p>
 <p>Dans son livre Carmine porpose d’installer un chaine de développement basée sur Eclipse et GCC
 et s’en explique…</p>
 <p>Installation des outils:</p>
@@ -107,6 +116,7 @@ et s’en explique…</p>
 </pre></div>
 </div>
 <p>Manip micro Python cf journal au 25/12/2015 (à récupérer pour mettre ici)</p>
+<p>Et <a class="reference external" href="https://github.com/stm32duino/wiki/wiki/Getting-Started">STM32duino</a> <a class="footnote-reference brackets" href="#id11" id="id12">6</a> ?</p>
 </div>
 <div class="section" id="freertos-sur-nucleo">
 <h2><a class="toc-backref" href="#sommaire">FreeRTOS sur NUCLEO</a><a class="headerlink" href="#freertos-sur-nucleo" title="Lien permanent vers ce titre">¶</a></h2>
@@ -122,7 +132,16 @@ et s’en explique…</p>
 <dd><p><a class="reference external" href="https://www.mouser.fr/new/stmicroelectronics/stm-stm32-nucleo-144-dev-boards/">https://www.mouser.fr/new/stmicroelectronics/stm-stm32-nucleo-144-dev-boards/</a></p>
 </dd>
 <dt class="label" id="id5"><span class="brackets"><a class="fn-backref" href="#id6">3</a></span></dt>
+<dd><p><a class="reference external" href="https://www.st.com/en/development-tools/sw4stm32.html">https://www.st.com/en/development-tools/sw4stm32.html</a></p>
+</dd>
+<dt class="label" id="id7"><span class="brackets"><a class="fn-backref" href="#id8">4</a></span></dt>
+<dd><p><a class="reference external" href="https://www.openstm32.org/HomePage">https://www.openstm32.org/HomePage</a></p>
+</dd>
+<dt class="label" id="id9"><span class="brackets"><a class="fn-backref" href="#id10">5</a></span></dt>
 <dd><p><a class="reference external" href="http://leanpub.com/mastering-stm32">http://leanpub.com/mastering-stm32</a></p>
+</dd>
+<dt class="label" id="id11"><span class="brackets"><a class="fn-backref" href="#id12">6</a></span></dt>
+<dd><p><a class="reference external" href="https://github.com/stm32duino/wiki/wiki/Getting-Started">https://github.com/stm32duino/wiki/wiki/Getting-Started</a></p>
 </dd>
 </dl>
 </div>
@@ -136,8 +155,9 @@ et s’en explique…</p>
         <div class="sphinxsidebarwrapper">
   <h3><a href="../../index.html">Table des matières</a></h3>
   <ul>
-<li><a class="reference internal" href="#">NUCLEO board</a><ul>
+<li><a class="reference internal" href="#">NUCLEO board *</a><ul>
 <li><a class="reference internal" href="#presentation">Présentation</a></li>
+<li><a class="reference internal" href="#outils-de-developpement">Outils de développement</a></li>
 <li><a class="reference internal" href="#mes-manips">Mes manips</a></li>
 <li><a class="reference internal" href="#freertos-sur-nucleo">FreeRTOS sur NUCLEO</a></li>
 <li><a class="reference internal" href="#weblinks">Weblinks</a></li>
@@ -190,7 +210,7 @@ et s’en explique…</p>
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2019, J.SORANZO.
-      Créé avec <a href="http://sphinx-doc.org/">Sphinx</a> 2.2.1.
+      Créé avec <a href="http://sphinx-doc.org/">Sphinx</a> 2.3.1.
     </div>
   </body>
 </html>
