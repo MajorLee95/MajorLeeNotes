@@ -151,6 +151,25 @@ de commentaire pour une fonction. Je n'ai jamais réussi à le faire fonctionné
 Je me suis créé des template qui commencent tous par doxy comme cela dans l'éditeur je tape doxy
  suivit de ctrl+SPACE et j'ai ma liste de template.
 
+NULCEO-F401 doesn't start in stand alone mode
+====================================================================================================
+I have a board with ST-LINK v2.J23 firmware and board doesn't start in stan alone mode 
+(ie not connect to a computer) powered by a battery pack for example.
+
+I triy a lots of internet search, a lots of test and nothing work.
+
+I update de ST-LINK firmware to v2.J34 and it's work.
+
+How to :
+install STM32 ST Link utility and use ST-LINK/Firmware update.
+
+.. image:: images/stlinkUtility.jpg
+   :width: 500 px
+   
+It open a STLink upgrade dialog
+
+.. image:: images/stLinkUpgrade.jpg
+   :width: 300 px 
 
 ====================================================================================================
 Weblinks
