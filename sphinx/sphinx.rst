@@ -150,9 +150,17 @@ Recherche d'un thème avec barre de navigation fixe
     
 Le pb est que les options ne sont pas commune d'un thème à l'autre.
 
+La `page des themes Sphinx`_
+
+.. _`page des themes Sphinx` : https://sphinx-themes.org/
+
 testés 
 ======================================
-- PSphinxTheme : dans les premier ! Avec sidebar rétractable 5 colorations fournies. Theme difficile à installer sous Windows !!! Erreur dans setup.py (os supported arch Linux ! )
+**PSphinxTheme**
+
+.. WARNING::
+    Dans les premier ! Avec sidebar rétractable 5 colorations fournies. 
+    Theme difficile à installer sous Windows !!! Erreur dans setup.py (os supported arch Linux ! )
 
 **guzzle**
 

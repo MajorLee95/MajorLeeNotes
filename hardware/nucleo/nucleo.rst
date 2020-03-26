@@ -24,11 +24,44 @@ LQFP64 package, LQFP144 package
 
 `NUCLEO-overview`_
 
-.. _`NUCLEO-overview` : https://www.st.com/en/evaluation-tools/stm32-nucleo-boards.html#overview
-
 `NUCLEO-144_MOUSER`_
 
+Carte NUCLEO-F401RE 
+====================================================================================================
+Chip: STM32F401RE (R = 64pin package, E = 512k FLASH)
+
+.. image:: images/F401xE_features.jpg
+   :width: 500 px
+
+Carte NUCLEO64
+
+Prix indicatif : 13€ `NUCLEO-F401RE chez MOUSER`_
+
+
+Carte NUCLEO-F429ZI
+====================================================================================================
+Chip: STM32F429ZI (Z = 144pin package, I = 2048k FLASH)
+
+32b Arm® Cortex®-M4 MCU+FPU, 225DMIPS, up to 2MB Flash/256+4KB RAM, USB
+OTG HS/FS, Ethernet, 17 TIMs, 3 ADCs, 20 com. interfaces, camera & LCD-TFT
+
+.. image:: images/F429_features.jpg
+   :width: 500 px
+
+Carte NUCLE144
+
+Prix indicatif : 26€ `NUCLEO-F429ZI chez MOUSER`_
+
+ 
+.. _`NUCLEO-overview` : https://www.st.com/en/evaluation-tools/stm32-nucleo-boards.html#overview
+
 .. _`NUCLEO-144_MOUSER` : https://www.mouser.fr/new/stmicroelectronics/stm-stm32-nucleo-144-dev-boards/
+
+.. _`NUCLEO-F429ZI chez MOUSER` : https://www.mouser.fr/ProductDetail/STMicroelectronics/NUCLEO-F429ZI?qs=mKNKSX85ZJcE6FU0UkiXTA==&vip=1&gclid=CjwKCAjwguzzBRBiEiwAgU0FT1UiJxq6z6simiBPlGAwmrXBhkqT_WmzdohmaAP8F2i-SyZEE2RqPRoConUQAvD_BwE
+
+.. _`NUCLEO-F401RE chez MOUSER` : https://www.mouser.fr/ProductDetail/STMicroelectronics/NUCLEO-F401RE?qs=sGAEpiMZZMu3sxpa5v1qrjJpfJ%2F%252BCrSiyHUXpPlRNo4%3D
+
+
 
 ====================================================================================================
 Outils de développement
@@ -40,9 +73,18 @@ SW4STM32. Il en est question sur la `page officiielle SW4STM32`_ qui renvoie ver
 Cet outil est basé sur Eclipse. Je ne suis pas fan. Je trouve que tout cela est très lourd ! Mais 
 comme ces petits microcontroleurs ont l'air plein de potentiel, je fais l'effort...
 
+System Worbench for STM32 : vers qui faut-il se trouner pour avoir de l'aide ?
+
+Eclipse, Acsys ou ST ? ou peut-ête vers `le site openstm32.org`_ (ce qui reviens à peut près 
+au même que AC6)
+
+Exemple la commande Format du menu Source !
+
 .. _`page officiielle SW4STM32` : https://www.st.com/en/development-tools/sw4stm32.html
 
 .. _`la page openstm32` : https://www.openstm32.org/HomePage
+
+.. _`le site openstm32.org` : https://www.openstm32.org/HomePage 
 
 ====================================================================================================
 Mes manips
@@ -91,6 +133,24 @@ FreeRTOS sur NUCLEO
 ====================================================================================================
 
 Voir dans: :ref:`FreeRTOS on STM32 NUCLEO<refFreeRtosStm32>`
+
+====================================================================================================
+Tips
+====================================================================================================
+**ctrl+space** dans l'editeur de STM32Workbench pour le code complétion
+
+Doxygen support
+====================================================================================================
+Visiblement c'est pas la préocupation principal.
+On peut activer le support de doxygen dans Preference/Editor Documentation Tolls Comment
+(liste déroulante)
+
+Sur les forum on trouve une référence à /** suivit de return qui produirait automatiqument un bloc
+de commentaire pour une fonction. Je n'ai jamais réussi à le faire fonctionné.
+
+Je me suis créé des template qui commencent tous par doxy comme cela dans l'éditeur je tape doxy
+ suivit de ctrl+SPACE et j'ai ma liste de template.
+
 
 ====================================================================================================
 Weblinks

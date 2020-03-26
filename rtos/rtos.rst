@@ -45,16 +45,9 @@ Avec STM32Workbench
 ====================================================================================================
 `STM32Workbench`_ site officiel ST Microelectronics.
 
-System Worbench for STM32 : vers qui faut-il se trouner pour avoir de l'aide ?
-
-Eclipse, Acsys ou ST ? ou peut-ête vers `le site openstm32.org`_ (ce qui reviens à peut près 
-au même que AC6)
-
- 
-
 .. _`STM32Workbench` : https://www.st.com/en/development-tools/sw4stm32.html
 
-.. _`le site openstm32.org` : https://www.openstm32.org/HomePage 
+Voir aussi: :ref:`NUCLEO Board <refNucleoBoard>`
 
 Avec VisualSudio
 ====================================================================================================
@@ -73,7 +66,7 @@ Tourne sur les carte NUCLEO `STM32F401`_
 
 .. _`STM32F401` : https://www.st.com/en/evaluation-tools/nucleo-f401re.html
 
-Voir aussi: :ref:`NUCLEO Board <refNucleoBoard>`
+
 
 ====================================================================================================
 La liste
