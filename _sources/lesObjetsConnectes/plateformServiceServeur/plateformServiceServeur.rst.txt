@@ -890,6 +890,22 @@ Telegram bot
 		a regarder avec intéret (le 12/2/2018)
 		bloqué au taf                    
 
+VCON.io
+====================================================================================================
+`VCON.io site officiel`_
+
+Détecté le 25/3/2020, from vidéo YOUTUBE : `Arduino remote control and OTA via ESP8266 and Vcon.io`_
+
+VCON is a framework to connect microcontrollers online. It provides secure IoT connectivity, 
+remote management, and OTA update.
+
+CESANTA.com
+
+.. _`VCON.io site officiel` : https://vcon.io/docs/#overview
+
+.. _`Arduino remote control and OTA via ESP8266 and Vcon.io` : https://www.youtube.com/watch?v=gY2_KLJ3fS8&list=WL
+
+
 =========        
 Weblinks
 =========
