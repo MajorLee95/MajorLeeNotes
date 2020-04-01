@@ -59,7 +59,9 @@ Doc officielle
 
 .. _`Site officiel Sphinx` : https://www.sphinx-doc.org/en/master/index.html
 
+`Memo rst  Sphinx readthedoc`_
 
+.. _`Memo rst  Sphinx readthedoc` : https://rest-sphinx-memo.readthedocs.io/en/latest/ReST.html
 
 ================================
 Au VoLAB
