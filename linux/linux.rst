@@ -6,8 +6,8 @@ LINUX *
 
 :Auteur: J.Soranzo
 :Date: Octobre 2019
-:Societe: VoLAB
-:Entity: VoRoBoTics
+:Societe: VoRoBoTics
+:Entity: VoLAB
 
 .. contents:: TdM LINUX
     :backlinks: top

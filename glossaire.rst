@@ -4,8 +4,8 @@ Major LEE Glossaire
 
 :Auteur: J.Soranzo
 :Date: Janvier 2020
-:Societe: VoLAB
-:Entity: VoRoBoTics
+:Societe: VoRoBoTics
+:Entity: VoLAB
 
 .. glossary::
     :sorted:
@@ -52,3 +52,10 @@ Major LEE Glossaire
         
     BSP
         Board Support Package (voir Wikipédia)
+        
+    HAL
+        Hardware Abstraction Layer
+        
+    MISRA
+        Motor Industry Software Reliability Association - standard de dev C et C++
+    

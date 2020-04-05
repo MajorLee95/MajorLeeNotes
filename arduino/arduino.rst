@@ -7,8 +7,8 @@ Arduino
 
 :Auteur: J.Soranzo
 :Date: Janvier 2020
-:Societe: VoLAB
-:Entity: VoRoBoTics
+:Societe: VoRoBoTics
+:Entity: VoLAB
 
 .. contents::
     :backlinks: top

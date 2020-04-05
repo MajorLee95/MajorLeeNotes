@@ -7,8 +7,8 @@ FPGA
 
 :Auteur: J.Soranzo
 :Date: Novembre 2019
-:Societe: VoLAB
-:Entity: VoRoBoTics
+:Societe: VoRoBoTics
+:Entity: VoLAB
 
 .. contents::
     :backlinks: top

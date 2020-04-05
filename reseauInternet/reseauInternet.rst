@@ -4,8 +4,8 @@ Réseaux et Internet
 
 :Auteur: J.Soranzo
 :Date: Février 2020 2019
-:Societe: VoLAB
-:Entity: VoRoBoTics
+:Societe: VoRoBoTics
+:Entity: VoLAB
 
 .. contents::
     :backlinks: top

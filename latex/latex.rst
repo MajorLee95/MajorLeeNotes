@@ -20,8 +20,8 @@ LaTex notes
 
 :Auteur: J.Soranzo
 :Date: Octobre 2019
-:Societe: VoLAB
-:Entity: VoRoBoTics
+:Societe: VoRoBoTics
+:Entity: VoLAB
 
 .. contents:: Table des matières articles LaTex
 

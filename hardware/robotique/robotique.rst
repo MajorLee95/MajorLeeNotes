@@ -4,8 +4,8 @@ Robotique
 
 :Auteur: J.Soranzo
 :Date: Mars 2020
-:Societe: VoLAB
-:Entity: VoRoBoTics
+:Societe: VoRoBoTics
+:Entity: VoLAB
 
 .. toctree::
    :maxdepth: 2
