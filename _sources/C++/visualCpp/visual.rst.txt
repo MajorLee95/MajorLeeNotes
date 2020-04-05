@@ -4,8 +4,8 @@ Note concernant Visal C++ 2013 *
 
 :Auteur: J.Soranzo
 :Date: Octobre 2019
-:Societe: society_name
-:Entity: entity_name
+:Societe: VoRoBoTics
+:Entity: VoLAB
 
 .. contents:: TdM Visual C++ 2013
 

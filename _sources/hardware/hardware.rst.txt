@@ -4,8 +4,8 @@ Hardware notes
 
 :Auteur: J.Soranzo
 :Date: Novembre 2019
-:Societe: VoLAB
-:Entity: VoRoBoTics
+:Societe: VoRoBoTics
+:Entity: VoLAB
 
 .. toctree::
    :maxdepth: 3

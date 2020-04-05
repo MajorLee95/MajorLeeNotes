@@ -4,8 +4,8 @@ La synchronisation / sauvegarde*
 
 :Auteur: J.Soranzo
 :Date: Octobre 2019
-:Societe: VoLAB
-:Entity: VoRoBoTics
+:Societe: VoRoBoTics
+:Entity: VoLAB
 
 .. contents:: Table des matières Allway Sync
 

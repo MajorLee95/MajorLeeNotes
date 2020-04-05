@@ -7,8 +7,8 @@ NUCLEO board *
 
 :Auteur: J.Soranzo
 :Date: Mars 2020
-:Societe: VoLAB
-:Entity: VoRoBoTics
+:Societe: VoRoBoTics
+:Entity: VoLAB
 
 .. contents::
     :backlinks: top
@@ -43,6 +43,36 @@ Prix indicatif : 13€ `NUCLEO-F401RE chez MOUSER`_
 
 **Osc clock supply**
 See in UM1724 STM32 Nucleo-64 boards (MB1136) §6.7
+
+**Ressources pour le dev**
+Ok il y a CubeMX qui mâche bien le boulot.
+
+Ok il y a les pdf, mais il n'y en a pas de spécifique à cette carte en particulier.
+
+La doc du processeur : la datasheet ne contient pas les registres des périph (135 pages)
+
+PM0214 : programming manuel 245 pages : mais bon sans plus, à relire un de ces prochains jours.
+
+RM0368 : Reference manuel 835 pages
+
+On a:
+
+- UM NUCLEO board 64 : UM1724 : forunit quelques précieuse informations parfois.
+
+
+Mais on peut aussi s'aider de la doc dcoxygen généré (cf. Modules/STM32F4xx_HAL_Driver)
+
+Mais quand tout ça ne suffit pas :
+
+Exemple la fonction : HAL_GPIO_Init accepte un premier paramètre de type : GPIO_TypeDef qui n'est
+pas tellement documenté.
+
+Tips: l'IDE fournit un moyen rapide d'accéder à sa déclaration et on apprend ainsi qu'elle se trouve
+dans le fichier::
+
+    /CMSIS/Device/ST/STM32F4xx/Include/stm32f401xe.h
+
+
 
 
 Carte NUCLEO-F429ZI
@@ -99,6 +129,17 @@ Exemple la commande Format du menu Source ! On fini par la trouver dans l'aide d
 .. _`le site openstm32.org` : https://www.openstm32.org/HomePage
 
 STM32CubeMX est l'outils indispensable et **IL FAUT COMMENCER par LUI** voir `UM1718_CubeMX.pdf`_
+
+Autres outils de développement 
+====================================================================================================
+Atolic TrueStudio => remplacé par `STM32cubeIDE`_
+
+.. _`STM32cubeIDE` : https://www.st.com/en/development-tools/stm32cubeide.html
+
+Au niveau des fonctionnalité cela ressemble à STM32workbench si ce n'est que ST annonce une forte 
+intégration avec STM32cubeMX.
+
+
 
 
 ====================================================================================================

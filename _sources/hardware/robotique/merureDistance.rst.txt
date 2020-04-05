@@ -3,8 +3,8 @@ Robotique : mesure de distance
 ++++++++++++++++++++++++++++++++
 :Auteur: J.Soranzo
 :Date: Novembre 2019
-:Societe: VoLAB
-:Entity: VoRoBoTics
+:Societe: VoRoBoTics
+:Entity: VoLAB
 
 .. contents:: Table des matières Mesure de distance
     :backlinks: top

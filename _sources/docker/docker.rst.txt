@@ -4,8 +4,8 @@ Docker
 
 :Auteur: J.Soranzo
 :Date: Janvier 2020 2019
-:Societe: VoLAB
-:Entity: VoRoBoTics
+:Societe: VoRoBoTics
+:Entity: VoLAB
 
 .. contents::
     :backlinks: top

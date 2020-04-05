@@ -18,8 +18,8 @@ Notes sur Qt *
     
 :Auteur: J.Soranzo
 :Date: Novembre 2019
-:Société: VoLAB
-:Entity: VoRoBoTics
+:Société: VoRoBoTics
+:Entity: VoLAB
 
 |clearer|
 
