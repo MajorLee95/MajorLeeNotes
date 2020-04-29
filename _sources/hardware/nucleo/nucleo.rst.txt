@@ -324,6 +324,231 @@ Petite description des différentes chaînes de dev
 
 **N'apporte rien !**
 
+
+UM1725 Description of STM32F4 HAL and LL drivers DM00105879
+====================================================================================================
+1838 pages Fev 2017
+
+C'est assurément un document **MAJEUR** dans l'utilisation des STM32.
+
+L'étude de ce document va de paire avec l'étude du répertoire en question::
+
+    ...\STM32Cube_FW_F4_V1.25.0\Drivers\STM32F4xx_HAL_Driver
+
+Il est à noter que tout le code contient des commentaire compatible avec Doxygen donc on peut 
+en faire l'extraction mais cela peut-ête long.
+
+Les drivers HAL, en fait les fonctions pour accéder aux composants du microcontroleur sont découpés 
+en modules fonctionnels. Ils offrent non seulement une indépendance du code vis-à-vis du micro mais
+présentent en plus un certains nombre de caractérisitiques particulièrement intéressantes:
+
+- 3 modèles de programmation: polling, interrupt and DMA.
+- APIs sont compatible RTOS
+- Mécanisme de verouillage d'objet
+- multiple instance call
+- callback fonctions...
+
+.. index::
+    single: Programmation; MISRA
+
+Les fichiers .c/.h sont fournis par périphériques développés en ANSI-C strict pour un maximum de 
+compatibilité et entièrement documenté et `MISRA-C 2004`_ compliant. La liste est longue, 
+j'en ai dénombré 68::
+
+    _adc, _adc_ex, _can, _cec, _cortex, _crc, _cryp, _cryp_ex, _dac, _dac_ex, _dcmi, _dcmi_ex, _def, 
+    _dfsdm, _dma, _dma2d, _dma_ex, _dsi, _eth, _exti, _flash, _flash_ex, _flash_ramfunc, _fmpi2c, 
+    _fmpi2c_ex, _fmpsmbus, _gpio, _gpio_ex, _hash, _hash_ex, _hcd, _i2c, _i2c_ex, _i2s, _i2s_ex, 
+    _irda, _iwdg, _lptim, _ltdc, _ltdc_ex, _mmc, _nand, _nor, _pccard, _pcd, _pcd_ex, _pwr, _pwr_ex, 
+    _qspi, _rcc, _rcc_ex, _rng, _rtc, _rtc_ex, _sai, _sai_ex, _sd, _sdram, _smartcard, _smbus, _spdifrx, 
+    _spi, _sram, _tim, _tim_ex, _uart, _usart, _wwdg, 
+
+Exemple : stm32f4xx_hal_can.h
+
+.. _`MISRA-C 2004` : https://en.wikipedia.org/wiki/MISRA_C
+
+Chaque périphérique peut contenir 3 structures de données:
+
+- Peripheral handle structures
+- Initialization and configuration structures
+- Specific process structures
+
+**Peripheral handle structures**
+Une strucutre qui détient les carac. du périph. Exemple : USART_HandleTypeDef
+
+Son nom est de la forme nomPariph_HandleTypeDef (et comme sont nom l'évoque c'est un typedef)
+
+Il y a des exeptions à la règle de périph qui n'en on pas : (périphériques partagés et système)
+**GPIO, SYSTICK, NVIC, PWR, RCC, FLASH**.
+
+**Initialization and configuration structure**
+Nom de la forme periphName_InitTypeDef comme dans l'exemple GPIO_toggle : GPIO_InitTypeDef
+
+**Specific process structures**
+Pas à proprement parlé des structure au sens C mais l'ensemble des fonctions.
+
+Exemple : HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
+
+Le nom est de la forme : HAL_nomPeriph_fonctionnalit( paramètres...)
+
+L'API HAL est divisée en 3 catégories en fonction de la spécificité du driver.
+
+- généric
+- propre à une famille de composants
+- propre à un composant en particulier.
+
+Tous les composants n'embarque pas toutes les fonctionalités. En page 44, se trouve un tableau de 
+correspondance entre composants et API. Ce tableau s'atend sur 4 page au format paysage et couvre
+17 composants :
+
+.. hlist::
+    :columns: 4
+
+    * STM32F405xx
+    * STM32F415xx
+    * STM32F407xx
+    * STM32F417xx
+    * STM32F427xx
+    * STM32F437xx
+    * STM32F429xx
+    * STM32F439xx
+    * STM32F401xC
+    * STM32F401xE
+    * STM32F446xx
+    * STM32F469xx
+    * STM32F479xx
+    * STM32F410xx
+    * STM32F412xx
+    * STM32F413xx
+    * STM32F423xx
+
+Total 86 fichiers .c répartis en : 
+1 NA, 64 fichiers C HAL + 21 fichiers LL driver. Sur ce total, il en reste 34 HAL supportés 
+par le F401xE:
+
+.. hlist::
+    :columns: 3
+
+    * stm32f4xx_hal.c
+    * stm32f4xx_hal_adc.c
+    * stm32f4xx_hal_adc_ex.c
+    * stm32f4xx_hal_cortex.c
+    * stm32f4xx_hal_crc.c
+    * stm32f4xx_hal_dma.c
+    * stm32f4xx_hal_dma_ex.c
+    * stm32f4xx_hal_flash.c
+    * stm32f4xx_hal_flash_ex.c
+    * stm32f4xx_hal_gpio.c
+    * stm32f4xx_hal_hcd.c
+    * stm32f4xx_hal_i2c.c
+    * stm32f4xx_hal_i2c_ex.c
+    * stm32f4xx_hal_i2s.c
+    * stm32f4xx_hal_i2s_ex.c
+    * stm32f4xx_hal_irda.c
+    * stm32f4xx_hal_iwdg.c
+    * stm32f4xx_hal_mmc.c
+    * stm32f4xx_hal_pcd.c
+    * stm32f4xx_hal_pcd_ex.c
+    * stm32f4xx_hal_pwr.c
+    * stm32f4xx_hal_rcc.c
+    * stm32f4xx_hal_rcc_ex.c
+    * stm32f4xx_hal_rng.c
+    * stm32f4xx_hal_rtc.c
+    * stm32f4xx_hal_rtc_ex.c
+    * stm32f4xx_hal_sd.c
+    * stm32f4xx_hal_smartcard.c
+    * stm32f4xx_hal_spi.c
+    * stm32f4xx_hal_tim.c
+    * stm32f4xx_hal_tim_ex.c
+    * stm32f4xx_hal_uart.c
+    * stm32f4xx_hal_usart.c
+    * stm32f4xx_hal_wwdg.c
+
+Et 15 ll:
+
+.. hlist::
+    :columns: 3
+    
+    * stm32f4xx_ll_sdmmc.c
+    * stm32f4xx_ll_usb.c
+    * stm32f4xx_ll_adc.c
+    * stm32f4xx_ll_crc.c
+    * stm32f4xx_ll_dma.c
+    * stm32f4xx_ll_exti.c
+    * stm32f4xx_ll_gpio.c
+    * stm32f4xx_ll_i2c.c
+    * stm32f4xx_ll_pwr.c
+    * stm32f4xx_ll_rcc.c
+    * stm32f4xx_ll_rtc.c
+    * stm32f4xx_ll_spi.c
+    * stm32f4xx_ll_tim.c
+    * stm32f4xx_ll_usart.c
+    * stm32f4xx_ll_utils.c
+
+A signalé que les "driver" des catégories propre à une famille ou un composant on un suffixe \_ex
+au nom de fichier et ne peuvent donc pas être différenciées ainsi. Le §2.5 rappelle ces règles ne 
+nommage.
+
+Il y a des macro qui commence par ``__HAL`` pour autoriser les interruption par exemple. Voir §2.5.2
+
+**callback fonctions**
+
+Elles sont de 3 types : initialisation/déinitialisation, process cb et error handling cb.
+
+.. image:: images/nucleo_hal_suercbTable.jpg
+   :width: 500 px
+
+**HAL generic APIs**
+
+De manière générale et non-exhaustive, l'API HAL définie un certain nombre de fonctions communes:
+
+- Initialization and de-initialization functions:HAL_PPP_Init(), HAL_PPP_DeInit()
+- IO operation functions: HAL_PPP_Read(), HAL_PPP_Write(),HAL_PPP_Transmit(), HAL_PPP_Receive()
+- Control functions:HAL_PPP_Set (), HAL_PPP_Get ().
+- State and Errors functions: HAL_PPP_GetState (), HAL_PPP_GetError ().
+
+Il ne s'agit ici que d'un set général de focntions et selon le pariphérique considéré, d'autres
+fonctions existe comme start stop pour lancer les conversion d'un ADC...
+
+**HAL extension model cases**
+
+Il y a 5 manières utilisées pour définir des fonctions spécifiques (des extensions marquées par 
+le suffixe \_ex). Ces 5 manières sont décrite au §2.7.2. En fonction qu'il s'agisse de nouvelles 
+fonctionnalités, ou de fonction surchargées pour une famille ou un composant en particuler.
+
+**File inclusion model**
+Le seul fichier à include est stm32f4xx_hal.h, il référence tous les autres en cascade. Néamoins,
+il semblerait qu'il faille autoriser l'utilisation des ressources dans le fichier 
+stm32f4xx_hal_conf.h. Example::
+
+    #define USE_HAL_USART_MODULE
+    
+Mais le §2.10, nous apprend que cette modification n'est pas mandatory ! Alors pourquoi nous embêter
+ avec ça ?!
+
+La suite du chapitre 2 décrit:
+HAL system peripheral handling (Clock, GPIO, SYSTIC, NVIC, EXTI, PWR, DMA), How to use HAL drivers
+(init, IO process, timeout and error managment). 
+
+Pour le moment je fais l'impasse sur les LL driver du chapitre 3 puis le chapitre 4 sur la 
+cohabitation HAL et LL vient ensuite la description de chaque API HAL puis LL (DMA, ADC, UART, CAN
+I2C...)
+
+**Example §34 HAL I2C Generic Driver**
+Commence par la description de I2C_InitTypeDef, puis I2C_HandleTypeDef
+
+Puis tout est décrit: How to use this driver, Initialization and de-initialization functions, 
+IO operation functions
+Peripheral State, Mode and Error functions, Detailed description of functions, 
+Firmware driver defines.
+
+Le recours à la table des matières et à l'étude le moment venu du besoiin est plus qu'à conseiller.
+C'est vraiment la bible.
+
+Un aspect très intéressant dans la description est le point de vue des fonctions bloquantes et non
+bloquante est systématiquement étudiées.
+
+Place à l'utilisation maintenant !
+
 ====================================================================================================
 Mes manips de 2015
 ====================================================================================================
@@ -366,6 +591,295 @@ Et `STM32duino`_ ?
 
 .. _`STM32duino` : https://github.com/stm32duino/wiki/wiki/Getting-Started
 
+====================================================================================================
+Mes manips 2020
+====================================================================================================
+Après bien des déboires avec SW4STM32 d'AC6, j'ai découvert STM32CubeMX et la oh! miracle ça devient
+si limpide !
+
+Du coup dans mon espace de travail, j'ai:
+
+toggleLeDCubeMX
+====================================================================================================
+- un message RS sur UART2 toutes les 1s dans une boucle while
+- la LED sur PA5 qui clignote à 200ms grâce au TIM2 sous interruption.
+
+Le plus gros du boulot est dans CubeMX mais l'interface de CubeMX est tellement simple que cela ne 
+présente pas de grosses difficultés.
+
+pushButtonInterrup
+====================================================================================================
+Objectif: utiliser le bouton poussoir de la carte sous interruption.
+
+On commence dans CubeMX, mais avant une petite recherche Youtube. On ne trouve que pour Keil mais
+la partie CubeMX doit être la même. Mots clés: cubeMx AC6 push button
+
+`Vidéo Youtube de  MYaqoobEmbedded`_
+
+.. _`Vidéo Youtube de  MYaqoobEmbedded` : https://www.youtube.com/watch?v=sWe4kvzLMjY
+
+`Vidéo Youtube de KGP Talkie`_
+
+.. _`Vidéo Youtube de KGP Talkie` : https://www.youtube.com/watch?v=0I53r0KmOxg
+
+Problème de débounce. Solution HAL_getTick() if (prev-new > 25) toggle.
+
+Ne pas oublier de remettre à 0 prev et new
+
+HAL_getTick retourne un uint32_t soit 4 294 967 296‬ms ou encore 1193.05 heures 49jours17heures.
+
+On pourrait avec getTick interdire l'it push button pendant 25ms par exemple.
+
+ Ma solution:
+
+ .. code:: cpp
+
+    void EXTI15_10_IRQHandler(void)
+    {
+      /* USER CODE BEGIN EXTI15_10_IRQn 0 */
+    //	if (HAL_GPIO_ReadPin(GPIOC, GPIO_PIN_13) == GPIO_PIN_SET
+    //			&& btnIntDelay == 0 ){
+        if (btnIntDelay == 0 ){
+            btnIntDelay = HAL_GetTick();
+            HAL_GPIO_TogglePin(GPIOA, GPIO_PIN_5);
+        }
+      /* USER CODE END EXTI15_10_IRQn 0 */
+      HAL_GPIO_EXTI_IRQHandler(GPIO_PIN_13);
+      /* USER CODE BEGIN EXTI15_10_IRQn 1 */
+        ....
+
+La version du if qui test l'état de la pin 13 n'est pas une bonne idée car l'état peut être 0 
+en cas de rebond justement        
+        
+ Et dans le main:
+ 
+ .. code:: cpp
+
+    while (1){
+	  if ( btnIntDelay != 0 ){
+		  if (HAL_GetTick() - btnIntDelay >= 25){
+			  btnIntDelay = 0;
+		  }
+    }
+
+
+ Mieux, au lieu d'intervenir dans la fonction EXTI15_10_IRQHandler, utiliser
+ ``HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)``:
+
+ .. code:: cpp
+
+    void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin){
+        if (btnIntDelay == 0 && GPIO_Pin == GPIO_PIN_13){
+            btnIntDelay = HAL_GetTick();
+            HAL_GPIO_TogglePin(GPIOA, GPIO_PIN_5);
+        }
+    }
+
+uartAndRXIt
+====================================================================================================
+Commençons dans la doc de l'API puis par une recherche internet pour une fois afin de voir si la doc
+est suffisante. Ne pas oublier les exemples fournis dans STM32Cube_FW_F4_V1.25.0 !
+
+Configuration de CubeMX pour utiliser un UART avec interruption ? Relativement facile 1 cass à cocher
+sous l'onglet NVIC dans l'interface de configuration UART (j'ai choisi UART2)
+
+Fonction à utiliser : HAL_UART_Receive_IT
+
+Une vidéo plutôt bien faite sur `Youtube from  Web learning`_
+
+.. _`Youtube from  Web learning` : https://www.youtube.com/watch?v=xE6GVt7XuJI
+
+Sans rien faire d'autre que d'ajouter ``__HAL_UART_ENABLE_IT(&huart2, UART_IT_RXNE);``, j'ai bien 
+un branchement à ``void USART2_IRQHandler(void)`` mais seulement sur le premier caractère.
+
+J'ai réussi à obtenir de bon résultats avec:
+
+.. code:: cpp
+
+    void USART2_IRQHandler(void)
+    {
+      /* USER CODE BEGIN USART2_IRQn 0 */
+
+      /* USER CODE END USART2_IRQn 0 */
+      HAL_UART_IRQHandler(&huart2);
+      /* USER CODE BEGIN USART2_IRQn 1 */
+      __HAL_UART_FLUSH_DRREGISTER(&huart2);
+      __HAL_UART_CLEAR_FLAG(&huart2, UART_IT_RXNE);
+      __HAL_UART_ENABLE_IT(&huart2, UART_IT_RXNE);
+      /* USER CODE END USART2_IRQn 1 */
+    }
+    
+Autre façon de procéder avec ``HAL_UART_Receive_IT(&huart2, &carac, 1);`` dans le main puis:
+
+.. code:: cpp
+
+    void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart){
+    //concaténation avec un buffer plus grand ici par exemple
+    //vérification si la transmission est complète
+    //flag tansmission terminée
+    //on peut aussi testé si c'est le bon uart avec
+    //    if( huart->Instance == USART2){
+    //
+    //    }
+    //Réactivation de la réception d'un caractère
+    HAL_UART_Receive_IT(&huart2, &carac, 1);
+
+}
+
+La fonction ``HAL_UART_Receive_IT`` est très bien si on connait la taille des message à transmettre.
+
+Elle n'a pas de timeout. Mais comme elle n'est pas bloquante, on peut gérer les problèmes de non 
+réponse ailleurs donc...
+
+RX with DMA
+====================================================================================================
+Pas vraiment plus compliqué. Dans Cube MX, il faut aller dans l'onglet DMA de l'UART concerné et 
+activer DMA RX
+
+.. image:: images/cubeMXUARTDMA.jpg
+   :width: 600 px
+
+Et dans le code on utlise :
+
+.. code:: cpp
+
+    HAL_UART_Receive_DMA(&huart2, &c, 1); //dans le main et dans la fonction suivante
+    //pour lancer la réception c: uint8_t
+    //recevoir un caractère à la fois n'est pas très efficient !
+
+    //et
+
+    void HAL_UART_RxCpltCallback (UART_HandleTypeDef *huart)
+    
+Pour être plus efficient, iol y a la technique suivante
+
+.. index::
+    single: STM32; IDLE line interrupt
+    
+RX through idle line interrupt
+====================================================================================================
+
+Intéressant :IDLE line interrupt
+
+**Référence**:
+
+Idle line received est une des 10 sources d'interruption de l'UART (cf. RM0368 rev5 page 507)
+
+**Des exemples**:
+
+https://programming.vip/docs/stm32-hal-library-learning-serial-idle-interrupt.html
+
+https://www.youtube.com/watch?v=tWryJb2L0cU
+
+Attention, cette iterruption n'appelle pas la fonction HAL_UART_RxCpltCallback. Donc la bonne
+méthode est celle décrite dans l'article de mrkumar.
+
+On modifie USARTi_IRQHandler dans le fichier stm32f4xx_it.c pour appeler notre propre fonction
+callback. Sauf que mrkumar crée d'abord un fonction USER_UART_IRQHandler qui appelle sa fonction
+callback USAR_UART_IDLECallback().
+
+A l'intérieur de ces fonctions, on utilise ``huart.Instance == USART2`` afin de déterminer si on 
+traite bien le bon UART (pour être tout à fait générique).
+
+J'ai obtenu de bon résultats avec le code suivant dans le fichier stm32f4xx_it.c:
+
+.. code:: cpp
+
+    void USART2_IRQHandler(void)
+    {
+      /* USER CODE BEGIN USART2_IRQn 0 */
+
+      /* USER CODE END USART2_IRQn 0 */
+      HAL_UART_IRQHandler(&huart2);
+      /* USER CODE BEGIN USART2_IRQn 1 */
+      USER_UART_rxIddleCallback( &huart2 );
+      /* USER CODE END USART2_IRQn 1 */
+    }
+
+puis en ajoutant à la fin du main.c
+
+.. code:: cpp
+
+    void USER_UART_rxIddleCallback( UART_HandleTypeDef *huart ){
+        __NOP();
+        HAL_UART_DMAStop( &huart2 );
+        uint8_t data_length  = RX_BUF_SIZE - __HAL_DMA_GET_COUNTER(&hdma_usart2_rx);
+        memset(receive_buff,0,data_length);
+        data_length = 0;
+
+        HAL_UART_Receive_DMA(&huart2, (uint8_t *)receive_buff, RX_BUF_SIZE);
+    }
+
+En n'oubliant pas d'ajouter dans la fonction main.c:
+
+.. code:: cpp
+
+    __HAL_UART_ENABLE_IT(&huart2, UART_IT_IDLE);
+    HAL_UART_Receive_DMA(&huart2, (uint8_t *)receive_buff, RX_BUF_SIZE);
+    
+    
+STM32 I2C scanner 
+====================================================================================================
+Cela peut s'avérer utile pour vérifier les branchements.
+
+Directement trouvé sur le `github  de ProjectsByJRP`_
+
+.. _`github  de ProjectsByJRP` : https://github.com/ProjectsByJRP/stm32_hal_i2c_bus_scan
+
+L'exemple est fournit pour un STM32F1xx mais l'adaptation est très simple ! J'ai procédé en faisant
+des copiés/collés plutot qu'en copiant directement le code. Tout se passe dans le main.c
+
+Le principe est toujours le même, on essais une transaction simple pour toutes les adresses de
+composants entre 1 et 127 et si on reçoit un ack, on considère qu'il y a un composant.
+
+Affichage avec des **printf** sur UART2
+
+    
+STM32 I2C OLED 0.96
+====================================================================================================
+Recherche internet : `écran OLED 0.96" IIC`_
+
+Caractéristiques principales::
+
+    Resolution: 128x64
+    Driver chip: SSD1306
+    Wide voltage support: DC 3.3V-5V
+
+Une `librairie sur controllerstech.com`_
+
+.. _`écran OLED 0.96" IIC` : https://www.banggood.com/0_96-Inch-OLED-I2C-IIC-Communication-Display-12864-LCD-Module-p-1535708.html?rmmds=detail-left-hotproducts__1&ID=229&cur_warehouse=CN
+
+.. _`librairie sur controllerstech.com` : http://controllerstech.com/wp-content/uploads/2019/06/oled.zip
+
+I2C1 : PB7 = SDA1 et PB6 = SCL1 (à noter que dans CubeMX I2C2 n'est pas utilisable car PB3 est 
+utilisé par SYS_JTDO-SWO) mais il reste I2C3 !!! Mais on peut aussi les avoir sur PB8 = SCL 
+et PB9 = SDA (plus simple pour le cablage).
+pour correspondre au pinout ARDUINO de la carte NUCLEO
+
+
+
+Vidéo exemple:
+
+`Controllers Tech vidéo 1`_
+
+`Article sur le site`_
+
+  
+
+`Controllers Tech vidéo 2`_
+
+.. _`Controllers Tech vidéo 1` : https://www.youtube.com/watch?v=Z6VyFYzQWSs
+
+.. _`Article sur le site` : https://controllerstech.com/oled-display-using-i2c-stm32/
+
+.. _`Controllers Tech vidéo 2` : https://www.youtube.com/watch?v=M5ddTjrcvEs
+
+Commande I2C HAL:
+
+HAL_StatusTypeDef HAL_I2C_Master_Transmit(I2C_HandleTypeDef * hi2c, uint16_t DevAddress, uint8_t *
+pData, uint16_t Size, uint32_t Timeout)
+
+
 ----------------------------------------------------------------------------------------------------
 
 .. index::
@@ -374,6 +888,8 @@ Et `STM32duino`_ ?
 ====================================================================================================
 STM32Workbench minimum project
 ====================================================================================================
+
+Si on commence par utiliser STM32CubeMX, ce qui suit **n'est pas utile** !
 
 SW4STM32
 
@@ -472,6 +988,8 @@ Ce que c'est::
     consistent device support. It provides simple software interfaces to the processor and 
     the peripherals, simplifying software re-use, reducing the learning curve for microcontroller 
     developers, and reducing the time to market for new devices.
+    
+D'après ce que j'ai pu comprendre CMSIS est utilisé en grand partie par la/les librairies ST
 
 .. _`Page officielle CMSIS` :  https://arm-software.github.io/CMSIS_5/General/html/index.html
 
