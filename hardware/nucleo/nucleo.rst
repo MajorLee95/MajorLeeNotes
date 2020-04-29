@@ -49,13 +49,13 @@ Ok il y a CubeMX qui mâche bien le boulot.
 
 Ok il y a les pdf, mais il n'y en a pas de spécifique à cette carte en particulier.
 
-La doc du processeur : la datasheet ne contient pas les registres des périph (135 pages)
-
-PM0214 : programming manuel 245 pages : mais bon sans plus, à relire un de ces prochains jours.
-
-RM0368 : Reference manuel 835 pages
-
 On a:
+
+- La doc du processeur : la datasheet ne contient pas les registres des périph (135 pages)
+
+- PM0214 : programming manuel 245 pages : mais bon sans plus, à relire un de ces prochains jours.
+
+- RM0368 : Reference manuel 835 pages
 
 - UM NUCLEO board 64 : UM1724 : forunit quelques précieuse informations parfois.
 
@@ -106,12 +106,15 @@ Prix indicatif : 26€ `NUCLEO-F429ZI chez MOUSER`_
 ====================================================================================================
 Outils de développement
 ====================================================================================================
+STM32CubeMX est l'outil indispensable et **IL FAUT COMMENCER par LUI** voir `UM1718_CubeMX.pdf`_
+J'utilise actuellement (04/2020) la version 5.6.0
+
 STM32 workbench développé par ACSYSY ou AC6. Dans la litérature ST cette suite logiciel se nome
 SW4STM32. Il en est question sur la `page officiielle SW4STM32`_ qui renvoie vers
 `la page openstm32`_
 
 Cet outil est basé sur Eclipse. Je ne suis pas fan. Je trouve que tout cela est très lourd ! Mais 
-comme ces petits microcontroleurs ont l'air plein de potentiel, je fais l'effort...
+comme ces petits microcontroleurs ont l'air plein de potentiel, je fais l'effort... 
 
 System Worbench for STM32 : vers qui faut-il se trouner pour avoir de l'aide ?
 
@@ -128,19 +131,29 @@ Exemple la commande Format du menu Source ! On fini par la trouver dans l'aide d
 
 .. _`le site openstm32.org` : https://www.openstm32.org/HomePage
 
-STM32CubeMX est l'outils indispensable et **IL FAUT COMMENCER par LUI** voir `UM1718_CubeMX.pdf`_
 
 Autres outils de développement 
 ====================================================================================================
-Atolic TrueStudio => remplacé par `STM32cubeIDE`_
+Officiellement sur le `site ST outils de dev`_, il y a :
 
-.. _`STM32cubeIDE` : https://www.st.com/en/development-tools/stm32cubeide.html
+.. image:: images/outilsDev.jpg
+   :width: 600 px
+
+La page product selector annonce 32 items au 10/04/2020, la plupart sont payant comme IAR, KEIL
+
+Atolic TrueStudio => remplacé par `STM32cubeIDE`_
 
 Au niveau des fonctionnalité cela ressemble à STM32workbench si ce n'est que ST annonce une forte 
 intégration avec STM32cubeMX.
 
+KEIL uVision
+
+Qt possible également : il faudra que j'explore cela !
 
 
+.. _`STM32cubeIDE` : https://www.st.com/en/development-tools/stm32cubeide.html
+
+.. _`site ST outils de dev` : https://www.st.com/en/development-tools/stm32-ides.html
 
 ====================================================================================================
 Les pdf étudiés
@@ -504,6 +517,31 @@ It open a STLink upgrade dialog
 
 .. image:: images/stLinkUpgrade.jpg
    :width: 300 px 
+
+NOP
+====================================================================================================
+Afin de pouvoir placer un point d'arrêt dans une fonction vide il existe la macro __NOP()
+
+UART console in IDE
+====================================================================================================
+In System Workbench : `voir sur EEBLOG`_
+
+`Sur openstm32.org`_
+
+En résumé:
+
+#. Créer une nouvelle connexion serial port : Windows/Show view/Others/connections...
+#. Clic droit sur la nouvelle connexion : "Open Command Shell" ouvre la fenêtre dans la console
+#. Créer une nouvelle console
+#. la décaller
+#. la pincée
+
+Quand une console est pincée, elle arrête de switchée uatomatiquement entre les différentes console
+possibles.
+
+.. _`voir sur EEBLOG` :  http://eeblog.co.uk/2018/11/28/serial-terminal-window-in-system-workbench/
+
+.. _`Sur openstm32.org` : https://www.openstm32.org/forumthread5463
 
 ====================================================================================================
 Weblinks

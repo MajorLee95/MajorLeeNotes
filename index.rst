@@ -2,7 +2,7 @@
    sphinx-quickstart on Tue Oct  8 14:35:45 2019.
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
-   
+  
    
 Bienvenue dans les notes de  MajorLee's
 ===============================================

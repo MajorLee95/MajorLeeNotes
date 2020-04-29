@@ -27,7 +27,13 @@ Filter library
 
 See IOT Esp project
 
+====================================================================================================
+Arduno sous Eclipse
+====================================================================================================
 
+Très bonne `vidéo Youtube de  Doug Schaefer`_
+
+.. _`vidéo Youtube de  Doug Schaefer` : https://www.youtube.com/watch?v=TtPvkPpAx0E
 
 =========
 Weblinks
