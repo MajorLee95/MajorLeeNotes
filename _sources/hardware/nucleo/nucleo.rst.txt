@@ -879,6 +879,14 @@ Commande I2C HAL:
 HAL_StatusTypeDef HAL_I2C_Master_Transmit(I2C_HandleTypeDef * hi2c, uint16_t DevAddress, uint8_t *
 pData, uint16_t Size, uint32_t Timeout)
 
+.. index::
+    pair: C++; bitmap convertisseur
+
+**Convertion d'image bitmap vers C**
+Voir le `github de Jasper van Loenen`_
+
+.. _`github de Jasper van Loenen` :  https://javl.github.io/image2cpp/
+
 
 ----------------------------------------------------------------------------------------------------
 
