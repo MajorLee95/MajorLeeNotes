@@ -1,18 +1,18 @@
 
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<html lang="fr">
   <head>
     <meta charset="utf-8" />
     <title>Notes sur git &#8212; Documentation MajorLee&#39;s notes </title>
     <link rel="stylesheet" href="../_static/nature.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-    <script type="text/javascript" src="../_static/jquery.js"></script>
-    <script type="text/javascript" src="../_static/underscore.js"></script>
-    <script type="text/javascript" src="../_static/doctools.js"></script>
-    <script type="text/javascript" src="../_static/language_data.js"></script>
-    <script type="text/javascript" src="../_static/translations.js"></script>
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script src="../_static/translations.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Recherche" href="../search.html" />
     <link rel="next" title="Docker" href="../docker/docker.html" />
@@ -63,24 +63,25 @@
 <li><p><a class="reference internal" href="#notes-sur-git" id="id7">Notes sur git</a></p>
 <ul>
 <li><p><a class="reference internal" href="#git" id="id8">git</a></p></li>
-<li><p><a class="reference internal" href="#petits-trucs-utiles" id="id9">petits trucs utiles</a></p>
+<li><p><a class="reference internal" href="#git-rebase" id="id9">git rebase</a></p></li>
+<li><p><a class="reference internal" href="#petits-trucs-utiles" id="id10">petits trucs utiles</a></p>
 <ul>
-<li><p><a class="reference internal" href="#logiciels" id="id10">Logiciels</a></p></li>
-<li><p><a class="reference internal" href="#suppression-d-un-fichier" id="id11">Suppression d’un fichier</a></p></li>
-<li><p><a class="reference internal" href="#lister-les-fichiers-indexe" id="id12">lister les fichiers indexé</a></p></li>
-<li><p><a class="reference internal" href="#mais-vers-ou-pointe-origine" id="id13">Mais vers ou pointe origine</a></p></li>
-<li><p><a class="reference internal" href="#merger-un-seul-fichier" id="id14">merger un seul fichier</a></p></li>
-<li><p><a class="reference internal" href="#ecraser-les-derniere-modif-qui-n-ont-pas-ete-commitees" id="id15">Ecraser les dernière modif qui n’ont pas été commitées</a></p></li>
-<li><p><a class="reference internal" href="#retirer-un-repertoire-de-l-index" id="id16">Retirer un répertoire de l’index</a></p></li>
-<li><p><a class="reference internal" href="#lister-les-fichier-dossier-ignores" id="id17">lister les fichier dossier ignorés ?</a></p></li>
-<li><p><a class="reference internal" href="#ratacher-la-tete" id="id18">Ratacher la tête</a></p></li>
-<li><p><a class="reference internal" href="#annuler-le-dernier-commit" id="id19">Annuler le dernier commit</a></p></li>
-<li><p><a class="reference internal" href="#lister-les-commit-d-une-branche-distante" id="id20">Lister les commit d’une branche distante</a></p></li>
-<li><p><a class="reference internal" href="#depot-git-sur-cle-usb" id="id21">Dépôt git sur clé usb</a></p></li>
+<li><p><a class="reference internal" href="#logiciels" id="id11">Logiciels</a></p></li>
+<li><p><a class="reference internal" href="#suppression-d-un-fichier" id="id12">Suppression d’un fichier</a></p></li>
+<li><p><a class="reference internal" href="#lister-les-fichiers-indexe" id="id13">lister les fichiers indexé</a></p></li>
+<li><p><a class="reference internal" href="#mais-vers-ou-pointe-origine" id="id14">Mais vers ou pointe origine</a></p></li>
+<li><p><a class="reference internal" href="#merger-un-seul-fichier" id="id15">merger un seul fichier</a></p></li>
+<li><p><a class="reference internal" href="#ecraser-les-derniere-modif-qui-n-ont-pas-ete-commitees" id="id16">Ecraser les dernière modif qui n’ont pas été commitées</a></p></li>
+<li><p><a class="reference internal" href="#retirer-un-repertoire-de-l-index" id="id17">Retirer un répertoire de l’index</a></p></li>
+<li><p><a class="reference internal" href="#lister-les-fichier-dossier-ignores" id="id18">lister les fichier dossier ignorés ?</a></p></li>
+<li><p><a class="reference internal" href="#ratacher-la-tete" id="id19">Ratacher la tête</a></p></li>
+<li><p><a class="reference internal" href="#annuler-le-dernier-commit" id="id20">Annuler le dernier commit</a></p></li>
+<li><p><a class="reference internal" href="#lister-les-commit-d-une-branche-distante" id="id21">Lister les commit d’une branche distante</a></p></li>
+<li><p><a class="reference internal" href="#depot-git-sur-cle-usb" id="id22">Dépôt git sur clé usb</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#reste-des-notes-xmind-a-transformer" id="id22">Reste des notes xmind a transformer</a></p></li>
-<li><p><a class="reference internal" href="#weblinks" id="id23">Weblinks</a></p></li>
+<li><p><a class="reference internal" href="#reste-des-notes-xmind-a-transformer" id="id23">Reste des notes xmind a transformer</a></p></li>
+<li><p><a class="reference internal" href="#weblinks" id="id24">Weblinks</a></p></li>
 </ul>
 </li>
 </ul>
@@ -88,6 +89,16 @@
 <div class="section" id="git">
 <h2><a class="toc-backref" href="#sommaire">git</a><a class="headerlink" href="#git" title="Lien permanent vers ce titre">¶</a></h2>
 <p>penser au fichier xmind</p>
+</div>
+<div class="section" id="git-rebase">
+<h2><a class="toc-backref" href="#sommaire">git rebase</a><a class="headerlink" href="#git-rebase" title="Lien permanent vers ce titre">¶</a></h2>
+<p><a class="reference external" href="https://www.miximum.fr/blog/git-rebase/">https://www.miximum.fr/blog/git-rebase/</a></p>
+<ul class="simple">
+<li><p>conserver un historique propre ;</p></li>
+<li><p>corriger des erreurs de fusion ;</p></li>
+<li><p>faciliter le travail collaboratif ;</p></li>
+<li><p>faciliter les fusions sur les branches qui nécessitent un très long développement.</p></li>
+</ul>
 </div>
 <div class="section" id="petits-trucs-utiles">
 <h2><a class="toc-backref" href="#sommaire">petits trucs utiles</a><a class="headerlink" href="#petits-trucs-utiles" title="Lien permanent vers ce titre">¶</a></h2>
@@ -317,6 +328,7 @@ Déplacer le dernier commit d&#39;une branche vers une autre branche
   <ul>
 <li><a class="reference internal" href="#">Notes sur git</a><ul>
 <li><a class="reference internal" href="#git">git</a></li>
+<li><a class="reference internal" href="#git-rebase">git rebase</a></li>
 <li><a class="reference internal" href="#petits-trucs-utiles">petits trucs utiles</a><ul>
 <li><a class="reference internal" href="#logiciels">Logiciels</a></li>
 <li><a class="reference internal" href="#suppression-d-un-fichier">Suppression d’un fichier</a></li>
@@ -360,7 +372,7 @@ Déplacer le dernier commit d&#39;une branche vers une autre branche
     </form>
     </div>
 </div>
-<script type="text/javascript">$('#searchbox').show(0);</script>
+<script>$('#searchbox').show(0);</script>
         </div>
       </div>
       <div class="clearer"></div>
@@ -382,7 +394,7 @@ Déplacer le dernier commit d&#39;une branche vers une autre branche
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2019, J.SORANZO.
-      Créé avec <a href="http://sphinx-doc.org/">Sphinx</a> 2.3.1.
+      Créé avec <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.4.
     </div>
   </body>
 </html>

@@ -59,3 +59,20 @@ Major LEE Glossaire
     MISRA
         Motor Industry Software Reliability Association - standard de dev C et C++
     
+    AHB
+        `Advanced High-performance Bus`_
+
+    ABI
+        `Application Binary Interface`_ en gros API mais low level hardware
+
+.. _`Application Binary Interface` :  https://en.wikipedia.org/wiki/Application_binary_interface
+        
+.. _`Advanced High-performance Bus` : https://en.wikipedia.org/wiki/Advanced_Microcontroller_Bus_Architecture#Advanced_High-performance_Bus_.28AHB.29
+        
+        
+        
+====================================================================================================
+Weblinks
+====================================================================================================
+
+.. target-notes::

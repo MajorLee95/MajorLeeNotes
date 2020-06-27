@@ -30,6 +30,19 @@ git
 ================================
 penser au fichier xmind
 
+====================================================================================================
+git rebase
+====================================================================================================
+https://www.miximum.fr/blog/git-rebase/
+
+
+- conserver un historique propre ;
+- corriger des erreurs de fusion ;
+- faciliter le travail collaboratif ;
+- faciliter les fusions sur les branches qui nécessitent un très long développement.
+
+
+
 
 
 ================================

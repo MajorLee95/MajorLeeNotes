@@ -1,18 +1,18 @@
 
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<html lang="fr">
   <head>
     <meta charset="utf-8" />
     <title>NUCLEO board * &#8212; Documentation MajorLee&#39;s notes </title>
     <link rel="stylesheet" href="../../_static/nature.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-    <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
-    <script type="text/javascript" src="../../_static/jquery.js"></script>
-    <script type="text/javascript" src="../../_static/underscore.js"></script>
-    <script type="text/javascript" src="../../_static/doctools.js"></script>
-    <script type="text/javascript" src="../../_static/language_data.js"></script>
-    <script type="text/javascript" src="../../_static/translations.js"></script>
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
+    <script src="../../_static/translations.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Recherche" href="../../search.html" />
     <link rel="next" title="Mes notes sur C++" href="../../C++/cpp.html" />
@@ -57,55 +57,57 @@
 </dd>
 </dl>
 <div class="contents topic" id="sommaire">
-<p class="topic-title first">Sommaire</p>
+<p class="topic-title">Sommaire</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="#nucleo-board" id="id58">NUCLEO board *</a></p>
+<li><p><a class="reference internal" href="#nucleo-board" id="id63">NUCLEO board *</a></p>
 <ul>
-<li><p><a class="reference internal" href="#presentation" id="id59">Présentation</a></p>
+<li><p><a class="reference internal" href="#presentation" id="id64">Présentation</a></p>
 <ul>
-<li><p><a class="reference internal" href="#carte-nucleo-f401re" id="id60">Carte NUCLEO-F401RE</a></p></li>
-<li><p><a class="reference internal" href="#carte-nucleo-f429zi" id="id61">Carte NUCLEO-F429ZI</a></p></li>
+<li><p><a class="reference internal" href="#carte-nucleo-f401re" id="id65">Carte NUCLEO-F401RE</a></p></li>
+<li><p><a class="reference internal" href="#carte-nucleo-f429zi" id="id66">Carte NUCLEO-F429ZI</a></p></li>
+<li><p><a class="reference internal" href="#nucleo-f746zg" id="id67">NUCLEO-F746ZG</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#outils-de-developpement" id="id62">Outils de développement</a></p>
+<li><p><a class="reference internal" href="#differences-entre-cartes" id="id68">Différences entre cartes</a></p></li>
+<li><p><a class="reference internal" href="#outils-de-developpement" id="id69">Outils de développement</a></p>
 <ul>
-<li><p><a class="reference internal" href="#autres-outils-de-developpement" id="id63">Autres outils de développement</a></p></li>
+<li><p><a class="reference internal" href="#autres-outils-de-developpement" id="id70">Autres outils de développement</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#les-pdf-etudies" id="id64">Les pdf étudiés</a></p>
+<li><p><a class="reference internal" href="#les-pdf-etudies" id="id71">Les pdf étudiés</a></p>
 <ul>
-<li><p><a class="reference internal" href="#gettingstarted-firmware-en-dm00105925-pdf" id="id65">gettingStarted_firmware_en.DM00105925.pdf</a></p></li>
-<li><p><a class="reference internal" href="#stm32cubef4gettingstarted-pdf" id="id66">STM32CubeF4GettingStarted.pdf</a></p></li>
-<li><p><a class="reference internal" href="#um1718-cubemx-pdf" id="id67">UM1718_CubeMX.pdf</a></p></li>
-<li><p><a class="reference internal" href="#getting-started-with-stm32-nucleo-board-software-development-tools-stmicroelectronics-pdf" id="id68">getting-started-with-stm32-nucleo-board-software-development-tools-stmicroelectronics.pdf</a></p></li>
-<li><p><a class="reference internal" href="#um1725-description-of-stm32f4-hal-and-ll-drivers-dm00105879" id="id69">UM1725 Description of STM32F4 HAL and LL drivers DM00105879</a></p></li>
+<li><p><a class="reference internal" href="#gettingstarted-firmware-en-dm00105925-pdf" id="id72">gettingStarted_firmware_en.DM00105925.pdf</a></p></li>
+<li><p><a class="reference internal" href="#stm32cubef4gettingstarted-pdf" id="id73">STM32CubeF4GettingStarted.pdf</a></p></li>
+<li><p><a class="reference internal" href="#um1718-cubemx-pdf" id="id74">UM1718_CubeMX.pdf</a></p></li>
+<li><p><a class="reference internal" href="#getting-started-with-stm32-nucleo-board-software-development-tools-stmicroelectronics-pdf" id="id75">getting-started-with-stm32-nucleo-board-software-development-tools-stmicroelectronics.pdf</a></p></li>
+<li><p><a class="reference internal" href="#um1725-description-of-stm32f4-hal-and-ll-drivers-dm00105879" id="id76">UM1725 Description of STM32F4 HAL and LL drivers DM00105879</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#mes-manips-de-2015" id="id70">Mes manips de 2015</a></p></li>
-<li><p><a class="reference internal" href="#mes-manips-2020" id="id71">Mes manips 2020</a></p>
+<li><p><a class="reference internal" href="#mes-manips-de-2015" id="id77">Mes manips de 2015</a></p></li>
+<li><p><a class="reference internal" href="#mes-manips-2020" id="id78">Mes manips 2020</a></p>
 <ul>
-<li><p><a class="reference internal" href="#toggleledcubemx" id="id72">toggleLeDCubeMX</a></p></li>
-<li><p><a class="reference internal" href="#pushbuttoninterrup" id="id73">pushButtonInterrup</a></p></li>
-<li><p><a class="reference internal" href="#uartandrxit" id="id74">uartAndRXIt</a></p></li>
-<li><p><a class="reference internal" href="#rx-with-dma" id="id75">RX with DMA</a></p></li>
-<li><p><a class="reference internal" href="#rx-through-idle-line-interrupt" id="id76">RX through idle line interrupt</a></p></li>
-<li><p><a class="reference internal" href="#stm32-i2c-scanner" id="id77">STM32 I2C scanner</a></p></li>
-<li><p><a class="reference internal" href="#stm32-i2c-oled-0-96" id="id78">STM32 I2C OLED 0.96</a></p></li>
+<li><p><a class="reference internal" href="#toggleledcubemx" id="id79">toggleLeDCubeMX</a></p></li>
+<li><p><a class="reference internal" href="#pushbuttoninterrup" id="id80">pushButtonInterrup</a></p></li>
+<li><p><a class="reference internal" href="#uartandrxit" id="id81">uartAndRXIt</a></p></li>
+<li><p><a class="reference internal" href="#rx-with-dma" id="id82">RX with DMA</a></p></li>
+<li><p><a class="reference internal" href="#rx-through-idle-line-interrupt" id="id83">RX through idle line interrupt</a></p></li>
+<li><p><a class="reference internal" href="#stm32-i2c-scanner" id="id84">STM32 I2C scanner</a></p></li>
+<li><p><a class="reference internal" href="#stm32-i2c-oled-0-96" id="id85">STM32 I2C OLED 0.96</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#stm32workbench-minimum-project" id="id79">STM32Workbench minimum project</a></p></li>
-<li><p><a class="reference internal" href="#autres-drivers-et-outils" id="id80">Autres drivers et outils</a></p></li>
-<li><p><a class="reference internal" href="#cmsis" id="id81">CMSIS</a></p></li>
-<li><p><a class="reference internal" href="#freertos-sur-nucleo" id="id82">FreeRTOS sur NUCLEO</a></p></li>
-<li><p><a class="reference internal" href="#tips" id="id83">Tips</a></p>
+<li><p><a class="reference internal" href="#stm32workbench-minimum-project" id="id86">STM32Workbench minimum project</a></p></li>
+<li><p><a class="reference internal" href="#autres-drivers-et-outils" id="id87">Autres drivers et outils</a></p></li>
+<li><p><a class="reference internal" href="#cmsis" id="id88">CMSIS</a></p></li>
+<li><p><a class="reference internal" href="#freertos-sur-nucleo" id="id89">FreeRTOS sur NUCLEO</a></p></li>
+<li><p><a class="reference internal" href="#tips" id="id90">Tips</a></p>
 <ul>
-<li><p><a class="reference internal" href="#doxygen-support" id="id84">Doxygen support</a></p></li>
-<li><p><a class="reference internal" href="#nulceo-f401-doesn-t-start-in-stand-alone-mode" id="id85">NULCEO-F401 doesn’t start in stand alone mode</a></p></li>
-<li><p><a class="reference internal" href="#nop" id="id86">NOP</a></p></li>
-<li><p><a class="reference internal" href="#uart-console-in-ide" id="id87">UART console in IDE</a></p></li>
+<li><p><a class="reference internal" href="#doxygen-support" id="id91">Doxygen support</a></p></li>
+<li><p><a class="reference internal" href="#nulceo-f401-doesn-t-start-in-stand-alone-mode" id="id92">NULCEO-F401 doesn’t start in stand alone mode</a></p></li>
+<li><p><a class="reference internal" href="#nop" id="id93">NOP</a></p></li>
+<li><p><a class="reference internal" href="#uart-console-in-ide" id="id94">UART console in IDE</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#weblinks" id="id88">Weblinks</a></p></li>
+<li><p><a class="reference internal" href="#weblinks" id="id95">Weblinks</a></p></li>
 </ul>
 </li>
 </ul>
@@ -121,6 +123,7 @@
 <div class="section" id="carte-nucleo-f401re">
 <h3><a class="toc-backref" href="#sommaire">Carte NUCLEO-F401RE</a><a class="headerlink" href="#carte-nucleo-f401re" title="Lien permanent vers ce titre">¶</a></h3>
 <p>Chip: STM32F401RE (R = 64pin package, E = 512k FLASH)</p>
+<a class="reference internal image-reference" href="../../_images/nucleoF401reBoard.jpg"><img alt="../../_images/nucleoF401reBoard.jpg" src="../../_images/nucleoF401reBoard.jpg" style="width: 500px;" /></a>
 <a class="reference internal image-reference" href="../../_images/F401xE_features.jpg"><img alt="../../_images/F401xE_features.jpg" src="../../_images/F401xE_features.jpg" style="width: 500px;" /></a>
 <p>Carte NUCLEO64</p>
 <p>Prix indicatif : 13€ <a class="reference external" href="https://www.mouser.fr/ProductDetail/STMicroelectronics/NUCLEO-F401RE?qs=sGAEpiMZZMu3sxpa5v1qrjJpfJ%2F%252BCrSiyHUXpPlRNo4%3D">NUCLEO-F401RE chez MOUSER</a> <a class="footnote-reference brackets" href="#id9" id="id10">5</a></p>
@@ -151,22 +154,44 @@ dans le fichier:</p>
 <p>Chip: STM32F429ZI (Z = 144pin package, I = 2048k FLASH)</p>
 <p>32b Arm® Cortex®-M4 MCU+FPU, 225DMIPS, up to 2MB Flash/256+4KB RAM, USB
 OTG HS/FS, Ethernet, 17 TIMs, 3 ADCs, 20 com. interfaces, camera &amp; LCD-TFT</p>
+<a class="reference internal image-reference" href="../../_images/NUCLEO-F429ZI.jpg"><img alt="../../_images/NUCLEO-F429ZI.jpg" src="../../_images/NUCLEO-F429ZI.jpg" style="width: 500px;" /></a>
 <a class="reference internal image-reference" href="../../_images/F429_features.jpg"><img alt="../../_images/F429_features.jpg" src="../../_images/F429_features.jpg" style="width: 500px;" /></a>
 <p>Carte NUCLE144</p>
 <p>Prix indicatif : 26€ <a class="reference external" href="https://www.mouser.fr/ProductDetail/STMicroelectronics/NUCLEO-F429ZI?qs=mKNKSX85ZJcE6FU0UkiXTA==&amp;vip=1&amp;gclid=CjwKCAjwguzzBRBiEiwAgU0FT1UiJxq6z6simiBPlGAwmrXBhkqT_WmzdohmaAP8F2i-SyZEE2RqPRoConUQAvD_BwE">NUCLEO-F429ZI chez MOUSER</a> <a class="footnote-reference brackets" href="#id7" id="id8">4</a></p>
 </div>
+<div class="section" id="nucleo-f746zg">
+<h3><a class="toc-backref" href="#sommaire">NUCLEO-F746ZG</a><a class="headerlink" href="#nucleo-f746zg" title="Lien permanent vers ce titre">¶</a></h3>
+<p>(Z = 144pin package, G = 1024k FLASH)</p>
+<p>Cortex M7 (architecture ARM V7)</p>
+<p>High-performance and DSP with FPU ARM Cortex-M7 MCU with 1 Mbyte Flash, 216 MHz CPU, Art Accelerator
+L1 cache, 320k ( 64k of data TCM RAM for critical real-time data) + 16KB of instruction TCM RAM
+(for critical real-time routines) + 4KB of backup SRAM (available in the lowest power modes)</p>
+<p>single precision FPU</p>
+<p>Prix indicatif : 22€</p>
+<p>Nécessite d’installer STM32CubeF7</p>
+</div>
+</div>
+<div class="section" id="differences-entre-cartes">
+<h2><a class="toc-backref" href="#sommaire">Différences entre cartes</a><a class="headerlink" href="#differences-entre-cartes" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Quelle différence entre un F429-ZI et une NUCLEO-F746ZG ?</p>
+<p>Je n’ai personnelement pas trouvé de source facile et fiable.</p>
+<a class="reference internal image-reference" href="../../_images/en.ln1847_stm32_nucleo.jpg"><img alt="../../_images/en.ln1847_stm32_nucleo.jpg" src="../../_images/en.ln1847_stm32_nucleo.jpg" style="width: 400px;" /></a>
+<p>Source image : <a class="reference external" href="https://www.st.com/en/evaluation-tools/stm32-nucleo-boards.html#overview">site st STM32 Nucleo Boards</a> <a class="footnote-reference brackets" href="#id1" id="id11">1</a></p>
+<p>Cortex M4F versus M7 ?</p>
+<p>Un <a class="reference external" href="https://community.arm.com/developer/ip-products/processors/f/cortex-m-forum/5686/m4-m7-comparision">article sur community arm</a> <a class="footnote-reference brackets" href="#id12" id="id13">6</a></p>
+<p>Sans oublier <a class="reference external" href="https://en.wikipedia.org/wiki/ARM_Cortex-M#Cortex-M7">Cortex M sur wikipedia</a> <a class="footnote-reference brackets" href="#id14" id="id15">7</a></p>
 </div>
 <div class="section" id="outils-de-developpement">
 <h2><a class="toc-backref" href="#sommaire">Outils de développement</a><a class="headerlink" href="#outils-de-developpement" title="Lien permanent vers ce titre">¶</a></h2>
 <p>STM32CubeMX est l’outil indispensable et <strong>IL FAUT COMMENCER par LUI</strong> voir <a class="reference internal" href="#um1718-cubemx-pdf">UM1718_CubeMX.pdf</a>
 J’utilise actuellement (04/2020) la version 5.6.0</p>
 <p>STM32 workbench développé par ACSYSY ou AC6. Dans la litérature ST cette suite logiciel se nome
-SW4STM32. Il en est question sur la <a class="reference external" href="https://www.st.com/en/development-tools/sw4stm32.html">page officiielle SW4STM32</a> <a class="footnote-reference brackets" href="#id11" id="id12">6</a> qui renvoie vers
-<a class="reference external" href="https://www.openstm32.org/HomePage">la page openstm32</a> <a class="footnote-reference brackets" href="#id13" id="id14">7</a></p>
+SW4STM32. Il en est question sur la <a class="reference external" href="https://www.st.com/en/development-tools/sw4stm32.html">page officiielle SW4STM32</a> <a class="footnote-reference brackets" href="#id16" id="id17">8</a> qui renvoie vers
+<a class="reference external" href="https://www.openstm32.org/HomePage">la page openstm32</a> <a class="footnote-reference brackets" href="#id18" id="id19">9</a></p>
 <p>Cet outil est basé sur Eclipse. Je ne suis pas fan. Je trouve que tout cela est très lourd ! Mais
 comme ces petits microcontroleurs ont l’air plein de potentiel, je fais l’effort…</p>
 <p>System Worbench for STM32 : vers qui faut-il se trouner pour avoir de l’aide ?</p>
-<p>Eclipse, Acsys ou ST ? ou peut-ête vers <a class="reference external" href="https://www.openstm32.org/HomePage">le site openstm32.org</a> <a class="footnote-reference brackets" href="#id13" id="id15">7</a> (ce qui reviens à peut près
+<p>Eclipse, Acsys ou ST ? ou peut-ête vers <a class="reference external" href="https://www.openstm32.org/HomePage">le site openstm32.org</a> <a class="footnote-reference brackets" href="#id18" id="id20">9</a> (ce qui reviens à peut près
 au même que AC6)</p>
 <p>Exemple la commande Format du menu Source ! On fini par la trouver dans l’aide de Eclipse:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">C</span><span class="o">/</span><span class="n">C</span><span class="o">++</span> <span class="n">Development</span> <span class="n">User</span> <span class="n">Guide</span><span class="o">/</span><span class="n">Reference</span><span class="o">/</span><span class="n">C</span><span class="o">/</span><span class="n">C</span><span class="o">++</span> <span class="n">Menubar</span><span class="o">/</span><span class="n">Source</span> <span class="n">Menu</span>
@@ -174,10 +199,10 @@ au même que AC6)</p>
 </div>
 <div class="section" id="autres-outils-de-developpement">
 <h3><a class="toc-backref" href="#sommaire">Autres outils de développement</a><a class="headerlink" href="#autres-outils-de-developpement" title="Lien permanent vers ce titre">¶</a></h3>
-<p>Officiellement sur le <a class="reference external" href="https://www.st.com/en/development-tools/stm32-ides.html">site ST outils de dev</a> <a class="footnote-reference brackets" href="#id18" id="id19">9</a>, il y a :</p>
+<p>Officiellement sur le <a class="reference external" href="https://www.st.com/en/development-tools/stm32-ides.html">site ST outils de dev</a> <a class="footnote-reference brackets" href="#id23" id="id24">11</a>, il y a :</p>
 <a class="reference internal image-reference" href="../../_images/outilsDev.jpg"><img alt="../../_images/outilsDev.jpg" src="../../_images/outilsDev.jpg" style="width: 600px;" /></a>
 <p>La page product selector annonce 32 items au 10/04/2020, la plupart sont payant comme IAR, KEIL</p>
-<p>Atolic TrueStudio =&gt; remplacé par <a class="reference external" href="https://www.st.com/en/development-tools/stm32cubeide.html">STM32cubeIDE</a> <a class="footnote-reference brackets" href="#id16" id="id17">8</a></p>
+<p>Atolic TrueStudio =&gt; remplacé par <a class="reference external" href="https://www.st.com/en/development-tools/stm32cubeide.html">STM32cubeIDE</a> <a class="footnote-reference brackets" href="#id21" id="id22">10</a></p>
 <p>Au niveau des fonctionnalité cela ressemble à STM32workbench si ce n’est que ST annonce une forte
 intégration avec STM32cubeMX.</p>
 <p>KEIL uVision</p>
@@ -215,7 +240,7 @@ some demonstration firmware (STSW-STM32143).</p>
 complètement à ce qui est décrit dans le document ! Or, on trouve dans l’arbo en question un
 document d’explication plus récent que celui-ci : UM1730 de février 2019</p>
 <a class="reference internal image-reference" href="../../_images/stm32package.jpg"><img alt="../../_images/stm32package.jpg" src="../../_images/stm32package.jpg" style="width: 800px;" /></a>
-<p>Adresse de cette copie d’écran : page <a class="reference external" href="https://www.st.com/content/st_com/en/products/evaluation-tools/product-evaluation-tools/mcu-mpu-eval-tools/stm32-mcu-mpu-eval-tools/stm32-nucleo-boards/nucleo-f401re.html#tools-software">nucleo-F401RE Tools and Softwares</a> <a class="footnote-reference brackets" href="#id20" id="id21">10</a></p>
+<p>Adresse de cette copie d’écran : page <a class="reference external" href="https://www.st.com/content/st_com/en/products/evaluation-tools/product-evaluation-tools/mcu-mpu-eval-tools/stm32-mcu-mpu-eval-tools/stm32-nucleo-boards/nucleo-f401re.html#tools-software">nucleo-F401RE Tools and Softwares</a> <a class="footnote-reference brackets" href="#id25" id="id26">12</a></p>
 <p>J’abandonne donc l’étude du présent document pour me consacré à ce document plus récent.</p>
 </div>
 <div class="section" id="stm32cubef4gettingstarted-pdf">
@@ -229,7 +254,7 @@ document d’explication plus récent que celui-ci : UM1730 de février 2019</p>
 <p>Quand on change d’espace de travail, l’application redémarre entièrement et est très longue à
 redémarrer !</p>
 <dl class="simple">
-<dt>Quand on importe le projet, il se nomme STM32F4xx-Nucleo et pas GPIO ! et tous les exemples risquent</dt><dd><p>de se nommer ainsi. Il y a un post sur le forum : <a class="reference external" href="https://www.openstm32.org/forumthread774">Rename projects ..Does that work ?</a> <a class="footnote-reference brackets" href="#id22" id="id23">11</a></p>
+<dt>Quand on importe le projet, il se nomme STM32F4xx-Nucleo et pas GPIO ! et tous les exemples risquent</dt><dd><p>de se nommer ainsi. Il y a un post sur le forum : <a class="reference external" href="https://www.openstm32.org/forumthread774">Rename projects ..Does that work ?</a> <a class="footnote-reference brackets" href="#id27" id="id28">13</a></p>
 </dd>
 </dl>
 <p><strong>Essai 1</strong> : import avec copy to workspace: 6 warning invalid projet path (des chemin relatifs):</p>
@@ -252,12 +277,12 @@ nouevelle target comme pour l’essai 1. Je n’ai même pas essayé de compiler
 <p>Cette configuration fonctionne au moins.</p>
 <p>Dans le document, on apprend que le package contient:</p>
 <ul class="simple">
-<li><p>STM32Cube <a class="reference internal" href="../../glossaire.html#term-hal"><span class="xref std std-term">HAL</span></a> STM32 abstraction layer embedded software maximizing portability across the STM32 portfolio</p></li>
+<li><p>STM32Cube <a class="reference internal" href="../../glossaire.html#term-HAL"><span class="xref std std-term">HAL</span></a> STM32 abstraction layer embedded software maximizing portability across the STM32 portfolio</p></li>
 <li><p>low-layer APIs (LL) for a set of peripherals, offering a fast, lightweight, expert-oriented layer that is closer to the hardware than the HAL</p></li>
 <li><p>a consistent set of middleware components, such as RTOS, USB, TCP/IP and graphics</p></li>
 <li><p>all embedded software utilities, with a full set of examples</p></li>
 </ul>
-<p>Pour information : <a class="reference internal" href="../../glossaire.html#term-bsp"><span class="xref std std-term">BSP</span></a> Board Support Package</p>
+<p>Pour information : <a class="reference internal" href="../../glossaire.html#term-BSP"><span class="xref std std-term">BSP</span></a> Board Support Package</p>
 <p>Au chapitre 3, §3.1, il est écrit:  « The user only has to define the right macro in stm32f4xx.h »
 Or dans les exemples fournis, on ne trouve ni trace de cette macro ni même de ce fichier !
 La confusion, la confusion… Je ne l’ai trouvé dans les fichiers : <a class="reference internal" href="#cmsis">CMSIS</a></p>
@@ -290,7 +315,7 @@ initialization C code using graphical wizards.</p>
 <p>En revenche, il y est question de
 HAL driver user manuals for STM32F4xx (UM1725)</p>
 <p>Il semble que cela soit un outil <strong>indispensable</strong> pour démarrer un nouveau projet.</p>
-<p>Vidéo <a class="reference external" href="https://www.youtube.com/watch?v=szMGedsp9jc">Youtube pour Stm32CubeMX</a> <a class="footnote-reference brackets" href="#id24" id="id25">12</a></p>
+<p>Vidéo <a class="reference external" href="https://www.youtube.com/watch?v=szMGedsp9jc">Youtube pour Stm32CubeMX</a> <a class="footnote-reference brackets" href="#id29" id="id30">14</a></p>
 <div class="admonition warning">
 <p class="admonition-title">Avertissement</p>
 <p>Voir le menu help/doc and ressources (il y a encore plein de pdf..)</p>
@@ -335,7 +360,7 @@ présentent en plus un certains nombre de caractérisitiques particulièrement i
 <li><p>callback fonctions…</p></li>
 </ul>
 <p id="index-1">Les fichiers .c/.h sont fournis par périphériques développés en ANSI-C strict pour un maximum de
-compatibilité et entièrement documenté et <a class="reference external" href="https://en.wikipedia.org/wiki/MISRA_C">MISRA-C 2004</a> <a class="footnote-reference brackets" href="#id26" id="id27">13</a> compliant. La liste est longue,
+compatibilité et entièrement documenté et <a class="reference external" href="https://en.wikipedia.org/wiki/MISRA_C">MISRA-C 2004</a> <a class="footnote-reference brackets" href="#id31" id="id32">15</a> compliant. La liste est longue,
 j’en ai dénombré 68:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">_adc</span><span class="p">,</span> <span class="n">_adc_ex</span><span class="p">,</span> <span class="n">_can</span><span class="p">,</span> <span class="n">_cec</span><span class="p">,</span> <span class="n">_cortex</span><span class="p">,</span> <span class="n">_crc</span><span class="p">,</span> <span class="n">_cryp</span><span class="p">,</span> <span class="n">_cryp_ex</span><span class="p">,</span> <span class="n">_dac</span><span class="p">,</span> <span class="n">_dac_ex</span><span class="p">,</span> <span class="n">_dcmi</span><span class="p">,</span> <span class="n">_dcmi_ex</span><span class="p">,</span> <span class="n">_def</span><span class="p">,</span>
 <span class="n">_dfsdm</span><span class="p">,</span> <span class="n">_dma</span><span class="p">,</span> <span class="n">_dma2d</span><span class="p">,</span> <span class="n">_dma_ex</span><span class="p">,</span> <span class="n">_dsi</span><span class="p">,</span> <span class="n">_eth</span><span class="p">,</span> <span class="n">_exti</span><span class="p">,</span> <span class="n">_flash</span><span class="p">,</span> <span class="n">_flash_ex</span><span class="p">,</span> <span class="n">_flash_ramfunc</span><span class="p">,</span> <span class="n">_fmpi2c</span><span class="p">,</span>
@@ -518,7 +543,7 @@ bloquante est systématiquement étudiées.</p>
 </div>
 <div class="section" id="mes-manips-de-2015">
 <h2><a class="toc-backref" href="#sommaire">Mes manips de 2015</a><a class="headerlink" href="#mes-manips-de-2015" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Décembre 2015, journal de manip en version OpenOffice, aidé du <a class="reference external" href="http://leanpub.com/mastering-stm32">livre de Carmine Noviello</a> <a class="footnote-reference brackets" href="#id28" id="id29">14</a></p>
+<p>Décembre 2015, journal de manip en version OpenOffice, aidé du <a class="reference external" href="http://leanpub.com/mastering-stm32">livre de Carmine Noviello</a> <a class="footnote-reference brackets" href="#id33" id="id34">16</a></p>
 <p>Dans son livre Carmine porpose d’installer un chaine de développement basée sur Eclipse et GCC
 et s’en explique…</p>
 <p>Installation des outils:</p>
@@ -547,7 +572,7 @@ et s’en explique…</p>
 </pre></div>
 </div>
 <p>Manip micro Python cf journal au 25/12/2015 (à récupérer pour mettre ici)</p>
-<p>Et <a class="reference external" href="https://github.com/stm32duino/wiki/wiki/Getting-Started">STM32duino</a> <a class="footnote-reference brackets" href="#id30" id="id31">15</a> ?</p>
+<p>Et <a class="reference external" href="https://github.com/stm32duino/wiki/wiki/Getting-Started">STM32duino</a> <a class="footnote-reference brackets" href="#id35" id="id36">17</a> ?</p>
 </div>
 <div class="section" id="mes-manips-2020">
 <h2><a class="toc-backref" href="#sommaire">Mes manips 2020</a><a class="headerlink" href="#mes-manips-2020" title="Lien permanent vers ce titre">¶</a></h2>
@@ -568,8 +593,8 @@ présente pas de grosses difficultés.</p>
 <p>Objectif: utiliser le bouton poussoir de la carte sous interruption.</p>
 <p>On commence dans CubeMX, mais avant une petite recherche Youtube. On ne trouve que pour Keil mais
 la partie CubeMX doit être la même. Mots clés: cubeMx AC6 push button</p>
-<p><a class="reference external" href="https://www.youtube.com/watch?v=sWe4kvzLMjY">Vidéo Youtube de  MYaqoobEmbedded</a> <a class="footnote-reference brackets" href="#id32" id="id33">16</a></p>
-<p><a class="reference external" href="https://www.youtube.com/watch?v=0I53r0KmOxg">Vidéo Youtube de KGP Talkie</a> <a class="footnote-reference brackets" href="#id34" id="id35">17</a></p>
+<p><a class="reference external" href="https://www.youtube.com/watch?v=sWe4kvzLMjY">Vidéo Youtube de  MYaqoobEmbedded</a> <a class="footnote-reference brackets" href="#id37" id="id38">18</a></p>
+<p><a class="reference external" href="https://www.youtube.com/watch?v=0I53r0KmOxg">Vidéo Youtube de KGP Talkie</a> <a class="footnote-reference brackets" href="#id39" id="id40">19</a></p>
 <p>Problème de débounce. Solution HAL_getTick() if (prev-new &gt; 25) toggle.</p>
 <p>Ne pas oublier de remettre à 0 prev et new</p>
 <p>HAL_getTick retourne un uint32_t soit 4 294 967 296‬ms ou encore 1193.05 heures 49jours17heures.</p>
@@ -623,7 +648,7 @@ est suffisante. Ne pas oublier les exemples fournis dans STM32Cube_FW_F4_V1.25.0
 <p>Configuration de CubeMX pour utiliser un UART avec interruption ? Relativement facile 1 cass à cocher
 sous l’onglet NVIC dans l’interface de configuration UART (j’ai choisi UART2)</p>
 <p>Fonction à utiliser : HAL_UART_Receive_IT</p>
-<p>Une vidéo plutôt bien faite sur <a class="reference external" href="https://www.youtube.com/watch?v=xE6GVt7XuJI">Youtube from  Web learning</a> <a class="footnote-reference brackets" href="#id36" id="id37">18</a></p>
+<p>Une vidéo plutôt bien faite sur <a class="reference external" href="https://www.youtube.com/watch?v=xE6GVt7XuJI">Youtube from  Web learning</a> <a class="footnote-reference brackets" href="#id41" id="id42">20</a></p>
 <p>Sans rien faire d’autre que d’ajouter <code class="docutils literal notranslate"><span class="pre">__HAL_UART_ENABLE_IT(&amp;huart2,</span> <span class="pre">UART_IT_RXNE);</span></code>, j’ai bien
 un branchement à <code class="docutils literal notranslate"><span class="pre">void</span> <span class="pre">USART2_IRQHandler(void)</span></code> mais seulement sur le premier caractère.</p>
 <p>J’ai réussi à obtenir de bon résultats avec:</p>
@@ -725,7 +750,7 @@ traite bien le bon UART (pour être tout à fait générique).</p>
 <div class="section" id="stm32-i2c-scanner">
 <h3><a class="toc-backref" href="#sommaire">STM32 I2C scanner</a><a class="headerlink" href="#stm32-i2c-scanner" title="Lien permanent vers ce titre">¶</a></h3>
 <p>Cela peut s’avérer utile pour vérifier les branchements.</p>
-<p>Directement trouvé sur le <a class="reference external" href="https://github.com/ProjectsByJRP/stm32_hal_i2c_bus_scan">github  de ProjectsByJRP</a> <a class="footnote-reference brackets" href="#id38" id="id39">19</a></p>
+<p>Directement trouvé sur le <a class="reference external" href="https://github.com/ProjectsByJRP/stm32_hal_i2c_bus_scan">github  de ProjectsByJRP</a> <a class="footnote-reference brackets" href="#id43" id="id44">21</a></p>
 <p>L’exemple est fournit pour un STM32F1xx mais l’adaptation est très simple ! J’ai procédé en faisant
 des copiés/collés plutot qu’en copiant directement le code. Tout se passe dans le main.c</p>
 <p>Le principe est toujours le même, on essais une transaction simple pour toutes les adresses de
@@ -734,27 +759,27 @@ composants entre 1 et 127 et si on reçoit un ack, on considère qu’il y a un 
 </div>
 <div class="section" id="stm32-i2c-oled-0-96">
 <h3><a class="toc-backref" href="#sommaire">STM32 I2C OLED 0.96</a><a class="headerlink" href="#stm32-i2c-oled-0-96" title="Lien permanent vers ce titre">¶</a></h3>
-<p>Recherche internet : <a class="reference external" href="https://www.banggood.com/0_96-Inch-OLED-I2C-IIC-Communication-Display-12864-LCD-Module-p-1535708.html?rmmds=detail-left-hotproducts__1&amp;ID=229&amp;cur_warehouse=CN">écran OLED 0.96 » IIC</a> <a class="footnote-reference brackets" href="#id40" id="id41">20</a></p>
+<p>Recherche internet : <a class="reference external" href="https://www.banggood.com/0_96-Inch-OLED-I2C-IIC-Communication-Display-12864-LCD-Module-p-1535708.html?rmmds=detail-left-hotproducts__1&amp;ID=229&amp;cur_warehouse=CN">écran OLED 0.96 » IIC</a> <a class="footnote-reference brackets" href="#id45" id="id46">22</a></p>
 <p>Caractéristiques principales:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Resolution</span><span class="p">:</span> <span class="mi">128</span><span class="n">x64</span>
 <span class="n">Driver</span> <span class="n">chip</span><span class="p">:</span> <span class="n">SSD1306</span>
 <span class="n">Wide</span> <span class="n">voltage</span> <span class="n">support</span><span class="p">:</span> <span class="n">DC</span> <span class="mf">3.3</span><span class="n">V</span><span class="o">-</span><span class="mi">5</span><span class="n">V</span>
 </pre></div>
 </div>
-<p>Une <a class="reference external" href="http://controllerstech.com/wp-content/uploads/2019/06/oled.zip">librairie sur controllerstech.com</a> <a class="footnote-reference brackets" href="#id42" id="id43">21</a></p>
+<p>Une <a class="reference external" href="http://controllerstech.com/wp-content/uploads/2019/06/oled.zip">librairie sur controllerstech.com</a> <a class="footnote-reference brackets" href="#id47" id="id48">23</a></p>
 <p>I2C1 : PB7 = SDA1 et PB6 = SCL1 (à noter que dans CubeMX I2C2 n’est pas utilisable car PB3 est
 utilisé par SYS_JTDO-SWO) mais il reste I2C3 !!! Mais on peut aussi les avoir sur PB8 = SCL
 et PB9 = SDA (plus simple pour le cablage).
 pour correspondre au pinout ARDUINO de la carte NUCLEO</p>
 <p>Vidéo exemple:</p>
-<p><a class="reference external" href="https://www.youtube.com/watch?v=Z6VyFYzQWSs">Controllers Tech vidéo 1</a> <a class="footnote-reference brackets" href="#id44" id="id45">22</a></p>
-<p><a class="reference external" href="https://controllerstech.com/oled-display-using-i2c-stm32/">Article sur le site</a> <a class="footnote-reference brackets" href="#id46" id="id47">23</a></p>
-<p><a class="reference external" href="https://www.youtube.com/watch?v=M5ddTjrcvEs">Controllers Tech vidéo 2</a> <a class="footnote-reference brackets" href="#id48" id="id49">24</a></p>
+<p><a class="reference external" href="https://www.youtube.com/watch?v=Z6VyFYzQWSs">Controllers Tech vidéo 1</a> <a class="footnote-reference brackets" href="#id49" id="id50">24</a></p>
+<p><a class="reference external" href="https://controllerstech.com/oled-display-using-i2c-stm32/">Article sur le site</a> <a class="footnote-reference brackets" href="#id51" id="id52">25</a></p>
+<p><a class="reference external" href="https://www.youtube.com/watch?v=M5ddTjrcvEs">Controllers Tech vidéo 2</a> <a class="footnote-reference brackets" href="#id53" id="id54">26</a></p>
 <p>Commande I2C HAL:</p>
 <p>HAL_StatusTypeDef HAL_I2C_Master_Transmit(I2C_HandleTypeDef * hi2c, uint16_t DevAddress, uint8_t *
 pData, uint16_t Size, uint32_t Timeout)</p>
 <p id="index-3"><strong>Convertion d’image bitmap vers C</strong>
-Voir le <a class="reference external" href="https://javl.github.io/image2cpp/">github de Jasper van Loenen</a> <a class="footnote-reference brackets" href="#id50" id="id51">25</a></p>
+Voir le <a class="reference external" href="https://javl.github.io/image2cpp/">github de Jasper van Loenen</a> <a class="footnote-reference brackets" href="#id55" id="id56">27</a></p>
 <hr class="docutils" />
 </div>
 </div>
@@ -816,7 +841,7 @@ il y a 2 zones particulière avec des cases à cocher:
 </div>
 <div class="section" id="cmsis">
 <span id="index-5"></span><h2><a class="toc-backref" href="#sommaire">CMSIS</a><a class="headerlink" href="#cmsis" title="Lien permanent vers ce titre">¶</a></h2>
-<p><a class="reference external" href="https://arm-software.github.io/CMSIS_5/General/html/index.html">Page officielle CMSIS</a> <a class="footnote-reference brackets" href="#id52" id="id53">26</a></p>
+<p><a class="reference external" href="https://arm-software.github.io/CMSIS_5/General/html/index.html">Page officielle CMSIS</a> <a class="footnote-reference brackets" href="#id57" id="id58">28</a></p>
 <p>Ce que c’est:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>The CMSIS is a vendor-independent hardware abstraction layer for microcontrollers that are
 based on Arm® Cortex® processors. The CMSIS defines generic tool interfaces and enables
@@ -864,8 +889,8 @@ install STM32 ST Link utility and use ST-LINK/Firmware update.</p>
 </div>
 <div class="section" id="uart-console-in-ide">
 <h3><a class="toc-backref" href="#sommaire">UART console in IDE</a><a class="headerlink" href="#uart-console-in-ide" title="Lien permanent vers ce titre">¶</a></h3>
-<p>In System Workbench : <a class="reference external" href="http://eeblog.co.uk/2018/11/28/serial-terminal-window-in-system-workbench/">voir sur EEBLOG</a> <a class="footnote-reference brackets" href="#id54" id="id55">27</a></p>
-<p><a class="reference external" href="https://www.openstm32.org/forumthread5463">Sur openstm32.org</a> <a class="footnote-reference brackets" href="#id56" id="id57">28</a></p>
+<p>In System Workbench : <a class="reference external" href="http://eeblog.co.uk/2018/11/28/serial-terminal-window-in-system-workbench/">voir sur EEBLOG</a> <a class="footnote-reference brackets" href="#id59" id="id60">29</a></p>
+<p><a class="reference external" href="https://www.openstm32.org/forumthread5463">Sur openstm32.org</a> <a class="footnote-reference brackets" href="#id61" id="id62">30</a></p>
 <p>En résumé:</p>
 <ol class="arabic simple">
 <li><p>Créer une nouvelle connexion serial port : Windows/Show view/Others/connections…</p></li>
@@ -881,7 +906,7 @@ possibles.</p>
 <div class="section" id="weblinks">
 <h2><a class="toc-backref" href="#sommaire">Weblinks</a><a class="headerlink" href="#weblinks" title="Lien permanent vers ce titre">¶</a></h2>
 <dl class="footnote brackets">
-<dt class="label" id="id1"><span class="brackets"><a class="fn-backref" href="#id2">1</a></span></dt>
+<dt class="label" id="id1"><span class="brackets">1</span><span class="fn-backref">(<a href="#id2">1</a>,<a href="#id11">2</a>)</span></dt>
 <dd><p><a class="reference external" href="https://www.st.com/en/evaluation-tools/stm32-nucleo-boards.html#overview">https://www.st.com/en/evaluation-tools/stm32-nucleo-boards.html#overview</a></p>
 </dd>
 <dt class="label" id="id3"><span class="brackets"><a class="fn-backref" href="#id4">2</a></span></dt>
@@ -896,73 +921,79 @@ possibles.</p>
 <dt class="label" id="id9"><span class="brackets"><a class="fn-backref" href="#id10">5</a></span></dt>
 <dd><p><a class="reference external" href="https://www.mouser.fr/ProductDetail/STMicroelectronics/NUCLEO-F401RE?qs=sGAEpiMZZMu3sxpa5v1qrjJpfJ%2F%252BCrSiyHUXpPlRNo4%3D">https://www.mouser.fr/ProductDetail/STMicroelectronics/NUCLEO-F401RE?qs=sGAEpiMZZMu3sxpa5v1qrjJpfJ%2F%252BCrSiyHUXpPlRNo4%3D</a></p>
 </dd>
-<dt class="label" id="id11"><span class="brackets"><a class="fn-backref" href="#id12">6</a></span></dt>
-<dd><p><a class="reference external" href="https://www.st.com/en/development-tools/sw4stm32.html">https://www.st.com/en/development-tools/sw4stm32.html</a></p>
+<dt class="label" id="id12"><span class="brackets"><a class="fn-backref" href="#id13">6</a></span></dt>
+<dd><p><a class="reference external" href="https://community.arm.com/developer/ip-products/processors/f/cortex-m-forum/5686/m4-m7-comparision">https://community.arm.com/developer/ip-products/processors/f/cortex-m-forum/5686/m4-m7-comparision</a></p>
 </dd>
-<dt class="label" id="id13"><span class="brackets">7</span><span class="fn-backref">(<a href="#id14">1</a>,<a href="#id15">2</a>)</span></dt>
-<dd><p><a class="reference external" href="https://www.openstm32.org/HomePage">https://www.openstm32.org/HomePage</a></p>
+<dt class="label" id="id14"><span class="brackets"><a class="fn-backref" href="#id15">7</a></span></dt>
+<dd><p><a class="reference external" href="https://en.wikipedia.org/wiki/ARM_Cortex-M#Cortex-M7">https://en.wikipedia.org/wiki/ARM_Cortex-M#Cortex-M7</a></p>
 </dd>
 <dt class="label" id="id16"><span class="brackets"><a class="fn-backref" href="#id17">8</a></span></dt>
+<dd><p><a class="reference external" href="https://www.st.com/en/development-tools/sw4stm32.html">https://www.st.com/en/development-tools/sw4stm32.html</a></p>
+</dd>
+<dt class="label" id="id18"><span class="brackets">9</span><span class="fn-backref">(<a href="#id19">1</a>,<a href="#id20">2</a>)</span></dt>
+<dd><p><a class="reference external" href="https://www.openstm32.org/HomePage">https://www.openstm32.org/HomePage</a></p>
+</dd>
+<dt class="label" id="id21"><span class="brackets"><a class="fn-backref" href="#id22">10</a></span></dt>
 <dd><p><a class="reference external" href="https://www.st.com/en/development-tools/stm32cubeide.html">https://www.st.com/en/development-tools/stm32cubeide.html</a></p>
 </dd>
-<dt class="label" id="id18"><span class="brackets"><a class="fn-backref" href="#id19">9</a></span></dt>
+<dt class="label" id="id23"><span class="brackets"><a class="fn-backref" href="#id24">11</a></span></dt>
 <dd><p><a class="reference external" href="https://www.st.com/en/development-tools/stm32-ides.html">https://www.st.com/en/development-tools/stm32-ides.html</a></p>
 </dd>
-<dt class="label" id="id20"><span class="brackets"><a class="fn-backref" href="#id21">10</a></span></dt>
+<dt class="label" id="id25"><span class="brackets"><a class="fn-backref" href="#id26">12</a></span></dt>
 <dd><p><a class="reference external" href="https://www.st.com/content/st_com/en/products/evaluation-tools/product-evaluation-tools/mcu-mpu-eval-tools/stm32-mcu-mpu-eval-tools/stm32-nucleo-boards/nucleo-f401re.html#tools-software">https://www.st.com/content/st_com/en/products/evaluation-tools/product-evaluation-tools/mcu-mpu-eval-tools/stm32-mcu-mpu-eval-tools/stm32-nucleo-boards/nucleo-f401re.html#tools-software</a></p>
 </dd>
-<dt class="label" id="id22"><span class="brackets"><a class="fn-backref" href="#id23">11</a></span></dt>
+<dt class="label" id="id27"><span class="brackets"><a class="fn-backref" href="#id28">13</a></span></dt>
 <dd><p><a class="reference external" href="https://www.openstm32.org/forumthread774">https://www.openstm32.org/forumthread774</a></p>
 </dd>
-<dt class="label" id="id24"><span class="brackets"><a class="fn-backref" href="#id25">12</a></span></dt>
+<dt class="label" id="id29"><span class="brackets"><a class="fn-backref" href="#id30">14</a></span></dt>
 <dd><p><a class="reference external" href="https://www.youtube.com/watch?v=szMGedsp9jc">https://www.youtube.com/watch?v=szMGedsp9jc</a></p>
 </dd>
-<dt class="label" id="id26"><span class="brackets"><a class="fn-backref" href="#id27">13</a></span></dt>
+<dt class="label" id="id31"><span class="brackets"><a class="fn-backref" href="#id32">15</a></span></dt>
 <dd><p><a class="reference external" href="https://en.wikipedia.org/wiki/MISRA_C">https://en.wikipedia.org/wiki/MISRA_C</a></p>
 </dd>
-<dt class="label" id="id28"><span class="brackets"><a class="fn-backref" href="#id29">14</a></span></dt>
+<dt class="label" id="id33"><span class="brackets"><a class="fn-backref" href="#id34">16</a></span></dt>
 <dd><p><a class="reference external" href="http://leanpub.com/mastering-stm32">http://leanpub.com/mastering-stm32</a></p>
 </dd>
-<dt class="label" id="id30"><span class="brackets"><a class="fn-backref" href="#id31">15</a></span></dt>
+<dt class="label" id="id35"><span class="brackets"><a class="fn-backref" href="#id36">17</a></span></dt>
 <dd><p><a class="reference external" href="https://github.com/stm32duino/wiki/wiki/Getting-Started">https://github.com/stm32duino/wiki/wiki/Getting-Started</a></p>
 </dd>
-<dt class="label" id="id32"><span class="brackets"><a class="fn-backref" href="#id33">16</a></span></dt>
+<dt class="label" id="id37"><span class="brackets"><a class="fn-backref" href="#id38">18</a></span></dt>
 <dd><p><a class="reference external" href="https://www.youtube.com/watch?v=sWe4kvzLMjY">https://www.youtube.com/watch?v=sWe4kvzLMjY</a></p>
 </dd>
-<dt class="label" id="id34"><span class="brackets"><a class="fn-backref" href="#id35">17</a></span></dt>
+<dt class="label" id="id39"><span class="brackets"><a class="fn-backref" href="#id40">19</a></span></dt>
 <dd><p><a class="reference external" href="https://www.youtube.com/watch?v=0I53r0KmOxg">https://www.youtube.com/watch?v=0I53r0KmOxg</a></p>
 </dd>
-<dt class="label" id="id36"><span class="brackets"><a class="fn-backref" href="#id37">18</a></span></dt>
+<dt class="label" id="id41"><span class="brackets"><a class="fn-backref" href="#id42">20</a></span></dt>
 <dd><p><a class="reference external" href="https://www.youtube.com/watch?v=xE6GVt7XuJI">https://www.youtube.com/watch?v=xE6GVt7XuJI</a></p>
 </dd>
-<dt class="label" id="id38"><span class="brackets"><a class="fn-backref" href="#id39">19</a></span></dt>
+<dt class="label" id="id43"><span class="brackets"><a class="fn-backref" href="#id44">21</a></span></dt>
 <dd><p><a class="reference external" href="https://github.com/ProjectsByJRP/stm32_hal_i2c_bus_scan">https://github.com/ProjectsByJRP/stm32_hal_i2c_bus_scan</a></p>
 </dd>
-<dt class="label" id="id40"><span class="brackets"><a class="fn-backref" href="#id41">20</a></span></dt>
+<dt class="label" id="id45"><span class="brackets"><a class="fn-backref" href="#id46">22</a></span></dt>
 <dd><p><a class="reference external" href="https://www.banggood.com/0_96-Inch-OLED-I2C-IIC-Communication-Display-12864-LCD-Module-p-1535708.html?rmmds=detail-left-hotproducts__1&amp;ID=229&amp;cur_warehouse=CN">https://www.banggood.com/0_96-Inch-OLED-I2C-IIC-Communication-Display-12864-LCD-Module-p-1535708.html?rmmds=detail-left-hotproducts__1&amp;ID=229&amp;cur_warehouse=CN</a></p>
 </dd>
-<dt class="label" id="id42"><span class="brackets"><a class="fn-backref" href="#id43">21</a></span></dt>
+<dt class="label" id="id47"><span class="brackets"><a class="fn-backref" href="#id48">23</a></span></dt>
 <dd><p><a class="reference external" href="http://controllerstech.com/wp-content/uploads/2019/06/oled.zip">http://controllerstech.com/wp-content/uploads/2019/06/oled.zip</a></p>
 </dd>
-<dt class="label" id="id44"><span class="brackets"><a class="fn-backref" href="#id45">22</a></span></dt>
+<dt class="label" id="id49"><span class="brackets"><a class="fn-backref" href="#id50">24</a></span></dt>
 <dd><p><a class="reference external" href="https://www.youtube.com/watch?v=Z6VyFYzQWSs">https://www.youtube.com/watch?v=Z6VyFYzQWSs</a></p>
 </dd>
-<dt class="label" id="id46"><span class="brackets"><a class="fn-backref" href="#id47">23</a></span></dt>
+<dt class="label" id="id51"><span class="brackets"><a class="fn-backref" href="#id52">25</a></span></dt>
 <dd><p><a class="reference external" href="https://controllerstech.com/oled-display-using-i2c-stm32/">https://controllerstech.com/oled-display-using-i2c-stm32/</a></p>
 </dd>
-<dt class="label" id="id48"><span class="brackets"><a class="fn-backref" href="#id49">24</a></span></dt>
+<dt class="label" id="id53"><span class="brackets"><a class="fn-backref" href="#id54">26</a></span></dt>
 <dd><p><a class="reference external" href="https://www.youtube.com/watch?v=M5ddTjrcvEs">https://www.youtube.com/watch?v=M5ddTjrcvEs</a></p>
 </dd>
-<dt class="label" id="id50"><span class="brackets"><a class="fn-backref" href="#id51">25</a></span></dt>
+<dt class="label" id="id55"><span class="brackets"><a class="fn-backref" href="#id56">27</a></span></dt>
 <dd><p><a class="reference external" href="https://javl.github.io/image2cpp/">https://javl.github.io/image2cpp/</a></p>
 </dd>
-<dt class="label" id="id52"><span class="brackets"><a class="fn-backref" href="#id53">26</a></span></dt>
+<dt class="label" id="id57"><span class="brackets"><a class="fn-backref" href="#id58">28</a></span></dt>
 <dd><p><a class="reference external" href="https://arm-software.github.io/CMSIS_5/General/html/index.html">https://arm-software.github.io/CMSIS_5/General/html/index.html</a></p>
 </dd>
-<dt class="label" id="id54"><span class="brackets"><a class="fn-backref" href="#id55">27</a></span></dt>
+<dt class="label" id="id59"><span class="brackets"><a class="fn-backref" href="#id60">29</a></span></dt>
 <dd><p><a class="reference external" href="http://eeblog.co.uk/2018/11/28/serial-terminal-window-in-system-workbench/">http://eeblog.co.uk/2018/11/28/serial-terminal-window-in-system-workbench/</a></p>
 </dd>
-<dt class="label" id="id56"><span class="brackets"><a class="fn-backref" href="#id57">28</a></span></dt>
+<dt class="label" id="id61"><span class="brackets"><a class="fn-backref" href="#id62">30</a></span></dt>
 <dd><p><a class="reference external" href="https://www.openstm32.org/forumthread5463">https://www.openstm32.org/forumthread5463</a></p>
 </dd>
 </dl>
@@ -981,8 +1012,10 @@ possibles.</p>
 <li><a class="reference internal" href="#presentation">Présentation</a><ul>
 <li><a class="reference internal" href="#carte-nucleo-f401re">Carte NUCLEO-F401RE</a></li>
 <li><a class="reference internal" href="#carte-nucleo-f429zi">Carte NUCLEO-F429ZI</a></li>
+<li><a class="reference internal" href="#nucleo-f746zg">NUCLEO-F746ZG</a></li>
 </ul>
 </li>
+<li><a class="reference internal" href="#differences-entre-cartes">Différences entre cartes</a></li>
 <li><a class="reference internal" href="#outils-de-developpement">Outils de développement</a><ul>
 <li><a class="reference internal" href="#autres-outils-de-developpement">Autres outils de développement</a></li>
 </ul>
@@ -1044,7 +1077,7 @@ possibles.</p>
     </form>
     </div>
 </div>
-<script type="text/javascript">$('#searchbox').show(0);</script>
+<script>$('#searchbox').show(0);</script>
         </div>
       </div>
       <div class="clearer"></div>
@@ -1067,7 +1100,7 @@ possibles.</p>
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2019, J.SORANZO.
-      Créé avec <a href="http://sphinx-doc.org/">Sphinx</a> 2.2.0.
+      Créé avec <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.4.
     </div>
   </body>
 </html>

@@ -214,7 +214,7 @@ Souce : `Doc appache module proxy`_
 Site par défaut
 ====================================================================================================
 Apache2 traite les fichiers par ordre alphabétique.
-d'où le 000-default.cong ;-)
+d'où le 000-default.conf ;-)
 
 Pour savoir quel site est celui par défaut : apache2ctl -S
 

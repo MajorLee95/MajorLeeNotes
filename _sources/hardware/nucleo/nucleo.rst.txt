@@ -34,6 +34,9 @@ Carte NUCLEO-F401RE
 ====================================================================================================
 Chip: STM32F401RE (R = 64pin package, E = 512k FLASH)
 
+.. image:: images/nucleoF401reBoard.jpg
+   :width: 500 px
+
 .. image:: images/F401xE_features.jpg
    :width: 500 px
 
@@ -82,6 +85,9 @@ Chip: STM32F429ZI (Z = 144pin package, I = 2048k FLASH)
 32b Arm® Cortex®-M4 MCU+FPU, 225DMIPS, up to 2MB Flash/256+4KB RAM, USB
 OTG HS/FS, Ethernet, 17 TIMs, 3 ADCs, 20 com. interfaces, camera & LCD-TFT
 
+.. image:: images/NUCLEO-F429ZI.jpg
+   :width: 500 px
+   
 .. image:: images/F429_features.jpg
    :width: 500 px
 
@@ -100,8 +106,47 @@ Prix indicatif : 26€ `NUCLEO-F429ZI chez MOUSER`_
 
 .. _`NUCLEO-F401RE chez MOUSER` : https://www.mouser.fr/ProductDetail/STMicroelectronics/NUCLEO-F401RE?qs=sGAEpiMZZMu3sxpa5v1qrjJpfJ%2F%252BCrSiyHUXpPlRNo4%3D
 
+NUCLEO-F746ZG
+====================================================================================================
+(Z = 144pin package, G = 1024k FLASH)
+
+Cortex M7 (architecture ARM V7)
+
+High-performance and DSP with FPU ARM Cortex-M7 MCU with 1 Mbyte Flash, 216 MHz CPU, Art Accelerator
+L1 cache, 320k ( 64k of data TCM RAM for critical real-time data) + 16KB of instruction TCM RAM 
+(for critical real-time routines) + 4KB of backup SRAM (available in the lowest power modes)
+
+single precision FPU
+
+Prix indicatif : 22€
+
+Nécessite d'installer STM32CubeF7
 
 
+
+====================================================================================================
+Différences entre cartes
+====================================================================================================
+Quelle différence entre un F429-ZI et une NUCLEO-F746ZG ?
+
+Je n'ai personnelement pas trouvé de source facile et fiable.
+
+.. image:: images/en.ln1847_stm32_nucleo.jpg
+   :width: 400 px
+   
+Source image : `site st STM32 Nucleo Boards`_
+
+Cortex M4F versus M7 ? 
+
+Un `article sur community arm`_
+
+Sans oublier `Cortex M sur wikipedia`_
+
+.. _`site st STM32 Nucleo Boards` : https://www.st.com/en/evaluation-tools/stm32-nucleo-boards.html#overview
+
+.. _`article sur community arm` :  https://community.arm.com/developer/ip-products/processors/f/cortex-m-forum/5686/m4-m7-comparision
+
+.. _`Cortex M sur wikipedia` :  https://en.wikipedia.org/wiki/ARM_Cortex-M#Cortex-M7
 
 ====================================================================================================
 Outils de développement
