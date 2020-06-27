@@ -187,15 +187,83 @@ trop important !
    :width: 300 px
    :align: center
 
+Installaton par pip install du fichier wheels fourni sur le site.
+
+Theme possédant un site très complet.
+
+Permet de régler la largeur avec :
+
+.. code:: 
+
+    chtml_theme_options = {
+        'max_width' : '70%'
+    }
+
+Pour mettre la même couleur entre le fon et les bordures: ``'borderless_decor' : 'true'``
+
+La config du theme est dans: 
+
+.. code:: 
+
+    C:\Program Files\Python37\Lib\site-packages\cloud_sptheme\themes\cloud\theme.conf
+
 **murray**
 
 Trop blanc mais intéressant pour son menu repliable.
- 
+
+**Astropy**
+
+S'install avec un fichier wheel. pip install astropy_sphinx_theme-1.1-py2.py3-none-any.whl
+Source sur github
+
+Nécessite quelque retouche dans la barre mais mériterait de regénérer un wheel modifié pour le logo
+
+.. code::
+
+	...\Python\Python38-32\Lib\site-packages\astropy_sphinx_theme\bootstrap-astropy\static
+
+astropy_logo_32.png
+
+et dans layout.html changer le lien vers une autre destination
+
+A partir de la ligne 530 du css, il y a la largeur du doc
+
+.. code::
+
+	div.body {
+		background-color: #ffffff;
+		padding: 0 0 0px 20px;
+		min-width: 450px;
+		max-width: 2000px;	
+	}
+
+
+	div.bodywrapper {
+		margin: 0 0 0 230px;
+		max-width: 80em;
+	}
+
 A tester 
 ======================================
 - catalystcloud
 - rtd Read The Doc https://sphinx-rtd-theme.readthedocs.io/en/stable/installing.html
+- Bizstyle ou  similaire allanc-sphinx : grégoire
 
+Rejetés
+====================================================================================================
+- agoraplex.themes.sphinx : aucune des fonctionnalités recherchées
+
+====================================================================================================
+Sphinx to pdf
+====================================================================================================
+make latexpdf
+
+mais il faut installer basic-miktex-2.9.7216-x64.exe et perl.exe cf. 
+
+``C:\MountWD\00-Outils\05-Bureautique\restructuredText\sphinx``
+
+Essais du 17/06/2020: problème d'encodage pour latex. Installation de nombreuses dépendances latex
+en automatique
 
 ====================================================================================================
 Petits trucs

@@ -856,12 +856,27 @@ NodeRed
 			nodeRed dashboard
 				https://projetsdiy.fr/node-red-dashboard-interface-partie1/
                 
+----------------------------------------------------------------------------------------------------
+
+.. index::
+    pair: Objets connectés; PlateformIO
+                
 Plateformio
 ======================================
 
 is an open source ecosystem for IoT development
 
 Windows Users, please Download the latest Python 2.7.x and install it.
+
+En 2020, ce n'est plus vrai:
+
+.. code:: 
+
+    It's built on top of Microsoft's Visual Studio Code – free, open source, and MIT licensed editor
+
+Peut-on lire sur `le site de PlateformIO-ide`_
+
+.. _`le site de PlateformIO-ide` : https://platformio.org/platformio-ide
  
 Arduino and ARM mbed compatible
 

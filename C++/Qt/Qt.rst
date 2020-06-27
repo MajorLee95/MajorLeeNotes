@@ -10,10 +10,7 @@
 ++++++++++++++++++++++++++++++++
 Notes sur Qt *
 ++++++++++++++++++++++++++++++++
-.. image:: images/qtLogo.jpg
-   :height: 100px
-   :alt: Qt logo
-   :align: left
+ 
 
     
 :Auteur: J.Soranzo

@@ -17,7 +17,7 @@ Les objets connectés
     :backlinks: top
 
 .. index::
-    single: objets connectés
+    single: Objets connectés
 
 Reprise du XMind : LesObjetsConnectes
     

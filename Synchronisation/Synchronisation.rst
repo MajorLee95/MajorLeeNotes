@@ -85,16 +85,80 @@ BitTorrent Sync à revoir pas opensource
 ================================
 Logiciels de sauvegarde 
 ================================
+Il y en a plétor visiblement, des payant et des gratuits
+
+Sur `Techadvisor.fr`_
+
+- Acronis True Image 
+- Bvckup 2 
+- EaseUS Todo Backup Free 
+- O&O AutoBackup 6 
+- Paragon Backup & Recovery Home 
+- Backblaze 
+- Ashampoo Backup Pro 14 
+- IDrive 
+
+Pour la pluspart payants.
 
 Cobian backup
 
 Pas Seafile (nécessite un serrver et plus synchro)
 
-Baccula semble bien compliqué
+`Baccula`_ bien compliqué : Bacula is a set of computer programs that permits the system 
+administrator to manage backup, recovery, and verification of computer data across a network 
+of computers of different kinds.
 
-viviblement baucoup de solutions nécessite un serveur 
+
+visiblement baucoup de solutions nécessite un serveur 
 
 Iperius backup : début de test 12/01/2020
+
+Sur `Korben 5 gratuits`_ :
+
+- Saft Backup : plus été mis à jour depuis 2011
+- BackupChain : version gratuit + payant 50€ environ
+- EaseUS Todo Backup : verion gratuite limitée
+- AceBackup : plus mis à jour depuis 2012
+- Autover :  Il tourne en arrière-plan, met à jour dès qu’une modification a été apportée dans les dossiers à surveiller
+
+Plus un bonnus dans le commentaire : Veeam Endpoint Backup Free Edition (pas trouvé de lien)
+
+Préconisations Pierre
+====================================================================================================
+Borg 
+
+Open source
+====================================================================================================
+`Duplicati 2.0`_ à l'air bien et un download Synology sur leur site !!! Ne supporte pas les FTP en
+tant que source. testé.
+
+`Cobian`_ dev arrêté en avec la version 11 en 2013
+
+`Amanda`_ AMANDA (Advanced Maryland Automatic Network Disk Archiver) est un logiciel libre de 
+sauvegardes informatiques. Il est utilisé pour sauvegarder via le réseau un ensemble de postes 
+clients et de serveurs (Unix, Linux, et Windows via Samba ou Cygwin).
+Il a été initialement développé à l'université américaine du Maryland, sous licence BSD.
+Au même titre que Bacula, Amanda est considérée comme étant une alternative viable aux 
+outils de sauvegarde propriétaire (source Wikipédia.fr)
+
+
+
+
+.. _`Baccula` :  https://www.bacula.org/
+
+.. _`Techadvisor.fr` : https://www.techadvisor.fr/banc-essai/logiciels/logiciel-sauvegarde-windows-3783174/
+
+.. _`Korben 5 gratuits` : https://korben.info/5-logiciels-gratuits-pour-sauvegarder-votre-windows.html
+
+.. _`Duplicati 2.0` :  https://duplicati.com
+
+.. _`Cobian` :  https://www.cobiansoft.com/ 
+
+.. _`Amanda` :  http://www.amanda.org/download.php
+
+FreefileSync
+====================================================================================================
+
 
 ================================
 Weblinks

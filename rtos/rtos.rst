@@ -49,6 +49,9 @@ Avec STM32Workbench
 
 Voir aussi: :ref:`NUCLEO Board <refNucleoBoard>`
 
+.. WARNING::
+    Par défaut le code FreeRTOS s'exécute en mode privilégié.
+
 Avec VisualSudio
 ====================================================================================================
 Le `site officiel de Visual Studio Code`_

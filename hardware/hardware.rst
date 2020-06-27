@@ -19,15 +19,49 @@ Hardware notes
 .. contents:: Hardware tdm
     :backlinks: top
 
+----------------------------------------------------------------------------------------------------    
+    
+.. index::
+    pair: CPU Architecture; Harvard
+    pair: CPU Architecture; Von Neumann
+    
+====================================================================================================
+CPU Architecture
+====================================================================================================
+Harvard et Von Neumann
+
+Harvard :  computer architecture with separate storage and signal pathways for instructions and data
+
+En général, aujourd'hui on est plus souvent confronté à Modified Harvard architecture dans le sens
+où les données et les instructions partage souvent les mêmes memoires mais sont traités dans des 
+caches différents.
+
+Von Neumann architecture, where program instructions and data share the same memory and pathways.
+
+Source `wikipedia Harvard Archi`_
+
+.. _`wikipedia Harvard Archi` :  https://en.wikipedia.org/wiki/Harvard_architecture
+
 ================================
 Teensy (3.5)
 ================================
+`Site officiel Teensy`_
+
 LED power : je pense qu'il n'y en a pas.
 J'en ai pa vu sur le schéma et pas trouvé trace sur le forum.
 Rien non plus dans les carac.
 
 Température d'utilisation : à priori -40/+85°C seule inconnu : l'oscillateur.
-ref : 6360 T8406 ? 16MHz 
+ref : 6360 T8406 ? 16MHz
+
+Processeur : MK64FX512VMD12 120 MHz Cortex-M4F
+
+3.3V signals, 5V tolerant
+
+512K FLASH, 256K RAM, 4K EEPROM, 17 timer
+
+.. _`Site officiel Teensy` : https://www.pjrc.com/teensy/
+
 
 ================================
 Connecteur Wifi

@@ -66,7 +66,7 @@ html_theme = 'nature'
 
 html_theme_options = {
     #'stickysidebar ': True, # pas supportee par nature
-    'body_max_width' : '70%'
+    'body_max_width' : '80%'
     
 }
 
