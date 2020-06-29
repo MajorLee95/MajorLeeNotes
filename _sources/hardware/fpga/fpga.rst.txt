@@ -2,7 +2,7 @@
     single: FPGA
     
 ++++++++++++++++++++++++++++++++
-FPGA
+FPGA*
 ++++++++++++++++++++++++++++++++
 
 :Auteur: J.Soranzo
@@ -27,6 +27,7 @@ Carte low cost sur le `site Joel Williams`_
 .. _`site Joel Williams` : https://joelw.id.au/FPGA/CheapFPGADevelopmentBoards
 
 Taper fpga sur ebay !
+
 
 Contenu du Xmind 
 ======================================
@@ -174,7 +175,7 @@ Contenu du Xmind
 ================================
 ALTERA / INTEL FPGA
 ================================
-ARROW DECA MAX-10
+DECA-MAX-10 de chez ARROW 
 ======================================
 
 `ARROW DECA MAX-10`_ : environ 155$
@@ -229,7 +230,7 @@ External peripherals
    
 .. _`ARROW DECA MAX-10` : https://www.arrow.com/fr-fr/products/deca/arrow-development-tools 
 
-BeMicro Max10
+BeMicro Max10 AVNET également
 ======================================
 
 ou `BeMicro Max10`_ : environ 30$, **10M08DAF484C8GES**
