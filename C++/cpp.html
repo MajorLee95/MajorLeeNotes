@@ -300,6 +300,15 @@ changer le comportement de la focntion pour un type en particulier.</p>
 <span id="index-3"></span><h2><a class="toc-backref" href="#sommaire">Membres statiques</a><a class="headerlink" href="#membres-statiques" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Un attribut statique peut être accédé de l’intérieur comme de l’extérieur de la classe.</p>
 <p>Une méthode statique ne peut accéder qu’aux attributs statiques de la classe.</p>
+<div class="admonition warning">
+<p class="admonition-title">Avertissement</p>
+<p>Un membre static doit être initialisé en dehors du fichier .h (dans le .cpp) sans oublier de
+le faire précédé du nom de la classe.</p>
+</div>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">bool</span> <span class="n">CRtc</span><span class="o">::</span><span class="n">initErr</span> <span class="o">=</span> <span class="nb">false</span><span class="p">;</span>
+<span class="n">NTPClient</span> <span class="o">*</span><span class="n">CRtc</span><span class="o">::</span><span class="n">p_timeClient</span> <span class="o">=</span> <span class="k">nullptr</span><span class="p">;</span>
+</pre></div>
+</div>
 <hr class="docutils" />
 </div>
 <div class="section" id="passage-par-reference">

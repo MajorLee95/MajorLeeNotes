@@ -213,13 +213,23 @@ L'ordre des déclarations est important : d'abord la version générique puis la
 
 .. index::
     pair: C++; Statique
+    pair: c++; static
 
 ================================
 Membres statiques
 ================================
 Un attribut statique peut être accédé de l'intérieur comme de l'extérieur de la classe.
 
-Une méthode statique ne peut accéder qu'aux attributs statiques de la classe. 
+Une méthode statique ne peut accéder qu'aux attributs statiques de la classe.
+
+.. WARNING::
+    Un membre static doit être initialisé en dehors du fichier .h (dans le .cpp) sans oublier de 
+    le faire précédé du nom de la classe.
+
+.. code:: cpp
+
+    bool CRtc::initErr = false;
+    NTPClient *CRtc::p_timeClient = nullptr;
 
 ----------------------------------------------------------------------------------------------------
 
