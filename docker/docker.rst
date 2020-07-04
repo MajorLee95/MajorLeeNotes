@@ -11,7 +11,7 @@ Docker*
     :backlinks: top
 
 ================================
-Start-up
+Start-up /install
 ================================
 Pas la même install qu'il s'agisse de Windwos10pro d'un côté et Windwos10 family ou 7 de l'autre
 
@@ -45,6 +45,7 @@ Un bon tut, je crois : `docker-curriculum`_
 Au cours de ce tutoriel en englais on apprends à déployer une apppli web static et 
 2 appli dynamiques
 
+
 ================================
 Notes
 ================================
@@ -70,6 +71,19 @@ Ce que c'est ::
 sous entendu c'est que ce sont des applications plutôt à forte propention WEB.
 
 .. _`définition officielle` : https://docs.docker.com/get-started/
+
+Ma Rapide présentation pratique
+====================================================================================================
+
+Docker ça fait tourner des images que l'on peut récupérer sur dockerhub ou dans un autre dépôt.
+Ok c'est cool mais ce qui est encore plus cool c'est qu'on peut construire de nouvelles images
+basées sur des images existantes à la façon des poupées russes (c'est le rôle des 
+dockerfiles voir `Créer une image`_  ). ça c'est déjà pas mal mais ce n'est pas suffisant.
+
+En effet, comme docker ne fait tourner qu'une seule tâche, process... ou quelquesoit le terme
+utilisé, on pourrait dire aussi un seul truc, eh bien il faut en lancer plusieurs, le cas type est
+le **serveur web** qui utilise une **base de données** au travers de **php** pour cela il faut 
+lancer 3 images. C'est la qu'intervient docker compose voir `Syntaxe des fichiers Docker compose`_
 
 
 ====================================================================================================
@@ -109,24 +123,28 @@ Cheatsheet ?
 
     docker run -d -p 8080:80 nginx
     docker images <=> docker image ls
-    docker ps -a
+    docker ps : shows you all containers that are currently running
+    docker ps -a : shows all containers
     docker rmi : remove specific image
     docker restart
     docker build -t _nom .
-    docker container prune
+    docker container prune <=> docker rm $(docker ps -a -q -f status=exited)
     docker run --interactive --tty ubuntu bash
     docker stop _nom
+    
 
     
 On ne le dira jamais assez :
 
-Do not use PowerShell ISE
+.. DANGER::
+    Do not use PowerShell ISE
+
 
 Interactive terminals do not work in PowerShell ISE (but they do in PowerShell).
 See docker/for-win/issues/223.
 
 ====================================================================================================
-Créer une images
+Créer une image
 ====================================================================================================
 Dans un répertoire vierge créer un fichier nommer Dosckerfile
 
@@ -151,7 +169,8 @@ Le build ne dispense pas de faire un run ensuite
 
 ====================================================================================================
 Syntaxe des fichiers Docker compose
-====================================================================================================    
+====================================================================================================
+
 Docker compose permet de lancer plusieurs images en même temps.
 
 Dans un répertoire vide (conseillé) créer un fichier docker-compose.yml
