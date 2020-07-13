@@ -65,6 +65,9 @@ Major LEE Glossaire
     ABI
         `Application Binary Interface`_ en gros API mais low level hardware
 
+    REST
+        Representational State Transfer
+
 .. _`Application Binary Interface` :  https://en.wikipedia.org/wiki/Application_binary_interface
         
 .. _`Advanced High-performance Bus` : https://en.wikipedia.org/wiki/Advanced_Microcontroller_Bus_Architecture#Advanced_High-performance_Bus_.28AHB.29

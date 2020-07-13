@@ -120,9 +120,17 @@ Mettre de le fichier .nojekill dans le répertoire source et pas dans le répert
 
 Ce fichier est utilisé par make html
 
+.. index::
+    single: Sphinx; Liens
+
 ================================
-Liens externe locaux
-================================  
+Les liens
+================================ 
+
+Liens externes locaux
+================================ 
+Exemple vers un fichier pdf stocké dans la même arborescence. Externe en ce sens que ce ne sont
+pas des fichier rst
 
 directive .. only et role :download:
 
@@ -138,6 +146,43 @@ Autre :download:`utilisation avec un word <exemple_roleDL.docx>`
 Quoique après relecture j'ai un gros doute `sur only`_
 
 .. _`sur only` : https://www.sphinx-doc.org/en/master/usage/restructuredtext/directives.html#directive-only
+
+Liens internes locaux
+====================================================
+Lien simple dans le même fichier vers une secion nommé du fichier
+`css pas dans gh-pages`_
+
+.. code::
+
+    `nom_de_la_section`_
+    
+
+**Liens vers un fichier** .rst de la même arbo directive :ref:
+**Lien vers un point en particulier dans un fichier** de l'arbo directive :ref:
+
+.. code::
+
+    .. _ref_lien:
+
+    usage : :ref:`ref-lien`
+    ou :ref:`nom_a_afficher<rel_lien>`
+
+    Attention le _ dans la définition est obligatoire mais pas dans l'utilisation
+    Astuce : si la définition précède un titre pas besoin de nom_a_afficher
+
+Voir  `aide officielle ref`_
+
+.. _`aide officielle ref` : https://www.sphinx-doc.org/en/master/usage/restructuredtext/roles.html#ref-role
+
+Lien externe distant
+=============================
+exemple url externe au système documentaire:
+
+.. code::
+
+    `link_desc`_
+    
+    .. _`link_desc` : url
 
 
 ================================

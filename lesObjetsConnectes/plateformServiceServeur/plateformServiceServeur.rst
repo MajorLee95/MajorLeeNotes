@@ -52,9 +52,9 @@ EasyIoT Cloud is available at http://cloud.iot-playground.com.
 
 
 
-Les exmeples sur le blog montre des script qui ont l'aire terriblement plus compliqués qu'avec Cayenne !!!!
+Les exemples sur le blog montre des script qui ont l'aire terriblement plus compliqués qu'avec Cayenne !!!!
 
-Oui pas si sûr. L'exmple que j'ai vu était compliqué mais c'est du MQTT pur et dur avec topic et tout y canti.
+Oui pas si sûr. L'exemple que j'ai vu était compliqué mais c'est du MQTT pur et dur avec topic et tout y canti.
 Je révise mon propos : voir l'exemple de la MQTT lib `esp8266-mqtt-easyiot-cloud-library`_
 
 .. _`esp8266-mqtt-easyiot-cloud-library` : https://github.com/iot-playground/EasyIoT-Cloud/blob/master/libraries/esp-mqtt/examples/mqtt_pub/mqtt_pub.ino
@@ -89,10 +89,10 @@ so protocols, sensors tutorials and phone app. is **not compatible with EasyIoT 
 Il y a un store (sur ebay et aliExpress) sur lequel on trouve tout un tas de cosntituants mais leur véritable 
 offre commerciale ne se trouve pas là !
  
-Il y a en tout 6 `offres d'hébergment cloud`_ de *free* à *Entreprise* dont les prix vont de 
+Il y a en tout 6 `offres d'hébergement cloud`_ de *free* à *Entreprise* dont les prix vont de 
 gratuit à plus de 360€/mois.
 
-.. _`offres d'hébergment cloud` : https://iotlab7.com/#services 
+.. _`offres d'hébergement cloud` : https://iotlab7.com/#services 
 
 offre free::
 
@@ -528,7 +528,7 @@ Les offres::
 		Pas le cas dans les exemple de leur github
 		 La comunauté semble peut active principalement 3 intervenants
 
-                
+
 Bolt
 ======================================
 ::
@@ -675,14 +675,15 @@ Site inernet `Wolkabout`_
    :align: center
    
 4 offres:
+
  - Evaluation : 1 account, 3 devices, 3 rules, 2 dashboards, 6 mois de dataretention
  - Basic : 1500€/mois
  - Advanced :
  - Partenaire and education
 
-========================            
+====================================================================================================
 Serveurs open source
-========================
+====================================================================================================
 
 Jeedom
 ======================================
@@ -821,11 +822,36 @@ or Cloud infrastructure.
 
 .. _`.supinfo.com monitorer-son-serveur-avec-grafana-graphite-collectd` : https://www.supinfo.com/articles/single/325-monitorer-son-serveur-avec-grafana-graphite-collectd
 
-
-                
-===============                
+====================================================================================================
 Appli et outils
-===============
+====================================================================================================
+
+.. index::
+	single: REST
+
+
+API REST
+====================================================================================================
+
+API REST : mais qu'est-ce dont ?
+
+`APIREST sur wikipédia`_
+
+.. _`APIREST sur wikipédia` : https://fr.wikipedia.org/wiki/Representational_state_transfer
+
+`API REST sur Open Classroom`_
+
+.. _`API REST sur Open Classroom` : https://openclassrooms.com/fr/courses/3449001-utilisez-des-api-rest-dans-vos-projets-web/3501901-pourquoi-rest
+
+6 contraintes architecturales définissent un système REST:
+
+- Client–serveur
+- Sans état
+- Avec mise en cache
+- En couches
+- Avec code à la demande (facultative)
+- Interface uniforme
+
 NodeRed
 ======================================
 ::
