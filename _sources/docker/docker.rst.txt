@@ -45,6 +45,16 @@ Un bon tut, je crois : `docker-curriculum`_
 Au cours de ce tutoriel en englais on apprends à déployer une apppli web static et 
 2 appli dynamiques
 
+Dockerhub
+====================================================================================================
+
+Le `site docker hub`_ directement sur la page de recherche/exploration
+
+3 702 709 available images le 06/07/2020. 
+
+.. _`site docker hub` : https://hub.docker.com/search?q=&type=image
+
+on y trouve par exemple une image nommée gcc, gitlab, nextcloud, owncloud, mongo-express, drupal...
 
 ================================
 Notes
@@ -68,9 +78,13 @@ Ce que c'est ::
     Docker is a platform for developers and sysadmins to build, share, and run applications.
     
 ça c'est la `définition officielle`_ . Cela ne dit pas "développer" de quelles applications. Le gros
-sous entendu c'est que ce sont des applications plutôt à forte propention WEB.
+sous entendu c'est que ce sont des applications plutôt à forte propension WEB.
 
 .. _`définition officielle` : https://docs.docker.com/get-started/
+
+Article très intéressant  `Docker est mort, vive Docker`_ sur le fonctionnement de docker (2019)
+
+.. _`Docker est mort, vive Docker` :  https://blog.engineering.publicissapient.fr/2019/12/23/docker-est-mort-vive-docker/
 
 Ma Rapide présentation pratique
 ====================================================================================================
@@ -80,11 +94,15 @@ Ok c'est cool mais ce qui est encore plus cool c'est qu'on peut construire de no
 basées sur des images existantes à la façon des poupées russes (c'est le rôle des 
 dockerfiles voir `Créer une image`_  ). ça c'est déjà pas mal mais ce n'est pas suffisant.
 
-En effet, comme docker ne fait tourner qu'une seule tâche, process... ou quelquesoit le terme
+En effet, comme docker ne fait tourner qu'une seule tâche, process... ou quelque soit le terme
 utilisé, on pourrait dire aussi un seul truc, eh bien il faut en lancer plusieurs, le cas type est
 le **serveur web** qui utilise une **base de données** au travers de **php** pour cela il faut 
 lancer 3 images. C'est la qu'intervient docker compose voir `Syntaxe des fichiers Docker compose`_
 
+Une images n'est pas un container et inversement. Donc, il faut apprendre à manipuler les 2.
+On peut créer une image sans pour autant la lancer et on peut lancer une image sans la créer.
+On peut également effacer des images et des container de son système, on peut lister les 2 mais 
+pas avec les mêmes commandes !
 
 ====================================================================================================
 Documentation
@@ -125,7 +143,8 @@ Cheatsheet ?
     docker images <=> docker image ls
     docker ps : shows you all containers that are currently running
     docker ps -a : shows all containers
-    docker rmi : remove specific image
+    docker rmi : efface une ou plusieurs images
+    docker rm : efface un container
     docker restart
     docker build -t _nom .
     docker container prune <=> docker rm $(docker ps -a -q -f status=exited)
@@ -146,7 +165,7 @@ See docker/for-win/issues/223.
 ====================================================================================================
 Créer une image
 ====================================================================================================
-Dans un répertoire vierge créer un fichier nommer Dosckerfile
+Dans un répertoire vierge créer un fichier nommer dockerfile
 
 Lancer la commande docker build (éventuellement avec -t pour préciser un nom d'image)
 
@@ -154,6 +173,11 @@ Syntaxe des fichiers Dockerfile
 ===========================================================
 
 `Docker file ref`_
+
+Les commandes dans les dockerfile ne sont pas sensibles à la casse mais par convention on les met
+en majuscules pour les distinguer des arguments.
+
+Les lignes de commentaire COMMENCE par un #
 
 La commande pour compiler, la plus simple, est alors ::
 
@@ -187,8 +211,6 @@ https://www.losant.com/blog/how-to-access-serial-devices-in-docker
 
 
 
-
-
 ====================================================================================================
 My tips
 ====================================================================================================
@@ -209,16 +231,52 @@ Partage de données entre hôte et containers::
     Otherwise, you get file not found or cannot start service errors at runtime. 
     See Volume mounting requires shared drives for Linux containers.
 
-Docker dashboard : gestion interractive graphique des container/appli compose 
+Docker dashboard : gestion intéractive graphique des container/appli compose 
 **en cours d'éxécution**
 
 
-================================
-Vocabullaire
-================================
-Statefull
+Dans docker port container_name
+L'affichage produit est ::
 
-Stateless
+    container --> localhost:port
+
+Alors que dans::
+
+    docker run -p 8888:80 site
+
+On a d'abord le port de l'hôte suivi du port de l'image !
+
+Faire du python2 sans l'installer::
+
+    docker run -i -t python:2
+
+
+
+
+================================
+Vocabulaire
+================================
+
+.. index::
+    pair: Docker; Stateful
+    pair: Docker; Stateless
+
+Stateful vs Stateless : se dit à propos d'une application ou d'un service et par extension cela
+s'applique aux container.
+
+`Stateless vs Stateful article sur contino.io`_
+
+.. _`Stateless vs Stateful article sur contino.io` : https://www.contino.io/insights/stateless-vs-stateful-containers-whats-the-difference-and-why-does-it-matter
+
+A stateless application is one that neither reads nor stores information about its state from
+one time that it is run to the next. 
+
+Une `explication sur Publicis Sapiens`_
+
+.. _`explication sur Publicis Sapiens` : https://blog.engineering.publicissapient.fr/2007/07/24/service-stateful-vs-service-stateless/
+
+Un moyen de stockage est nécessaire pour une application, un service statefull.
+
 
 Images : 
 
@@ -228,9 +286,18 @@ Images :
 
 Then there are official and user images, which can be both base and child images.
 
-    **Official images** are images that are officially maintained and supported by the folks at Docker. These are typically one word long. In the list of images above, the python, ubuntu, busybox and hello-world images are official images.
+    **Official images** are images that are officially maintained and supported by the folks at 
+    Docker. These are typically one word long. In the list of images above, the python, ubuntu, 
+    busybox and hello-world images are official images.
 
-    **User images** are images created and shared by users like you and me. They build on base images and ad
+    **User images** are images created and shared by users like you and me. They build on base 
+    images and add additional functionality. Typically, these are formatted as user/image-name.
+
+.. index::
+    single: Docker; detach mode
+
+**detached mode** mode détaché : à compléter le 6/07/2020, en gros c'est la même chose que & 
+à la fin d'un commande Linux
 
 =========
 Weblinks

@@ -687,6 +687,16 @@ Il y 2 parmaètres à fixer dans Doxygen pour prendre en compte les fichiers .in
     FILE_PATTERNS = [...] *.ino sous Input
     EXTENSION_MAPPING = ino=c under "Project" 
 
+----------------------------------------------------------------------------------------------------
+
+.. index::
+    single: UML
+
+====================================================================================================
+UML
+====================================================================================================
+Pour le moment tout est dans le fichier xmind cpp-notes
+
 
 =========
 Weblinks

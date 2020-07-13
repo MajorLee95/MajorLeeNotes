@@ -18,8 +18,10 @@ Astuces informatiques
 ================================
 Microsoft
 ================================
+
 Connaître le type de licence Windows10 
-======================================
+===========================================================================
+
 slmgr -dli
 
 défaire des connexions réseau existantes 
@@ -94,7 +96,40 @@ Modification d'une variable en mode console
 
     set PATH=%PATH%;nouveau_chemin
 
- 
+
+Configuration réseau en cmd admmin 
+====================================================================================================
+
+utilisation de netsh.  `Une page web netsh utile`_
+
+.. _`Une page web netsh utile` : https://www.malekal.com/comment-utiliser-ipconfig-et-netsh/
+
+netsh peut être utilisé soit en ligne de commande full ou de manière interractive.
+
+Ligne de commandes::
+
+    netsh interface ip4 set address name="nomdelinterface" source=dhcp
+    netsh interface ipv4 set address name="nomdelinterface" static IP netmask passerelle
+    netsh interface ipv4 show config
+    netsh interface show interface
+    
+
+En mode interractive, ce sont les même commandes (très appréciable mais qu'on retre petit à petit
+et avec un prompt. Exemple: on tape d'abord netsh, on a alors le prompt::
+
+    netsh>
+
+Puis on saisie interface, et là, le prompt devient::
+
+    netsh interface>
+
+En quelque sorte, opn est descendu d'un cran et on paut alors utilisé toutes les commandes en lien
+avec interface. Pour remonter d'un cran c'est .. et pour tout quitter bye. Dernier truc::
+
+    netsh>help : le help fonctionne dans les différents niveaux
+
+
+
 =========
 Weblinks
 =========

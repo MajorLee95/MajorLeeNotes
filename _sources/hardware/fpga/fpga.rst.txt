@@ -175,6 +175,10 @@ Contenu du Xmind
 ================================
 ALTERA / INTEL FPGA
 ================================
+
+MAX10 : CPLD techno Flash
+CYCLONE iV techno FPGA
+
 DECA-MAX-10 de chez ARROW 
 ======================================
 
@@ -327,6 +331,16 @@ CoreEP4CE6, ALTERA Core Board
  - PLLs: 2
  - Debugging/Programming: supports JTAG
 
+
+Juillet 2020 sur la chaîne d'Heliox on parle de la chaine de  Électro-Bidouilleur
+
+Parmis ses playlistes, il y en a une sur les FPGA : `Playliste FPGA sur Electro-Bidouilleur`_
+
+.. _`Playliste FPGA sur Electro-Bidouilleur` : https://www.youtube.com/watch?v=6p0UO1i2iy4&list=PLfiqNnhpCsNsn6g_VjZ4VizI3iQJcMS27
+
+
+.. image:: images/ebayCyclone4.jpg
+   :width: 600 px
  
 Quartus
 ======================================
