@@ -1107,8 +1107,8 @@ En résumé:
 #. la décaller
 #. la pincée
 
-Quand une console est pincée, elle arrête de switchée uatomatiquement entre les différentes console
-possibles.
+Quand une console est "pincée", elle arrête de switchée automatiquement entre les différentes
+consoles possibles.
 
 .. _`voir sur EEBLOG` :  http://eeblog.co.uk/2018/11/28/serial-terminal-window-in-system-workbench/
 
