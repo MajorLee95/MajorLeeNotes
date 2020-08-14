@@ -829,7 +829,11 @@ Appli et outils
 .. index::
 	single: REST
 
-API REST : mais qu'est-ce dont:
+
+API REST
+====================================================================================================
+
+API REST : mais qu'est-ce dont ?
 
 `APIREST sur wikipédia`_
 
@@ -839,7 +843,14 @@ API REST : mais qu'est-ce dont:
 
 .. _`API REST sur Open Classroom` : https://openclassrooms.com/fr/courses/3449001-utilisez-des-api-rest-dans-vos-projets-web/3501901-pourquoi-rest
 
-6 contraintes architecturales définissent un système REST
+6 contraintes architecturales définissent un système REST:
+
+- Client–serveur
+- Sans état
+- Avec mise en cache
+- En couches
+- Avec code à la demande (facultative)
+- Interface uniforme
 
 NodeRed
 ======================================

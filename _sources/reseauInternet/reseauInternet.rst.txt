@@ -3,7 +3,7 @@ Réseaux et Internet
 ++++++++++++++++++++++++++++++++
 
 :Auteur: J.Soranzo
-:Date: Février 2020 2019
+:Date: Février 2020
 :Societe: VoRoBoTics
 :Entity: VoLAB
 
@@ -106,6 +106,10 @@ Wikipedia nous présnte un comparatif de ces frameworks.
 .. _`Comparatif Frameworks sur wikipédia` : https://en.wikipedia.org/wiki/Comparison_of_web_frameworks
 
 Et c'est là qu'on trouve les REACT, FLASK, BOOTSTRAP et autre JANGO...
+
+`Chaîne détaillée Traversy Media`_
+
+.. _`Chaîne détaillée Traversy Media` : https://www.youtube.com/channel/UC29ju8bIPH5as8OGnQzwJyA
 
 ----------------------------------------------------------------------------------------------------
 

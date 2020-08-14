@@ -31,6 +31,18 @@ git
 penser au fichier xmind
 
 ====================================================================================================
+Commits atomiques
+====================================================================================================
+Article très intéressant `Commits atomiques - la bonne approche`_ sur adopteungit.fr
+
+.. _`Commits atomiques - la bonne approche` : http://adopteungit.fr/methodologie/2017/04/26/commits-atomiques-la-bonne-approche.html
+
+code::
+
+	git add -P ...
+
+
+====================================================================================================
 git rebase
 ====================================================================================================
 https://www.miximum.fr/blog/git-rebase/
@@ -41,8 +53,15 @@ https://www.miximum.fr/blog/git-rebase/
 - faciliter le travail collaboratif ;
 - faciliter les fusions sur les branches qui nécessitent un très long développement.
 
+*La commande git-rebase est comme une tronçonneuse : elle permet de couper une branche pour 
+la regreffer à un autre endroit sur l'arbre.*
 
+====================================================================================================
+git bisec
+====================================================================================================
+`La chasse aux bugs avec git bisect`_
 
+.. _`La chasse aux bugs avec git bisect` : http://adopteungit.fr/commande/bisect/2016/09/04/la-chasse-aux-bugs-avec-git-bisect.html
 
 
 ================================
