@@ -6,6 +6,79 @@ Plateformes, services Web et serveurs
     :backlinks: top
 
 
+.. index::
+	single: M2M
+
+
+====================================================================================================
+M2M communication
+====================================================================================================
+.. index::
+	single: REST
+
+
+API REST
+====================================================================================================
+
+API REST : mais qu'est-ce dont ?
+
+`APIREST sur wikipédia`_
+
+.. _`APIREST sur wikipédia` : https://fr.wikipedia.org/wiki/Representational_state_transfer
+
+`API REST sur Open Classroom`_
+
+.. _`API REST sur Open Classroom` : https://openclassrooms.com/fr/courses/3449001-utilisez-des-api-rest-dans-vos-projets-web/3501901-pourquoi-rest
+
+6 contraintes architecturales définissent un système REST:
+
+- Client–serveur
+- Sans état
+- Avec mise en cache
+- En couches
+- Avec code à la demande (facultative)
+- Interface uniforme
+
+Sur Openclassrooms, on peut lire:
+
+*Le standard REST a été créé en 2000 par Roy Fielding dans sa thèse "Architectural Styles and the 
+Design of Network-based Software Architectures".*
+
+*Ce type d’API est un type très spécial d’interface, et peu d’API peuvent avoir le privilège de 
+s’appeler “RESTful” en raison du haut niveau de certification.* from openclassrooms
+
+*Les réponses du serveur pour les API REST peuvent être délivrées dans de multiples formats. 
+JSON (JavaScript Object Notation) est souvent utilisé, mais XML, CSV, ou même RSS sont aussi
+valables.*
+
+.. index::
+	single: SOAP
+
+API SOAP
+====================================================================================================
+Simple Object Access Protocol: repose surtout sur le xml.
+
+Il permet la transmission de messages entre objets distants, ce qui veut dire qu'il autorise un 
+objet à invoquer des méthodes d'objets physiquement situés sur un autre serveur. Le transfert se 
+fait le plus souvent à l'aide du protocole HTTP, mais peut également se faire par un autre 
+protocole, comme SMTP. 
+
+
+Autres API
+====================================================================================================
+CORBA Common Object Request Broker Architecture et AMF Action Message Format
+
+
+*Object Request Broker (ORB), est un composant fondamental de l'architecture CORBA ; 
+sa mission est de faciliter la communication entre objets : il est chargé d'envoyer les requêtes 
+aux objets et de retourner les réponses au client qui les a invoqués par un processus de 
+sérialisation.* source wikipédia.
+
+AMF (sigle de Action Message Format) est un format binaire d'échange de données inspiré de Simple 
+Object Access Protocol (SOAP). Il a été créé à l'origine pour permettre l'échange de données entre
+une animation Adobe Flash et d'autres systèmes comme une base de données ou un Webservice en
+utilisant des appels Remote Procedure Call. 
+
 ======================================
 9 meilleurs sites
 ======================================
@@ -822,35 +895,14 @@ or Cloud infrastructure.
 
 .. _`.supinfo.com monitorer-son-serveur-avec-grafana-graphite-collectd` : https://www.supinfo.com/articles/single/325-monitorer-son-serveur-avec-grafana-graphite-collectd
 
+
+
 ====================================================================================================
 Appli et outils
 ====================================================================================================
 
-.. index::
-	single: REST
 
 
-API REST
-====================================================================================================
-
-API REST : mais qu'est-ce dont ?
-
-`APIREST sur wikipédia`_
-
-.. _`APIREST sur wikipédia` : https://fr.wikipedia.org/wiki/Representational_state_transfer
-
-`API REST sur Open Classroom`_
-
-.. _`API REST sur Open Classroom` : https://openclassrooms.com/fr/courses/3449001-utilisez-des-api-rest-dans-vos-projets-web/3501901-pourquoi-rest
-
-6 contraintes architecturales définissent un système REST:
-
-- Client–serveur
-- Sans état
-- Avec mise en cache
-- En couches
-- Avec code à la demande (facultative)
-- Interface uniforme
 
 NodeRed
 ======================================
