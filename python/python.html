@@ -1,0 +1,547 @@
+
+<!DOCTYPE html>
+
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Python (mes notes) &#8212; Documentation MajorLee&#39;s notes </title>
+    <link rel="stylesheet" href="../_static/nature.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script src="../_static/translations.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Recherche" href="../search.html" />
+    <link rel="next" title="Les objets connectés" href="../lesObjetsConnectes/lesObjetsConnectes.html" />
+    <link rel="prev" title="Notes sur Qt *" href="../C++/Qt/Qt.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="Index général"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../lesObjetsConnectes/lesObjetsConnectes.html" title="Les objets connectés"
+             accesskey="N">suivant</a> |</li>
+        <li class="right" >
+          <a href="../C++/Qt/Qt.html" title="Notes sur Qt *"
+             accesskey="P">précédent</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Documentation MajorLee&#39;s notes </a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="python-mes-notes">
+<span id="index-0"></span><h1><a class="toc-backref" href="#sommaire">Python (mes notes)</a><a class="headerlink" href="#python-mes-notes" title="Lien permanent vers ce titre">¶</a></h1>
+<dl class="field-list simple">
+<dt class="field-odd">Auteur</dt>
+<dd class="field-odd"><p>J.Soranzo</p>
+</dd>
+<dt class="field-even">Date</dt>
+<dd class="field-even"><p>Août 2020</p>
+</dd>
+<dt class="field-odd">Societe</dt>
+<dd class="field-odd"><p>VoRoBoTics</p>
+</dd>
+<dt class="field-even">Entity</dt>
+<dd class="field-even"><p>VoLAB</p>
+</dd>
+</dl>
+<div class="contents topic" id="sommaire">
+<p class="topic-title">Sommaire</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#python-mes-notes" id="id19">Python (mes notes)</a></p>
+<ul>
+<li><p><a class="reference internal" href="#pourquoi-les-gens-aiment-python" id="id20">Pourquoi les gens aiment Python</a></p></li>
+<li><p><a class="reference internal" href="#docs" id="id21">Docs</a></p></li>
+<li><p><a class="reference internal" href="#elements-de-langages" id="id22">Elements de langages</a></p>
+<ul>
+<li><p><a class="reference internal" href="#tuples" id="id23">Tuples</a></p></li>
+<li><p><a class="reference internal" href="#listes" id="id24">Listes</a></p></li>
+<li><p><a class="reference internal" href="#dictionnaires" id="id25">Dictionnaires</a></p></li>
+<li><p><a class="reference internal" href="#enumerate" id="id26">enumerate</a></p></li>
+<li><p><a class="reference internal" href="#fonctions" id="id27">Fonctions</a></p></li>
+<li><p><a class="reference internal" href="#modules" id="id28">Modules</a></p></li>
+<li><p><a class="reference internal" href="#les-exceptions" id="id29">Les exceptions</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#astuces" id="id30">Astuces</a></p></li>
+<li><p><a class="reference internal" href="#i2c" id="id31">I2C</a></p></li>
+<li><p><a class="reference internal" href="#pyserial" id="id32">PySerial</a></p></li>
+<li><p><a class="reference internal" href="#gestionnaires-graphiques" id="id33">Gestionnaires graphiques</a></p></li>
+<li><p><a class="reference internal" href="#a-revoir" id="id34">A revoir</a></p></li>
+<li><p><a class="reference internal" href="#weblinks" id="id35">Weblinks</a></p></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="pourquoi-les-gens-aiment-python">
+<h2><a class="toc-backref" href="#sommaire">Pourquoi les gens aiment Python</a><a class="headerlink" href="#pourquoi-les-gens-aiment-python" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Parce qu’il est comme ARDUINO, il permet d’arriver simplement et rapidement à un résultat concret.</p>
+<p>supprime la nécessité d’apprendre un IDE</p>
+<p>Python c’est 31 mots clé !</p>
+</div>
+<div class="section" id="docs">
+<h2><a class="toc-backref" href="#sommaire">Docs</a><a class="headerlink" href="#docs" title="Lien permanent vers ce titre">¶</a></h2>
+<p><a class="reference external" href="https://docs.python.org/3/library/index.html">La librairie standard</a> <a class="footnote-reference brackets" href="#id1" id="id2">1</a></p>
+</div>
+<div class="section" id="elements-de-langages">
+<h2><a class="toc-backref" href="#sommaire">Elements de langages</a><a class="headerlink" href="#elements-de-langages" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="section" id="tuples">
+<span id="index-1"></span><h3><a class="toc-backref" href="#sommaire">Tuples</a><a class="headerlink" href="#tuples" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Ce sont simplement des listes non modifiables syntaxe :
+() à l d [] par rapport à la syntaxe d’une liste.</p>
+</div>
+<div class="section" id="listes">
+<span id="index-2"></span><h3><a class="toc-backref" href="#sommaire">Listes</a><a class="headerlink" href="#listes" title="Lien permanent vers ce titre">¶</a></h3>
+<p><strong>Création</strong>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">toto</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="s2">&quot;tutu&quot;</span><span class="p">,</span> <span class="mf">16.9</span><span class="p">,</span> <span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="mi">3</span><span class="p">),</span> <span class="p">[</span><span class="s2">&quot;Pierre&quot;</span><span class="p">,</span> <span class="s2">&quot;05.12.34.56.78&quot;</span><span class="p">]]</span>
+<span class="n">toto</span> <span class="o">=</span> <span class="nb">list</span><span class="p">([</span><span class="mi">14</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">12</span><span class="p">])</span>
+</pre></div>
+</div>
+<p>Eléments de syntaxe: les crochets.</p>
+<p><strong>L’intérêt</strong>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">seasons</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Spring&#39;</span><span class="p">,</span> <span class="s1">&#39;Summer&#39;</span><span class="p">,</span> <span class="s1">&#39;Fall&#39;</span><span class="p">,</span> <span class="s1">&#39;Winter&#39;</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">list</span><span class="p">(</span><span class="nb">enumerate</span><span class="p">(</span><span class="n">seasons</span><span class="p">))</span>
+<span class="go">    permet de créer une nouvelle liste avec des commandes !</span>
+</pre></div>
+</div>
+<p><strong>Ajout</strong>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">maList</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">nvlElement</span><span class="p">)</span>
+<span class="n">attention</span> <span class="n">pas</span> <span class="n">de</span> <span class="n">valeur</span> <span class="n">de</span> <span class="n">retour</span><span class="o">.</span> <span class="n">Travaille</span> <span class="n">directement</span> <span class="n">sur</span> <span class="n">maList</span>
+<span class="n">maList</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="s2">&quot;titi&quot;</span><span class="p">)</span>
+<span class="n">maList</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">autreListe</span><span class="p">)</span>
+</pre></div>
+</div>
+<dl class="simple">
+<dt><strong>Suppression</strong>::</dt><dd><p>maList.remove(« tutu »)
+ou del maList[3]</p>
+</dd>
+</dl>
+<p>Elle peuvent être utilisées en pile ou en queue cf. &lt;<a class="reference external" href="https://docs.python.org/3.1/tutorial/datastructures.html">https://docs.python.org/3.1/tutorial/datastructures.html</a>&gt;</p>
+<p>Grace à pop pour les piles et popleft pour les files d’attente</p>
+<p><strong>test d’appartenance</strong>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>if variable in maListe:
+    instruction in !
+</pre></div>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Avertissement</p>
+<p>attention à la copie de liste ne copie que le nom (l’adresse) pas les données.</p>
+</div>
+<p>Mais on peut utiliser les compréhensions de listes:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">list2</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">list</span><span class="p">]</span>
+<span class="n">ou</span> <span class="n">plus</span> <span class="n">simplement</span> <span class="n">list2</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">list1</span><span class="p">)</span>
+</pre></div>
+</div>
+<p id="index-3"><strong>Compréhension de listes</strong> ou listes en intension</p>
+<p>C’est assurément un des grandes forces de Python. L’idée est de créer un liste en une seule ligne
+Voir <a class="reference external" href="http://sametmax.com/python-love-les-listes-en-intention-partie/">les comprehensions de liste sur Sam et Max</a> <a class="footnote-reference brackets" href="#id3" id="id4">2</a></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>    [expression for element in sequence]
+    moyen de filtrer les listes
+        mais pas que
+        [expression for element in sequence if condition]
+    List comprehensions provide a concise way to create lists from sequences. Common applications are to make
+lists where each element is the result of some operations applied to each member of the sequence, or to create a
+subsequence of those elements that satisfy a certain condition.
+
+exemples
+
+[nb * nb for nb in liste_origine]
+    c&#39;est en ça que python devient for (on parcours la liste en une seul ligne. L&#39;astuce est de créer une nouvelle liste
+    [nb for nb in liste_origine if nb % 2 == 0]
+        encore plus fort
+    [str(round(355/113, i)) for i in range(1, 6)]
+        donne : [’3.1’, ’3.14’, ’3.142’, ’3.1416’, ’3.14159’]
+    ou encore:
+        [x*y for x in vec1 for y in vec2]
+</pre></div>
+</div>
+<p><strong>Remarque</strong> : le for element in sequence est le même que dans la syntaxe d’une boucle for.
+On peut considérer la compréhension de liste comme une boucle for condensée.</p>
+<p><strong>Astuce</strong> lire les compréhension de liste de la droite vers la gauche.</p>
+</div>
+<div class="section" id="dictionnaires">
+<span id="index-4"></span><h3><a class="toc-backref" href="#sommaire">Dictionnaires</a><a class="headerlink" href="#dictionnaires" title="Lien permanent vers ce titre">¶</a></h3>
+<p><a class="reference external" href="https://docs.python.org/3.1/tutorial/datastructures.html#dictionaries">Doc officielle sur les dictionnaires</a> <a class="footnote-reference brackets" href="#id5" id="id6">3</a></p>
+<p>Mot clé : dict, création: maVar = dict()</p>
+<p>Eléments de syntaxe: les accolades et les :</p>
+<p>On peut aussi créer des dictionnaires déjà remplis</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">placard</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;chemise&quot;</span><span class="p">:</span><span class="mi">3</span><span class="p">,</span> <span class="s2">&quot;pantalon&quot;</span><span class="p">:</span><span class="mi">6</span><span class="p">,</span> <span class="s2">&quot;tee-shirt&quot;</span><span class="p">:</span><span class="mi">7</span><span class="p">}</span> <span class="o">-</span> <span class="n">on</span> <span class="n">notera</span> <span class="n">les</span> <span class="n">accolades</span>
+</pre></div>
+</div>
+<p>Remplissage : maVar[ clé ] = valeur</p>
+<p>Clé et valeur peuvent être de tout type (y compris des tuples par exemple et y compris dans
+le même dictionnaire).</p>
+<p>Exemple:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">mon_dictionnaire</span><span class="p">[</span><span class="s2">&quot;pseudo&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;Prolixe&quot;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">mon_dictionnaire</span><span class="p">[</span><span class="s2">&quot;mot de passe&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;*&quot;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">mon_dictionnaire</span>
+<span class="go">{&#39;mot de passe&#39;: &#39;*&#39;, &#39;pseudo&#39;: &#39;Prolixe&#39;}</span>
+
+<span class="go">    la clé est par conception unique</span>
+<span class="go">        maVar[ &quot;ici&quot; ] = 234</span>
+<span class="go">        ...</span>
+<span class="go">        puis maVar[ &quot;ici&quot; ] = &#39;RESTE&#39;</span>
+<span class="go">            Reste ecrase 234.</span>
+</pre></div>
+</div>
+<p>{ “banane”, “pomme”, “citron” } n’est pas un dictionnaire sans valeurs. C’est un set ou ensemble.
+A la différence des liste, il ne peu contenir 2 fois la même valeur.</p>
+<p><strong>Les dictionnaires peuvent servir de paramètre nommés d’une fonction</strong> comme les listes pour les
+paramètres non nommés.</p>
+<p>[ a for a in dico.keys()] donne la liste des clés</p>
+<p>[ a for a in dico.items()] donne une <strong>liste de tupple</strong> et pas un dictionnaire:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="s1">&#39;NADIA&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;JOJO&#39;</span><span class="p">:</span> <span class="mi">14</span><span class="p">}</span>
+<span class="p">[(</span><span class="s1">&#39;NADIA&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;JOJO&#39;</span><span class="p">,</span> <span class="mi">14</span><span class="p">)]</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="enumerate">
+<span id="index-5"></span><h3><a class="toc-backref" href="#sommaire">enumerate</a><a class="headerlink" href="#enumerate" title="Lien permanent vers ce titre">¶</a></h3>
+<p>C’est un mot clé et une fonction qui retourne un tuple(indice, valeur) et qui s’applique à tous
+les itérators.</p>
+<p>Différence:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">lsie</span> <span class="o">=</span> <span class="p">[</span><span class="mi">12</span><span class="p">,</span><span class="mi">35</span><span class="p">,</span><span class="s1">&#39;rien&#39;</span><span class="p">,</span><span class="mf">65.3</span><span class="p">]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="k">for</span> <span class="n">elt</span> <span class="ow">in</span> <span class="n">lsie</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">elt</span><span class="p">)</span>
+
+<span class="mi">12</span>
+<span class="mi">35</span>
+<span class="n">rien</span>
+<span class="mf">65.3</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="k">for</span> <span class="n">elt</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">lsie</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">elt</span><span class="p">)</span>
+
+<span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">12</span><span class="p">)</span>
+<span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">35</span><span class="p">)</span>
+<span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;rien&#39;</span><span class="p">)</span>
+<span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mf">65.3</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="fonctions">
+<span id="index-6"></span><h3><a class="toc-backref" href="#sommaire">Fonctions</a><a class="headerlink" href="#fonctions" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Syntaxe:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">fonctionName</span><span class="p">(</span><span class="n">parametres</span><span class="p">,</span> <span class="n">param</span> <span class="o">=</span> <span class="n">defValue</span><span class="p">)</span> <span class="p">:</span>
+    <span class="k">return</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span><span class="n">d</span>
+</pre></div>
+</div>
+<p>Les fonction peuvent retourner plusieurs valeurs.</p>
+<p>Pas de surcharge</p>
+<p id="index-7"><strong>fonction lambda</strong> ? f = lambda x: x * x</p>
+<p>Intérêt ? Ecrire du code plus concis.</p>
+<p>lambda est un mot clé</p>
+<p><a class="reference external" href="https://python.developpez.com/cours/DiveIntoPython/php/frdiveintopython/power_of_introspection/lambda_functions.php">les fonctions lambda sur developpez</a> <a class="footnote-reference brackets" href="#id7" id="id8">4</a></p>
+<p>sur open classroom <a class="reference external" href="https://openclassrooms.com/courses/apprenez-a-programmer-en-python/pas-a-pas-vers-la-modularite-1-2#/id/r-231371">meilleur explication de la fonction lambda sur Openclassroom</a> <a class="footnote-reference brackets" href="#id9" id="id10">5</a></p>
+<p><a class="reference external" href="https://openclassrooms.com/courses/apprenez-a-programmer-en-python/parenthese-sur-le-tri-en-python#/id/r-2233424">Exemple du tri avec une lambda sur Openclassroom</a> <a class="footnote-reference brackets" href="#id11" id="id12">6</a></p>
+<p>En résumé: on met dans une variable une fonction pour pouvoir l’appeler ensuite sauf qu’on ne donne
+pas de nom à la fonction.</p>
+<p>Fonctions avec nombre paramètre indéterminé:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>def fonction_inconnue(*parametres):
+    *parametre défini un tuple (rien à voir avec les pointeurs ?!
+    on peut mixer
+        def fonction_inconnue(nom, prenom, *commentaires):
+&gt;&gt;&gt; def fonction_inconnue(*parametres):
+...     &quot;&quot;&quot;Test d&#39;une fonction pouvant être appelée avec un nombre variable de paramètres&quot;&quot;&quot;
+...
+...     print(&quot;J&#39;ai reçu : {}.&quot;.format(parametres))
+...
+&gt;&gt;&gt; fonction_inconnue() # On appelle la fonction sans paramètre
+J&#39;ai reçu : ().
+&gt;&gt;&gt; fonction_inconnue(33)
+J&#39;ai reçu : (33,).
+&gt;&gt;&gt; fonction_inconnue(&#39;a&#39;, &#39;e&#39;, &#39;f&#39;)
+J&#39;ai reçu : (&#39;a&#39;, &#39;e&#39;, &#39;f&#39;).
+&gt;&gt;&gt; var = 3.5
+&gt;&gt;&gt; fonction_inconnue(var, [4], &quot;...&quot;)
+J&#39;ai reçu : (3.5, [4], &#39;...&#39;).
+&gt;&gt;&gt;
+</pre></div>
+</div>
+<p>Une liste peu devenir paramètres d’une fonction, Achement puissant:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">liste_des_parametres</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="mi">36</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="o">*</span><span class="n">liste_des_parametres</span><span class="p">)</span>
+</pre></div>
+</div>
+<p id="index-8"><strong>Les décorateurs</strong></p>
+<p>Pour schématiser, une fonction modifiée par un décorateur ne s’exécutera pas elle-même mais
+appellera le décorateur. C’est au décorateur de décider s’il veut exécuter la fonction
+et dans quelles conditions. (from <em>openclassroom</em>). C’est un moyen simple de modifier le
+comportement d’une fonction. Un décorateur est une fonction (qu’il faut donc définir de la même
+manière qu’une autre fonction) qui est appelé avant l’appel de la fonction elle-même. Il se place
+juste une ligne avant la définition de la fonction et est précédé par &#64;.</p>
+<p>On peut créer des décorateurs qui accepte des paramètres et dans ce cas on atteint vite 3 niveaux
+de définition de fonctions imbriquées. Cf. OpenClassromm</p>
+<p>Autres <a class="reference external" href="http://simeonfranklin.com/blog/2012/jul/1/python-decorators-in-12-steps/">explication très détaillée par Simeon Franklin</a> <a class="footnote-reference brackets" href="#id13" id="id14">7</a> en anglais.</p>
+<p>partial() appartient functool</p>
+<p>super() sujet : class, hiérarchie</p>
+<p>Permet d’appeler explicitement une méthode de la classe mère si celle-ci est redéfinie
+dans  la classe fille. Par exemple init</p>
+<hr class="docutils" />
+</div>
+<div class="section" id="modules">
+<span id="index-9"></span><h3><a class="toc-backref" href="#sommaire">Modules</a><a class="headerlink" href="#modules" title="Lien permanent vers ce titre">¶</a></h3>
+<p>C’est tout simplement un fichier .py qui contient des variables, des fonctions ou des classes.</p>
+<p id="index-10">Plusieurs mots clés sont associés à la notion de module:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span>
+<span class="nn">import</span>
+<span class="k">as</span>
+</pre></div>
+</div>
+<p>Plusieurs syntaxes sont possible:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">maths</span>
+<span class="kn">from</span> <span class="nn">maths</span> <span class="kn">import</span> <span class="n">sqr</span>
+<span class="kn">import</span> <span class="nn">maths</span> <span class="k">as</span> <span class="nn">mathematiques</span>
+<span class="kn">from</span> <span class="nn">myModule</span> <span class="kn">import</span> <span class="o">*</span>
+    <span class="n">importe</span>  <span class="n">myModule</span> <span class="n">dans</span> <span class="n">l</span><span class="s1">&#39;espace de nom principal</span>
+    <span class="n">Si</span> <span class="n">myModule</span> <span class="n">est</span> <span class="n">un</span> <span class="n">package</span> <span class="n">alors</span> <span class="n">les</span> <span class="n">noms</span> <span class="n">des</span> <span class="n">modules</span> <span class="n">qu</span><span class="s1">&#39;il contient sont créés dans</span>
+    <span class="n">l</span><span class="s1">&#39;espace des noms courants ainsi que les noms de ses sous-packages mais pas de leurs modules</span>
+    <span class="n">respectifs</span><span class="o">.</span>
+<span class="kn">import</span> <span class="nn">crée</span> <span class="n">un</span> <span class="n">espace</span> <span class="n">de</span> <span class="n">nom</span> <span class="p">(</span><span class="o">*</span><span class="kn">from</span> <span class="nn">OpenClassroom</span><span class="o">*</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><strong>Astuce</strong>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">diff</span> <span class="n">entre</span> <span class="kn">import</span> <span class="nn">os</span> <span class="n">et</span> <span class="kn">from</span> <span class="nn">os</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="n">dns</span> <span class="n">le</span> <span class="n">premier</span> <span class="n">on</span> <span class="n">est</span> <span class="n">obligé</span> <span class="n">de</span> <span class="n">mettre</span> <span class="n">os</span><span class="o">.</span><span class="n">fonction</span><span class="p">()</span>
+<span class="n">dns</span> <span class="n">le</span> <span class="n">second</span> <span class="n">cas</span> <span class="n">les</span> <span class="n">fonctions</span> <span class="n">font</span> <span class="n">parties</span> <span class="n">de</span> <span class="n">l</span><span class="s1">&#39;espace de noms courant.</span>
+<span class="n">Mais</span> <span class="n">quand</span> <span class="n">il</span> <span class="n">s</span><span class="s1">&#39;agit d&#39;</span><span class="n">un</span> <span class="n">package</span> <span class="n">avec</span> <span class="n">des</span> <span class="n">sous</span> <span class="n">package</span>
+    <span class="kn">from</span> <span class="nn">PyQt5.QtWidgets</span> <span class="kn">import</span> <span class="n">QApplication</span><span class="p">,</span><span class="n">QWidget</span>
+</pre></div>
+</div>
+<p>Faire un test de module dans le module-même:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+        <span class="n">code</span> <span class="n">à</span> <span class="n">executer</span>
+</pre></div>
+</div>
+<p>Le code qui suit cette ligne n’est exécuté que si la condition est vrai. En d’autres termes
+si le module est programme principal et non issu d’un import.</p>
+<p>On peut intégrer l’aide dans le module ou dans la fonction:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot;visiblement en plaçant le texte en début de bloc (par exemple just entre le nom de la</span>
+<span class="sd">fonction et le reste du code et en encadrant le texte avec un tripe double cote&quot;&quot;&quot;</span>
+<span class="n">Ou</span> <span class="n">carrément</span> <span class="n">en</span> <span class="n">début</span> <span class="n">de</span> <span class="n">module</span>
+
+<span class="n">help</span><span class="p">(</span><span class="s2">&quot;nomPackage.nomFonction ou nomPackage&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p id="index-11">On peut même intégrer un test automatique cf. doctest.
+The doctestmodule makes unit testing as simple and painless as possible. To use it all
+we need to do is add examples to our docstrings, showing what we would type into the
+interactive Python interpreter (or IDLE) and what response we expect back.</p>
+<p><strong>A revoir</strong> 24/08/2020</p>
+<hr class="docutils" />
+</div>
+<div class="section" id="les-exceptions">
+<span id="index-12"></span><h3><a class="toc-backref" href="#sommaire">Les exceptions</a><a class="headerlink" href="#les-exceptions" title="Lien permanent vers ce titre">¶</a></h3>
+<p>On peut intercepter les erreurs (ou exceptions) levées par notre code grâce aux blocs try except.
+La syntaxe d’une assertion est assert test:. Les assertions lèvent une exception AssertionError
+si le test échoue.</p>
+<p>On peut lever une exception grâce au mot-clé raise suivi du type de l’exception.</p>
+<p>Mots clés : try et except (dans sa version la plus basic)</p>
+<p>Il est plus que vivement conseillé de préciser un type d’erreur derrière except au risque de
+capturer toutes les exceptions y compris ctrl+c par exemple !</p>
+<p>Un grand classique d’utilisation est la saisie de valeur:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+<span class="gp">... </span>    <span class="k">try</span><span class="p">:</span>
+<span class="gp">... </span>        <span class="n">x</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Please enter a number: &quot;</span><span class="p">))</span>
+<span class="gp">... </span>        <span class="k">break</span>
+<span class="gp">... </span>    <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
+<span class="gp">... </span>        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Oops!  That was no valid number.  Try again...&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Il est également possible de faire suivre l ’instruction try de plusieurs blocs except. Chacun
+d’entre eux traitant un type d’erreur spécifique:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">except</span>
+    <span class="n">Except</span> <span class="n">error_name1</span><span class="p">:</span>
+    <span class="n">Except</span> <span class="n">error_name2</span><span class="p">:</span>
+<span class="k">else</span>
+<span class="n">finaly</span>
+    <span class="n">A</span> <span class="k">finally</span> <span class="n">clause</span> <span class="ow">is</span> <span class="n">always</span> <span class="n">executed</span> <span class="n">before</span> <span class="n">leaving</span> <span class="n">the</span> <span class="k">try</span> <span class="n">statement</span><span class="p">,</span> <span class="n">même</span> <span class="n">s</span><span class="s1">&#39;il y a un</span>
+    <span class="k">return</span> <span class="n">dans</span> <span class="n">le</span> <span class="n">bloc</span>
+<span class="k">pass</span>
+<span class="k">assert</span>
+    <span class="n">Si</span> <span class="n">le</span> <span class="n">test</span> <span class="n">renvoie</span> <span class="kc">True</span><span class="p">,</span> <span class="n">l</span><span class="s1">&#39;exécution se poursuit normalement. Sinon, une exception</span>
+    <span class="ne">AssertionError</span> <span class="n">est</span> <span class="n">levée</span><span class="o">.</span>
+    <span class="n">Il</span> <span class="n">faut</span> <span class="n">voir</span> <span class="n">cela</span> <span class="n">comme</span> <span class="n">une</span> <span class="n">affirmation</span> <span class="p">(</span><span class="n">une</span> <span class="n">assertion</span><span class="p">)</span> <span class="n">dans</span> <span class="n">si</span> <span class="n">elle</span> <span class="n">n</span><span class="s1">&#39;est pas correcte</span>
+    <span class="n">alors</span> <span class="n">erreur</span><span class="o">.</span>
+</pre></div>
+</div>
+<p>Exemples:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">try</span><span class="p">:</span>
+    <span class="n">resultat</span> <span class="o">=</span> <span class="n">numerateur</span> <span class="o">/</span> <span class="n">denominateur</span>
+<span class="k">except</span> <span class="ne">NameError</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;La variable numerateur ou denominateur n&#39;a pas été définie.&quot;</span><span class="p">)</span>
+<span class="k">except</span> <span class="ne">TypeError</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;La variable numerateur ou denominateur possède un type incompatible avec la division.&quot;</span><span class="p">)</span>
+<span class="k">except</span> <span class="ne">ZeroDivisionError</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;La variable denominateur est égale à 0.&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Le résultat obtenu est&quot;</span><span class="p">,</span> <span class="n">resultat</span><span class="p">)</span>
+<span class="k">finally</span><span class="p">:</span>
+    <span class="c1"># Instruction(s) exécutée(s) qu&#39;il y ait eu des erreurs ou non</span>
+<span class="k">except</span> <span class="n">type_de_l_exception</span><span class="p">:</span> <span class="c1"># Rien ne doit se passer en cas d&#39;erreur</span>
+    <span class="k">pass</span>
+        <span class="n">annee</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Saisissez une année supérieure à 0 :&quot;</span><span class="p">)</span>
+
+<span class="k">try</span><span class="p">:</span>
+    <span class="n">annee</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">annee</span><span class="p">)</span> <span class="c1"># Conversion de l&#39;année</span>
+    <span class="k">assert</span> <span class="n">annee</span> <span class="o">&gt;</span> <span class="mi">0</span>
+<span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Vous n&#39;avez pas saisi un nombre.&quot;</span><span class="p">)</span>
+<span class="k">except</span> <span class="ne">AssertionError</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;L&#39;année saisie est inférieure ou égale à 0.&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Sortir d’une boucle infinie par une iterruption clavier</p>
+</div>
+</div>
+<div class="section" id="astuces">
+<h2><a class="toc-backref" href="#sommaire">Astuces</a><a class="headerlink" href="#astuces" title="Lien permanent vers ce titre">¶</a></h2>
+</div>
+<div class="section" id="i2c">
+<h2><a class="toc-backref" href="#sommaire">I2C</a><a class="headerlink" href="#i2c" title="Lien permanent vers ce titre">¶</a></h2>
+</div>
+<div class="section" id="pyserial">
+<h2><a class="toc-backref" href="#sommaire">PySerial</a><a class="headerlink" href="#pyserial" title="Lien permanent vers ce titre">¶</a></h2>
+<p>pyserial</p>
+<p><a class="reference external" href="http://pyserial.sourceforge.net/index.html">Pas de doc pdf seulement doc en ligne</a> <a class="footnote-reference brackets" href="#id15" id="id16">8</a></p>
+<p>pySerial includes a small console based terminal program called Miniterm. It can be started with:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="o">-</span><span class="n">m</span> <span class="n">serial</span><span class="o">.</span><span class="n">tools</span><span class="o">.</span><span class="n">miniterm</span> <span class="o">&lt;</span><span class="n">port</span> <span class="n">name</span><span class="o">&gt;</span> <span class="p">(</span><span class="n">use</span> <span class="n">option</span> <span class="o">-</span><span class="n">h</span> <span class="n">to</span> <span class="n">get</span> <span class="n">a</span> <span class="n">listing</span> <span class="n">of</span> <span class="nb">all</span> <span class="n">options</span><span class="p">)</span><span class="o">.</span>
+</pre></div>
+</div>
+<p>import serial et pas pyserial</p>
+<p>Utilisation:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ser</span><span class="o">=</span><span class="n">serial</span><span class="o">.</span><span class="n">Serial</span>
+<span class="n">ser</span><span class="o">.</span><span class="n">inWaiting</span><span class="p">()</span> <span class="p">:</span><span class="n">caractères</span> <span class="n">en</span> <span class="n">attente</span> <span class="n">de</span> <span class="n">réception</span>
+</pre></div>
+</div>
+<p><a class="reference external" href="http://eli.thegreenplace.net/2009/08/20/frames-and-protocols-for-the-serial-port-in-python">Frames and protocols for the serial port - in Python</a> <a class="footnote-reference brackets" href="#id17" id="id18">9</a></p>
+</div>
+<div class="section" id="gestionnaires-graphiques">
+<h2><a class="toc-backref" href="#sommaire">Gestionnaires graphiques</a><a class="headerlink" href="#gestionnaires-graphiques" title="Lien permanent vers ce titre">¶</a></h2>
+</div>
+<div class="section" id="a-revoir">
+<h2><a class="toc-backref" href="#sommaire">A revoir</a><a class="headerlink" href="#a-revoir" title="Lien permanent vers ce titre">¶</a></h2>
+</div>
+<div class="section" id="weblinks">
+<h2><a class="toc-backref" href="#sommaire">Weblinks</a><a class="headerlink" href="#weblinks" title="Lien permanent vers ce titre">¶</a></h2>
+<dl class="footnote brackets">
+<dt class="label" id="id1"><span class="brackets"><a class="fn-backref" href="#id2">1</a></span></dt>
+<dd><p><a class="reference external" href="https://docs.python.org/3/library/index.html">https://docs.python.org/3/library/index.html</a></p>
+</dd>
+<dt class="label" id="id3"><span class="brackets"><a class="fn-backref" href="#id4">2</a></span></dt>
+<dd><p><a class="reference external" href="http://sametmax.com/python-love-les-listes-en-intention-partie/">http://sametmax.com/python-love-les-listes-en-intention-partie/</a></p>
+</dd>
+<dt class="label" id="id5"><span class="brackets"><a class="fn-backref" href="#id6">3</a></span></dt>
+<dd><p><a class="reference external" href="https://docs.python.org/3.1/tutorial/datastructures.html#dictionaries">https://docs.python.org/3.1/tutorial/datastructures.html#dictionaries</a></p>
+</dd>
+<dt class="label" id="id7"><span class="brackets"><a class="fn-backref" href="#id8">4</a></span></dt>
+<dd><p><a class="reference external" href="https://python.developpez.com/cours/DiveIntoPython/php/frdiveintopython/power_of_introspection/lambda_functions.php">https://python.developpez.com/cours/DiveIntoPython/php/frdiveintopython/power_of_introspection/lambda_functions.php</a></p>
+</dd>
+<dt class="label" id="id9"><span class="brackets"><a class="fn-backref" href="#id10">5</a></span></dt>
+<dd><p><a class="reference external" href="https://openclassrooms.com/courses/apprenez-a-programmer-en-python/pas-a-pas-vers-la-modularite-1-2#/id/r-231371">https://openclassrooms.com/courses/apprenez-a-programmer-en-python/pas-a-pas-vers-la-modularite-1-2#/id/r-231371</a></p>
+</dd>
+<dt class="label" id="id11"><span class="brackets"><a class="fn-backref" href="#id12">6</a></span></dt>
+<dd><p><a class="reference external" href="https://openclassrooms.com/courses/apprenez-a-programmer-en-python/parenthese-sur-le-tri-en-python#/id/r-2233424">https://openclassrooms.com/courses/apprenez-a-programmer-en-python/parenthese-sur-le-tri-en-python#/id/r-2233424</a></p>
+</dd>
+<dt class="label" id="id13"><span class="brackets"><a class="fn-backref" href="#id14">7</a></span></dt>
+<dd><p><a class="reference external" href="http://simeonfranklin.com/blog/2012/jul/1/python-decorators-in-12-steps/">http://simeonfranklin.com/blog/2012/jul/1/python-decorators-in-12-steps/</a></p>
+</dd>
+<dt class="label" id="id15"><span class="brackets"><a class="fn-backref" href="#id16">8</a></span></dt>
+<dd><p><a class="reference external" href="http://pyserial.sourceforge.net/index.html">http://pyserial.sourceforge.net/index.html</a></p>
+</dd>
+<dt class="label" id="id17"><span class="brackets"><a class="fn-backref" href="#id18">9</a></span></dt>
+<dd><p><a class="reference external" href="http://eli.thegreenplace.net/2009/08/20/frames-and-protocols-for-the-serial-port-in-python">http://eli.thegreenplace.net/2009/08/20/frames-and-protocols-for-the-serial-port-in-python</a></p>
+</dd>
+</dl>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../index.html">Table des matières</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Python (mes notes)</a><ul>
+<li><a class="reference internal" href="#pourquoi-les-gens-aiment-python">Pourquoi les gens aiment Python</a></li>
+<li><a class="reference internal" href="#docs">Docs</a></li>
+<li><a class="reference internal" href="#elements-de-langages">Elements de langages</a><ul>
+<li><a class="reference internal" href="#tuples">Tuples</a></li>
+<li><a class="reference internal" href="#listes">Listes</a></li>
+<li><a class="reference internal" href="#dictionnaires">Dictionnaires</a></li>
+<li><a class="reference internal" href="#enumerate">enumerate</a></li>
+<li><a class="reference internal" href="#fonctions">Fonctions</a></li>
+<li><a class="reference internal" href="#modules">Modules</a></li>
+<li><a class="reference internal" href="#les-exceptions">Les exceptions</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#astuces">Astuces</a></li>
+<li><a class="reference internal" href="#i2c">I2C</a></li>
+<li><a class="reference internal" href="#pyserial">PySerial</a></li>
+<li><a class="reference internal" href="#gestionnaires-graphiques">Gestionnaires graphiques</a></li>
+<li><a class="reference internal" href="#a-revoir">A revoir</a></li>
+<li><a class="reference internal" href="#weblinks">Weblinks</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Sujet précédent</h4>
+  <p class="topless"><a href="../C++/Qt/Qt.html"
+                        title="Chapitre précédent">Notes sur Qt *</a></p>
+  <h4>Sujet suivant</h4>
+  <p class="topless"><a href="../lesObjetsConnectes/lesObjetsConnectes.html"
+                        title="Chapitre suivant">Les objets connectés</a></p>
+  <div role="note" aria-label="source link">
+    <h3>Cette page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/python/python.rst.txt"
+            rel="nofollow">Montrer le code source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Recherche rapide</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="Index général"
+             >index</a></li>
+        <li class="right" >
+          <a href="../lesObjetsConnectes/lesObjetsConnectes.html" title="Les objets connectés"
+             >suivant</a> |</li>
+        <li class="right" >
+          <a href="../C++/Qt/Qt.html" title="Notes sur Qt *"
+             >précédent</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Documentation MajorLee&#39;s notes </a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2019, J.SORANZO.
+      Créé avec <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.4.
+    </div>
+  </body>
+</html>

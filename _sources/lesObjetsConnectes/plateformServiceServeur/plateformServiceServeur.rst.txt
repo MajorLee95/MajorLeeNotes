@@ -13,9 +13,33 @@ Plateformes, services Web et serveurs
 ====================================================================================================
 M2M communication
 ====================================================================================================
+
+.. index::
+	single: MQTT
+
+MQTT
+====================================================================================================
+
+MQTT1 (Message Queuing Telemetry Transport2) est un **protocole de messagerie** publish-subscribe 
+basé sur le protocole TCP/IP.
+
+On parle d'agent ou message Broker (module logiciel), de bibliothèque et d'application
+
+`La spec de la version 3.1.1`_
+
+.. _`La spec de la version 3.1.1` : http://docs.oasis-open.org/mqtt/mqtt/v3.1.1/os/mqtt-v3.1.1-os.pdf
+
+Eclipse Mosquitto ou plus communément appelé Mosquitto est un des nombreux messages broker qui
+existe ( à noter qu'il est disponible sur RPI)
+
+`Site officiel de Mosquitto`_
+
+.. _`Site officiel de Mosquitto` : https://mosquitto.org/
+
+----------------------------------------------------------------------------------------------------
+
 .. index::
 	single: REST
-
 
 API REST
 ====================================================================================================
@@ -56,13 +80,18 @@ valables.*
 
 API SOAP
 ====================================================================================================
-Simple Object Access Protocol: repose surtout sur le xml.
+Simple Object Access Protocol: repose surtout sur le **xml**.
+
+
 
 Il permet la transmission de messages entre objets distants, ce qui veut dire qu'il autorise un 
 objet à invoquer des méthodes d'objets physiquement situés sur un autre serveur. Le transfert se 
 fait le plus souvent à l'aide du protocole HTTP, mais peut également se faire par un autre 
 protocole, comme SMTP. 
 
+`SOAP sur Guru99.com`_
+
+.. _`SOAP sur Guru99.com` : https://www.guru99.com/soap-simple-object-access-protocol.html
 
 Autres API
 ====================================================================================================

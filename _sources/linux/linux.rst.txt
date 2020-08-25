@@ -148,9 +148,6 @@ Là c'est différent l'appli n'est lancée qu'une seule fois au démarrage.
 
 `JdMdP partie lancer une appli au boot`_
 
-.. _`JdMdP partie lancer une appli au boot` : https://poltergeist42.github.io/JDM/Linux.html#pour-creer-un-script-qui-sexecute-au-demarrage-du-systeme 
-
-
 :Liens_Web:
 	
 	https://poltergeist42.github.io/JDM/Linux.html#pour-creer-un-script-qui-s-execute-au-demarrage-du-syteme
@@ -169,6 +166,9 @@ Là c'est différent l'appli n'est lancée qu'une seule fois au démarrage.
 				source : livre : Linux Embarqué page 20
 			Il a pour but d'offrir un meilleur cadre pour la gestion des dépendances entre services, de permettre le chargement en parallèle des services au démarrage, et de réduire les appels aux scripts shell.
 				src wikipedia
+
+
+.. _`JdMdP partie lancer une appli au boot` : https://poltergeist42.github.io/JDM/Linux.html#pour-creer-un-script-qui-sexecute-au-demarrage-du-systeme
 
 ================================
 Samba

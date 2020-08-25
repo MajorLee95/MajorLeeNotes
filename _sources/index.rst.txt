@@ -19,6 +19,7 @@ Bienvenue dans les notes de  MajorLee's
    /linux/linux.rst
    /hardware/hardware
    /C++/cpp
+   /python/python
    /lesObjetsConnectes/lesObjetsConnectes
    /git/git
    /docker/docker

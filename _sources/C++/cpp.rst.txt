@@ -135,7 +135,7 @@ puis on surcharge l'opérateur. Presque normalement si ce n'est le flux en entr�
 
 ================================
 Namespace
-================================    
+================================
 Cela permet de préciser un nom de variable, de clase et/ou de fonction.
 
 Exemple 2 variable/ou fonctions/ ou classe ayant le même nom : rectangle dans 2  couples de 
@@ -154,6 +154,30 @@ Si on est sur de n'en utiliser qu'un seul dans toute l'appli alors on met::
 on peut aussi le faire pour un seul élément du namespace (c'est plus précis)::
     
     using namespace1::rectangle()
+
+Il y a une partie déclarative::
+
+    namespace toto{
+        int uneFonction(){
+
+        }
+    }
+
+et la partie utilisation avec using
+
+ne pas mettre de using namespace dans les .h, en effet c'est un outil pour résoudre des conflits de
+nom dans un espace en particuler et comme on ne sait pas à l'avance où vont être inclu les .h
+A priori, partout, on risque d'avoir des conflits de noms.
+
+Quelques références:
+
+`Namesspace sur le site Microsoft`_
+
+.. _`Namesspace sur le site Microsoft` : https://docs.microsoft.com/fr-fr/cpp/cpp/namespaces-cpp?view=vs-2019
+
+`Namespace sur developpez.com`_
+
+.. _`Namespace sur developpez.com` : https://cpp.developpez.com/faq/cpp/?page=Les-namespaces
 
 ----------------------------------------------------------------------------------------------------
 
