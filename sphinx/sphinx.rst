@@ -125,14 +125,15 @@ Ce fichier est utilisé par make html
 
 ================================
 Les liens
-================================ 
+================================
 
-Liens externes locaux
-================================ 
+Liens externes locaux (fichier word, pdf...)
+====================================================================================================
+
 Exemple vers un fichier pdf stocké dans la même arborescence. Externe en ce sens que ce ne sont
 pas des fichier rst
 
-directive .. only et role :download:
+On peut utiliser le role :download:
 
 `Page Sphinx sur download`_
 
@@ -143,11 +144,11 @@ Exemple :download:`doc pdf sphinx<sphinx.pdf>`
 
 Autre :download:`utilisation avec un word <exemple_roleDL.docx>`
 
-Quoique après relecture j'ai un gros doute `sur only`_
+
 
 .. _`sur only` : https://www.sphinx-doc.org/en/master/usage/restructuredtext/directives.html#directive-only
 
-Liens internes locaux
+Liens internes locaux (lien vers fichier rst)
 ====================================================
 Lien simple dans le même fichier vers une secion nommé du fichier
 `css pas dans gh-pages`_
@@ -174,8 +175,8 @@ Voir  `aide officielle ref`_
 
 .. _`aide officielle ref` : https://www.sphinx-doc.org/en/master/usage/restructuredtext/roles.html#ref-role
 
-Lien externe distant
-=============================
+Lien externe distant (url internet)
+====================================================================================================
 exemple url externe au système documentaire:
 
 .. code::
@@ -329,7 +330,7 @@ doxylink : contributed extension
 
 .. index::
     single: Sphinx; clearer
-    single! Sphinx; Séparateur html
+    single: Sphinx; Séparateur html
 
 Séparateur html
 ====================================================================================================

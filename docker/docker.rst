@@ -555,6 +555,14 @@ La cession complète::
 ====================================================================================================
 My tips
 ====================================================================================================
+Mode interractif : je suis resté blocké sur ce pb: soit un nginx lancer en mode ti avec en plus -d
+Comment on inteeragit avec le container (à part par le navigateur)
+
+Comment sait-on qu'un container a été lancé en mode ti ?
+
+
+
+
 .. index::
     single: Docker; Disk image locations tips
 
