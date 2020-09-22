@@ -548,6 +548,17 @@ Gestionnaires graphiques
 A revoir
 ====================================================================================================
 
+
+====================================================================================================
+Appli minimum (template)
+====================================================================================================
+Construire ou récupérer un set de template. Appli mini en version avec objet/sans objet avec/sans
+Tkinter au total 4 templates.
+
+J'ai déjà un template avec Qt dans::
+    
+    C:\MountWD\Donnees\ODJ\008_iao_wrk\Python\experimentations\appliMiniPyQt
+
 ====================================================================================================
 Weblinks
 ====================================================================================================

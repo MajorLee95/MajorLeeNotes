@@ -130,7 +130,8 @@ Borg
 Open source
 ====================================================================================================
 `Duplicati 2.0`_ à l'air bien et un download Synology sur leur site !!! Ne supporte pas les FTP en
-tant que source. testé.
+tant que source. testé. S'utilise au travers d'une interface WEB !
+
 
 `Cobian`_ dev arrêté en avec la version 11 en 2013
 
@@ -139,7 +140,9 @@ sauvegardes informatiques. Il est utilisé pour sauvegarder via le réseau un en
 clients et de serveurs (Unix, Linux, et Windows via Samba ou Cygwin).
 Il a été initialement développé à l'université américaine du Maryland, sous licence BSD.
 Au même titre que Bacula, Amanda est considérée comme étant une alternative viable aux 
-outils de sauvegarde propriétaire (source Wikipédia.fr)
+outils de sauvegarde propriétaire (source Wikipédia.fr). Oui mais.. ça m'a l'air d'être tout en 
+ligne de commandes et pour du Linux ! Redirigé vers ZManda mais on tourne en rond. Très mauvaise 
+expérience de navigation.
 
 
 

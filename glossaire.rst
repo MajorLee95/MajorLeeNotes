@@ -68,11 +68,18 @@ Major LEE Glossaire
     REST
         Representational State Transfer
 
+    BPMN
+        `Business Process Model and Notation`_
+        
+        
+
 .. _`Application Binary Interface` :  https://en.wikipedia.org/wiki/Application_binary_interface
         
 .. _`Advanced High-performance Bus` : https://en.wikipedia.org/wiki/Advanced_Microcontroller_Bus_Architecture#Advanced_High-performance_Bus_.28AHB.29
         
-        
+.. _`Business Process Model and Notation` : https://fr.wikipedia.org/wiki/Business_process_model_and_notation
+
+
         
 ====================================================================================================
 Weblinks

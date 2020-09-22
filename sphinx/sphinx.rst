@@ -150,7 +150,7 @@ Autre :download:`utilisation avec un word <exemple_roleDL.docx>`
 
 Liens internes locaux (lien vers fichier rst)
 ====================================================
-Lien simple dans le même fichier vers une secion nommé du fichier
+Lien simple dans le même fichier vers une section nommé du fichier
 `css pas dans gh-pages`_
 
 .. code::
