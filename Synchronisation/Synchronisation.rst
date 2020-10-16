@@ -111,7 +111,11 @@ of computers of different kinds.
 
 visiblement baucoup de solutions nécessite un serveur 
 
-Iperius backup : début de test 12/01/2020
+`Iperius backup`_ - pas poursuivi car payant.
+
+.. _`Iperius backup` : https://www.iperiusbackup.fr/backup-software-windows.aspx
+
+
 
 Sur `Korben 5 gratuits`_ :
 

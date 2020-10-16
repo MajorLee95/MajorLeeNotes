@@ -13,6 +13,9 @@ Major LEE Glossaire
     CDN
         Content Delivary Network, réseau de distribution de contenu. Exemple pour bootstrap
 
+    CI
+        Continuous Integration (test de non reg automatique): les plus connus CircleCI, Jenkins, CruisControl
+
     MVC
         est l'abréviation de Model-View-Controller, ce qui signifie en français
         "Modèle-Vue-Contrôleur"
