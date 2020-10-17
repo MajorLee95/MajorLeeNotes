@@ -40,7 +40,7 @@
           <div class="body" role="main">
             
   <div class="section" id="notes-sur-git">
-<span id="index-0"></span><h1><a class="toc-backref" href="#sommaire">Notes sur git</a><a class="headerlink" href="#notes-sur-git" title="Lien permanent vers ce titre">¶</a></h1>
+<h1><a class="toc-backref" href="#sommaire">Notes sur git</a><a class="headerlink" href="#notes-sur-git" title="Lien permanent vers ce titre">¶</a></h1>
 <a class="reference internal image-reference" href="../_images/gitLogo.png"><img alt="git logo" class="align-left" src="../_images/gitLogo.png" style="height: 100px;" /></a>
 <dl class="field-list simple">
 <dt class="field-odd">Auteur</dt>
@@ -60,37 +60,50 @@
 <div class="contents topic" id="sommaire">
 <p class="topic-title">Sommaire</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="#notes-sur-git" id="id11">Notes sur git</a></p>
+<li><p><a class="reference internal" href="#notes-sur-git" id="id13">Notes sur git</a></p>
 <ul>
-<li><p><a class="reference internal" href="#git" id="id12">git</a></p></li>
-<li><p><a class="reference internal" href="#commits-atomiques" id="id13">Commits atomiques</a></p></li>
-<li><p><a class="reference internal" href="#git-rebase" id="id14">git rebase</a></p></li>
-<li><p><a class="reference internal" href="#git-bisec" id="id15">git bisec</a></p></li>
-<li><p><a class="reference internal" href="#petits-trucs-utiles" id="id16">petits trucs utiles</a></p>
+<li><p><a class="reference internal" href="#git" id="id14">git</a></p></li>
+<li><p><a class="reference internal" href="#commits-atomiques" id="id15">Commits atomiques</a></p></li>
+<li><p><a class="reference internal" href="#git-rebase" id="id16">git rebase</a></p></li>
+<li><p><a class="reference internal" href="#git-bisec" id="id17">git bisec</a></p></li>
+<li><p><a class="reference internal" href="#petits-trucs-utiles" id="id18">petits trucs utiles</a></p>
 <ul>
-<li><p><a class="reference internal" href="#logiciels" id="id17">Logiciels</a></p></li>
-<li><p><a class="reference internal" href="#suppression-d-un-fichier" id="id18">Suppression d’un fichier</a></p></li>
-<li><p><a class="reference internal" href="#lister-les-fichiers-indexe" id="id19">lister les fichiers indexé</a></p></li>
-<li><p><a class="reference internal" href="#mais-vers-ou-pointe-origine" id="id20">Mais vers ou pointe origine</a></p></li>
-<li><p><a class="reference internal" href="#merger-un-seul-fichier" id="id21">merger un seul fichier</a></p></li>
-<li><p><a class="reference internal" href="#ecraser-les-derniere-modif-qui-n-ont-pas-ete-commitees" id="id22">Ecraser les dernière modif qui n’ont pas été commitées</a></p></li>
-<li><p><a class="reference internal" href="#retirer-un-repertoire-de-l-index" id="id23">Retirer un répertoire de l’index</a></p></li>
-<li><p><a class="reference internal" href="#lister-les-fichier-dossier-ignores" id="id24">lister les fichier dossier ignorés ?</a></p></li>
-<li><p><a class="reference internal" href="#ratacher-la-tete" id="id25">Ratacher la tête</a></p></li>
-<li><p><a class="reference internal" href="#annuler-le-dernier-commit" id="id26">Annuler le dernier commit</a></p></li>
-<li><p><a class="reference internal" href="#lister-les-commit-d-une-branche-distante" id="id27">Lister les commit d’une branche distante</a></p></li>
-<li><p><a class="reference internal" href="#depot-git-sur-cle-usb" id="id28">Dépôt git sur clé usb</a></p></li>
+<li><p><a class="reference internal" href="#logiciels" id="id19">Logiciels</a></p></li>
+<li><p><a class="reference internal" href="#suppression-d-un-fichier" id="id20">Suppression d’un fichier</a></p></li>
+<li><p><a class="reference internal" href="#lister-les-fichiers-indexe" id="id21">lister les fichiers indexé</a></p></li>
+<li><p><a class="reference internal" href="#mais-vers-ou-pointe-origine" id="id22">Mais vers ou pointe origine</a></p></li>
+<li><p><a class="reference internal" href="#merger-un-seul-fichier" id="id23">merger un seul fichier</a></p></li>
+<li><p><a class="reference internal" href="#ecraser-les-derniere-modif-qui-n-ont-pas-ete-commitees" id="id24">Ecraser les dernière modif qui n’ont pas été commitées</a></p></li>
+<li><p><a class="reference internal" href="#retirer-un-repertoire-de-l-index" id="id25">Retirer un répertoire de l’index</a></p></li>
+<li><p><a class="reference internal" href="#lister-les-fichier-dossier-ignores" id="id26">lister les fichier dossier ignorés ?</a></p></li>
+<li><p><a class="reference internal" href="#ratacher-la-tete" id="id27">Ratacher la tête</a></p></li>
+<li><p><a class="reference internal" href="#annuler-le-dernier-commit" id="id28">Annuler le dernier commit</a></p></li>
+<li><p><a class="reference internal" href="#lister-les-commit-d-une-branche-distante" id="id29">Lister les commit d’une branche distante</a></p></li>
+<li><p><a class="reference internal" href="#depot-git-sur-cle-usb" id="id30">Dépôt git sur clé usb</a></p></li>
+<li><p><a class="reference internal" href="#trace-l-arborescence-sous-forme-textuelle" id="id31">Trace l’arborescence sous forme textuelle</a></p></li>
+<li><p><a class="reference internal" href="#cle-ssh" id="id32">clé SSH</a></p></li>
+<li><p><a class="reference internal" href="#cherry-pick-ecremer" id="id33">cherry-pick : écrémer</a></p></li>
+<li><p><a class="reference internal" href="#lister-les-differences-entre-branches-locale-et-branche-distante" id="id34">Lister les différences entre branches locale et branche distante</a></p></li>
+<li><p><a class="reference internal" href="#git-push" id="id35">git push</a></p></li>
+<li><p><a class="reference internal" href="#supprimer-une-branche-distante" id="id36">supprimer une branche distante</a></p></li>
+<li><p><a class="reference internal" href="#merge-branche-distante" id="id37">Merge branche distante</a></p></li>
+<li><p><a class="reference internal" href="#traquer-une-nouvelle-branche-distante" id="id38">Traquer une nouvelle branche distante</a></p></li>
+<li><p><a class="reference internal" href="#creer-un-depot-distant-sur-le-serveur-du-volab" id="id39">créer un dépot distant sur le serveur du VoLAB</a></p></li>
+<li><p><a class="reference internal" href="#errors-git-cannot-lock-ref-d-une-branche-distante-lors-d-un-pull" id="id40">Errors : git cannot lock ref d’une branche distante lors d’un pull</a></p></li>
+<li><p><a class="reference internal" href="#lister-les-fichiers-d-une-branche" id="id41">lister les fichiers d’une branche</a></p></li>
+<li><p><a class="reference internal" href="#nettoyage-des-liens-pourri" id="id42">nettoyage des liens pourri</a></p></li>
+<li><p><a class="reference internal" href="#merge-d-un-repertoire-d-une-autre-branche" id="id43">merge d’un répertoire d’une autre branche</a></p></li>
+<li><p><a class="reference internal" href="#deplacer-le-dernier-commit-d-une-branche-vers-une-autre-branche" id="id44">Déplacer le dernier commit d’une branche vers une autre branche</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#reste-des-notes-xmind-a-transformer" id="id29">Reste des notes xmind a transformer</a></p></li>
-<li><p><a class="reference internal" href="#weblinks" id="id30">Weblinks</a></p></li>
+<li><p><a class="reference internal" href="#weblinks" id="id45">Weblinks</a></p></li>
 </ul>
 </li>
 </ul>
 </div>
 <div class="section" id="git">
 <h2><a class="toc-backref" href="#sommaire">git</a><a class="headerlink" href="#git" title="Lien permanent vers ce titre">¶</a></h2>
-<p>penser au fichier xmind</p>
+<p>penser au fichier xmind : ProcessusDocumntaire.xmind pas réussit à exporter vers Freeplane</p>
 </div>
 <div class="section" id="commits-atomiques">
 <h2><a class="toc-backref" href="#sommaire">Commits atomiques</a><a class="headerlink" href="#commits-atomiques" title="Lien permanent vers ce titre">¶</a></h2>
@@ -259,63 +272,113 @@ Cette commmande permet de revenir à l’état du dernier commit (ne pas confond
 <h3><a class="toc-backref" href="#sommaire">Dépôt git sur clé usb</a><a class="headerlink" href="#depot-git-sur-cle-usb" title="Lien permanent vers ce titre">¶</a></h3>
 <p>Créer <a class="reference external" href="https://en.wikibooks.org/wiki/Git/Repository_on_a_USB_stick">un dépôt git sur une clé usb, sur wikibook</a> <a class="footnote-reference brackets" href="#id9" id="id10">5</a></p>
 </div>
-</div>
-<div class="section" id="reste-des-notes-xmind-a-transformer">
-<h2><a class="toc-backref" href="#sommaire">Reste des notes xmind a transformer</a><a class="headerlink" href="#reste-des-notes-xmind-a-transformer" title="Lien permanent vers ce titre">¶</a></h2>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>une ch&#39;tite commande sympa git log --pretty=oneline --abbrev-commit --graph --decorate
-        trace l&#39;arborescence sous forme textuelle
-clé SSH
-        visiblement dépendante de l&#39;ordinateur non ?
-        Au tout au moins réside dans un répertoire locale de la machine
-        Comment les entrées dans un nouvel environnement ?
-cherry-pick
-        écrèmer
-Lister les différences entre branches locale et branche distante
-        git diff maBranche origin/branche
-                ne se connecte pas au serveur en réalité
-                fait la diff par rapport au copies locale
-        avant faire un git fetch
-git push
-        Situation
-                git local
-                je veux le mettre sous github
-                adding-an-existing-project-to-github-using-the-command-line/
-                git push --all
-                        from official ref
-                        Push all branches (i.e. refs under refs/heads/); cannot be used with other &lt;refspec&gt;.
-supprimer une branche distante
-        git push origin : &lt;nombrancheasupprimer&gt;
-Merge branche distante
-        git pull non !
-Traquer une nouvelle branche distante
-        le 31/03
-                avec tutoise
-                on commence par un git fetch origin pour mettre à jour la base locale
-                puis un checkout de la branche distante =&gt; créé une branche locale.
-        git branch -- track &lt;branch&gt; &lt;branche_distante&gt;
-créer un dépot distant sur le serveur du VoLAB
-        git init --bare chemin
-                attention dans la ligne de commande remplacer tous les \ par des /
-                sur le serveur
-                        le -- bare sur le serveur est mandatory sinon on se fait tej au moment du push
-                        on ne sairait une fois pusher sur un rep avec un working dir ça se fait pas alley un
-        en local
-                soit changer origin si c&#39;est un dépot existant
-Errors
-        git cannot lock ref d&#39;une branche distante lors d&#39;un pull
-                le fichier dans l&#39;arbo git était corrompu
-lister les fichiers d&#39;une branche
-        git ls-tree nom_de_la_branche -r (recursiv)
-git fetch --prune
-        nettoyage des liens pourri
-merge d&#39;un répertoire d&#39;une autre branche
-        git checkout branch chemin
-Déplacer le dernier commit d&#39;une branche vers une autre branche
-        git checkout l&#39;autre branche
-        git merge la branche où se trouve le commit fautif
-        git checkout la branche du commit fautif
-        git reset --hard HEAD~1
+<div class="section" id="trace-l-arborescence-sous-forme-textuelle">
+<h3><a class="toc-backref" href="#sommaire">Trace l’arborescence sous forme textuelle</a><a class="headerlink" href="#trace-l-arborescence-sous-forme-textuelle" title="Lien permanent vers ce titre">¶</a></h3>
+<p>une ch’tite commande sympa:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">log</span> <span class="o">--</span><span class="n">pretty</span><span class="o">=</span><span class="n">oneline</span> <span class="o">--</span><span class="n">abbrev</span><span class="o">-</span><span class="n">commit</span> <span class="o">--</span><span class="n">graph</span> <span class="o">--</span><span class="n">decorate</span>
 </pre></div>
+</div>
+</div>
+<div class="section" id="cle-ssh">
+<h3><a class="toc-backref" href="#sommaire">clé SSH</a><a class="headerlink" href="#cle-ssh" title="Lien permanent vers ce titre">¶</a></h3>
+<ul class="simple">
+<li><p>visiblement dépendante de l’ordinateur non ?</p></li>
+<li><p>Au tout au moins réside dans un répertoire locale de la machine</p></li>
+<li><p>Comment les entrées dans un nouvel environnement ?</p></li>
+</ul>
+<p><a class="reference external" href="https://fr.w3docs.com/snippets/git/comment-generer-une-cle-ssh-pour-git.html">Article intéressant sur W3C clé ssh</a> <a class="footnote-reference brackets" href="#id11" id="id12">6</a></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ls</span> <span class="o">-</span><span class="n">al</span> <span class="o">~/.</span><span class="n">ssh</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="cherry-pick-ecremer">
+<h3><a class="toc-backref" href="#sommaire">cherry-pick : écrémer</a><a class="headerlink" href="#cherry-pick-ecremer" title="Lien permanent vers ce titre">¶</a></h3>
+</div>
+<div class="section" id="lister-les-differences-entre-branches-locale-et-branche-distante">
+<h3><a class="toc-backref" href="#sommaire">Lister les différences entre branches locale et branche distante</a><a class="headerlink" href="#lister-les-differences-entre-branches-locale-et-branche-distante" title="Lien permanent vers ce titre">¶</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">diff</span> <span class="n">maBranche</span> <span class="n">origin</span><span class="o">/</span><span class="n">branche</span>
+    <span class="n">ne</span> <span class="n">se</span> <span class="n">connecte</span> <span class="n">pas</span> <span class="n">au</span> <span class="n">serveur</span> <span class="n">en</span> <span class="n">réalité</span>
+    <span class="n">fait</span> <span class="n">la</span> <span class="n">diff</span> <span class="n">par</span> <span class="n">rapport</span> <span class="n">au</span> <span class="n">copies</span> <span class="n">locale</span>
+<span class="n">avant</span> <span class="n">faire</span> <span class="n">un</span> <span class="n">git</span> <span class="n">fetch</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="git-push">
+<h3><a class="toc-backref" href="#sommaire">git push</a><a class="headerlink" href="#git-push" title="Lien permanent vers ce titre">¶</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Situation</span>
+    <span class="n">git</span> <span class="n">local</span>
+    <span class="n">je</span> <span class="n">veux</span> <span class="n">le</span> <span class="n">mettre</span> <span class="n">sous</span> <span class="n">github</span>
+    <span class="n">adding</span><span class="o">-</span><span class="n">an</span><span class="o">-</span><span class="n">existing</span><span class="o">-</span><span class="n">project</span><span class="o">-</span><span class="n">to</span><span class="o">-</span><span class="n">github</span><span class="o">-</span><span class="n">using</span><span class="o">-</span><span class="n">the</span><span class="o">-</span><span class="n">command</span><span class="o">-</span><span class="n">line</span><span class="o">/</span>
+    <span class="n">git</span> <span class="n">push</span> <span class="o">--</span><span class="nb">all</span>
+        <span class="kn">from</span> <span class="nn">official</span> <span class="n">ref</span>
+        <span class="n">Push</span> <span class="nb">all</span> <span class="n">branches</span> <span class="p">(</span><span class="n">i</span><span class="o">.</span><span class="n">e</span><span class="o">.</span> <span class="n">refs</span> <span class="n">under</span> <span class="n">refs</span><span class="o">/</span><span class="n">heads</span><span class="o">/</span><span class="p">);</span> <span class="n">cannot</span> <span class="n">be</span> <span class="n">used</span> <span class="k">with</span> <span class="n">other</span> <span class="o">&lt;</span><span class="n">refspec</span><span class="o">&gt;.</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="supprimer-une-branche-distante">
+<h3><a class="toc-backref" href="#sommaire">supprimer une branche distante</a><a class="headerlink" href="#supprimer-une-branche-distante" title="Lien permanent vers ce titre">¶</a></h3>
+<p>git push origin : &lt;nombrancheasupprimer&gt;</p>
+<p>le 17/10/2020 : git push origin +HEAD</p>
+<p>Gros pb</p>
+<p>git rebase -i HEAD~11
+(vi) drop versus pick</p>
+<p>:wq</p>
+<p>git push origin HEAD:gh-pages –force</p>
+</div>
+<div class="section" id="merge-branche-distante">
+<h3><a class="toc-backref" href="#sommaire">Merge branche distante</a><a class="headerlink" href="#merge-branche-distante" title="Lien permanent vers ce titre">¶</a></h3>
+<p>git pull non !</p>
+</div>
+<div class="section" id="traquer-une-nouvelle-branche-distante">
+<h3><a class="toc-backref" href="#sommaire">Traquer une nouvelle branche distante</a><a class="headerlink" href="#traquer-une-nouvelle-branche-distante" title="Lien permanent vers ce titre">¶</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>    <span class="n">le</span> <span class="mi">31</span><span class="o">/</span><span class="mi">03</span>
+    <span class="n">avec</span> <span class="n">tutoise</span>
+    <span class="n">on</span> <span class="n">commence</span> <span class="n">par</span> <span class="n">un</span> <span class="n">git</span> <span class="n">fetch</span> <span class="n">origin</span> <span class="n">pour</span> <span class="n">mettre</span> <span class="n">à</span> <span class="n">jour</span> <span class="n">la</span> <span class="n">base</span> <span class="n">locale</span>
+    <span class="n">puis</span> <span class="n">un</span> <span class="n">checkout</span> <span class="n">de</span> <span class="n">la</span> <span class="n">branche</span> <span class="n">distante</span> <span class="o">=&gt;</span> <span class="n">créé</span> <span class="n">une</span> <span class="n">branche</span> <span class="n">locale</span><span class="o">.</span>
+<span class="n">git</span> <span class="n">branch</span> <span class="o">--</span> <span class="n">track</span> <span class="o">&lt;</span><span class="n">branch</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">branche_distante</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="creer-un-depot-distant-sur-le-serveur-du-volab">
+<h3><a class="toc-backref" href="#sommaire">créer un dépot distant sur le serveur du VoLAB</a><a class="headerlink" href="#creer-un-depot-distant-sur-le-serveur-du-volab" title="Lien permanent vers ce titre">¶</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">init</span> <span class="o">--</span><span class="n">bare</span> <span class="n">chemin</span>
+    <span class="n">attention</span> <span class="n">dans</span> <span class="n">la</span> <span class="n">ligne</span> <span class="n">de</span> <span class="n">commande</span> <span class="n">remplacer</span> <span class="n">tous</span> <span class="n">les</span> \ <span class="n">par</span> <span class="n">des</span> <span class="o">/</span>
+    <span class="n">sur</span> <span class="n">le</span> <span class="n">serveur</span>
+            <span class="n">le</span> <span class="o">--</span> <span class="n">bare</span> <span class="n">sur</span> <span class="n">le</span> <span class="n">serveur</span> <span class="n">est</span> <span class="n">mandatory</span> <span class="n">sinon</span> <span class="n">on</span> <span class="n">se</span> <span class="n">fait</span> <span class="n">tej</span> <span class="n">au</span> <span class="n">moment</span> <span class="n">du</span> <span class="n">push</span>
+            <span class="n">on</span> <span class="n">ne</span> <span class="n">sairait</span> <span class="n">une</span> <span class="n">fois</span> <span class="n">pusher</span> <span class="n">sur</span> <span class="n">un</span> <span class="n">rep</span> <span class="n">avec</span> <span class="n">un</span> <span class="n">working</span> <span class="nb">dir</span> <span class="n">ça</span> <span class="n">se</span> <span class="n">fait</span> <span class="n">pas</span> <span class="n">alley</span> <span class="n">un</span>
+<span class="n">en</span> <span class="n">local</span>
+    <span class="n">soit</span> <span class="n">changer</span> <span class="n">origin</span> <span class="n">si</span> <span class="n">c</span><span class="s1">&#39;est un dépot existant</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="errors-git-cannot-lock-ref-d-une-branche-distante-lors-d-un-pull">
+<h3><a class="toc-backref" href="#sommaire">Errors : git cannot lock ref d’une branche distante lors d’un pull</a><a class="headerlink" href="#errors-git-cannot-lock-ref-d-une-branche-distante-lors-d-un-pull" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Le fichier dans l’arbo git était corrompu !</p>
+</div>
+<div class="section" id="lister-les-fichiers-d-une-branche">
+<h3><a class="toc-backref" href="#sommaire">lister les fichiers d’une branche</a><a class="headerlink" href="#lister-les-fichiers-d-une-branche" title="Lien permanent vers ce titre">¶</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">ls</span><span class="o">-</span><span class="n">tree</span> <span class="n">nom_de_la_branche</span> <span class="o">-</span><span class="n">r</span> <span class="p">(</span><span class="n">recursiv</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="nettoyage-des-liens-pourri">
+<h3><a class="toc-backref" href="#sommaire">nettoyage des liens pourri</a><a class="headerlink" href="#nettoyage-des-liens-pourri" title="Lien permanent vers ce titre">¶</a></h3>
+<p>git fetch –prune</p>
+</div>
+<div class="section" id="merge-d-un-repertoire-d-une-autre-branche">
+<h3><a class="toc-backref" href="#sommaire">merge d’un répertoire d’une autre branche</a><a class="headerlink" href="#merge-d-un-repertoire-d-une-autre-branche" title="Lien permanent vers ce titre">¶</a></h3>
+<blockquote>
+<div><p>git checkout branch chemin</p>
+</div></blockquote>
+</div>
+<div class="section" id="deplacer-le-dernier-commit-d-une-branche-vers-une-autre-branche">
+<h3><a class="toc-backref" href="#sommaire">Déplacer le dernier commit d’une branche vers une autre branche</a><a class="headerlink" href="#deplacer-le-dernier-commit-d-une-branche-vers-une-autre-branche" title="Lien permanent vers ce titre">¶</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">checkout</span> <span class="n">l</span><span class="s1">&#39;autre branche</span>
+<span class="n">git</span> <span class="n">merge</span> <span class="n">la</span> <span class="n">branche</span> <span class="n">où</span> <span class="n">se</span> <span class="n">trouve</span> <span class="n">le</span> <span class="n">commit</span> <span class="n">fautif</span>
+<span class="n">git</span> <span class="n">checkout</span> <span class="n">la</span> <span class="n">branche</span> <span class="n">du</span> <span class="n">commit</span> <span class="n">fautif</span>
+<span class="n">git</span> <span class="n">reset</span> <span class="o">--</span><span class="n">hard</span> <span class="n">HEAD</span><span class="o">~</span><span class="mi">1</span>
+</pre></div>
+</div>
 </div>
 </div>
 <div class="section" id="weblinks">
@@ -335,6 +398,9 @@ Déplacer le dernier commit d&#39;une branche vers une autre branche
 </dd>
 <dt class="label" id="id9"><span class="brackets"><a class="fn-backref" href="#id10">5</a></span></dt>
 <dd><p><a class="reference external" href="https://en.wikibooks.org/wiki/Git/Repository_on_a_USB_stick">https://en.wikibooks.org/wiki/Git/Repository_on_a_USB_stick</a></p>
+</dd>
+<dt class="label" id="id11"><span class="brackets"><a class="fn-backref" href="#id12">6</a></span></dt>
+<dd><p><a class="reference external" href="https://fr.w3docs.com/snippets/git/comment-generer-une-cle-ssh-pour-git.html">https://fr.w3docs.com/snippets/git/comment-generer-une-cle-ssh-pour-git.html</a></p>
 </dd>
 </dl>
 </div>
@@ -366,9 +432,22 @@ Déplacer le dernier commit d&#39;une branche vers une autre branche
 <li><a class="reference internal" href="#annuler-le-dernier-commit">Annuler le dernier commit</a></li>
 <li><a class="reference internal" href="#lister-les-commit-d-une-branche-distante">Lister les commit d’une branche distante</a></li>
 <li><a class="reference internal" href="#depot-git-sur-cle-usb">Dépôt git sur clé usb</a></li>
+<li><a class="reference internal" href="#trace-l-arborescence-sous-forme-textuelle">Trace l’arborescence sous forme textuelle</a></li>
+<li><a class="reference internal" href="#cle-ssh">clé SSH</a></li>
+<li><a class="reference internal" href="#cherry-pick-ecremer">cherry-pick : écrémer</a></li>
+<li><a class="reference internal" href="#lister-les-differences-entre-branches-locale-et-branche-distante">Lister les différences entre branches locale et branche distante</a></li>
+<li><a class="reference internal" href="#git-push">git push</a></li>
+<li><a class="reference internal" href="#supprimer-une-branche-distante">supprimer une branche distante</a></li>
+<li><a class="reference internal" href="#merge-branche-distante">Merge branche distante</a></li>
+<li><a class="reference internal" href="#traquer-une-nouvelle-branche-distante">Traquer une nouvelle branche distante</a></li>
+<li><a class="reference internal" href="#creer-un-depot-distant-sur-le-serveur-du-volab">créer un dépot distant sur le serveur du VoLAB</a></li>
+<li><a class="reference internal" href="#errors-git-cannot-lock-ref-d-une-branche-distante-lors-d-un-pull">Errors : git cannot lock ref d’une branche distante lors d’un pull</a></li>
+<li><a class="reference internal" href="#lister-les-fichiers-d-une-branche">lister les fichiers d’une branche</a></li>
+<li><a class="reference internal" href="#nettoyage-des-liens-pourri">nettoyage des liens pourri</a></li>
+<li><a class="reference internal" href="#merge-d-un-repertoire-d-une-autre-branche">merge d’un répertoire d’une autre branche</a></li>
+<li><a class="reference internal" href="#deplacer-le-dernier-commit-d-une-branche-vers-une-autre-branche">Déplacer le dernier commit d’une branche vers une autre branche</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#reste-des-notes-xmind-a-transformer">Reste des notes xmind a transformer</a></li>
 <li><a class="reference internal" href="#weblinks">Weblinks</a></li>
 </ul>
 </li>

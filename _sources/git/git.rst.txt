@@ -28,7 +28,7 @@ Notes sur git
 ================================
 git
 ================================
-penser au fichier xmind
+penser au fichier xmind : ProcessusDocumntaire.xmind pas réussit à exporter vers Freeplane
 
 ====================================================================================================
 Commits atomiques
@@ -201,65 +201,124 @@ Créer `un dépôt git sur une clé usb, sur wikibook`_
 
 .. _`un dépôt git sur une clé usb, sur wikibook` : https://en.wikibooks.org/wiki/Git/Repository_on_a_USB_stick
 
-=====================================
-Reste des notes xmind a transformer
-===================================== 
-        
-::  
-        
-	une ch'tite commande sympa git log --pretty=oneline --abbrev-commit --graph --decorate
-		trace l'arborescence sous forme textuelle
-	clé SSH
-		visiblement dépendante de l'ordinateur non ?
-		Au tout au moins réside dans un répertoire locale de la machine
-		Comment les entrées dans un nouvel environnement ?
-	cherry-pick
-		écrèmer
-	Lister les différences entre branches locale et branche distante
-		git diff maBranche origin/branche
-			ne se connecte pas au serveur en réalité
-			fait la diff par rapport au copies locale
-		avant faire un git fetch
-	git push
-		Situation 
-			git local
-			je veux le mettre sous github
-			adding-an-existing-project-to-github-using-the-command-line/
-			git push --all
-				from official ref
-				Push all branches (i.e. refs under refs/heads/); cannot be used with other <refspec>.
-	supprimer une branche distante
-		git push origin : <nombrancheasupprimer>
-	Merge branche distante
-		git pull non !
-	Traquer une nouvelle branche distante
-		le 31/03
-			avec tutoise
-			on commence par un git fetch origin pour mettre à jour la base locale
-			puis un checkout de la branche distante => créé une branche locale.
-		git branch -- track <branch> <branche_distante>
-	créer un dépot distant sur le serveur du VoLAB
-		git init --bare chemin
-			attention dans la ligne de commande remplacer tous les \ par des /
-			sur le serveur
-				le -- bare sur le serveur est mandatory sinon on se fait tej au moment du push
-				on ne sairait une fois pusher sur un rep avec un working dir ça se fait pas alley un
-		en local
-			soit changer origin si c'est un dépot existant
-	Errors
-		git cannot lock ref d'une branche distante lors d'un pull
-			le fichier dans l'arbo git était corrompu
-	lister les fichiers d'une branche
-		git ls-tree nom_de_la_branche -r (recursiv)
-	git fetch --prune
-		nettoyage des liens pourri
-	merge d'un répertoire d'une autre branche
-		git checkout branch chemin
-	Déplacer le dernier commit d'une branche vers une autre branche
-		git checkout l'autre branche
-		git merge la branche où se trouve le commit fautif
-		git checkout la branche du commit fautif
-		git reset --hard HEAD~1
+
+Trace l'arborescence sous forme textuelle
+===========================================
+une ch'tite commande sympa::
+
+	git log --pretty=oneline --abbrev-commit --graph --decorate
+    
+clé SSH
+===========================================
+
+- visiblement dépendante de l'ordinateur non ?
+- Au tout au moins réside dans un répertoire locale de la machine
+- Comment les entrées dans un nouvel environnement ?
+
+`Article intéressant sur W3C clé ssh`_
+
+.. _`Article intéressant sur W3C clé ssh` : https://fr.w3docs.com/snippets/git/comment-generer-une-cle-ssh-pour-git.html
+
+.. code::
+
+	 ls -al ~/.ssh
+
+
+cherry-pick : écrémer
+===========================================
+
+Lister les différences entre branches locale et branche distante
+======================================================================================
+::
+
+    git diff maBranche origin/branche
+        ne se connecte pas au serveur en réalité
+        fait la diff par rapport au copies locale
+    avant faire un git fetch
+
+git push
+===========================================
+
+::
+
+    Situation
+        git local
+        je veux le mettre sous github
+        adding-an-existing-project-to-github-using-the-command-line/
+        git push --all
+            from official ref
+            Push all branches (i.e. refs under refs/heads/); cannot be used with other <refspec>.
+
+supprimer une branche distante
+===========================================
+git push origin : <nombrancheasupprimer>
+
+le 17/10/2020 : git push origin +HEAD
+
+Gros pb
+
+git rebase -i HEAD~11
+(vi) drop versus pick
+
+:wq
+
+git push origin HEAD:gh-pages --force
+
+Merge branche distante
+===========================================
+git pull non !
+
+Traquer une nouvelle branche distante
+===========================================
+
+::
+
+	le 31/03
+        avec tutoise
+        on commence par un git fetch origin pour mettre à jour la base locale
+        puis un checkout de la branche distante => créé une branche locale.
+    git branch -- track <branch> <branche_distante>
+
+créer un dépot distant sur le serveur du VoLAB
+======================================================================================
+::
+
+    git init --bare chemin
+        attention dans la ligne de commande remplacer tous les \ par des /
+        sur le serveur
+		le -- bare sur le serveur est mandatory sinon on se fait tej au moment du push
+		on ne sairait une fois pusher sur un rep avec un working dir ça se fait pas alley un
+    en local
+        soit changer origin si c'est un dépot existant
+
+Errors : git cannot lock ref d'une branche distante lors d'un pull
+======================================================================================
+Le fichier dans l'arbo git était corrompu !
+
+lister les fichiers d'une branche
+===========================================
+::
+
+    git ls-tree nom_de_la_branche -r (recursiv)
+
+nettoyage des liens pourri
+===========================================
+
+git fetch --prune
+    
+merge d'un répertoire d'une autre branche
+===========================================
+    git checkout branch chemin
+
+Déplacer le dernier commit d'une branche vers une autre branche
+======================================================================================
+
+::
+
+    git checkout l'autre branche
+    git merge la branche où se trouve le commit fautif
+    git checkout la branche du commit fautif
+    git reset --hard HEAD~1
 
 
 =========
