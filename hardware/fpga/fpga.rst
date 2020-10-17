@@ -202,10 +202,35 @@ Contenu du Xmind
 ================================
 ALTERA / INTEL FPGA
 ================================
+MAX10 versus CYCLONE I, II, III, IV
+====================================================================================================
+LEs familles INTEL/FPGA en 2020: 
 
-MAX10 : CPLD techno Flash
+- AGILEX: 10nm intensive application
+- STRATIX: high-performance, state-of-the-art products to market faster with lower risk and higher productivity.
+- ARRIA: performance and power efficiency in the midrange.
+- CYCLONE: meet your low-power, cost-sensitive design needs, enabling you to get to market faster.
+- MAX10: revolutionize non-volatile integration by delivering advance processing capabilities in a low-cost, single chip small form.
 
-CYCLONE iV techno FPGA
+MAX10 : CPLD techno Flash (pas tout à fait vrai - la flash est intégré au boîtier)
+
+CYCLONE iV techno FPGA. Le dernier de la famille est Cyclone 10 introduit en 2017. IV en 2009 et 
+V en 2011
+
+MAX10 : introduite en 2014 après MAXII en 2004 et MAX V en 2010.
+
+Il y a 7 tailles de puces : 10M02, 04, 08, 16, 25, 40, 50 caractèrisant le nombre de LE de 2K à 50K.
+Contre 2 familles de C iV de 7 et 9 tailles famillles GX( EP4CE6 à 115 ) et GX ( EP4CGX15 à 150 ).
+
+Cyclone 5 c'est 6 sous-familles  ou variants dont 3 integre directement des CORTEX -A9 !
+(Optimized for transiver applications...)
+
+Cyclone 10 : 2 familles LP et GX. LP sans doute pour low power
+
+Source : `site INTEL FPGA family`_
+
+.. _`site INTEL FPGA family` : https://www.intel.com/content/www/us/en/products/programmable/fpga.html
+
 
 DECA-MAX-10 de chez ARROW 
 ======================================
@@ -267,7 +292,7 @@ BeMicro Max10 AVNET également
 
 ou `BeMicro Max10`_ : environ 30$, **10M08DAF484C8GES**
 
-8 LED, 2 BP, 8000 LE, 108kRAM, 12kFlash interne, 1 à 2 PLL
+8 LED, 2 BP, 8000 LE, 108kRAM, 12kFlash interne, 1 à 2 PLL, dual configuration memory
 
 50MHz oscillator
 

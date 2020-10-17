@@ -123,6 +123,9 @@ Ce fichier est utilisé par make html
 .. index::
     single: Sphinx; Liens
 
+Autre soucis après un crash disque ne pas faire un ``git clone le_lien_github`` mais faire
+``git clone le_liengithub .`` le point est très important.
+
 ================================
 Les liens
 ================================
