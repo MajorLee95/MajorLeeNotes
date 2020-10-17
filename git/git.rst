@@ -253,6 +253,8 @@ supprimer une branche distante
 ===========================================
 git push origin : <nombrancheasupprimer>
 
+le 17/10/2020 : git push origin +HEAD
+
 Merge branche distante
 ===========================================
 git pull non !
