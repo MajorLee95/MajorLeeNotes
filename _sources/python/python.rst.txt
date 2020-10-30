@@ -18,7 +18,9 @@ Pourquoi les gens aiment Python
 ====================================================================================================
 Parce qu'il est comme ARDUINO, il permet d'arriver simplement et rapidement à un résultat concret.
 
-supprime la nécessité d'apprendre un IDE
+On peut tout tester dans la console ! !c'est le couteau suisse du programmeur.
+
+Supprime la nécessité d'apprendre un IDE
 
 Python c'est 31 mots clé !
 
@@ -48,17 +50,24 @@ Ce sont simplement des listes non modifiables syntaxe :
 
 Listes
 ====================================================================================================
+Toutes les méthodes de list::
+
+    >>> listMethode[listMethode.index('clear'):listMethode.index('sort')]
+    'clear', 'copy', 'append', 'insert', 'extend', 'pop', 'remove', 'index', 'count', 'reverse'
+
 **Création**::
 
     toto = [1, 5, "tutu", 16.9, (12,3), ["Pierre", "05.12.34.56.78"]]
     toto = list([14,5,12])
+    truc = list() #pour une liste vide
+    ou encore troc = []
 
 Eléments de syntaxe: les crochets.
 
 **L'intérêt**::
 
     >>> seasons = ['Spring', 'Summer', 'Fall', 'Winter']
-    >>> list(enumerate(seasons))
+    >>> list(enumerate(seasons)) #liste de tuples (index, éléments)
         permet de créer une nouvelle liste avec des commandes !
 
 **Ajout**::
@@ -68,10 +77,16 @@ Eléments de syntaxe: les crochets.
     maList.insert(6, "titi")
     maList.extend(autreListe)
 
+**Accès**
+    Pour accéder à un élément : malist[indice] indice commence évidement à 0
+    Pour accéder à plusieurs élément consécutifs : malist[x:y]
+
+
 **Suppression**::
     maList.remove("tutu")
     ou del maList[3]
 
+**pile et queue**
 Elle peuvent être utilisées en pile ou en queue cf. <https://docs.python.org/3.1/tutorial/datastructures.html>
 
 Grace à pop pour les piles et popleft pour les files d'attente
@@ -81,33 +96,38 @@ Grace à pop pour les piles et popleft pour les files d'attente
         if variable in maListe:
             instruction in !
 
-.. warning:: attention à la copie de liste ne copie que le nom (l'adresse) pas les données.
+.. warning:: 
+    attention à la copie de liste list2=list1 ne copie que le nom (l'adresse) pas les données.
 
 Mais on peut utiliser les compréhensions de listes::
 
     list2 = [x for x in list]
     ou plus simplement list2 = list(list1)
+    ou encore lsit2=list1.copy()
 
 .. index::
     pair: Python;  Compréhension de liste
 
 **Compréhension de listes** ou listes en intension
 
-C'est assurément un des grandes forces de Python. L'idée est de créer un liste en une seule ligne
+C'est assurément un des grandes forces de Python et un élément de programmation nouveau.
+L'idée est de **créer un liste** en une seule ligne
 Voir `les comprehensions de liste sur Sam et Max`_
+
+Ca fabrique une liste !
 
 .. _`les comprehensions de liste sur Sam et Max` : http://sametmax.com/python-love-les-listes-en-intention-partie/
 
 
 .. code::
 
-        [expression for element in sequence]
-        moyen de filtrer les listes
-            mais pas que
-            [expression for element in sequence if condition]
-        List comprehensions provide a concise way to create lists from sequences. Common applications are to make
-    lists where each element is the result of some operations applied to each member of the sequence, or to create a
-    subsequence of those elements that satisfy a certain condition.
+    [expression for element in sequence]
+    moyen de filtrer les listes
+        mais pas que
+        [expression for element in sequence if condition]
+    List comprehensions provide a concise way to create lists from sequences. Common applications
+    are to make lists where each element is the result of some operations applied to each member 
+    of the sequence, or to create a subsequence of those elements that satisfy a certain condition.
 
     exemples
 
@@ -120,10 +140,44 @@ Voir `les comprehensions de liste sur Sam et Max`_
         ou encore:
             [x*y for x in vec1 for y in vec2]
 
+Création d'une liste de n éléments identique::
+
+    >>> malist =[]
+    >>> for i in range(10):
+        malist.append(2)
+
+mais::
+
+    truc=[truc.append(5) for i in range(10)] ne marche pas
+    mais truc = [ 5 for i in range(10) ] marche
+
 **Remarque** : le for element in sequence est le même que dans la syntaxe d'une boucle for.
 On peut considérer la compréhension de liste comme une boucle for condensée.
 
-**Astuce** lire les compréhension de liste de la droite vers la gauche.
+**Astuce**
+
+- lire les compréhension de liste de la droite vers la gauche.
+- maliste.append([1,2,5]) n'ajoute qu'un seul élément à la liste qui est [1,2,5]
+- en revanche malsie **+=** [2,3,5] fonctionne et ajoute 3 élément à la liste ou .extend()
+- la longueur de la liste malist.len() n'existe pas il faut faire len(list)
+- maliste.append(2,3,5) ne fonctionne pas
+
+**Liste et paramètres de fonction**
+la syntaxe au niveau definition est ::
+
+    def fonction(*parametres):
+
+la fonction reçoit un tuple des paramètres.
+
+L'appel d'une telle fonction peut se faire fonction( 1, 3, 6) ou fonction(\*malisteDeParametres)
+
+Cela est réservé au paramètres non mommés et on peut combiner des paramètre et une liste.
+La liste doit se trouver en dernier ainsi que des parmaètres nommés qui se trouveront après.
+
+
+
+**enumerate**
+Voir `Enumerate`_
 
 .. index::
     pair: Python;  Dictionnaire
@@ -149,6 +203,7 @@ le même dictionnaire).
 
 Exemple::
 
+    dico['a',0]="toto" on note que les parenthèses du tuple sont facultatives
     >>> mon_dictionnaire["pseudo"] = "Prolixe"
     >>> mon_dictionnaire["mot de passe"] = "*"
     >>> mon_dictionnaire
@@ -176,7 +231,7 @@ paramètres non nommés.
 .. index::
     single: Python; Enumerate
 
-enumerate
+Enumerate
 ====================================================================================================
 C'est un mot clé et une fonction qui retourne un tuple(indice, valeur) et qui s'applique à tous
 les itérators.
@@ -435,6 +490,74 @@ Exemples::
 
 Sortir d'une boucle infinie par une iterruption clavier
 
+.. index::
+    pair: Python; package
+
+Les packages
+====================================================================================================
+Il s'agit tout simplement d'un répertoire de module
+
+On peut importer un pakage entier ou seulement un module dans le package ou seulement une fonction
+d'un module dans un package.
+
+::
+
+    from package.fonctions import table
+    import tkinter as tk
+    from tkinter import messagebox
+    from tkinter import ttk
+
+On trouve de nombreux package et fonctions dans C:\Python34\Lib
+
+Un package doit obligatoirement contenir un fichier _init_.py même vide. Ceci n'est plus vrai 
+depuis la version 3.3
+
+Liste des package hyper courant:
+
+- random   : fonctions permettant de travailler avec des valeurs aléatoires
+- math     : toutes les fonctions utiles pour les opérations mathématiques (cosinus,sinus,exp,etc.)
+- sys      : fonctions systèmes
+- os       : fonctions permettant d'interagir avec le système d'exploitation
+- time     : fonctions permettant de travailler avec le temps
+- calendar : fonctions de calendrier
+- profile  : fonctions permettant d'analyser l'execution des fonctions
+- urllib2  : fonctions permettant de récupérer des informations sur internet
+- re       : fonctions permettant de travailler sur des expressions régulières
+
+.. index::
+    pair: Python; Fichiers
+
+Les fichiers
+====================================================================================================
+outres le classique ``fichier = open('gilename', 'atttrib')`` avec comme attribut:
+
+r, w, X, a, b, t, +
+
+X création exclusive, échoue si le fichier exsite déjà. 
+
++ : ouvre en modification (lecture et écriture)
+
+Il y a aussi la syntaxe::
+
+    with open('file', 'wb') as fichier:
+
+Avantage : pas besoin de close
+
+.. index::
+    pair: Python; Pickel
+
+Un mot sur le module **pickel**: il permet la sérialisation de variable (cf doc officielle chapitre
+12). Il utilise 2 méthodes : dump et load. C'est très utile pour stocker des variables et les 
+recharger par la suite.
+
+Décrit dans `openclassroom pickle`_
+
+.. _`openclassroom pickle` : https://openclassrooms.com/fr/courses/235344-apprenez-a-programmer-en-python/232431-utilisez-des-fichiers#/id/r-232430
+
+Dans tous les exemples que j'ai pu trouvé, on n'y voit jamais qu'une seule variable aussi complexe
+soit elle. J'ai lu un post qui disait de regrouper ses variables dans une liste avant de les
+sauvegarder
+
 
 
 ====================================================================================================
@@ -450,7 +573,8 @@ PySerial
 ====================================================================================================
 pyserial
 
-`Pas de doc pdf seulement doc en ligne`_
+`Pas de doc pdf seulement doc en ligne`_ mais un très bon readthedoc à noter que la doc sur 
+pythonhosted.org est identique.
 
 pySerial includes a small console based terminal program called Miniterm. It can be started with::
 
@@ -458,16 +582,30 @@ pySerial includes a small console based terminal program called Miniterm. It can
 
 import serial et pas pyserial
 
-Utilisation::
+Utilisation de la classe Serial du module serial::
 
-    ser=serial.Serial
+    ser=serial.Serial()
+    ser.baudrate=19200
+    ser.port='COM4'
+    ser.open()
+
     ser.inWaiting() :caractères en attente de réception
+
+**Astuce**::
+
+    ser=serial.Serial()
+    ser (dans la console python) permet de voir les paramètres et l'état ouvert/fermé
+
+On peut aussi donner tous les paramètres d'un coup au constructeur Serial. 
+Voir `la doc short intro`_
 
 `Frames and protocols for the serial port - in Python`_
 
-.. _`Pas de doc pdf seulement doc en ligne` : http://pyserial.sourceforge.net/index.html
+.. _`Pas de doc pdf seulement doc en ligne` : https://pyserial.readthedocs.io/en/latest/pyserial.html
 
 .. _`Frames and protocols for the serial port - in Python` : http://eli.thegreenplace.net/2009/08/20/frames-and-protocols-for-the-serial-port-in-python
+
+.. _`la doc short intro` : https://pyserial.readthedocs.io/en/latest/shortintro.html
 
 ====================================================================================================
 Gestionnaires graphiques
@@ -477,6 +615,17 @@ Gestionnaires graphiques
 ====================================================================================================
 A revoir
 ====================================================================================================
+
+
+====================================================================================================
+Appli minimum (template)
+====================================================================================================
+Construire ou récupérer un set de template. Appli mini en version avec objet/sans objet avec/sans
+Tkinter au total 4 templates.
+
+J'ai déjà un template avec Qt dans::
+    
+    C:\MountWD\Donnees\ODJ\008_iao_wrk\Python\experimentations\appliMiniPyQt
 
 ====================================================================================================
 Weblinks

@@ -58,49 +58,49 @@
 <div class="contents topic" id="sommaire">
 <p class="topic-title">Sommaire</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="#docker" id="id72">Docker*</a></p>
+<li><p><a class="reference internal" href="#docker" id="id76">Docker*</a></p>
 <ul>
-<li><p><a class="reference internal" href="#start-up-install" id="id73">Start-up /install</a></p>
+<li><p><a class="reference internal" href="#start-up-install" id="id77">Start-up /install</a></p>
 <ul>
-<li><p><a class="reference internal" href="#dockerhub" id="id74">Dockerhub</a></p></li>
+<li><p><a class="reference internal" href="#dockerhub" id="id78">Dockerhub</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#notes" id="id75">Notes</a></p>
+<li><p><a class="reference internal" href="#notes" id="id79">Notes</a></p>
 <ul>
-<li><p><a class="reference internal" href="#definitions" id="id76">Définitions</a></p></li>
-<li><p><a class="reference internal" href="#ma-presentation-rapide-pratique" id="id77">Ma présentation rapide pratique</a></p></li>
-<li><p><a class="reference internal" href="#grands-principes" id="id78">Grands principes</a></p></li>
+<li><p><a class="reference internal" href="#definitions" id="id80">Définitions</a></p></li>
+<li><p><a class="reference internal" href="#ma-presentation-rapide-pratique" id="id81">Ma présentation rapide pratique</a></p></li>
+<li><p><a class="reference internal" href="#grands-principes" id="id82">Grands principes</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#documentation" id="id79">Documentation</a></p></li>
-<li><p><a class="reference internal" href="#retour-dans-la-doc-officielle" id="id80">Retour dans la doc officielle.</a></p></li>
-<li><p><a class="reference internal" href="#commandes-principales" id="id81">Commandes principales</a></p></li>
-<li><p><a class="reference internal" href="#creer-une-image" id="id82">Créer une image</a></p>
+<li><p><a class="reference internal" href="#documentation" id="id83">Documentation</a></p></li>
+<li><p><a class="reference internal" href="#retour-dans-la-doc-officielle" id="id84">Retour dans la doc officielle.</a></p></li>
+<li><p><a class="reference internal" href="#commandes-principales" id="id85">Commandes principales</a></p></li>
+<li><p><a class="reference internal" href="#creer-une-image" id="id86">Créer une image</a></p>
 <ul>
-<li><p><a class="reference internal" href="#syntaxe-des-fichiers-dockerfile" id="id83">Syntaxe des fichiers Dockerfile</a></p></li>
-<li><p><a class="reference internal" href="#un-exercice" id="id84">Un exercice</a></p></li>
+<li><p><a class="reference internal" href="#syntaxe-des-fichiers-dockerfile" id="id87">Syntaxe des fichiers Dockerfile</a></p></li>
+<li><p><a class="reference internal" href="#un-exercice" id="id88">Un exercice</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#syntaxe-des-fichiers-docker-compose" id="id85">Syntaxe des fichiers Docker compose</a></p></li>
-<li><p><a class="reference internal" href="#piloter-un-port-serie-de-la-machine-hote" id="id86">Piloter un port série de la machine hote</a></p></li>
-<li><p><a class="reference internal" href="#volumes-et-bind-mounts" id="id87">volumes et bind mounts</a></p></li>
-<li><p><a class="reference internal" href="#volume-et-sauvegarde" id="id88">Volume et sauvegarde</a></p></li>
-<li><p><a class="reference internal" href="#networks" id="id89">Networks</a></p></li>
-<li><p><a class="reference internal" href="#docker-services-swarm" id="id90">Docker services/Swarm</a></p></li>
-<li><p><a class="reference internal" href="#general-application-development-best-practices" id="id91">General application development best practices</a></p></li>
-<li><p><a class="reference internal" href="#acceder-aux-donnees-cachees-de-docker-sous-windows-y-compris-les-volumes" id="id92">Accéder aux données cachées de Docker sous Windows y compris les volumes</a></p></li>
-<li><p><a class="reference internal" href="#my-tips" id="id93">My tips</a></p>
+<li><p><a class="reference internal" href="#docker-compose" id="id89">Docker compose</a></p></li>
+<li><p><a class="reference internal" href="#piloter-un-port-serie-de-la-machine-hote" id="id90">Piloter un port série de la machine hote</a></p></li>
+<li><p><a class="reference internal" href="#volumes-et-bind-mounts" id="id91">volumes et bind mounts</a></p></li>
+<li><p><a class="reference internal" href="#volume-et-sauvegarde" id="id92">Volume et sauvegarde</a></p></li>
+<li><p><a class="reference internal" href="#networks" id="id93">Networks</a></p></li>
+<li><p><a class="reference internal" href="#docker-services-swarm" id="id94">Docker services/Swarm</a></p></li>
+<li><p><a class="reference internal" href="#general-application-development-best-practices" id="id95">General application development best practices</a></p></li>
+<li><p><a class="reference internal" href="#acceder-aux-donnees-cachees-de-docker-sous-windows-y-compris-les-volumes" id="id96">Accéder aux données cachées de Docker sous Windows y compris les volumes</a></p></li>
+<li><p><a class="reference internal" href="#my-tips" id="id97">My tips</a></p>
 <ul>
-<li><p><a class="reference internal" href="#docker-port" id="id94">Docker port</a></p></li>
-<li><p><a class="reference internal" href="#faire-du-python2-sans-l-installer" id="id95">Faire du python2 sans l’installer</a></p></li>
-<li><p><a class="reference internal" href="#docker-run-start-and-restart" id="id96">docker run, start and restart</a></p></li>
-<li><p><a class="reference internal" href="#savoir-si-une-image-a-ete-montee-avec-un-volume-ou-un-bind" id="id97">Savoir si une image a été montée avec un volume ou un bind</a></p></li>
-<li><p><a class="reference internal" href="#docker-run-name-rm" id="id98">Docker run –name –rm</a></p></li>
+<li><p><a class="reference internal" href="#docker-port" id="id98">Docker port</a></p></li>
+<li><p><a class="reference internal" href="#faire-du-python2-sans-l-installer" id="id99">Faire du python2 sans l’installer</a></p></li>
+<li><p><a class="reference internal" href="#docker-run-start-and-restart" id="id100">docker run, start and restart</a></p></li>
+<li><p><a class="reference internal" href="#savoir-si-une-image-a-ete-montee-avec-un-volume-ou-un-bind" id="id101">Savoir si une image a été montée avec un volume ou un bind</a></p></li>
+<li><p><a class="reference internal" href="#docker-run-name-rm" id="id102">Docker run –name –rm</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#voir-docker-a-l-oeuvre" id="id99">Voir Docker à l’oeuvre</a></p></li>
-<li><p><a class="reference internal" href="#vocabulaire" id="id100">Vocabulaire</a></p></li>
-<li><p><a class="reference internal" href="#weblinks" id="id101">Weblinks</a></p></li>
+<li><p><a class="reference internal" href="#voir-docker-a-l-oeuvre" id="id103">Voir Docker à l’oeuvre</a></p></li>
+<li><p><a class="reference internal" href="#vocabulaire" id="id104">Vocabulaire</a></p></li>
+<li><p><a class="reference internal" href="#weblinks" id="id105">Weblinks</a></p></li>
 </ul>
 </li>
 </ul>
@@ -161,7 +161,7 @@ dockerfiles voir <a class="reference internal" href="#creer-une-image">Créer un
 <p>En effet, comme docker ne fait tourner qu’une seule tâche, process… ou quelque soit le terme
 utilisé, on pourrait dire aussi un seul truc, eh bien il faut en lancer plusieurs, le cas type est
 le <strong>serveur web</strong> qui utilise une <strong>base de données</strong> au travers de <strong>php</strong> pour cela il faut
-lancer 3 images. C’est la qu’intervient docker compose voir <a class="reference internal" href="#syntaxe-des-fichiers-docker-compose">Syntaxe des fichiers Docker compose</a></p>
+lancer 3 images. C’est la qu’intervient docker compose voir <a class="reference internal" href="#docker-compose">Docker compose</a></p>
 <p>Une images n’est pas un container et inversement. Donc, il faut apprendre à manipuler les 2.
 On peut créer une image sans pour autant la lancer et on peut lancer une image sans la créer.
 On peut également effacer des images et des container de son système, on peut lister les 2 mais
@@ -244,6 +244,7 @@ docker volume create nomDuVolume
 docker volume ls
 docker volume inspect nomDuVolume
 docker create : comme run mais sans start
+docker network ls : liste les réseaux
 </pre></div>
 </div>
 <p>On ne le dira jamais assez :</p>
@@ -305,11 +306,18 @@ et se retrouver dans le prompt</p>
 </div>
 </div>
 </div>
-<div class="section" id="syntaxe-des-fichiers-docker-compose">
-<h2><a class="toc-backref" href="#sommaire">Syntaxe des fichiers Docker compose</a><a class="headerlink" href="#syntaxe-des-fichiers-docker-compose" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="section" id="docker-compose">
+<span id="index-1"></span><h2><a class="toc-backref" href="#sommaire">Docker compose</a><a class="headerlink" href="#docker-compose" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Docker compose permet de lancer plusieurs images en même temps.</p>
 <p>Dans un répertoire vide (conseillé) créer un fichier docker-compose.yml</p>
 <p><a class="reference external" href="https://docs.docker.com/compose/compose-file/">Compose file version 3 reference</a> <a class="footnote-reference brackets" href="#id38" id="id39">19</a></p>
+<p>Pour exécuter les fichier yml la commande minimum est:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">docker</span><span class="o">-</span><span class="n">compose</span> <span class="n">up</span>
+</pre></div>
+</div>
+<p>On peut aussi ajouter un <a class="reference external" href="https://docs.docker.com/compose/environment-variables/">fichier pour des variables</a> <a class="footnote-reference brackets" href="#id40" id="id41">20</a> . Le nom de ce fichier par défaut est .env</p>
+<p>Petit trucs sur la substitution des variables denvironnement:</p>
+<p>On peut préciser <a class="reference external" href="https://docs.docker.com/compose/compose-file/#variable-substitution">une valeur par défaut</a> <a class="footnote-reference brackets" href="#id42" id="id43">21</a> : <code class="docutils literal notranslate"><span class="pre">${WORDPRESS_DATA_DIR:-./wordpress}:/var/www/html</span></code></p>
 </div>
 <div class="section" id="piloter-un-port-serie-de-la-machine-hote">
 <h2><a class="toc-backref" href="#sommaire">Piloter un port série de la machine hote</a><a class="headerlink" href="#piloter-un-port-serie-de-la-machine-hote" title="Lien permanent vers ce titre">¶</a></h2>
@@ -334,7 +342,7 @@ et se retrouver dans le prompt</p>
 simple</p>
 <p>Les volumes sont stockés quelque part dans le système Docker mais on ne sait pas trop bien où.
 Non, on pourrait préciser un répertoire dans la commande -v mais ce n’est pas claire dans la doc
-C’est sous-entendu sur le site de <a class="reference external" href="https://devopssec.fr/article/fonctionnement-manipulation-volumes-docker">AJDAINI Hatim article sur les volumes</a> <a class="footnote-reference brackets" href="#id40" id="id41">20</a></p>
+C’est sous-entendu sur le site de <a class="reference external" href="https://devopssec.fr/article/fonctionnement-manipulation-volumes-docker">AJDAINI Hatim article sur les volumes</a> <a class="footnote-reference brackets" href="#id44" id="id45">22</a></p>
 <div class="admonition warning">
 <p class="admonition-title">Avertissement</p>
 <p>Les options de syntaxe -v ou –mount peuvent aussi bien être utilisées pour monter un volume
@@ -344,20 +352,20 @@ que pour faire du bind mount</p>
 on lance un container avec l’option -v de la commande run</p>
 <p><code class="docutils literal notranslate"><span class="pre">when</span> <span class="pre">you</span> <span class="pre">use</span> <span class="pre">a</span> <span class="pre">volume,</span> <span class="pre">a</span> <span class="pre">new</span> <span class="pre">directory</span> <span class="pre">is</span> <span class="pre">created</span> <span class="pre">within</span> <span class="pre">Docker’s</span> <span class="pre">storage</span> <span class="pre">directory</span> <span class="pre">on</span> <span class="pre">the</span> <span class="pre">host</span>
 <span class="pre">machine,</span> <span class="pre">and</span> <span class="pre">Docker</span> <span class="pre">manages</span> <span class="pre">that</span> <span class="pre">directory’s</span> <span class="pre">contents.</span></code></p>
-<p><a class="reference external" href="https://docs.docker.com/storage/volumes/">Doc officielle sur les volumes</a> <a class="footnote-reference brackets" href="#id42" id="id43">21</a> et <a class="reference external" href="https://docs.docker.com/engine/reference/commandline/volume/">référence officielle des commandes docker volume</a> <a class="footnote-reference brackets" href="#id44" id="id45">22</a></p>
+<p><a class="reference external" href="https://docs.docker.com/storage/volumes/">Doc officielle sur les volumes</a> <a class="footnote-reference brackets" href="#id46" id="id47">23</a> et <a class="reference external" href="https://docs.docker.com/engine/reference/commandline/volume/">référence officielle des commandes docker volume</a> <a class="footnote-reference brackets" href="#id48" id="id49">24</a></p>
 <div class="admonition warning">
 <p class="admonition-title">Avertissement</p>
 <p>Fonctionne sous windows10: docker run -ti -v %cd%:/tmp mybuntu
 (à condition d’être dans le bon répertoire)</p>
 </div>
 <p>La syntaxe powershell est différent ainsi que sous Linux</p>
-<p><a class="reference external" href="https://stackoverflow.com/questions/41485217/mount-current-directory-as-a-volume-in-docker-on-windows-10">Syntaxe current dir sous Stackoverflow</a> <a class="footnote-reference brackets" href="#id46" id="id47">23</a></p>
+<p><a class="reference external" href="https://stackoverflow.com/questions/41485217/mount-current-directory-as-a-volume-in-docker-on-windows-10">Syntaxe current dir sous Stackoverflow</a> <a class="footnote-reference brackets" href="#id50" id="id51">25</a></p>
 <p><strong>Encore quelques informations tirées de la doc officielle sur les volumes:</strong></p>
 <ul>
 <li><p>Un volume peut être créé ou monté en read only, par plusieurs container en même temps.</p></li>
 <li><p>Les volumes drivers sont des plugin qui permettent de créer des volumes à l’extérieur du système
 Docker comme <em>vieux/sshfs plugin</em></p>
-<p><a class="reference external" href="https://docs.docker.com/storage/volumes/#use-a-volume-driver">Doc sur les volumes drivers</a> <a class="footnote-reference brackets" href="#id48" id="id49">24</a></p>
+<p><a class="reference external" href="https://docs.docker.com/storage/volumes/#use-a-volume-driver">Doc sur les volumes drivers</a> <a class="footnote-reference brackets" href="#id52" id="id53">26</a></p>
 </li>
 </ul>
 </div>
@@ -369,12 +377,12 @@ Voir <a class="reference internal" href="#docker-services-swarm">Docker services
 <p>La sauvegarde :</p>
 <p>En fait, l’idée est de monter un container avec un bind et un –volume-from un autre container nommé
 et de faire un tar cvf du volume vers le bind !!</p>
-<p><a class="reference external" href="https://docs.docker.com/storage/volumes/#backup-a-container">Tout ceci expliqué dans la doc officielle</a> <a class="footnote-reference brackets" href="#id50" id="id51">25</a></p>
+<p><a class="reference external" href="https://docs.docker.com/storage/volumes/#backup-a-container">Tout ceci expliqué dans la doc officielle</a> <a class="footnote-reference brackets" href="#id54" id="id55">27</a></p>
 <p>Et pour la restauration, on procède de manière inverse.</p>
 </div>
 <div class="section" id="networks">
 <h2><a class="toc-backref" href="#sommaire">Networks</a><a class="headerlink" href="#networks" title="Lien permanent vers ce titre">¶</a></h2>
-<p><a class="reference external" href="https://docs.docker.com/network/">Doc officielle networking</a> <a class="footnote-reference brackets" href="#id52" id="id53">26</a></p>
+<p><a class="reference external" href="https://docs.docker.com/network/">Doc officielle networking</a> <a class="footnote-reference brackets" href="#id56" id="id57">28</a></p>
 <p>Tout d’abord, il faut savoir qu’il y a 5 type de driver de réseau dans Docker:</p>
 <ul class="simple">
 <li><p><strong>User-defined bridge</strong> networks are best when you need multiple containers to communicate on
@@ -397,8 +405,8 @@ des container fonctionnant sur des démon différents. Et surtout les user-defin
 <span class="n">docker</span> <span class="n">network</span> <span class="n">connect</span> <span class="n">et</span> <span class="n">disconnect</span>
 </pre></div>
 </div>
-<p><a class="reference external" href="https://docs.docker.com/network/bridge/">Doc officielle docker network bridge</a> <a class="footnote-reference brackets" href="#id54" id="id55">27</a></p>
-<p>Et aussi <a class="reference external" href="https://docs.docker.com/engine/reference/commandline/network_create/">la référence de la ligne de commande docker network create</a> <a class="footnote-reference brackets" href="#id56" id="id57">28</a></p>
+<p><a class="reference external" href="https://docs.docker.com/network/bridge/">Doc officielle docker network bridge</a> <a class="footnote-reference brackets" href="#id58" id="id59">29</a></p>
+<p>Et aussi <a class="reference external" href="https://docs.docker.com/engine/reference/commandline/network_create/">la référence de la ligne de commande docker network create</a> <a class="footnote-reference brackets" href="#id60" id="id61">30</a></p>
 </div>
 <div class="section" id="docker-services-swarm">
 <h2><a class="toc-backref" href="#sommaire">Docker services/Swarm</a><a class="headerlink" href="#docker-services-swarm" title="Lien permanent vers ce titre">¶</a></h2>
@@ -406,12 +414,12 @@ des container fonctionnant sur des démon différents. Et surtout les user-defin
 du même cluster. Docker swarm vous permet de lancer des commandes Docker auxquelles vous êtes
 habitué sur un cluster depuis une machine maître nommée manager/leader Swarm. Quand des machines
 rejoignent un Swarm, elles sont appelés nœuds.</p>
-<p><a class="reference external" href="https://docs.docker.com/engine/reference/commandline/service/">Page officielle de la documentation sur les service</a> <a class="footnote-reference brackets" href="#id58" id="id59">29</a></p>
-<p><a class="reference external" href="https://devopssec.fr/article/comprendre-gerer-manipuler-un-cluster-docker-swarm">Source ci-dessus sur devopssec.fr</a> <a class="footnote-reference brackets" href="#id60" id="id61">30</a></p>
+<p><a class="reference external" href="https://docs.docker.com/engine/reference/commandline/service/">Page officielle de la documentation sur les service</a> <a class="footnote-reference brackets" href="#id62" id="id63">31</a></p>
+<p><a class="reference external" href="https://devopssec.fr/article/comprendre-gerer-manipuler-un-cluster-docker-swarm">Source ci-dessus sur devopssec.fr</a> <a class="footnote-reference brackets" href="#id64" id="id65">32</a></p>
 </div>
 <div class="section" id="general-application-development-best-practices">
 <h2><a class="toc-backref" href="#sommaire">General application development best practices</a><a class="headerlink" href="#general-application-development-best-practices" title="Lien permanent vers ce titre">¶</a></h2>
-<p><a class="reference external" href="https://docs.docker.com/develop/dev-best-practices/">Page officielle Docker development best practices</a> <a class="footnote-reference brackets" href="#id62" id="id63">31</a></p>
+<p><a class="reference external" href="https://docs.docker.com/develop/dev-best-practices/">Page officielle Docker development best practices</a> <a class="footnote-reference brackets" href="#id66" id="id67">33</a></p>
 <p>On this page:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">How</span> <span class="n">to</span> <span class="n">keep</span> <span class="n">your</span> <span class="n">images</span> <span class="n">small</span>
 <span class="n">Where</span> <span class="ow">and</span> <span class="n">how</span> <span class="n">to</span> <span class="n">persist</span> <span class="n">application</span> <span class="n">data</span>
@@ -481,9 +489,9 @@ se trouve dans le dossier /var/lib/docker</p>
 <p>Mode interractif : je suis resté blocké sur ce pb: soit un nginx lancer en mode ti avec en plus -d
 Comment on inteeragit avec le container (à part par le navigateur)</p>
 <p>Comment sait-on qu’un container a été lancé en mode ti ?</p>
-<p id="index-1">Disque image locations : peut-être configurer dans la fenêtre setting de docker onglet Ressources/
+<p id="index-2">Disque image locations : peut-être configurer dans la fenêtre setting de docker onglet Ressources/
 advanced</p>
-<p id="index-2">Partage de données entre hôte et containers:</p>
+<p id="index-3">Partage de données entre hôte et containers:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">File</span> <span class="n">sharing</span> <span class="ow">is</span> <span class="n">required</span> <span class="k">for</span> <span class="n">mounting</span> <span class="n">volumes</span> <span class="ow">in</span> <span class="n">Linux</span> <span class="n">containers</span><span class="p">,</span> <span class="ow">not</span> <span class="k">for</span> <span class="n">Windows</span> <span class="n">containers</span><span class="o">.</span>
 <span class="n">For</span> <span class="n">Linux</span> <span class="n">containers</span><span class="p">,</span> <span class="n">you</span> <span class="n">need</span> <span class="n">to</span> <span class="n">share</span> <span class="n">the</span> <span class="n">drive</span> <span class="n">where</span> <span class="n">the</span> <span class="n">Dockerfile</span> <span class="ow">and</span> <span class="n">volume</span> <span class="n">are</span> <span class="n">located</span><span class="o">.</span>
 <span class="n">Otherwise</span><span class="p">,</span> <span class="n">you</span> <span class="n">get</span> <span class="n">file</span> <span class="ow">not</span> <span class="n">found</span> <span class="ow">or</span> <span class="n">cannot</span> <span class="n">start</span> <span class="n">service</span> <span class="n">errors</span> <span class="n">at</span> <span class="n">runtime</span><span class="o">.</span>
@@ -528,18 +536,18 @@ L’affichage produit est</p>
 </div>
 </div>
 <div class="section" id="voir-docker-a-l-oeuvre">
-<span id="index-3"></span><h2><a class="toc-backref" href="#sommaire">Voir Docker à l’oeuvre</a><a class="headerlink" href="#voir-docker-a-l-oeuvre" title="Lien permanent vers ce titre">¶</a></h2>
-<p>L”<a class="reference external" href="https://hub.docker.com/r/prakhar1989/catnip">exemple de prakhar1989 catnip</a> <a class="footnote-reference brackets" href="#id64" id="id65">32</a> dont le fichier dockerfile est accessible sous github.</p>
-<p><a class="reference external" href="https://docs.docker.com/samples/">Docker sample home</a> <a class="footnote-reference brackets" href="#id66" id="id67">33</a></p>
+<span id="index-4"></span><h2><a class="toc-backref" href="#sommaire">Voir Docker à l’oeuvre</a><a class="headerlink" href="#voir-docker-a-l-oeuvre" title="Lien permanent vers ce titre">¶</a></h2>
+<p>L”<a class="reference external" href="https://hub.docker.com/r/prakhar1989/catnip">exemple de prakhar1989 catnip</a> <a class="footnote-reference brackets" href="#id68" id="id69">34</a> dont le fichier dockerfile est accessible sous github.</p>
+<p><a class="reference external" href="https://docs.docker.com/samples/">Docker sample home</a> <a class="footnote-reference brackets" href="#id70" id="id71">35</a></p>
 </div>
 <div class="section" id="vocabulaire">
 <h2><a class="toc-backref" href="#sommaire">Vocabulaire</a><a class="headerlink" href="#vocabulaire" title="Lien permanent vers ce titre">¶</a></h2>
-<p id="index-4">Stateful vs Stateless : se dit à propos d’une application ou d’un service et par extension cela
+<p id="index-5">Stateful vs Stateless : se dit à propos d’une application ou d’un service et par extension cela
 s’applique aux container.</p>
-<p><a class="reference external" href="https://www.contino.io/insights/stateless-vs-stateful-containers-whats-the-difference-and-why-does-it-matter">Stateless vs Stateful article sur contino.io</a> <a class="footnote-reference brackets" href="#id68" id="id69">34</a></p>
+<p><a class="reference external" href="https://www.contino.io/insights/stateless-vs-stateful-containers-whats-the-difference-and-why-does-it-matter">Stateless vs Stateful article sur contino.io</a> <a class="footnote-reference brackets" href="#id72" id="id73">36</a></p>
 <p>A stateless application is one that neither reads nor stores information about its state from
 one time that it is run to the next.</p>
-<p>Une <a class="reference external" href="https://blog.engineering.publicissapient.fr/2007/07/24/service-stateful-vs-service-stateless/">explication sur Publicis Sapiens</a> <a class="footnote-reference brackets" href="#id70" id="id71">35</a></p>
+<p>Une <a class="reference external" href="https://blog.engineering.publicissapient.fr/2007/07/24/service-stateful-vs-service-stateless/">explication sur Publicis Sapiens</a> <a class="footnote-reference brackets" href="#id74" id="id75">37</a></p>
 <p>Un moyen de stockage est nécessaire pour une application, un service stateful.</p>
 <p>Images :</p>
 <blockquote>
@@ -554,7 +562,7 @@ busybox and hello-world images are official images.</p>
 <p><strong>User images</strong> are images created and shared by users like you and me. They build on base
 images and add additional functionality. Typically, these are formatted as user/image-name.</p>
 </div></blockquote>
-<p id="index-5"><strong>detached mode</strong> mode détaché : à compléter le 6/07/2020, en gros c’est la même chose que &amp;
+<p id="index-6"><strong>detached mode</strong> mode détaché : à compléter le 6/07/2020, en gros c’est la même chose que &amp;
 à la fin d’un commande Linux</p>
 <p>Swarm mode</p>
 </div>
@@ -619,51 +627,57 @@ images and add additional functionality. Typically, these are formatted as user/
 <dd><p><a class="reference external" href="https://docs.docker.com/compose/compose-file/">https://docs.docker.com/compose/compose-file/</a></p>
 </dd>
 <dt class="label" id="id40"><span class="brackets"><a class="fn-backref" href="#id41">20</a></span></dt>
-<dd><p><a class="reference external" href="https://devopssec.fr/article/fonctionnement-manipulation-volumes-docker">https://devopssec.fr/article/fonctionnement-manipulation-volumes-docker</a></p>
+<dd><p><a class="reference external" href="https://docs.docker.com/compose/environment-variables/">https://docs.docker.com/compose/environment-variables/</a></p>
 </dd>
 <dt class="label" id="id42"><span class="brackets"><a class="fn-backref" href="#id43">21</a></span></dt>
-<dd><p><a class="reference external" href="https://docs.docker.com/storage/volumes/">https://docs.docker.com/storage/volumes/</a></p>
+<dd><p><a class="reference external" href="https://docs.docker.com/compose/compose-file/#variable-substitution">https://docs.docker.com/compose/compose-file/#variable-substitution</a></p>
 </dd>
 <dt class="label" id="id44"><span class="brackets"><a class="fn-backref" href="#id45">22</a></span></dt>
-<dd><p><a class="reference external" href="https://docs.docker.com/engine/reference/commandline/volume/">https://docs.docker.com/engine/reference/commandline/volume/</a></p>
+<dd><p><a class="reference external" href="https://devopssec.fr/article/fonctionnement-manipulation-volumes-docker">https://devopssec.fr/article/fonctionnement-manipulation-volumes-docker</a></p>
 </dd>
 <dt class="label" id="id46"><span class="brackets"><a class="fn-backref" href="#id47">23</a></span></dt>
-<dd><p><a class="reference external" href="https://stackoverflow.com/questions/41485217/mount-current-directory-as-a-volume-in-docker-on-windows-10">https://stackoverflow.com/questions/41485217/mount-current-directory-as-a-volume-in-docker-on-windows-10</a></p>
+<dd><p><a class="reference external" href="https://docs.docker.com/storage/volumes/">https://docs.docker.com/storage/volumes/</a></p>
 </dd>
 <dt class="label" id="id48"><span class="brackets"><a class="fn-backref" href="#id49">24</a></span></dt>
-<dd><p><a class="reference external" href="https://docs.docker.com/storage/volumes/#use-a-volume-driver">https://docs.docker.com/storage/volumes/#use-a-volume-driver</a></p>
+<dd><p><a class="reference external" href="https://docs.docker.com/engine/reference/commandline/volume/">https://docs.docker.com/engine/reference/commandline/volume/</a></p>
 </dd>
 <dt class="label" id="id50"><span class="brackets"><a class="fn-backref" href="#id51">25</a></span></dt>
-<dd><p><a class="reference external" href="https://docs.docker.com/storage/volumes/#backup-a-container">https://docs.docker.com/storage/volumes/#backup-a-container</a></p>
+<dd><p><a class="reference external" href="https://stackoverflow.com/questions/41485217/mount-current-directory-as-a-volume-in-docker-on-windows-10">https://stackoverflow.com/questions/41485217/mount-current-directory-as-a-volume-in-docker-on-windows-10</a></p>
 </dd>
 <dt class="label" id="id52"><span class="brackets"><a class="fn-backref" href="#id53">26</a></span></dt>
-<dd><p><a class="reference external" href="https://docs.docker.com/network/">https://docs.docker.com/network/</a></p>
+<dd><p><a class="reference external" href="https://docs.docker.com/storage/volumes/#use-a-volume-driver">https://docs.docker.com/storage/volumes/#use-a-volume-driver</a></p>
 </dd>
 <dt class="label" id="id54"><span class="brackets"><a class="fn-backref" href="#id55">27</a></span></dt>
-<dd><p><a class="reference external" href="https://docs.docker.com/network/bridge/">https://docs.docker.com/network/bridge/</a></p>
+<dd><p><a class="reference external" href="https://docs.docker.com/storage/volumes/#backup-a-container">https://docs.docker.com/storage/volumes/#backup-a-container</a></p>
 </dd>
 <dt class="label" id="id56"><span class="brackets"><a class="fn-backref" href="#id57">28</a></span></dt>
-<dd><p><a class="reference external" href="https://docs.docker.com/engine/reference/commandline/network_create/">https://docs.docker.com/engine/reference/commandline/network_create/</a></p>
+<dd><p><a class="reference external" href="https://docs.docker.com/network/">https://docs.docker.com/network/</a></p>
 </dd>
 <dt class="label" id="id58"><span class="brackets"><a class="fn-backref" href="#id59">29</a></span></dt>
-<dd><p><a class="reference external" href="https://docs.docker.com/engine/reference/commandline/service/">https://docs.docker.com/engine/reference/commandline/service/</a></p>
+<dd><p><a class="reference external" href="https://docs.docker.com/network/bridge/">https://docs.docker.com/network/bridge/</a></p>
 </dd>
 <dt class="label" id="id60"><span class="brackets"><a class="fn-backref" href="#id61">30</a></span></dt>
-<dd><p><a class="reference external" href="https://devopssec.fr/article/comprendre-gerer-manipuler-un-cluster-docker-swarm">https://devopssec.fr/article/comprendre-gerer-manipuler-un-cluster-docker-swarm</a></p>
+<dd><p><a class="reference external" href="https://docs.docker.com/engine/reference/commandline/network_create/">https://docs.docker.com/engine/reference/commandline/network_create/</a></p>
 </dd>
 <dt class="label" id="id62"><span class="brackets"><a class="fn-backref" href="#id63">31</a></span></dt>
-<dd><p><a class="reference external" href="https://docs.docker.com/develop/dev-best-practices/">https://docs.docker.com/develop/dev-best-practices/</a></p>
+<dd><p><a class="reference external" href="https://docs.docker.com/engine/reference/commandline/service/">https://docs.docker.com/engine/reference/commandline/service/</a></p>
 </dd>
 <dt class="label" id="id64"><span class="brackets"><a class="fn-backref" href="#id65">32</a></span></dt>
-<dd><p><a class="reference external" href="https://hub.docker.com/r/prakhar1989/catnip">https://hub.docker.com/r/prakhar1989/catnip</a></p>
+<dd><p><a class="reference external" href="https://devopssec.fr/article/comprendre-gerer-manipuler-un-cluster-docker-swarm">https://devopssec.fr/article/comprendre-gerer-manipuler-un-cluster-docker-swarm</a></p>
 </dd>
 <dt class="label" id="id66"><span class="brackets"><a class="fn-backref" href="#id67">33</a></span></dt>
-<dd><p><a class="reference external" href="https://docs.docker.com/samples/">https://docs.docker.com/samples/</a></p>
+<dd><p><a class="reference external" href="https://docs.docker.com/develop/dev-best-practices/">https://docs.docker.com/develop/dev-best-practices/</a></p>
 </dd>
 <dt class="label" id="id68"><span class="brackets"><a class="fn-backref" href="#id69">34</a></span></dt>
-<dd><p><a class="reference external" href="https://www.contino.io/insights/stateless-vs-stateful-containers-whats-the-difference-and-why-does-it-matter">https://www.contino.io/insights/stateless-vs-stateful-containers-whats-the-difference-and-why-does-it-matter</a></p>
+<dd><p><a class="reference external" href="https://hub.docker.com/r/prakhar1989/catnip">https://hub.docker.com/r/prakhar1989/catnip</a></p>
 </dd>
 <dt class="label" id="id70"><span class="brackets"><a class="fn-backref" href="#id71">35</a></span></dt>
+<dd><p><a class="reference external" href="https://docs.docker.com/samples/">https://docs.docker.com/samples/</a></p>
+</dd>
+<dt class="label" id="id72"><span class="brackets"><a class="fn-backref" href="#id73">36</a></span></dt>
+<dd><p><a class="reference external" href="https://www.contino.io/insights/stateless-vs-stateful-containers-whats-the-difference-and-why-does-it-matter">https://www.contino.io/insights/stateless-vs-stateful-containers-whats-the-difference-and-why-does-it-matter</a></p>
+</dd>
+<dt class="label" id="id74"><span class="brackets"><a class="fn-backref" href="#id75">37</a></span></dt>
 <dd><p><a class="reference external" href="https://blog.engineering.publicissapient.fr/2007/07/24/service-stateful-vs-service-stateless/">https://blog.engineering.publicissapient.fr/2007/07/24/service-stateful-vs-service-stateless/</a></p>
 </dd>
 </dl>
@@ -697,7 +711,7 @@ images and add additional functionality. Typically, these are formatted as user/
 <li><a class="reference internal" href="#un-exercice">Un exercice</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#syntaxe-des-fichiers-docker-compose">Syntaxe des fichiers Docker compose</a></li>
+<li><a class="reference internal" href="#docker-compose">Docker compose</a></li>
 <li><a class="reference internal" href="#piloter-un-port-serie-de-la-machine-hote">Piloter un port série de la machine hote</a></li>
 <li><a class="reference internal" href="#volumes-et-bind-mounts">volumes et bind mounts</a></li>
 <li><a class="reference internal" href="#volume-et-sauvegarde">Volume et sauvegarde</a></li>

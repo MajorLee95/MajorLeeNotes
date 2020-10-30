@@ -100,7 +100,7 @@ dockerfiles voir `Créer une image`_  ). ça c'est déjà pas mal mais ce n'est 
 En effet, comme docker ne fait tourner qu'une seule tâche, process... ou quelque soit le terme
 utilisé, on pourrait dire aussi un seul truc, eh bien il faut en lancer plusieurs, le cas type est
 le **serveur web** qui utilise une **base de données** au travers de **php** pour cela il faut 
-lancer 3 images. C'est la qu'intervient docker compose voir `Syntaxe des fichiers Docker compose`_
+lancer 3 images. C'est la qu'intervient docker compose voir `Docker compose`_
 
 Une images n'est pas un container et inversement. Donc, il faut apprendre à manipuler les 2.
 On peut créer une image sans pour autant la lancer et on peut lancer une image sans la créer.
@@ -227,6 +227,7 @@ Cheatsheet ?
     docker volume ls
     docker volume inspect nomDuVolume
     docker create : comme run mais sans start
+    docker network ls : liste les réseaux
 
     
 On ne le dira jamais assez :
@@ -311,8 +312,12 @@ Solution:
    docker build -t mybuntu
    docker run -ti mybuntu
 
+.. index::
+    single: Docker; Compose
+
+
 ====================================================================================================
-Syntaxe des fichiers Docker compose
+Docker compose
 ====================================================================================================
 
 Docker compose permet de lancer plusieurs images en même temps.
@@ -322,6 +327,22 @@ Dans un répertoire vide (conseillé) créer un fichier docker-compose.yml
 `Compose file version 3 reference`_
 
 .. _`Compose file version 3 reference` : https://docs.docker.com/compose/compose-file/
+
+Pour exécuter les fichier yml la commande minimum est::
+
+    docker-compose up
+
+On peut aussi ajouter un `fichier pour des variables`_ . Le nom de ce fichier par défaut est .env
+
+.. _`fichier pour des variables` : https://docs.docker.com/compose/environment-variables/
+
+Petit trucs sur la substitution des variables denvironnement:
+
+On peut préciser `une valeur par défaut`_ : ``${WORDPRESS_DATA_DIR:-./wordpress}:/var/www/html``
+
+.. _`une valeur par défaut` : https://docs.docker.com/compose/compose-file/#variable-substitution 
+    
+
 
 ====================================================================================================
 Piloter un port série de la machine hote
