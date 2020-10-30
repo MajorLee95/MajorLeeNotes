@@ -490,6 +490,74 @@ Exemples::
 
 Sortir d'une boucle infinie par une iterruption clavier
 
+.. index::
+    pair: Python; package
+
+Les packages
+====================================================================================================
+Il s'agit tout simplement d'un répertoire de module
+
+On peut importer un pakage entier ou seulement un module dans le package ou seulement une fonction
+d'un module dans un package.
+
+::
+
+    from package.fonctions import table
+    import tkinter as tk
+    from tkinter import messagebox
+    from tkinter import ttk
+
+On trouve de nombreux package et fonctions dans C:\Python34\Lib
+
+Un package doit obligatoirement contenir un fichier _init_.py même vide. Ceci n'est plus vrai 
+depuis la version 3.3
+
+Liste des package hyper courant:
+
+- random   : fonctions permettant de travailler avec des valeurs aléatoires
+- math     : toutes les fonctions utiles pour les opérations mathématiques (cosinus,sinus,exp,etc.)
+- sys      : fonctions systèmes
+- os       : fonctions permettant d'interagir avec le système d'exploitation
+- time     : fonctions permettant de travailler avec le temps
+- calendar : fonctions de calendrier
+- profile  : fonctions permettant d'analyser l'execution des fonctions
+- urllib2  : fonctions permettant de récupérer des informations sur internet
+- re       : fonctions permettant de travailler sur des expressions régulières
+
+.. index::
+    pair: Python; Fichiers
+
+Les fichiers
+====================================================================================================
+outres le classique ``fichier = open('gilename', 'atttrib')`` avec comme attribut:
+
+r, w, X, a, b, t, +
+
+X création exclusive, échoue si le fichier exsite déjà. 
+
++ : ouvre en modification (lecture et écriture)
+
+Il y a aussi la syntaxe::
+
+    with open('file', 'wb') as fichier:
+
+Avantage : pas besoin de close
+
+.. index::
+    pair: Python; Pickel
+
+Un mot sur le module **pickel**: il permet la sérialisation de variable (cf doc officielle chapitre
+12). Il utilise 2 méthodes : dump et load. C'est très utile pour stocker des variables et les 
+recharger par la suite.
+
+Décrit dans `openclassroom pickle`_
+
+.. _`openclassroom pickle` : https://openclassrooms.com/fr/courses/235344-apprenez-a-programmer-en-python/232431-utilisez-des-fichiers#/id/r-232430
+
+Dans tous les exemples que j'ai pu trouvé, on n'y voit jamais qu'une seule variable aussi complexe
+soit elle. J'ai lu un post qui disait de regrouper ses variables dans une liste avant de les
+sauvegarder
+
 
 
 ====================================================================================================

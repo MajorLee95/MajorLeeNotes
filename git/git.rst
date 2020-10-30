@@ -255,6 +255,15 @@ git push origin : <nombrancheasupprimer>
 
 le 17/10/2020 : git push origin +HEAD
 
+Gros pb
+
+git rebase -i HEAD~11
+(vi) drop versus pick
+
+:wq
+
+git push origin HEAD:gh-pages --force
+
 Merge branche distante
 ===========================================
 git pull non !
