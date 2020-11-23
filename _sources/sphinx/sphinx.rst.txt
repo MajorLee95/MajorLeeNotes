@@ -1,5 +1,5 @@
 ++++++++++++++++++++++++++++++++
-Sphinx
+Sphinx*
 ++++++++++++++++++++++++++++++++
 
 :Auteur: J.Soranzo
@@ -123,6 +123,9 @@ Ce fichier est utilisé par make html
 .. index::
     single: Sphinx; Liens
 
+Autre soucis après un crash disque ne pas faire un ``git clone le_lien_github`` mais faire
+``git clone le_liengithub .`` le point est très important.
+
 ================================
 Les liens
 ================================
@@ -150,7 +153,7 @@ Autre :download:`utilisation avec un word <exemple_roleDL.docx>`
 
 Liens internes locaux (lien vers fichier rst)
 ====================================================
-Lien simple dans le même fichier vers une secion nommé du fichier
+Lien simple dans le même fichier vers une section nommé du fichier
 `css pas dans gh-pages`_
 
 .. code::

@@ -16,6 +16,10 @@ TOF = Time Of Flight
 
 SLAM = Simultaneous Localization and Mapping
 
+
+.. index::
+    pair: LIDAR; Mesure de distance
+
 ================================
 Lidar 
 ================================
@@ -102,6 +106,11 @@ TF-mini plus: 41.16€ chez ali FOV 3.6° 0.1 à 12m
    :alt: Benewake TF mini plus dimensions
    :align: center
 
+
+.. index::
+    pair: Mesure de distance; TF-03
+
+
 TF-03 : 0.1 à 100m FOV 0.5° Prix 408.76€ banggood et 190€ chez `Robotshop`_ ...
 
 .. _`Robotshop` : https://www.robotshop.com/eu/fr/scanner-laser-360-ydlidar-x2.html?gclid=Cj0KCQiA5dPuBRCrARIsAJL7oejQtDc9_YCCkfvmHWWn4Qu7373e6-FC7K3W6UB8-6410JZqWl3jM0EaAjoaEALw_wcB
@@ -110,13 +119,17 @@ TF-03 : 0.1 à 100m FOV 0.5° Prix 408.76€ banggood et 190€ chez `Robotshop`
 
 ----------------------------------------------------------------------------------------------------
 
-`Un Lidar à 30€`_ exemple d'utilisation très complet sur `le site de ROS`_
+`Un Lidar à 100€`_ exemple d'utilisation très complet sur `le site de ROS`_
 
 
-.. _`Un Lidar à 30€` : https://www.ebay.fr/itm/1-Stck-Laserradarscanner-mit-Kabel-Lidar-Sensor-Fur-HLS-LFCD2-360-2D-LiDAR/223683738247?_trkparms=aid%3D555018%26algo%3DPL.SIM%26ao%3D1%26asc%3D20131003132420%26meid%3D93c872e753aa4ccda528905f670152f8%26pid%3D100005%26rk%3D3%26rkt%3D12%26mehot%3Dco%26sd%3D254430082108%26itm%3D223683738247%26pmt%3D1%26noa%3D0%26pg%3D2047675&_trksid=p2047675.c100005.m1851
+.. _`Un Lidar à 100€` : https://www.ebay.fr/itm/1-Stck-Laserradarscanner-mit-Kabel-Lidar-Sensor-Fur-HLS-LFCD2-360-2D-LiDAR/223683738247?_trkparms=aid%3D555018%26algo%3DPL.SIM%26ao%3D1%26asc%3D20131003132420%26meid%3D93c872e753aa4ccda528905f670152f8%26pid%3D100005%26rk%3D3%26rkt%3D12%26mehot%3Dco%26sd%3D254430082108%26itm%3D223683738247%26pmt%3D1%26noa%3D0%26pg%3D2047675&_trksid=p2047675.c100005.m1851
 
 .. _`le site de ROS` : http://wiki.ros.org/hls_lfcd_lds_driver
 
+.. image:: images/lds-01.jpg 
+   :width: 600 px
+
+Connu aussi sou le nom de HLS-LFCD-LDS ou encore  LDS-01.
 
 ================================
 Capteur ToF

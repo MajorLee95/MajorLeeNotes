@@ -4,6 +4,7 @@
 <html lang="fr">
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Robotique : mesure de distance &#8212; Documentation MajorLee&#39;s notes </title>
     <link rel="stylesheet" href="../../_static/nature.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
@@ -32,7 +33,8 @@
              accesskey="P">précédent</a> |</li>
         <li class="nav-item nav-item-0"><a href="../../index.html">Documentation MajorLee&#39;s notes </a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../hardware.html" >Hardware notes</a> &#187;</li>
-          <li class="nav-item nav-item-2"><a href="robotique.html" accesskey="U">Robotique</a> &#187;</li> 
+          <li class="nav-item nav-item-2"><a href="robotique.html" accesskey="U">Robotique</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Robotique : mesure de distance</a></li> 
       </ul>
     </div>  
 
@@ -82,7 +84,7 @@
 <p>SLAM = Simultaneous Localization and Mapping</p>
 </div>
 <div class="section" id="lidar">
-<h2><a class="toc-backref" href="#table-des-matieres-mesure-de-distance">Lidar</a><a class="headerlink" href="#lidar" title="Lien permanent vers ce titre">¶</a></h2>
+<span id="index-0"></span><h2><a class="toc-backref" href="#table-des-matieres-mesure-de-distance">Lidar</a><a class="headerlink" href="#lidar" title="Lien permanent vers ce titre">¶</a></h2>
 <div class="section" id="lidar-tournant">
 <h3><a class="toc-backref" href="#table-des-matieres-mesure-de-distance">LIDAR tournant</a><a class="headerlink" href="#lidar-tournant" title="Lien permanent vers ce titre">¶</a></h3>
 <p>Chez DF-Robot : 99$ (prix au 2/3/20) <a class="reference external" href="https://www.dfrobot.com/product-1125.html">A1-M8 DF ROBOT</a> <a class="footnote-reference brackets" href="#id1" id="id2">1</a></p>
@@ -114,10 +116,12 @@ Environ 1/2 ° ou 8 milliradian</p>
 <a class="reference internal image-reference" href="../../_images/tfminiSize.jpg"><img alt="Benewake TF mini dimensions" class="align-center" src="../../_images/tfminiSize.jpg" style="width: 400px;" /></a>
 <p>TF-mini plus: 41.16€ chez ali FOV 3.6° 0.1 à 12m</p>
 <a class="reference internal image-reference" href="../../_images/tfminiplusSize.jpg"><img alt="Benewake TF mini plus dimensions" class="align-center" src="../../_images/tfminiplusSize.jpg" style="width: 400px;" /></a>
-<p>TF-03 : 0.1 à 100m FOV 0.5° Prix 408.76€ banggood et 190€ chez <a class="reference external" href="https://www.robotshop.com/eu/fr/scanner-laser-360-ydlidar-x2.html?gclid=Cj0KCQiA5dPuBRCrARIsAJL7oejQtDc9_YCCkfvmHWWn4Qu7373e6-FC7K3W6UB8-6410JZqWl3jM0EaAjoaEALw_wcB">Robotshop</a> <a class="footnote-reference brackets" href="#id21" id="id22">11</a> …</p>
+<p id="index-1">TF-03 : 0.1 à 100m FOV 0.5° Prix 408.76€ banggood et 190€ chez <a class="reference external" href="https://www.robotshop.com/eu/fr/scanner-laser-360-ydlidar-x2.html?gclid=Cj0KCQiA5dPuBRCrARIsAJL7oejQtDc9_YCCkfvmHWWn4Qu7373e6-FC7K3W6UB8-6410JZqWl3jM0EaAjoaEALw_wcB">Robotshop</a> <a class="footnote-reference brackets" href="#id21" id="id22">11</a> …</p>
 <p>76€</p>
 <hr class="docutils" />
-<p><a class="reference external" href="https://www.ebay.fr/itm/1-Stck-Laserradarscanner-mit-Kabel-Lidar-Sensor-Fur-HLS-LFCD2-360-2D-LiDAR/223683738247?_trkparms=aid%3D555018%26algo%3DPL.SIM%26ao%3D1%26asc%3D20131003132420%26meid%3D93c872e753aa4ccda528905f670152f8%26pid%3D100005%26rk%3D3%26rkt%3D12%26mehot%3Dco%26sd%3D254430082108%26itm%3D223683738247%26pmt%3D1%26noa%3D0%26pg%3D2047675&amp;_trksid=p2047675.c100005.m1851">Un Lidar à 30€</a> <a class="footnote-reference brackets" href="#id23" id="id24">12</a> exemple d’utilisation très complet sur <a class="reference external" href="http://wiki.ros.org/hls_lfcd_lds_driver">le site de ROS</a> <a class="footnote-reference brackets" href="#id25" id="id26">13</a></p>
+<p><a class="reference external" href="https://www.ebay.fr/itm/1-Stck-Laserradarscanner-mit-Kabel-Lidar-Sensor-Fur-HLS-LFCD2-360-2D-LiDAR/223683738247?_trkparms=aid%3D555018%26algo%3DPL.SIM%26ao%3D1%26asc%3D20131003132420%26meid%3D93c872e753aa4ccda528905f670152f8%26pid%3D100005%26rk%3D3%26rkt%3D12%26mehot%3Dco%26sd%3D254430082108%26itm%3D223683738247%26pmt%3D1%26noa%3D0%26pg%3D2047675&amp;_trksid=p2047675.c100005.m1851">Un Lidar à 100€</a> <a class="footnote-reference brackets" href="#id23" id="id24">12</a> exemple d’utilisation très complet sur <a class="reference external" href="http://wiki.ros.org/hls_lfcd_lds_driver">le site de ROS</a> <a class="footnote-reference brackets" href="#id25" id="id26">13</a></p>
+<a class="reference internal image-reference" href="../../_images/lds-01.jpg"><img alt="../../_images/lds-01.jpg" src="../../_images/lds-01.jpg" style="width: 600px;" /></a>
+<p>Connu aussi sou le nom de HLS-LFCD-LDS ou encore  LDS-01.</p>
 </div>
 </div>
 <div class="section" id="capteur-tof">
@@ -221,6 +225,7 @@ doc complète de l’I2C <a class="reference external" href="https://drive.googl
 </div>
 
 
+            <div class="clearer"></div>
           </div>
         </div>
       </div>
@@ -283,12 +288,13 @@ doc complète de l’I2C <a class="reference external" href="https://drive.googl
              >précédent</a> |</li>
         <li class="nav-item nav-item-0"><a href="../../index.html">Documentation MajorLee&#39;s notes </a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../hardware.html" >Hardware notes</a> &#187;</li>
-          <li class="nav-item nav-item-2"><a href="robotique.html" >Robotique</a> &#187;</li> 
+          <li class="nav-item nav-item-2"><a href="robotique.html" >Robotique</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Robotique : mesure de distance</a></li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2019, J.SORANZO.
-      Créé avec <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.4.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.2.0.
     </div>
   </body>
 </html>

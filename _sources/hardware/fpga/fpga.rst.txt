@@ -29,22 +29,49 @@ Carte low cost sur le `site Joel Williams`_
 Taper fpga sur ebay !
 
 
+Doulos (ressources)
+====================================================================================================
+`Doulos VHDL ressources`_
+
+.. _`Doulos VHDL ressources` : http://doulos.com/knowhow/vhdl/
+
+====================================================================================================
+Carte low cost
+====================================================================================================
+Carte XILINX compatible Arduino
+====================================================================================================
+`Arduino-compatible Spartan-6 projet Hackaday`_ FPGA board sur forum Xilinx,Environ 70$
+
+.. _`Arduino-compatible Spartan-6 projet Hackaday` : https://hackaday.io/project/38-arduino-compatible-fpga-shield
+
+Le projet sur hackaday.io http://store.hackaday.com (lien mort 28/09/2020)
+
+
+
+Voir projet perso 014 designed with PRotel for Windows 
+
+`FPGA sur le site Tindie`_
+
+.. _`FPGA sur le site Tindie` : https://www.tindie.com/search/?q=fpga
+
+A ma dernière viste sur le site Tindie plus de carte FPGA Xilinx !
+
+Chez AliExpress
+====================================================================================================
+Carte très simple à base de SPARTAN 
+
 Contenu du Xmind 
 ======================================
+
+
+
 ::
 
     FPGA
-        carte low cost
 
-
-             Arduino-compatible Spartan-6 FPGA board sur forum Xilinx
-                Environ 70$
-                http://store.hackaday.com
-                Le projet sur hackaday.io
-                Voir projet perso 014
-                    designed with PRotel for Windows
             Autre carte Xilinx
                 chez AliExpress 28€14
+                    https://fr.aliexpress.com/item/705461772.html?recommendVersion=1
                     Xc3s500e:The xilinx spartan- 3e fpga
                     Simple 
                     A programmée en JTAG
@@ -175,9 +202,35 @@ Contenu du Xmind
 ================================
 ALTERA / INTEL FPGA
 ================================
+MAX10 versus CYCLONE I, II, III, IV
+====================================================================================================
+LEs familles INTEL/FPGA en 2020: 
 
-MAX10 : CPLD techno Flash
-CYCLONE iV techno FPGA
+- AGILEX: 10nm intensive application
+- STRATIX: high-performance, state-of-the-art products to market faster with lower risk and higher productivity.
+- ARRIA: performance and power efficiency in the midrange.
+- CYCLONE: meet your low-power, cost-sensitive design needs, enabling you to get to market faster.
+- MAX10: revolutionize non-volatile integration by delivering advance processing capabilities in a low-cost, single chip small form.
+
+MAX10 : CPLD techno Flash (pas tout à fait vrai - la flash est intégré au boîtier)
+
+CYCLONE iV techno FPGA. Le dernier de la famille est Cyclone 10 introduit en 2017. IV en 2009 et 
+V en 2011
+
+MAX10 : introduite en 2014 après MAXII en 2004 et MAX V en 2010.
+
+Il y a 7 tailles de puces : 10M02, 04, 08, 16, 25, 40, 50 caractèrisant le nombre de LE de 2K à 50K.
+Contre 2 familles de C iV de 7 et 9 tailles famillles GX( EP4CE6 à 115 ) et GX ( EP4CGX15 à 150 ).
+
+Cyclone 5 c'est 6 sous-familles  ou variants dont 3 integre directement des CORTEX -A9 !
+(Optimized for transiver applications...)
+
+Cyclone 10 : 2 familles LP et GX. LP sans doute pour low power
+
+Source : `site INTEL FPGA family`_
+
+.. _`site INTEL FPGA family` : https://www.intel.com/content/www/us/en/products/programmable/fpga.html
+
 
 DECA-MAX-10 de chez ARROW 
 ======================================
@@ -239,7 +292,7 @@ BeMicro Max10 AVNET également
 
 ou `BeMicro Max10`_ : environ 30$, **10M08DAF484C8GES**
 
-8 LED, 2 BP, 8000 LE, 108kRAM, 12kFlash interne, 1 à 2 PLL
+8 LED, 2 BP, 8000 LE, 108kRAM, 12kFlash interne, 1 à 2 PLL, dual configuration memory
 
 50MHz oscillator
 
@@ -441,6 +494,8 @@ Eh bien on peut dire que ça à l'air d'être un joyeux bordel !
 
 Il y a d'abord le `projet icestorm`_
 
+APIO
+================================================================================================
 Puis APIO:
 
 .. image:: images/apio.jpg
@@ -461,6 +516,8 @@ Puis APIO:
 Et qui dit PlatformIo dit... Python ;-) Notez que j'ai rien contre Python mais j'ai rien pour non
 plus...
 
+ICEstudio
+================================================================================================
 Donc par dessus il y a Icestudio:
 
 .. image:: images/icestudio.jpg
@@ -478,6 +535,25 @@ magie du surf)
 
 Au final cela s'installe bien. Une bonne surprise. (Sur Windows7 en tout cas)
 
+.. index::
+    pair: FPGA; Symbiflow
+
+Symbiflow
+================================================================================================
+`Site officiel Symbiflow`_
+
+.. _`Site officiel Symbiflow` : https://symbiflow.github.io/
+
+SymbiFlow is a fully open source toolchain for the development of FPGAs of multiple vendors.
+Currently, it targets the Xilinx 7-Series, Lattice iCE40, Lattice ECP5 FPGAs, QuickLogic EOS S3
+and is gradually being expanded to provide a comprehensive end-to-end FPGA synthesis flow.
+
+Simulateur open source
+====================================================================================================
+
+ghdl Tristan Ginglod
+
+http://ghdl.free.fr/
 
 =========
 Weblinks
