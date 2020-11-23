@@ -228,6 +228,7 @@ Cheatsheet ?
     docker volume inspect nomDuVolume
     docker create : comme run mais sans start
     docker network ls : liste les réseaux
+    docker exec -it container_id bash : permet de passer en CLI dans un container encours
 
     
 On ne le dira jamais assez :

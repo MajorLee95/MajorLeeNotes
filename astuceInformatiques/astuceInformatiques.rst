@@ -128,6 +128,17 @@ avec interface. Pour remonter d'un cran c'est .. et pour tout quitter bye. Derni
 
     netsh>help : le help fonctionne dans les différents niveaux
 
+.. index::
+    Single: html; page minimale
+
+====================================================================================================
+HTMl
+====================================================================================================
+une page html minimale: sur `Boostrap get started`_
+
+.. _`Boostrap get started` : https://getbootstrap.com/docs/4.5/getting-started/introduction/
+
+
 
 
 =========
