@@ -15,7 +15,7 @@ Notes sur git
    
    
 :Auteur: J.Soranzo
-:Date: Novembre 2019
+:Date de création: Novembre 2019
 :Societe: VoRoBoTics
 :Entity: VoLAB
 
@@ -26,7 +26,7 @@ Notes sur git
     :backlinks: top
 
 ================================
-git
+Intrroduction
 ================================
 penser au fichier xmind : ProcessusDocumntaire.xmind pas réussit à exporter vers Freeplane
 
@@ -63,6 +63,30 @@ git bisec
 
 .. _`La chasse aux bugs avec git bisect` : http://adopteungit.fr/commande/bisect/2016/09/04/la-chasse-aux-bugs-avec-git-bisect.html
 
+====================================================================================================
+Gérer les dépôts imense...
+====================================================================================================
+.. IMPORTANT::
+
+    how to manage a project with source code, electronique schematic and source documentation ?
+
+Un article : `How to handle big repositories with Git`_
+
+.. _`How to handle big repositories with Git` : https://www.atlassian.com/git/tutorials/big-repositories
+
+Un autre article un peu moins intéressant au niveau solution (moins riche) : 
+`Best practices for using git in large project`_
+
+.. _`Best practices for using git in large project` : https://stackoverflow.com/questions/32068654/best-practices-for-using-git-in-large-project
+
+Créer un depôt serveur
+====================================================================================================
+git init --bare --share tout simplement
+
+Petite subtilité au moment du clone : on peut cloner vers un sous répertoire dont le nom est
+différent de celui de la source.
+
+ 
 
 ================================
 petits trucs utiles 

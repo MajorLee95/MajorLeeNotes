@@ -129,16 +129,17 @@ avec interface. Pour remonter d'un cran c'est .. et pour tout quitter bye. Derni
     netsh>help : le help fonctionne dans les différents niveaux
 
 .. index::
-    Single: html; page minimale
+    single: html; page minimale
 
 ====================================================================================================
-HTMl
+HTML
 ====================================================================================================
 une page html minimale: sur `Boostrap get started`_
 
 .. _`Boostrap get started` : https://getbootstrap.com/docs/4.5/getting-started/introduction/
 
-
+Ou dans Visual Studio Code : nouveau fichier, en bas à droite passer de ``plain text`` à ``html``
+puis taper html (normalement provoque l'affichage du snippet html:5)
 
 
 =========

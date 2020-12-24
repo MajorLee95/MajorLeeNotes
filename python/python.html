@@ -4,7 +4,6 @@
 <html lang="fr">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Python (mes notes) &#8212; Documentation MajorLee&#39;s notes </title>
     <link rel="stylesheet" href="../_static/nature.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -17,7 +16,7 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Recherche" href="../search.html" />
     <link rel="next" title="Les objets connectés" href="../lesObjetsConnectes/lesObjetsConnectes.html" />
-    <link rel="prev" title="Notes sur Qt *" href="../C%2B%2B/Qt/Qt.html" /> 
+    <link rel="prev" title="Notes sur Qt *" href="../C++/Qt/Qt.html" /> 
   </head><body>
     <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
@@ -29,10 +28,9 @@
           <a href="../lesObjetsConnectes/lesObjetsConnectes.html" title="Les objets connectés"
              accesskey="N">suivant</a> |</li>
         <li class="right" >
-          <a href="../C%2B%2B/Qt/Qt.html" title="Notes sur Qt *"
+          <a href="../C++/Qt/Qt.html" title="Notes sur Qt *"
              accesskey="P">précédent</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">Documentation MajorLee&#39;s notes </a> &#187;</li>
-        <li class="nav-item nav-item-this"><a href="">Python (mes notes)</a></li> 
+        <li class="nav-item nav-item-0"><a href="../index.html">Documentation MajorLee&#39;s notes </a> &#187;</li> 
       </ul>
     </div>  
 
@@ -60,33 +58,34 @@
 <div class="contents topic" id="sommaire">
 <p class="topic-title">Sommaire</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="#python-mes-notes" id="id33">Python (mes notes)</a></p>
+<li><p><a class="reference internal" href="#python-mes-notes" id="id35">Python (mes notes)</a></p>
 <ul>
-<li><p><a class="reference internal" href="#disclaimer" id="id34">Disclaimer</a></p></li>
-<li><p><a class="reference internal" href="#pourquoi-les-gens-aiment-python" id="id35">Pourquoi les gens aiment Python</a></p></li>
-<li><p><a class="reference internal" href="#docs" id="id36">Docs</a></p></li>
-<li><p><a class="reference internal" href="#elements-de-langages" id="id37">Elements de langages</a></p>
+<li><p><a class="reference internal" href="#disclaimer" id="id36">Disclaimer</a></p></li>
+<li><p><a class="reference internal" href="#pourquoi-les-gens-aiment-python" id="id37">Pourquoi les gens aiment Python</a></p></li>
+<li><p><a class="reference internal" href="#docs" id="id38">Docs</a></p></li>
+<li><p><a class="reference internal" href="#elements-de-langages" id="id39">Elements de langages</a></p>
 <ul>
-<li><p><a class="reference internal" href="#tuples" id="id38">Tuples</a></p></li>
-<li><p><a class="reference internal" href="#listes" id="id39">Listes</a></p></li>
-<li><p><a class="reference internal" href="#dictionnaires" id="id40">Dictionnaires</a></p></li>
-<li><p><a class="reference internal" href="#enumerate" id="id41">Enumerate</a></p></li>
-<li><p><a class="reference internal" href="#fonctions" id="id42">Fonctions</a></p></li>
-<li><p><a class="reference internal" href="#modules" id="id43">Modules</a></p></li>
-<li><p><a class="reference internal" href="#les-exceptions" id="id44">Les exceptions</a></p></li>
-<li><p><a class="reference internal" href="#les-packages" id="id45">Les packages</a></p></li>
-<li><p><a class="reference internal" href="#les-fichiers" id="id46">Les fichiers</a></p></li>
-<li><p><a class="reference internal" href="#les-objets" id="id47">Les objets</a></p></li>
-<li><p><a class="reference internal" href="#iterateur-generateur" id="id48">Itérateur &amp; générateur</a></p></li>
+<li><p><a class="reference internal" href="#notations" id="id40">Notations</a></p></li>
+<li><p><a class="reference internal" href="#tuples" id="id41">Tuples</a></p></li>
+<li><p><a class="reference internal" href="#listes" id="id42">Listes</a></p></li>
+<li><p><a class="reference internal" href="#dictionnaires" id="id43">Dictionnaires</a></p></li>
+<li><p><a class="reference internal" href="#enumerate" id="id44">Enumerate</a></p></li>
+<li><p><a class="reference internal" href="#fonctions" id="id45">Fonctions</a></p></li>
+<li><p><a class="reference internal" href="#modules" id="id46">Modules</a></p></li>
+<li><p><a class="reference internal" href="#les-exceptions" id="id47">Les exceptions</a></p></li>
+<li><p><a class="reference internal" href="#les-packages" id="id48">Les packages</a></p></li>
+<li><p><a class="reference internal" href="#les-fichiers" id="id49">Les fichiers</a></p></li>
+<li><p><a class="reference internal" href="#les-objets" id="id50">Les objets</a></p></li>
+<li><p><a class="reference internal" href="#iterateur-generateur" id="id51">Itérateur &amp; générateur</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#astuces" id="id49">Astuces</a></p></li>
-<li><p><a class="reference internal" href="#i2c" id="id50">I2C</a></p></li>
-<li><p><a class="reference internal" href="#pyserial" id="id51">PySerial</a></p></li>
-<li><p><a class="reference internal" href="#gestionnaires-graphiques" id="id52">Gestionnaires graphiques</a></p></li>
-<li><p><a class="reference internal" href="#a-revoir" id="id53">A revoir</a></p></li>
-<li><p><a class="reference internal" href="#appli-minimum-template" id="id54">Appli minimum (template)</a></p></li>
-<li><p><a class="reference internal" href="#weblinks" id="id55">Weblinks</a></p></li>
+<li><p><a class="reference internal" href="#astuces" id="id52">Astuces</a></p></li>
+<li><p><a class="reference internal" href="#i2c" id="id53">I2C</a></p></li>
+<li><p><a class="reference internal" href="#pyserial" id="id54">PySerial</a></p></li>
+<li><p><a class="reference internal" href="#gestionnaires-graphiques" id="id55">Gestionnaires graphiques</a></p></li>
+<li><p><a class="reference internal" href="#a-revoir" id="id56">A revoir</a></p></li>
+<li><p><a class="reference internal" href="#appli-minimum-template" id="id57">Appli minimum (template)</a></p></li>
+<li><p><a class="reference internal" href="#weblinks" id="id58">Weblinks</a></p></li>
 </ul>
 </li>
 </ul>
@@ -110,6 +109,16 @@ cours ou quoi que ce soit d’autre dans le genre. Ce serait plutôt un pense-b�
 </div>
 <div class="section" id="elements-de-langages">
 <h2><a class="toc-backref" href="#sommaire">Elements de langages</a><a class="headerlink" href="#elements-de-langages" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="section" id="notations">
+<h3><a class="toc-backref" href="#sommaire">Notations</a><a class="headerlink" href="#notations" title="Lien permanent vers ce titre">¶</a></h3>
+<ul class="simple">
+<li><p>Notation hexa : C’est 0x33</p></li>
+<li><p>Binaire : 0b</p></li>
+<li><p>Octal : 0o</p></li>
+</ul>
+<p>Long integer 123L</p>
+<p>Code sur plusieurs lignes c’est avec le caractères </p>
+</div>
 <div class="section" id="tuples">
 <span id="index-1"></span><h3><a class="toc-backref" href="#sommaire">Tuples</a><a class="headerlink" href="#tuples" title="Lien permanent vers ce titre">¶</a></h3>
 <p>Ce sont simplement des listes non modifiables syntaxe :
@@ -557,7 +566,7 @@ sauvegarder</p>
 les attributs sont différents</p>
 <p>Méthodes commence toutes avec self comme premier parmètre. Sauf les <strong>méthodes statiques</strong> et
 les <strong>méthodes de classe</strong></p>
-<p><strong>Getteurs et setteurs</strong>: bien que la notion de private n’existe pas, on peut, grace au mot clé
+<p id="index-17"><strong>Getteurs et setteurs</strong>: bien que la notion de private n’existe pas, on peut, grace au mot clé
 property créer des accesseurs et mutateurs</p>
 <p>Exemple:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Personne</span><span class="p">:</span>
@@ -609,8 +618,20 @@ property créer des accesseurs et mutateurs</p>
 <p>Property permet de redéfinir un attribut en lui allouant des acesseur et mutateur. Cela permet
 de redéfinir le comportament des attributs sans casser le code utilisateur.</p>
 <p>width est redéfini alors qu’à l’extérieur on fait tjrs objet.width</p>
-<p>Autre façon de transformer une méthode en propriété: grâce au décorateur <strong>&#64;property</strong></p>
-<p id="index-17"><strong>Les méthodes spéciales</strong>:  elles sont encadrées par __</p>
+<p>Autre façon de transformer une méthode en propriété: grâce au décorateur <strong>&#64;property</strong>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Position</span><span class="p">:</span>
+<span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">longitude_deg</span><span class="p">,</span> <span class="n">latitude_deg</span><span class="p">):</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">longitude_deg</span> <span class="o">=</span> <span class="n">longitude_deg</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">latitude_deg</span> <span class="o">=</span> <span class="n">latitude_deg</span>
+
+<span class="nd">@property</span>
+<span class="k">def</span> <span class="nf">longitude</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">longitude_deg</span> <span class="o">*</span> <span class="n">math</span><span class="o">.</span><span class="n">pi</span> <span class="o">/</span> <span class="mi">180</span>
+
+<span class="n">Utilisation</span> <span class="p">:</span> <span class="n">position</span><span class="o">.</span><span class="n">longitute</span>
+</pre></div>
+</div>
+<p id="index-18"><strong>Les méthodes spéciales</strong>:  elles sont encadrées par __</p>
 <p>Il en existe pour surcharger la pluspart des opérateurs:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="fm">__add__</span> <span class="n">pour</span> <span class="o">+</span>
 <span class="fm">__gt__</span> <span class="n">pour</span> <span class="o">&gt;</span>
@@ -725,7 +746,6 @@ constructeur.</p>
 <p><strong>Métaclasse</strong> &lt;<a class="reference external" href="https://openclassrooms.com/fr/courses/235344-apprenez-a-programmer-en-python/233659-decouvrez-les-metaclasses">https://openclassrooms.com/fr/courses/235344-apprenez-a-programmer-en-python/233659-decouvrez-les-metaclasses</a>&gt;</p>
 <p>L’idée est créer des classe dynamiquement c’est à dire pendant l’éxécution.
 Fonctionnalité très avancées selon moi</p>
-<p id="index-18"><strong>Property</strong></p>
 </div>
 <div class="section" id="iterateur-generateur">
 <h3><a class="toc-backref" href="#sommaire">Itérateur &amp; générateur</a><a class="headerlink" href="#iterateur-generateur" title="Lien permanent vers ce titre">¶</a></h3>
@@ -797,6 +817,7 @@ Voir <a class="reference external" href="https://pyserial.readthedocs.io/en/late
 <div class="section" id="a-revoir">
 <h2><a class="toc-backref" href="#sommaire">A revoir</a><a class="headerlink" href="#a-revoir" title="Lien permanent vers ce titre">¶</a></h2>
 <p><a class="reference external" href="https://doc.scrapy.org/en/1.2/intro/overview.html">Scrapy</a> <a class="footnote-reference brackets" href="#id31" id="id32">16</a>  : permet de « grater » des page web</p>
+<p><a class="reference external" href="https://realpython.com/python-code-quality/">Python Code Quality: Tools &amp; Best Practices</a> <a class="footnote-reference brackets" href="#id33" id="id34">17</a></p>
 </div>
 <div class="section" id="appli-minimum-template">
 <h2><a class="toc-backref" href="#sommaire">Appli minimum (template)</a><a class="headerlink" href="#appli-minimum-template" title="Lien permanent vers ce titre">¶</a></h2>
@@ -858,12 +879,14 @@ Tkinter au total 4 templates.</p>
 <dt class="label" id="id31"><span class="brackets"><a class="fn-backref" href="#id32">16</a></span></dt>
 <dd><p><a class="reference external" href="https://doc.scrapy.org/en/1.2/intro/overview.html">https://doc.scrapy.org/en/1.2/intro/overview.html</a></p>
 </dd>
+<dt class="label" id="id33"><span class="brackets"><a class="fn-backref" href="#id34">17</a></span></dt>
+<dd><p><a class="reference external" href="https://realpython.com/python-code-quality/">https://realpython.com/python-code-quality/</a></p>
+</dd>
 </dl>
 </div>
 </div>
 
 
-            <div class="clearer"></div>
           </div>
         </div>
       </div>
@@ -876,6 +899,7 @@ Tkinter au total 4 templates.</p>
 <li><a class="reference internal" href="#pourquoi-les-gens-aiment-python">Pourquoi les gens aiment Python</a></li>
 <li><a class="reference internal" href="#docs">Docs</a></li>
 <li><a class="reference internal" href="#elements-de-langages">Elements de langages</a><ul>
+<li><a class="reference internal" href="#notations">Notations</a></li>
 <li><a class="reference internal" href="#tuples">Tuples</a></li>
 <li><a class="reference internal" href="#listes">Listes</a></li>
 <li><a class="reference internal" href="#dictionnaires">Dictionnaires</a></li>
@@ -901,7 +925,7 @@ Tkinter au total 4 templates.</p>
 </ul>
 
   <h4>Sujet précédent</h4>
-  <p class="topless"><a href="../C%2B%2B/Qt/Qt.html"
+  <p class="topless"><a href="../C++/Qt/Qt.html"
                         title="Chapitre précédent">Notes sur Qt *</a></p>
   <h4>Sujet suivant</h4>
   <p class="topless"><a href="../lesObjetsConnectes/lesObjetsConnectes.html"
@@ -937,15 +961,14 @@ Tkinter au total 4 templates.</p>
           <a href="../lesObjetsConnectes/lesObjetsConnectes.html" title="Les objets connectés"
              >suivant</a> |</li>
         <li class="right" >
-          <a href="../C%2B%2B/Qt/Qt.html" title="Notes sur Qt *"
+          <a href="../C++/Qt/Qt.html" title="Notes sur Qt *"
              >précédent</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">Documentation MajorLee&#39;s notes </a> &#187;</li>
-        <li class="nav-item nav-item-this"><a href="">Python (mes notes)</a></li> 
+        <li class="nav-item nav-item-0"><a href="../index.html">Documentation MajorLee&#39;s notes </a> &#187;</li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2019, J.SORANZO.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.2.0.
+      Créé avec <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.4.
     </div>
   </body>
 </html>

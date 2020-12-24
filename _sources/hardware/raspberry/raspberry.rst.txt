@@ -1,5 +1,8 @@
+.. index::
+    single: Raspberry
+
 ++++++++++++++++++++++++++++++++
-Raspberry pi
+Raspberry pi*
 ++++++++++++++++++++++++++++++++
 
 :Auteur: J.Soranzo
@@ -13,10 +16,36 @@ Raspberry pi
 ====================================================================================================
 Processeurs
 ====================================================================================================
-Rpi4 : BCM2711 4 CORTEX A72
+RPi3 model B  BCM2837 à 1.2MHz cortex A53
+RPI3 model B+ BCM2837 à 1.4MHz
+Rpi4 : BCM2711 4 coeurs CORTEX A72 version 2Go, 4Go, 8Go
 
+Tous les modèles ci-dessus ont le même facteur de forme. Seuls le RPi 1 A+ et le RPi3 A+ ont 
+un facteur de forme différent
+
+Description complète sur `Wikipédia Raspberry pi`_
+
+.. _`Wikipédia Raspberry pi` : https://en.wikipedia.org/wiki/Raspberry_Pi
 
 NEO-PC T4 RK3399 2 A72 4 A53 : ARMV8-A
+
+====================================================================================================
+Les caméras
+====================================================================================================
+Greens
+====================================================================================================
+V1 : OmniVision OV5647 5 Mp
+v2 : Sony IMX219, 8 Megapixels
+HQ : Sony IMXZ477 12.3 Megapixels
+
+Black
+====================================================================================================
+Sans le filtre infrarouge !
+
+
+
+
+
 
 ================================
 Boîtiers

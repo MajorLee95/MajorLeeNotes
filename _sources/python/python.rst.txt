@@ -47,6 +47,16 @@ Index des package sur `Pypi Python Package Index`_
 ====================================================================================================
 Elements de langages
 ====================================================================================================
+Notations
+====================================================================================================
+- Notation hexa : C'est 0x33
+- Binaire : 0b
+- Octal : 0o
+
+Long integer 123L
+
+Code sur plusieurs lignes c'est avec le caractères \
+
 
 .. index::
     pair: Python;  Tuple
@@ -545,7 +555,7 @@ Liste des package hyper courant:
 - re       : fonctions permettant de travailler sur des expressions régulières
 
 .. index::
-    Simple: Python; Fichiers
+    pair: Python; Fichiers
 
 Les fichiers
 ====================================================================================================
@@ -629,6 +639,9 @@ les attributs sont différents
 Méthodes commence toutes avec self comme premier parmètre. Sauf les **méthodes statiques** et 
 les **méthodes de classe**
 
+.. index::
+    pair: Python; property
+
 **Getteurs et setteurs**: bien que la notion de private n'existe pas, on peut, grace au mot clé 
 property créer des accesseurs et mutateurs
 
@@ -684,7 +697,18 @@ de redéfinir le comportament des attributs sans casser le code utilisateur.
 
 width est redéfini alors qu'à l'extérieur on fait tjrs objet.width
 
-Autre façon de transformer une méthode en propriété: grâce au décorateur **@property**
+Autre façon de transformer une méthode en propriété: grâce au décorateur **@property**::
+
+    class Position:
+    def __init__(self, longitude_deg, latitude_deg):
+        self.longitude_deg = longitude_deg
+        self.latitude_deg = latitude_deg
+
+    @property
+    def longitude(self):
+        return self.longitude_deg * math.pi / 180
+
+    Utilisation : position.longitute
 
 .. index::
     pair: Python; Méthode spéciales
@@ -827,11 +851,7 @@ L'idée est créer des classe dynamiquement c'est à dire pendant l'éxécution.
 Fonctionnalité très avancées selon moi
 
 
-.. index::
-    pair: Python; property
 
-
-**Property**
 
 Itérateur & générateur
 ====================================================================================================
@@ -939,6 +959,10 @@ A revoir
 `Scrapy`_  : permet de "grater" des page web
 
 .. _`Scrapy` : https://doc.scrapy.org/en/1.2/intro/overview.html
+
+`Python Code Quality: Tools & Best Practices`_
+
+.. _`Python Code Quality: Tools & Best Practices` : https://realpython.com/python-code-quality/
 
 ====================================================================================================
 Appli minimum (template)

@@ -63,6 +63,14 @@ Doc officielle
 
 .. _`Memo rst  Sphinx readthedoc` : https://rest-sphinx-memo.readthedocs.io/en/latest/ReST.html
 
+====================================================================================================
+Autres docs
+====================================================================================================
+`Cheat sheet sur openalea.gforge.inria.fr`_
+
+.. _`Cheat sheet sur openalea.gforge.inria.fr` : http://openalea.gforge.inria.fr/doc/openalea/doc/_build/html/source/sphinx/rest_syntax.html#figure-directive
+
+
 ================================
 Au VoLAB
 ================================
@@ -77,6 +85,9 @@ Que je complèterais par:
 #. Créer à l'intérieur un répertoire 'projet' et un autre 'webdoc'
 #. Dans projet créer \_01-userDoc se placer dedans pour lancer sphinx-quickstart
 #. Selon qu'on est sous Linux ou sous Windwos on peut effacer un des 2 make (make.bat pour Windwos)
+
+De même que dans son chapitre Installer ``Préparation de l’arborescence``, il faut se déplacer dans
+projet et faire un ``git init``
 
 .. NOTE::
     sphinx-quickstart crée automatiquement le répertoire source
@@ -125,6 +136,27 @@ Ce fichier est utilisé par make html
 
 Autre soucis après un crash disque ne pas faire un ``git clone le_lien_github`` mais faire
 ``git clone le_liengithub .`` le point est très important.
+
+
+.. index::
+    pair: Sphinx; csv intégration
+
+====================================================================================================
+Integre un fichier csv
+====================================================================================================
+::
+
+    .. csv-table:: Legende
+    :file: fichier.csv
+    :header-rows: 1
+
+make file automatique `voir site webdevdesigner.com`_ excel to csv n ligne de commande
+
+.. _`voir site webdevdesigner.com` : https://webdevdesigner.com/q/convert-xls-to-csv-on-command-line-21100/
+
+
+
+
 
 ================================
 Les liens
@@ -307,9 +339,7 @@ Sphinx to pdf
 ====================================================================================================
 make latexpdf
 
-mais il faut installer basic-miktex-2.9.7216-x64.exe et perl.exe cf. 
-
-``C:\MountWD\00-Outils\05-Bureautique\restructuredText\sphinx``
+mais il faut installer basic-miktex-2.9.7216-x64.exe et perl.exe
 
 Essais du 17/06/2020: problème d'encodage pour latex. Installation de nombreuses dépendances latex
 en automatique
