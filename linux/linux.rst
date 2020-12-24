@@ -170,6 +170,11 @@ Là c'est différent l'appli n'est lancée qu'une seule fois au démarrage.
 
 .. _`JdMdP partie lancer une appli au boot` : https://poltergeist42.github.io/JDM/Linux.html#pour-creer-un-script-qui-sexecute-au-demarrage-du-systeme
 
+
+
+.. index::
+    pair: Linux; Samba
+
 ================================
 Samba
 ================================
@@ -177,6 +182,8 @@ Tout est dit dans le `JdMdP rubrique SAMBA`_
 
 .. _`JdMdP rubrique SAMBA` : https://poltergeist42.github.io/JDM/Linux.html#creer-un-dossier-partage-avec-samba
 
+Par rapport à la doc de Pierre : smbpasswd crée l'utilisateur et demande la création du mdp dans la
+foulée. Il est nécessaire que cet utilisateur existe au niveau Linux.
 
 .. WARNING::
     Ne pas taper smbpasswd sans rien !

@@ -555,7 +555,7 @@ Liste des package hyper courant:
 - re       : fonctions permettant de travailler sur des expressions régulières
 
 .. index::
-    Simple: Python; Fichiers
+    pair: Python; Fichiers
 
 Les fichiers
 ====================================================================================================

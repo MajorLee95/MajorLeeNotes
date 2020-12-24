@@ -74,7 +74,8 @@ Major LEE Glossaire
     BPMN
         `Business Process Model and Notation`_
         
-        
+    SASS
+        Syntactically Awesome Style Sheets
 
 .. _`Application Binary Interface` :  https://en.wikipedia.org/wiki/Application_binary_interface
         
