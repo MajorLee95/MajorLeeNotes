@@ -4,6 +4,7 @@
 <html lang="fr">
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mes notes sur C++ &#8212; Documentation MajorLee&#39;s notes </title>
     <link rel="stylesheet" href="../_static/nature.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -30,7 +31,8 @@
         <li class="right" >
           <a href="../hardware/nucleo/nucleo.html" title="NUCLEO board *"
              accesskey="P">précédent</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">Documentation MajorLee&#39;s notes </a> &#187;</li> 
+        <li class="nav-item nav-item-0"><a href="../index.html">Documentation MajorLee&#39;s notes </a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Mes notes sur C++</a></li> 
       </ul>
     </div>  
 
@@ -58,54 +60,55 @@
 <div class="contents topic" id="sommaire">
 <p class="topic-title">Sommaire</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="#mes-notes-sur-c" id="id16">Mes notes sur C++</a></p>
+<li><p><a class="reference internal" href="#mes-notes-sur-c" id="id18">Mes notes sur C++</a></p>
 <ul>
-<li><p><a class="reference internal" href="#c-operators-surcharge" id="id17">C++ opérators (surcharge)</a></p>
+<li><p><a class="reference internal" href="#c-operators-surcharge" id="id19">C++ opérators (surcharge)</a></p>
 <ul>
-<li><p><a class="reference internal" href="#surcharge-operateur" id="id18">Surcharge opérateur ==, &gt;, …</a></p></li>
-<li><p><a class="reference internal" href="#surcharge-des-operateurs-arithmetiques" id="id19">Surcharge des opérateurs arithmétiques</a></p></li>
-<li><p><a class="reference internal" href="#surcharge-de-l-operateur" id="id20">Surcharge de l’opérateur &lt;&lt;</a></p></li>
+<li><p><a class="reference internal" href="#surcharge-operateur" id="id20">Surcharge opérateur ==, &gt;, …</a></p></li>
+<li><p><a class="reference internal" href="#surcharge-des-operateurs-arithmetiques" id="id21">Surcharge des opérateurs arithmétiques</a></p></li>
+<li><p><a class="reference internal" href="#surcharge-de-l-operateur" id="id22">Surcharge de l’opérateur &lt;&lt;</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#namespace" id="id21">Namespace</a></p></li>
-<li><p><a class="reference internal" href="#template" id="id22">Template</a></p>
+<li><p><a class="reference internal" href="#namespace" id="id23">Namespace</a></p></li>
+<li><p><a class="reference internal" href="#template" id="id24">Template</a></p>
 <ul>
-<li><p><a class="reference internal" href="#specialisation" id="id23">Spécialisation</a></p></li>
+<li><p><a class="reference internal" href="#specialisation" id="id25">Spécialisation</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#membres-statiques" id="id24">Membres statiques</a></p></li>
-<li><p><a class="reference internal" href="#passage-par-reference" id="id25">Passage par référence</a></p></li>
-<li><p><a class="reference internal" href="#heritage" id="id26">Héritage</a></p></li>
-<li><p><a class="reference internal" href="#polymorphisme" id="id27">Polymorphisme</a></p></li>
-<li><p><a class="reference internal" href="#classe-amie-et-fonction-amie" id="id28">Classe amie et fonction amie</a></p></li>
-<li><p><a class="reference internal" href="#vector" id="id29">Vector</a></p>
+<li><p><a class="reference internal" href="#membres-statiques" id="id26">Membres statiques</a></p></li>
+<li><p><a class="reference internal" href="#passage-par-reference" id="id27">Passage par référence</a></p></li>
+<li><p><a class="reference internal" href="#heritage" id="id28">Héritage</a></p></li>
+<li><p><a class="reference internal" href="#polymorphisme" id="id29">Polymorphisme</a></p></li>
+<li><p><a class="reference internal" href="#classe-amie-et-fonction-amie" id="id30">Classe amie et fonction amie</a></p></li>
+<li><p><a class="reference internal" href="#vector" id="id31">Vector</a></p>
 <ul>
-<li><p><a class="reference internal" href="#iterer-un-tableau-rappel" id="id30">Itérer un tableau rappel</a></p></li>
+<li><p><a class="reference internal" href="#iterer-un-tableau-rappel" id="id32">Itérer un tableau rappel</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#classe-abstraite-et-methodes-virtuelles-pures" id="id31">Classe abstraite et méthodes virtuelles pures</a></p></li>
-<li><p><a class="reference internal" href="#fonctions-qui-retourne-un-reference" id="id32">Fonctions qui retourne un référence</a></p></li>
-<li><p><a class="reference internal" href="#constructeur-de-copie" id="id33">Constructeur de copie</a></p>
+<li><p><a class="reference internal" href="#classe-abstraite-et-methodes-virtuelles-pures" id="id33">Classe abstraite et méthodes virtuelles pures</a></p></li>
+<li><p><a class="reference internal" href="#fonctions-qui-retourne-un-reference" id="id34">Fonctions qui retourne un référence</a></p></li>
+<li><p><a class="reference internal" href="#constructeur-de-copie" id="id35">Constructeur de copie</a></p>
 <ul>
-<li><p><a class="reference internal" href="#id1" id="id34">Surcharge de l’opérateur =</a></p></li>
+<li><p><a class="reference internal" href="#id1" id="id36">Surcharge de l’opérateur =</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#printf-format" id="id35">printf format</a></p></li>
-<li><p><a class="reference internal" href="#typedef-struct-co" id="id36">Typedef, struct &amp; co</a></p>
+<li><p><a class="reference internal" href="#printf-format" id="id37">printf format</a></p></li>
+<li><p><a class="reference internal" href="#typedef-struct-co" id="id38">Typedef, struct &amp; co</a></p>
 <ul>
-<li><p><a class="reference internal" href="#typedef" id="id37">Typedef</a></p></li>
-<li><p><a class="reference internal" href="#struct" id="id38">struct</a></p></li>
-<li><p><a class="reference internal" href="#enum" id="id39">enum</a></p></li>
-<li><p><a class="reference internal" href="#typedef-et-les-fonctions" id="id40">typedef et les fonctions</a></p></li>
-<li><p><a class="reference internal" href="#champs-de-bits" id="id41">Champs de bits</a></p></li>
-<li><p><a class="reference internal" href="#exemple-trame-serie" id="id42">Exemple trame série</a></p></li>
+<li><p><a class="reference internal" href="#typedef" id="id39">Typedef</a></p></li>
+<li><p><a class="reference internal" href="#struct" id="id40">struct</a></p></li>
+<li><p><a class="reference internal" href="#enum" id="id41">enum</a></p></li>
+<li><p><a class="reference internal" href="#typedef-et-les-fonctions" id="id42">typedef et les fonctions</a></p></li>
+<li><p><a class="reference internal" href="#champs-de-bits" id="id43">Champs de bits</a></p></li>
+<li><p><a class="reference internal" href="#exemple-trame-serie" id="id44">Exemple trame série</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#smart-pointer" id="id43">Smart pointer</a></p></li>
-<li><p><a class="reference internal" href="#callback-how-to" id="id44">callback how to</a></p></li>
-<li><p><a class="reference internal" href="#doxygen-avec-arduino" id="id45">Doxygen avec Arduino</a></p></li>
-<li><p><a class="reference internal" href="#uml" id="id46">UML</a></p></li>
-<li><p><a class="reference internal" href="#weblinks" id="id47">Weblinks</a></p></li>
+<li><p><a class="reference internal" href="#smart-pointer" id="id45">Smart pointer</a></p></li>
+<li><p><a class="reference internal" href="#callback-how-to" id="id46">callback how to</a></p></li>
+<li><p><a class="reference internal" href="#doxygen-avec-arduino" id="id47">Doxygen avec Arduino</a></p></li>
+<li><p><a class="reference internal" href="#uml" id="id48">UML</a></p></li>
+<li><p><a class="reference internal" href="#ast-abstract-syntax-trees" id="id49">AST Abstract Syntax Trees</a></p></li>
+<li><p><a class="reference internal" href="#weblinks" id="id50">Weblinks</a></p></li>
 </ul>
 </li>
 </ul>
@@ -680,6 +683,11 @@ arduino</p>
 <span id="index-19"></span><h2><a class="toc-backref" href="#sommaire">UML</a><a class="headerlink" href="#uml" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Pour le moment tout est dans le fichier xmind cpp-notes</p>
 </div>
+<div class="section" id="ast-abstract-syntax-trees">
+<span id="abstractsyntaxtrees"></span><h2><a class="toc-backref" href="#sommaire">AST Abstract Syntax Trees</a><a class="headerlink" href="#ast-abstract-syntax-trees" title="Lien permanent vers ce titre">¶</a></h2>
+<p><a class="reference external" href="https://fr.wikipedia.org/wiki/Arbre_de_la_syntaxe_abstraite">AST sur wikipédia</a> <a class="footnote-reference brackets" href="#id16" id="id17">8</a></p>
+<p>Serait un moyen possible pour tenter de documenter du code…</p>
+</div>
 <div class="section" id="weblinks">
 <h2><a class="toc-backref" href="#sommaire">Weblinks</a><a class="headerlink" href="#weblinks" title="Lien permanent vers ce titre">¶</a></h2>
 <dl class="footnote brackets">
@@ -704,11 +712,15 @@ arduino</p>
 <dt class="label" id="id14"><span class="brackets"><a class="fn-backref" href="#id15">7</a></span></dt>
 <dd><p><a class="reference external" href="https://fr.cppreference.com/w/cpp/container/vector">https://fr.cppreference.com/w/cpp/container/vector</a></p>
 </dd>
+<dt class="label" id="id16"><span class="brackets"><a class="fn-backref" href="#id17">8</a></span></dt>
+<dd><p><a class="reference external" href="https://fr.wikipedia.org/wiki/Arbre_de_la_syntaxe_abstraite">https://fr.wikipedia.org/wiki/Arbre_de_la_syntaxe_abstraite</a></p>
+</dd>
 </dl>
 </div>
 </div>
 
 
+            <div class="clearer"></div>
           </div>
         </div>
       </div>
@@ -757,6 +769,7 @@ arduino</p>
 <li><a class="reference internal" href="#callback-how-to">callback how to</a></li>
 <li><a class="reference internal" href="#doxygen-avec-arduino">Doxygen avec Arduino</a></li>
 <li><a class="reference internal" href="#uml">UML</a></li>
+<li><a class="reference internal" href="#ast-abstract-syntax-trees">AST Abstract Syntax Trees</a></li>
 <li><a class="reference internal" href="#weblinks">Weblinks</a></li>
 </ul>
 </li>
@@ -801,12 +814,13 @@ arduino</p>
         <li class="right" >
           <a href="../hardware/nucleo/nucleo.html" title="NUCLEO board *"
              >précédent</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">Documentation MajorLee&#39;s notes </a> &#187;</li> 
+        <li class="nav-item nav-item-0"><a href="../index.html">Documentation MajorLee&#39;s notes </a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Mes notes sur C++</a></li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2019, J.SORANZO.
-      Créé avec <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.4.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.2.0.
     </div>
   </body>
 </html>

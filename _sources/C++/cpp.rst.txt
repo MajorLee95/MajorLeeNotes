@@ -722,6 +722,21 @@ UML
 Pour le moment tout est dans le fichier xmind cpp-notes
 
 
+
+.. _AbstractSyntaxTrees:
+
+====================================================================================================
+AST Abstract Syntax Trees
+====================================================================================================
+
+`AST sur wikipédia`_
+
+.. _`AST sur wikipédia` : https://fr.wikipedia.org/wiki/Arbre_de_la_syntaxe_abstraite
+
+Serait un moyen possible pour tenter de documenter du code...
+
+
+
 =========
 Weblinks
 =========

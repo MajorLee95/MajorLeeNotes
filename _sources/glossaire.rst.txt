@@ -76,6 +76,10 @@ Major LEE Glossaire
         
     SASS
         Syntactically Awesome Style Sheets
+    
+    AST
+        :ref:`Abstract Syntax Trees<AbstractSyntaxTrees>`
+        
 
 .. _`Application Binary Interface` :  https://en.wikipedia.org/wiki/Application_binary_interface
         

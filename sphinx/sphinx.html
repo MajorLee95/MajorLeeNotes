@@ -4,6 +4,7 @@
 <html lang="fr">
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sphinx* &#8212; Documentation MajorLee&#39;s notes </title>
     <link rel="stylesheet" href="../_static/nature.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -31,7 +32,8 @@
           <a href="../documenter/documenter.html" title="Documenter"
              accesskey="P">précédent</a> |</li>
         <li class="nav-item nav-item-0"><a href="../index.html">Documentation MajorLee&#39;s notes </a> &#187;</li>
-          <li class="nav-item nav-item-1"><a href="../documenter/documenter.html" accesskey="U">Documenter</a> &#187;</li> 
+          <li class="nav-item nav-item-1"><a href="../documenter/documenter.html" accesskey="U">Documenter</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Sphinx*</a></li> 
       </ul>
     </div>  
 
@@ -260,17 +262,22 @@ Theme difficile à installer sous Windows !!! Erreur dans setup.py (os supported
 <dd class="field-even"><p>VoRoBoTics</p>
 </dd>
 </dl>
-<p>trop important !</p>
+<p>trop important ! Même en passant bodylineheight de 1.5 à 1em directement dans le fichier de
+configuration du theme:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Python38</span><span class="o">-</span><span class="mi">32</span>\<span class="n">Lib</span>\<span class="n">site</span><span class="o">-</span><span class="n">packages</span>\<span class="n">cloud_sptheme</span>\<span class="n">themes</span>\<span class="n">cloud</span>\<span class="n">theme</span><span class="o">.</span><span class="n">conf</span>
+</pre></div>
+</div>
 <a class="reference internal image-reference" href="../_images/cloud.jpg"><img alt="../_images/cloud.jpg" class="align-center" src="../_images/cloud.jpg" style="width: 300px;" /></a>
 <p>Installaton par pip install du fichier wheels fourni sur le site.</p>
-<p>Theme possédant un site très complet.</p>
+<p>Theme possédant un site très complet. Existe en greencloud, redcloud mais solarcloud, magenta_cloud
+ne fonctionnent pas pourtant les 2 fichiers se ressemblent beaucoup</p>
 <p>Permet de régler la largeur avec :</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">chtml_theme_options</span> <span class="o">=</span> <span class="p">{</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">html_theme_options</span> <span class="o">=</span> <span class="p">{</span>
     <span class="s1">&#39;max_width&#39;</span> <span class="p">:</span> <span class="s1">&#39;70%&#39;</span>
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>Pour mettre la même couleur entre le fon et les bordures: <code class="docutils literal notranslate"><span class="pre">'borderless_decor'</span> <span class="pre">:</span> <span class="pre">'true'</span></code></p>
+<p>Pour mettre la même couleur entre le fond et les bordures: <code class="docutils literal notranslate"><span class="pre">'borderless_decor'</span> <span class="pre">:</span> <span class="pre">'true'</span></code></p>
 <p>La config du theme est dans:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">C</span><span class="p">:</span>\<span class="n">Program</span> <span class="n">Files</span>\<span class="n">Python37</span>\<span class="n">Lib</span>\<span class="n">site</span><span class="o">-</span><span class="n">packages</span>\<span class="n">cloud_sptheme</span>\<span class="n">themes</span>\<span class="n">cloud</span>\<span class="n">theme</span><span class="o">.</span><span class="n">conf</span>
 </pre></div>
@@ -389,6 +396,7 @@ en automatique</p>
 </div>
 
 
+            <div class="clearer"></div>
           </div>
         </div>
       </div>
@@ -471,12 +479,13 @@ en automatique</p>
           <a href="../documenter/documenter.html" title="Documenter"
              >précédent</a> |</li>
         <li class="nav-item nav-item-0"><a href="../index.html">Documentation MajorLee&#39;s notes </a> &#187;</li>
-          <li class="nav-item nav-item-1"><a href="../documenter/documenter.html" >Documenter</a> &#187;</li> 
+          <li class="nav-item nav-item-1"><a href="../documenter/documenter.html" >Documenter</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Sphinx*</a></li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2019, J.SORANZO.
-      Créé avec <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.4.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.2.0.
     </div>
   </body>
 </html>

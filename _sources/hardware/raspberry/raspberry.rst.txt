@@ -14,11 +14,18 @@ Raspberry pi*
     :backlinks: top
 
 ====================================================================================================
+Différentes cartes
+====================================================================================================
+Très bon comparatif sur `socialcompare.com`_
+
+.. _`socialcompare.com` : https://socialcompare.com/fr/comparison/raspberrypi-models-comparison
+
+====================================================================================================
 Processeurs
 ====================================================================================================
-RPi3 model B  BCM2837 à 1.2MHz cortex A53
-RPI3 model B+ BCM2837 à 1.4MHz
-Rpi4 : BCM2711 4 coeurs CORTEX A72 version 2Go, 4Go, 8Go
+- RPi3 model B  BCM2837 à 1.2MHz cortex A53
+- RPI3 model B+ BCM2837 à 1.4MHz
+- Rpi4 : BCM2711 4 coeurs CORTEX A72 version 2Go, 4Go, 8Go
 
 Tous les modèles ci-dessus ont le même facteur de forme. Seuls le RPi 1 A+ et le RPi3 A+ ont 
 un facteur de forme différent
@@ -34,13 +41,13 @@ Les caméras
 ====================================================================================================
 Greens
 ====================================================================================================
-V1 : OmniVision OV5647 5 Mp
-v2 : Sony IMX219, 8 Megapixels
-HQ : Sony IMXZ477 12.3 Megapixels
+- V1 : OmniVision OV5647 5 Mp
+- v2 : Sony IMX219, 8 Megapixels
+- HQ : Sony IMXZ477 12.3 Megapixels
 
 Black
 ====================================================================================================
-Sans le filtre infrarouge !
+V2: Sans le filtre infrarouge !
 
 
 
