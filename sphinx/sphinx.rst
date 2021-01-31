@@ -262,7 +262,10 @@ Plutôt pas mal, beaucoup d'option mais je trouve l'écartement entre les lignes
 :Societe: VoLAB
 :Entity: VoRoBoTics
 
-trop important !
+trop important ! Même en passant bodylineheight de 1.5 à 1em directement dans le fichier de 
+configuration du theme::
+    
+    Python38-32\Lib\site-packages\cloud_sptheme\themes\cloud\theme.conf
 
 .. image:: images/cloud.jpg
    :width: 300 px
@@ -270,17 +273,18 @@ trop important !
 
 Installaton par pip install du fichier wheels fourni sur le site.
 
-Theme possédant un site très complet.
+Theme possédant un site très complet. Existe en greencloud, redcloud mais solarcloud, magenta_cloud
+ne fonctionnent pas pourtant les 2 fichiers se ressemblent beaucoup
 
 Permet de régler la largeur avec :
 
 .. code:: 
 
-    chtml_theme_options = {
+    html_theme_options = {
         'max_width' : '70%'
     }
 
-Pour mettre la même couleur entre le fon et les bordures: ``'borderless_decor' : 'true'``
+Pour mettre la même couleur entre le fond et les bordures: ``'borderless_decor' : 'true'``
 
 La config du theme est dans: 
 

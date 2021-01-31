@@ -125,6 +125,8 @@ Pour les utilisateurs
 ======================================
 
 - list des group d'un utilisateur : groups nom
+- changer d'utilisateur : su nom
+- se mettre root pour éviter de taper sudo sudo -s
 
 ----------------------------------------------------------------------------------------------------
 
