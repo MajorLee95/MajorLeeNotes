@@ -28,6 +28,22 @@ Comme il est dit cela ajoute également une entrée dans l'onglet ZoneDNS.
 
 La mise à jour peut prendre jusqu'à 72h.
 
+.. index::
+    pair: Inernet; Port
+
+====================================================================================================
+Well known port
+====================================================================================================
+Voir `le site https://ipwithease.com/`_
+
+.. _`le site https://ipwithease.com/` : https://ipwithease.com/
+
+.. image:: images/COMMON-TCP-IP-WELL-KNOWN-PORT-NUMBERS-TABLE.jpg 
+   :width: 600 px
+
+
+
+
 ====================================================================================================
 Développement web en 2020
 ====================================================================================================

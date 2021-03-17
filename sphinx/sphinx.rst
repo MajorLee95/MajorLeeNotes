@@ -52,6 +52,12 @@ Oui mais non parce que c'est payant ! Même la version de base.
 
 .. _`site Doc-O-Matic` : https://www.doc-o-matic.com/en/index.html
 
+Documenter du code source Python
+====================================================================================================
+voir :ref:`Documenter du code Python et relaton avec Sphinx<documenterProjetPython>`
+
+
+
 ================================
 Doc officielle
 ================================
