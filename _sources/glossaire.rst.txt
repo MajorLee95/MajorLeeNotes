@@ -80,6 +80,8 @@ Major LEE Glossaire
     AST
         :ref:`Abstract Syntax Trees<AbstractSyntaxTrees>`
         
+    MMU
+        Memory Managment Unit
 
 .. _`Application Binary Interface` :  https://en.wikipedia.org/wiki/Application_binary_interface
         

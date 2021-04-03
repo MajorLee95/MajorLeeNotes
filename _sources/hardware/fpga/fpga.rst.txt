@@ -234,6 +234,10 @@ Source : `site INTEL FPGA family`_
 
 DECA-MAX-10 de chez ARROW 
 ======================================
+.. image:: images/decaMax10.jpg 
+   :width: 600 px
+
+
 
 `ARROW DECA MAX-10`_ : environ 155$
 
@@ -436,6 +440,14 @@ MACH-XO2
 ================================
 XILINX
 ================================
+Carte pour la vidéo à 400$
+
+`Chez Numato Lab Opsis`_
+
+.. _`Chez Numato Lab Opsis` : https://numato.com/product/numato-opsis-fpga-based-open-video-platform/
+
+2 HDMI in et 2 HDMI out c'est du lourd et open source.
+
 
 
 
@@ -533,7 +545,10 @@ magie du surf)
 
 .. _`icestudio` : https://github.com/FPGAwars/icestudio
 
-Au final cela s'installe bien. Une bonne surprise. (Sur Windows7 en tout cas)
+Au final cela s'installe bien. Une bonne surprise. (Sur Windows7 en tout cas) mais cela install 
+aussi Python 2.7
+
+J'ai l'impression que cela ne supporte que le Vérilog.
 
 .. index::
     pair: FPGA; Symbiflow

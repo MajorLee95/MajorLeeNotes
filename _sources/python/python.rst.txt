@@ -44,6 +44,47 @@ Index des package sur `Pypi Python Package Index`_
 .. _`Pypi Python Package Index` : https://pypi.org/
 
 
+
+.. index::
+    pair: Python; Documenter du code Python
+
+.. _documenterProjetPython:
+
+====================================================================================================
+Documenter du code Python et relaton avec Sphinx
+====================================================================================================
+Je ne trace ici que les éccueils auquels j'ai été confronté. Il y a de nombreux sites qui traitent
+du sujet.
+
+Un très bon site pas à pas : `blog.flozz.fr`_
+
+.. _`blog.flozz.fr` : https://blog.flozz.fr/2020/10/04/documenter-un-projet-python-avec-sphinx/
+
+Cela passe par docstring ``""" """`` 
+
+Sphinx permet de transformer des fichier restructured text en fichier latex, htlm... Mais, il 
+n'extrait pas tout seul les docstring du code Python pour cela il lui faut une extension.
+
+Comme autodoc qu'il faut ajouter dans le fichier config.py::
+
+    extensions = [
+        'sphinx.ext.autodoc'
+    ]
+
+Il faut créer une arborescence documentaire de fichiers rst et y placer des directives comme::
+
+    .. automodule:: CRdcGui
+
+    .. autoclass:: CRdcGUI
+        :members:
+        :undoc-members:
+
+Il peut être aussi fort util de renseigner le chemin vers les sources au début du fichier config.py::
+
+    import os
+    import sys
+    sys.path.insert(0, os.path.abspath('../sources'))
+
 ====================================================================================================
 Elements de langages
 ====================================================================================================

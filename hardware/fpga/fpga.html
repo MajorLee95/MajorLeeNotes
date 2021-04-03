@@ -4,7 +4,6 @@
 <html lang="fr">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>FPGA* &#8212; Documentation MajorLee&#39;s notes </title>
     <link rel="stylesheet" href="../../_static/nature.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
@@ -32,8 +31,7 @@
           <a href="../robotique/merureDistance.html" title="Robotique : mesure de distance"
              accesskey="P">précédent</a> |</li>
         <li class="nav-item nav-item-0"><a href="../../index.html">Documentation MajorLee&#39;s notes </a> &#187;</li>
-          <li class="nav-item nav-item-1"><a href="../hardware.html" accesskey="U">Hardware notes</a> &#187;</li>
-        <li class="nav-item nav-item-this"><a href="">FPGA*</a></li> 
+          <li class="nav-item nav-item-1"><a href="../hardware.html" accesskey="U">Hardware notes</a> &#187;</li> 
       </ul>
     </div>  
 
@@ -61,42 +59,42 @@
 <div class="contents topic" id="sommaire">
 <p class="topic-title">Sommaire</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="#fpga" id="id59">FPGA*</a></p>
+<li><p><a class="reference internal" href="#fpga" id="id61">FPGA*</a></p>
 <ul>
-<li><p><a class="reference internal" href="#general" id="id60">GENERAL</a></p>
+<li><p><a class="reference internal" href="#general" id="id62">GENERAL</a></p>
 <ul>
-<li><p><a class="reference internal" href="#doulos-ressources" id="id61">Doulos (ressources)</a></p></li>
+<li><p><a class="reference internal" href="#doulos-ressources" id="id63">Doulos (ressources)</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#carte-low-cost" id="id62">Carte low cost</a></p>
+<li><p><a class="reference internal" href="#carte-low-cost" id="id64">Carte low cost</a></p>
 <ul>
-<li><p><a class="reference internal" href="#carte-xilinx-compatible-arduino" id="id63">Carte XILINX compatible Arduino</a></p></li>
-<li><p><a class="reference internal" href="#chez-aliexpress" id="id64">Chez AliExpress</a></p></li>
-<li><p><a class="reference internal" href="#contenu-du-xmind" id="id65">Contenu du Xmind</a></p></li>
+<li><p><a class="reference internal" href="#carte-xilinx-compatible-arduino" id="id65">Carte XILINX compatible Arduino</a></p></li>
+<li><p><a class="reference internal" href="#chez-aliexpress" id="id66">Chez AliExpress</a></p></li>
+<li><p><a class="reference internal" href="#contenu-du-xmind" id="id67">Contenu du Xmind</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#altera-intel-fpga" id="id66">ALTERA / INTEL FPGA</a></p>
+<li><p><a class="reference internal" href="#altera-intel-fpga" id="id68">ALTERA / INTEL FPGA</a></p>
 <ul>
-<li><p><a class="reference internal" href="#max10-versus-cyclone-i-ii-iii-iv" id="id67">MAX10 versus CYCLONE I, II, III, IV</a></p></li>
-<li><p><a class="reference internal" href="#deca-max-10-de-chez-arrow" id="id68">DECA-MAX-10 de chez ARROW</a></p></li>
-<li><p><a class="reference internal" href="#bemicro-max10-avnet-egalement" id="id69">BeMicro Max10 AVNET également</a></p></li>
-<li><p><a class="reference internal" href="#altera-cyclone-ii-ep2c5t144-cpld-fpga-development-board" id="id70">ALTERA Cyclone II EP2C5T144 CPLD FPGA Development Board</a></p></li>
-<li><p><a class="reference internal" href="#altera-cyclone-iv" id="id71">ALTERA Cyclone IV</a></p></li>
-<li><p><a class="reference internal" href="#quartus" id="id72">Quartus</a></p></li>
+<li><p><a class="reference internal" href="#max10-versus-cyclone-i-ii-iii-iv" id="id69">MAX10 versus CYCLONE I, II, III, IV</a></p></li>
+<li><p><a class="reference internal" href="#deca-max-10-de-chez-arrow" id="id70">DECA-MAX-10 de chez ARROW</a></p></li>
+<li><p><a class="reference internal" href="#bemicro-max10-avnet-egalement" id="id71">BeMicro Max10 AVNET également</a></p></li>
+<li><p><a class="reference internal" href="#altera-cyclone-ii-ep2c5t144-cpld-fpga-development-board" id="id72">ALTERA Cyclone II EP2C5T144 CPLD FPGA Development Board</a></p></li>
+<li><p><a class="reference internal" href="#altera-cyclone-iv" id="id73">ALTERA Cyclone IV</a></p></li>
+<li><p><a class="reference internal" href="#quartus" id="id74">Quartus</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#latice-tinyfpga" id="id73">LATICE / TinyFPGA</a></p></li>
-<li><p><a class="reference internal" href="#xilinx" id="id74">XILINX</a></p></li>
-<li><p><a class="reference internal" href="#upduino" id="id75">UPDuino</a></p></li>
-<li><p><a class="reference internal" href="#open-source-fpga-tools" id="id76">Open source FPGA tools</a></p>
+<li><p><a class="reference internal" href="#latice-tinyfpga" id="id75">LATICE / TinyFPGA</a></p></li>
+<li><p><a class="reference internal" href="#xilinx" id="id76">XILINX</a></p></li>
+<li><p><a class="reference internal" href="#upduino" id="id77">UPDuino</a></p></li>
+<li><p><a class="reference internal" href="#open-source-fpga-tools" id="id78">Open source FPGA tools</a></p>
 <ul>
-<li><p><a class="reference internal" href="#apio" id="id77">APIO</a></p></li>
-<li><p><a class="reference internal" href="#icestudio" id="id78">ICEstudio</a></p></li>
-<li><p><a class="reference internal" href="#symbiflow" id="id79">Symbiflow</a></p></li>
-<li><p><a class="reference internal" href="#simulateur-open-source" id="id80">Simulateur open source</a></p></li>
+<li><p><a class="reference internal" href="#apio" id="id79">APIO</a></p></li>
+<li><p><a class="reference internal" href="#icestudio" id="id80">ICEstudio</a></p></li>
+<li><p><a class="reference internal" href="#symbiflow" id="id81">Symbiflow</a></p></li>
+<li><p><a class="reference internal" href="#simulateur-open-source" id="id82">Simulateur open source</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#weblinks" id="id81">Weblinks</a></p></li>
+<li><p><a class="reference internal" href="#weblinks" id="id83">Weblinks</a></p></li>
 </ul>
 </li>
 </ul>
@@ -282,6 +280,7 @@ Contre 2 familles de C iV de 7 et 9 tailles famillles GX( EP4CE6 à 115 ) et GX 
 </div>
 <div class="section" id="deca-max-10-de-chez-arrow">
 <h3><a class="toc-backref" href="#sommaire">DECA-MAX-10 de chez ARROW</a><a class="headerlink" href="#deca-max-10-de-chez-arrow" title="Lien permanent vers ce titre">¶</a></h3>
+<a class="reference internal image-reference" href="../../_images/decaMax10.jpg"><img alt="../../_images/decaMax10.jpg" src="../../_images/decaMax10.jpg" style="width: 600px;" /></a>
 <p><a class="reference external" href="https://www.arrow.com/fr-fr/products/deca/arrow-development-tools">ARROW DECA MAX-10</a> <a class="footnote-reference brackets" href="#id12" id="id13">6</a> : environ 155$</p>
 <p>10M50DAF484C6G FPGA</p>
 <p>50k LE, 1638 KRM,</p>
@@ -418,16 +417,19 @@ ne serait-il pas mieux ?</p>
 </div>
 <div class="section" id="xilinx">
 <h2><a class="toc-backref" href="#sommaire">XILINX</a><a class="headerlink" href="#xilinx" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Carte pour la vidéo à 400$</p>
+<p><a class="reference external" href="https://numato.com/product/numato-opsis-fpga-based-open-video-platform/">Chez Numato Lab Opsis</a> <a class="footnote-reference brackets" href="#id46" id="id47">23</a></p>
+<p>2 HDMI in et 2 HDMI out c’est du lourd et open source.</p>
 </div>
 <div class="section" id="upduino">
 <h2><a class="toc-backref" href="#sommaire">UPDuino</a><a class="headerlink" href="#upduino" title="Lien permanent vers ce titre">¶</a></h2>
 <p>UPduino v2.1: low cost FPGA board et openSource</p>
-<p>sur <a class="reference external" href="https://www.tindie.com/products/tinyvision_ai/upduino-v21-low-cost-fpga-board/">tindie.com</a> <a class="footnote-reference brackets" href="#id46" id="id47">23</a> : 19.95us$</p>
+<p>sur <a class="reference external" href="https://www.tindie.com/products/tinyvision_ai/upduino-v21-low-cost-fpga-board/">tindie.com</a> <a class="footnote-reference brackets" href="#id48" id="id49">24</a> : 19.95us$</p>
 <p>Ce projet n’est pas très clair. Qui en est à l’origine ?</p>
 <p>Ce serait tinyvision-ai.inc (qui n’ont qu’un pauvre github), mais on peut y lire:</p>
-<p>The original design for the UPduino v2.0 was from <a class="reference external" href="http://gnarlygrey.com/?i=1">GnarlyGrey</a> <a class="footnote-reference brackets" href="#id48" id="id49">24</a></p>
-<p>Peut être programmer avec les outils du <a class="reference external" href="http://www.clifford.at/icestorm/">projet icestorm</a> <a class="footnote-reference brackets" href="#id50" id="id51">25</a></p>
-<p><a class="reference external" href="https://www.latticesemi.com/en/Products/FPGAandCPLD/iCE40UltraPlus">Lattice ICE40 Ultra Plus 5K FPGA</a> <a class="footnote-reference brackets" href="#id53" id="id54">26</a> with 5300LUT</p>
+<p>The original design for the UPduino v2.0 was from <a class="reference external" href="http://gnarlygrey.com/?i=1">GnarlyGrey</a> <a class="footnote-reference brackets" href="#id50" id="id51">25</a></p>
+<p>Peut être programmer avec les outils du <a class="reference external" href="http://www.clifford.at/icestorm/">projet icestorm</a> <a class="footnote-reference brackets" href="#id52" id="id53">26</a></p>
+<p><a class="reference external" href="https://www.latticesemi.com/en/Products/FPGAandCPLD/iCE40UltraPlus">Lattice ICE40 Ultra Plus 5K FPGA</a> <a class="footnote-reference brackets" href="#id55" id="id56">27</a> with 5300LUT</p>
 <p>FTDI FT232H USB programmer,
 30 GPIO on 0.1” headers,
 8MB SPI Flash,
@@ -443,7 +445,7 @@ Arduino nano footprint compatible</p>
 <div class="section" id="open-source-fpga-tools">
 <h2><a class="toc-backref" href="#sommaire">Open source FPGA tools</a><a class="headerlink" href="#open-source-fpga-tools" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Eh bien on peut dire que ça à l’air d’être un joyeux bordel !</p>
-<p>Il y a d’abord le <a class="reference external" href="http://www.clifford.at/icestorm/">projet icestorm</a> <a class="footnote-reference brackets" href="#id50" id="id52">25</a></p>
+<p>Il y a d’abord le <a class="reference external" href="http://www.clifford.at/icestorm/">projet icestorm</a> <a class="footnote-reference brackets" href="#id52" id="id54">26</a></p>
 <div class="section" id="apio">
 <h3><a class="toc-backref" href="#sommaire">APIO</a><a class="headerlink" href="#apio" title="Lien permanent vers ce titre">¶</a></h3>
 <p>Puis APIO:</p>
@@ -465,13 +467,15 @@ plus…</p>
 <p>Donc par dessus il y a Icestudio:</p>
 <a class="reference internal image-reference" href="../../_images/icestudio.jpg"><img alt="APIO" class="align-left" src="../../_images/icestudio.jpg" style="width: 200px;" /></a>
 <p><div class="clearer"></div></p>
-<p>Et en se baladant sur le github de <a class="reference external" href="https://github.com/FPGAwars/icestudio">icestudio</a> <a class="footnote-reference brackets" href="#id55" id="id56">27</a>, on découvre d’autres cartes (c’est beau la
+<p>Et en se baladant sur le github de <a class="reference external" href="https://github.com/FPGAwars/icestudio">icestudio</a> <a class="footnote-reference brackets" href="#id57" id="id58">28</a>, on découvre d’autres cartes (c’est beau la
 magie du surf)</p>
-<p>Au final cela s’installe bien. Une bonne surprise. (Sur Windows7 en tout cas)</p>
+<p>Au final cela s’installe bien. Une bonne surprise. (Sur Windows7 en tout cas) mais cela install
+aussi Python 2.7</p>
+<p>J’ai l’impression que cela ne supporte que le Vérilog.</p>
 </div>
 <div class="section" id="symbiflow">
 <span id="index-2"></span><h3><a class="toc-backref" href="#sommaire">Symbiflow</a><a class="headerlink" href="#symbiflow" title="Lien permanent vers ce titre">¶</a></h3>
-<p><a class="reference external" href="https://symbiflow.github.io/">Site officiel Symbiflow</a> <a class="footnote-reference brackets" href="#id57" id="id58">28</a></p>
+<p><a class="reference external" href="https://symbiflow.github.io/">Site officiel Symbiflow</a> <a class="footnote-reference brackets" href="#id59" id="id60">29</a></p>
 <p>SymbiFlow is a fully open source toolchain for the development of FPGAs of multiple vendors.
 Currently, it targets the Xilinx 7-Series, Lattice iCE40, Lattice ECP5 FPGAs, QuickLogic EOS S3
 and is gradually being expanded to provide a comprehensive end-to-end FPGA synthesis flow.</p>
@@ -552,21 +556,24 @@ and is gradually being expanded to provide a comprehensive end-to-end FPGA synth
 <dd><p><a class="reference external" href="https://www.elektor.fr/tinyfpga-programmer">https://www.elektor.fr/tinyfpga-programmer</a></p>
 </dd>
 <dt class="label" id="id46"><span class="brackets"><a class="fn-backref" href="#id47">23</a></span></dt>
-<dd><p><a class="reference external" href="https://www.tindie.com/products/tinyvision_ai/upduino-v21-low-cost-fpga-board/">https://www.tindie.com/products/tinyvision_ai/upduino-v21-low-cost-fpga-board/</a></p>
+<dd><p><a class="reference external" href="https://numato.com/product/numato-opsis-fpga-based-open-video-platform/">https://numato.com/product/numato-opsis-fpga-based-open-video-platform/</a></p>
 </dd>
 <dt class="label" id="id48"><span class="brackets"><a class="fn-backref" href="#id49">24</a></span></dt>
+<dd><p><a class="reference external" href="https://www.tindie.com/products/tinyvision_ai/upduino-v21-low-cost-fpga-board/">https://www.tindie.com/products/tinyvision_ai/upduino-v21-low-cost-fpga-board/</a></p>
+</dd>
+<dt class="label" id="id50"><span class="brackets"><a class="fn-backref" href="#id51">25</a></span></dt>
 <dd><p><a class="reference external" href="http://gnarlygrey.com/?i=1">http://gnarlygrey.com/?i=1</a></p>
 </dd>
-<dt class="label" id="id50"><span class="brackets">25</span><span class="fn-backref">(<a href="#id51">1</a>,<a href="#id52">2</a>)</span></dt>
+<dt class="label" id="id52"><span class="brackets">26</span><span class="fn-backref">(<a href="#id53">1</a>,<a href="#id54">2</a>)</span></dt>
 <dd><p><a class="reference external" href="http://www.clifford.at/icestorm/">http://www.clifford.at/icestorm/</a></p>
 </dd>
-<dt class="label" id="id53"><span class="brackets"><a class="fn-backref" href="#id54">26</a></span></dt>
+<dt class="label" id="id55"><span class="brackets"><a class="fn-backref" href="#id56">27</a></span></dt>
 <dd><p><a class="reference external" href="https://www.latticesemi.com/en/Products/FPGAandCPLD/iCE40UltraPlus">https://www.latticesemi.com/en/Products/FPGAandCPLD/iCE40UltraPlus</a></p>
 </dd>
-<dt class="label" id="id55"><span class="brackets"><a class="fn-backref" href="#id56">27</a></span></dt>
+<dt class="label" id="id57"><span class="brackets"><a class="fn-backref" href="#id58">28</a></span></dt>
 <dd><p><a class="reference external" href="https://github.com/FPGAwars/icestudio">https://github.com/FPGAwars/icestudio</a></p>
 </dd>
-<dt class="label" id="id57"><span class="brackets"><a class="fn-backref" href="#id58">28</a></span></dt>
+<dt class="label" id="id59"><span class="brackets"><a class="fn-backref" href="#id60">29</a></span></dt>
 <dd><p><a class="reference external" href="https://symbiflow.github.io/">https://symbiflow.github.io/</a></p>
 </dd>
 </dl>
@@ -574,7 +581,6 @@ and is gradually being expanded to provide a comprehensive end-to-end FPGA synth
 </div>
 
 
-            <div class="clearer"></div>
           </div>
         </div>
       </div>
@@ -657,13 +663,12 @@ and is gradually being expanded to provide a comprehensive end-to-end FPGA synth
           <a href="../robotique/merureDistance.html" title="Robotique : mesure de distance"
              >précédent</a> |</li>
         <li class="nav-item nav-item-0"><a href="../../index.html">Documentation MajorLee&#39;s notes </a> &#187;</li>
-          <li class="nav-item nav-item-1"><a href="../hardware.html" >Hardware notes</a> &#187;</li>
-        <li class="nav-item nav-item-this"><a href="">FPGA*</a></li> 
+          <li class="nav-item nav-item-1"><a href="../hardware.html" >Hardware notes</a> &#187;</li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2019, J.SORANZO.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.2.0.
+      Créé avec <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.4.
     </div>
   </body>
 </html>
