@@ -43,6 +43,11 @@ Index des package sur `Pypi Python Package Index`_
 
 .. _`Pypi Python Package Index` : https://pypi.org/
 
+
+
+.. index::
+    pair: Python; Documenter du code Python
+
 .. _documenterProjetPython:
 
 ====================================================================================================
