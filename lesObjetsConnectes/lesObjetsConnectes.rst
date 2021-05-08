@@ -52,4 +52,20 @@ Mes projets en lien avec ioT
 		cerbere
 			embrion de projet
 	nodeJS
-		Event-driven I/O server-side JavaScript environment
+        Event-driven I/O server-side JavaScript environment
+        
+====================================================================================================
+Article Web intéressants
+====================================================================================================
+
+Le site `superhouse.tv`_ en anglais.
+
+.. _`superhouse.tv` : https://www.superhouse.tv/
+
+Sur `le site projetsdiy.fr`_
+
+.. _`le site projetsdiy.fr` : https://projetsdiy.fr/debuter-projet-objet-connecte-diy-choix-micro-controleur/
+
+La vidéo `youtube Device Cloud Hello World`_ sur la chaine de Tony DiCola
+
+.. _`youtube Device Cloud Hello World` : https://www.youtube.com/watch?v=33Ni7con3so 

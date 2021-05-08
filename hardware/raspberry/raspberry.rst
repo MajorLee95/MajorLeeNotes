@@ -34,7 +34,8 @@ Description complète sur `Wikipédia Raspberry pi`_
 
 .. _`Wikipédia Raspberry pi` : https://en.wikipedia.org/wiki/Raspberry_Pi
 
-NEO-PC T4 RK3399 2 A72 4 A53 : ARMV8-A
+A titre de comparaison la carte Friendly arm NEO-PC T4 RK3399 2 A72 4 A53 : ARMV8-A (un peu plus 
+de 110€ sur aliexpress au 7/4/2021)
 
 ====================================================================================================
 Les caméras
@@ -118,6 +119,22 @@ Boot from external HDD
 `Un tuto qui m'a l'air facile`_
 
 .. _`Un tuto qui m'a l'air facile` : https://www.maketecheasier.com/boot-up-raspberry-pi-3-external-hard-disk/
+
+
+
+.. index::
+    pair: Raspberry; Shutwodn
+
+
+====================================================================================================
+Rappel éteindre
+====================================================================================================
+En sudo évidement:
+
+- shutdown -h now (en sudo)
+- poweroff
+
+
 
 
 =========

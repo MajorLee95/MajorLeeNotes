@@ -34,9 +34,19 @@ Dans la suite abrégé JdMdP
 .. index ::
    pair: Linux; Shells
    
-================================
-Shell programming
-================================
+
+====================================================================================================
+Programmation shell
+====================================================================================================
+`Sur Paristech`_
+
+.. _`Sur Paristech` : https://perso.telecom-paristech.fr/dax/polys/tp-c-shell/
+
+http://www.gecif.net/articles/linux/gcc.html
+
+Man référence en français sur `manpagesfr.free.fr`_
+
+.. _`manpagesfr.free.fr` : http://manpagesfr.free.fr/man/man3/Index.3.html
 
 Les différents shell
 ======================================
@@ -216,6 +226,84 @@ Ou monter un répertoire d'une autre machine
     mount -t nfs 192.168.1.12:/dossier/partage /mnt/partage_nfs
 
 ----------------------------------------------------------------------------------------------------
+
+
+.. index::
+    single: Makefile
+
+====================================================================================================
+Les Makefile (en bref)
+====================================================================================================
+Mis ici en attendant d'avoir un emplacment dédié à la compilation
+
+Commentaires : #
+
+.PHONY : 
+
+
+`make sur Wikipédia`_
+
+.. _`make sur Wikipédia` : https://fr.wikipedia.org/wiki/Make
+
+Et `sur l'Université Lyon1`_
+
+.. _`sur l'Université Lyon1` : http://perso.univ-lyon1.fr/jean-claude.iehl/Public/educ/Makefile.html
+
+Exemples détaillés `sur cs.colby.edu`_
+
+.. _`sur cs.colby.edu` : https://www.cs.colby.edu/maxwell/courses/tutorials/maketutor/
+
+Des cibles, des règles, des macro et eventuellement des suffixes.
+
+Règles::
+
+    cible [cible ...]: [composant ...]
+    [tabulation] commande 1
+
+    La « cible » est le plus souvent un fichier à construire, mais elle peut aussi définir 
+    une action (effacer, compiler…).
+
+    Les « composants » sont des pré-requis nécessaires à la réalisation de l'action définie 
+    par la règle.
+
+    Autrement dit, les « composants » sont les cibles d'autres règles qui doivent être réalisées 
+    avant de pouvoir réaliser cette règle.
+
+Macro::
+
+    Les macros peuvent être composées de commandes shell en utilisant l'accent grave (`) :
+
+    Il existe aussi des 'macros internes' à make :
+
+        $@ : fait référence à la cible.
+        $? : contient les noms de tous les composants plus récents que la cible.
+        $< : contient le premier composant d'une règle.
+        $^ : contient tous les composants d'une règle.
+
+    our utiliser une macro, il faut procéder à son expansion en l'encapsulant dans $() ou ${}. 
+    Par exemple, pour utiliser la macro CC, il faudra écrire $(CC)
+
+    Il existe plusieurs manières de définir une macro :
+
+        Le = est une affectation par référence (on parle d'expansion récursive)
+        Le := est une affectation par valeur (on parle d'expansion simple)
+        Le ?= est une affectation conditionnelle. Elle n'affecte la macro que si cette dernière n'est pas encore affectée.
+        Le += est une affectation par concaténation. Elle suppose que la macro existe déjà.
+
+Suffixe::
+
+    '%.o : %.c' (où % signifie n'importe quel nom de fichier)
+    La syntaxe pour définir la liste des suffixes est : .SUFFIXES: .suffixe_source .suffixe_cible
+    La syntaxe pour utiliser une règle de double suffixes est : .suffixe_source.suffixe_cible :
+    Exemple : .c.o:
+    une règle de suffixe ne peut avoir de cible (autre après les :)
+
+
+
+
+
+
+
 
 =========
 Weblinks

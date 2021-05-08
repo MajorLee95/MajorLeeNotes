@@ -719,7 +719,7 @@ Il y 2 parmaètres à fixer dans Doxygen pour prendre en compte les fichiers .in
 ====================================================================================================
 UML
 ====================================================================================================
-Pour le moment tout est dans le fichier xmind cpp-notes
+Pour le moment tout est dans le fichier xmind cpp-notes (voir dossier projet IotEps - essais ModelIO)
 
 
 
