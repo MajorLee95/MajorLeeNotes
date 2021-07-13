@@ -69,7 +69,7 @@ Major LEE Glossaire
         `Application Binary Interface`_ en gros API mais low level hardware
 
     REST
-        Representational State Transfer
+        Representational State Transfer, style d'archi WEB formats supportés : HTML, XML, JSON ou un autre format 
 
     BPMN
         `Business Process Model and Notation`_

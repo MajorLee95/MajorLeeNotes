@@ -326,7 +326,7 @@ Sur `electronics.stackexchange.com`_
 .. image:: images/DMC2038LVT_2.jpg 
    :width: 200 px
 
-   :download:`NTD20N03<NTD20N03datasheet.pdf>` ne convient pas car canal N
+:download:`NTD20N03<NTD20N03datasheet.pdf>` ne convient pas car canal N
    
 Mon essai avec :download:`2N7000<2N7000.pdf>` et  
 commandé par un `Digispark`_
