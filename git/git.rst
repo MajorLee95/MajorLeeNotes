@@ -26,9 +26,29 @@ Notes sur git
     :backlinks: top
 
 ================================
-Intrroduction
+Introduction
 ================================
 penser au fichier xmind : ProcessusDocumntaire.xmind pas réussit à exporter vers Freeplane
+
+
+====================================================================================================
+Commandes de base (ou kit de survie minimum)
+====================================================================================================
+::
+
+    git help (-a: liste toute les commande, -g : liste des concepte)
+        exemple : git help everyday (donne de l'aide sur l'utilisation de git tous les jours )
+    git clone/init
+    git status
+    git log
+    git branch
+    git add
+    git commit --message --all
+
+
+
+.. index::
+    pair: Git; Comit atomique
 
 ====================================================================================================
 Commits atomiques
@@ -39,7 +59,15 @@ Article très intéressant `Commits atomiques - la bonne approche`_ sur adopteun
 
 code::
 
-	git add -P ...
+	git add --patch ...
+    résister à git add --all
+
+On y apprend d'abord comment faire de tout petits commit et surtout comment committer dans un fichier
+seulement ce qu'on veut pour que le commentaire du commit corresponde bien au commit.
+
+Les petites modifs de droite et de gauche...
+
+Mais on y apprend également comment réorganiser ces tout petits commits.
 
 
 ====================================================================================================
@@ -215,7 +243,7 @@ Autres possibilités::
 Lister les commit d'une branche distante 
 =========================================
 - Utile quand on est out of date
-- git remote show
+- git remote show origin
 - git ls-remote
 
 Dépôt git sur clé usb 
@@ -300,8 +328,9 @@ Traquer une nouvelle branche distante
 	le 31/03
         avec tutoise
         on commence par un git fetch origin pour mettre à jour la base locale
-        puis un checkout de la branche distante => créé une branche locale.
-    git branch -- track <branch> <branche_distante>
+        puis un checkout de la branche distante => créé une branche locale. et c'est suffisant !
+
+    git branch -- track <branch> <branche_distante> (7/6/21: j'ignore ?)
 
 créer un dépot distant sur le serveur du VoLAB
 ======================================================================================
@@ -343,6 +372,171 @@ Déplacer le dernier commit d'une branche vers une autre branche
     git merge la branche où se trouve le commit fautif
     git checkout la branche du commit fautif
     git reset --hard HEAD~1
+
+
+
+====================================================================================================
+Exemple de la commande git help everyday
+====================================================================================================
+::
+
+    GITEVERYDAY(7)                                                                Git Manual                                                               GITEVERYDAY(7)
+
+    NAME
+        giteveryday - A useful minimum set of commands for Everyday Git
+
+    SYNOPSIS
+        Everyday Git With 20 Commands Or So
+
+    DESCRIPTION
+        Git users can broadly be grouped into four categories for the purposes of describing here a small set of useful command for everyday Git.
+        ·   Individual Developer (Standalone) commands are essential for anybody who makes a commit, even for somebody who works alone.
+        ·   If you work with other people, you will need commands listed in the Individual Developer (Participant) section as well.
+        ·   People who play the Integrator role need to learn some more commands in addition to the above.
+        ·   Repository Administration commands are for system administrators who are responsible for the care and feeding of Git repositories.
+
+    INDIVIDUAL DEVELOPER (STANDALONE)
+        A standalone individual developer does not exchange patches with other people, and works alone in a single repository, using the following commands.
+
+        ·   git-init(1) to create a new repository.
+        ·   git-log(1) to see what happened.
+        ·   git-checkout(1) and git-branch(1) to switch branches.
+        ·   git-add(1) to manage the index file.
+        ·   git-diff(1) and git-status(1) to see what you are in the middle of doing.
+        ·   git-commit(1) to advance the current branch.
+        ·   git-reset(1) and git-checkout(1) (with pathname parameters) to undo changes.
+        ·   git-merge(1) to merge between local branches.
+        ·   git-rebase(1) to maintain topic branches.
+        ·   git-tag(1) to mark a known point.
+
+    Examples
+        Use a tarball as a starting point for a new repository.
+
+                $ tar zxf frotz.tar.gz
+                $ cd frotz
+                $ git init
+                $ git add . (1)
+                $ git commit -m "import of frotz source tree."
+                $ git tag v2.43 (2)
+
+            1. add everything under the current directory.
+            2. make a lightweight, unannotated tag.
+
+        Create a topic branch and develop.
+
+                $ git checkout -b alsa-audio (1)
+                $ edit/compile/test
+                $ git checkout -- curses/ux_audio_oss.c (2)
+                $ git add curses/ux_audio_alsa.c (3)
+                $ edit/compile/test
+                $ git diff HEAD (4)
+                $ git commit -a -s (5)
+                $ edit/compile/test
+                $ git diff HEAD^ (6)
+                $ git commit -a --amend (7)
+                $ git checkout master (8)
+                $ git merge alsa-audio (9)
+                $ git log --since='3 days ago' (10)
+                $ git log v2.43.. curses/ (11)
+
+            1. create a new topic branch.
+            2. revert your botched changes in curses/ux_audio_oss.c.
+            3. you need to tell Git if you added a new file; removal and modification will be caught if you do git commit -a later.
+            4. to see what changes you are committing.
+            5. commit everything, as you have tested, with your sign-off.
+            6. look at all your changes including the previous commit.
+            7. amend the previous commit, adding all your new changes, using your original message.
+            8. switch to the master branch.
+            9. merge a topic branch into your master branch.
+            10. review commit logs; other forms to limit output can be combined and include -10 (to show up to 10 commits), --until=2005-12-10, etc.
+            11. view only the changes that touch what’s in curses/ directory, since v2.43 tag.
+
+    INDIVIDUAL DEVELOPER (PARTICIPANT)
+        A developer working as a participant in a group project needs to learn how to communicate with others, and uses these commands in addition to the ones needed
+        by a standalone developer.
+
+        ·   git-clone(1) from the upstream to prime your local repository.
+        ·   git-pull(1) and git-fetch(1) from "origin" to keep up-to-date with the upstream.
+        ·   git-push(1) to shared repository, if you adopt CVS style shared repository workflow.
+        ·   git-format-patch(1) to prepare e-mail submission, if you adopt Linux kernel-style public forum workflow.
+        ·   git-send-email(1) to send your e-mail submission without corruption by your MUA.
+        ·   git-request-pull(1) to create a summary of changes for your upstream to pull.
+
+    Examples
+        Clone the upstream and work on it. Feed changes to upstream.
+
+                $ git clone git://git.kernel.org/pub/scm/.../torvalds/linux-2.6 my2.6
+                $ cd my2.6
+                $ git checkout -b mine master (1)
+                $ edit/compile/test; git commit -a -s (2)
+                $ git format-patch master (3)
+                $ git send-email --to="person <email@example.com>" 00*.patch (4)
+                $ git checkout master (5)
+                $ git pull (6)
+                $ git log -p ORIG_HEAD.. arch/i386 include/asm-i386 (7)
+                $ git ls-remote --heads http://git.kernel.org/.../jgarzik/libata-dev.git (8)
+                $ git pull git://git.kernel.org/pub/.../jgarzik/libata-dev.git ALL (9)
+                $ git reset --hard ORIG_HEAD (10)
+                $ git gc (11)
+
+            1. checkout a new branch mine from master.
+            2. repeat as needed.
+            3. extract patches from your branch, relative to master,
+            4. and email them.
+            5. return to master, ready to see what’s new
+            6. git pull fetches from origin by default and merges into the current branch.
+            7. immediately after pulling, look at the changes done upstream since last time we checked, only in the area we are interested in.
+            8. check the branch names in an external repository (if not known).
+            9. fetch from a specific branch ALL from a specific repository and merge it.
+            10. revert the pull.
+            11. garbage collect leftover objects from reverted pull.
+
+        Push into another repository.
+
+                satellite$ git clone mothership:frotz frotz (1)
+                satellite$ cd frotz
+                satellite$ git config --get-regexp '^(remote|branch)\.' (2)
+                remote.origin.url mothership:frotz
+                remote.origin.fetch refs/heads/*:refs/remotes/origin/*
+                branch.master.remote origin
+                branch.master.merge refs/heads/master
+                satellite$ git config remote.origin.push \
+                            +refs/heads/*:refs/remotes/satellite/* (3)
+                satellite$ edit/compile/test/commit
+                satellite$ git push origin (4)
+
+                mothership$ cd frotz
+                mothership$ git checkout master
+                mothership$ git merge satellite/master (5)
+
+            1. mothership machine has a frotz repository under your home directory; clone from it to start a repository on the satellite machine.
+            2. clone sets these configuration variables by default. It arranges git pull to fetch and store the branches of mothership machine to local
+            remotes/origin/* remote-tracking branches.
+            3. arrange git push to push all local branches to their corresponding branch of the mothership machine.
+            4. push will stash all our work away on remotes/satellite/* remote-tracking branches on the mothership machine. You could use this as a back-up method.
+            Likewise, you can pretend that mothership "fetched" from you (useful when access is one sided).
+            5. on mothership machine, merge the work done on the satellite machine into the master branch.
+
+        Branch off of a specific tag.
+
+                $ git checkout -b private2.6.14 v2.6.14 (1)
+                $ edit/compile/test; git commit -a
+                $ git checkout master
+                $ git cherry-pick v2.6.14..private2.6.14 (2)
+
+            1. create a private branch based on a well known (but somewhat behind) tag.
+            2. forward port all changes in private2.6.14 branch to master branch without a formal "merging". Or longhand
+
+            git format-patch -k -m --stdout v2.6.14..private2.6.14 | git am -3 -k
+
+        An alternate participant submission mechanism is using the git request-pull or pull-request mechanisms (e.g as used on GitHub (www.github.com) to notify your
+        upstream of your contribution.
+
+
+    ... supprimé INTEGRATOR et REPOSITORY ADMINISTRATION
+
+
+
 
 
 =========

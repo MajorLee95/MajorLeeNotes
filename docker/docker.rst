@@ -147,7 +147,7 @@ dernier est en read-only. Chaque nouveau layer est constitué d'un petit nombre 
 rapport au précédent. Les layers sont empilés les uns au dessus des autres avec en plus au dessus
 un layer dit container layer en lecture/écriture dans lequel sont fait les modifs.
 
-La majeur différence en une images et un container est en fait représentée par ce dernier layer en
+La majeur différence entre une images et un container est en fait représentée par ce dernier layer en
 lecture écriture dont le contenu disparaît quand le container est arrêté.
 
 Tiré de `Images and layers dans la doc officielle`_

@@ -719,7 +719,67 @@ Il y 2 parmaètres à fixer dans Doxygen pour prendre en compte les fichiers .in
 ====================================================================================================
 UML
 ====================================================================================================
-Pour le moment tout est dans le fichier xmind cpp-notes (voir dossier projet IotEps - essais ModelIO)
+Pour le moment tout est dans le fichier Freemind cpp-notes (voir dossier projet IotEps - essais ModelIO)
+
+ModelIo vite abandonnée.
+
+`Site sur les diagrammes UML`_
+
+.. _`Site sur les diagrammes UML` : https://www.uml-diagrams.org/   
+
+.. index::
+    pair: UML; PlantUML
+
+PlantUML
+====================================================================================================
+`Site officiel de PlantUML`_
+
+.. _`Site officiel de PlantUML` : https://plantuml.com/fr/
+
+PlantUML est surtout un langage de description comme le dot de Graphviz. D'ailleurs si on veut 
+utiliser l'intégralité des graphiques listé il faut avoir Graphviz installé ;-)
+
+Il y a évidement des extension Visual Studio Code ;-)
+
+Le :download:`guide du langage existe en pdf fr<fichiersJoints/PlantUML_Language_Reference_Guide_fr.pdf>`.
+
+citation::
+
+    PlantUML est un composant qui permet de dessiner rapidement des:
+        diagrammes de séquence
+        diagrammes de cas d'utilisation
+        diagrammes de classes
+        diagrammes d'objet
+        diagrammes d'activité (ici l'ancienne syntaxe)
+        diagrammes de composant
+        diagrammes de déploiement
+        diagrammes d'état
+        diagrammes de temps
+    Certains autres diagrammes (hors UML) sont aussi possibles:
+        données au format JSON
+        données au format YAML
+        diagrammes de réseaux (nwdiag)
+        maquettes d'interface graphique (salt)
+        diagrammes Archimate
+        diagrammes de langage de description et de spécification (LDS) ou Specification and Description Language (SDL)
+        diagrammes ditaa
+        diagrammes de Gantt
+        diagrammes d'idées (mindmap)
+        organigramme ou Work Breakdown Structure (WBS)
+        notation mathématique avec AsciiMath ou JLaTeXMath
+        diagrammes entité relation (ER/IE)
+
+PlantUML est une application en java qui ne s'intalle pas et est entièrement contenu dans un seul
+fichier .jar
+
+Le lancemet est brutal, pas de fioritures!
+
+.. image:: images/plantUMLstartUpScreen.JPG 
+   :width: 300 px
+
+Il existe de nombreux outils en ligne pour expérimenter comme `planttext.com`_
+
+.. _`planttext.com` : https://www.planttext.com/
 
 
 
