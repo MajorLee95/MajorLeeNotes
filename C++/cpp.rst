@@ -737,6 +737,7 @@ PlantUML
 .. _`Site officiel de PlantUML` : https://plantuml.com/fr/
 
 PlantUML est surtout un langage de description comme le dot de Graphviz. D'ailleurs si on veut 
+
 utiliser l'intégralité des graphiques listés, il faut avoir Graphviz installé ;-)
 
 .. index::
@@ -745,6 +746,7 @@ utiliser l'intégralité des graphiques listés, il faut avoir Graphviz install�
 `site officiel de GraphViz`_ La doc est en ligne.
 
 .. _`site officiel de GraphViz` : https://graphviz.org/
+
 
 Il y a évidement des extension Visual Studio Code ;-)
 
