@@ -28,8 +28,21 @@ Notes sur git
 ================================
 Introduction
 ================================
-penser au fichier xmind : ProcessusDocumntaire.xmind pas réussit à exporter vers Freeplane
+penser au fichier xmind : ProcessusDocumntaire.mm  Freeplane
 
+A mon avis, git prend tout son sens quand on l'utilise avec un dépôt distant. J'ai longtemps utilisé
+git en faisant uniquement des dépôts git locaux. Jusqu'au jour où mon disuqe dur a crashé et que je 
+n'avais pas de sauvegarde... Tous ces précieux commit qui se sont envolés...
+
+Ce dépôt distant peut être:
+
+- un dépôt sur github.com ou sur gitlab.com
+
+.. HINT::
+
+    `Coparaison Github Gitlab`_
+    
+.. _`Coparaison Github Gitlab` : https://www.ionos.fr/digitalguide/sites-internet/developpement-web/gitlab-vs-github/
 
 ====================================================================================================
 Commandes de base (ou kit de survie minimum)
@@ -41,10 +54,56 @@ Commandes de base (ou kit de survie minimum)
     git clone/init
     git status
     git log
-    git branch
-    git add
-    git commit --message --all
+    git branch ou git branch -a (--all) y copris les branche non trackées
+    git add .
+    git commit --message 'commit explication' --all
+    git show
+    git merge
 
+====================================================================================================
+Tutos en français
+====================================================================================================
+`Découvrir Git : introduction et premiers pas`_
+
+.. _`Découvrir Git : introduction et premiers pas` : https://www.miximum.fr/blog/decouvrir-git/
+
+
+====================================================================================================
+Workflow
+====================================================================================================
+Développeur (en équipe)
+====================================================================================================
+En équipe peut aussi signifier, développer seul mais sur plusieurs machines différentes.
+Une des grosse difficultés que je rencontre c'est de répondre à la question ?
+
+Où on en est ? Ensuite ça roule...
+
+Partons du postulat dans lequel on a un répertoire local de travail avec un sous répertoire .git
+
+Ce petit indice nous dit qu'il s'agit d'un dépôt git local. 
+
+- Question comment savoir dans quel état il se trouve ? 
+- Est-il connecté à un dépôt distant ?
+- Combien comporte-t-il de branche ? locales et éventuellement distante
+- Quelles sont les branches suivies ?
+- Quel est l'éventuel état de la synchronisation ? 
+
+
+
+commandes::
+
+    git status
+    git branch -a
+    git log --pretty=oneline --abbrev-commit --graph --decorate --all [>graph.txt]
+    git tag -l
+    git config --local -l
+
+
+
+.. TIP::
+
+    - git config --global alias.adog "log --all --decorate --oneline --graph"
+    - puis git adog 
 
 
 .. index::
@@ -83,6 +142,13 @@ https://www.miximum.fr/blog/git-rebase/
 
 *La commande git-rebase est comme une tronçonneuse : elle permet de couper une branche pour 
 la regreffer à un autre endroit sur l'arbre.*
+
+Pourquoi rebase ? Parce qu'on part du principe qu'on a basé notre branche de travail sur un commit
+d'une autre branche et qu'entre temps cette branche a évolué et que avant de pousser un nouveau commit
+sur notre branche distance, on change la base de notre branche pour l'emmener à la tête de la branche 
+qui nous a servit de point de départ. Il y a alors un pull sous jascent qui se fait (avec éventuellement 
+résolution de conflit). Le merge alors de notre branche sur la branche de base s'en trouve alors facilité.
+Les conflits ont alors déjà été résolus.
 
 ====================================================================================================
 git bisec
@@ -134,7 +200,13 @@ Nécessite de créer un compte sur leur site ? Pourquoi au juste ?
  - Ajoute un menu contextuel
 			avec plein de commandes
             
-.. _`tortoisegit` : https://tortoisegit.org/   
+.. _`tortoisegit` : https://tortoisegit.org/
+
+Configurer Tortoise git avec des clé ssh:
+
+- mettre ses clés dans ~/.ssh
+- dans les setting du dépot remplacer htt:// par git@ avec : au lieu du premier /
+- configurer également network/ssh client : ``C:\Windows\System32\OpenSSH\ssh.exe``
          
 Suppression d'un fichier 
 ======================================
@@ -275,6 +347,13 @@ clé SSH
 
 	 ls -al ~/.ssh
 
+Généralement OpenSSH installé par défaut sous Ubuntu.
+
+Sous Windows::
+
+    ssh-add : error
+    ssh-agent error 1058 : service est mis sur disable dans windwos, le passer sur manuel !
+
 
 cherry-pick : écrémer
 ===========================================
@@ -331,6 +410,8 @@ Traquer une nouvelle branche distante
         puis un checkout de la branche distante => créé une branche locale. et c'est suffisant !
 
     git branch -- track <branch> <branche_distante> (7/6/21: j'ignore ?)
+    ou plus simplement git checkout --track origin/branche_distante (si elle n'est pas traquée une nouvelle 
+    branche locale est crée)
 
 créer un dépot distant sur le serveur du VoLAB
 ======================================================================================
@@ -512,10 +593,10 @@ Exemple de la commande git help everyday
             1. mothership machine has a frotz repository under your home directory; clone from it to start a repository on the satellite machine.
             2. clone sets these configuration variables by default. It arranges git pull to fetch and store the branches of mothership machine to local
             remotes/origin/* remote-tracking branches.
-            3. arrange git push to push all local branches to their corresponding branch of the mothership machine.
-            4. push will stash all our work away on remotes/satellite/* remote-tracking branches on the mothership machine. You could use this as a back-up method.
+            1. arrange git push to push all local branches to their corresponding branch of the mothership machine.
+            2. push will stash all our work away on remotes/satellite/* remote-tracking branches on the mothership machine. You could use this as a back-up method.
             Likewise, you can pretend that mothership "fetched" from you (useful when access is one sided).
-            5. on mothership machine, merge the work done on the satellite machine into the master branch.
+            1. on mothership machine, merge the work done on the satellite machine into the master branch.
 
         Branch off of a specific tag.
 

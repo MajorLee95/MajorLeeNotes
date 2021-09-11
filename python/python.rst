@@ -145,9 +145,11 @@ Eléments de syntaxe: les crochets.
 
 
 **Suppression**::
+    
     maList.remove("tutu")
     malist.pop() ou maList.popleft()
     ou del maList[3]
+
 
 **pile et queue**
 Elle peuvent être utilisées en pile ou en queue cf. <https://docs.python.org/3.1/tutorial/datastructures.html>
@@ -945,6 +947,16 @@ Il s'agit d'une fonction très avancée dans leur création.
 ====================================================================================================
 Astuces
 ====================================================================================================
+Python2 to 3
+====================================================================================================
+
+.. index::
+    single: Python; 2 to 3
+
+`Cheat Sheet: Writing Python 2-3 compatible code`_
+
+.. _`Cheat Sheet: Writing Python 2-3 compatible code` : http://python-future.org/compatible_idioms.html
+
 
 ====================================================================================================
 I2C

@@ -432,14 +432,15 @@ Fonctions qui retourne un référence
             wrox-press-ivor-horton-s-beginning-visual-c-2013-2014.pdf
                 dans le bookin les liens vers les sources sont fauts
             page 210
-        ne pas confondre return &var;
-            ça ça retourne un pointeur
+        ne pas confondre return &var; ça ça retourne un pointeur
         type& _fonction(){ return varType; }
             ça ça retourne une référence
             
 En quoi cela est-il si puissant ? (25/11/2019)
 
-Le renvoi d'une référence à une valeur depuis une fonction signifie que vous pouvez utiliser le résultat de la fonction situé à gauche d'une instruction d'affectation. Cela permet de faire des chose impossible autrement.
+Le renvoi d'une référence à une valeur depuis une fonction signifie que vous pouvez utiliser le 
+résultat de la fonction situé à gauche d'une instruction d'affectation. Cela permet de faire des 
+choses impossiblse autrement.
 
 fonction( paramtres ) = valeur;
 
@@ -448,7 +449,7 @@ Donc oui c'est hyperdangereux !
 
 Never, ever, return a reference to a local variable from a function.
 
-Permet la surcharcharge de l'opérateur = comme dans l'exmle du livre d'Ivor Horton page 342.
+Permet la surcharcharge de l'opérateur = comme dans l'exemle du livre d'Ivor Horton page 342.
 
 ----------------------------------------------------------------------------------------------------
 
@@ -683,7 +684,24 @@ Exemple trame série
 Smart pointer
 ================================
 
-cf. Xmind
+::
+
+    smart pointer
+        A revoir
+            wrox-press-ivor-horton-s-beginning-visual-c-2013-2014.pdf 
+            /c++/MFC/wrox-press-ivor-horton-s-beginning-visual-c-2013-2014.pdf
+                dans le bookin les liens vers les sources sont fauts 
+                <http://www.wrox.com/WileyCDA/WroxTitle/Ivor-Horton-s-Beginning-Visual-C-2013.productCd-1118845714,descCd-DOWNLOAD.html>
+            p485
+        std namespace
+        template type
+        Ce sont des pointeur qui surveillent l'usage de la mémoire et se détruise tout seul quand ils ne sont plus nécessaire
+        Allocation dynamique
+        Pas besoin d'utiliser delete
+        unique_ptr<T>
+        shared_ptr<T>
+        weak_ptr<T>
+
 
 ================================
 callback how to

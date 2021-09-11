@@ -89,6 +89,14 @@ Article très intéressant  `Docker est mort, vive Docker`_ sur le fonctionnemen
 
 .. _`Docker est mort, vive Docker` :  https://blog.engineering.publicissapient.fr/2019/12/23/docker-est-mort-vive-docker/
 
+
+**Images**: la carcasse: quand on fait un docker build on crée une image "An image is a read-only template"
+
+**Container**: l'image en cours d'exécuton : quand on fait docker run "A container is a runnable instance of an image"
+
+**Layer**: chaque commande d'un dockerfile.
+
+
 Ma présentation rapide pratique
 ====================================================================================================
 
@@ -154,7 +162,22 @@ Tiré de `Images and layers dans la doc officielle`_
 
 .. _`Images and layers dans la doc officielle` : https://docs.docker.com/storage/storagedriver/#images-and-layers
 
+Ma vision du fonctionnement
+====================================================================================================
+::
 
+    docker run : regarde si une image correspondant au nom fourni existe et la lance
+    (devient un container)
+
+Si elle n'existe pas en local, docker essais de la trouver sur le dépôt officiel et la charge avant
+de la lancer et ainsi de créer le container. Dans ce cas on parle d'image de base. Docker run 
+attribue automatiquement un nom au container ainsi qu'un id.
+
+L'étape suivent et de créer ses propres images en dérivant des images de base. C'est le rôle de la
+commande build. En général, on lui fourni un nom pour reconnaître son image qui après construction
+se retrouve dans la liste forunie par ``docker images``
+
+    docker bu
 
 ====================================================================================================
 Documentation
@@ -213,7 +236,7 @@ Cheatsheet ?
     docker run -d -p 8080:80 nginx
     docker images <=> docker image ls
     docker ps : shows you all containers that are currently running
-    docker ps -a : shows all containers
+    docker ps -a : shows all containers (y compris les container stoppés)
     docker rmi : efface une ou plusieurs images
     docker rm : efface un container
     docker start -i container_name
@@ -279,13 +302,19 @@ Le build ne dispense pas de faire un run ensuite
 
 Les principale commandes::
 
-    FROM
-    RUN
-    COPY / ADD
+    ARG : défini une variable qui peut être redéfinie dans la ligne de commande (disparait après un FROM)
+    ENV : défini une varibale qui persiste dans l'image finale
+    FROM 
+    RUN exécute une commande system dans un layer au dessus du layer actuel
+    COPY / ADD : copie les fichiers de <src> vers image <dest path> (absolu ou relatif a WORKDIR)
     WORKDIR
     EXPOSE
     VOLUME
-    CMD
+    CMD : 1 par Dockerfile, son interêt principal est de passer des param par defaut à ENTRYPOINT
+    ENTRYPOINT : exécute un process dans le container (auquel on passer des paramètres dans la CLI)
+    
+
+    ADD vs COPY: ADD permet de spécifier un url en tant que src et de détarer.
 
 `Différence entre ADD et COPY`_
 
@@ -647,6 +676,18 @@ Tout est dans le titre, on peut donner un titre à container ! ne s'abrège pas.
 
 .. index::
     single: Docker; Samples
+
+====================================================================================================
+Repository locaux
+====================================================================================================
+`Deploy a registry server`_
+
+.. _`Deploy a registry server` : https://docs.docker.com/registry/deploying/
+
+
+
+
+
 
 ====================================================================================================
 Voir Docker à l'oeuvre
