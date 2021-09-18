@@ -69,7 +69,7 @@ Major LEE Glossaire
         `Application Binary Interface`_ en gros API mais low level hardware
 
     REST
-        Representational State Transfer
+        Representational State Transfer, style d'archi WEB formats supportés : HTML, XML, JSON ou un autre format 
 
     BPMN
         `Business Process Model and Notation`_
@@ -82,6 +82,13 @@ Major LEE Glossaire
         
     MMU
         Memory Managment Unit
+
+    EFI
+        Extensible Firmware interface successeur du BIOS
+
+    UEFI
+        Unified Extensible Firmware interface successeur de l'EFI
+
 
 .. _`Application Binary Interface` :  https://en.wikipedia.org/wiki/Application_binary_interface
         

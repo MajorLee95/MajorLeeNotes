@@ -4,7 +4,6 @@
 <html lang="fr">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Python (mes notes) &#8212; Documentation MajorLee&#39;s notes </title>
     <link rel="stylesheet" href="../_static/nature.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -17,7 +16,7 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Recherche" href="../search.html" />
     <link rel="next" title="Les objets connectés" href="../lesObjetsConnectes/lesObjetsConnectes.html" />
-    <link rel="prev" title="Notes sur Qt *" href="../C%2B%2B/Qt/Qt.html" /> 
+    <link rel="prev" title="Notes sur Qt *" href="../C++/Qt/Qt.html" /> 
   </head><body>
     <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
@@ -29,10 +28,9 @@
           <a href="../lesObjetsConnectes/lesObjetsConnectes.html" title="Les objets connectés"
              accesskey="N">suivant</a> |</li>
         <li class="right" >
-          <a href="../C%2B%2B/Qt/Qt.html" title="Notes sur Qt *"
+          <a href="../C++/Qt/Qt.html" title="Notes sur Qt *"
              accesskey="P">précédent</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">Documentation MajorLee&#39;s notes </a> &#187;</li>
-        <li class="nav-item nav-item-this"><a href="">Python (mes notes)</a></li> 
+        <li class="nav-item nav-item-0"><a href="../index.html">Documentation MajorLee&#39;s notes </a> &#187;</li> 
       </ul>
     </div>  
 
@@ -60,35 +58,39 @@
 <div class="contents topic" id="sommaire">
 <p class="topic-title">Sommaire</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="#python-mes-notes" id="id37">Python (mes notes)</a></p>
+<li><p><a class="reference internal" href="#python-mes-notes" id="id39">Python (mes notes)</a></p>
 <ul>
-<li><p><a class="reference internal" href="#disclaimer" id="id38">Disclaimer</a></p></li>
-<li><p><a class="reference internal" href="#pourquoi-les-gens-aiment-python" id="id39">Pourquoi les gens aiment Python</a></p></li>
-<li><p><a class="reference internal" href="#docs" id="id40">Docs</a></p></li>
-<li><p><a class="reference internal" href="#documenter-du-code-python-et-relaton-avec-sphinx" id="id41">Documenter du code Python et relaton avec Sphinx</a></p></li>
-<li><p><a class="reference internal" href="#elements-de-langages" id="id42">Elements de langages</a></p>
+<li><p><a class="reference internal" href="#disclaimer" id="id40">Disclaimer</a></p></li>
+<li><p><a class="reference internal" href="#pourquoi-les-gens-aiment-python" id="id41">Pourquoi les gens aiment Python</a></p></li>
+<li><p><a class="reference internal" href="#docs" id="id42">Docs</a></p></li>
+<li><p><a class="reference internal" href="#documenter-du-code-python-et-relaton-avec-sphinx" id="id43">Documenter du code Python et relaton avec Sphinx</a></p></li>
+<li><p><a class="reference internal" href="#elements-de-langages" id="id44">Elements de langages</a></p>
 <ul>
-<li><p><a class="reference internal" href="#notations" id="id43">Notations</a></p></li>
-<li><p><a class="reference internal" href="#tuples" id="id44">Tuples</a></p></li>
-<li><p><a class="reference internal" href="#listes" id="id45">Listes</a></p></li>
-<li><p><a class="reference internal" href="#dictionnaires" id="id46">Dictionnaires</a></p></li>
-<li><p><a class="reference internal" href="#enumerate" id="id47">Enumerate</a></p></li>
-<li><p><a class="reference internal" href="#fonctions" id="id48">Fonctions</a></p></li>
-<li><p><a class="reference internal" href="#modules" id="id49">Modules</a></p></li>
-<li><p><a class="reference internal" href="#les-exceptions" id="id50">Les exceptions</a></p></li>
-<li><p><a class="reference internal" href="#les-packages" id="id51">Les packages</a></p></li>
-<li><p><a class="reference internal" href="#les-fichiers" id="id52">Les fichiers</a></p></li>
-<li><p><a class="reference internal" href="#les-objets" id="id53">Les objets</a></p></li>
-<li><p><a class="reference internal" href="#iterateur-generateur" id="id54">Itérateur &amp; générateur</a></p></li>
+<li><p><a class="reference internal" href="#notations" id="id45">Notations</a></p></li>
+<li><p><a class="reference internal" href="#tuples" id="id46">Tuples</a></p></li>
+<li><p><a class="reference internal" href="#listes" id="id47">Listes</a></p></li>
+<li><p><a class="reference internal" href="#dictionnaires" id="id48">Dictionnaires</a></p></li>
+<li><p><a class="reference internal" href="#enumerate" id="id49">Enumerate</a></p></li>
+<li><p><a class="reference internal" href="#fonctions" id="id50">Fonctions</a></p></li>
+<li><p><a class="reference internal" href="#modules" id="id51">Modules</a></p></li>
+<li><p><a class="reference internal" href="#les-exceptions" id="id52">Les exceptions</a></p></li>
+<li><p><a class="reference internal" href="#les-packages" id="id53">Les packages</a></p></li>
+<li><p><a class="reference internal" href="#les-fichiers" id="id54">Les fichiers</a></p></li>
+<li><p><a class="reference internal" href="#les-objets" id="id55">Les objets</a></p></li>
+<li><p><a class="reference internal" href="#iterateur-generateur" id="id56">Itérateur &amp; générateur</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#astuces" id="id55">Astuces</a></p></li>
-<li><p><a class="reference internal" href="#i2c" id="id56">I2C</a></p></li>
-<li><p><a class="reference internal" href="#pyserial" id="id57">PySerial</a></p></li>
-<li><p><a class="reference internal" href="#gestionnaires-graphiques" id="id58">Gestionnaires graphiques</a></p></li>
-<li><p><a class="reference internal" href="#a-revoir" id="id59">A revoir</a></p></li>
-<li><p><a class="reference internal" href="#appli-minimum-template" id="id60">Appli minimum (template)</a></p></li>
-<li><p><a class="reference internal" href="#weblinks" id="id61">Weblinks</a></p></li>
+<li><p><a class="reference internal" href="#astuces" id="id57">Astuces</a></p>
+<ul>
+<li><p><a class="reference internal" href="#python2-to-3" id="id58">Python2 to 3</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#i2c" id="id59">I2C</a></p></li>
+<li><p><a class="reference internal" href="#pyserial" id="id60">PySerial</a></p></li>
+<li><p><a class="reference internal" href="#gestionnaires-graphiques" id="id61">Gestionnaires graphiques</a></p></li>
+<li><p><a class="reference internal" href="#a-revoir" id="id62">A revoir</a></p></li>
+<li><p><a class="reference internal" href="#appli-minimum-template" id="id63">Appli minimum (template)</a></p></li>
+<li><p><a class="reference internal" href="#weblinks" id="id64">Weblinks</a></p></li>
 </ul>
 </li>
 </ul>
@@ -188,11 +190,13 @@ n’extrait pas tout seul les docstring du code Python pour cela il lui faut une
 <dt><strong>Accès</strong></dt><dd><p>Pour accéder à un élément : malist[indice] indice commence évidement à 0
 Pour accéder à plusieurs élément consécutifs : malist[x:y]</p>
 </dd>
-<dt><strong>Suppression</strong>::</dt><dd><p>maList.remove(« tutu »)
-malist.pop() ou maList.popleft()
-ou del maList[3]</p>
-</dd>
 </dl>
+<p><strong>Suppression</strong>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">maList</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="s2">&quot;tutu&quot;</span><span class="p">)</span>
+<span class="n">malist</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span> <span class="n">ou</span> <span class="n">maList</span><span class="o">.</span><span class="n">popleft</span><span class="p">()</span>
+<span class="n">ou</span> <span class="k">del</span> <span class="n">maList</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span>
+</pre></div>
+</div>
 <p><strong>pile et queue</strong>
 Elle peuvent être utilisées en pile ou en queue cf. &lt;<a class="reference external" href="https://docs.python.org/3.1/tutorial/datastructures.html">https://docs.python.org/3.1/tutorial/datastructures.html</a>&gt;</p>
 <p>Grace à pop pour les piles et popleft pour les files d’attente.</p>
@@ -811,6 +815,10 @@ __next__ ni de lever l’éxception de fin</p>
 </div>
 <div class="section" id="astuces">
 <h2><a class="toc-backref" href="#sommaire">Astuces</a><a class="headerlink" href="#astuces" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="section" id="python2-to-3">
+<h3><a class="toc-backref" href="#sommaire">Python2 to 3</a><a class="headerlink" href="#python2-to-3" title="Lien permanent vers ce titre">¶</a></h3>
+<p id="index-20"><a class="reference external" href="http://python-future.org/compatible_idioms.html">Cheat Sheet: Writing Python 2-3 compatible code</a> <a class="footnote-reference brackets" href="#id27" id="id28">14</a></p>
+</div>
 </div>
 <div class="section" id="i2c">
 <h2><a class="toc-backref" href="#sommaire">I2C</a><a class="headerlink" href="#i2c" title="Lien permanent vers ce titre">¶</a></h2>
@@ -818,7 +826,7 @@ __next__ ni de lever l’éxception de fin</p>
 <div class="section" id="pyserial">
 <h2><a class="toc-backref" href="#sommaire">PySerial</a><a class="headerlink" href="#pyserial" title="Lien permanent vers ce titre">¶</a></h2>
 <p>pyserial</p>
-<p><a class="reference external" href="https://pyserial.readthedocs.io/en/latest/pyserial.html">Pas de doc pdf seulement doc en ligne</a> <a class="footnote-reference brackets" href="#id27" id="id28">14</a> mais un très bon readthedoc à noter que la doc sur
+<p><a class="reference external" href="https://pyserial.readthedocs.io/en/latest/pyserial.html">Pas de doc pdf seulement doc en ligne</a> <a class="footnote-reference brackets" href="#id29" id="id30">15</a> mais un très bon readthedoc à noter que la doc sur
 pythonhosted.org est identique.</p>
 <p>pySerial includes a small console based terminal program called Miniterm. It can be started with:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="o">-</span><span class="n">m</span> <span class="n">serial</span><span class="o">.</span><span class="n">tools</span><span class="o">.</span><span class="n">miniterm</span> <span class="o">&lt;</span><span class="n">port</span> <span class="n">name</span><span class="o">&gt;</span> <span class="p">(</span><span class="n">use</span> <span class="n">option</span> <span class="o">-</span><span class="n">h</span> <span class="n">to</span> <span class="n">get</span> <span class="n">a</span> <span class="n">listing</span> <span class="n">of</span> <span class="nb">all</span> <span class="n">options</span><span class="p">)</span><span class="o">.</span>
@@ -840,16 +848,16 @@ pythonhosted.org est identique.</p>
 </pre></div>
 </div>
 <p>On peut aussi donner tous les paramètres d’un coup au constructeur Serial.
-Voir <a class="reference external" href="https://pyserial.readthedocs.io/en/latest/shortintro.html">la doc short intro</a> <a class="footnote-reference brackets" href="#id31" id="id32">16</a></p>
-<p><a class="reference external" href="http://eli.thegreenplace.net/2009/08/20/frames-and-protocols-for-the-serial-port-in-python">Frames and protocols for the serial port - in Python</a> <a class="footnote-reference brackets" href="#id29" id="id30">15</a></p>
+Voir <a class="reference external" href="https://pyserial.readthedocs.io/en/latest/shortintro.html">la doc short intro</a> <a class="footnote-reference brackets" href="#id33" id="id34">17</a></p>
+<p><a class="reference external" href="http://eli.thegreenplace.net/2009/08/20/frames-and-protocols-for-the-serial-port-in-python">Frames and protocols for the serial port - in Python</a> <a class="footnote-reference brackets" href="#id31" id="id32">16</a></p>
 </div>
 <div class="section" id="gestionnaires-graphiques">
 <h2><a class="toc-backref" href="#sommaire">Gestionnaires graphiques</a><a class="headerlink" href="#gestionnaires-graphiques" title="Lien permanent vers ce titre">¶</a></h2>
 </div>
 <div class="section" id="a-revoir">
 <h2><a class="toc-backref" href="#sommaire">A revoir</a><a class="headerlink" href="#a-revoir" title="Lien permanent vers ce titre">¶</a></h2>
-<p><a class="reference external" href="https://doc.scrapy.org/en/1.2/intro/overview.html">Scrapy</a> <a class="footnote-reference brackets" href="#id33" id="id34">17</a>  : permet de « grater » des page web</p>
-<p><a class="reference external" href="https://realpython.com/python-code-quality/">Python Code Quality: Tools &amp; Best Practices</a> <a class="footnote-reference brackets" href="#id35" id="id36">18</a></p>
+<p><a class="reference external" href="https://doc.scrapy.org/en/1.2/intro/overview.html">Scrapy</a> <a class="footnote-reference brackets" href="#id35" id="id36">18</a>  : permet de « grater » des page web</p>
+<p><a class="reference external" href="https://realpython.com/python-code-quality/">Python Code Quality: Tools &amp; Best Practices</a> <a class="footnote-reference brackets" href="#id37" id="id38">19</a></p>
 </div>
 <div class="section" id="appli-minimum-template">
 <h2><a class="toc-backref" href="#sommaire">Appli minimum (template)</a><a class="headerlink" href="#appli-minimum-template" title="Lien permanent vers ce titre">¶</a></h2>
@@ -903,18 +911,21 @@ Tkinter au total 4 templates.</p>
 <dd><p><a class="reference external" href="https://openclassrooms.com/fr/courses/235344-apprenez-a-programmer-en-python/233261-decouvrez-la-boucle-for#/id/r-233202">https://openclassrooms.com/fr/courses/235344-apprenez-a-programmer-en-python/233261-decouvrez-la-boucle-for#/id/r-233202</a></p>
 </dd>
 <dt class="label" id="id27"><span class="brackets"><a class="fn-backref" href="#id28">14</a></span></dt>
-<dd><p><a class="reference external" href="https://pyserial.readthedocs.io/en/latest/pyserial.html">https://pyserial.readthedocs.io/en/latest/pyserial.html</a></p>
+<dd><p><a class="reference external" href="http://python-future.org/compatible_idioms.html">http://python-future.org/compatible_idioms.html</a></p>
 </dd>
 <dt class="label" id="id29"><span class="brackets"><a class="fn-backref" href="#id30">15</a></span></dt>
-<dd><p><a class="reference external" href="http://eli.thegreenplace.net/2009/08/20/frames-and-protocols-for-the-serial-port-in-python">http://eli.thegreenplace.net/2009/08/20/frames-and-protocols-for-the-serial-port-in-python</a></p>
+<dd><p><a class="reference external" href="https://pyserial.readthedocs.io/en/latest/pyserial.html">https://pyserial.readthedocs.io/en/latest/pyserial.html</a></p>
 </dd>
 <dt class="label" id="id31"><span class="brackets"><a class="fn-backref" href="#id32">16</a></span></dt>
-<dd><p><a class="reference external" href="https://pyserial.readthedocs.io/en/latest/shortintro.html">https://pyserial.readthedocs.io/en/latest/shortintro.html</a></p>
+<dd><p><a class="reference external" href="http://eli.thegreenplace.net/2009/08/20/frames-and-protocols-for-the-serial-port-in-python">http://eli.thegreenplace.net/2009/08/20/frames-and-protocols-for-the-serial-port-in-python</a></p>
 </dd>
 <dt class="label" id="id33"><span class="brackets"><a class="fn-backref" href="#id34">17</a></span></dt>
-<dd><p><a class="reference external" href="https://doc.scrapy.org/en/1.2/intro/overview.html">https://doc.scrapy.org/en/1.2/intro/overview.html</a></p>
+<dd><p><a class="reference external" href="https://pyserial.readthedocs.io/en/latest/shortintro.html">https://pyserial.readthedocs.io/en/latest/shortintro.html</a></p>
 </dd>
 <dt class="label" id="id35"><span class="brackets"><a class="fn-backref" href="#id36">18</a></span></dt>
+<dd><p><a class="reference external" href="https://doc.scrapy.org/en/1.2/intro/overview.html">https://doc.scrapy.org/en/1.2/intro/overview.html</a></p>
+</dd>
+<dt class="label" id="id37"><span class="brackets"><a class="fn-backref" href="#id38">19</a></span></dt>
 <dd><p><a class="reference external" href="https://realpython.com/python-code-quality/">https://realpython.com/python-code-quality/</a></p>
 </dd>
 </dl>
@@ -922,7 +933,6 @@ Tkinter au total 4 templates.</p>
 </div>
 
 
-            <div class="clearer"></div>
           </div>
         </div>
       </div>
@@ -950,7 +960,10 @@ Tkinter au total 4 templates.</p>
 <li><a class="reference internal" href="#iterateur-generateur">Itérateur &amp; générateur</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#astuces">Astuces</a></li>
+<li><a class="reference internal" href="#astuces">Astuces</a><ul>
+<li><a class="reference internal" href="#python2-to-3">Python2 to 3</a></li>
+</ul>
+</li>
 <li><a class="reference internal" href="#i2c">I2C</a></li>
 <li><a class="reference internal" href="#pyserial">PySerial</a></li>
 <li><a class="reference internal" href="#gestionnaires-graphiques">Gestionnaires graphiques</a></li>
@@ -962,7 +975,7 @@ Tkinter au total 4 templates.</p>
 </ul>
 
   <h4>Sujet précédent</h4>
-  <p class="topless"><a href="../C%2B%2B/Qt/Qt.html"
+  <p class="topless"><a href="../C++/Qt/Qt.html"
                         title="Chapitre précédent">Notes sur Qt *</a></p>
   <h4>Sujet suivant</h4>
   <p class="topless"><a href="../lesObjetsConnectes/lesObjetsConnectes.html"
@@ -998,15 +1011,14 @@ Tkinter au total 4 templates.</p>
           <a href="../lesObjetsConnectes/lesObjetsConnectes.html" title="Les objets connectés"
              >suivant</a> |</li>
         <li class="right" >
-          <a href="../C%2B%2B/Qt/Qt.html" title="Notes sur Qt *"
+          <a href="../C++/Qt/Qt.html" title="Notes sur Qt *"
              >précédent</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">Documentation MajorLee&#39;s notes </a> &#187;</li>
-        <li class="nav-item nav-item-this"><a href="">Python (mes notes)</a></li> 
+        <li class="nav-item nav-item-0"><a href="../index.html">Documentation MajorLee&#39;s notes </a> &#187;</li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2019, J.SORANZO.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.2.0.
+      Créé avec <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.4.
     </div>
   </body>
 </html>

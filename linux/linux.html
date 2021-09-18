@@ -4,7 +4,6 @@
 <html lang="fr">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>LINUX * &#8212; Documentation MajorLee&#39;s notes </title>
     <link rel="stylesheet" href="../_static/nature.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -31,8 +30,7 @@
         <li class="right" >
           <a href="../Synchronisation/Synchronisation.html" title="La synchronisation / sauvegarde*"
              accesskey="P">précédent</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">Documentation MajorLee&#39;s notes </a> &#187;</li>
-        <li class="nav-item nav-item-this"><a href="">LINUX *</a></li> 
+        <li class="nav-item nav-item-0"><a href="../index.html">Documentation MajorLee&#39;s notes </a> &#187;</li> 
       </ul>
     </div>  
 
@@ -135,7 +133,7 @@ Dans la suite abrégé JdMdP</p>
 <blockquote>
 <div><ul class="simple">
 <li><p>lshw -C disk</p></li>
-<li><p>fdisk -l</p></li>
+<li><p>sudo fdisk -l : list les disk avec info technique et fdisk seul</p></li>
 <li><p>sfdisk -l -uM</p></li>
 <li><p>df : only mounted file systems</p></li>
 <li><p>parted -l list les partitions</p></li>
@@ -172,10 +170,13 @@ Dans la suite abrégé JdMdP</p>
 </ul>
 </div></blockquote>
 </li>
-<li><p>Savoir si un commande est instaléé : dpkg -l | grep le_nom_du_paquet</p></li>
+<li><p>Savoir si un commande est instaléé : <code class="docutils literal notranslate"><span class="pre">dpkg</span> <span class="pre">-l</span> <span class="pre">|</span> <span class="pre">grep</span> <span class="pre">le_nom_du_paquet</span></code> ou <code class="docutils literal notranslate"><span class="pre">command</span> <span class="pre">-v</span> <span class="pre">command</span></code></p></li>
+<li><p>ou encore <code class="docutils literal notranslate"><span class="pre">which</span> <span class="pre">cmd</span></code></p></li>
 </ul>
 <ul class="simple" id="index-7">
 <li><p>les appli installées <strong class="command">dpkg -l</strong></p></li>
+<li><p>Qui écoute quel port : <code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">lsof</span> <span class="pre">-i</span> <span class="pre">-P</span> <span class="pre">-n</span> <span class="pre">|</span> <span class="pre">grep</span> <span class="pre">LISTEN</span></code></p></li>
+<li><p>voir les dernière info hardware <code class="docutils literal notranslate"><span class="pre">dmesg</span></code></p></li>
 </ul>
 </div>
 <div class="section" id="pour-les-utilisateurs">
@@ -184,6 +185,11 @@ Dans la suite abrégé JdMdP</p>
 <li><p>list des group d’un utilisateur : groups nom</p></li>
 <li><p>changer d’utilisateur : su nom</p></li>
 <li><p>se mettre root pour éviter de taper sudo sudo -s</p></li>
+<li><p>Liste des utilisateurs dans un systeme: <code class="docutils literal notranslate"><span class="pre">cut</span> <span class="pre">-d:</span> <span class="pre">-f1</span> <span class="pre">/etc/passwd</span></code></p></li>
+<li><p>lister tous les groups : <code class="docutils literal notranslate"><span class="pre">less</span> <span class="pre">/etc/groups</span></code></p></li>
+<li><p>lister tous les utilisateurs d’un groupe</p></li>
+<li><p>lister tous les groupes d’un utilisateur : <code class="docutils literal notranslate"><span class="pre">groups</span> <span class="pre">username</span></code></p></li>
+<li><p>ajouter un utilisateur a un group : <code class="docutils literal notranslate"><span class="pre">usermod</span> <span class="pre">-a</span> <span class="pre">-G</span> <span class="pre">examplegroup</span> <span class="pre">exampleusername</span></code></p></li>
 </ul>
 <hr class="docutils" />
 </div>
@@ -337,7 +343,6 @@ Il existe plusieurs manières de définir une macro :
 </div>
 
 
-            <div class="clearer"></div>
           </div>
         </div>
       </div>
@@ -405,13 +410,12 @@ Il existe plusieurs manières de définir une macro :
         <li class="right" >
           <a href="../Synchronisation/Synchronisation.html" title="La synchronisation / sauvegarde*"
              >précédent</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">Documentation MajorLee&#39;s notes </a> &#187;</li>
-        <li class="nav-item nav-item-this"><a href="">LINUX *</a></li> 
+        <li class="nav-item nav-item-0"><a href="../index.html">Documentation MajorLee&#39;s notes </a> &#187;</li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2019, J.SORANZO.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.2.0.
+      Créé avec <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.4.
     </div>
   </body>
 </html>

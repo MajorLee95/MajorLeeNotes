@@ -81,7 +81,7 @@ System
 - Lister les disque:
 
  - lshw -C disk
- - fdisk -l
+ - sudo fdisk -l : list les disk avec info technique et fdisk seul
  - sfdisk -l -uM
  - df : only mounted file systems
  - parted -l list les partitions
@@ -124,12 +124,19 @@ System
    - sudo reboot
    - sudo shutdown -r  
 
-- Savoir si un commande est instaléé : dpkg -l | grep le_nom_du_paquet		
+- Savoir si un commande est instaléé : ``dpkg -l | grep le_nom_du_paquet`` ou ``command -v command``
+- ou encore ``which cmd``
  
 .. index ::
    single: Linux; Commandes utilisateur
    
 - les appli installées :command:`dpkg -l`
+
+- Qui écoute quel port : ``sudo lsof -i -P -n | grep LISTEN``
+
+- voir les dernière info hardware ``dmesg`` 
+
+
  
 Pour les utilisateurs
 ======================================
@@ -137,6 +144,11 @@ Pour les utilisateurs
 - list des group d'un utilisateur : groups nom
 - changer d'utilisateur : su nom
 - se mettre root pour éviter de taper sudo sudo -s
+- Liste des utilisateurs dans un systeme: ``cut -d: -f1 /etc/passwd``
+- lister tous les groups : ``less /etc/groups``
+- lister tous les utilisateurs d'un groupe
+- lister tous les groupes d'un utilisateur : ``groups username``
+- ajouter un utilisateur a un group : ``usermod -a -G examplegroup exampleusername``
 
 ----------------------------------------------------------------------------------------------------
 

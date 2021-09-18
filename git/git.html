@@ -4,7 +4,6 @@
 <html lang="fr">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Notes sur git &#8212; Documentation MajorLee&#39;s notes </title>
     <link rel="stylesheet" href="../_static/nature.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -31,8 +30,7 @@
         <li class="right" >
           <a href="../lesObjetsConnectes/plateformServiceServeur/plateformServiceServeur.html" title="Plateformes, services Web et serveurs"
              accesskey="P">précédent</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">Documentation MajorLee&#39;s notes </a> &#187;</li>
-        <li class="nav-item nav-item-this"><a href="">Notes sur git</a></li> 
+        <li class="nav-item nav-item-0"><a href="../index.html">Documentation MajorLee&#39;s notes </a> &#187;</li> 
       </ul>
     </div>  
 
@@ -51,74 +49,154 @@
 <dt class="field-even">Date de création</dt>
 <dd class="field-even"><p>Novembre 2019</p>
 </dd>
-<dt class="field-odd">Societe</dt>
-<dd class="field-odd"><p>VoRoBoTics</p>
+<dt class="field-odd">mise à jour</dt>
+<dd class="field-odd"><p>18/09/2021</p>
 </dd>
-<dt class="field-even">Entity</dt>
-<dd class="field-even"><p>VoLAB</p>
+<dt class="field-even">Societe</dt>
+<dd class="field-even"><p>VoRoBoTics</p>
+</dd>
+<dt class="field-odd">Entity</dt>
+<dd class="field-odd"><p>VoLAB</p>
 </dd>
 </dl>
 <p><div class="clearer"></div></p>
 <div class="contents topic" id="sommaire">
 <p class="topic-title">Sommaire</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="#notes-sur-git" id="id17">Notes sur git</a></p>
+<li><p><a class="reference internal" href="#notes-sur-git" id="id21">Notes sur git</a></p>
 <ul>
-<li><p><a class="reference internal" href="#intrroduction" id="id18">Intrroduction</a></p></li>
-<li><p><a class="reference internal" href="#commits-atomiques" id="id19">Commits atomiques</a></p></li>
-<li><p><a class="reference internal" href="#git-rebase" id="id20">git rebase</a></p></li>
-<li><p><a class="reference internal" href="#git-bisec" id="id21">git bisec</a></p></li>
-<li><p><a class="reference internal" href="#gerer-les-depots-imense" id="id22">Gérer les dépôts imense…</a></p>
+<li><p><a class="reference internal" href="#introduction" id="id22">Introduction</a></p></li>
+<li><p><a class="reference internal" href="#commandes-de-base-ou-kit-de-survie-minimum" id="id23">Commandes de base (ou kit de survie minimum)</a></p></li>
+<li><p><a class="reference internal" href="#tutos-en-francais" id="id24">Tutos en français</a></p></li>
+<li><p><a class="reference internal" href="#workflow" id="id25">Workflow</a></p>
 <ul>
-<li><p><a class="reference internal" href="#creer-un-depot-serveur" id="id23">Créer un depôt serveur</a></p></li>
+<li><p><a class="reference internal" href="#developpeur-en-equipe" id="id26">Développeur (en équipe)</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#petits-trucs-utiles" id="id24">petits trucs utiles</a></p>
+<li><p><a class="reference internal" href="#commits-atomiques" id="id27">Commits atomiques</a></p></li>
+<li><p><a class="reference internal" href="#git-rebase" id="id28">git rebase</a></p></li>
+<li><p><a class="reference internal" href="#git-bisec" id="id29">git bisec</a></p></li>
+<li><p><a class="reference internal" href="#gerer-les-depots-imense" id="id30">Gérer les dépôts imense…</a></p>
 <ul>
-<li><p><a class="reference internal" href="#logiciels" id="id25">Logiciels</a></p></li>
-<li><p><a class="reference internal" href="#suppression-d-un-fichier" id="id26">Suppression d’un fichier</a></p></li>
-<li><p><a class="reference internal" href="#lister-les-fichiers-indexe" id="id27">lister les fichiers indexé</a></p></li>
-<li><p><a class="reference internal" href="#mais-vers-ou-pointe-origine" id="id28">Mais vers ou pointe origine</a></p></li>
-<li><p><a class="reference internal" href="#merger-un-seul-fichier" id="id29">merger un seul fichier</a></p></li>
-<li><p><a class="reference internal" href="#ecraser-les-derniere-modif-qui-n-ont-pas-ete-commitees" id="id30">Ecraser les dernière modif qui n’ont pas été commitées</a></p></li>
-<li><p><a class="reference internal" href="#retirer-un-repertoire-de-l-index" id="id31">Retirer un répertoire de l’index</a></p></li>
-<li><p><a class="reference internal" href="#lister-les-fichier-dossier-ignores" id="id32">lister les fichier dossier ignorés ?</a></p></li>
-<li><p><a class="reference internal" href="#ratacher-la-tete" id="id33">Ratacher la tête</a></p></li>
-<li><p><a class="reference internal" href="#annuler-le-dernier-commit" id="id34">Annuler le dernier commit</a></p></li>
-<li><p><a class="reference internal" href="#lister-les-commit-d-une-branche-distante" id="id35">Lister les commit d’une branche distante</a></p></li>
-<li><p><a class="reference internal" href="#depot-git-sur-cle-usb" id="id36">Dépôt git sur clé usb</a></p></li>
-<li><p><a class="reference internal" href="#trace-l-arborescence-sous-forme-textuelle" id="id37">Trace l’arborescence sous forme textuelle</a></p></li>
-<li><p><a class="reference internal" href="#cle-ssh" id="id38">clé SSH</a></p></li>
-<li><p><a class="reference internal" href="#cherry-pick-ecremer" id="id39">cherry-pick : écrémer</a></p></li>
-<li><p><a class="reference internal" href="#lister-les-differences-entre-branches-locale-et-branche-distante" id="id40">Lister les différences entre branches locale et branche distante</a></p></li>
-<li><p><a class="reference internal" href="#git-push" id="id41">git push</a></p></li>
-<li><p><a class="reference internal" href="#supprimer-une-branche-distante" id="id42">supprimer une branche distante</a></p></li>
-<li><p><a class="reference internal" href="#merge-branche-distante" id="id43">Merge branche distante</a></p></li>
-<li><p><a class="reference internal" href="#traquer-une-nouvelle-branche-distante" id="id44">Traquer une nouvelle branche distante</a></p></li>
-<li><p><a class="reference internal" href="#creer-un-depot-distant-sur-le-serveur-du-volab" id="id45">créer un dépot distant sur le serveur du VoLAB</a></p></li>
-<li><p><a class="reference internal" href="#errors-git-cannot-lock-ref-d-une-branche-distante-lors-d-un-pull" id="id46">Errors : git cannot lock ref d’une branche distante lors d’un pull</a></p></li>
-<li><p><a class="reference internal" href="#lister-les-fichiers-d-une-branche" id="id47">lister les fichiers d’une branche</a></p></li>
-<li><p><a class="reference internal" href="#nettoyage-des-liens-pourri" id="id48">nettoyage des liens pourri</a></p></li>
-<li><p><a class="reference internal" href="#merge-d-un-repertoire-d-une-autre-branche" id="id49">merge d’un répertoire d’une autre branche</a></p></li>
-<li><p><a class="reference internal" href="#deplacer-le-dernier-commit-d-une-branche-vers-une-autre-branche" id="id50">Déplacer le dernier commit d’une branche vers une autre branche</a></p></li>
+<li><p><a class="reference internal" href="#creer-un-depot-serveur" id="id31">Créer un depôt serveur</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#weblinks" id="id51">Weblinks</a></p></li>
+<li><p><a class="reference internal" href="#petits-trucs-utiles" id="id32">petits trucs utiles</a></p>
+<ul>
+<li><p><a class="reference internal" href="#logiciels" id="id33">Logiciels</a></p></li>
+<li><p><a class="reference internal" href="#suppression-d-un-fichier" id="id34">Suppression d’un fichier</a></p></li>
+<li><p><a class="reference internal" href="#lister-les-fichiers-indexe" id="id35">lister les fichiers indexé</a></p></li>
+<li><p><a class="reference internal" href="#mais-vers-ou-pointe-origine" id="id36">Mais vers ou pointe origine</a></p></li>
+<li><p><a class="reference internal" href="#merger-un-seul-fichier" id="id37">merger un seul fichier</a></p></li>
+<li><p><a class="reference internal" href="#ecraser-les-derniere-modif-qui-n-ont-pas-ete-commitees" id="id38">Ecraser les dernière modif qui n’ont pas été commitées</a></p></li>
+<li><p><a class="reference internal" href="#retirer-un-repertoire-de-l-index" id="id39">Retirer un répertoire de l’index</a></p></li>
+<li><p><a class="reference internal" href="#lister-les-fichier-dossier-ignores" id="id40">lister les fichier dossier ignorés ?</a></p></li>
+<li><p><a class="reference internal" href="#ratacher-la-tete" id="id41">Ratacher la tête</a></p></li>
+<li><p><a class="reference internal" href="#annuler-le-dernier-commit" id="id42">Annuler le dernier commit</a></p></li>
+<li><p><a class="reference internal" href="#lister-les-commit-d-une-branche-distante" id="id43">Lister les commit d’une branche distante</a></p></li>
+<li><p><a class="reference internal" href="#depot-git-sur-cle-usb" id="id44">Dépôt git sur clé usb</a></p></li>
+<li><p><a class="reference internal" href="#trace-l-arborescence-sous-forme-textuelle" id="id45">Trace l’arborescence sous forme textuelle</a></p></li>
+<li><p><a class="reference internal" href="#cle-ssh" id="id46">clé SSH</a></p></li>
+<li><p><a class="reference internal" href="#cherry-pick-ecremer" id="id47">cherry-pick : écrémer</a></p></li>
+<li><p><a class="reference internal" href="#lister-les-differences-entre-branches-locale-et-branche-distante" id="id48">Lister les différences entre branches locale et branche distante</a></p></li>
+<li><p><a class="reference internal" href="#git-push" id="id49">git push</a></p></li>
+<li><p><a class="reference internal" href="#supprimer-une-branche-distante" id="id50">supprimer une branche distante</a></p></li>
+<li><p><a class="reference internal" href="#merge-branche-distante" id="id51">Merge branche distante</a></p></li>
+<li><p><a class="reference internal" href="#traquer-une-nouvelle-branche-distante" id="id52">Traquer une nouvelle branche distante</a></p></li>
+<li><p><a class="reference internal" href="#creer-un-depot-distant-sur-le-serveur-du-volab" id="id53">créer un dépot distant sur le serveur du VoLAB</a></p></li>
+<li><p><a class="reference internal" href="#errors-git-cannot-lock-ref-d-une-branche-distante-lors-d-un-pull" id="id54">Errors : git cannot lock ref d’une branche distante lors d’un pull</a></p></li>
+<li><p><a class="reference internal" href="#lister-les-fichiers-d-une-branche" id="id55">lister les fichiers d’une branche</a></p></li>
+<li><p><a class="reference internal" href="#nettoyage-des-liens-pourri" id="id56">nettoyage des liens pourri</a></p></li>
+<li><p><a class="reference internal" href="#merge-d-un-repertoire-d-une-autre-branche" id="id57">merge d’un répertoire d’une autre branche</a></p></li>
+<li><p><a class="reference internal" href="#deplacer-le-dernier-commit-d-une-branche-vers-une-autre-branche" id="id58">Déplacer le dernier commit d’une branche vers une autre branche</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#exemple-de-la-commande-git-help-everyday" id="id59">Exemple de la commande git help everyday</a></p></li>
+<li><p><a class="reference internal" href="#weblinks" id="id60">Weblinks</a></p></li>
 </ul>
 </li>
 </ul>
 </div>
-<div class="section" id="intrroduction">
-<h2><a class="toc-backref" href="#sommaire">Intrroduction</a><a class="headerlink" href="#intrroduction" title="Lien permanent vers ce titre">¶</a></h2>
-<p>penser au fichier xmind : ProcessusDocumntaire.xmind pas réussit à exporter vers Freeplane</p>
+<div class="section" id="introduction">
+<h2><a class="toc-backref" href="#sommaire">Introduction</a><a class="headerlink" href="#introduction" title="Lien permanent vers ce titre">¶</a></h2>
+<p>penser au fichier xmind : ProcessusDocumntaire.mm  Freeplane</p>
+<p>A mon avis, git prend tout son sens quand on l’utilise avec un dépôt distant. J’ai longtemps utilisé
+git en faisant uniquement des dépôts git locaux. Jusqu’au jour où mon disuqe dur a crashé et que je
+n’avais pas de sauvegarde… Tous ces précieux commit qui se sont envolés…</p>
+<p>Ce dépôt distant peut être:</p>
+<ul class="simple">
+<li><p>un dépôt sur github.com ou sur gitlab.com</p></li>
+</ul>
+<div class="admonition hint">
+<p class="admonition-title">Indication</p>
+<p><a class="reference external" href="https://www.ionos.fr/digitalguide/sites-internet/developpement-web/gitlab-vs-github/">Coparaison Github Gitlab</a> <a class="footnote-reference brackets" href="#id1" id="id2">1</a></p>
 </div>
-<div class="section" id="commits-atomiques">
-<h2><a class="toc-backref" href="#sommaire">Commits atomiques</a><a class="headerlink" href="#commits-atomiques" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Article très intéressant <a class="reference external" href="http://adopteungit.fr/methodologie/2017/04/26/commits-atomiques-la-bonne-approche.html">Commits atomiques - la bonne approche</a> <a class="footnote-reference brackets" href="#id1" id="id2">1</a> sur adopteungit.fr</p>
-<p>code:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">add</span> <span class="o">-</span><span class="n">P</span> <span class="o">...</span>
+</div>
+<div class="section" id="commandes-de-base-ou-kit-de-survie-minimum">
+<h2><a class="toc-backref" href="#sommaire">Commandes de base (ou kit de survie minimum)</a><a class="headerlink" href="#commandes-de-base-ou-kit-de-survie-minimum" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">help</span> <span class="p">(</span><span class="o">-</span><span class="n">a</span><span class="p">:</span> <span class="n">liste</span> <span class="n">toute</span> <span class="n">les</span> <span class="n">commande</span><span class="p">,</span> <span class="o">-</span><span class="n">g</span> <span class="p">:</span> <span class="n">liste</span> <span class="n">des</span> <span class="n">concepte</span><span class="p">)</span>
+    <span class="n">exemple</span> <span class="p">:</span> <span class="n">git</span> <span class="n">help</span> <span class="n">everyday</span> <span class="p">(</span><span class="n">donne</span> <span class="n">de</span> <span class="n">l</span><span class="s1">&#39;aide sur l&#39;</span><span class="n">utilisation</span> <span class="n">de</span> <span class="n">git</span> <span class="n">tous</span> <span class="n">les</span> <span class="n">jours</span> <span class="p">)</span>
+<span class="n">git</span> <span class="n">clone</span><span class="o">/</span><span class="n">init</span>
+<span class="n">git</span> <span class="n">status</span>
+<span class="n">git</span> <span class="n">log</span>
+<span class="n">git</span> <span class="n">log</span> <span class="o">-</span><span class="n">p</span> <span class="o">-</span><span class="mi">1</span> <span class="p">(</span><span class="n">détails</span> <span class="n">et</span> <span class="n">limité</span> <span class="n">au</span> <span class="n">dernier</span> <span class="o">-</span><span class="mi">2</span> <span class="n">les</span> <span class="mi">2</span> <span class="n">derniers</span><span class="o">...</span><span class="p">)</span>
+<span class="n">git</span> <span class="n">log</span> <span class="o">--</span><span class="n">name</span><span class="o">-</span><span class="n">only</span> <span class="o">--</span><span class="n">abbrev</span><span class="o">-</span><span class="n">commit</span> <span class="o">-</span><span class="mi">1</span>
+
+<span class="n">git</span> <span class="n">branch</span> <span class="n">ou</span> <span class="n">git</span> <span class="n">branch</span> <span class="o">-</span><span class="n">a</span> <span class="p">(</span><span class="o">--</span><span class="nb">all</span><span class="p">)</span> <span class="n">y</span> <span class="n">compris</span> <span class="n">les</span> <span class="n">branche</span> <span class="n">non</span> <span class="n">trackées</span>
+<span class="n">git</span> <span class="n">add</span> <span class="o">.</span>
+<span class="n">git</span> <span class="n">commit</span> <span class="o">--</span><span class="n">message</span> <span class="s1">&#39;commit explication&#39;</span> <span class="o">--</span><span class="nb">all</span>
+<span class="n">git</span> <span class="n">show</span>
+<span class="n">git</span> <span class="n">merge</span>
 </pre></div>
 </div>
+</div>
+<div class="section" id="tutos-en-francais">
+<h2><a class="toc-backref" href="#sommaire">Tutos en français</a><a class="headerlink" href="#tutos-en-francais" title="Lien permanent vers ce titre">¶</a></h2>
+<p><a class="reference external" href="https://www.miximum.fr/blog/decouvrir-git/">Découvrir Git : introduction et premiers pas</a> <a class="footnote-reference brackets" href="#id3" id="id4">2</a></p>
+</div>
+<div class="section" id="workflow">
+<h2><a class="toc-backref" href="#sommaire">Workflow</a><a class="headerlink" href="#workflow" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="section" id="developpeur-en-equipe">
+<h3><a class="toc-backref" href="#sommaire">Développeur (en équipe)</a><a class="headerlink" href="#developpeur-en-equipe" title="Lien permanent vers ce titre">¶</a></h3>
+<p>En équipe peut aussi signifier, développer seul mais sur plusieurs machines différentes.
+Une des grosse difficultés que je rencontre c’est de répondre à la question ?</p>
+<p>Où on en est ? Ensuite ça roule…</p>
+<p>Partons du postulat dans lequel on a un répertoire local de travail avec un sous répertoire .git</p>
+<p>Ce petit indice nous dit qu’il s’agit d’un dépôt git local.</p>
+<ul class="simple">
+<li><p>Question comment savoir dans quel état il se trouve ?</p></li>
+<li><p>Est-il connecté à un dépôt distant ?</p></li>
+<li><p>Combien comporte-t-il de branche ? locales et éventuellement distante</p></li>
+<li><p>Quelles sont les branches suivies ?</p></li>
+<li><p>Quel est l’éventuel état de la synchronisation ?</p></li>
+</ul>
+<p>commandes:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">status</span>
+<span class="n">git</span> <span class="n">branch</span> <span class="o">-</span><span class="n">a</span>
+<span class="n">git</span> <span class="n">log</span> <span class="o">--</span><span class="n">pretty</span><span class="o">=</span><span class="n">oneline</span> <span class="o">--</span><span class="n">abbrev</span><span class="o">-</span><span class="n">commit</span> <span class="o">--</span><span class="n">graph</span> <span class="o">--</span><span class="n">decorate</span> <span class="o">--</span><span class="nb">all</span> <span class="p">[</span><span class="o">&gt;</span><span class="n">graph</span><span class="o">.</span><span class="n">txt</span><span class="p">]</span>
+<span class="n">git</span> <span class="n">tag</span> <span class="o">-</span><span class="n">l</span>
+<span class="n">git</span> <span class="n">config</span> <span class="o">--</span><span class="n">local</span> <span class="o">-</span><span class="n">l</span>
+</pre></div>
+</div>
+<p><strong>Astuce</strong>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">-</span> <span class="n">git</span> <span class="n">config</span> <span class="o">--</span><span class="k">global</span> <span class="n">alias</span><span class="o">.</span><span class="n">adog</span> <span class="s2">&quot;log --all --decorate --oneline --graph&quot;</span>
+<span class="o">-</span> <span class="n">puis</span> <span class="n">git</span> <span class="n">adog</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="commits-atomiques">
+<span id="index-1"></span><h2><a class="toc-backref" href="#sommaire">Commits atomiques</a><a class="headerlink" href="#commits-atomiques" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Article très intéressant <a class="reference external" href="http://adopteungit.fr/methodologie/2017/04/26/commits-atomiques-la-bonne-approche.html">Commits atomiques - la bonne approche</a> <a class="footnote-reference brackets" href="#id5" id="id6">3</a> sur adopteungit.fr</p>
+<p>code:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>    <span class="n">git</span> <span class="n">add</span> <span class="o">--</span><span class="n">patch</span> <span class="o">...</span>
+<span class="n">résister</span> <span class="n">à</span> <span class="n">git</span> <span class="n">add</span> <span class="o">--</span><span class="nb">all</span>
+</pre></div>
+</div>
+<p>On y apprend d’abord comment faire de tout petits commit et surtout comment committer dans un fichier
+seulement ce qu’on veut pour que le commentaire du commit corresponde bien au commit.</p>
+<p>Les petites modifs de droite et de gauche…</p>
+<p>Mais on y apprend également comment réorganiser ces tout petits commits.</p>
 </div>
 <div class="section" id="git-rebase">
 <h2><a class="toc-backref" href="#sommaire">git rebase</a><a class="headerlink" href="#git-rebase" title="Lien permanent vers ce titre">¶</a></h2>
@@ -131,10 +209,16 @@
 </ul>
 <p><em>La commande git-rebase est comme une tronçonneuse : elle permet de couper une branche pour
 la regreffer à un autre endroit sur l’arbre.</em></p>
+<p>Pourquoi rebase ? Parce qu’on part du principe qu’on a basé notre branche de travail sur un commit
+d’une autre branche et qu’entre temps cette branche a évolué et que avant de pousser un nouveau commit
+sur notre branche distance, on change la base de notre branche pour l’emmener à la tête de la branche
+qui nous a servit de point de départ. Il y a alors un pull sous jascent qui se fait (avec éventuellement
+résolution de conflit). Le merge alors de notre branche sur la branche de base s’en trouve alors facilité.
+Les conflits ont alors déjà été résolus.</p>
 </div>
 <div class="section" id="git-bisec">
 <h2><a class="toc-backref" href="#sommaire">git bisec</a><a class="headerlink" href="#git-bisec" title="Lien permanent vers ce titre">¶</a></h2>
-<p><a class="reference external" href="http://adopteungit.fr/commande/bisect/2016/09/04/la-chasse-aux-bugs-avec-git-bisect.html">La chasse aux bugs avec git bisect</a> <a class="footnote-reference brackets" href="#id3" id="id4">2</a></p>
+<p><a class="reference external" href="http://adopteungit.fr/commande/bisect/2016/09/04/la-chasse-aux-bugs-avec-git-bisect.html">La chasse aux bugs avec git bisect</a> <a class="footnote-reference brackets" href="#id7" id="id8">4</a></p>
 </div>
 <div class="section" id="gerer-les-depots-imense">
 <h2><a class="toc-backref" href="#sommaire">Gérer les dépôts imense…</a><a class="headerlink" href="#gerer-les-depots-imense" title="Lien permanent vers ce titre">¶</a></h2>
@@ -142,9 +226,9 @@ la regreffer à un autre endroit sur l’arbre.</em></p>
 <p class="admonition-title">Important</p>
 <p>how to manage a project with source code, electronique schematic and source documentation ?</p>
 </div>
-<p>Un article : <a class="reference external" href="https://www.atlassian.com/git/tutorials/big-repositories">How to handle big repositories with Git</a> <a class="footnote-reference brackets" href="#id5" id="id6">3</a></p>
+<p>Un article : <a class="reference external" href="https://www.atlassian.com/git/tutorials/big-repositories">How to handle big repositories with Git</a> <a class="footnote-reference brackets" href="#id9" id="id10">5</a></p>
 <p>Un autre article un peu moins intéressant au niveau solution (moins riche) :
-<a class="reference external" href="https://stackoverflow.com/questions/32068654/best-practices-for-using-git-in-large-project">Best practices for using git in large project</a> <a class="footnote-reference brackets" href="#id7" id="id8">4</a></p>
+<a class="reference external" href="https://stackoverflow.com/questions/32068654/best-practices-for-using-git-in-large-project">Best practices for using git in large project</a> <a class="footnote-reference brackets" href="#id11" id="id12">6</a></p>
 <div class="section" id="creer-un-depot-serveur">
 <h3><a class="toc-backref" href="#sommaire">Créer un depôt serveur</a><a class="headerlink" href="#creer-un-depot-serveur" title="Lien permanent vers ce titre">¶</a></h3>
 <p>git init –bare –share tout simplement</p>
@@ -156,9 +240,9 @@ différent de celui de la source.</p>
 <h2><a class="toc-backref" href="#sommaire">petits trucs utiles</a><a class="headerlink" href="#petits-trucs-utiles" title="Lien permanent vers ce titre">¶</a></h2>
 <div class="section" id="logiciels">
 <h3><a class="toc-backref" href="#sommaire">Logiciels</a><a class="headerlink" href="#logiciels" title="Lien permanent vers ce titre">¶</a></h3>
-<p><a class="reference external" href="https://www.gitkraken.com/">gitKraken</a> <a class="footnote-reference brackets" href="#id9" id="id10">5</a></p>
+<p><a class="reference external" href="https://www.gitkraken.com/">gitKraken</a> <a class="footnote-reference brackets" href="#id13" id="id14">7</a></p>
 <p>Nécessite de créer un compte sur leur site ? Pourquoi au juste ?</p>
-<p><a class="reference external" href="https://tortoisegit.org/">tortoisegit</a> <a class="footnote-reference brackets" href="#id11" id="id12">6</a></p>
+<p><a class="reference external" href="https://tortoisegit.org/">tortoisegit</a> <a class="footnote-reference brackets" href="#id15" id="id16">8</a></p>
 <blockquote>
 <div><ul class="simple">
 <li><p>dl dans outils/conception</p></li>
@@ -169,6 +253,12 @@ différent de celui de la source.</p>
 </li>
 </ul>
 </div></blockquote>
+<p>Configurer Tortoise git avec des clé ssh:</p>
+<ul class="simple">
+<li><p>mettre ses clés dans ~/.ssh</p></li>
+<li><p>dans les setting du dépot remplacer htt:// par git&#64; avec : au lieu du premier /</p></li>
+<li><p>configurer également network/ssh client : <code class="docutils literal notranslate"><span class="pre">C:\Windows\System32\OpenSSH\ssh.exe</span></code></p></li>
+</ul>
 </div>
 <div class="section" id="suppression-d-un-fichier">
 <h3><a class="toc-backref" href="#sommaire">Suppression d’un fichier</a><a class="headerlink" href="#suppression-d-un-fichier" title="Lien permanent vers ce titre">¶</a></h3>
@@ -287,18 +377,19 @@ Cette commmande permet de revenir à l’état du dernier commit (ne pas confond
 <h3><a class="toc-backref" href="#sommaire">Lister les commit d’une branche distante</a><a class="headerlink" href="#lister-les-commit-d-une-branche-distante" title="Lien permanent vers ce titre">¶</a></h3>
 <ul class="simple">
 <li><p>Utile quand on est out of date</p></li>
-<li><p>git remote show</p></li>
+<li><p>git remote show origin</p></li>
 <li><p>git ls-remote</p></li>
 </ul>
 </div>
 <div class="section" id="depot-git-sur-cle-usb">
 <h3><a class="toc-backref" href="#sommaire">Dépôt git sur clé usb</a><a class="headerlink" href="#depot-git-sur-cle-usb" title="Lien permanent vers ce titre">¶</a></h3>
-<p>Créer <a class="reference external" href="https://en.wikibooks.org/wiki/Git/Repository_on_a_USB_stick">un dépôt git sur une clé usb, sur wikibook</a> <a class="footnote-reference brackets" href="#id13" id="id14">7</a></p>
+<p>Créer <a class="reference external" href="https://en.wikibooks.org/wiki/Git/Repository_on_a_USB_stick">un dépôt git sur une clé usb, sur wikibook</a> <a class="footnote-reference brackets" href="#id17" id="id18">9</a></p>
 </div>
 <div class="section" id="trace-l-arborescence-sous-forme-textuelle">
 <h3><a class="toc-backref" href="#sommaire">Trace l’arborescence sous forme textuelle</a><a class="headerlink" href="#trace-l-arborescence-sous-forme-textuelle" title="Lien permanent vers ce titre">¶</a></h3>
 <p>une ch’tite commande sympa:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">log</span> <span class="o">--</span><span class="n">pretty</span><span class="o">=</span><span class="n">oneline</span> <span class="o">--</span><span class="n">abbrev</span><span class="o">-</span><span class="n">commit</span> <span class="o">--</span><span class="n">graph</span> <span class="o">--</span><span class="n">decorate</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>    <span class="n">git</span> <span class="n">log</span> <span class="o">--</span><span class="n">pretty</span><span class="o">=</span><span class="n">oneline</span> <span class="o">--</span><span class="n">abbrev</span><span class="o">-</span><span class="n">commit</span> <span class="o">--</span><span class="n">graph</span> <span class="o">--</span><span class="n">decorate</span>
+<span class="n">voir</span> <span class="n">aussi</span> <span class="n">git</span> <span class="n">adog</span> <span class="n">en</span> <span class="n">début</span> <span class="n">de</span> <span class="n">chapitre</span>
 </pre></div>
 </div>
 </div>
@@ -309,8 +400,14 @@ Cette commmande permet de revenir à l’état du dernier commit (ne pas confond
 <li><p>Au tout au moins réside dans un répertoire locale de la machine</p></li>
 <li><p>Comment les entrées dans un nouvel environnement ?</p></li>
 </ul>
-<p><a class="reference external" href="https://fr.w3docs.com/snippets/git/comment-generer-une-cle-ssh-pour-git.html">Article intéressant sur W3C clé ssh</a> <a class="footnote-reference brackets" href="#id15" id="id16">8</a></p>
+<p><a class="reference external" href="https://fr.w3docs.com/snippets/git/comment-generer-une-cle-ssh-pour-git.html">Article intéressant sur W3C clé ssh</a> <a class="footnote-reference brackets" href="#id19" id="id20">10</a></p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ls</span> <span class="o">-</span><span class="n">al</span> <span class="o">~/.</span><span class="n">ssh</span>
+</pre></div>
+</div>
+<p>Généralement OpenSSH installé par défaut sous Ubuntu.</p>
+<p>Sous Windows:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>ssh-add : error
+ssh-agent error 1058 : service est mis sur disable dans windwos, le passer sur manuel !
 </pre></div>
 </div>
 </div>
@@ -357,8 +454,11 @@ Cette commmande permet de revenir à l’état du dernier commit (ne pas confond
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>    <span class="n">le</span> <span class="mi">31</span><span class="o">/</span><span class="mi">03</span>
     <span class="n">avec</span> <span class="n">tutoise</span>
     <span class="n">on</span> <span class="n">commence</span> <span class="n">par</span> <span class="n">un</span> <span class="n">git</span> <span class="n">fetch</span> <span class="n">origin</span> <span class="n">pour</span> <span class="n">mettre</span> <span class="n">à</span> <span class="n">jour</span> <span class="n">la</span> <span class="n">base</span> <span class="n">locale</span>
-    <span class="n">puis</span> <span class="n">un</span> <span class="n">checkout</span> <span class="n">de</span> <span class="n">la</span> <span class="n">branche</span> <span class="n">distante</span> <span class="o">=&gt;</span> <span class="n">créé</span> <span class="n">une</span> <span class="n">branche</span> <span class="n">locale</span><span class="o">.</span>
-<span class="n">git</span> <span class="n">branch</span> <span class="o">--</span> <span class="n">track</span> <span class="o">&lt;</span><span class="n">branch</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">branche_distante</span><span class="o">&gt;</span>
+    <span class="n">puis</span> <span class="n">un</span> <span class="n">checkout</span> <span class="n">de</span> <span class="n">la</span> <span class="n">branche</span> <span class="n">distante</span> <span class="o">=&gt;</span> <span class="n">créé</span> <span class="n">une</span> <span class="n">branche</span> <span class="n">locale</span><span class="o">.</span> <span class="n">et</span> <span class="n">c</span><span class="s1">&#39;est suffisant !</span>
+
+<span class="n">git</span> <span class="n">branch</span> <span class="o">--</span> <span class="n">track</span> <span class="o">&lt;</span><span class="n">branch</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">branche_distante</span><span class="o">&gt;</span> <span class="p">(</span><span class="mi">7</span><span class="o">/</span><span class="mi">6</span><span class="o">/</span><span class="mi">21</span><span class="p">:</span> <span class="n">j</span><span class="s1">&#39;ignore ?)</span>
+<span class="n">ou</span> <span class="n">plus</span> <span class="n">simplement</span> <span class="n">git</span> <span class="n">checkout</span> <span class="o">--</span><span class="n">track</span> <span class="n">origin</span><span class="o">/</span><span class="n">branche_distante</span> <span class="p">(</span><span class="n">si</span> <span class="n">elle</span> <span class="n">n</span><span class="s1">&#39;est pas traquée une nouvelle</span>
+<span class="n">branche</span> <span class="n">locale</span> <span class="n">est</span> <span class="n">crée</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -404,31 +504,196 @@ Cette commmande permet de revenir à l’état du dernier commit (ne pas confond
 </div>
 </div>
 </div>
+<div class="section" id="exemple-de-la-commande-git-help-everyday">
+<h2><a class="toc-backref" href="#sommaire">Exemple de la commande git help everyday</a><a class="headerlink" href="#exemple-de-la-commande-git-help-everyday" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>GITEVERYDAY(7)                                                                Git Manual                                                               GITEVERYDAY(7)
+
+NAME
+    giteveryday - A useful minimum set of commands for Everyday Git
+
+SYNOPSIS
+    Everyday Git With 20 Commands Or So
+
+DESCRIPTION
+    Git users can broadly be grouped into four categories for the purposes of describing here a small set of useful command for everyday Git.
+    ·   Individual Developer (Standalone) commands are essential for anybody who makes a commit, even for somebody who works alone.
+    ·   If you work with other people, you will need commands listed in the Individual Developer (Participant) section as well.
+    ·   People who play the Integrator role need to learn some more commands in addition to the above.
+    ·   Repository Administration commands are for system administrators who are responsible for the care and feeding of Git repositories.
+
+INDIVIDUAL DEVELOPER (STANDALONE)
+    A standalone individual developer does not exchange patches with other people, and works alone in a single repository, using the following commands.
+
+    ·   git-init(1) to create a new repository.
+    ·   git-log(1) to see what happened.
+    ·   git-checkout(1) and git-branch(1) to switch branches.
+    ·   git-add(1) to manage the index file.
+    ·   git-diff(1) and git-status(1) to see what you are in the middle of doing.
+    ·   git-commit(1) to advance the current branch.
+    ·   git-reset(1) and git-checkout(1) (with pathname parameters) to undo changes.
+    ·   git-merge(1) to merge between local branches.
+    ·   git-rebase(1) to maintain topic branches.
+    ·   git-tag(1) to mark a known point.
+
+Examples
+    Use a tarball as a starting point for a new repository.
+
+            $ tar zxf frotz.tar.gz
+            $ cd frotz
+            $ git init
+            $ git add . (1)
+            $ git commit -m &quot;import of frotz source tree.&quot;
+            $ git tag v2.43 (2)
+
+        1. add everything under the current directory.
+        2. make a lightweight, unannotated tag.
+
+    Create a topic branch and develop.
+
+            $ git checkout -b alsa-audio (1)
+            $ edit/compile/test
+            $ git checkout -- curses/ux_audio_oss.c (2)
+            $ git add curses/ux_audio_alsa.c (3)
+            $ edit/compile/test
+            $ git diff HEAD (4)
+            $ git commit -a -s (5)
+            $ edit/compile/test
+            $ git diff HEAD^ (6)
+            $ git commit -a --amend (7)
+            $ git checkout master (8)
+            $ git merge alsa-audio (9)
+            $ git log --since=&#39;3 days ago&#39; (10)
+            $ git log v2.43.. curses/ (11)
+
+        1. create a new topic branch.
+        2. revert your botched changes in curses/ux_audio_oss.c.
+        3. you need to tell Git if you added a new file; removal and modification will be caught if you do git commit -a later.
+        4. to see what changes you are committing.
+        5. commit everything, as you have tested, with your sign-off.
+        6. look at all your changes including the previous commit.
+        7. amend the previous commit, adding all your new changes, using your original message.
+        8. switch to the master branch.
+        9. merge a topic branch into your master branch.
+        10. review commit logs; other forms to limit output can be combined and include -10 (to show up to 10 commits), --until=2005-12-10, etc.
+        11. view only the changes that touch what’s in curses/ directory, since v2.43 tag.
+
+INDIVIDUAL DEVELOPER (PARTICIPANT)
+    A developer working as a participant in a group project needs to learn how to communicate with others, and uses these commands in addition to the ones needed
+    by a standalone developer.
+
+    ·   git-clone(1) from the upstream to prime your local repository.
+    ·   git-pull(1) and git-fetch(1) from &quot;origin&quot; to keep up-to-date with the upstream.
+    ·   git-push(1) to shared repository, if you adopt CVS style shared repository workflow.
+    ·   git-format-patch(1) to prepare e-mail submission, if you adopt Linux kernel-style public forum workflow.
+    ·   git-send-email(1) to send your e-mail submission without corruption by your MUA.
+    ·   git-request-pull(1) to create a summary of changes for your upstream to pull.
+
+Examples
+    Clone the upstream and work on it. Feed changes to upstream.
+
+            $ git clone git://git.kernel.org/pub/scm/.../torvalds/linux-2.6 my2.6
+            $ cd my2.6
+            $ git checkout -b mine master (1)
+            $ edit/compile/test; git commit -a -s (2)
+            $ git format-patch master (3)
+            $ git send-email --to=&quot;person &lt;email@example.com&gt;&quot; 00*.patch (4)
+            $ git checkout master (5)
+            $ git pull (6)
+            $ git log -p ORIG_HEAD.. arch/i386 include/asm-i386 (7)
+            $ git ls-remote --heads http://git.kernel.org/.../jgarzik/libata-dev.git (8)
+            $ git pull git://git.kernel.org/pub/.../jgarzik/libata-dev.git ALL (9)
+            $ git reset --hard ORIG_HEAD (10)
+            $ git gc (11)
+
+        1. checkout a new branch mine from master.
+        2. repeat as needed.
+        3. extract patches from your branch, relative to master,
+        4. and email them.
+        5. return to master, ready to see what’s new
+        6. git pull fetches from origin by default and merges into the current branch.
+        7. immediately after pulling, look at the changes done upstream since last time we checked, only in the area we are interested in.
+        8. check the branch names in an external repository (if not known).
+        9. fetch from a specific branch ALL from a specific repository and merge it.
+        10. revert the pull.
+        11. garbage collect leftover objects from reverted pull.
+
+    Push into another repository.
+
+            satellite$ git clone mothership:frotz frotz (1)
+            satellite$ cd frotz
+            satellite$ git config --get-regexp &#39;^(remote|branch)\.&#39; (2)
+            remote.origin.url mothership:frotz
+            remote.origin.fetch refs/heads/*:refs/remotes/origin/*
+            branch.master.remote origin
+            branch.master.merge refs/heads/master
+            satellite$ git config remote.origin.push \
+                        +refs/heads/*:refs/remotes/satellite/* (3)
+            satellite$ edit/compile/test/commit
+            satellite$ git push origin (4)
+
+            mothership$ cd frotz
+            mothership$ git checkout master
+            mothership$ git merge satellite/master (5)
+
+        1. mothership machine has a frotz repository under your home directory; clone from it to start a repository on the satellite machine.
+        2. clone sets these configuration variables by default. It arranges git pull to fetch and store the branches of mothership machine to local
+        remotes/origin/* remote-tracking branches.
+        1. arrange git push to push all local branches to their corresponding branch of the mothership machine.
+        2. push will stash all our work away on remotes/satellite/* remote-tracking branches on the mothership machine. You could use this as a back-up method.
+        Likewise, you can pretend that mothership &quot;fetched&quot; from you (useful when access is one sided).
+        1. on mothership machine, merge the work done on the satellite machine into the master branch.
+
+    Branch off of a specific tag.
+
+            $ git checkout -b private2.6.14 v2.6.14 (1)
+            $ edit/compile/test; git commit -a
+            $ git checkout master
+            $ git cherry-pick v2.6.14..private2.6.14 (2)
+
+        1. create a private branch based on a well known (but somewhat behind) tag.
+        2. forward port all changes in private2.6.14 branch to master branch without a formal &quot;merging&quot;. Or longhand
+
+        git format-patch -k -m --stdout v2.6.14..private2.6.14 | git am -3 -k
+
+    An alternate participant submission mechanism is using the git request-pull or pull-request mechanisms (e.g as used on GitHub (www.github.com) to notify your
+    upstream of your contribution.
+
+
+... supprimé INTEGRATOR et REPOSITORY ADMINISTRATION
+</pre></div>
+</div>
+</div>
 <div class="section" id="weblinks">
 <h2><a class="toc-backref" href="#sommaire">Weblinks</a><a class="headerlink" href="#weblinks" title="Lien permanent vers ce titre">¶</a></h2>
 <dl class="footnote brackets">
 <dt class="label" id="id1"><span class="brackets"><a class="fn-backref" href="#id2">1</a></span></dt>
-<dd><p><a class="reference external" href="http://adopteungit.fr/methodologie/2017/04/26/commits-atomiques-la-bonne-approche.html">http://adopteungit.fr/methodologie/2017/04/26/commits-atomiques-la-bonne-approche.html</a></p>
+<dd><p><a class="reference external" href="https://www.ionos.fr/digitalguide/sites-internet/developpement-web/gitlab-vs-github/">https://www.ionos.fr/digitalguide/sites-internet/developpement-web/gitlab-vs-github/</a></p>
 </dd>
 <dt class="label" id="id3"><span class="brackets"><a class="fn-backref" href="#id4">2</a></span></dt>
-<dd><p><a class="reference external" href="http://adopteungit.fr/commande/bisect/2016/09/04/la-chasse-aux-bugs-avec-git-bisect.html">http://adopteungit.fr/commande/bisect/2016/09/04/la-chasse-aux-bugs-avec-git-bisect.html</a></p>
+<dd><p><a class="reference external" href="https://www.miximum.fr/blog/decouvrir-git/">https://www.miximum.fr/blog/decouvrir-git/</a></p>
 </dd>
 <dt class="label" id="id5"><span class="brackets"><a class="fn-backref" href="#id6">3</a></span></dt>
-<dd><p><a class="reference external" href="https://www.atlassian.com/git/tutorials/big-repositories">https://www.atlassian.com/git/tutorials/big-repositories</a></p>
+<dd><p><a class="reference external" href="http://adopteungit.fr/methodologie/2017/04/26/commits-atomiques-la-bonne-approche.html">http://adopteungit.fr/methodologie/2017/04/26/commits-atomiques-la-bonne-approche.html</a></p>
 </dd>
 <dt class="label" id="id7"><span class="brackets"><a class="fn-backref" href="#id8">4</a></span></dt>
-<dd><p><a class="reference external" href="https://stackoverflow.com/questions/32068654/best-practices-for-using-git-in-large-project">https://stackoverflow.com/questions/32068654/best-practices-for-using-git-in-large-project</a></p>
+<dd><p><a class="reference external" href="http://adopteungit.fr/commande/bisect/2016/09/04/la-chasse-aux-bugs-avec-git-bisect.html">http://adopteungit.fr/commande/bisect/2016/09/04/la-chasse-aux-bugs-avec-git-bisect.html</a></p>
 </dd>
 <dt class="label" id="id9"><span class="brackets"><a class="fn-backref" href="#id10">5</a></span></dt>
-<dd><p><a class="reference external" href="https://www.gitkraken.com/">https://www.gitkraken.com/</a></p>
+<dd><p><a class="reference external" href="https://www.atlassian.com/git/tutorials/big-repositories">https://www.atlassian.com/git/tutorials/big-repositories</a></p>
 </dd>
 <dt class="label" id="id11"><span class="brackets"><a class="fn-backref" href="#id12">6</a></span></dt>
-<dd><p><a class="reference external" href="https://tortoisegit.org/">https://tortoisegit.org/</a></p>
+<dd><p><a class="reference external" href="https://stackoverflow.com/questions/32068654/best-practices-for-using-git-in-large-project">https://stackoverflow.com/questions/32068654/best-practices-for-using-git-in-large-project</a></p>
 </dd>
 <dt class="label" id="id13"><span class="brackets"><a class="fn-backref" href="#id14">7</a></span></dt>
-<dd><p><a class="reference external" href="https://en.wikibooks.org/wiki/Git/Repository_on_a_USB_stick">https://en.wikibooks.org/wiki/Git/Repository_on_a_USB_stick</a></p>
+<dd><p><a class="reference external" href="https://www.gitkraken.com/">https://www.gitkraken.com/</a></p>
 </dd>
 <dt class="label" id="id15"><span class="brackets"><a class="fn-backref" href="#id16">8</a></span></dt>
+<dd><p><a class="reference external" href="https://tortoisegit.org/">https://tortoisegit.org/</a></p>
+</dd>
+<dt class="label" id="id17"><span class="brackets"><a class="fn-backref" href="#id18">9</a></span></dt>
+<dd><p><a class="reference external" href="https://en.wikibooks.org/wiki/Git/Repository_on_a_USB_stick">https://en.wikibooks.org/wiki/Git/Repository_on_a_USB_stick</a></p>
+</dd>
+<dt class="label" id="id19"><span class="brackets"><a class="fn-backref" href="#id20">10</a></span></dt>
 <dd><p><a class="reference external" href="https://fr.w3docs.com/snippets/git/comment-generer-une-cle-ssh-pour-git.html">https://fr.w3docs.com/snippets/git/comment-generer-une-cle-ssh-pour-git.html</a></p>
 </dd>
 </dl>
@@ -436,7 +701,6 @@ Cette commmande permet de revenir à l’état du dernier commit (ne pas confond
 </div>
 
 
-            <div class="clearer"></div>
           </div>
         </div>
       </div>
@@ -445,7 +709,13 @@ Cette commmande permet de revenir à l’état du dernier commit (ne pas confond
   <h3><a href="../index.html">Table des matières</a></h3>
   <ul>
 <li><a class="reference internal" href="#">Notes sur git</a><ul>
-<li><a class="reference internal" href="#intrroduction">Intrroduction</a></li>
+<li><a class="reference internal" href="#introduction">Introduction</a></li>
+<li><a class="reference internal" href="#commandes-de-base-ou-kit-de-survie-minimum">Commandes de base (ou kit de survie minimum)</a></li>
+<li><a class="reference internal" href="#tutos-en-francais">Tutos en français</a></li>
+<li><a class="reference internal" href="#workflow">Workflow</a><ul>
+<li><a class="reference internal" href="#developpeur-en-equipe">Développeur (en équipe)</a></li>
+</ul>
+</li>
 <li><a class="reference internal" href="#commits-atomiques">Commits atomiques</a></li>
 <li><a class="reference internal" href="#git-rebase">git rebase</a></li>
 <li><a class="reference internal" href="#git-bisec">git bisec</a></li>
@@ -482,6 +752,7 @@ Cette commmande permet de revenir à l’état du dernier commit (ne pas confond
 <li><a class="reference internal" href="#deplacer-le-dernier-commit-d-une-branche-vers-une-autre-branche">Déplacer le dernier commit d’une branche vers une autre branche</a></li>
 </ul>
 </li>
+<li><a class="reference internal" href="#exemple-de-la-commande-git-help-everyday">Exemple de la commande git help everyday</a></li>
 <li><a class="reference internal" href="#weblinks">Weblinks</a></li>
 </ul>
 </li>
@@ -526,13 +797,12 @@ Cette commmande permet de revenir à l’état du dernier commit (ne pas confond
         <li class="right" >
           <a href="../lesObjetsConnectes/plateformServiceServeur/plateformServiceServeur.html" title="Plateformes, services Web et serveurs"
              >précédent</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">Documentation MajorLee&#39;s notes </a> &#187;</li>
-        <li class="nav-item nav-item-this"><a href="">Notes sur git</a></li> 
+        <li class="nav-item nav-item-0"><a href="../index.html">Documentation MajorLee&#39;s notes </a> &#187;</li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2019, J.SORANZO.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.2.0.
+      Créé avec <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.4.
     </div>
   </body>
 </html>

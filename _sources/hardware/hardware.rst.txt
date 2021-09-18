@@ -19,6 +19,16 @@ Hardware notes
 .. contents:: Hardware tdm
     :backlinks: top
 
+
+====================================================================================================
+PCB data
+====================================================================================================
+A compléter 22/7/2021
+
+.. image:: images/grilleVsMills.jpg 
+   :width: 300 px
+
+
 ----------------------------------------------------------------------------------------------------    
     
 .. index::
@@ -324,9 +334,15 @@ Sur `electronics.stackexchange.com`_
    :width: 200 px
 
 .. image:: images/DMC2038LVT_2.jpg 
-   :width: 200 px 
+   :width: 200 px
+
+:download:`NTD20N03<NTD20N03datasheet.pdf>` ne convient pas car canal N
    
-Mon essai avec 2N7000 et :download:`NTD20N03<NTD20N03datasheet.pdf>` commandé par un Digispark
+Mon essai avec :download:`2N7000<2N7000.pdf>` et  
+commandé par un `Digispark`_
+
+.. _`Digispark` : http://digistump.com/products/1
+
 
 
 
