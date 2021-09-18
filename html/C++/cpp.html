@@ -1,0 +1,900 @@
+
+<!DOCTYPE html>
+
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Mes notes sur C++ &#8212; Documentation MajorLee&#39;s notes </title>
+    <link rel="stylesheet" href="../_static/nature.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script src="../_static/translations.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Recherche" href="../search.html" />
+    <link rel="next" title="Note concernant Visal C++ 2013 *" href="visualCpp/visual.html" />
+    <link rel="prev" title="NUCLEO board *" href="../hardware/nucleo/nucleo.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="Index général"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="visualCpp/visual.html" title="Note concernant Visal C++ 2013 *"
+             accesskey="N">suivant</a> |</li>
+        <li class="right" >
+          <a href="../hardware/nucleo/nucleo.html" title="NUCLEO board *"
+             accesskey="P">précédent</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Documentation MajorLee&#39;s notes </a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="mes-notes-sur-c">
+<span id="index-0"></span><h1><a class="toc-backref" href="#sommaire">Mes notes sur C++</a><a class="headerlink" href="#mes-notes-sur-c" title="Lien permanent vers ce titre">¶</a></h1>
+<dl class="field-list simple">
+<dt class="field-odd">Auteur</dt>
+<dd class="field-odd"><p>J.Soranzo</p>
+</dd>
+<dt class="field-even">Date</dt>
+<dd class="field-even"><p>Novembre 2019</p>
+</dd>
+<dt class="field-odd">Societe</dt>
+<dd class="field-odd"><p>VoRoBoTics</p>
+</dd>
+<dt class="field-even">Entity</dt>
+<dd class="field-even"><p>VoLAB</p>
+</dd>
+</dl>
+<div class="contents topic" id="sommaire">
+<p class="topic-title">Sommaire</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#mes-notes-sur-c" id="id26">Mes notes sur C++</a></p>
+<ul>
+<li><p><a class="reference internal" href="#c-operators-surcharge" id="id27">C++ opérators (surcharge)</a></p>
+<ul>
+<li><p><a class="reference internal" href="#surcharge-operateur" id="id28">Surcharge opérateur ==, &gt;, …</a></p></li>
+<li><p><a class="reference internal" href="#surcharge-des-operateurs-arithmetiques" id="id29">Surcharge des opérateurs arithmétiques</a></p></li>
+<li><p><a class="reference internal" href="#surcharge-de-l-operateur" id="id30">Surcharge de l’opérateur &lt;&lt;</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#namespace" id="id31">Namespace</a></p></li>
+<li><p><a class="reference internal" href="#template" id="id32">Template</a></p>
+<ul>
+<li><p><a class="reference internal" href="#specialisation" id="id33">Spécialisation</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#membres-statiques" id="id34">Membres statiques</a></p></li>
+<li><p><a class="reference internal" href="#passage-par-reference" id="id35">Passage par référence</a></p></li>
+<li><p><a class="reference internal" href="#heritage" id="id36">Héritage</a></p></li>
+<li><p><a class="reference internal" href="#polymorphisme" id="id37">Polymorphisme</a></p></li>
+<li><p><a class="reference internal" href="#classe-amie-et-fonction-amie" id="id38">Classe amie et fonction amie</a></p></li>
+<li><p><a class="reference internal" href="#vector" id="id39">Vector</a></p>
+<ul>
+<li><p><a class="reference internal" href="#iterer-un-tableau-rappel" id="id40">Itérer un tableau rappel</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#classe-abstraite-et-methodes-virtuelles-pures" id="id41">Classe abstraite et méthodes virtuelles pures</a></p></li>
+<li><p><a class="reference internal" href="#fonctions-qui-retourne-un-reference" id="id42">Fonctions qui retourne un référence</a></p></li>
+<li><p><a class="reference internal" href="#constructeur-de-copie" id="id43">Constructeur de copie</a></p>
+<ul>
+<li><p><a class="reference internal" href="#id1" id="id44">Surcharge de l’opérateur =</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#printf-format" id="id45">printf format</a></p></li>
+<li><p><a class="reference internal" href="#typedef-struct-co" id="id46">Typedef, struct &amp; co</a></p>
+<ul>
+<li><p><a class="reference internal" href="#typedef" id="id47">Typedef</a></p></li>
+<li><p><a class="reference internal" href="#struct" id="id48">struct</a></p></li>
+<li><p><a class="reference internal" href="#enum" id="id49">enum</a></p></li>
+<li><p><a class="reference internal" href="#typedef-et-les-fonctions" id="id50">typedef et les fonctions</a></p></li>
+<li><p><a class="reference internal" href="#champs-de-bits" id="id51">Champs de bits</a></p></li>
+<li><p><a class="reference internal" href="#exemple-trame-serie" id="id52">Exemple trame série</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#smart-pointer" id="id53">Smart pointer</a></p></li>
+<li><p><a class="reference internal" href="#callback-how-to" id="id54">callback how to</a></p></li>
+<li><p><a class="reference internal" href="#doxygen-avec-arduino" id="id55">Doxygen avec Arduino</a></p></li>
+<li><p><a class="reference internal" href="#uml" id="id56">UML</a></p>
+<ul>
+<li><p><a class="reference internal" href="#plantuml" id="id57">PlantUML</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#ast-abstract-syntax-trees" id="id58">AST Abstract Syntax Trees</a></p></li>
+<li><p><a class="reference internal" href="#weblinks" id="id59">Weblinks</a></p></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<p class="caption"><span class="caption-text">Sous-articles:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="visualCpp/visual.html">Note concernant Visal C++ 2013 *</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="visualCpp/visual.html#configuration">Configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="visualCpp/visual.html#mfc">MFC</a></li>
+<li class="toctree-l2"><a class="reference internal" href="visualCpp/visual.html#les-differentes-type-d-applications">Les différentes type d’applications</a></li>
+<li class="toctree-l2"><a class="reference internal" href="visualCpp/visual.html#liaison-serie">Liaison série</a></li>
+<li class="toctree-l2"><a class="reference internal" href="visualCpp/visual.html#web-socket">Web socket</a></li>
+<li class="toctree-l2"><a class="reference internal" href="visualCpp/visual.html#multitache">multitache</a></li>
+<li class="toctree-l2"><a class="reference internal" href="visualCpp/visual.html#tips">Tips</a></li>
+<li class="toctree-l2"><a class="reference internal" href="visualCpp/visual.html#weblinks">Weblinks</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Qt/Qt.html">Notes sur Qt *</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Qt/Qt.html#presentation">Présentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Qt/Qt.html#installation">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Qt/Qt.html#service-minimum">Service minimum</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Qt/Qt.html#autres-choses">Autres choses</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Qt/Qt.html#classes-qui-me-semblent-les-plus-utiles">Classes qui me semblent les plus utiles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Qt/Qt.html#apres-modification-du-fichier-pro">Après modification du fichier pro</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Qt/Qt.html#qt-widgets-vs-qt-quick-application">Qt widgets vs Qt Quick application</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Qt/Qt.html#comprendre-signals-et-slots">Comprendre signals et slots</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Qt/Qt.html#petits-tracas">Petits tracas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Qt/Qt.html#cout">cout</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Qt/Qt.html#boite-de-dialogue-standard">Boîte de dialogue standard</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Qt/Qt.html#qt-layout">Qt layout</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Qt/Qt.html#communication-reseau">Communication réseau</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Qt/Qt.html#tips">Tips</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Qt/Qt.html#deploiement">Deploiement</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Qt/Qt.html#qt-and-snippets">Qt and snippets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Qt/Qt.html#weblinks">Weblinks</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<p>Ceci n’est pas un cours sur le C++, il y en a déjà plein et de très bons voir celui par exemple de
+<a class="reference external" href="https://openclassrooms.com/fr/courses/1894236-programmez-avec-le-langage-c">Openclassrooms</a> <a class="footnote-reference brackets" href="#id2" id="id3">1</a></p>
+<p><strong>Voir aussi la map cpp_notes.xmind</strong></p>
+<div class="section" id="c-operators-surcharge">
+<h2><a class="toc-backref" href="#sommaire">C++ opérators (surcharge)</a><a class="headerlink" href="#c-operators-surcharge" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Même si l’on parle de classe, ceci n’est pas une méthode.
+C’est une fonction normale située à l’extérieur de toute classe.</p>
+<p>Exemple:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">bool</span> <span class="k">operator</span><span class="o">==</span><span class="p">(</span><span class="n">Duree</span> <span class="k">const</span><span class="o">&amp;</span> <span class="n">a</span><span class="p">,</span> <span class="n">Duree</span> <span class="k">const</span><span class="o">&amp;</span> <span class="n">b</span><span class="p">);</span>
+</pre></div>
+</div>
+<div class="section" id="surcharge-operateur">
+<h3><a class="toc-backref" href="#sommaire">Surcharge opérateur ==, &gt;, …</a><a class="headerlink" href="#surcharge-operateur" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Exemple complet:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">bool</span> <span class="n">Duree</span><span class="o">::</span><span class="n">estEgale</span><span class="p">(</span><span class="k">const</span> <span class="n">Duree</span> <span class="o">&amp;</span><span class="n">a</span><span class="p">)</span> <span class="k">const</span>
+<span class="p">{</span>
+<span class="k">return</span> <span class="p">(</span><span class="n">m_heures</span> <span class="o">==</span> <span class="n">a</span><span class="p">.</span><span class="n">m_heures</span> <span class="o">&amp;&amp;</span> <span class="n">m_minutes</span> <span class="o">==</span> <span class="n">a</span><span class="p">.</span><span class="n">m_minutes</span> <span class="o">&amp;&amp;</span> <span class="n">m_secondes</span> <span class="o">==</span> <span class="n">a</span><span class="p">.</span><span class="n">m_secondes</span> <span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">bool</span> <span class="k">operator</span><span class="o">==</span><span class="p">(</span><span class="k">const</span> <span class="n">Duree</span> <span class="o">&amp;</span><span class="n">a</span><span class="p">,</span> <span class="k">const</span> <span class="n">Duree</span> <span class="o">&amp;</span><span class="n">b</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="k">return</span> <span class="n">a</span><span class="p">.</span><span class="n">estEgale</span><span class="p">(</span><span class="n">b</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">bool</span> <span class="k">operator</span><span class="o">!=</span><span class="p">(</span><span class="k">const</span> <span class="n">Duree</span> <span class="o">&amp;</span><span class="n">a</span><span class="p">,</span> <span class="k">const</span> <span class="n">Duree</span> <span class="o">&amp;</span><span class="n">b</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="k">return</span> <span class="o">!</span><span class="p">(</span><span class="n">a</span><span class="o">==</span><span class="n">b</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Attention au mot clé const à la fin de la méthode estEgale !</p>
+</div>
+</div>
+<div class="section" id="surcharge-des-operateurs-arithmetiques">
+<h3><a class="toc-backref" href="#sommaire">Surcharge des opérateurs arithmétiques</a><a class="headerlink" href="#surcharge-des-operateurs-arithmetiques" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Exemple avec +, on commence par surcharger l’opérateur de raccourci +=.</p>
+<p>Comme il modifie l’objet lui-même cette surcharge est un méthode de l’objet.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>La première méthode fonctionnerait très pour la surcharge de l’opérateur +</p>
+</div>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">Duree</span><span class="o">&amp;</span> <span class="n">Duree</span><span class="o">::</span><span class="k">operator</span><span class="o">+=</span><span class="p">(</span><span class="k">const</span> <span class="n">Duree</span><span class="o">&amp;</span> <span class="n">a</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="c1">// Comme avant... rien à changer ici</span>
+    <span class="k">return</span> <span class="o">*</span><span class="k">this</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="c1">//Cette portion de code vient du site Openclassrooms (licence CC BY,SA) cours C++</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>return *this retourne une instance de l’objet !</p>
+</div>
+<p>Puis on peut surcharger + avec une fonction classique</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">Duree</span> <span class="k">operator</span><span class="o">+</span><span class="p">(</span><span class="n">Duree</span> <span class="k">const</span><span class="o">&amp;</span> <span class="n">a</span><span class="p">,</span> <span class="n">Duree</span> <span class="k">const</span><span class="o">&amp;</span> <span class="n">b</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="n">Duree</span> <span class="n">copie</span><span class="p">(</span><span class="n">a</span><span class="p">);</span>   <span class="c1">//On utilise le constructeur de copie de la classe Duree !</span>
+    <span class="n">copie</span> <span class="o">+=</span> <span class="n">b</span><span class="p">;</span>       <span class="c1">//On appelle la méthode d&#39;addition qui modifie l&#39;objet &#39;copie&#39;</span>
+    <span class="k">return</span> <span class="n">copie</span><span class="p">;</span>     <span class="c1">//Et on renvoie le résultat. Ni a ni b n&#39;ont changé.</span>
+<span class="p">}</span>
+<span class="c1">//Cette portion de code vient du site Openclassrooms (licence CC BY,SA) cours C++</span>
+</pre></div>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Avertissement</p>
+<p>Puisque a est passée sous forme de constante, on ne peut écrire a +=b d’où la copie qui utilise
+le constructeur de copie.</p>
+</div>
+</div>
+<div class="section" id="surcharge-de-l-operateur">
+<h3><a class="toc-backref" href="#sommaire">Surcharge de l’opérateur &lt;&lt;</a><a class="headerlink" href="#surcharge-de-l-operateur" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Cette surcharge est un peu particulière. On commence, normalement pas créer un méthode dans l’objet</p>
+<p>Exemple la méthode affiche()</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="n">Duree</span><span class="o">::</span><span class="n">afficher</span><span class="p">(</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="n">flux</span><span class="p">)</span> <span class="k">const</span>
+<span class="p">{</span>
+    <span class="n">flux</span> <span class="o">&lt;&lt;</span> <span class="n">m_heures</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;h&quot;</span> <span class="o">&lt;&lt;</span> <span class="n">m_minutes</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;m&quot;</span> <span class="o">&lt;&lt;</span> <span class="n">m_secondes</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;s&quot;</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="c1">//Cette portion de code vient du site Openclassrooms (licence CC BY,SA) cours C++</span>
+</pre></div>
+</div>
+<p>puis on surcharge l’opérateur. Presque normalement si ce n’est le flux en entrée et en sortie.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">ostream</span> <span class="o">&amp;</span><span class="k">operator</span><span class="o">&lt;&lt;</span><span class="p">(</span> <span class="n">ostream</span> <span class="o">&amp;</span><span class="n">flux</span><span class="p">,</span> <span class="n">Duree</span> <span class="k">const</span><span class="o">&amp;</span> <span class="n">duree</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="n">duree</span><span class="p">.</span><span class="n">afficher</span><span class="p">(</span><span class="n">flux</span><span class="p">)</span> <span class="p">;</span>
+    <span class="k">return</span> <span class="n">flux</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="c1">//Cette portion de code vient du site Openclassrooms (licence CC BY,SA) cours C++</span>
+</pre></div>
+</div>
+<hr class="docutils" />
+</div>
+</div>
+<div class="section" id="namespace">
+<span id="index-1"></span><h2><a class="toc-backref" href="#sommaire">Namespace</a><a class="headerlink" href="#namespace" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Cela permet de préciser un nom de variable, de clase et/ou de fonction.</p>
+<p>Exemple 2 variable/ou fonctions/ ou classe ayant le même nom : rectangle dans 2  couples de
+fichiers .h et .cpp</p>
+<p>Les inclure dans 2 namespaces différents permet de les distinguer au moment de l’appel</p>
+<p>namespace1::rectangle();</p>
+<p>namespace2::rectangle();</p>
+<p>Si on est sur de n’en utiliser qu’un seul dans toute l’appli alors on met:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">using</span> <span class="n">namespace</span> <span class="n">namespace1</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>on peut aussi le faire pour un seul élément du namespace (c’est plus précis):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">using</span> <span class="n">namespace1</span><span class="p">::</span><span class="n">rectangle</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Il y a une partie déclarative:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">namespace</span> <span class="n">toto</span><span class="p">{</span>
+    <span class="nb">int</span> <span class="n">uneFonction</span><span class="p">(){</span>
+
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>et la partie utilisation avec using</p>
+<p>ne pas mettre de using namespace dans les .h, en effet c’est un outil pour résoudre des conflits de
+nom dans un espace en particuler et comme on ne sait pas à l’avance où vont être inclu les .h
+A priori, partout, on risque d’avoir des conflits de noms.</p>
+<p>Quelques références:</p>
+<p><a class="reference external" href="https://docs.microsoft.com/fr-fr/cpp/cpp/namespaces-cpp?view=vs-2019">Namesspace sur le site Microsoft</a> <a class="footnote-reference brackets" href="#id4" id="id5">2</a></p>
+<p><a class="reference external" href="https://cpp.developpez.com/faq/cpp/?page=Les-namespaces">Namespace sur developpez.com</a> <a class="footnote-reference brackets" href="#id6" id="id7">3</a></p>
+<hr class="docutils" />
+</div>
+<div class="section" id="template">
+<span id="index-2"></span><h2><a class="toc-backref" href="#sommaire">Template</a><a class="headerlink" href="#template" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Permet de ne pas avoir à réécrire le même code d’une fonction (voir d’une classe entière)
+pour différentes classes en argument.</p>
+<p>Dès qu’on voit &lt;truc&gt; c’est qu’il doit y avoir du template la dessous.</p>
+<p>Exemple : la classe vector peut s’appiquer à différents objets.</p>
+<p>Au niveau syntaxe déclarative, cela se passe comme ceci:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">template</span><span class="o">&lt;</span><span class="n">typename</span> <span class="n">T</span><span class="o">&gt;</span>
+<span class="n">T</span> <span class="n">_functionName</span><span class="p">(</span> <span class="n">T</span> <span class="n">param1</span><span class="p">,</span> <span class="n">T</span> <span class="n">param2</span><span class="p">,</span> <span class="n">_autres</span> <span class="n">param</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>Template et typename sont des mots clés. T devient le type de variable utilisé dans la fonction.</p>
+<p>Il faut que le corps de la fonction soit strictement identique pour tous les objets traités.</p>
+<p>Voir l”<a class="reference external" href="https://openclassrooms.com/fr/courses/1894236-programmez-avec-le-langage-c/1903999-creez-des-templates">exemple de la fonction maximum sur Openclassroom</a> <a class="footnote-reference brackets" href="#id8" id="id9">4</a></p>
+<p>Au niveau appel, on précise à chaque appel de la fonction,
+le type qu’on veut utiliser entre &lt; et &gt;:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">_fontion</span><span class="o">&lt;</span><span class="n">type_utilisé</span><span class="o">&gt;</span><span class="p">(</span><span class="n">param1</span><span class="p">,</span> <span class="n">param2</span><span class="p">,</span> <span class="o">...</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Avertissement</p>
+<p>Prototype et corps de la fonction template DOIVENT se trouver dans le .h</p>
+</div>
+<div class="section" id="specialisation">
+<h3><a class="toc-backref" href="#sommaire">Spécialisation</a><a class="headerlink" href="#specialisation" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Une fois le template créé, on peut le spécialiser pour un type en particulier. Cela permet de
+changer le comportement de la focntion pour un type en particulier.</p>
+<p>C’est la partie déclarative qui change:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">template</span><span class="o">&lt;&gt;</span>
+<span class="n">retval</span> <span class="n">_fonctionName</span><span class="o">&lt;</span><span class="n">type_particulier</span><span class="o">&gt;</span><span class="p">(</span><span class="o">...</span> <span class="n">puis</span> <span class="n">vient</span> <span class="n">reste</span> <span class="n">de</span> <span class="n">la</span> <span class="n">fonction</span> <span class="n">pour</span> <span class="n">ce</span> <span class="nb">type</span><span class="o">.</span>
+</pre></div>
+</div>
+<p>On note que:
+- rien dans template entre &lt; et &gt;
+- on précise le type dans le header de la fonction</p>
+<p>L’ordre des déclarations est important : d’abord la version générique puis la ou les spécialisations</p>
+<hr class="docutils" />
+</div>
+</div>
+<div class="section" id="membres-statiques">
+<span id="index-3"></span><h2><a class="toc-backref" href="#sommaire">Membres statiques</a><a class="headerlink" href="#membres-statiques" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Un attribut statique peut être accédé de l’intérieur comme de l’extérieur de la classe.</p>
+<p>Une méthode statique ne peut accéder qu’aux attributs statiques de la classe.</p>
+<div class="admonition warning">
+<p class="admonition-title">Avertissement</p>
+<p>Un membre static doit être initialisé en dehors du fichier .h (dans le .cpp) sans oublier de
+le faire précédé du nom de la classe.</p>
+</div>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">bool</span> <span class="n">CRtc</span><span class="o">::</span><span class="n">initErr</span> <span class="o">=</span> <span class="nb">false</span><span class="p">;</span>
+<span class="n">NTPClient</span> <span class="o">*</span><span class="n">CRtc</span><span class="o">::</span><span class="n">p_timeClient</span> <span class="o">=</span> <span class="k">nullptr</span><span class="p">;</span>
+</pre></div>
+</div>
+<hr class="docutils" />
+</div>
+<div class="section" id="passage-par-reference">
+<span id="index-4"></span><h2><a class="toc-backref" href="#sommaire">Passage par référence</a><a class="headerlink" href="#passage-par-reference" title="Lien permanent vers ce titre">¶</a></h2>
+<p>int fonction( int &amp;variable )</p>
+<p>Ne pas confondre avec un pointeur. A l’intérieur de la fonction on utilise seulement le nom de la
+variable passée et en plus pas la syntaxe -&gt; si il s’agit d’un objet.</p>
+<p>Mais on modifie bien la variable source puisqu’il n’y a pas de copie.</p>
+<p>Voir ci-dessus dans <a class="reference internal" href="#c-operators-surcharge">C++ opérators (surcharge)</a></p>
+<blockquote>
+<div><ul class="simple">
+<li><dl class="simple">
+<dt>ne change rien au niveau de l’appel de la fonction</dt><dd><ul>
+<li><p>à condition d’un apel avec variable</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>le paramètre doit être un emplacment mémoir modifiable</dt><dd><ul>
+<li><p>incr10( 20 ); ne marche pas car 20 n’est pas modifiable dans la fonction</p></li>
+<li><p>sauf si on utilise const dans la déclaration : int incr10(const int&amp; num)</p></li>
+<li><p>ou le double déréférencement int incr10(int&amp;&amp; num);</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p>ne change rien dans le corps de la fonction</p></li>
+<li><p>Ne pas confondre avec le fait de passer un pointeur à une fonction ( on passe par copie d’un pointeur certe )</p></li>
+<li><p>Prototype : int incr10(int&amp; num) noter le &amp;</p></li>
+<li><p>appel : result = incr10(value);</p></li>
+</ul>
+</div></blockquote>
+<hr class="docutils" />
+</div>
+<div class="section" id="heritage">
+<span id="index-5"></span><h2><a class="toc-backref" href="#sommaire">Héritage</a><a class="headerlink" href="#heritage" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Il y a héritage quand on peut dire : « A est un B ».</p>
+<p>Une voiture est un véhicule</p>
+<p>un carré est une forme géomètrique</p>
+<p>Une fenêtre est un objet graphique</p>
+<p>Un bouton est un widget</p>
+<hr class="docutils" />
+</div>
+<div class="section" id="polymorphisme">
+<span id="index-6"></span><h2><a class="toc-backref" href="#sommaire">Polymorphisme</a><a class="headerlink" href="#polymorphisme" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Dans le cas de l’héritage, c’est quand une méthode d’une classe adapte automatiquement son
+comportement en fonction de la nature de l’objet qui lui est passé.</p>
+<p>C’est rendu possible grâce au mot clé virtual (il est nécessaire alors de passer soit un <strong>pointeur
+ou une référence</strong>).</p>
+<p>On parle aussi de <span class="target" id="index-7"></span>résolution dynamique de liens.</p>
+<p>Le destructeur doit toujours être virtuel si on utilise le polymorphisme.</p>
+<p><a class="reference external" href="https://openclassrooms.com/fr/courses/1894236-programmez-avec-le-langage-c/1898632-mettez-en-oeuvre-le-polymorphisme#/id/r-1908359">Plus d’informations sur Openclassroom</a> <a class="footnote-reference brackets" href="#id10" id="id11">5</a></p>
+</div>
+<div class="section" id="classe-amie-et-fonction-amie">
+<span id="index-8"></span><h2><a class="toc-backref" href="#sommaire">Classe amie et fonction amie</a><a class="headerlink" href="#classe-amie-et-fonction-amie" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Une simple fonction peut être déclarée amie d’une classe. L’intérêt qu’elle peut accéder aux
+méthodes privées de la classe.</p>
+<p>Le mot clé est friend. Pour une fonction cela donne:</p>
+<p>friend <em>type fonction();</em> <strong>que l’on place à l’intérieur de la déclaration de la classe</strong></p>
+<p>Pour une classe, il faut indiqué dans le header de quelle classe elle est amie</p>
+<p>friend class <em>monAmie;</em></p>
+<p><a class="reference external" href="https://openclassrooms.com/fr/courses/1894236-programmez-avec-le-langage-c/1898734-utilisez-les-elements-statiques-et-lamitie#/id/r-1908555">Exemple sur OCRoom</a> <a class="footnote-reference brackets" href="#id12" id="id13">6</a></p>
+<hr class="docutils" />
+</div>
+<div class="section" id="vector">
+<span id="index-9"></span><h2><a class="toc-backref" href="#sommaire">Vector</a><a class="headerlink" href="#vector" title="Lien permanent vers ce titre">¶</a></h2>
+<p>la syntaxe vector&lt;int&gt; tableau(10) permet de créer des tableau dynamique.</p>
+<div class="admonition warning">
+<p class="admonition-title">Avertissement</p>
+<p>Ne pas oublier : <strong>#include &lt;vector&gt;</strong></p>
+</div>
+<p>vector&lt;int&gt; tableau(10, 6) crée un tableau de 10 entiers valant tous 6</p>
+<p>vector&lt;int&gt; tableau crée un tableau d’entier vide.</p>
+<p>L’accès aux éléments reste classique avec les []</p>
+<p>Pour ajouter des éléemtns, on utilise la méthode push_back()</p>
+<p>Pour supprimer des éléments, on utilise la méthode pop_back()</p>
+<p>Pour connaître la taille, on utilise la méthode size()</p>
+<p>Voir sur <a class="reference external" href="https://fr.cppreference.com/w/cpp/container/vector">vector sur cppreference.com</a> <a class="footnote-reference brackets" href="#id14" id="id15">7</a> cette classe est beaucoup plus riche.</p>
+<p>Une petite paranthèse sur iterator : introduit les fonctions next(), prev(), advance()</p>
+<p>#include &lt;iterator&gt; (fait partie de std::)</p>
+<p>On pourrait aussi parler de list</p>
+<p>#include &lt;list&gt; du std:: aussi</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">std</span><span class="p">::</span><span class="nb">list</span> <span class="n">est</span> <span class="n">un</span> <span class="n">conteneur</span> <span class="n">qui</span> <span class="n">permet</span> <span class="n">l</span><span class="s1">&#39;insertion et la suppression rapide d&#39;</span><span class="n">éléments</span> <span class="n">depuis</span>
+<span class="n">n</span><span class="s1">&#39;importe quel endroit du conteneur. L&#39;</span><span class="n">accès</span> <span class="n">rapide</span> <span class="n">à</span> <span class="n">une</span> <span class="n">position</span> <span class="n">aléatoire</span> <span class="n">n</span><span class="s1">&#39;est pas supporté.</span>
+<span class="n">std</span><span class="p">::</span><span class="nb">list</span> <span class="n">est</span> <span class="n">implémenté</span> <span class="n">comme</span> <span class="n">une</span> <span class="n">liste</span> <span class="n">doublement</span> <span class="n">chaînée</span><span class="o">.</span>
+
+<span class="o">//</span><span class="kn">from</span> <span class="nn">cppreference.com</span>
+</pre></div>
+</div>
+<div class="section" id="iterer-un-tableau-rappel">
+<span id="index-10"></span><h3><a class="toc-backref" href="#sommaire">Itérer un tableau rappel</a><a class="headerlink" href="#iterer-un-tableau-rappel" title="Lien permanent vers ce titre">¶</a></h3>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span> <span class="n">tableau</span><span class="p">[]</span> <span class="p">...</span>
+<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="nl">x</span> <span class="p">:</span> <span class="n">tableau</span><span class="p">)</span> <span class="n">focntionne</span>
+
+<span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">v</span> <span class="o">=</span> <span class="p">{</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">};</span>
+<span class="k">for</span> <span class="p">(</span><span class="k">const</span> <span class="kt">int</span><span class="o">&amp;</span> <span class="nl">i</span> <span class="p">:</span> <span class="n">v</span><span class="p">)</span>  <span class="c1">//subtilité &amp;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="classe-abstraite-et-methodes-virtuelles-pures">
+<span id="index-11"></span><h2><a class="toc-backref" href="#sommaire">Classe abstraite et méthodes virtuelles pures</a><a class="headerlink" href="#classe-abstraite-et-methodes-virtuelles-pures" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Une classe abstraite est une classe qui contient <strong>au moins</strong> une méthode virtuelle pure.</p>
+<p>Une méthode virtuelle pure est une classe virtuelle dont le proto se termine par =0 et qui n’a pas
+d’implémentation.</p>
+<p>On ne peut pas créer d’instance de classe abstraite mais on peut créer un pointeur sur une classe
+abstraite (pour ensuite l’initialiser sur une classe fille).</p>
+</div>
+<div class="section" id="fonctions-qui-retourne-un-reference">
+<h2><a class="toc-backref" href="#sommaire">Fonctions qui retourne un référence</a><a class="headerlink" href="#fonctions-qui-retourne-un-reference" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>returning a reference !
+    super puissant !
+    cf exemple 13 chapitre 5 du livre Beginning Visual C++® 2013 de Ivor Horton
+        Ex5_13_returningReference
+        wrox-press-ivor-horton-s-beginning-visual-c-2013-2014.pdf
+            dans le bookin les liens vers les sources sont fauts
+        page 210
+    ne pas confondre return &amp;var; ça ça retourne un pointeur
+    type&amp; _fonction(){ return varType; }
+        ça ça retourne une référence
+</pre></div>
+</div>
+<p>En quoi cela est-il si puissant ? (25/11/2019)</p>
+<p>Le renvoi d’une référence à une valeur depuis une fonction signifie que vous pouvez utiliser le
+résultat de la fonction situé à gauche d’une instruction d’affectation. Cela permet de faire des
+choses impossiblse autrement.</p>
+<p>fonction( paramtres ) = valeur;</p>
+<p>La fonction retourne une adresse et valeur est sotcké à cette adresse !
+Donc oui c’est hyperdangereux !</p>
+<p>Never, ever, return a reference to a local variable from a function.</p>
+<p>Permet la surcharcharge de l’opérateur = comme dans l’exemle du livre d’Ivor Horton page 342.</p>
+<hr class="docutils" />
+</div>
+<div class="section" id="constructeur-de-copie">
+<span id="index-12"></span><h2><a class="toc-backref" href="#sommaire">Constructeur de copie</a><a class="headerlink" href="#constructeur-de-copie" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Comme le <span class="target" id="index-13"></span>constructeur par défaut, tout compilateur qui se respect crée automatiquement
+un <span class="target" id="index-14"></span>constructeur de copie. Ainsi qu’un opérateur d’affectation par défaut qui peut être très
+dangereux pour des objets qui affecte de la memoire dynamique à leur attributs !</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">MaClasse</span>
+<span class="p">{</span>
+<span class="k">public</span><span class="o">:</span>
+    <span class="n">MaClasse</span><span class="p">(</span> <span class="k">const</span> <span class="n">MaClasse</span> <span class="o">&amp;</span> <span class="p">);</span> <span class="c1">// ceci est le constructeur de copie</span>
+<span class="p">};</span>
+</pre></div>
+</div>
+<p>Cas des objets à allocation de mémoire dynamique. En d’autres termes ceux qui ont des <strong>attrributs
+sous forme de pointeurs</strong>. Il est alors <strong>nécessaire</strong> de faire cette surcharge pour ne pas que les
+2 objets (la copie et le copié) pointent sur le même objet attribut.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">//constructeur de copie</span>
+<span class="n">Personnage</span><span class="o">::</span><span class="n">Personnage</span><span class="p">(</span><span class="k">const</span> <span class="n">Personnage</span> <span class="o">&amp;</span><span class="n">personnageACopier</span><span class="p">)</span><span class="o">:</span> <span class="n">m_vie</span><span class="p">(</span><span class="n">personnageACopier</span><span class="p">.</span><span class="n">m_vie</span><span class="p">),</span> <span class="n">m_mana</span><span class="p">(</span><span class="n">personnageACopier</span><span class="p">.</span><span class="n">m_mana</span><span class="p">),</span> <span class="n">marme</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="p">{</span>
+   <span class="c1">// m_arme = new Arme(personnageACopier.m_arme); // utilisation du constructeur de copie de la classe Arme</span>
+   <span class="c1">//balaise !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!</span>
+   <span class="c1">//presque sauf que m_arme est un pointeur et que sont constructeur de copie attend en entrée un objet pas un pointeur !</span>
+   <span class="c1">//Donc la syntaxe correcte est :</span>
+   <span class="n">m_arme</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Arme</span><span class="p">(</span> <span class="o">*</span><span class="p">(</span><span class="n">personnageACopier</span><span class="p">.</span><span class="n">m_arme</span><span class="p">)</span> <span class="p">);</span>
+   <span class="c1">//super balaise !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!</span>
+   <span class="c1">// personnageAcopier.m_arme est une adresse</span>
+   <span class="c1">// *personnageAcopier.m_arme est une instance !!!!!!!!!!!!!!!!!!!!!!!!!!</span>
+
+<span class="p">}</span>
+<span class="c1">//Cette portion de code vient du site Openclassrooms (licence CC BY,SA) cours C++</span>
+<span class="c1">//Sauf les commentaires !</span>
+</pre></div>
+</div>
+<div class="section" id="id1">
+<h3><a class="toc-backref" href="#sommaire">Surcharge de l’opérateur =</a><a class="headerlink" href="#id1" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Si il s’avère nécessaire de surcharger l’opérateur de copie, c’est qu’il est nécessaire de le faire
+également pour l’opérateur =</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">Classe</span><span class="o">&amp;</span> <span class="n">Classe</span><span class="o">::</span><span class="k">operator</span><span class="o">=</span><span class="p">(</span><span class="n">Classe</span> <span class="k">const</span><span class="o">&amp;</span> <span class="n">objetACopier</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="k">if</span><span class="p">(</span><span class="k">this</span> <span class="o">!=</span> <span class="o">&amp;</span><span class="n">objetACopier</span><span class="p">)</span>
+    <span class="c1">//On vérifie que l&#39;objet n&#39;est pas le même que celui reçu en argument</span>
+    <span class="p">{</span>
+        <span class="n">attribut1</span> <span class="o">=</span> <span class="n">objetACopier</span><span class="p">.</span><span class="n">attribut1</span><span class="p">;</span> <span class="c1">//Copie des attributs non pointeurs</span>
+        <span class="n">attribut2</span> <span class="o">=</span> <span class="p">...</span> <span class="p">;</span>
+        <span class="k">delete</span> <span class="n">attributPointeur1</span><span class="p">;</span>
+        <span class="n">attributPointeur1</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ClassAttributPointeur1</span><span class="p">(</span><span class="o">*</span><span class="p">(</span><span class="n">objetACopier</span><span class="p">.</span><span class="n">attributPointeur1</span><span class="p">));</span>
+        <span class="c1">//idem pour les autres attributs pointeurs</span>
+
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="o">*</span><span class="k">this</span><span class="p">;</span> <span class="c1">//On renvoie l&#39;objet lui-même</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<hr class="docutils" />
+</div>
+</div>
+<div class="section" id="printf-format">
+<span id="index-15"></span><h2><a class="toc-backref" href="#sommaire">printf format</a><a class="headerlink" href="#printf-format" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Format utilisable dans les <span class="target" id="index-16"></span>printf</p>
+<p>%05d pour un entier signé précédé de 0</p>
+<p>%05lu entier long non signé précédé de 0</p>
+<p>autres possibilitées : les fonctions du style ultoa()</p>
+<p>%c : pour que cela fonctionne bie, il faut que la chaine soit de la forme “x” et pas « x » au moins
+dans le monde ARDUINO</p>
+</div>
+<div class="section" id="typedef-struct-co">
+<span id="index-17"></span><h2><a class="toc-backref" href="#sommaire">Typedef, struct &amp; co</a><a class="headerlink" href="#typedef-struct-co" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="section" id="typedef">
+<h3><a class="toc-backref" href="#sommaire">Typedef</a><a class="headerlink" href="#typedef" title="Lien permanent vers ce titre">¶</a></h3>
+<p>typedef <em>type_connu nouveau_nom</em>; <strong>Alternative C++11</strong> : using _newName = _oldType ;</p>
+</div>
+<div class="section" id="struct">
+<h3><a class="toc-backref" href="#sommaire">struct</a><a class="headerlink" href="#struct" title="Lien permanent vers ce titre">¶</a></h3>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">struct</span> <span class="n">_structName</span> <span class="p">{</span> <span class="n">_elelments</span><span class="p">;</span> <span class="p">};</span>
+</pre></div>
+</div>
+<p>Utilisation : struct _structName _variableName;</p>
+<p>on peut également combiné la création de la structure avec celle d’une varaible et sont init
+comme dans:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">struct</span> <span class="n">temps</span> <span class="p">{</span>
+<span class="kt">unsigned</span> <span class="n">heures</span><span class="p">;</span>
+<span class="kt">unsigned</span> <span class="n">minutes</span><span class="p">;</span>
+<span class="kt">double</span> <span class="n">secondes</span><span class="p">;</span>
+<span class="p">}</span> <span class="n">t1</span> <span class="o">=</span> <span class="p">{</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">45</span><span class="p">,</span> <span class="mf">30.560</span> <span class="p">};</span>
+</pre></div>
+</div>
+<p>Dans ce cas si on ne le réutilise pas on peut omettre le nom de la structure.</p>
+<p>Avec un typedef cela donne:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">typedef</span> <span class="k">struct</span> <span class="n">_structName</span> <span class="n">_aliasName</span><span class="p">;</span>
+<span class="n">_aliasName</span> <span class="n">_variable</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>Plus besoin de mettre struct devant. On peut également combiner le typedef avec la déclaration</p>
+<p>typedef struct _structName{ _elements; } _aliasName ;</p>
+<p>Je crois même que dans ce cas on peut omettre le nom de la structure. oui: vérifié sur une compile
+arduino</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">struct</span> <span class="n">point</span> <span class="p">{</span>
+    <span class="kt">int</span> <span class="n">x</span><span class="p">;</span>
+    <span class="kt">int</span> <span class="n">y</span> <span class="p">;</span>
+<span class="p">};</span>
+<span class="k">typedef</span> <span class="n">point</span> <span class="n">point_T</span><span class="p">;</span>
+<span class="n">point_T</span> <span class="n">monPoint</span><span class="p">;</span>
+
+<span class="k">typedef</span> <span class="k">struct</span> <span class="p">{</span> <span class="kt">int</span> <span class="n">x</span><span class="p">;</span> <span class="kt">int</span> <span class="n">y</span><span class="p">;</span> <span class="p">}</span> <span class="n">autrePoint_T</span><span class="p">;</span>
+<span class="n">autrePoint_T</span> <span class="n">deuxeimePoint</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="enum">
+<h3><a class="toc-backref" href="#sommaire">enum</a><a class="headerlink" href="#enum" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Même schéma que struct</p>
+<blockquote>
+<div><p>enum _enumName { _elements;  };</p>
+</div></blockquote>
+</div>
+<div class="section" id="typedef-et-les-fonctions">
+<h3><a class="toc-backref" href="#sommaire">typedef et les fonctions</a><a class="headerlink" href="#typedef-et-les-fonctions" title="Lien permanent vers ce titre">¶</a></h3>
+<p>typedef pour déclarer des profile de fonction (souvent avec des pointeur sur fonction):</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">typedef</span> <span class="nf">int</span> <span class="p">(</span><span class="o">*</span><span class="n">t_somefunc</span><span class="p">)(</span><span class="kt">int</span><span class="p">,</span><span class="kt">int</span><span class="p">);</span>
+<span class="kt">int</span> <span class="nf">product</span><span class="p">(</span><span class="kt">int</span> <span class="n">u</span><span class="p">,</span> <span class="kt">int</span> <span class="n">v</span><span class="p">)</span> <span class="p">{</span> <span class="k">return</span> <span class="n">u</span><span class="o">*</span><span class="n">v</span><span class="p">;</span> <span class="p">}</span>
+<span class="n">t_somefunc</span> <span class="n">afunc</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">product</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="champs-de-bits">
+<h3><a class="toc-backref" href="#sommaire">Champs de bits</a><a class="headerlink" href="#champs-de-bits" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Union champs de bits</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">union</span> <span class="n">CINAStatHyb_t</span><span class="p">{</span>
+<span class="k">struct</span> <span class="p">{</span>
+    <span class="kt">unsigned</span> <span class="kt">int</span> <span class="nl">bit0</span> <span class="p">:</span> <span class="mi">1</span><span class="p">;</span>
+    <span class="kt">unsigned</span> <span class="kt">int</span> <span class="nl">bit1</span> <span class="p">:</span> <span class="mi">1</span><span class="p">;</span>
+    <span class="kt">unsigned</span> <span class="kt">int</span> <span class="nl">bit2</span> <span class="p">:</span> <span class="mi">1</span><span class="p">;</span>
+    <span class="kt">unsigned</span> <span class="kt">int</span> <span class="nl">bit3</span> <span class="p">:</span> <span class="mi">1</span><span class="p">;</span>
+<span class="p">};</span>
+    <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">val32</span><span class="p">;</span>
+<span class="p">};</span>
+
+<span class="n">CINAStatHyb_t</span> <span class="n">CINAStatHyb</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>Il est vivement conseillé de faire des essais afin d’être sur de l’endianess de la machine</p>
+</div>
+<div class="section" id="exemple-trame-serie">
+<h3><a class="toc-backref" href="#sommaire">Exemple trame série</a><a class="headerlink" href="#exemple-trame-serie" title="Lien permanent vers ce titre">¶</a></h3>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">typedef</span> <span class="k">union</span><span class="p">{</span>
+    <span class="k">struct</span><span class="p">{</span>
+        <span class="kt">uint8_t</span> <span class="n">DHTstatus</span><span class="p">;</span>
+        <span class="kt">uint8_t</span> <span class="n">temp</span><span class="p">;</span>
+        <span class="kt">uint8_t</span> <span class="n">tempDeci</span><span class="p">;</span>
+        <span class="kt">uint8_t</span> <span class="n">humidity</span><span class="p">;</span>
+        <span class="kt">uint8_t</span> <span class="n">humidityDeci</span><span class="p">;</span>
+        <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">analog0</span><span class="p">;</span>
+        <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">analog1</span><span class="p">;</span>
+        <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">analog2</span><span class="p">;</span>
+        <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">analog3</span><span class="p">;</span>
+        <span class="kt">uint8_t</span> <span class="n">jour</span><span class="p">;</span>
+        <span class="kt">uint8_t</span> <span class="n">mois</span><span class="p">;</span>
+        <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">annee</span><span class="p">;</span>
+        <span class="kt">uint8_t</span> <span class="n">heure</span><span class="p">;</span>
+        <span class="kt">uint8_t</span> <span class="n">minute</span><span class="p">;</span>
+        <span class="kt">uint8_t</span> <span class="n">seconde</span><span class="p">;</span>
+    <span class="p">};</span>
+    <span class="kt">uint8_t</span> <span class="n">_trame</span><span class="p">[</span> <span class="mi">20</span> <span class="p">];</span>
+<span class="p">}</span> <span class="n">trame_u</span><span class="p">;</span>
+
+<span class="n">trame_u</span> <span class="n">trame</span><span class="p">;</span>
+
+<span class="kt">void</span> <span class="nf">setup</span><span class="p">()</span> <span class="p">{</span>
+  <span class="c1">// put your setup code here, to run once:</span>
+  <span class="n">trame</span><span class="p">.</span><span class="n">jour</span> <span class="o">=</span> <span class="mi">14</span><span class="p">;</span>
+  <span class="n">trame</span><span class="p">.</span><span class="n">mois</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span>
+  <span class="n">trame</span><span class="p">.</span><span class="n">annee</span> <span class="o">=</span> <span class="mi">2017</span><span class="p">;</span> <span class="c1">//2017 = 7*256+225</span>
+  <span class="n">trame</span><span class="p">.</span><span class="n">DHTstatus</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
+  <span class="n">trame</span><span class="p">.</span><span class="n">temp</span> <span class="o">=</span><span class="mi">23</span><span class="p">;</span>
+  <span class="n">trame</span><span class="p">.</span><span class="n">humidity</span> <span class="o">=</span> <span class="mi">85</span><span class="p">;</span>
+  <span class="n">trame</span><span class="p">.</span><span class="n">seconde</span> <span class="o">=</span> <span class="mi">25</span><span class="p">;</span>
+  <span class="n">trame</span><span class="p">.</span><span class="n">analog0</span> <span class="o">=</span> <span class="mi">13</span><span class="o">*</span><span class="mi">256</span><span class="o">+</span><span class="mi">6</span><span class="p">;</span>
+  <span class="n">trame</span><span class="p">.</span><span class="n">analog3</span> <span class="o">=</span> <span class="mi">22</span><span class="o">*</span><span class="mi">256</span><span class="o">+</span><span class="mi">11</span><span class="p">;</span>
+  <span class="n">Serial</span><span class="p">.</span><span class="n">begin</span><span class="p">(</span><span class="mi">9600</span><span class="p">);</span>
+  <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;</span> <span class="mi">20</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">){</span>
+    <span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="n">trame</span><span class="p">.</span><span class="n">_trame</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
+  <span class="p">}</span>
+
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">loop</span><span class="p">()</span> <span class="p">{</span>
+  <span class="c1">// put your main code here, to run repeatedly:</span>
+
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="smart-pointer">
+<h2><a class="toc-backref" href="#sommaire">Smart pointer</a><a class="headerlink" href="#smart-pointer" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">smart</span> <span class="n">pointer</span>
+    <span class="n">A</span> <span class="n">revoir</span>
+        <span class="n">wrox</span><span class="o">-</span><span class="n">press</span><span class="o">-</span><span class="n">ivor</span><span class="o">-</span><span class="n">horton</span><span class="o">-</span><span class="n">s</span><span class="o">-</span><span class="n">beginning</span><span class="o">-</span><span class="n">visual</span><span class="o">-</span><span class="n">c</span><span class="o">-</span><span class="mi">2013</span><span class="o">-</span><span class="mf">2014.</span><span class="n">pdf</span>
+        <span class="o">/</span><span class="n">c</span><span class="o">++/</span><span class="n">MFC</span><span class="o">/</span><span class="n">wrox</span><span class="o">-</span><span class="n">press</span><span class="o">-</span><span class="n">ivor</span><span class="o">-</span><span class="n">horton</span><span class="o">-</span><span class="n">s</span><span class="o">-</span><span class="n">beginning</span><span class="o">-</span><span class="n">visual</span><span class="o">-</span><span class="n">c</span><span class="o">-</span><span class="mi">2013</span><span class="o">-</span><span class="mf">2014.</span><span class="n">pdf</span>
+            <span class="n">dans</span> <span class="n">le</span> <span class="n">bookin</span> <span class="n">les</span> <span class="n">liens</span> <span class="n">vers</span> <span class="n">les</span> <span class="n">sources</span> <span class="n">sont</span> <span class="n">fauts</span>
+            <span class="o">&lt;</span><span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">www</span><span class="o">.</span><span class="n">wrox</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">WileyCDA</span><span class="o">/</span><span class="n">WroxTitle</span><span class="o">/</span><span class="n">Ivor</span><span class="o">-</span><span class="n">Horton</span><span class="o">-</span><span class="n">s</span><span class="o">-</span><span class="n">Beginning</span><span class="o">-</span><span class="n">Visual</span><span class="o">-</span><span class="n">C</span><span class="o">-</span><span class="mf">2013.</span><span class="n">productCd</span><span class="o">-</span><span class="mi">1118845714</span><span class="p">,</span><span class="n">descCd</span><span class="o">-</span><span class="n">DOWNLOAD</span><span class="o">.</span><span class="n">html</span><span class="o">&gt;</span>
+        <span class="n">p485</span>
+    <span class="n">std</span> <span class="n">namespace</span>
+    <span class="n">template</span> <span class="nb">type</span>
+    <span class="n">Ce</span> <span class="n">sont</span> <span class="n">des</span> <span class="n">pointeur</span> <span class="n">qui</span> <span class="n">surveillent</span> <span class="n">l</span><span class="s1">&#39;usage de la mémoire et se détruise tout seul quand ils ne sont plus nécessaire</span>
+    <span class="n">Allocation</span> <span class="n">dynamique</span>
+    <span class="n">Pas</span> <span class="n">besoin</span> <span class="n">d</span><span class="s1">&#39;utiliser delete</span>
+    <span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span>
+    <span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span>
+    <span class="n">weak_ptr</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="callback-how-to">
+<h2><a class="toc-backref" href="#sommaire">callback how to</a><a class="headerlink" href="#callback-how-to" title="Lien permanent vers ce titre">¶</a></h2>
+<p>A approfondir</p>
+<p>Un truc sympa c’est de déclarer un nouveau type:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">typedef</span> <span class="n">void</span> <span class="p">(</span><span class="o">*</span><span class="n">timer_callback</span><span class="p">)(</span><span class="n">void</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>Après on peut l’utiliser comme paramètre d’une autre fonction</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">int</span> <span class="n">setInterval</span><span class="p">(</span><span class="n">long</span> <span class="n">d</span><span class="p">,</span> <span class="n">timer_callback</span> <span class="n">f</span><span class="p">);</span>
+</pre></div>
+</div>
+<hr class="docutils" />
+</div>
+<div class="section" id="doxygen-avec-arduino">
+<span id="index-18"></span><h2><a class="toc-backref" href="#sommaire">Doxygen avec Arduino</a><a class="headerlink" href="#doxygen-avec-arduino" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Il y 2 parmaètres à fixer dans Doxygen pour prendre en compte les fichiers .ino:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">FILE_PATTERNS</span> <span class="o">=</span> <span class="p">[</span><span class="o">...</span><span class="p">]</span> <span class="o">*.</span><span class="n">ino</span> <span class="n">sous</span> <span class="n">Input</span>
+<span class="n">EXTENSION_MAPPING</span> <span class="o">=</span> <span class="n">ino</span><span class="o">=</span><span class="n">c</span> <span class="n">under</span> <span class="s2">&quot;Project&quot;</span>
+</pre></div>
+</div>
+<hr class="docutils" />
+</div>
+<div class="section" id="uml">
+<span id="index-19"></span><h2><a class="toc-backref" href="#sommaire">UML</a><a class="headerlink" href="#uml" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Pour le moment tout est dans le fichier Freemind cpp-notes (voir dossier projet IotEps - essais ModelIO)</p>
+<p>ModelIo vite abandonnée.</p>
+<p><a class="reference external" href="https://www.uml-diagrams.org/">Site sur les diagrammes UML</a> <a class="footnote-reference brackets" href="#id16" id="id17">8</a></p>
+<div class="section" id="plantuml">
+<span id="index-20"></span><h3><a class="toc-backref" href="#sommaire">PlantUML</a><a class="headerlink" href="#plantuml" title="Lien permanent vers ce titre">¶</a></h3>
+<p><a class="reference external" href="https://plantuml.com/fr/">Site officiel de PlantUML</a> <a class="footnote-reference brackets" href="#id18" id="id19">9</a></p>
+<p>PlantUML est surtout un langage de description comme le dot de Graphviz. D’ailleurs si on veut</p>
+<p>utiliser l’intégralité des graphiques listés, il faut avoir Graphviz installé ;-)</p>
+<p id="index-21"><a class="reference external" href="https://graphviz.org/">site officiel de GraphViz</a> <a class="footnote-reference brackets" href="#id20" id="id21">10</a> La doc est en ligne.</p>
+<p>Il y a évidement des extension Visual Studio Code ;-)</p>
+<p>Le <a class="reference download internal" download="" href="../_downloads/ce10494cef78726b363b50fb4f70cb17/PlantUML_Language_Reference_Guide_fr.pdf"><code class="xref download docutils literal notranslate"><span class="pre">guide</span> <span class="pre">du</span> <span class="pre">langage</span> <span class="pre">existe</span> <span class="pre">en</span> <span class="pre">pdf</span> <span class="pre">fr</span></code></a>.</p>
+<p>citation:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">PlantUML</span> <span class="n">est</span> <span class="n">un</span> <span class="n">composant</span> <span class="n">qui</span> <span class="n">permet</span> <span class="n">de</span> <span class="n">dessiner</span> <span class="n">rapidement</span> <span class="n">des</span><span class="p">:</span>
+    <span class="n">diagrammes</span> <span class="n">de</span> <span class="n">séquence</span>
+    <span class="n">diagrammes</span> <span class="n">de</span> <span class="n">cas</span> <span class="n">d</span><span class="s1">&#39;utilisation</span>
+    <span class="n">diagrammes</span> <span class="n">de</span> <span class="n">classes</span>
+    <span class="n">diagrammes</span> <span class="n">d</span><span class="s1">&#39;objet</span>
+    <span class="n">diagrammes</span> <span class="n">d</span><span class="s1">&#39;activité (ici l&#39;</span><span class="n">ancienne</span> <span class="n">syntaxe</span><span class="p">)</span>
+    <span class="n">diagrammes</span> <span class="n">de</span> <span class="n">composant</span>
+    <span class="n">diagrammes</span> <span class="n">de</span> <span class="n">déploiement</span>
+    <span class="n">diagrammes</span> <span class="n">d</span><span class="s1">&#39;état</span>
+    <span class="n">diagrammes</span> <span class="n">de</span> <span class="n">temps</span>
+<span class="n">Certains</span> <span class="n">autres</span> <span class="n">diagrammes</span> <span class="p">(</span><span class="n">hors</span> <span class="n">UML</span><span class="p">)</span> <span class="n">sont</span> <span class="n">aussi</span> <span class="n">possibles</span><span class="p">:</span>
+    <span class="n">données</span> <span class="n">au</span> <span class="nb">format</span> <span class="n">JSON</span>
+    <span class="n">données</span> <span class="n">au</span> <span class="nb">format</span> <span class="n">YAML</span>
+    <span class="n">diagrammes</span> <span class="n">de</span> <span class="n">réseaux</span> <span class="p">(</span><span class="n">nwdiag</span><span class="p">)</span>
+    <span class="n">maquettes</span> <span class="n">d</span><span class="s1">&#39;interface graphique (salt)</span>
+    <span class="n">diagrammes</span> <span class="n">Archimate</span>
+    <span class="n">diagrammes</span> <span class="n">de</span> <span class="n">langage</span> <span class="n">de</span> <span class="n">description</span> <span class="n">et</span> <span class="n">de</span> <span class="n">spécification</span> <span class="p">(</span><span class="n">LDS</span><span class="p">)</span> <span class="n">ou</span> <span class="n">Specification</span> <span class="ow">and</span> <span class="n">Description</span> <span class="n">Language</span> <span class="p">(</span><span class="n">SDL</span><span class="p">)</span>
+    <span class="n">diagrammes</span> <span class="n">ditaa</span>
+    <span class="n">diagrammes</span> <span class="n">de</span> <span class="n">Gantt</span>
+    <span class="n">diagrammes</span> <span class="n">d</span><span class="s1">&#39;idées (mindmap)</span>
+    <span class="n">organigramme</span> <span class="n">ou</span> <span class="n">Work</span> <span class="n">Breakdown</span> <span class="n">Structure</span> <span class="p">(</span><span class="n">WBS</span><span class="p">)</span>
+    <span class="n">notation</span> <span class="n">mathématique</span> <span class="n">avec</span> <span class="n">AsciiMath</span> <span class="n">ou</span> <span class="n">JLaTeXMath</span>
+    <span class="n">diagrammes</span> <span class="n">entité</span> <span class="n">relation</span> <span class="p">(</span><span class="n">ER</span><span class="o">/</span><span class="n">IE</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>PlantUML est une application en java qui ne s’intalle pas et est entièrement contenu dans un seul
+fichier .jar</p>
+<p>Le lancemet est brutal, pas de fioritures!</p>
+<a class="reference internal image-reference" href="../_images/plantUMLstartUpScreen.JPG"><img alt="../_images/plantUMLstartUpScreen.JPG" src="../_images/plantUMLstartUpScreen.JPG" style="width: 300px;" /></a>
+<p>Il existe de nombreux outils en ligne pour expérimenter comme <a class="reference external" href="https://www.planttext.com/">planttext.com</a> <a class="footnote-reference brackets" href="#id22" id="id23">11</a></p>
+</div>
+</div>
+<div class="section" id="ast-abstract-syntax-trees">
+<span id="abstractsyntaxtrees"></span><h2><a class="toc-backref" href="#sommaire">AST Abstract Syntax Trees</a><a class="headerlink" href="#ast-abstract-syntax-trees" title="Lien permanent vers ce titre">¶</a></h2>
+<p><a class="reference external" href="https://fr.wikipedia.org/wiki/Arbre_de_la_syntaxe_abstraite">AST sur wikipédia</a> <a class="footnote-reference brackets" href="#id24" id="id25">12</a></p>
+<p>Serait un moyen possible pour tenter de documenter du code…</p>
+</div>
+<div class="section" id="weblinks">
+<h2><a class="toc-backref" href="#sommaire">Weblinks</a><a class="headerlink" href="#weblinks" title="Lien permanent vers ce titre">¶</a></h2>
+<dl class="footnote brackets">
+<dt class="label" id="id2"><span class="brackets"><a class="fn-backref" href="#id3">1</a></span></dt>
+<dd><p><a class="reference external" href="https://openclassrooms.com/fr/courses/1894236-programmez-avec-le-langage-c">https://openclassrooms.com/fr/courses/1894236-programmez-avec-le-langage-c</a></p>
+</dd>
+<dt class="label" id="id4"><span class="brackets"><a class="fn-backref" href="#id5">2</a></span></dt>
+<dd><p><a class="reference external" href="https://docs.microsoft.com/fr-fr/cpp/cpp/namespaces-cpp?view=vs-2019">https://docs.microsoft.com/fr-fr/cpp/cpp/namespaces-cpp?view=vs-2019</a></p>
+</dd>
+<dt class="label" id="id6"><span class="brackets"><a class="fn-backref" href="#id7">3</a></span></dt>
+<dd><p><a class="reference external" href="https://cpp.developpez.com/faq/cpp/?page=Les-namespaces">https://cpp.developpez.com/faq/cpp/?page=Les-namespaces</a></p>
+</dd>
+<dt class="label" id="id8"><span class="brackets"><a class="fn-backref" href="#id9">4</a></span></dt>
+<dd><p><a class="reference external" href="https://openclassrooms.com/fr/courses/1894236-programmez-avec-le-langage-c/1903999-creez-des-templates">https://openclassrooms.com/fr/courses/1894236-programmez-avec-le-langage-c/1903999-creez-des-templates</a></p>
+</dd>
+<dt class="label" id="id10"><span class="brackets"><a class="fn-backref" href="#id11">5</a></span></dt>
+<dd><p><a class="reference external" href="https://openclassrooms.com/fr/courses/1894236-programmez-avec-le-langage-c/1898632-mettez-en-oeuvre-le-polymorphisme#/id/r-1908359">https://openclassrooms.com/fr/courses/1894236-programmez-avec-le-langage-c/1898632-mettez-en-oeuvre-le-polymorphisme#/id/r-1908359</a></p>
+</dd>
+<dt class="label" id="id12"><span class="brackets"><a class="fn-backref" href="#id13">6</a></span></dt>
+<dd><p><a class="reference external" href="https://openclassrooms.com/fr/courses/1894236-programmez-avec-le-langage-c/1898734-utilisez-les-elements-statiques-et-lamitie#/id/r-1908555">https://openclassrooms.com/fr/courses/1894236-programmez-avec-le-langage-c/1898734-utilisez-les-elements-statiques-et-lamitie#/id/r-1908555</a></p>
+</dd>
+<dt class="label" id="id14"><span class="brackets"><a class="fn-backref" href="#id15">7</a></span></dt>
+<dd><p><a class="reference external" href="https://fr.cppreference.com/w/cpp/container/vector">https://fr.cppreference.com/w/cpp/container/vector</a></p>
+</dd>
+<dt class="label" id="id16"><span class="brackets"><a class="fn-backref" href="#id17">8</a></span></dt>
+<dd><p><a class="reference external" href="https://www.uml-diagrams.org/">https://www.uml-diagrams.org/</a></p>
+</dd>
+<dt class="label" id="id18"><span class="brackets"><a class="fn-backref" href="#id19">9</a></span></dt>
+<dd><p><a class="reference external" href="https://plantuml.com/fr/">https://plantuml.com/fr/</a></p>
+</dd>
+<dt class="label" id="id20"><span class="brackets"><a class="fn-backref" href="#id21">10</a></span></dt>
+<dd><p><a class="reference external" href="https://graphviz.org/">https://graphviz.org/</a></p>
+</dd>
+<dt class="label" id="id22"><span class="brackets"><a class="fn-backref" href="#id23">11</a></span></dt>
+<dd><p><a class="reference external" href="https://www.planttext.com/">https://www.planttext.com/</a></p>
+</dd>
+<dt class="label" id="id24"><span class="brackets"><a class="fn-backref" href="#id25">12</a></span></dt>
+<dd><p><a class="reference external" href="https://fr.wikipedia.org/wiki/Arbre_de_la_syntaxe_abstraite">https://fr.wikipedia.org/wiki/Arbre_de_la_syntaxe_abstraite</a></p>
+</dd>
+</dl>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../index.html">Table des matières</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Mes notes sur C++</a><ul>
+<li><a class="reference internal" href="#c-operators-surcharge">C++ opérators (surcharge)</a><ul>
+<li><a class="reference internal" href="#surcharge-operateur">Surcharge opérateur ==, &gt;, …</a></li>
+<li><a class="reference internal" href="#surcharge-des-operateurs-arithmetiques">Surcharge des opérateurs arithmétiques</a></li>
+<li><a class="reference internal" href="#surcharge-de-l-operateur">Surcharge de l’opérateur &lt;&lt;</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#namespace">Namespace</a></li>
+<li><a class="reference internal" href="#template">Template</a><ul>
+<li><a class="reference internal" href="#specialisation">Spécialisation</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#membres-statiques">Membres statiques</a></li>
+<li><a class="reference internal" href="#passage-par-reference">Passage par référence</a></li>
+<li><a class="reference internal" href="#heritage">Héritage</a></li>
+<li><a class="reference internal" href="#polymorphisme">Polymorphisme</a></li>
+<li><a class="reference internal" href="#classe-amie-et-fonction-amie">Classe amie et fonction amie</a></li>
+<li><a class="reference internal" href="#vector">Vector</a><ul>
+<li><a class="reference internal" href="#iterer-un-tableau-rappel">Itérer un tableau rappel</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#classe-abstraite-et-methodes-virtuelles-pures">Classe abstraite et méthodes virtuelles pures</a></li>
+<li><a class="reference internal" href="#fonctions-qui-retourne-un-reference">Fonctions qui retourne un référence</a></li>
+<li><a class="reference internal" href="#constructeur-de-copie">Constructeur de copie</a><ul>
+<li><a class="reference internal" href="#id1">Surcharge de l’opérateur =</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#printf-format">printf format</a></li>
+<li><a class="reference internal" href="#typedef-struct-co">Typedef, struct &amp; co</a><ul>
+<li><a class="reference internal" href="#typedef">Typedef</a></li>
+<li><a class="reference internal" href="#struct">struct</a></li>
+<li><a class="reference internal" href="#enum">enum</a></li>
+<li><a class="reference internal" href="#typedef-et-les-fonctions">typedef et les fonctions</a></li>
+<li><a class="reference internal" href="#champs-de-bits">Champs de bits</a></li>
+<li><a class="reference internal" href="#exemple-trame-serie">Exemple trame série</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#smart-pointer">Smart pointer</a></li>
+<li><a class="reference internal" href="#callback-how-to">callback how to</a></li>
+<li><a class="reference internal" href="#doxygen-avec-arduino">Doxygen avec Arduino</a></li>
+<li><a class="reference internal" href="#uml">UML</a><ul>
+<li><a class="reference internal" href="#plantuml">PlantUML</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#ast-abstract-syntax-trees">AST Abstract Syntax Trees</a></li>
+<li><a class="reference internal" href="#weblinks">Weblinks</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Sujet précédent</h4>
+  <p class="topless"><a href="../hardware/nucleo/nucleo.html"
+                        title="Chapitre précédent">NUCLEO board *</a></p>
+  <h4>Sujet suivant</h4>
+  <p class="topless"><a href="visualCpp/visual.html"
+                        title="Chapitre suivant">Note concernant Visal C++ 2013 *</a></p>
+  <div role="note" aria-label="source link">
+    <h3>Cette page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/C++/cpp.rst.txt"
+            rel="nofollow">Montrer le code source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Recherche rapide</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="Index général"
+             >index</a></li>
+        <li class="right" >
+          <a href="visualCpp/visual.html" title="Note concernant Visal C++ 2013 *"
+             >suivant</a> |</li>
+        <li class="right" >
+          <a href="../hardware/nucleo/nucleo.html" title="NUCLEO board *"
+             >précédent</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Documentation MajorLee&#39;s notes </a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2019, J.SORANZO.
+      Créé avec <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.4.
+    </div>
+  </body>
+</html>

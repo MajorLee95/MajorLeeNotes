@@ -1,0 +1,1106 @@
+
+<!DOCTYPE html>
+
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <title>NUCLEO board * &#8212; Documentation MajorLee&#39;s notes </title>
+    <link rel="stylesheet" href="../../_static/nature.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
+    <script src="../../_static/translations.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Recherche" href="../../search.html" />
+    <link rel="next" title="Mes notes sur C++" href="../../C++/cpp.html" />
+    <link rel="prev" title="Raspberry pi*" href="../raspberry/raspberry.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="Index général"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../C++/cpp.html" title="Mes notes sur C++"
+             accesskey="N">suivant</a> |</li>
+        <li class="right" >
+          <a href="../raspberry/raspberry.html" title="Raspberry pi*"
+             accesskey="P">précédent</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">Documentation MajorLee&#39;s notes </a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../hardware.html" accesskey="U">Hardware notes</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="nucleo-board">
+<span id="index-0"></span><h1><a class="toc-backref" href="#sommaire">NUCLEO board *</a><a class="headerlink" href="#nucleo-board" title="Lien permanent vers ce titre">¶</a></h1>
+<dl class="field-list simple">
+<dt class="field-odd">Auteur</dt>
+<dd class="field-odd"><p>J.Soranzo</p>
+</dd>
+<dt class="field-even">Date</dt>
+<dd class="field-even"><p>Mars 2020</p>
+</dd>
+<dt class="field-odd">Societe</dt>
+<dd class="field-odd"><p>VoRoBoTics</p>
+</dd>
+<dt class="field-even">Entity</dt>
+<dd class="field-even"><p>VoLAB</p>
+</dd>
+</dl>
+<div class="contents topic" id="sommaire">
+<p class="topic-title">Sommaire</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#nucleo-board" id="id63">NUCLEO board *</a></p>
+<ul>
+<li><p><a class="reference internal" href="#presentation" id="id64">Présentation</a></p>
+<ul>
+<li><p><a class="reference internal" href="#carte-nucleo-f401re" id="id65">Carte NUCLEO-F401RE</a></p></li>
+<li><p><a class="reference internal" href="#carte-nucleo-f429zi" id="id66">Carte NUCLEO-F429ZI</a></p></li>
+<li><p><a class="reference internal" href="#nucleo-f746zg" id="id67">NUCLEO-F746ZG</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#differences-entre-cartes" id="id68">Différences entre cartes</a></p></li>
+<li><p><a class="reference internal" href="#outils-de-developpement" id="id69">Outils de développement</a></p>
+<ul>
+<li><p><a class="reference internal" href="#autres-outils-de-developpement" id="id70">Autres outils de développement</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#les-pdf-etudies" id="id71">Les pdf étudiés</a></p>
+<ul>
+<li><p><a class="reference internal" href="#gettingstarted-firmware-en-dm00105925-pdf" id="id72">gettingStarted_firmware_en.DM00105925.pdf</a></p></li>
+<li><p><a class="reference internal" href="#stm32cubef4gettingstarted-pdf" id="id73">STM32CubeF4GettingStarted.pdf</a></p></li>
+<li><p><a class="reference internal" href="#um1718-cubemx-pdf" id="id74">UM1718_CubeMX.pdf</a></p></li>
+<li><p><a class="reference internal" href="#getting-started-with-stm32-nucleo-board-software-development-tools-stmicroelectronics-pdf" id="id75">getting-started-with-stm32-nucleo-board-software-development-tools-stmicroelectronics.pdf</a></p></li>
+<li><p><a class="reference internal" href="#um1725-description-of-stm32f4-hal-and-ll-drivers-dm00105879" id="id76">UM1725 Description of STM32F4 HAL and LL drivers DM00105879</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#mes-manips-de-2015" id="id77">Mes manips de 2015</a></p></li>
+<li><p><a class="reference internal" href="#mes-manips-2020" id="id78">Mes manips 2020</a></p>
+<ul>
+<li><p><a class="reference internal" href="#toggleledcubemx" id="id79">toggleLeDCubeMX</a></p></li>
+<li><p><a class="reference internal" href="#pushbuttoninterrup" id="id80">pushButtonInterrup</a></p></li>
+<li><p><a class="reference internal" href="#uartandrxit" id="id81">uartAndRXIt</a></p></li>
+<li><p><a class="reference internal" href="#rx-with-dma" id="id82">RX with DMA</a></p></li>
+<li><p><a class="reference internal" href="#rx-through-idle-line-interrupt" id="id83">RX through idle line interrupt</a></p></li>
+<li><p><a class="reference internal" href="#stm32-i2c-scanner" id="id84">STM32 I2C scanner</a></p></li>
+<li><p><a class="reference internal" href="#stm32-i2c-oled-0-96" id="id85">STM32 I2C OLED 0.96</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#stm32workbench-minimum-project" id="id86">STM32Workbench minimum project</a></p></li>
+<li><p><a class="reference internal" href="#autres-drivers-et-outils" id="id87">Autres drivers et outils</a></p></li>
+<li><p><a class="reference internal" href="#cmsis" id="id88">CMSIS</a></p></li>
+<li><p><a class="reference internal" href="#freertos-sur-nucleo" id="id89">FreeRTOS sur NUCLEO</a></p></li>
+<li><p><a class="reference internal" href="#tips" id="id90">Tips</a></p>
+<ul>
+<li><p><a class="reference internal" href="#doxygen-support" id="id91">Doxygen support</a></p></li>
+<li><p><a class="reference internal" href="#nulceo-f401-doesn-t-start-in-stand-alone-mode" id="id92">NULCEO-F401 doesn’t start in stand alone mode</a></p></li>
+<li><p><a class="reference internal" href="#nop" id="id93">NOP</a></p></li>
+<li><p><a class="reference internal" href="#uart-console-in-ide" id="id94">UART console in IDE</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#weblinks" id="id95">Weblinks</a></p></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="presentation">
+<span id="refnucleoboard"></span><h2><a class="toc-backref" href="#sommaire">Présentation</a><a class="headerlink" href="#presentation" title="Lien permanent vers ce titre">¶</a></h2>
+<p>3 type de cartes 32, 64, 144 : fonction de la taille du boîtier du composant utiliés!</p>
+<p>LQFP64 package, LQFP144 package</p>
+<p><a class="reference external" href="https://wiki.st.com/stm32mcu/wiki/Main_Page">STM32MCU wiki</a> <a class="footnote-reference brackets" href="#id5" id="id6">3</a></p>
+<p><a class="reference external" href="https://www.st.com/en/evaluation-tools/stm32-nucleo-boards.html#overview">NUCLEO-overview</a> <a class="footnote-reference brackets" href="#id1" id="id2">1</a></p>
+<p><a class="reference external" href="https://www.mouser.fr/new/stmicroelectronics/stm-stm32-nucleo-144-dev-boards/">NUCLEO-144_MOUSER</a> <a class="footnote-reference brackets" href="#id3" id="id4">2</a></p>
+<p>RCC acronym : Reset and Control Clcok</p>
+<div class="section" id="carte-nucleo-f401re">
+<h3><a class="toc-backref" href="#sommaire">Carte NUCLEO-F401RE</a><a class="headerlink" href="#carte-nucleo-f401re" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Chip: STM32F401RE (R = 64pin package, E = 512k FLASH)</p>
+<a class="reference internal image-reference" href="../../_images/nucleoF401reBoard.jpg"><img alt="../../_images/nucleoF401reBoard.jpg" src="../../_images/nucleoF401reBoard.jpg" style="width: 500px;" /></a>
+<a class="reference internal image-reference" href="../../_images/F401xE_features.jpg"><img alt="../../_images/F401xE_features.jpg" src="../../_images/F401xE_features.jpg" style="width: 500px;" /></a>
+<p>Carte NUCLEO64</p>
+<p>Prix indicatif : 13€ <a class="reference external" href="https://www.mouser.fr/ProductDetail/STMicroelectronics/NUCLEO-F401RE?qs=sGAEpiMZZMu3sxpa5v1qrjJpfJ%2F%252BCrSiyHUXpPlRNo4%3D">NUCLEO-F401RE chez MOUSER</a> <a class="footnote-reference brackets" href="#id9" id="id10">5</a></p>
+<p><strong>Osc clock supply</strong>
+See in UM1724 STM32 Nucleo-64 boards (MB1136) §6.7</p>
+<p><strong>Ressources pour le dev</strong>
+Ok il y a CubeMX qui mâche bien le boulot.</p>
+<p>Ok il y a les pdf, mais il n’y en a pas de spécifique à cette carte en particulier.</p>
+<p>On a:</p>
+<ul class="simple">
+<li><p>La doc du processeur : la datasheet ne contient pas les registres des périph (135 pages)</p></li>
+<li><p>PM0214 : programming manuel 245 pages : mais bon sans plus, à relire un de ces prochains jours.</p></li>
+<li><p>RM0368 : Reference manuel 835 pages</p></li>
+<li><p>UM NUCLEO board 64 : UM1724 : forunit quelques précieuse informations parfois.</p></li>
+</ul>
+<p>Mais on peut aussi s’aider de la doc dcoxygen généré (cf. Modules/STM32F4xx_HAL_Driver)</p>
+<p>Mais quand tout ça ne suffit pas :</p>
+<p>Exemple la fonction : HAL_GPIO_Init accepte un premier paramètre de type : GPIO_TypeDef qui n’est
+pas tellement documenté.</p>
+<p>Tips: l’IDE fournit un moyen rapide d’accéder à sa déclaration et on apprend ainsi qu’elle se trouve
+dans le fichier:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">/</span><span class="n">CMSIS</span><span class="o">/</span><span class="n">Device</span><span class="o">/</span><span class="n">ST</span><span class="o">/</span><span class="n">STM32F4xx</span><span class="o">/</span><span class="n">Include</span><span class="o">/</span><span class="n">stm32f401xe</span><span class="o">.</span><span class="n">h</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="carte-nucleo-f429zi">
+<h3><a class="toc-backref" href="#sommaire">Carte NUCLEO-F429ZI</a><a class="headerlink" href="#carte-nucleo-f429zi" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Chip: STM32F429ZI (Z = 144pin package, I = 2048k FLASH)</p>
+<p>32b Arm® Cortex®-M4 MCU+FPU, 225DMIPS, up to 2MB Flash/256+4KB RAM, USB
+OTG HS/FS, Ethernet, 17 TIMs, 3 ADCs, 20 com. interfaces, camera &amp; LCD-TFT</p>
+<a class="reference internal image-reference" href="../../_images/NUCLEO-F429ZI.jpg"><img alt="../../_images/NUCLEO-F429ZI.jpg" src="../../_images/NUCLEO-F429ZI.jpg" style="width: 500px;" /></a>
+<a class="reference internal image-reference" href="../../_images/F429_features.jpg"><img alt="../../_images/F429_features.jpg" src="../../_images/F429_features.jpg" style="width: 500px;" /></a>
+<p>Carte NUCLE144</p>
+<p>Prix indicatif : 26€ <a class="reference external" href="https://www.mouser.fr/ProductDetail/STMicroelectronics/NUCLEO-F429ZI?qs=mKNKSX85ZJcE6FU0UkiXTA==&amp;vip=1&amp;gclid=CjwKCAjwguzzBRBiEiwAgU0FT1UiJxq6z6simiBPlGAwmrXBhkqT_WmzdohmaAP8F2i-SyZEE2RqPRoConUQAvD_BwE">NUCLEO-F429ZI chez MOUSER</a> <a class="footnote-reference brackets" href="#id7" id="id8">4</a></p>
+</div>
+<div class="section" id="nucleo-f746zg">
+<h3><a class="toc-backref" href="#sommaire">NUCLEO-F746ZG</a><a class="headerlink" href="#nucleo-f746zg" title="Lien permanent vers ce titre">¶</a></h3>
+<p>(Z = 144pin package, G = 1024k FLASH)</p>
+<p>Cortex M7 (architecture ARM V7)</p>
+<p>High-performance and DSP with FPU ARM Cortex-M7 MCU with 1 Mbyte Flash, 216 MHz CPU, Art Accelerator
+L1 cache, 320k ( 64k of data TCM RAM for critical real-time data) + 16KB of instruction TCM RAM
+(for critical real-time routines) + 4KB of backup SRAM (available in the lowest power modes)</p>
+<p>single precision FPU</p>
+<p>Prix indicatif : 22€</p>
+<p>Nécessite d’installer STM32CubeF7</p>
+</div>
+</div>
+<div class="section" id="differences-entre-cartes">
+<h2><a class="toc-backref" href="#sommaire">Différences entre cartes</a><a class="headerlink" href="#differences-entre-cartes" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Quelle différence entre un F429-ZI et une NUCLEO-F746ZG ?</p>
+<p>Je n’ai personnelement pas trouvé de source facile et fiable.</p>
+<a class="reference internal image-reference" href="../../_images/en.ln1847_stm32_nucleo.jpg"><img alt="../../_images/en.ln1847_stm32_nucleo.jpg" src="../../_images/en.ln1847_stm32_nucleo.jpg" style="width: 400px;" /></a>
+<p>Source image : <a class="reference external" href="https://www.st.com/en/evaluation-tools/stm32-nucleo-boards.html#overview">site st STM32 Nucleo Boards</a> <a class="footnote-reference brackets" href="#id1" id="id11">1</a></p>
+<p>Cortex M4F versus M7 ?</p>
+<p>Un <a class="reference external" href="https://community.arm.com/developer/ip-products/processors/f/cortex-m-forum/5686/m4-m7-comparision">article sur community arm</a> <a class="footnote-reference brackets" href="#id12" id="id13">6</a></p>
+<p>Sans oublier <a class="reference external" href="https://en.wikipedia.org/wiki/ARM_Cortex-M#Cortex-M7">Cortex M sur wikipedia</a> <a class="footnote-reference brackets" href="#id14" id="id15">7</a></p>
+</div>
+<div class="section" id="outils-de-developpement">
+<h2><a class="toc-backref" href="#sommaire">Outils de développement</a><a class="headerlink" href="#outils-de-developpement" title="Lien permanent vers ce titre">¶</a></h2>
+<p>STM32CubeMX est l’outil indispensable et <strong>IL FAUT COMMENCER par LUI</strong> voir <a class="reference internal" href="#um1718-cubemx-pdf">UM1718_CubeMX.pdf</a>
+J’utilise actuellement (04/2020) la version 5.6.0</p>
+<p>STM32 workbench développé par ACSYSY ou AC6. Dans la litérature ST cette suite logiciel se nome
+SW4STM32. Il en est question sur la <a class="reference external" href="https://www.st.com/en/development-tools/sw4stm32.html">page officiielle SW4STM32</a> <a class="footnote-reference brackets" href="#id16" id="id17">8</a> qui renvoie vers
+<a class="reference external" href="https://www.openstm32.org/HomePage">la page openstm32</a> <a class="footnote-reference brackets" href="#id18" id="id19">9</a></p>
+<p>Cet outil est basé sur Eclipse. Je ne suis pas fan. Je trouve que tout cela est très lourd ! Mais
+comme ces petits microcontroleurs ont l’air plein de potentiel, je fais l’effort…</p>
+<p>System Worbench for STM32 : vers qui faut-il se trouner pour avoir de l’aide ?</p>
+<p>Eclipse, Acsys ou ST ? ou peut-ête vers <a class="reference external" href="https://www.openstm32.org/HomePage">le site openstm32.org</a> <a class="footnote-reference brackets" href="#id18" id="id20">9</a> (ce qui reviens à peut près
+au même que AC6)</p>
+<p>Exemple la commande Format du menu Source ! On fini par la trouver dans l’aide de Eclipse:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">C</span><span class="o">/</span><span class="n">C</span><span class="o">++</span> <span class="n">Development</span> <span class="n">User</span> <span class="n">Guide</span><span class="o">/</span><span class="n">Reference</span><span class="o">/</span><span class="n">C</span><span class="o">/</span><span class="n">C</span><span class="o">++</span> <span class="n">Menubar</span><span class="o">/</span><span class="n">Source</span> <span class="n">Menu</span>
+</pre></div>
+</div>
+<div class="section" id="autres-outils-de-developpement">
+<h3><a class="toc-backref" href="#sommaire">Autres outils de développement</a><a class="headerlink" href="#autres-outils-de-developpement" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Officiellement sur le <a class="reference external" href="https://www.st.com/en/development-tools/stm32-ides.html">site ST outils de dev</a> <a class="footnote-reference brackets" href="#id23" id="id24">11</a>, il y a :</p>
+<a class="reference internal image-reference" href="../../_images/outilsDev.jpg"><img alt="../../_images/outilsDev.jpg" src="../../_images/outilsDev.jpg" style="width: 600px;" /></a>
+<p>La page product selector annonce 32 items au 10/04/2020, la plupart sont payant comme IAR, KEIL</p>
+<p>Atolic TrueStudio =&gt; remplacé par <a class="reference external" href="https://www.st.com/en/development-tools/stm32cubeide.html">STM32cubeIDE</a> <a class="footnote-reference brackets" href="#id21" id="id22">10</a></p>
+<p>Au niveau des fonctionnalité cela ressemble à STM32workbench si ce n’est que ST annonce une forte
+intégration avec STM32cubeMX.</p>
+<p>KEIL uVision</p>
+<p>Qt possible également : il faudra que j’explore cela !</p>
+</div>
+</div>
+<div class="section" id="les-pdf-etudies">
+<h2><a class="toc-backref" href="#sommaire">Les pdf étudiés</a><a class="headerlink" href="#les-pdf-etudies" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Il y en a des tas !!! Il y a même des fichiers .chm dans les packages. Exemples:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">STM32Cube_FW_F4_V1</span><span class="o">.</span><span class="mf">25.0</span>\<span class="n">Drivers</span>\<span class="n">BSP</span>\<span class="n">STM32F4xx</span><span class="o">-</span><span class="n">Nucleo</span>
+<span class="n">STM32Cube_FW_F4_V1</span><span class="o">.</span><span class="mf">25.0</span>\<span class="n">Drivers</span>\<span class="n">STM32F4xx_HAL_Driver</span> <span class="n">et</span> <span class="n">là</span> <span class="n">pas</span> <span class="n">de</span> <span class="n">bol</span> <span class="n">il</span> <span class="n">n</span><span class="s1">&#39;y a rien pour</span>
+<span class="n">NUCLEO</span><span class="o">-</span><span class="n">F401</span> <span class="n">snif</span>
+</pre></div>
+</div>
+<div class="section" id="gettingstarted-firmware-en-dm00105925-pdf">
+<h3><a class="toc-backref" href="#sommaire">gettingStarted_firmware_en.DM00105925.pdf</a><a class="headerlink" href="#gettingstarted-firmware-en-dm00105925-pdf" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Getting started with the STM32 Nucleo board firmware package UM1726</p>
+<p>16 pages DocID025839 Rev 2 de avil <strong>2014</strong></p>
+<p>This document describes the software, firmware environment and development
+recommendations required to build an application around the STM32 Nucleo board
+(NUCLEO-F103RB, NUCLEO-L152RE, NUCLEO-F030R8 and NUCLEO-F302R8) with
+some demonstration firmware (STSW-STM32143).</p>
+<p>Remarque : SSTSW-STM32143 : TM32 Nucleo examples, based on Standard Peripheral Library (UM1726)</p>
+<p>Ce document parle du firmware package:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">The</span> <span class="n">STM32</span> <span class="n">Nucleo</span> <span class="n">board</span> <span class="n">firmware</span> <span class="n">drivers</span> <span class="ow">and</span> <span class="n">examples</span> <span class="n">are</span> <span class="n">based</span> <span class="n">on</span> <span class="n">the</span> <span class="n">Standard</span>
+<span class="n">Peripheral</span> <span class="n">library</span><span class="p">,</span> <span class="ow">and</span> <span class="n">are</span> <span class="n">provided</span> <span class="ow">in</span> <span class="n">one</span> <span class="n">single</span> <span class="n">package</span> <span class="n">supplied</span> <span class="ow">in</span> <span class="n">a</span> <span class="nb">zip</span> <span class="n">file</span><span class="o">.</span> <span class="n">The</span>
+<span class="n">extraction</span> <span class="n">of</span> <span class="n">the</span> <span class="nb">zip</span> <span class="n">file</span> <span class="n">generates</span> <span class="n">one</span> <span class="n">folder</span><span class="p">,</span> <span class="n">STM32_Nucleo_FW_VX</span><span class="o">.</span><span class="n">Y</span><span class="o">.</span><span class="n">Z</span>
+</pre></div>
+</div>
+<dl class="simple">
+<dt>Et pas en.stm32cubef4_v1-25-0.zip ? Je n’ai pas trouvé d’autre zip sur le site ! Ce genre de petites</dt><dd><p>incohérences rendent les choses encore plus compliquées qu’elles ne sont.</p>
+</dd>
+</dl>
+<p>J’ai décompacté la version cube que j’ai du zip dans dossier 1 et l’arborescence ne correspond pas
+complètement à ce qui est décrit dans le document ! Or, on trouve dans l’arbo en question un
+document d’explication plus récent que celui-ci : UM1730 de février 2019</p>
+<a class="reference internal image-reference" href="../../_images/stm32package.jpg"><img alt="../../_images/stm32package.jpg" src="../../_images/stm32package.jpg" style="width: 800px;" /></a>
+<p>Adresse de cette copie d’écran : page <a class="reference external" href="https://www.st.com/content/st_com/en/products/evaluation-tools/product-evaluation-tools/mcu-mpu-eval-tools/stm32-mcu-mpu-eval-tools/stm32-nucleo-boards/nucleo-f401re.html#tools-software">nucleo-F401RE Tools and Softwares</a> <a class="footnote-reference brackets" href="#id25" id="id26">12</a></p>
+<p>J’abandonne donc l’étude du présent document pour me consacré à ce document plus récent.</p>
+</div>
+<div class="section" id="stm32cubef4gettingstarted-pdf">
+<h3><a class="toc-backref" href="#sommaire">STM32CubeF4GettingStarted.pdf</a><a class="headerlink" href="#stm32cubef4gettingstarted-pdf" title="Lien permanent vers ce titre">¶</a></h3>
+<p><strong>Getting started with STM32CubeF4 MCU Package for STM32F4 Series</strong> UM1730 février 2019 28 pages</p>
+<p>manip du 22/03/2020 : tentative d’ouvir l’exemple GPIO toggle</p>
+<p>Workspace:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">...</span>\<span class="n">STM32Cube_FW_F4_V1</span><span class="o">.</span><span class="mf">25.0</span>\<span class="n">Projects</span>\<span class="n">STM32F401RE</span><span class="o">-</span><span class="n">Nucleo</span>
+</pre></div>
+</div>
+<p>Quand on change d’espace de travail, l’application redémarre entièrement et est très longue à
+redémarrer !</p>
+<dl class="simple">
+<dt>Quand on importe le projet, il se nomme STM32F4xx-Nucleo et pas GPIO ! et tous les exemples risquent</dt><dd><p>de se nommer ainsi. Il y a un post sur le forum : <a class="reference external" href="https://www.openstm32.org/forumthread774">Rename projects ..Does that work ?</a> <a class="footnote-reference brackets" href="#id27" id="id28">13</a></p>
+</dd>
+</dl>
+<p><strong>Essai 1</strong> : import avec copy to workspace: 6 warning invalid projet path (des chemin relatifs):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Description</span> <span class="n">Resource</span>        <span class="n">Path</span>    <span class="n">Location</span>        <span class="n">Type</span>
+<span class="n">Invalid</span> <span class="n">project</span> <span class="n">path</span><span class="p">:</span> <span class="n">Include</span> <span class="n">path</span> <span class="ow">not</span> <span class="n">found</span> <span class="p">(</span><span class="n">C</span><span class="p">:</span>\<span class="n">MountWD</span>\<span class="mi">00</span><span class="o">-</span><span class="n">Outils</span>\<span class="mi">06</span><span class="o">-</span><span class="n">ConceptionDeveloppement</span>\<span class="n">ST</span>\<span class="n">STM32Cube_FW_F4_V1</span><span class="o">.</span><span class="mf">25.0</span>\<span class="n">Projects</span>\<span class="n">Inc</span><span class="p">)</span><span class="o">.</span>     <span class="n">STM32F4xx</span><span class="o">-</span><span class="n">Nucleo</span>                <span class="n">pathentry</span>       <span class="n">Path</span> <span class="n">Entry</span> <span class="n">Problem</span>
+<span class="n">Invalid</span> <span class="n">project</span> <span class="n">path</span><span class="p">:</span> <span class="n">Include</span> <span class="n">path</span> <span class="ow">not</span> <span class="n">found</span> <span class="p">(</span><span class="n">C</span><span class="p">:</span>\<span class="n">MountWD</span>\<span class="mi">00</span><span class="o">-</span><span class="n">Outils</span>\<span class="mi">06</span><span class="o">-</span><span class="n">ConceptionDeveloppement</span>\<span class="n">ST</span>\<span class="n">STM32Cube_FW_F4_V1</span><span class="o">.</span><span class="mf">25.0</span>\<span class="n">Projects</span>\<span class="n">STM32F401RE</span><span class="o">-</span><span class="n">Nucleo</span>\<span class="n">STM32F4xx</span><span class="o">-</span><span class="n">Nucleo</span>\<span class="n">Debug</span><span class="p">)</span><span class="o">.</span>       <span class="n">STM32F4xx</span><span class="o">-</span><span class="n">Nucleo</span>                <span class="n">pathentry</span>       <span class="n">Path</span> <span class="n">Entry</span> <span class="n">Problem</span>
+<span class="n">Invalid</span> <span class="n">project</span> <span class="n">path</span><span class="p">:</span> <span class="n">Include</span> <span class="n">path</span> <span class="ow">not</span> <span class="n">found</span> <span class="p">(</span><span class="n">C</span><span class="p">:</span>\<span class="n">MountWD</span>\<span class="n">Drivers</span>\<span class="n">BSP</span>\<span class="n">STM32F4xx</span><span class="o">-</span><span class="n">Nucleo</span><span class="p">)</span><span class="o">.</span>     <span class="n">STM32F4xx</span><span class="o">-</span><span class="n">Nucleo</span>                <span class="n">pathentry</span>       <span class="n">Path</span> <span class="n">Entry</span> <span class="n">Problem</span>
+<span class="n">Invalid</span> <span class="n">project</span> <span class="n">path</span><span class="p">:</span> <span class="n">Include</span> <span class="n">path</span> <span class="ow">not</span> <span class="n">found</span> <span class="p">(</span><span class="n">C</span><span class="p">:</span>\<span class="n">MountWD</span>\<span class="n">Drivers</span>\<span class="n">CMSIS</span>\<span class="n">Device</span>\<span class="n">ST</span>\<span class="n">STM32F4xx</span>\<span class="n">Include</span><span class="p">)</span><span class="o">.</span>        <span class="n">STM32F4xx</span><span class="o">-</span><span class="n">Nucleo</span>                <span class="n">pathentry</span>       <span class="n">Path</span> <span class="n">Entry</span> <span class="n">Problem</span>
+<span class="n">Invalid</span> <span class="n">project</span> <span class="n">path</span><span class="p">:</span> <span class="n">Include</span> <span class="n">path</span> <span class="ow">not</span> <span class="n">found</span> <span class="p">(</span><span class="n">C</span><span class="p">:</span>\<span class="n">MountWD</span>\<span class="n">Drivers</span>\<span class="n">CMSIS</span>\<span class="n">Include</span><span class="p">)</span><span class="o">.</span>    <span class="n">STM32F4xx</span><span class="o">-</span><span class="n">Nucleo</span>                <span class="n">pathentry</span>       <span class="n">Path</span> <span class="n">Entry</span> <span class="n">Problem</span>
+<span class="n">Invalid</span> <span class="n">project</span> <span class="n">path</span><span class="p">:</span> <span class="n">Include</span> <span class="n">path</span> <span class="ow">not</span> <span class="n">found</span> <span class="p">(</span><span class="n">C</span><span class="p">:</span>\<span class="n">MountWD</span>\<span class="n">Drivers</span>\<span class="n">STM32F4xx_HAL_Driver</span>\<span class="n">Inc</span><span class="p">)</span><span class="o">.</span> <span class="n">STM32F4xx</span><span class="o">-</span><span class="n">Nucleo</span>                <span class="n">pathentry</span>       <span class="n">Path</span> <span class="n">Entry</span> <span class="n">Problem</span>
+</pre></div>
+</div>
+<p>Evidement cela ne compile pas : no rule to make.</p>
+<p><strong>Essai 2</strong> : sans copy : toujours un warning et toujours pas de possibilité de build sans créer une
+nouevelle target comme pour l’essai 1. Je n’ai même pas essayé de compiler</p>
+<p><strong>Essai 3</strong> : le workspace directement au niveau de l’exemple et au plus près:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">...</span>\<span class="n">STM32F401RE</span><span class="o">-</span><span class="n">Nucleo</span>\<span class="n">Examples</span>\<span class="n">GPIO</span>\<span class="n">GPIO_IOToggle</span>\<span class="n">SW4STM32</span>
+</pre></div>
+</div>
+<p>Cette configuration fonctionne au moins.</p>
+<p>Dans le document, on apprend que le package contient:</p>
+<ul class="simple">
+<li><p>STM32Cube <a class="reference internal" href="../../glossaire.html#term-HAL"><span class="xref std std-term">HAL</span></a> STM32 abstraction layer embedded software maximizing portability across the STM32 portfolio</p></li>
+<li><p>low-layer APIs (LL) for a set of peripherals, offering a fast, lightweight, expert-oriented layer that is closer to the hardware than the HAL</p></li>
+<li><p>a consistent set of middleware components, such as RTOS, USB, TCP/IP and graphics</p></li>
+<li><p>all embedded software utilities, with a full set of examples</p></li>
+</ul>
+<p>Pour information : <a class="reference internal" href="../../glossaire.html#term-BSP"><span class="xref std std-term">BSP</span></a> Board Support Package</p>
+<p>Au chapitre 3, §3.1, il est écrit:  « The user only has to define the right macro in stm32f4xx.h »
+Or dans les exemples fournis, on ne trouve ni trace de cette macro ni même de ce fichier !
+La confusion, la confusion… Je ne l’ai trouvé dans les fichiers : <a class="reference internal" href="#cmsis">CMSIS</a></p>
+<p><strong>Etude du §4.2 How to develop an application</strong></p>
+<p>4.2.1 HAL app. Une note très importante</p>
+<div class="admonition warning">
+<p class="admonition-title">Avertissement</p>
+<p>If an existing project is copied into another location, the include path must be updated.</p>
+</div>
+<p>Sauf qu’on ne nous dit pas comment !</p>
+<p>En résumé:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mf">1.</span> <span class="n">Create</span> <span class="n">a</span> <span class="n">project</span>
+<span class="mf">2.</span> <span class="n">Add</span> <span class="n">the</span> <span class="n">necessary</span> <span class="n">middleware</span> <span class="n">to</span> <span class="n">the</span> <span class="n">project</span> <span class="p">(</span><span class="n">optional</span><span class="p">)</span>
+<span class="mf">3.</span> <span class="n">Configure</span> <span class="n">the</span> <span class="n">firmware</span> <span class="n">components</span>
+<span class="mf">4.</span> <span class="n">Start</span> <span class="n">the</span> <span class="n">HAL</span> <span class="n">Library</span>
+<span class="mf">5.</span> <span class="n">Configure</span> <span class="n">the</span> <span class="n">system</span> <span class="n">clock</span>
+<span class="mf">6.</span> <span class="n">Peripheral</span> <span class="n">initialization</span>
+<span class="mf">7.</span> <span class="n">Develop</span> <span class="n">an</span> <span class="n">application</span> <span class="n">process</span>
+</pre></div>
+</div>
+<p>Avec l’expérience, je dirais qu’en ce qui concerne STM32Workbench, il est nettement préférable
+de laisser faire le wizard. Et même là c’est gagné! Voit <a class="reference internal" href="#stm32workbench-minimum-project">STM32Workbench minimum project</a></p>
+</div>
+<div class="section" id="um1718-cubemx-pdf">
+<h3><a class="toc-backref" href="#sommaire">UM1718_CubeMX.pdf</a><a class="headerlink" href="#um1718-cubemx-pdf" title="Lien permanent vers ce titre">¶</a></h3>
+<p>STM32CubeMX for STM32 configuration and initialization C code generation</p>
+<p>UM1718 User manual 363 pages rev 31 12/2019.</p>
+<p>C’est la doc de CubeMX : a graphical software configuration tool that allows to generate C
+initialization C code using graphical wizards.</p>
+<p>En revenche, il y est question de
+HAL driver user manuals for STM32F4xx (UM1725)</p>
+<p>Il semble que cela soit un outil <strong>indispensable</strong> pour démarrer un nouveau projet.</p>
+<p>Vidéo <a class="reference external" href="https://www.youtube.com/watch?v=szMGedsp9jc">Youtube pour Stm32CubeMX</a> <a class="footnote-reference brackets" href="#id29" id="id30">14</a></p>
+<div class="admonition warning">
+<p class="admonition-title">Avertissement</p>
+<p>Voir le menu help/doc and ressources (il y a encore plein de pdf..)</p>
+</div>
+<p>Initilize all periperals in their default mode ? Mais quel est-il, je n’ai encore rien pu trouvé
+à ce sujet. En fait, page 62/363, on trouve:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Selecting</span> <span class="n">a</span> <span class="n">board</span> <span class="ow">and</span> <span class="n">accepting</span> <span class="n">to</span> <span class="n">initialize</span> <span class="nb">all</span> <span class="n">peripherals</span> <span class="n">to</span> <span class="n">their</span> <span class="n">default</span> <span class="n">mode</span>
+<span class="n">automatically</span> <span class="n">sets</span> <span class="n">both</span> <span class="n">the</span> <span class="n">pinout</span> <span class="ow">and</span> <span class="n">the</span> <span class="n">default</span> <span class="n">modes</span> <span class="k">for</span> <span class="n">the</span> <span class="n">peripherals</span> <span class="n">available</span>
+<span class="n">on</span> <span class="n">the</span> <span class="n">board</span><span class="o">.</span> <span class="n">This</span> <span class="n">means</span> <span class="n">that</span> <span class="n">STM32CubeMX</span> <span class="n">generates</span> <span class="n">the</span> <span class="n">C</span> <span class="n">initialization</span> <span class="n">code</span> <span class="k">for</span> <span class="nb">all</span> <span class="n">the</span>
+<span class="n">peripherals</span> <span class="n">available</span> <span class="n">on</span> <span class="n">the</span> <span class="n">board</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">only</span> <span class="k">for</span> <span class="n">those</span> <span class="n">relevant</span> <span class="n">to</span> <span class="n">the</span> <span class="n">user</span> <span class="n">application</span>
+</pre></div>
+</div>
+<p>J’en déduit qu’il vaut mieux répondre non. Mais cubeMX configure quand même tout ce qui est horloge
+et reset.</p>
+<p>L’HELP de cubeMX renvoi vers le présent document.</p>
+</div>
+<div class="section" id="getting-started-with-stm32-nucleo-board-software-development-tools-stmicroelectronics-pdf">
+<h3><a class="toc-backref" href="#sommaire">getting-started-with-stm32-nucleo-board-software-development-tools-stmicroelectronics.pdf</a><a class="headerlink" href="#getting-started-with-stm32-nucleo-board-software-development-tools-stmicroelectronics-pdf" title="Lien permanent vers ce titre">¶</a></h3>
+<p>dm00105928- UM1727 22 pages de Janvier 2016</p>
+<p>Getting started with STM32 Nucleo board softwaredevelopment tools, <strong>UM1730</strong> semble plus à jour.</p>
+<p>Petite description des différentes chaînes de dev</p>
+<p><strong>N’apporte rien !</strong></p>
+</div>
+<div class="section" id="um1725-description-of-stm32f4-hal-and-ll-drivers-dm00105879">
+<h3><a class="toc-backref" href="#sommaire">UM1725 Description of STM32F4 HAL and LL drivers DM00105879</a><a class="headerlink" href="#um1725-description-of-stm32f4-hal-and-ll-drivers-dm00105879" title="Lien permanent vers ce titre">¶</a></h3>
+<p>1838 pages Fev 2017</p>
+<p>C’est assurément un document <strong>MAJEUR</strong> dans l’utilisation des STM32.</p>
+<p>L’étude de ce document va de paire avec l’étude du répertoire en question:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">...</span>\<span class="n">STM32Cube_FW_F4_V1</span><span class="o">.</span><span class="mf">25.0</span>\<span class="n">Drivers</span>\<span class="n">STM32F4xx_HAL_Driver</span>
+</pre></div>
+</div>
+<p>Il est à noter que tout le code contient des commentaire compatible avec Doxygen donc on peut
+en faire l’extraction mais cela peut-ête long.</p>
+<p>Les drivers HAL, en fait les fonctions pour accéder aux composants du microcontroleur sont découpés
+en modules fonctionnels. Ils offrent non seulement une indépendance du code vis-à-vis du micro mais
+présentent en plus un certains nombre de caractérisitiques particulièrement intéressantes:</p>
+<ul class="simple">
+<li><p>3 modèles de programmation: polling, interrupt and DMA.</p></li>
+<li><p>APIs sont compatible RTOS</p></li>
+<li><p>Mécanisme de verouillage d’objet</p></li>
+<li><p>multiple instance call</p></li>
+<li><p>callback fonctions…</p></li>
+</ul>
+<p id="index-1">Les fichiers .c/.h sont fournis par périphériques développés en ANSI-C strict pour un maximum de
+compatibilité et entièrement documenté et <a class="reference external" href="https://en.wikipedia.org/wiki/MISRA_C">MISRA-C 2004</a> <a class="footnote-reference brackets" href="#id31" id="id32">15</a> compliant. La liste est longue,
+j’en ai dénombré 68:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">_adc</span><span class="p">,</span> <span class="n">_adc_ex</span><span class="p">,</span> <span class="n">_can</span><span class="p">,</span> <span class="n">_cec</span><span class="p">,</span> <span class="n">_cortex</span><span class="p">,</span> <span class="n">_crc</span><span class="p">,</span> <span class="n">_cryp</span><span class="p">,</span> <span class="n">_cryp_ex</span><span class="p">,</span> <span class="n">_dac</span><span class="p">,</span> <span class="n">_dac_ex</span><span class="p">,</span> <span class="n">_dcmi</span><span class="p">,</span> <span class="n">_dcmi_ex</span><span class="p">,</span> <span class="n">_def</span><span class="p">,</span>
+<span class="n">_dfsdm</span><span class="p">,</span> <span class="n">_dma</span><span class="p">,</span> <span class="n">_dma2d</span><span class="p">,</span> <span class="n">_dma_ex</span><span class="p">,</span> <span class="n">_dsi</span><span class="p">,</span> <span class="n">_eth</span><span class="p">,</span> <span class="n">_exti</span><span class="p">,</span> <span class="n">_flash</span><span class="p">,</span> <span class="n">_flash_ex</span><span class="p">,</span> <span class="n">_flash_ramfunc</span><span class="p">,</span> <span class="n">_fmpi2c</span><span class="p">,</span>
+<span class="n">_fmpi2c_ex</span><span class="p">,</span> <span class="n">_fmpsmbus</span><span class="p">,</span> <span class="n">_gpio</span><span class="p">,</span> <span class="n">_gpio_ex</span><span class="p">,</span> <span class="n">_hash</span><span class="p">,</span> <span class="n">_hash_ex</span><span class="p">,</span> <span class="n">_hcd</span><span class="p">,</span> <span class="n">_i2c</span><span class="p">,</span> <span class="n">_i2c_ex</span><span class="p">,</span> <span class="n">_i2s</span><span class="p">,</span> <span class="n">_i2s_ex</span><span class="p">,</span>
+<span class="n">_irda</span><span class="p">,</span> <span class="n">_iwdg</span><span class="p">,</span> <span class="n">_lptim</span><span class="p">,</span> <span class="n">_ltdc</span><span class="p">,</span> <span class="n">_ltdc_ex</span><span class="p">,</span> <span class="n">_mmc</span><span class="p">,</span> <span class="n">_nand</span><span class="p">,</span> <span class="n">_nor</span><span class="p">,</span> <span class="n">_pccard</span><span class="p">,</span> <span class="n">_pcd</span><span class="p">,</span> <span class="n">_pcd_ex</span><span class="p">,</span> <span class="n">_pwr</span><span class="p">,</span> <span class="n">_pwr_ex</span><span class="p">,</span>
+<span class="n">_qspi</span><span class="p">,</span> <span class="n">_rcc</span><span class="p">,</span> <span class="n">_rcc_ex</span><span class="p">,</span> <span class="n">_rng</span><span class="p">,</span> <span class="n">_rtc</span><span class="p">,</span> <span class="n">_rtc_ex</span><span class="p">,</span> <span class="n">_sai</span><span class="p">,</span> <span class="n">_sai_ex</span><span class="p">,</span> <span class="n">_sd</span><span class="p">,</span> <span class="n">_sdram</span><span class="p">,</span> <span class="n">_smartcard</span><span class="p">,</span> <span class="n">_smbus</span><span class="p">,</span> <span class="n">_spdifrx</span><span class="p">,</span>
+<span class="n">_spi</span><span class="p">,</span> <span class="n">_sram</span><span class="p">,</span> <span class="n">_tim</span><span class="p">,</span> <span class="n">_tim_ex</span><span class="p">,</span> <span class="n">_uart</span><span class="p">,</span> <span class="n">_usart</span><span class="p">,</span> <span class="n">_wwdg</span><span class="p">,</span>
+</pre></div>
+</div>
+<p>Exemple : stm32f4xx_hal_can.h</p>
+<p>Chaque périphérique peut contenir 3 structures de données:</p>
+<ul class="simple">
+<li><p>Peripheral handle structures</p></li>
+<li><p>Initialization and configuration structures</p></li>
+<li><p>Specific process structures</p></li>
+</ul>
+<p><strong>Peripheral handle structures</strong>
+Une strucutre qui détient les carac. du périph. Exemple : USART_HandleTypeDef</p>
+<p>Son nom est de la forme nomPariph_HandleTypeDef (et comme sont nom l’évoque c’est un typedef)</p>
+<p>Il y a des exeptions à la règle de périph qui n’en on pas : (périphériques partagés et système)
+<strong>GPIO, SYSTICK, NVIC, PWR, RCC, FLASH</strong>.</p>
+<p><strong>Initialization and configuration structure</strong>
+Nom de la forme periphName_InitTypeDef comme dans l’exemple GPIO_toggle : GPIO_InitTypeDef</p>
+<p><strong>Specific process structures</strong>
+Pas à proprement parlé des structure au sens C mais l’ensemble des fonctions.</p>
+<p>Exemple : HAL_GPIO_Init(GPIOA, &amp;GPIO_InitStruct);</p>
+<p>Le nom est de la forme : HAL_nomPeriph_fonctionnalit( paramètres…)</p>
+<p>L’API HAL est divisée en 3 catégories en fonction de la spécificité du driver.</p>
+<ul class="simple">
+<li><p>généric</p></li>
+<li><p>propre à une famille de composants</p></li>
+<li><p>propre à un composant en particulier.</p></li>
+</ul>
+<p>Tous les composants n’embarque pas toutes les fonctionalités. En page 44, se trouve un tableau de
+correspondance entre composants et API. Ce tableau s’atend sur 4 page au format paysage et couvre
+17 composants :</p>
+<table class="hlist"><tr><td><ul class="simple">
+<li><p>STM32F405xx</p></li>
+<li><p>STM32F415xx</p></li>
+<li><p>STM32F407xx</p></li>
+<li><p>STM32F417xx</p></li>
+<li><p>STM32F427xx</p></li>
+</ul>
+</td><td><ul class="simple">
+<li><p>STM32F437xx</p></li>
+<li><p>STM32F429xx</p></li>
+<li><p>STM32F439xx</p></li>
+<li><p>STM32F401xC</p></li>
+</ul>
+</td><td><ul class="simple">
+<li><p>STM32F401xE</p></li>
+<li><p>STM32F446xx</p></li>
+<li><p>STM32F469xx</p></li>
+<li><p>STM32F479xx</p></li>
+</ul>
+</td><td><ul class="simple">
+<li><p>STM32F410xx</p></li>
+<li><p>STM32F412xx</p></li>
+<li><p>STM32F413xx</p></li>
+<li><p>STM32F423xx</p></li>
+</ul>
+</td></tr></table>
+<p>Total 86 fichiers .c répartis en :
+1 NA, 64 fichiers C HAL + 21 fichiers LL driver. Sur ce total, il en reste 34 HAL supportés
+par le F401xE:</p>
+<table class="hlist"><tr><td><ul class="simple">
+<li><p>stm32f4xx_hal.c</p></li>
+<li><p>stm32f4xx_hal_adc.c</p></li>
+<li><p>stm32f4xx_hal_adc_ex.c</p></li>
+<li><p>stm32f4xx_hal_cortex.c</p></li>
+<li><p>stm32f4xx_hal_crc.c</p></li>
+<li><p>stm32f4xx_hal_dma.c</p></li>
+<li><p>stm32f4xx_hal_dma_ex.c</p></li>
+<li><p>stm32f4xx_hal_flash.c</p></li>
+<li><p>stm32f4xx_hal_flash_ex.c</p></li>
+<li><p>stm32f4xx_hal_gpio.c</p></li>
+<li><p>stm32f4xx_hal_hcd.c</p></li>
+<li><p>stm32f4xx_hal_i2c.c</p></li>
+</ul>
+</td><td><ul class="simple">
+<li><p>stm32f4xx_hal_i2c_ex.c</p></li>
+<li><p>stm32f4xx_hal_i2s.c</p></li>
+<li><p>stm32f4xx_hal_i2s_ex.c</p></li>
+<li><p>stm32f4xx_hal_irda.c</p></li>
+<li><p>stm32f4xx_hal_iwdg.c</p></li>
+<li><p>stm32f4xx_hal_mmc.c</p></li>
+<li><p>stm32f4xx_hal_pcd.c</p></li>
+<li><p>stm32f4xx_hal_pcd_ex.c</p></li>
+<li><p>stm32f4xx_hal_pwr.c</p></li>
+<li><p>stm32f4xx_hal_rcc.c</p></li>
+<li><p>stm32f4xx_hal_rcc_ex.c</p></li>
+</ul>
+</td><td><ul class="simple">
+<li><p>stm32f4xx_hal_rng.c</p></li>
+<li><p>stm32f4xx_hal_rtc.c</p></li>
+<li><p>stm32f4xx_hal_rtc_ex.c</p></li>
+<li><p>stm32f4xx_hal_sd.c</p></li>
+<li><p>stm32f4xx_hal_smartcard.c</p></li>
+<li><p>stm32f4xx_hal_spi.c</p></li>
+<li><p>stm32f4xx_hal_tim.c</p></li>
+<li><p>stm32f4xx_hal_tim_ex.c</p></li>
+<li><p>stm32f4xx_hal_uart.c</p></li>
+<li><p>stm32f4xx_hal_usart.c</p></li>
+<li><p>stm32f4xx_hal_wwdg.c</p></li>
+</ul>
+</td></tr></table>
+<p>Et 15 ll:</p>
+<table class="hlist"><tr><td><ul class="simple">
+<li><p>stm32f4xx_ll_sdmmc.c</p></li>
+<li><p>stm32f4xx_ll_usb.c</p></li>
+<li><p>stm32f4xx_ll_adc.c</p></li>
+<li><p>stm32f4xx_ll_crc.c</p></li>
+<li><p>stm32f4xx_ll_dma.c</p></li>
+</ul>
+</td><td><ul class="simple">
+<li><p>stm32f4xx_ll_exti.c</p></li>
+<li><p>stm32f4xx_ll_gpio.c</p></li>
+<li><p>stm32f4xx_ll_i2c.c</p></li>
+<li><p>stm32f4xx_ll_pwr.c</p></li>
+<li><p>stm32f4xx_ll_rcc.c</p></li>
+</ul>
+</td><td><ul class="simple">
+<li><p>stm32f4xx_ll_rtc.c</p></li>
+<li><p>stm32f4xx_ll_spi.c</p></li>
+<li><p>stm32f4xx_ll_tim.c</p></li>
+<li><p>stm32f4xx_ll_usart.c</p></li>
+<li><p>stm32f4xx_ll_utils.c</p></li>
+</ul>
+</td></tr></table>
+<p>A signalé que les « driver » des catégories propre à une famille ou un composant on un suffixe _ex
+au nom de fichier et ne peuvent donc pas être différenciées ainsi. Le §2.5 rappelle ces règles ne
+nommage.</p>
+<p>Il y a des macro qui commence par <code class="docutils literal notranslate"><span class="pre">__HAL</span></code> pour autoriser les interruption par exemple. Voir §2.5.2</p>
+<p><strong>callback fonctions</strong></p>
+<p>Elles sont de 3 types : initialisation/déinitialisation, process cb et error handling cb.</p>
+<a class="reference internal image-reference" href="../../_images/nucleo_hal_suercbTable.jpg"><img alt="../../_images/nucleo_hal_suercbTable.jpg" src="../../_images/nucleo_hal_suercbTable.jpg" style="width: 500px;" /></a>
+<p><strong>HAL generic APIs</strong></p>
+<p>De manière générale et non-exhaustive, l’API HAL définie un certain nombre de fonctions communes:</p>
+<ul class="simple">
+<li><p>Initialization and de-initialization functions:HAL_PPP_Init(), HAL_PPP_DeInit()</p></li>
+<li><p>IO operation functions: HAL_PPP_Read(), HAL_PPP_Write(),HAL_PPP_Transmit(), HAL_PPP_Receive()</p></li>
+<li><p>Control functions:HAL_PPP_Set (), HAL_PPP_Get ().</p></li>
+<li><p>State and Errors functions: HAL_PPP_GetState (), HAL_PPP_GetError ().</p></li>
+</ul>
+<p>Il ne s’agit ici que d’un set général de focntions et selon le pariphérique considéré, d’autres
+fonctions existe comme start stop pour lancer les conversion d’un ADC…</p>
+<p><strong>HAL extension model cases</strong></p>
+<p>Il y a 5 manières utilisées pour définir des fonctions spécifiques (des extensions marquées par
+le suffixe _ex). Ces 5 manières sont décrite au §2.7.2. En fonction qu’il s’agisse de nouvelles
+fonctionnalités, ou de fonction surchargées pour une famille ou un composant en particuler.</p>
+<p><strong>File inclusion model</strong>
+Le seul fichier à include est stm32f4xx_hal.h, il référence tous les autres en cascade. Néamoins,
+il semblerait qu’il faille autoriser l’utilisation des ressources dans le fichier
+stm32f4xx_hal_conf.h. Example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#define USE_HAL_USART_MODULE</span>
+</pre></div>
+</div>
+<dl class="simple">
+<dt>Mais le §2.10, nous apprend que cette modification n’est pas mandatory ! Alors pourquoi nous embêter</dt><dd><p>avec ça ?!</p>
+</dd>
+</dl>
+<p>La suite du chapitre 2 décrit:
+HAL system peripheral handling (Clock, GPIO, SYSTIC, NVIC, EXTI, PWR, DMA), How to use HAL drivers
+(init, IO process, timeout and error managment).</p>
+<p>Pour le moment je fais l’impasse sur les LL driver du chapitre 3 puis le chapitre 4 sur la
+cohabitation HAL et LL vient ensuite la description de chaque API HAL puis LL (DMA, ADC, UART, CAN
+I2C…)</p>
+<p><strong>Example §34 HAL I2C Generic Driver</strong>
+Commence par la description de I2C_InitTypeDef, puis I2C_HandleTypeDef</p>
+<p>Puis tout est décrit: How to use this driver, Initialization and de-initialization functions,
+IO operation functions
+Peripheral State, Mode and Error functions, Detailed description of functions,
+Firmware driver defines.</p>
+<p>Le recours à la table des matières et à l’étude le moment venu du besoiin est plus qu’à conseiller.
+C’est vraiment la bible.</p>
+<p>Un aspect très intéressant dans la description est le point de vue des fonctions bloquantes et non
+bloquante est systématiquement étudiées.</p>
+<p>Place à l’utilisation maintenant !</p>
+</div>
+</div>
+<div class="section" id="mes-manips-de-2015">
+<h2><a class="toc-backref" href="#sommaire">Mes manips de 2015</a><a class="headerlink" href="#mes-manips-de-2015" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Décembre 2015, journal de manip en version OpenOffice, aidé du <a class="reference external" href="http://leanpub.com/mastering-stm32">livre de Carmine Noviello</a> <a class="footnote-reference brackets" href="#id33" id="id34">16</a></p>
+<p>Dans son livre Carmine porpose d’installer un chaine de développement basée sur Eclipse et GCC
+et s’en explique…</p>
+<p>Installation des outils:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Install</span> <span class="n">dans</span> <span class="n">c</span><span class="p">:</span>\<span class="n">STM32Toolchaine</span> <span class="n">comme</span> <span class="n">décrit</span> <span class="n">dans</span> <span class="n">le</span> <span class="n">livre</span> <span class="n">pour</span> <span class="n">ne</span> <span class="n">pas</span> <span class="n">être</span> <span class="n">emmerdé</span>
+<span class="n">dans</span> <span class="n">un</span> <span class="n">premier</span> <span class="n">temps</span><span class="o">.</span>
+<span class="n">Dézippe</span> <span class="n">versin</span> <span class="mi">64</span><span class="n">bits</span> <span class="o">=&gt;</span> <span class="n">une</span> <span class="n">ereur</span> <span class="n">à</span> <span class="n">propos</span> <span class="n">des</span> <span class="n">plug</span> <span class="ow">in</span>
+<span class="n">dl</span> <span class="n">java</span> <span class="n">mais</span> <span class="n">passage</span> <span class="n">de</span> <span class="n">la</span> <span class="n">page</span> <span class="n">it</span> <span class="n">à</span> <span class="n">fr</span><span class="o">.</span>
+<span class="n">Premier</span> <span class="n">lancement</span> <span class="n">d</span><span class="s1">&#39;Eclipse =&gt; error java</span>
+<span class="n">installjava</span> <span class="o">=&gt;</span> <span class="n">toujours</span> <span class="n">la</span> <span class="n">même</span> <span class="n">erreur</span><span class="o">.</span>
+<span class="n">Recommencer</span> <span class="n">avec</span> <span class="n">version</span> <span class="mi">32</span> <span class="n">bits</span><span class="p">,</span> <span class="n">ça</span> <span class="n">marche</span><span class="o">.</span>
+<span class="n">Install</span> <span class="n">ECLIPSE</span> <span class="o">+</span> <span class="n">Plugin</span> <span class="p">:</span> <span class="n">OK</span>
+<span class="n">Install</span> <span class="n">GCC</span><span class="o">-</span><span class="n">arm</span> <span class="n">avec</span> <span class="n">le</span> <span class="n">conseil</span> <span class="n">sur</span> <span class="n">le</span> <span class="n">PATH</span> <span class="n">suivi</span><span class="o">.</span>
+<span class="n">Install</span> <span class="n">Build</span> <span class="n">Tools</span> <span class="p">:</span>
+<span class="n">Dl</span> <span class="n">version</span> <span class="mi">32</span> <span class="n">bits</span>
+<span class="n">Installation</span> <span class="n">sans</span> <span class="n">problème</span>
+<span class="n">openocd</span> <span class="p">:</span> <span class="n">pas</span> <span class="n">d</span><span class="s1">&#39;install, juste un unzip et un rennommage</span>
+<span class="n">ST</span> <span class="n">Tools</span>
+<span class="n">STM32CubeMX</span> <span class="o">=&gt;</span> <span class="n">ok</span>
+<span class="n">ST</span><span class="o">-</span><span class="n">LINK</span> <span class="n">Utility</span> <span class="o">=&gt;</span> <span class="n">ok</span>
+<span class="n">Install</span> <span class="n">Nucleo</span> <span class="n">drivers</span><span class="p">:</span> <span class="n">dl</span> <span class="n">sous</span> <span class="n">forme</span> <span class="n">de</span> <span class="nb">zip</span><span class="p">,</span> <span class="n">renommage</span> <span class="n">du</span> <span class="n">fichier</span> <span class="n">en</span> <span class="n">NucleoDriver</span><span class="o">.</span><span class="n">zip</span>
+<span class="n">Upgrade</span> <span class="n">ST</span><span class="o">-</span><span class="n">LINK</span> <span class="n">firmware</span> <span class="n">OK</span>
+<span class="n">Temps</span> <span class="n">pour</span> <span class="n">installer</span> <span class="n">tout</span> <span class="n">ça</span> <span class="mi">3</span> <span class="n">heures</span>
+<span class="n">Next</span> <span class="n">stage</span> <span class="n">hello</span> <span class="n">word</span>
+
+<span class="n">à</span> <span class="n">suivre</span><span class="o">...</span>
+</pre></div>
+</div>
+<p>Manip micro Python cf journal au 25/12/2015 (à récupérer pour mettre ici)</p>
+<p>Et <a class="reference external" href="https://github.com/stm32duino/wiki/wiki/Getting-Started">STM32duino</a> <a class="footnote-reference brackets" href="#id35" id="id36">17</a> ?</p>
+</div>
+<div class="section" id="mes-manips-2020">
+<h2><a class="toc-backref" href="#sommaire">Mes manips 2020</a><a class="headerlink" href="#mes-manips-2020" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Après bien des déboires avec SW4STM32 d’AC6, j’ai découvert STM32CubeMX et la oh! miracle ça devient
+si limpide !</p>
+<p>Du coup dans mon espace de travail, j’ai:</p>
+<div class="section" id="toggleledcubemx">
+<h3><a class="toc-backref" href="#sommaire">toggleLeDCubeMX</a><a class="headerlink" href="#toggleledcubemx" title="Lien permanent vers ce titre">¶</a></h3>
+<ul class="simple">
+<li><p>un message RS sur UART2 toutes les 1s dans une boucle while</p></li>
+<li><p>la LED sur PA5 qui clignote à 200ms grâce au TIM2 sous interruption.</p></li>
+</ul>
+<p>Le plus gros du boulot est dans CubeMX mais l’interface de CubeMX est tellement simple que cela ne
+présente pas de grosses difficultés.</p>
+</div>
+<div class="section" id="pushbuttoninterrup">
+<h3><a class="toc-backref" href="#sommaire">pushButtonInterrup</a><a class="headerlink" href="#pushbuttoninterrup" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Objectif: utiliser le bouton poussoir de la carte sous interruption.</p>
+<p>On commence dans CubeMX, mais avant une petite recherche Youtube. On ne trouve que pour Keil mais
+la partie CubeMX doit être la même. Mots clés: cubeMx AC6 push button</p>
+<p><a class="reference external" href="https://www.youtube.com/watch?v=sWe4kvzLMjY">Vidéo Youtube de  MYaqoobEmbedded</a> <a class="footnote-reference brackets" href="#id37" id="id38">18</a></p>
+<p><a class="reference external" href="https://www.youtube.com/watch?v=0I53r0KmOxg">Vidéo Youtube de KGP Talkie</a> <a class="footnote-reference brackets" href="#id39" id="id40">19</a></p>
+<p>Problème de débounce. Solution HAL_getTick() if (prev-new &gt; 25) toggle.</p>
+<p>Ne pas oublier de remettre à 0 prev et new</p>
+<p>HAL_getTick retourne un uint32_t soit 4 294 967 296‬ms ou encore 1193.05 heures 49jours17heures.</p>
+<p>On pourrait avec getTick interdire l’it push button pendant 25ms par exemple.</p>
+<blockquote>
+<div><p>Ma solution:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="nf">EXTI15_10_IRQHandler</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="cm">/* USER CODE BEGIN EXTI15_10_IRQn 0 */</span>
+<span class="c1">//  if (HAL_GPIO_ReadPin(GPIOC, GPIO_PIN_13) == GPIO_PIN_SET</span>
+<span class="c1">//                  &amp;&amp; btnIntDelay == 0 ){</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">btnIntDelay</span> <span class="o">==</span> <span class="mi">0</span> <span class="p">){</span>
+        <span class="n">btnIntDelay</span> <span class="o">=</span> <span class="n">HAL_GetTick</span><span class="p">();</span>
+        <span class="n">HAL_GPIO_TogglePin</span><span class="p">(</span><span class="n">GPIOA</span><span class="p">,</span> <span class="n">GPIO_PIN_5</span><span class="p">);</span>
+    <span class="p">}</span>
+  <span class="cm">/* USER CODE END EXTI15_10_IRQn 0 */</span>
+  <span class="n">HAL_GPIO_EXTI_IRQHandler</span><span class="p">(</span><span class="n">GPIO_PIN_13</span><span class="p">);</span>
+  <span class="cm">/* USER CODE BEGIN EXTI15_10_IRQn 1 */</span>
+    <span class="p">....</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p>La version du if qui test l’état de la pin 13 n’est pas une bonne idée car l’état peut être 0
+en cas de rebond justement</p>
+<blockquote>
+<div><p>Et dans le main:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">while</span> <span class="p">(</span><span class="mi">1</span><span class="p">){</span>
+      <span class="k">if</span> <span class="p">(</span> <span class="n">btnIntDelay</span> <span class="o">!=</span> <span class="mi">0</span> <span class="p">){</span>
+              <span class="k">if</span> <span class="p">(</span><span class="n">HAL_GetTick</span><span class="p">()</span> <span class="o">-</span> <span class="n">btnIntDelay</span> <span class="o">&gt;=</span> <span class="mi">25</span><span class="p">){</span>
+                      <span class="n">btnIntDelay</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+              <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Mieux, au lieu d’intervenir dans la fonction EXTI15_10_IRQHandler, utiliser
+<code class="docutils literal notranslate"><span class="pre">HAL_GPIO_EXTI_Callback(uint16_t</span> <span class="pre">GPIO_Pin)</span></code>:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="nf">HAL_GPIO_EXTI_Callback</span><span class="p">(</span><span class="kt">uint16_t</span> <span class="n">GPIO_Pin</span><span class="p">){</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">btnIntDelay</span> <span class="o">==</span> <span class="mi">0</span> <span class="o">&amp;&amp;</span> <span class="n">GPIO_Pin</span> <span class="o">==</span> <span class="n">GPIO_PIN_13</span><span class="p">){</span>
+        <span class="n">btnIntDelay</span> <span class="o">=</span> <span class="n">HAL_GetTick</span><span class="p">();</span>
+        <span class="n">HAL_GPIO_TogglePin</span><span class="p">(</span><span class="n">GPIOA</span><span class="p">,</span> <span class="n">GPIO_PIN_5</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="uartandrxit">
+<h3><a class="toc-backref" href="#sommaire">uartAndRXIt</a><a class="headerlink" href="#uartandrxit" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Commençons dans la doc de l’API puis par une recherche internet pour une fois afin de voir si la doc
+est suffisante. Ne pas oublier les exemples fournis dans STM32Cube_FW_F4_V1.25.0 !</p>
+<p>Configuration de CubeMX pour utiliser un UART avec interruption ? Relativement facile 1 cass à cocher
+sous l’onglet NVIC dans l’interface de configuration UART (j’ai choisi UART2)</p>
+<p>Fonction à utiliser : HAL_UART_Receive_IT</p>
+<p>Une vidéo plutôt bien faite sur <a class="reference external" href="https://www.youtube.com/watch?v=xE6GVt7XuJI">Youtube from  Web learning</a> <a class="footnote-reference brackets" href="#id41" id="id42">20</a></p>
+<p>Sans rien faire d’autre que d’ajouter <code class="docutils literal notranslate"><span class="pre">__HAL_UART_ENABLE_IT(&amp;huart2,</span> <span class="pre">UART_IT_RXNE);</span></code>, j’ai bien
+un branchement à <code class="docutils literal notranslate"><span class="pre">void</span> <span class="pre">USART2_IRQHandler(void)</span></code> mais seulement sur le premier caractère.</p>
+<p>J’ai réussi à obtenir de bon résultats avec:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="nf">USART2_IRQHandler</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="cm">/* USER CODE BEGIN USART2_IRQn 0 */</span>
+
+  <span class="cm">/* USER CODE END USART2_IRQn 0 */</span>
+  <span class="n">HAL_UART_IRQHandler</span><span class="p">(</span><span class="o">&amp;</span><span class="n">huart2</span><span class="p">);</span>
+  <span class="cm">/* USER CODE BEGIN USART2_IRQn 1 */</span>
+  <span class="n">__HAL_UART_FLUSH_DRREGISTER</span><span class="p">(</span><span class="o">&amp;</span><span class="n">huart2</span><span class="p">);</span>
+  <span class="n">__HAL_UART_CLEAR_FLAG</span><span class="p">(</span><span class="o">&amp;</span><span class="n">huart2</span><span class="p">,</span> <span class="n">UART_IT_RXNE</span><span class="p">);</span>
+  <span class="n">__HAL_UART_ENABLE_IT</span><span class="p">(</span><span class="o">&amp;</span><span class="n">huart2</span><span class="p">,</span> <span class="n">UART_IT_RXNE</span><span class="p">);</span>
+  <span class="cm">/* USER CODE END USART2_IRQn 1 */</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Autre façon de procéder avec <code class="docutils literal notranslate"><span class="pre">HAL_UART_Receive_IT(&amp;huart2,</span> <span class="pre">&amp;carac,</span> <span class="pre">1);</span></code> dans le main puis:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="nf">HAL_UART_RxCpltCallback</span><span class="p">(</span><span class="n">UART_HandleTypeDef</span> <span class="o">*</span><span class="n">huart</span><span class="p">){</span>
+<span class="c1">//concaténation avec un buffer plus grand ici par exemple</span>
+<span class="c1">//vérification si la transmission est complète</span>
+<span class="c1">//flag tansmission terminée</span>
+<span class="c1">//on peut aussi testé si c&#39;est le bon uart avec</span>
+<span class="c1">//    if( huart-&gt;Instance == USART2){</span>
+<span class="c1">//</span>
+<span class="c1">//    }</span>
+<span class="c1">//Réactivation de la réception d&#39;un caractère</span>
+<span class="n">HAL_UART_Receive_IT</span><span class="p">(</span><span class="o">&amp;</span><span class="n">huart2</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">carac</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>}</p>
+<p>La fonction <code class="docutils literal notranslate"><span class="pre">HAL_UART_Receive_IT</span></code> est très bien si on connait la taille des message à transmettre.</p>
+<p>Elle n’a pas de timeout. Mais comme elle n’est pas bloquante, on peut gérer les problèmes de non
+réponse ailleurs donc…</p>
+</div>
+<div class="section" id="rx-with-dma">
+<h3><a class="toc-backref" href="#sommaire">RX with DMA</a><a class="headerlink" href="#rx-with-dma" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Pas vraiment plus compliqué. Dans Cube MX, il faut aller dans l’onglet DMA de l’UART concerné et
+activer DMA RX</p>
+<a class="reference internal image-reference" href="../../_images/cubeMXUARTDMA.jpg"><img alt="../../_images/cubeMXUARTDMA.jpg" src="../../_images/cubeMXUARTDMA.jpg" style="width: 600px;" /></a>
+<p>Et dans le code on utlise :</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">HAL_UART_Receive_DMA</span><span class="p">(</span><span class="o">&amp;</span><span class="n">huart2</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">c</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span> <span class="c1">//dans le main et dans la fonction suivante</span>
+<span class="c1">//pour lancer la réception c: uint8_t</span>
+<span class="c1">//recevoir un caractère à la fois n&#39;est pas très efficient !</span>
+
+<span class="c1">//et</span>
+
+<span class="kt">void</span> <span class="n">HAL_UART_RxCpltCallback</span> <span class="p">(</span><span class="n">UART_HandleTypeDef</span> <span class="o">*</span><span class="n">huart</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Pour être plus efficient, iol y a la technique suivante</p>
+</div>
+<div class="section" id="rx-through-idle-line-interrupt">
+<span id="index-2"></span><h3><a class="toc-backref" href="#sommaire">RX through idle line interrupt</a><a class="headerlink" href="#rx-through-idle-line-interrupt" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Intéressant :IDLE line interrupt</p>
+<p><strong>Référence</strong>:</p>
+<p>Idle line received est une des 10 sources d’interruption de l’UART (cf. RM0368 rev5 page 507)</p>
+<p><strong>Des exemples</strong>:</p>
+<p><a class="reference external" href="https://programming.vip/docs/stm32-hal-library-learning-serial-idle-interrupt.html">https://programming.vip/docs/stm32-hal-library-learning-serial-idle-interrupt.html</a></p>
+<p><a class="reference external" href="https://www.youtube.com/watch?v=tWryJb2L0cU">https://www.youtube.com/watch?v=tWryJb2L0cU</a></p>
+<p>Attention, cette iterruption n’appelle pas la fonction HAL_UART_RxCpltCallback. Donc la bonne
+méthode est celle décrite dans l’article de mrkumar.</p>
+<p>On modifie USARTi_IRQHandler dans le fichier stm32f4xx_it.c pour appeler notre propre fonction
+callback. Sauf que mrkumar crée d’abord un fonction USER_UART_IRQHandler qui appelle sa fonction
+callback USAR_UART_IDLECallback().</p>
+<p>A l’intérieur de ces fonctions, on utilise <code class="docutils literal notranslate"><span class="pre">huart.Instance</span> <span class="pre">==</span> <span class="pre">USART2</span></code> afin de déterminer si on
+traite bien le bon UART (pour être tout à fait générique).</p>
+<p>J’ai obtenu de bon résultats avec le code suivant dans le fichier stm32f4xx_it.c:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="nf">USART2_IRQHandler</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="cm">/* USER CODE BEGIN USART2_IRQn 0 */</span>
+
+  <span class="cm">/* USER CODE END USART2_IRQn 0 */</span>
+  <span class="n">HAL_UART_IRQHandler</span><span class="p">(</span><span class="o">&amp;</span><span class="n">huart2</span><span class="p">);</span>
+  <span class="cm">/* USER CODE BEGIN USART2_IRQn 1 */</span>
+  <span class="n">USER_UART_rxIddleCallback</span><span class="p">(</span> <span class="o">&amp;</span><span class="n">huart2</span> <span class="p">);</span>
+  <span class="cm">/* USER CODE END USART2_IRQn 1 */</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>puis en ajoutant à la fin du main.c</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="nf">USER_UART_rxIddleCallback</span><span class="p">(</span> <span class="n">UART_HandleTypeDef</span> <span class="o">*</span><span class="n">huart</span> <span class="p">){</span>
+    <span class="n">__NOP</span><span class="p">();</span>
+    <span class="n">HAL_UART_DMAStop</span><span class="p">(</span> <span class="o">&amp;</span><span class="n">huart2</span> <span class="p">);</span>
+    <span class="kt">uint8_t</span> <span class="n">data_length</span>  <span class="o">=</span> <span class="n">RX_BUF_SIZE</span> <span class="o">-</span> <span class="n">__HAL_DMA_GET_COUNTER</span><span class="p">(</span><span class="o">&amp;</span><span class="n">hdma_usart2_rx</span><span class="p">);</span>
+    <span class="n">memset</span><span class="p">(</span><span class="n">receive_buff</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="n">data_length</span><span class="p">);</span>
+    <span class="n">data_length</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+    <span class="n">HAL_UART_Receive_DMA</span><span class="p">(</span><span class="o">&amp;</span><span class="n">huart2</span><span class="p">,</span> <span class="p">(</span><span class="kt">uint8_t</span> <span class="o">*</span><span class="p">)</span><span class="n">receive_buff</span><span class="p">,</span> <span class="n">RX_BUF_SIZE</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>En n’oubliant pas d’ajouter dans la fonction main.c:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">__HAL_UART_ENABLE_IT</span><span class="p">(</span><span class="o">&amp;</span><span class="n">huart2</span><span class="p">,</span> <span class="n">UART_IT_IDLE</span><span class="p">);</span>
+<span class="n">HAL_UART_Receive_DMA</span><span class="p">(</span><span class="o">&amp;</span><span class="n">huart2</span><span class="p">,</span> <span class="p">(</span><span class="kt">uint8_t</span> <span class="o">*</span><span class="p">)</span><span class="n">receive_buff</span><span class="p">,</span> <span class="n">RX_BUF_SIZE</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="stm32-i2c-scanner">
+<h3><a class="toc-backref" href="#sommaire">STM32 I2C scanner</a><a class="headerlink" href="#stm32-i2c-scanner" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Cela peut s’avérer utile pour vérifier les branchements.</p>
+<p>Directement trouvé sur le <a class="reference external" href="https://github.com/ProjectsByJRP/stm32_hal_i2c_bus_scan">github  de ProjectsByJRP</a> <a class="footnote-reference brackets" href="#id43" id="id44">21</a></p>
+<p>L’exemple est fournit pour un STM32F1xx mais l’adaptation est très simple ! J’ai procédé en faisant
+des copiés/collés plutot qu’en copiant directement le code. Tout se passe dans le main.c</p>
+<p>Le principe est toujours le même, on essais une transaction simple pour toutes les adresses de
+composants entre 1 et 127 et si on reçoit un ack, on considère qu’il y a un composant.</p>
+<p>Affichage avec des <strong>printf</strong> sur UART2</p>
+</div>
+<div class="section" id="stm32-i2c-oled-0-96">
+<h3><a class="toc-backref" href="#sommaire">STM32 I2C OLED 0.96</a><a class="headerlink" href="#stm32-i2c-oled-0-96" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Recherche internet : <a class="reference external" href="https://www.banggood.com/0_96-Inch-OLED-I2C-IIC-Communication-Display-12864-LCD-Module-p-1535708.html?rmmds=detail-left-hotproducts__1&amp;ID=229&amp;cur_warehouse=CN">écran OLED 0.96 » IIC</a> <a class="footnote-reference brackets" href="#id45" id="id46">22</a></p>
+<p>Caractéristiques principales:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Resolution</span><span class="p">:</span> <span class="mi">128</span><span class="n">x64</span>
+<span class="n">Driver</span> <span class="n">chip</span><span class="p">:</span> <span class="n">SSD1306</span>
+<span class="n">Wide</span> <span class="n">voltage</span> <span class="n">support</span><span class="p">:</span> <span class="n">DC</span> <span class="mf">3.3</span><span class="n">V</span><span class="o">-</span><span class="mi">5</span><span class="n">V</span>
+</pre></div>
+</div>
+<p>Une <a class="reference external" href="http://controllerstech.com/wp-content/uploads/2019/06/oled.zip">librairie sur controllerstech.com</a> <a class="footnote-reference brackets" href="#id47" id="id48">23</a></p>
+<p>I2C1 : PB7 = SDA1 et PB6 = SCL1 (à noter que dans CubeMX I2C2 n’est pas utilisable car PB3 est
+utilisé par SYS_JTDO-SWO) mais il reste I2C3 !!! Mais on peut aussi les avoir sur PB8 = SCL
+et PB9 = SDA (plus simple pour le cablage).
+pour correspondre au pinout ARDUINO de la carte NUCLEO</p>
+<p>Vidéo exemple:</p>
+<p><a class="reference external" href="https://www.youtube.com/watch?v=Z6VyFYzQWSs">Controllers Tech vidéo 1</a> <a class="footnote-reference brackets" href="#id49" id="id50">24</a></p>
+<p><a class="reference external" href="https://controllerstech.com/oled-display-using-i2c-stm32/">Article sur le site</a> <a class="footnote-reference brackets" href="#id51" id="id52">25</a></p>
+<p><a class="reference external" href="https://www.youtube.com/watch?v=M5ddTjrcvEs">Controllers Tech vidéo 2</a> <a class="footnote-reference brackets" href="#id53" id="id54">26</a></p>
+<p>Commande I2C HAL:</p>
+<p>HAL_StatusTypeDef HAL_I2C_Master_Transmit(I2C_HandleTypeDef * hi2c, uint16_t DevAddress, uint8_t *
+pData, uint16_t Size, uint32_t Timeout)</p>
+<p id="index-3"><strong>Convertion d’image bitmap vers C</strong>
+Voir le <a class="reference external" href="https://javl.github.io/image2cpp/">github de Jasper van Loenen</a> <a class="footnote-reference brackets" href="#id55" id="id56">27</a></p>
+<hr class="docutils" />
+</div>
+</div>
+<div class="section" id="stm32workbench-minimum-project">
+<span id="index-4"></span><h2><a class="toc-backref" href="#sommaire">STM32Workbench minimum project</a><a class="headerlink" href="#stm32workbench-minimum-project" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Si on commence par utiliser STM32CubeMX, ce qui suit <strong>n’est pas utile</strong> !</p>
+<p>SW4STM32</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>File–&gt;New–&gt;Project…</p>
+<p>In the « New Project » dialog box : select C/C++ –&gt; C Project and click Next</p>
+<p>In the « C Project » dialog : in project type select « AC6 STM32 MCU Project » under Toolchains
+Select « AC6 STM32 MCU GCC » and give a project name the click Next</p>
+<p>In the « Select Configurations » dialog just click Next</p>
+<p>In the « Target configurations » dialog select the right board (NUCLE-F401RE for me)
+and click Next and <strong>not</strong> Finish</p>
+<p>In the « Project Firmware configuration » dialog: select Hardware Abstraction Layer and
+if you need them « Add low level driver in your project » and <strong>Finish</strong></p>
+</div>
+<p>La dernière option est nécessaire si on veut une structure minimum pour commencer.</p>
+<p>Il vaut mieux laisser le C/C++ indexer en bas à doite terminer sa tâche.</p>
+<a class="reference internal image-reference" href="../../_images/stm32wkp_newProject.jpg"><img alt="../../_images/stm32wkp_newProject.jpg" src="../../_images/stm32wkp_newProject.jpg" style="width: 100px;" /></a>
+<a class="reference internal image-reference" href="../../_images/stm32wkp_newProjectDialog.jpg"><img alt="../../_images/stm32wkp_newProjectDialog.jpg" src="../../_images/stm32wkp_newProjectDialog.jpg" style="width: 100px;" /></a>
+<a class="reference internal image-reference" href="../../_images/stm32wkp_newProjectToolChaine.jpg"><img alt="../../_images/stm32wkp_newProjectToolChaine.jpg" src="../../_images/stm32wkp_newProjectToolChaine.jpg" style="width: 100px;" /></a>
+<a class="reference internal image-reference" href="../../_images/stm32wkp_newProjectSelectConf.jpg"><img alt="../../_images/stm32wkp_newProjectSelectConf.jpg" src="../../_images/stm32wkp_newProjectSelectConf.jpg" style="width: 100px;" /></a>
+<a class="reference internal image-reference" href="../../_images/stm32wkp_newProjectTargetConf.jpg"><img alt="../../_images/stm32wkp_newProjectTargetConf.jpg" src="../../_images/stm32wkp_newProjectTargetConf.jpg" style="width: 100px;" /></a>
+<a class="reference internal image-reference" href="../../_images/stm32wkp_newProjectFirmwareConfig.jpg"><img alt="../../_images/stm32wkp_newProjectFirmwareConfig.jpg" src="../../_images/stm32wkp_newProjectFirmwareConfig.jpg" style="width: 100px;" /></a>
+<div class="admonition warning">
+<p class="admonition-title">Avertissement</p>
+<p>Lorsque tout est terminé, faire un essai de compilation.</p>
+</div>
+<p>Ensuite si tout va bien, on peut commencer à coder. Comme décrit dans la documentation (
+UM1730 §4.2), il faut commencer par initialiser HAL et l’horloge.</p>
+<p>Donc dans la fonction main():</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">HAL_Init</span><span class="p">();</span>
+<span class="n">SystemClock_Config</span><span class="p">();</span>
+</pre></div>
+</div>
+<p>La première de ces 2 fonctions est définie dans le package dans le fichier stm32f4xx_hal.c</p>
+<p>La deuxième doit être définie localement. Tous les exemples présent contiennent cette fonction donc
+copier/coller . Il faut prnedre avec la fonction static void Error_Handler(void) pour que cela
+compile.</p>
+</div>
+<div class="section" id="autres-drivers-et-outils">
+<h2><a class="toc-backref" href="#sommaire">Autres drivers et outils</a><a class="headerlink" href="#autres-drivers-et-outils" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Lors de la création d’un projet dans la dernière boîte de dialogue, Project Firmware configuration,
+il y a 2 zones particulière avec des cases à cocher:
+- Additionnal drives
+- Additionnal utilities and Third-party Utilities</p>
+<p>On trouve la doc de ces modules dans leur répertoire respectifs sous Middleware.</p>
+<ul class="simple">
+<li><p>STemWin</p></li>
+<li><p>STM32_Audio</p></li>
+<li><p>STM32_USB_Device_Library</p></li>
+<li><p>STM32_USB_Host_Library</p></li>
+<li><p>TouchGFX</p></li>
+</ul>
+<hr class="docutils" />
+</div>
+<div class="section" id="cmsis">
+<span id="index-5"></span><h2><a class="toc-backref" href="#sommaire">CMSIS</a><a class="headerlink" href="#cmsis" title="Lien permanent vers ce titre">¶</a></h2>
+<p><a class="reference external" href="https://arm-software.github.io/CMSIS_5/General/html/index.html">Page officielle CMSIS</a> <a class="footnote-reference brackets" href="#id57" id="id58">28</a></p>
+<p>Ce que c’est:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>The CMSIS is a vendor-independent hardware abstraction layer for microcontrollers that are
+based on Arm® Cortex® processors. The CMSIS defines generic tool interfaces and enables
+consistent device support. It provides simple software interfaces to the processor and
+the peripherals, simplifying software re-use, reducing the learning curve for microcontroller
+developers, and reducing the time to market for new devices.
+</pre></div>
+</div>
+<p>D’après ce que j’ai pu comprendre CMSIS est utilisé en grand partie par la/les librairies ST</p>
+</div>
+<div class="section" id="freertos-sur-nucleo">
+<h2><a class="toc-backref" href="#sommaire">FreeRTOS sur NUCLEO</a><a class="headerlink" href="#freertos-sur-nucleo" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Voir dans: <a class="reference internal" href="../../rtos/rtos.html#reffreertosstm32"><span class="std std-ref">FreeRTOS on STM32 NUCLEO</span></a></p>
+</div>
+<div class="section" id="tips">
+<h2><a class="toc-backref" href="#sommaire">Tips</a><a class="headerlink" href="#tips" title="Lien permanent vers ce titre">¶</a></h2>
+<p><strong>ctrl+space</strong> dans l’editeur de STM32Workbench pour le code complétion</p>
+<div class="section" id="doxygen-support">
+<h3><a class="toc-backref" href="#sommaire">Doxygen support</a><a class="headerlink" href="#doxygen-support" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Visiblement c’est pas la préocupation principal.
+On peut activer le support de doxygen dans Preference/Editor Documentation Tolls Comment
+(liste déroulante)</p>
+<p>Sur les forum on trouve une référence à /** suivit de return qui produirait automatiqument un bloc
+de commentaire pour une fonction. Je n’ai jamais réussi à le faire fonctionné.</p>
+<dl class="simple">
+<dt>Je me suis créé des template qui commencent tous par doxy comme cela dans l’éditeur je tape doxy</dt><dd><p>suivit de ctrl+SPACE et j’ai ma liste de template.</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="nulceo-f401-doesn-t-start-in-stand-alone-mode">
+<h3><a class="toc-backref" href="#sommaire">NULCEO-F401 doesn’t start in stand alone mode</a><a class="headerlink" href="#nulceo-f401-doesn-t-start-in-stand-alone-mode" title="Lien permanent vers ce titre">¶</a></h3>
+<p>I have a board with ST-LINK v2.J23 firmware and board doesn’t start in stan alone mode
+(ie not connect to a computer) powered by a battery pack for example.</p>
+<p>I triy a lots of internet search, a lots of test and nothing work.</p>
+<p>I update de ST-LINK firmware to v2.J34 and it’s work.</p>
+<p>How to :
+install STM32 ST Link utility and use ST-LINK/Firmware update.</p>
+<a class="reference internal image-reference" href="../../_images/stlinkUtility.jpg"><img alt="../../_images/stlinkUtility.jpg" src="../../_images/stlinkUtility.jpg" style="width: 500px;" /></a>
+<p>It open a STLink upgrade dialog</p>
+<a class="reference internal image-reference" href="../../_images/stLinkUpgrade.jpg"><img alt="../../_images/stLinkUpgrade.jpg" src="../../_images/stLinkUpgrade.jpg" style="width: 300px;" /></a>
+</div>
+<div class="section" id="nop">
+<h3><a class="toc-backref" href="#sommaire">NOP</a><a class="headerlink" href="#nop" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Afin de pouvoir placer un point d’arrêt dans une fonction vide il existe la macro __NOP()</p>
+</div>
+<div class="section" id="uart-console-in-ide">
+<h3><a class="toc-backref" href="#sommaire">UART console in IDE</a><a class="headerlink" href="#uart-console-in-ide" title="Lien permanent vers ce titre">¶</a></h3>
+<p>In System Workbench : <a class="reference external" href="http://eeblog.co.uk/2018/11/28/serial-terminal-window-in-system-workbench/">voir sur EEBLOG</a> <a class="footnote-reference brackets" href="#id59" id="id60">29</a></p>
+<p><a class="reference external" href="https://www.openstm32.org/forumthread5463">Sur openstm32.org</a> <a class="footnote-reference brackets" href="#id61" id="id62">30</a></p>
+<p>En résumé:</p>
+<ol class="arabic simple">
+<li><p>Créer une nouvelle connexion serial port : Windows/Show view/Others/connections…</p></li>
+<li><p>Clic droit sur la nouvelle connexion : « Open Command Shell » ouvre la fenêtre dans la console</p></li>
+<li><p>Créer une nouvelle console</p></li>
+<li><p>la décaller</p></li>
+<li><p>la pincée</p></li>
+</ol>
+<p>Quand une console est « pincée », elle arrête de switchée automatiquement entre les différentes
+consoles possibles.</p>
+</div>
+</div>
+<div class="section" id="weblinks">
+<h2><a class="toc-backref" href="#sommaire">Weblinks</a><a class="headerlink" href="#weblinks" title="Lien permanent vers ce titre">¶</a></h2>
+<dl class="footnote brackets">
+<dt class="label" id="id1"><span class="brackets">1</span><span class="fn-backref">(<a href="#id2">1</a>,<a href="#id11">2</a>)</span></dt>
+<dd><p><a class="reference external" href="https://www.st.com/en/evaluation-tools/stm32-nucleo-boards.html#overview">https://www.st.com/en/evaluation-tools/stm32-nucleo-boards.html#overview</a></p>
+</dd>
+<dt class="label" id="id3"><span class="brackets"><a class="fn-backref" href="#id4">2</a></span></dt>
+<dd><p><a class="reference external" href="https://www.mouser.fr/new/stmicroelectronics/stm-stm32-nucleo-144-dev-boards/">https://www.mouser.fr/new/stmicroelectronics/stm-stm32-nucleo-144-dev-boards/</a></p>
+</dd>
+<dt class="label" id="id5"><span class="brackets"><a class="fn-backref" href="#id6">3</a></span></dt>
+<dd><p><a class="reference external" href="https://wiki.st.com/stm32mcu/wiki/Main_Page">https://wiki.st.com/stm32mcu/wiki/Main_Page</a></p>
+</dd>
+<dt class="label" id="id7"><span class="brackets"><a class="fn-backref" href="#id8">4</a></span></dt>
+<dd><p><a class="reference external" href="https://www.mouser.fr/ProductDetail/STMicroelectronics/NUCLEO-F429ZI?qs=mKNKSX85ZJcE6FU0UkiXTA==&amp;vip=1&amp;gclid=CjwKCAjwguzzBRBiEiwAgU0FT1UiJxq6z6simiBPlGAwmrXBhkqT_WmzdohmaAP8F2i-SyZEE2RqPRoConUQAvD_BwE">https://www.mouser.fr/ProductDetail/STMicroelectronics/NUCLEO-F429ZI?qs=mKNKSX85ZJcE6FU0UkiXTA==&amp;vip=1&amp;gclid=CjwKCAjwguzzBRBiEiwAgU0FT1UiJxq6z6simiBPlGAwmrXBhkqT_WmzdohmaAP8F2i-SyZEE2RqPRoConUQAvD_BwE</a></p>
+</dd>
+<dt class="label" id="id9"><span class="brackets"><a class="fn-backref" href="#id10">5</a></span></dt>
+<dd><p><a class="reference external" href="https://www.mouser.fr/ProductDetail/STMicroelectronics/NUCLEO-F401RE?qs=sGAEpiMZZMu3sxpa5v1qrjJpfJ%2F%252BCrSiyHUXpPlRNo4%3D">https://www.mouser.fr/ProductDetail/STMicroelectronics/NUCLEO-F401RE?qs=sGAEpiMZZMu3sxpa5v1qrjJpfJ%2F%252BCrSiyHUXpPlRNo4%3D</a></p>
+</dd>
+<dt class="label" id="id12"><span class="brackets"><a class="fn-backref" href="#id13">6</a></span></dt>
+<dd><p><a class="reference external" href="https://community.arm.com/developer/ip-products/processors/f/cortex-m-forum/5686/m4-m7-comparision">https://community.arm.com/developer/ip-products/processors/f/cortex-m-forum/5686/m4-m7-comparision</a></p>
+</dd>
+<dt class="label" id="id14"><span class="brackets"><a class="fn-backref" href="#id15">7</a></span></dt>
+<dd><p><a class="reference external" href="https://en.wikipedia.org/wiki/ARM_Cortex-M#Cortex-M7">https://en.wikipedia.org/wiki/ARM_Cortex-M#Cortex-M7</a></p>
+</dd>
+<dt class="label" id="id16"><span class="brackets"><a class="fn-backref" href="#id17">8</a></span></dt>
+<dd><p><a class="reference external" href="https://www.st.com/en/development-tools/sw4stm32.html">https://www.st.com/en/development-tools/sw4stm32.html</a></p>
+</dd>
+<dt class="label" id="id18"><span class="brackets">9</span><span class="fn-backref">(<a href="#id19">1</a>,<a href="#id20">2</a>)</span></dt>
+<dd><p><a class="reference external" href="https://www.openstm32.org/HomePage">https://www.openstm32.org/HomePage</a></p>
+</dd>
+<dt class="label" id="id21"><span class="brackets"><a class="fn-backref" href="#id22">10</a></span></dt>
+<dd><p><a class="reference external" href="https://www.st.com/en/development-tools/stm32cubeide.html">https://www.st.com/en/development-tools/stm32cubeide.html</a></p>
+</dd>
+<dt class="label" id="id23"><span class="brackets"><a class="fn-backref" href="#id24">11</a></span></dt>
+<dd><p><a class="reference external" href="https://www.st.com/en/development-tools/stm32-ides.html">https://www.st.com/en/development-tools/stm32-ides.html</a></p>
+</dd>
+<dt class="label" id="id25"><span class="brackets"><a class="fn-backref" href="#id26">12</a></span></dt>
+<dd><p><a class="reference external" href="https://www.st.com/content/st_com/en/products/evaluation-tools/product-evaluation-tools/mcu-mpu-eval-tools/stm32-mcu-mpu-eval-tools/stm32-nucleo-boards/nucleo-f401re.html#tools-software">https://www.st.com/content/st_com/en/products/evaluation-tools/product-evaluation-tools/mcu-mpu-eval-tools/stm32-mcu-mpu-eval-tools/stm32-nucleo-boards/nucleo-f401re.html#tools-software</a></p>
+</dd>
+<dt class="label" id="id27"><span class="brackets"><a class="fn-backref" href="#id28">13</a></span></dt>
+<dd><p><a class="reference external" href="https://www.openstm32.org/forumthread774">https://www.openstm32.org/forumthread774</a></p>
+</dd>
+<dt class="label" id="id29"><span class="brackets"><a class="fn-backref" href="#id30">14</a></span></dt>
+<dd><p><a class="reference external" href="https://www.youtube.com/watch?v=szMGedsp9jc">https://www.youtube.com/watch?v=szMGedsp9jc</a></p>
+</dd>
+<dt class="label" id="id31"><span class="brackets"><a class="fn-backref" href="#id32">15</a></span></dt>
+<dd><p><a class="reference external" href="https://en.wikipedia.org/wiki/MISRA_C">https://en.wikipedia.org/wiki/MISRA_C</a></p>
+</dd>
+<dt class="label" id="id33"><span class="brackets"><a class="fn-backref" href="#id34">16</a></span></dt>
+<dd><p><a class="reference external" href="http://leanpub.com/mastering-stm32">http://leanpub.com/mastering-stm32</a></p>
+</dd>
+<dt class="label" id="id35"><span class="brackets"><a class="fn-backref" href="#id36">17</a></span></dt>
+<dd><p><a class="reference external" href="https://github.com/stm32duino/wiki/wiki/Getting-Started">https://github.com/stm32duino/wiki/wiki/Getting-Started</a></p>
+</dd>
+<dt class="label" id="id37"><span class="brackets"><a class="fn-backref" href="#id38">18</a></span></dt>
+<dd><p><a class="reference external" href="https://www.youtube.com/watch?v=sWe4kvzLMjY">https://www.youtube.com/watch?v=sWe4kvzLMjY</a></p>
+</dd>
+<dt class="label" id="id39"><span class="brackets"><a class="fn-backref" href="#id40">19</a></span></dt>
+<dd><p><a class="reference external" href="https://www.youtube.com/watch?v=0I53r0KmOxg">https://www.youtube.com/watch?v=0I53r0KmOxg</a></p>
+</dd>
+<dt class="label" id="id41"><span class="brackets"><a class="fn-backref" href="#id42">20</a></span></dt>
+<dd><p><a class="reference external" href="https://www.youtube.com/watch?v=xE6GVt7XuJI">https://www.youtube.com/watch?v=xE6GVt7XuJI</a></p>
+</dd>
+<dt class="label" id="id43"><span class="brackets"><a class="fn-backref" href="#id44">21</a></span></dt>
+<dd><p><a class="reference external" href="https://github.com/ProjectsByJRP/stm32_hal_i2c_bus_scan">https://github.com/ProjectsByJRP/stm32_hal_i2c_bus_scan</a></p>
+</dd>
+<dt class="label" id="id45"><span class="brackets"><a class="fn-backref" href="#id46">22</a></span></dt>
+<dd><p><a class="reference external" href="https://www.banggood.com/0_96-Inch-OLED-I2C-IIC-Communication-Display-12864-LCD-Module-p-1535708.html?rmmds=detail-left-hotproducts__1&amp;ID=229&amp;cur_warehouse=CN">https://www.banggood.com/0_96-Inch-OLED-I2C-IIC-Communication-Display-12864-LCD-Module-p-1535708.html?rmmds=detail-left-hotproducts__1&amp;ID=229&amp;cur_warehouse=CN</a></p>
+</dd>
+<dt class="label" id="id47"><span class="brackets"><a class="fn-backref" href="#id48">23</a></span></dt>
+<dd><p><a class="reference external" href="http://controllerstech.com/wp-content/uploads/2019/06/oled.zip">http://controllerstech.com/wp-content/uploads/2019/06/oled.zip</a></p>
+</dd>
+<dt class="label" id="id49"><span class="brackets"><a class="fn-backref" href="#id50">24</a></span></dt>
+<dd><p><a class="reference external" href="https://www.youtube.com/watch?v=Z6VyFYzQWSs">https://www.youtube.com/watch?v=Z6VyFYzQWSs</a></p>
+</dd>
+<dt class="label" id="id51"><span class="brackets"><a class="fn-backref" href="#id52">25</a></span></dt>
+<dd><p><a class="reference external" href="https://controllerstech.com/oled-display-using-i2c-stm32/">https://controllerstech.com/oled-display-using-i2c-stm32/</a></p>
+</dd>
+<dt class="label" id="id53"><span class="brackets"><a class="fn-backref" href="#id54">26</a></span></dt>
+<dd><p><a class="reference external" href="https://www.youtube.com/watch?v=M5ddTjrcvEs">https://www.youtube.com/watch?v=M5ddTjrcvEs</a></p>
+</dd>
+<dt class="label" id="id55"><span class="brackets"><a class="fn-backref" href="#id56">27</a></span></dt>
+<dd><p><a class="reference external" href="https://javl.github.io/image2cpp/">https://javl.github.io/image2cpp/</a></p>
+</dd>
+<dt class="label" id="id57"><span class="brackets"><a class="fn-backref" href="#id58">28</a></span></dt>
+<dd><p><a class="reference external" href="https://arm-software.github.io/CMSIS_5/General/html/index.html">https://arm-software.github.io/CMSIS_5/General/html/index.html</a></p>
+</dd>
+<dt class="label" id="id59"><span class="brackets"><a class="fn-backref" href="#id60">29</a></span></dt>
+<dd><p><a class="reference external" href="http://eeblog.co.uk/2018/11/28/serial-terminal-window-in-system-workbench/">http://eeblog.co.uk/2018/11/28/serial-terminal-window-in-system-workbench/</a></p>
+</dd>
+<dt class="label" id="id61"><span class="brackets"><a class="fn-backref" href="#id62">30</a></span></dt>
+<dd><p><a class="reference external" href="https://www.openstm32.org/forumthread5463">https://www.openstm32.org/forumthread5463</a></p>
+</dd>
+</dl>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../../index.html">Table des matières</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">NUCLEO board *</a><ul>
+<li><a class="reference internal" href="#presentation">Présentation</a><ul>
+<li><a class="reference internal" href="#carte-nucleo-f401re">Carte NUCLEO-F401RE</a></li>
+<li><a class="reference internal" href="#carte-nucleo-f429zi">Carte NUCLEO-F429ZI</a></li>
+<li><a class="reference internal" href="#nucleo-f746zg">NUCLEO-F746ZG</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#differences-entre-cartes">Différences entre cartes</a></li>
+<li><a class="reference internal" href="#outils-de-developpement">Outils de développement</a><ul>
+<li><a class="reference internal" href="#autres-outils-de-developpement">Autres outils de développement</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#les-pdf-etudies">Les pdf étudiés</a><ul>
+<li><a class="reference internal" href="#gettingstarted-firmware-en-dm00105925-pdf">gettingStarted_firmware_en.DM00105925.pdf</a></li>
+<li><a class="reference internal" href="#stm32cubef4gettingstarted-pdf">STM32CubeF4GettingStarted.pdf</a></li>
+<li><a class="reference internal" href="#um1718-cubemx-pdf">UM1718_CubeMX.pdf</a></li>
+<li><a class="reference internal" href="#getting-started-with-stm32-nucleo-board-software-development-tools-stmicroelectronics-pdf">getting-started-with-stm32-nucleo-board-software-development-tools-stmicroelectronics.pdf</a></li>
+<li><a class="reference internal" href="#um1725-description-of-stm32f4-hal-and-ll-drivers-dm00105879">UM1725 Description of STM32F4 HAL and LL drivers DM00105879</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#mes-manips-de-2015">Mes manips de 2015</a></li>
+<li><a class="reference internal" href="#mes-manips-2020">Mes manips 2020</a><ul>
+<li><a class="reference internal" href="#toggleledcubemx">toggleLeDCubeMX</a></li>
+<li><a class="reference internal" href="#pushbuttoninterrup">pushButtonInterrup</a></li>
+<li><a class="reference internal" href="#uartandrxit">uartAndRXIt</a></li>
+<li><a class="reference internal" href="#rx-with-dma">RX with DMA</a></li>
+<li><a class="reference internal" href="#rx-through-idle-line-interrupt">RX through idle line interrupt</a></li>
+<li><a class="reference internal" href="#stm32-i2c-scanner">STM32 I2C scanner</a></li>
+<li><a class="reference internal" href="#stm32-i2c-oled-0-96">STM32 I2C OLED 0.96</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#stm32workbench-minimum-project">STM32Workbench minimum project</a></li>
+<li><a class="reference internal" href="#autres-drivers-et-outils">Autres drivers et outils</a></li>
+<li><a class="reference internal" href="#cmsis">CMSIS</a></li>
+<li><a class="reference internal" href="#freertos-sur-nucleo">FreeRTOS sur NUCLEO</a></li>
+<li><a class="reference internal" href="#tips">Tips</a><ul>
+<li><a class="reference internal" href="#doxygen-support">Doxygen support</a></li>
+<li><a class="reference internal" href="#nulceo-f401-doesn-t-start-in-stand-alone-mode">NULCEO-F401 doesn’t start in stand alone mode</a></li>
+<li><a class="reference internal" href="#nop">NOP</a></li>
+<li><a class="reference internal" href="#uart-console-in-ide">UART console in IDE</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#weblinks">Weblinks</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Sujet précédent</h4>
+  <p class="topless"><a href="../raspberry/raspberry.html"
+                        title="Chapitre précédent">Raspberry pi*</a></p>
+  <h4>Sujet suivant</h4>
+  <p class="topless"><a href="../../C++/cpp.html"
+                        title="Chapitre suivant">Mes notes sur C++</a></p>
+  <div role="note" aria-label="source link">
+    <h3>Cette page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../../_sources/hardware/nucleo/nucleo.rst.txt"
+            rel="nofollow">Montrer le code source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Recherche rapide</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="Index général"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../C++/cpp.html" title="Mes notes sur C++"
+             >suivant</a> |</li>
+        <li class="right" >
+          <a href="../raspberry/raspberry.html" title="Raspberry pi*"
+             >précédent</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">Documentation MajorLee&#39;s notes </a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../hardware.html" >Hardware notes</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2019, J.SORANZO.
+      Créé avec <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.4.
+    </div>
+  </body>
+</html>
