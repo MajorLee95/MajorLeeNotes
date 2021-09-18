@@ -54,6 +54,9 @@ Commandes de base (ou kit de survie minimum)
     git clone/init
     git status
     git log
+    git log -p -1 (détails et limité au dernier -2 les 2 derniers...)
+    git log --name-only --abbrev-commit -1
+    
     git branch ou git branch -a (--all) y copris les branche non trackées
     git add .
     git commit --message 'commit explication' --all
@@ -100,7 +103,7 @@ commandes::
 
 
 
-.. TIP::
+**Astuce**::
 
     - git config --global alias.adog "log --all --decorate --oneline --graph"
     - puis git adog 

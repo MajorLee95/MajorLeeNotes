@@ -83,6 +83,13 @@ Major LEE Glossaire
     MMU
         Memory Managment Unit
 
+    EFI
+        Extensible Firmware interface successeur du BIOS
+
+    UEFI
+        Unified Extensible Firmware interface successeur de l'EFI
+
+
 .. _`Application Binary Interface` :  https://en.wikipedia.org/wiki/Application_binary_interface
         
 .. _`Advanced High-performance Bus` : https://en.wikipedia.org/wiki/Advanced_Microcontroller_Bus_Architecture#Advanced_High-performance_Bus_.28AHB.29
