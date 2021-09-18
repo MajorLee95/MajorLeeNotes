@@ -57,7 +57,7 @@ Commandes de base (ou kit de survie minimum)
     git log -p -1 (détails et limité au dernier -2 les 2 derniers...)
     git log --name-only --abbrev-commit -1
     
-    git branch ou git branch -a (--all) y copris les branche non trackées
+    git branch ou git branch -a (--all) y compris les branche non trackées
     git add .
     git commit --message 'commit explication' --all
     git show
@@ -334,6 +334,7 @@ Trace l'arborescence sous forme textuelle
 une ch'tite commande sympa::
 
 	git log --pretty=oneline --abbrev-commit --graph --decorate
+    voir aussi git adog en début de chapitre
     
 clé SSH
 ===========================================
