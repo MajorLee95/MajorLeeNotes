@@ -58,33 +58,33 @@
 <div class="contents topic" id="tdm-linux">
 <p class="topic-title">TdM LINUX</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="#linux" id="id23">LINUX *</a></p>
+<li><p><a class="reference internal" href="#linux" id="id25">LINUX *</a></p>
 <ul>
-<li><p><a class="reference internal" href="#doc" id="id24">Doc</a></p></li>
-<li><p><a class="reference internal" href="#programmation-shell" id="id25">Programmation shell</a></p>
+<li><p><a class="reference internal" href="#doc" id="id26">Doc</a></p></li>
+<li><p><a class="reference internal" href="#programmation-shell" id="id27">Programmation shell</a></p>
 <ul>
-<li><p><a class="reference internal" href="#les-differents-shell" id="id26">Les différents shell</a></p></li>
+<li><p><a class="reference internal" href="#les-differents-shell" id="id28">Les différents shell</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#mes-commandes-interressantes" id="id27">Mes commandes interressantes</a></p>
+<li><p><a class="reference internal" href="#mes-commandes-interessantes" id="id29">Mes commandes intéressantes</a></p>
 <ul>
-<li><p><a class="reference internal" href="#system" id="id28">System</a></p></li>
-<li><p><a class="reference internal" href="#pour-les-utilisateurs" id="id29">Pour les utilisateurs</a></p></li>
+<li><p><a class="reference internal" href="#system" id="id30">System</a></p></li>
+<li><p><a class="reference internal" href="#pour-les-utilisateurs" id="id31">Pour les utilisateurs</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#cron" id="id30">Cron</a></p></li>
-<li><p><a class="reference internal" href="#comment-lancer-une-appli-au-boot" id="id31">Comment lancer une appli au boot</a></p></li>
-<li><p><a class="reference internal" href="#samba" id="id32">Samba</a></p></li>
-<li><p><a class="reference internal" href="#linux-partage-de-repertoire" id="id33">LINUX Partage de répertoire</a></p></li>
-<li><p><a class="reference internal" href="#les-makefile-en-bref" id="id34">Les Makefile (en bref)</a></p></li>
-<li><p><a class="reference internal" href="#weblinks" id="id35">Weblinks</a></p></li>
+<li><p><a class="reference internal" href="#cron" id="id32">Cron</a></p></li>
+<li><p><a class="reference internal" href="#comment-lancer-une-appli-au-boot" id="id33">Comment lancer une appli au boot</a></p></li>
+<li><p><a class="reference internal" href="#samba" id="id34">Samba</a></p></li>
+<li><p><a class="reference internal" href="#linux-partage-de-repertoire" id="id35">LINUX Partage de répertoire</a></p></li>
+<li><p><a class="reference internal" href="#les-makefile-en-bref" id="id36">Les Makefile (en bref)</a></p></li>
+<li><p><a class="reference internal" href="#weblinks" id="id37">Weblinks</a></p></li>
 </ul>
 </li>
 </ul>
 </div>
-<p>Ci dessous mes notes personnelles concernat Linux. Comme je n’ai pas de mémoire,
+<p>Ci dessous mes notes personnelles concernant Linux. Comme je n’ai pas de mémoire,
 il s’agit principalement ici de lignes commandes que j’ai trouvé intéressantes.
-(Reprise carte Heurisitque en cours…)</p>
+(Reprise carte Heuristique en cours…)</p>
 <div class="section" id="doc">
 <h2><a class="toc-backref" href="#tdm-linux">Doc</a><a class="headerlink" href="#doc" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Avant que de n’aller plus loin, jeter un oeil au <a class="reference external" href="https://poltergeist42.github.io/JDM/Linux.html">journal de manip de Pierre partie Linux</a> <a class="footnote-reference brackets" href="#id1" id="id2">1</a> .
@@ -116,18 +116,19 @@ Dans la suite abrégé JdMdP</p>
 </div>
 </div>
 <hr class="docutils" />
-<div class="section" id="mes-commandes-interressantes">
-<h2><a class="toc-backref" href="#tdm-linux">Mes commandes interressantes</a><a class="headerlink" href="#mes-commandes-interressantes" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="section" id="mes-commandes-interessantes">
+<h2><a class="toc-backref" href="#tdm-linux">Mes commandes intéressantes</a><a class="headerlink" href="#mes-commandes-interessantes" title="Lien permanent vers ce titre">¶</a></h2>
 <div class="section" id="system">
 <span id="index-2"></span><h3><a class="toc-backref" href="#tdm-linux">System</a><a class="headerlink" href="#system" title="Lien permanent vers ce titre">¶</a></h3>
 <ul>
+<li><p>répéter la dernière commande en sudo : <code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">!!</span></code></p></li>
 <li><dl>
 <dt>Liste des ports USB<span class="classifier">lsusb</span></dt><dd><p>cette commande ne dit pas par exemple sur quoi est mappé le périphérique</p>
 <p>Par exemple lsusb tty.</p>
 </dd>
 </dl>
 </li>
-<li><p>List des port com : ls /dev/tty*</p></li>
+<li><p>List des port com : <code class="docutils literal notranslate"><span class="pre">ls</span> <span class="pre">/dev/tty*</span></code></p></li>
 <li><p>Lister les disque:</p></li>
 </ul>
 <blockquote>
@@ -142,13 +143,13 @@ Dans la suite abrégé JdMdP</p>
 <ul class="simple">
 <li><p>&#64; : ctrl+shift+u + 0040</p></li>
 <li><p> :              + 005c</p></li>
-<li><p>gestionnaire de pacquet synaptique</p></li>
+<li><p>gestionnaire de packet synaptique</p></li>
 </ul>
 <ul class="simple" id="index-3">
 <li><p>connaître les interfaces réseau : ifconfig</p></li>
 </ul>
 <ul class="simple" id="index-4">
-<li><p>apt-get update versus upgrade : update met à jour les dépots, upgrade met à jour les packets installés</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">apt-get</span> <span class="pre">update</span></code> versus <code class="docutils literal notranslate"><span class="pre">upgrade</span></code> : update met à jour les dépots, upgrade met à jour les packets installés</p></li>
 <li><p>nom de la machine et autre info cat /proc/cpuinfo</p></li>
 <li><p>list repo : grep ^[^#] /etc/apt/sources.list /etc/apt/sources.list.d/*</p></li>
 <li><p>Quel os ?</p></li>
@@ -161,20 +162,13 @@ Dans la suite abrégé JdMdP</p>
 <span class="n">cat</span> <span class="o">/</span><span class="n">proc</span><span class="o">/</span><span class="n">cpuinfo</span>
 </pre></div>
 </div>
-<ul id="index-6">
-<li><p>rebooter en ligne de commande:</p>
-<blockquote>
-<div><ul class="simple">
-<li><p>sudo reboot</p></li>
-<li><p>sudo shutdown -r</p></li>
-</ul>
-</div></blockquote>
-</li>
-<li><p>Savoir si un commande est instaléé : <code class="docutils literal notranslate"><span class="pre">dpkg</span> <span class="pre">-l</span> <span class="pre">|</span> <span class="pre">grep</span> <span class="pre">le_nom_du_paquet</span></code> ou <code class="docutils literal notranslate"><span class="pre">command</span> <span class="pre">-v</span> <span class="pre">command</span></code></p></li>
-<li><p>ou encore <code class="docutils literal notranslate"><span class="pre">which</span> <span class="pre">cmd</span></code></p></li>
+<ul class="simple" id="index-6">
+<li><p>rebooter en ligne de commande: <code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">reboot</span></code> ou <code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">shutdown</span> <span class="pre">-r</span></code></p></li>
+<li><p>Savoir si un commande est installée : <code class="docutils literal notranslate"><span class="pre">dpkg</span> <span class="pre">-l</span> <span class="pre">|</span> <span class="pre">grep</span> <span class="pre">le_nom_du_paquet</span></code> ou <code class="docutils literal notranslate"><span class="pre">command</span> <span class="pre">-v</span> <span class="pre">command</span></code>
+ou encore <code class="docutils literal notranslate"><span class="pre">which</span> <span class="pre">cmd</span></code></p></li>
 </ul>
 <ul class="simple" id="index-7">
-<li><p>les appli installées <strong class="command">dpkg -l</strong></p></li>
+<li><p>les appli installées <code class="docutils literal notranslate"><span class="pre">dpkg</span> <span class="pre">-l</span></code></p></li>
 <li><p>Qui écoute quel port : <code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">lsof</span> <span class="pre">-i</span> <span class="pre">-P</span> <span class="pre">-n</span> <span class="pre">|</span> <span class="pre">grep</span> <span class="pre">LISTEN</span></code></p></li>
 <li><p>voir les dernière info hardware <code class="docutils literal notranslate"><span class="pre">dmesg</span></code></p></li>
 </ul>
@@ -185,7 +179,7 @@ Dans la suite abrégé JdMdP</p>
 <li><p>list des group d’un utilisateur : groups nom</p></li>
 <li><p>changer d’utilisateur : su nom</p></li>
 <li><p>se mettre root pour éviter de taper sudo sudo -s</p></li>
-<li><p>Liste des utilisateurs dans un systeme: <code class="docutils literal notranslate"><span class="pre">cut</span> <span class="pre">-d:</span> <span class="pre">-f1</span> <span class="pre">/etc/passwd</span></code></p></li>
+<li><p>Liste des utilisateurs dans un système: <code class="docutils literal notranslate"><span class="pre">cut</span> <span class="pre">-d:</span> <span class="pre">-f1</span> <span class="pre">/etc/passwd</span></code></p></li>
 <li><p>lister tous les groups : <code class="docutils literal notranslate"><span class="pre">less</span> <span class="pre">/etc/groups</span></code></p></li>
 <li><p>lister tous les utilisateurs d’un groupe</p></li>
 <li><p>lister tous les groupes d’un utilisateur : <code class="docutils literal notranslate"><span class="pre">groups</span> <span class="pre">username</span></code></p></li>
@@ -196,7 +190,7 @@ Dans la suite abrégé JdMdP</p>
 </div>
 <div class="section" id="cron">
 <span id="index-8"></span><h2><a class="toc-backref" href="#tdm-linux">Cron</a><a class="headerlink" href="#cron" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Il s’agit ici de lancer un programm de manière cyclique sans intervention évidement.</p>
+<p>Il s’agit ici de lancer un programme de manière cyclique sans intervention évidement.</p>
 <p>Dans le journal de manip de Pierre, <a class="reference external" href="https://poltergeist42.github.io/JDM/Linux.html#creer-une-tache-planifie-cron">créer une tâche planifiée</a> <a class="footnote-reference brackets" href="#id9" id="id10">5</a></p>
 </div>
 <div class="section" id="comment-lancer-une-appli-au-boot">
@@ -234,7 +228,7 @@ foulée. Il est nécessaire que cet utilisateur existe au niveau Linux.</p>
 </div>
 <p>La <a class="reference external" href="https://wiki.samba.org/index.php/Main_Page">doc officielle Samba</a> <a class="footnote-reference brackets" href="#id15" id="id16">8</a> mais n’apporte pas grand chose ! Trop complexe.</p>
 <dl class="simple">
-<dt>Même si samba gère des mdp différents du système il n’empêcha que l’utilisateur samba doit existé en</dt><dd><p>tant qu’utilisateur système. Par défaut Samba partage le home dir de l’utlisateur en read only.</p>
+<dt>Même si samba gère des mdp différents du système il n’empêcha que l’utilisateur samba doit existé en</dt><dd><p>tant qu’utilisateur système. Par défaut Samba partage le home dir de l’utilisateur en read only.</p>
 </dd>
 </dl>
 <hr class="docutils" />
@@ -254,9 +248,10 @@ foulée. Il est nécessaire que cet utilisateur existe au niveau Linux.</p>
 <p>Mis ici en attendant d’avoir un emplacment dédié à la compilation</p>
 <p>Commentaires : #</p>
 <p>.PHONY :</p>
-<p><a class="reference external" href="https://fr.wikipedia.org/wiki/Make">make sur Wikipédia</a> <a class="footnote-reference brackets" href="#id17" id="id18">9</a></p>
-<p>Et <a class="reference external" href="http://perso.univ-lyon1.fr/jean-claude.iehl/Public/educ/Makefile.html">sur l’Université Lyon1</a> <a class="footnote-reference brackets" href="#id19" id="id20">10</a></p>
-<p>Exemples détaillés <a class="reference external" href="https://www.cs.colby.edu/maxwell/courses/tutorials/maketutor/">sur cs.colby.edu</a> <a class="footnote-reference brackets" href="#id21" id="id22">11</a></p>
+<p><a class="reference external" href="file:///C:/Users/F073258/Documents/jojoBag/taf/cocotier_2021/travauxPAD/documentation/build/html/home.html">ce mon lien</a> <a class="footnote-reference brackets" href="#id17" id="id18">9</a></p>
+<p><a class="reference external" href="https://fr.wikipedia.org/wiki/Make">make sur Wikipédia</a> <a class="footnote-reference brackets" href="#id19" id="id20">10</a></p>
+<p>Et <a class="reference external" href="http://perso.univ-lyon1.fr/jean-claude.iehl/Public/educ/Makefile.html">sur l’Université Lyon1</a> <a class="footnote-reference brackets" href="#id21" id="id22">11</a></p>
+<p>Exemples détaillés <a class="reference external" href="https://www.cs.colby.edu/maxwell/courses/tutorials/maketutor/">sur cs.colby.edu</a> <a class="footnote-reference brackets" href="#id23" id="id24">12</a></p>
 <p>Des cibles, des règles, des macro et eventuellement des suffixes.</p>
 <p>Règles:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>cible [cible ...]: [composant ...]
@@ -330,12 +325,15 @@ Il existe plusieurs manières de définir une macro :
 <dd><p><a class="reference external" href="https://wiki.samba.org/index.php/Main_Page">https://wiki.samba.org/index.php/Main_Page</a></p>
 </dd>
 <dt class="label" id="id17"><span class="brackets"><a class="fn-backref" href="#id18">9</a></span></dt>
-<dd><p><a class="reference external" href="https://fr.wikipedia.org/wiki/Make">https://fr.wikipedia.org/wiki/Make</a></p>
+<dd><p><a class="reference external" href="file:///C:/Users/F073258/Documents/jojoBag/taf/cocotier_2021/travauxPAD/documentation/build/html/home.html">file:///C:/Users/F073258/Documents/jojoBag/taf/cocotier_2021/travauxPAD/documentation/build/html/home.html</a></p>
 </dd>
 <dt class="label" id="id19"><span class="brackets"><a class="fn-backref" href="#id20">10</a></span></dt>
-<dd><p><a class="reference external" href="http://perso.univ-lyon1.fr/jean-claude.iehl/Public/educ/Makefile.html">http://perso.univ-lyon1.fr/jean-claude.iehl/Public/educ/Makefile.html</a></p>
+<dd><p><a class="reference external" href="https://fr.wikipedia.org/wiki/Make">https://fr.wikipedia.org/wiki/Make</a></p>
 </dd>
 <dt class="label" id="id21"><span class="brackets"><a class="fn-backref" href="#id22">11</a></span></dt>
+<dd><p><a class="reference external" href="http://perso.univ-lyon1.fr/jean-claude.iehl/Public/educ/Makefile.html">http://perso.univ-lyon1.fr/jean-claude.iehl/Public/educ/Makefile.html</a></p>
+</dd>
+<dt class="label" id="id23"><span class="brackets"><a class="fn-backref" href="#id24">12</a></span></dt>
 <dd><p><a class="reference external" href="https://www.cs.colby.edu/maxwell/courses/tutorials/maketutor/">https://www.cs.colby.edu/maxwell/courses/tutorials/maketutor/</a></p>
 </dd>
 </dl>
@@ -356,7 +354,7 @@ Il existe plusieurs manières de définir une macro :
 <li><a class="reference internal" href="#les-differents-shell">Les différents shell</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#mes-commandes-interressantes">Mes commandes interressantes</a><ul>
+<li><a class="reference internal" href="#mes-commandes-interessantes">Mes commandes intéressantes</a><ul>
 <li><a class="reference internal" href="#system">System</a></li>
 <li><a class="reference internal" href="#pour-les-utilisateurs">Pour les utilisateurs</a></li>
 </ul>

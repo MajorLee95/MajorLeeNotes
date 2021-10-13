@@ -111,6 +111,7 @@
 <li class="toctree-l3"><a class="reference internal" href="raspberry/raspberry.html#black">Black</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="raspberry/raspberry.html#i2c-etat-des-lieux-13-10-2021">I2C : état des lieux (13/10/2021)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="raspberry/raspberry.html#boitiers">Boîtiers</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="raspberry/raspberry.html#autres-boitier-avec-ecrou-photo">Autres boîtier avec écrou photo</a></li>
 </ul>
@@ -195,17 +196,20 @@
 </li>
 <li><p><a class="reference internal" href="#sbc" id="id53">SBC</a></p>
 <ul>
-<li><p><a class="reference internal" href="#sous-groupe-friendlyarm" id="id54">Sous groupe Friendlyarm</a></p></li>
-<li><p><a class="reference internal" href="#chez-orangepi" id="id55">Chez Orangepi</a></p></li>
-<li><p><a class="reference internal" href="#chez-bananapi" id="id56">Chez Bananapi</a></p></li>
+<li><p><a class="reference internal" href="#les-fabricants-de-petites" id="id54">Les fabricants (de petites)</a></p></li>
+<li><p><a class="reference internal" href="#raspberry-pi-zero-et-concurent" id="id55">Raspberry pi Zero et concurent</a></p></li>
+<li><p><a class="reference internal" href="#sous-groupe-friendlyarm" id="id56">Sous groupe Friendlyarm</a></p></li>
+<li><p><a class="reference internal" href="#chez-orangepi" id="id57">Chez Orangepi</a></p></li>
+<li><p><a class="reference internal" href="#chez-bananapi" id="id58">Chez Bananapi</a></p></li>
+<li><p><a class="reference internal" href="#sous-group-lattepanda" id="id59">sous group LATTEPANDA</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#analog-power-switching" id="id57">Analog power switching</a></p>
+<li><p><a class="reference internal" href="#analog-power-switching" id="id60">Analog power switching</a></p>
 <ul>
-<li><p><a class="reference internal" href="#low-power-mosfet-on-off" id="id58">Low power MOSFET ON/OFF</a></p></li>
+<li><p><a class="reference internal" href="#low-power-mosfet-on-off" id="id61">Low power MOSFET ON/OFF</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#weblinks" id="id59">Weblinks</a></p></li>
+<li><p><a class="reference internal" href="#weblinks" id="id62">Weblinks</a></p></li>
 </ul>
 </li>
 </ul>
@@ -317,6 +321,34 @@ one liter of water.</p>
 <a class="reference internal image-reference" href="../_images/QBiP-1605A.png"><img alt="../_images/QBiP-1605A.png" src="../_images/QBiP-1605A.png" style="width: 500px;" /></a>
 <p class="caption"><span class="caption-text">QBiP-1605A de GigaIPC</span><a class="headerlink" href="#id1" title="Lien permanent vers cette image">¶</a></p>
 </div>
+<div class="section" id="les-fabricants-de-petites">
+<h3><a class="toc-backref" href="#hardware-tdm">Les fabricants (de petites)</a><a class="headerlink" href="#les-fabricants-de-petites" title="Lien permanent vers ce titre">¶</a></h3>
+<ul class="simple">
+<li><p>Raspebrry fondation</p></li>
+<li><p>Orange pi</p></li>
+<li><p>Banana pi</p></li>
+<li><p>NVida Jetson nano (65€, 77€ AMZPrime)</p></li>
+<li><p>RADXA</p></li>
+<li><p>DFROBOT/LATTEPANDA</p></li>
+<li><p>CUBIE</p></li>
+<li><p>Onion</p></li>
+<li><p>ASUS Tinker Board S</p></li>
+<li><p>Clockwork</p></li>
+<li><p>ROCK64</p></li>
+<li><p>ODROID</p></li>
+<li><p>LIBRE COMPUTER</p></li>
+</ul>
+</div>
+<div class="section" id="raspberry-pi-zero-et-concurent">
+<h3><a class="toc-backref" href="#hardware-tdm">Raspberry pi Zero et concurent</a><a class="headerlink" href="#raspberry-pi-zero-et-concurent" title="Lien permanent vers ce titre">¶</a></h3>
+<p>On a (au 20/09/2021):</p>
+<ul class="simple">
+<li><p>Banana Pi BPI-M2-ZRO : 26.29€ sur AMAZON : 4x Cortex-A7 512Mo WF/BT4 miniHDMI, CSI, pas eMMC, USB2</p></li>
+<li><p>RADXA ZERO : de 15 à 90$ : 4x Cortex A53, 512M à 4G, de 0 à 128G eMMC, WF/BT5, pas de vid, USB3 (2Go, 8emmc 30$)</p></li>
+</ul>
+<p>Question : y existe-il un carte avec du WF, du CSI, de l’emmc à moins de 30€</p>
+<p>Autre question quelle celle qui a le meilleur rapport prix performances dans la gamme des 30€</p>
+</div>
 <div class="section" id="sous-groupe-friendlyarm">
 <h3><a class="toc-backref" href="#hardware-tdm">Sous groupe Friendlyarm</a><a class="headerlink" href="#sous-groupe-friendlyarm" title="Lien permanent vers ce titre">¶</a></h3>
 <p>A noter qu’il ont leur propre boutique vs Orangepi sur aliexpress.</p>
@@ -344,8 +376,8 @@ one liter of water.</p>
         3-LTS: S5P6818 (8xA53), 1GDDR3,                        1 usb2.0, RGB LCD port, Cam, microHDMI, GEth, mSD, 75x40, 45$, 40pin GPIO (cRPi)
 
 nanoPC
-    T2: S5P4418, 1G DDR3, 8Gemmc, Wifi /n, BT4.0,  4xUSB2.0, DVP/CSI cam, microHDMI, GEth, 60x100,65$, 30pin GPIO
-    T3 Plus:  S5P6818, 2GDDR3, 16Gemmc, Wifi /n, BT4.0, 4USB2.0, HDMI, DVP, 2CSI, GEth, mSD, 64x100, 85$, 30pin GPIO
+    T2: S5P4418, 1G DDR3, 8Gemmc, Wifi /n, BT4.0,  4xUSB2.0, DVP/CSI cam, microHDMI, GEth, 60x100, 30pin GPIO ,65$
+    T3 Plus:  S5P6818, 2GDDR3, 16Gemmc, Wifi /n, BT4.0, 4USB2.0, HDMI, DVP, 2CSI, GEth, mSD, 64x100, 30pin GPIO, 85$
     T4: RK3399, 4G DDR3, emmc, USB3.0, USBC/DP, HDMI2.0, M2.M (NVME), CS1, CS2, eDP, DSI1, GEth, mSD, 64x100, 139$
 
 Core
@@ -361,7 +393,7 @@ Zero Pi : Allwinner H3, 512MB DDR3, USB2.0GEth,  17$
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>2G Iot: A5, 256 DDR2, SIM 2G, 512M Flash, Wifi BT, 1USB2.0, LCD, CSI, mSD, 42x67, 11.82$, 40pin GPIO
 3G-IOT-A: MT6572, 256 DDR2, SIM 3G, 512M emmc Flash, Wifi BT, 1USB2.0, LCD, CSI, mSD, 52x68, 20$, 40pin GPIO
 3G-IOT-B: MT6572, 512 DDR2, SIM 3G, 4G emmc Flash, 1USB2.0, LCD, CSI, mSD, 52x68, 23$, 40pin GPIO
-4G-IOT : MT6737 (4xA53), 1G DDR3, SIM 4G, 8Gemmc,  Wifi BT, 55x85,  40pin GPIO
+4G-IOT : MT6737 (4xA53), 1G DDR3, SIM 4G, 8Gemmc,  Wifi BT, 55x85,  40pin GPIO, pas dispo 20/9/21
 Lite
 Lite 2
 One
@@ -379,12 +411,13 @@ Plus 2E
 R1
 R1 Plus
 RK3399
-Zero
+
 Zero LTS
 Zero Plus2
-Zero2 : H616 4 A53, 1G DDR3, Wifi BT5.0, microHDMI 3USB2.0
+Zero2 : H616 (4x A53) MaliG31, 512M DDR3, Wifi BT5.0, microHDMI 3USB2.0 : 28€ pas de vid, pas emmc
 </pre></div>
 </div>
+<p>En général, difficile d’appro.</p>
 </div>
 <div class="section" id="chez-bananapi">
 <h3><a class="toc-backref" href="#hardware-tdm">Chez Bananapi</a><a class="headerlink" href="#chez-bananapi" title="Lien permanent vers ce titre">¶</a></h3>
@@ -392,9 +425,16 @@ Zero2 : H616 4 A53, 1G DDR3, Wifi BT5.0, microHDMI 3USB2.0
 <dt>::</dt><dd><p>M2
 M3
 M4
-M5</p>
+M5
+ZERO</p>
 </dd>
 </dl>
+</div>
+<div class="section" id="sous-group-lattepanda">
+<h3><a class="toc-backref" href="#hardware-tdm">sous group LATTEPANDA</a><a class="headerlink" href="#sous-group-lattepanda" title="Lien permanent vers ce titre">¶</a></h3>
+<ul class="simple">
+<li><p>LTP 2G/32G : 99$, 4xIntel W10, 2GDDR3 emmc32g, WF/BT4 pas de videoin usb3</p></li>
+</ul>
 </div>
 </div>
 <div class="section" id="analog-power-switching">
@@ -502,9 +542,12 @@ commandé par un <a class="reference external" href="http://digistump.com/produc
 </ul>
 </li>
 <li><a class="reference internal" href="#sbc">SBC</a><ul>
+<li><a class="reference internal" href="#les-fabricants-de-petites">Les fabricants (de petites)</a></li>
+<li><a class="reference internal" href="#raspberry-pi-zero-et-concurent">Raspberry pi Zero et concurent</a></li>
 <li><a class="reference internal" href="#sous-groupe-friendlyarm">Sous groupe Friendlyarm</a></li>
 <li><a class="reference internal" href="#chez-orangepi">Chez Orangepi</a></li>
 <li><a class="reference internal" href="#chez-bananapi">Chez Bananapi</a></li>
+<li><a class="reference internal" href="#sous-group-lattepanda">sous group LATTEPANDA</a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#analog-power-switching">Analog power switching</a><ul>

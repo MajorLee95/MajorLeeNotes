@@ -48,11 +48,14 @@
 <dt class="field-even">Date</dt>
 <dd class="field-even"><p>Août 2020</p>
 </dd>
-<dt class="field-odd">Societe</dt>
-<dd class="field-odd"><p>VoRoBoTics</p>
+<dt class="field-odd">mise à jour</dt>
+<dd class="field-odd"><p>28/09/2021</p>
 </dd>
-<dt class="field-even">Entity</dt>
-<dd class="field-even"><p>VoLAB</p>
+<dt class="field-even">Societe</dt>
+<dd class="field-even"><p>VoRoBoTics</p>
+</dd>
+<dt class="field-odd">Entity</dt>
+<dd class="field-odd"><p>VoLAB</p>
 </dd>
 </dl>
 <div class="contents topic" id="sommaire">
@@ -422,11 +425,18 @@ dans  la classe fille. Par exemple init</p>
 </div>
 <p><strong>Astuce</strong>:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">diff</span> <span class="n">entre</span> <span class="kn">import</span> <span class="nn">os</span> <span class="n">et</span> <span class="kn">from</span> <span class="nn">os</span> <span class="kn">import</span> <span class="o">*</span>
-<span class="n">dns</span> <span class="n">le</span> <span class="n">premier</span> <span class="n">on</span> <span class="n">est</span> <span class="n">obligé</span> <span class="n">de</span> <span class="n">mettre</span> <span class="n">os</span><span class="o">.</span><span class="n">fonction</span><span class="p">()</span>
-<span class="n">dns</span> <span class="n">le</span> <span class="n">second</span> <span class="n">cas</span> <span class="n">les</span> <span class="n">fonctions</span> <span class="n">font</span> <span class="n">parties</span> <span class="n">de</span> <span class="n">l</span><span class="s1">&#39;espace de noms courant.</span>
+<span class="n">dans</span> <span class="n">le</span> <span class="n">premier</span> <span class="n">on</span> <span class="n">est</span> <span class="n">obligé</span> <span class="n">de</span> <span class="n">mettre</span> <span class="n">os</span><span class="o">.</span><span class="n">fonction</span><span class="p">()</span>
+<span class="n">dans</span> <span class="n">le</span> <span class="n">second</span> <span class="n">cas</span> <span class="n">les</span> <span class="n">fonctions</span> <span class="n">font</span> <span class="n">parties</span> <span class="n">de</span> <span class="n">l</span><span class="s1">&#39;espace de noms courant.</span>
 <span class="n">Mais</span> <span class="n">quand</span> <span class="n">il</span> <span class="n">s</span><span class="s1">&#39;agit d&#39;</span><span class="n">un</span> <span class="n">package</span> <span class="n">avec</span> <span class="n">des</span> <span class="n">sous</span> <span class="n">package</span>
     <span class="kn">from</span> <span class="nn">PyQt5.QtWidgets</span> <span class="kn">import</span> <span class="n">QApplication</span><span class="p">,</span><span class="n">QWidget</span>
 </pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<ul class="simple">
+<li><p>Lister les modules accessibles : <code class="docutils literal notranslate"><span class="pre">help('modules')</span></code></p></li>
+<li><p>Lister les package installés : <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">list</span></code> ou <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">freeze</span></code></p></li>
+</ul>
 </div>
 <p>Faire un test de module dans le module-même:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>

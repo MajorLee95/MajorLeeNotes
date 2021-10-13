@@ -7,6 +7,7 @@ Python (mes notes)
 
 :Auteur: J.Soranzo
 :Date: Août 2020
+:mise à jour: 28/09/2021
 :Societe: VoRoBoTics
 :Entity: VoLAB
 
@@ -457,13 +458,16 @@ Plusieurs syntaxes sont possible::
 **Astuce**::
 
     diff entre import os et from os import *
-    dns le premier on est obligé de mettre os.fonction()
-    dns le second cas les fonctions font parties de l'espace de noms courant.
+    dans le premier on est obligé de mettre os.fonction()
+    dans le second cas les fonctions font parties de l'espace de noms courant.
     Mais quand il s'agit d'un package avec des sous package
         from PyQt5.QtWidgets import QApplication,QWidget
 
 
+.. NOTE::
 
+    - Lister les modules accessibles : ``help('modules')``
+    - Lister les package installés : ``pip list`` ou ``pip freeze``
 
 Faire un test de module dans le module-même::
 
