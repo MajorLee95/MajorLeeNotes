@@ -130,9 +130,6 @@ En résumé, ESP32 ajoute **Dual core**, Bluetooth 4.0 LE, 2 SPI et 1 I2C, 2 can
 
     Rappel : on peut faire tourner freeRTos sur un ESP.
 
-
-
-
 ----------------------------------------------------------------------------------------------------
 
 .. index::
@@ -196,7 +193,7 @@ A retranscrire ici projet 035-tempDataLogger document de conception 26/02/2020 .
 ====================================================================================================
 SBC
 ====================================================================================================
-Single boards compouter
+Single boards computer
 
 Il y a les petites
 
@@ -223,6 +220,35 @@ Comme la NVIDIA Jetson Xavier ou encore :
     :width: 500 px
 
     QBiP-1605A de GigaIPC
+
+Les fabricants (de petites)
+====================================================================================================
+- Raspberry fondation
+- Orange pi
+- Banana pi
+- NVida Jetson nano (65€, 77€ AMZPrime)
+- RADXA
+- DFROBOT/LATTEPANDA
+- CUBIE
+- Onion
+- ASUS Tinker Board S
+- Clockwork
+- ROCK64
+- ODROID
+- LIBRE COMPUTER
+
+
+Raspberry pi Zero et concurent
+====================================================================================================
+
+On a (au 20/09/2021):
+
+- Banana Pi BPI-M2-ZRO : 26.29€ sur AMAZON : 4x Cortex-A7 512Mo WF/BT4 miniHDMI, CSI, pas eMMC, USB2
+- RADXA ZERO : de 15 à 90$ : 4x Cortex A53, 512M à 4G, de 0 à 128G eMMC, WF/BT5, pas de vid, USB3 (2Go, 8emmc 30$)
+
+Question : y existe-il un carte avec du WF, du CSI, de l'emmc à moins de 30€
+
+Autre question quelle celle qui a le meilleur rapport prix performances dans la gamme des 30€
 
 
 Sous groupe Friendlyarm
@@ -258,8 +284,8 @@ Je les trouve mieu documenté à l'iimage de ce site `nanopi.io`_
             3-LTS: S5P6818 (8xA53), 1GDDR3,                        1 usb2.0, RGB LCD port, Cam, microHDMI, GEth, mSD, 75x40, 45$, 40pin GPIO (cRPi)
 
     nanoPC
-        T2: S5P4418, 1G DDR3, 8Gemmc, Wifi /n, BT4.0,  4xUSB2.0, DVP/CSI cam, microHDMI, GEth, 60x100,65$, 30pin GPIO   
-        T3 Plus:  S5P6818, 2GDDR3, 16Gemmc, Wifi /n, BT4.0, 4USB2.0, HDMI, DVP, 2CSI, GEth, mSD, 64x100, 85$, 30pin GPIO
+        T2: S5P4418, 1G DDR3, 8Gemmc, Wifi /n, BT4.0,  4xUSB2.0, DVP/CSI cam, microHDMI, GEth, 60x100, 30pin GPIO ,65$  
+        T3 Plus:  S5P6818, 2GDDR3, 16Gemmc, Wifi /n, BT4.0, 4USB2.0, HDMI, DVP, 2CSI, GEth, mSD, 64x100, 30pin GPIO, 85$
         T4: RK3399, 4G DDR3, emmc, USB3.0, USBC/DP, HDMI2.0, M2.M (NVME), CS1, CS2, eDP, DSI1, GEth, mSD, 64x100, 139$
     
     Core
@@ -270,14 +296,14 @@ Je les trouve mieu documenté à l'iimage de ce site `nanopi.io`_
 Prix indicatif au 17/04/2021
 
 
-Chez Orangepi
+Chez Orange pi
 ====================================================================================================
 ::
 
     2G Iot: A5, 256 DDR2, SIM 2G, 512M Flash, Wifi BT, 1USB2.0, LCD, CSI, mSD, 42x67, 11.82$, 40pin GPIO
     3G-IOT-A: MT6572, 256 DDR2, SIM 3G, 512M emmc Flash, Wifi BT, 1USB2.0, LCD, CSI, mSD, 52x68, 20$, 40pin GPIO
     3G-IOT-B: MT6572, 512 DDR2, SIM 3G, 4G emmc Flash, 1USB2.0, LCD, CSI, mSD, 52x68, 23$, 40pin GPIO
-    4G-IOT : MT6737 (4xA53), 1G DDR3, SIM 4G, 8Gemmc,  Wifi BT, 55x85,  40pin GPIO
+    4G-IOT : MT6737 (4xA53), 1G DDR3, SIM 4G, 8Gemmc,  Wifi BT, 55x85,  40pin GPIO, pas dispo 20/9/21
     Lite
     Lite 2
     One
@@ -295,18 +321,32 @@ Chez Orangepi
     R1
     R1 Plus
     RK3399
-    Zero
+    
     Zero LTS
     Zero Plus2
-    Zero2 : H616 4 A53, 1G DDR3, Wifi BT5.0, microHDMI 3USB2.0
+    Zero2 : H616 (4x A53) MaliG31, 512M DDR3, Wifi BT5.0, microHDMI 3USB2.0 : 28€ pas de vid, pas emmc
+
+En général, difficile d'appro.
 
 Chez Bananapi
 ====================================================================================================
 ::
-    M2
+
+    F2P
+    F2S
+    W2
+    R2
+    M2 pro 65€
+    M2 Berry Allwiner V40 2x A7, XIFI, BT, SATA, CSI, MIPI, 1G DDR3 4xUSB2.0, FF RPi, 44.59€ AliE
+    M2 Ultra Allwiner V40, XIFI, BT, SATA, CSI, MIPI, 2G DDR3 2xUSB2.0, 8G eMMC, FF RPi, 76€ AliE
     M3
     M4 
-    M5 
+    M5 S905X3 4x CortexA55, Mali-G31, pas de CSI, 1 HDMI pas de wifi ni BT, 4G DDR4, 16G eMMC, 4x USB 75€ AliE
+    ZERO
+
+sous group LATTEPANDA
+====================================================================================================
+- LTP 2G/32G : 99$, 4xIntel W10, 2GDDR3 emmc32g, WF/BT4 pas de videoin usb3
 
 ====================================================================================================
 Analog power switching

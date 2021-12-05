@@ -13,9 +13,9 @@ LINUX *
     :backlinks: top
 
 
-Ci dessous mes notes personnelles concernat Linux. Comme je n'ai pas de mémoire, 
+Ci dessous mes notes personnelles concernant Linux. Comme je n'ai pas de mémoire, 
 il s'agit principalement ici de lignes commandes que j'ai trouvé intéressantes.
-(Reprise carte Heurisitque en cours...)
+(Reprise carte Heuristique en cours...)
 
 ================================
 Doc
@@ -59,12 +59,28 @@ Les différents shell:
  - tcsh : Tenex C Shell. Amélioration du C Shell.
  - zsh : Z Shell. Shell assez récent reprenant les meilleures idées de bash, ksh et tcsh.
 
-- En début de script : #!/bin/bash
+
+.. index::
+    pair: Linux; Shebang
+
+Le fameux shebang qu'on met au début des scripts::
+
+- En début de script ::
+
+    #!/bin/sh -x
+    #!/bin/bash
+    #!/usr/bin/perl
+    #!/usr/bin/tcl
+    #!/bin/sed -f
+    #!/usr/awk -f
+    #!/usr/bin/python
+
+Connaître son shell : tout simplement help !
 
 ----------------------------------------------------------------------------------------------------
 
 ================================
-Mes commandes interressantes
+Mes commandes intéressantes
 ================================
 
 .. index ::
@@ -73,11 +89,13 @@ Mes commandes interressantes
 System
 ===========
 
+- répéter la dernière commande en sudo : ``sudo !!``
+
 - Liste des ports USB : lsusb
    cette commande ne dit pas par exemple sur quoi est mappé le périphérique
    
    Par exemple lsusb tty.
-- List des port com : ls /dev/tty*
+- List des port com : ``ls /dev/tty*``
 - Lister les disque:
 
  - lshw -C disk
@@ -89,7 +107,7 @@ System
 - @ : ctrl+shift+u + 0040
 - \ :              + 005c
 
-- gestionnaire de pacquet synaptique
+- gestionnaire de packet synaptique
 
 .. index:: Réseau
 
@@ -97,7 +115,7 @@ System
 
 .. index:: apt update, apt upgrade, apt-get update, apt-get upgrade
 
-- apt-get update versus upgrade : update met à jour les dépots, upgrade met à jour les packets installés
+- ``apt-get update`` versus ``upgrade`` : update met à jour les dépots, upgrade met à jour les packets installés
 
 
 - nom de la machine et autre info cat /proc/cpuinfo
@@ -119,18 +137,15 @@ System
 .. index ::
    single: Linux; Redémarrer
 
-- rebooter en ligne de commande: 
- 
-   - sudo reboot
-   - sudo shutdown -r  
+- rebooter en ligne de commande: ``sudo reboot`` ou ``sudo shutdown -r``  
 
-- Savoir si un commande est instaléé : ``dpkg -l | grep le_nom_du_paquet`` ou ``command -v command``
-- ou encore ``which cmd``
+- Savoir si un commande est installée : ``dpkg -l | grep le_nom_du_paquet`` ou ``command -v command`` 
+  ou encore ``which cmd``
  
 .. index ::
    single: Linux; Commandes utilisateur
    
-- les appli installées :command:`dpkg -l`
+- les appli installées ``dpkg -l``
 
 - Qui écoute quel port : ``sudo lsof -i -P -n | grep LISTEN``
 
@@ -144,7 +159,7 @@ Pour les utilisateurs
 - list des group d'un utilisateur : groups nom
 - changer d'utilisateur : su nom
 - se mettre root pour éviter de taper sudo sudo -s
-- Liste des utilisateurs dans un systeme: ``cut -d: -f1 /etc/passwd``
+- Liste des utilisateurs dans un système: ``cut -d: -f1 /etc/passwd``
 - lister tous les groups : ``less /etc/groups``
 - lister tous les utilisateurs d'un groupe
 - lister tous les groupes d'un utilisateur : ``groups username``
@@ -159,9 +174,10 @@ Pour les utilisateurs
 ================================
 Cron
 ================================
-Il s'agit ici de lancer un programm de manière cyclique sans intervention évidement.
+Il s'agit ici de lancer un programme de manière cyclique sans intervention évidement.
 
-Dans le journal de manip de Pierre, `créer une tâche planifiée`_
+Dans le journal de manip de Pierre, `créer une tâche planifiée`_, il n'y a vraiment que la base 
+de la base ! 
 
 .. _`créer une tâche planifiée` : https://poltergeist42.github.io/JDM/Linux.html#creer-une-tache-planifie-cron
 
@@ -217,7 +233,7 @@ La `doc officielle Samba`_ mais n'apporte pas grand chose ! Trop complexe.
 .. _`doc officielle Samba` : https://wiki.samba.org/index.php/Main_Page
 
 Même si samba gère des mdp différents du système il n'empêcha que l'utilisateur samba doit existé en
- tant qu'utilisateur système. Par défaut Samba partage le home dir de l'utlisateur en read only. 
+ tant qu'utilisateur système. Par défaut Samba partage le home dir de l'utilisateur en read only. 
 
 ----------------------------------------------------------------------------------------------------
 
@@ -252,6 +268,10 @@ Commentaires : #
 
 .PHONY : 
 
+
+`ce mon lien`_
+
+.. _`ce mon lien` : file:///C:/Users/F073258/Documents/jojoBag/taf/cocotier_2021/travauxPAD/documentation/build/html/home.html 
 
 `make sur Wikipédia`_
 
@@ -311,8 +331,22 @@ Suffixe::
     une règle de suffixe ne peut avoir de cible (autre après les :)
 
 
+.. index::
+    pair: Linux; Redirections
 
+====================================================================================================
+Redirections
+====================================================================================================
+::
+    
+    >> vers un fichier (append)
+    > vers un nouveau fichier
+    > /dev/null
 
+    2>error.log redirige les erreurs vers un fihcier de log (2 désigne stderr tout simplement)
+    ou 2>>err.log pour un append
+
+    2>&1 : indique qu'il faut rediriger les erreurs vers la sortie standard
 
 
 

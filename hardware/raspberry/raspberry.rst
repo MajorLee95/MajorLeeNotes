@@ -7,6 +7,7 @@ Raspberry pi*
 
 :Auteur: J.Soranzo
 :Date: Janvier 2020
+:mise à jour: 13/10/2021
 :Societe: VoRoBoTics
 :Entity: VoLAB
 
@@ -51,9 +52,35 @@ Black
 V2: Sans le filtre infrarouge !
 
 
+====================================================================================================
+I2C : état des lieux (13/10/2021)
+====================================================================================================
+`Wiring pi`_ Wiring pi is  deprecated… C'est directement dans les news du site de Gordon. 
+Donc merci à lui pour ces 10 ans passées au service des autres.
 
+.. _`Wiring pi` : http://wiringpi.com/
 
+::
 
+    gpio -v
+
+i2c-tools::
+
+    sudo apt-get install -y i2c-tools
+
+- i2c-detect
+
+::
+
+    pip3 install smbus2
+
+en C (safeAir)::
+
+    pigpio.h
+
+`pigpio`_
+
+.. _`pigpio` : https://github.com/joan2937/pigpio
 
 ================================
 Boîtiers

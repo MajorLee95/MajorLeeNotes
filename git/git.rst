@@ -16,6 +16,7 @@ Notes sur git
    
 :Auteur: J.Soranzo
 :Date de création: Novembre 2019
+:mise à jour: 18/09/2021
 :Societe: VoRoBoTics
 :Entity: VoLAB
 
@@ -57,7 +58,7 @@ Commandes de base (ou kit de survie minimum)
     git log -p -1 (détails et limité au dernier -2 les 2 derniers...)
     git log --name-only --abbrev-commit -1
     
-    git branch ou git branch -a (--all) y copris les branche non trackées
+    git branch ou git branch -a (--all) -vv y compris les branche non trackées
     git add .
     git commit --message 'commit explication' --all
     git show
@@ -118,6 +119,10 @@ Commits atomiques
 Article très intéressant `Commits atomiques - la bonne approche`_ sur adopteungit.fr
 
 .. _`Commits atomiques - la bonne approche` : http://adopteungit.fr/methodologie/2017/04/26/commits-atomiques-la-bonne-approche.html
+
+Le site ne répond plus (le 07/10/2021) mais il est dispo sur `github lgiraudel adopteungit`_
+
+.. _`github lgiraudel adopteungit` : https://github.com/lgiraudel/adopteungit
 
 code::
 
@@ -334,6 +339,7 @@ Trace l'arborescence sous forme textuelle
 une ch'tite commande sympa::
 
 	git log --pretty=oneline --abbrev-commit --graph --decorate
+    voir aussi git adog en début de chapitre
     
 clé SSH
 ===========================================
@@ -415,6 +421,13 @@ Traquer une nouvelle branche distante
     git branch -- track <branch> <branche_distante> (7/6/21: j'ignore ?)
     ou plus simplement git checkout --track origin/branche_distante (si elle n'est pas traquée une nouvelle 
     branche locale est crée)
+
+Reconnecter une branche distante à une branche locale
+====================================================================================================
+::
+
+    git branch --set-upstream-to=origin/master master
+
 
 créer un dépot distant sur le serveur du VoLAB
 ======================================================================================
