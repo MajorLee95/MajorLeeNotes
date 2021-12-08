@@ -1,10 +1,3 @@
-.. index::
-    single: git
-
-.. |clearer|  raw:: html
-
-    <div class="clearer"></div>    
-    
 ++++++++++++++++++++++++++++++++
 Notes sur git
 ++++++++++++++++++++++++++++++++
@@ -12,13 +5,21 @@ Notes sur git
    :height: 100px
    :alt: git logo
    :align: left
-   
+
+
+.. |clearer|  raw:: html
+
+    <div class="clearer"></div>    
    
 :Auteur: J.Soranzo
 :Date de création: Novembre 2019
-:mise à jour: 18/09/2021
+:mise à jour: 04/12/2021
 :Societe: VoRoBoTics
 :Entity: VoLAB
+
+.. index::
+    single: git
+
 
 
 |clearer|
@@ -29,10 +30,10 @@ Notes sur git
 ================================
 Introduction
 ================================
-penser au fichier xmind : ProcessusDocumntaire.mm  Freeplane
+penser au fichier xmind : ProcessusDocumentaire.mm  Freeplane
 
 A mon avis, git prend tout son sens quand on l'utilise avec un dépôt distant. J'ai longtemps utilisé
-git en faisant uniquement des dépôts git locaux. Jusqu'au jour où mon disuqe dur a crashé et que je 
+git en faisant uniquement des dépôts git locaux. Jusqu'au jour où mon disque dur a crashé et que je 
 n'avais pas de sauvegarde... Tous ces précieux commit qui se sont envolés...
 
 Ce dépôt distant peut être:
@@ -41,16 +42,29 @@ Ce dépôt distant peut être:
 
 .. HINT::
 
-    `Coparaison Github Gitlab`_
+    `Comparaison Github Gitlab`_
     
-.. _`Coparaison Github Gitlab` : https://www.ionos.fr/digitalguide/sites-internet/developpement-web/gitlab-vs-github/
+.. _`Comparaison Github Gitlab` : https://www.ionos.fr/digitalguide/sites-internet/developpement-web/gitlab-vs-github/
+
+
+====================================================================================================
+Github config ssh
+====================================================================================================
+Ceci n'est pas vraiment du git mais faute de mieux...
+
+Comment configure git pour s'authentifier avec des clé ssh ?
+
+- Mettre la clé publique dans son compte github
+- mettre sa clé privée dans le dépôt des clé local de sa machine ``C:\Users\user_name\.ssh``
+- configurer le dépôt local avec de la forme : ``remote.origin.url=git@github.com:nom_utilisateur_github/nom_du_depot.git``
+- configurer le ssh client (avec tortoisegit rubrique network en cli pas trouvé)
 
 ====================================================================================================
 Commandes de base (ou kit de survie minimum)
 ====================================================================================================
 ::
 
-    git help (-a: liste toute les commande, -g : liste des concepte)
+    git help (-a: liste toute les commande, -g : liste des concepts)
         exemple : git help everyday (donne de l'aide sur l'utilisation de git tous les jours )
     git clone/init
     git status
@@ -166,7 +180,7 @@ git bisec
 .. _`La chasse aux bugs avec git bisect` : http://adopteungit.fr/commande/bisect/2016/09/04/la-chasse-aux-bugs-avec-git-bisect.html
 
 ====================================================================================================
-Gérer les dépôts imense...
+Gérer les dépôts immenses...
 ====================================================================================================
 .. IMPORTANT::
 
@@ -181,7 +195,7 @@ Un autre article un peu moins intéressant au niveau solution (moins riche) :
 
 .. _`Best practices for using git in large project` : https://stackoverflow.com/questions/32068654/best-practices-for-using-git-in-large-project
 
-Créer un depôt serveur
+Créer un dépôt serveur
 ====================================================================================================
 git init --bare --share tout simplement
 
@@ -233,20 +247,20 @@ Mais vers ou pointe origine
         
 merger un seul fichier 
 ======================================
- - git fetch : recupère les branche distantes
+ - git fetch : récupère les branche distantes
  - git checkout La_branche contenant le fichier
  - git pull
  - retour sur la branche de travail
  - git checkout BRANCH FILE
     * BRANCH : le nom de la branche
-    * FILE : chemin d'acces au fichier
+    * FILE : chemin d'accès au fichier
             
 exemple data/index.html ?
 
 Je me suis mis dans le dossier en question et je n'ai donné que le nom du fichier et cela fonctionne
 sous-entendu sans le chemin complet.
                 
-Ecraser les dernière modif qui n'ont pas été commitées 
+Écraser les dernière modif qui n'ont pas été commitées 
 ===========================================================
  - git checkout -- <file> (comme le signal la commande git status)
  - git reset --hard HEAD~1 (retour au dernier commit)
@@ -254,10 +268,10 @@ Ecraser les dernière modif qui n'ont pas été commitées
  
  A propos de git reset --hard HEAD~1::
  
-    When using git reset --hard HEAD~1 you will lose all uncommited changes in addition to the 
+    When using git reset --hard HEAD~1 you will lose all uncommitted changes in addition to the 
     changes introduced in the last commit. The changes won't stay in your working tree so doing 
     a git status command will tell you that you don't have any changes in your repository.
-    Tread carefully with this one. If you accidentally remove uncommited changes which were never 
+    Tread carefully with this one. If you accidentally remove uncommitted changes which were never 
     tracked by git (speak: committed or at least added to the index), you have no way of getting 
     them back using git.
 
@@ -279,7 +293,7 @@ git ls-files --others -i --exclude-standard::
         
 attention dans .gitignore un répertoire se termine par / et pas \
         
-Ratacher la tête 
+Rattacher la tête 
 ======================================
 Procédure::
 
@@ -311,7 +325,7 @@ Besoin: supprimer ce commit pour le refaire avec l'option -am
 .. WARNING::  
 
     Surtout pas git reset --hard HEAD, écrase toutes les modifs
-    Cette commmande permet de revenir à l'état du dernier commit (ne pas confondre)
+    Cette commande permet de revenir à l'état du dernier commit (ne pas confondre)
 
 Autres possibilités::
 
@@ -361,7 +375,7 @@ Généralement OpenSSH installé par défaut sous Ubuntu.
 Sous Windows::
 
     ssh-add : error
-    ssh-agent error 1058 : service est mis sur disable dans windwos, le passer sur manuel !
+    ssh-agent error 1058 : service est mis sur disable dans Windows, le passer sur manuel !
 
 
 cherry-pick : écrémer
@@ -414,7 +428,7 @@ Traquer une nouvelle branche distante
 ::
 
 	le 31/03
-        avec tutoise
+        avec tortoise
         on commence par un git fetch origin pour mettre à jour la base locale
         puis un checkout de la branche distante => créé une branche locale. et c'est suffisant !
 
@@ -429,7 +443,7 @@ Reconnecter une branche distante à une branche locale
     git branch --set-upstream-to=origin/master master
 
 
-créer un dépot distant sur le serveur du VoLAB
+créer un dépôt distant sur le serveur du VoLAB
 ======================================================================================
 ::
 
