@@ -151,7 +151,7 @@ System
 
 - voir les dernière info hardware ``dmesg`` 
 
-
+- créer un lien symbolique : ``ln -s dossier_cible nom_du_lien``
  
 Pour les utilisateurs
 ======================================

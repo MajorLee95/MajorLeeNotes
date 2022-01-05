@@ -13,7 +13,7 @@ Notes sur git
    
 :Auteur: J.Soranzo
 :Date de création: Novembre 2019
-:mise à jour: 04/12/2021
+:mise à jour: 08/12/2021
 :Societe: VoRoBoTics
 :Entity: VoLAB
 
@@ -207,6 +207,13 @@ différent de celui de la source.
 ================================
 petits trucs utiles 
 ================================
+Créer une branche et s'y déplacer en une seule commande
+====================================================================================================
+::
+
+    git checkout -b novelle_branch
+
+
 Logiciels 
 ======================================
 

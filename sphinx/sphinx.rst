@@ -148,7 +148,7 @@ Autre soucis après un crash disque ne pas faire un ``git clone le_lien_github``
     pair: Sphinx; csv intégration
 
 ====================================================================================================
-Integre un fichier csv
+Intégrer un fichier csv
 ====================================================================================================
 ::
 
@@ -161,7 +161,140 @@ make file automatique `voir site webdevdesigner.com`_ excel to csv n ligne de co
 .. _`voir site webdevdesigner.com` : https://webdevdesigner.com/q/convert-xls-to-csv-on-command-line-21100/
 
 
+====================================================================================================
+Intégrer un svg
+====================================================================================================
+Sphinx supporte les svg mais lors de la génération du pdf cela coince. Donc plutôt que d'essayer de
+faire des conditions avec des directives autant tout mettre tout de suite en png.
 
+Et pour qu'ils soient à jour l'idée est d'ajouter au fichier make.bat (sous Linux c'est le ficher
+Makefile) la commande Inkscape qui les génère::
+
+    set /p rep="Generer les fichiers externe ? o/n "
+
+    if "%rep%" == "n" goto extFilesUpToDate
+
+    inkscape --export-type=png specSoft\images\diagramSeqBoot.svg
+    inkscape --export-type=png verification\images\strapDeConf.svg
+
+L'avantage du Makefile est qu'on peut se passer de la question ``Generer les fichiers externe ?`` 
+
+====================================================================================================
+Intégrer du Graphviz ou plantUML
+====================================================================================================
+A ajouter au config.py::
+
+    extensions = [ 'sphinx.ext.graphviz', 'sphinxcontrib.plantuml' ]
+
+    graphviz_output_format = "svg"
+    plantuml_output_format = "svg_obj"
+
+Puis dans le code::
+
+    .. graphviz:: graphviz/config4Access.gv
+
+    ou
+
+    .. uml:: graphviz/config4json.wsd
+
+Utiliser sur le projet Electrical Power Stip IoT.
+
+Voir aussi : :ref:`plantUML dans C++<plantUMLRef>`
+
+.. _graphviz_intoSphinx:
+
+Graphviz
+====================================================================================================
+
+
+Graphiz interactiv preview dans visual Studio Code : pas de touche de rac mais ctrl+shift+p et cherche
+Graphviz interactive preview.
+L'extension est : 
+
+.. image:: images/graphizPreviewer.jpg 
+   :width: 300 px
+
+`site officiel de GraphViz`_ La doc est en ligne.
+
+Petite astuce dans la doc `allez au chapitre attributs`_, la Gallery d'exemples peut être aussi très 
+utile.
+
+.. _`allez au chapitre attributs` : https://graphviz.org/doc/info/attrs.html
+
+
+.. _`site officiel de GraphViz` : https://graphviz.org/
+
+.. image:: images/exempleGraphviz.JPG 
+   :width: 600 px
+
+Le code::
+
+    digraph{
+        label = "Architecture"
+        labelloc="t"
+        rankdir="LR"
+        
+        splines="line";
+
+
+
+        node [shape=box, height=0.5]
+        subgraph cluster_0 {
+            label="sb1";
+            A -> B [label="lien série"];
+            C -> B [label = "RSEDA" ];
+
+
+        }
+
+        subgraph cluster_1 {
+            label= "sub graph"
+            // edge[dir = back]
+            // B -> D [color = red]
+            // node[color=blue]
+            // B -> X
+            A -> G -> C
+        }
+
+        autres[label="etiquette longue", fillcolor="turquoise", style="rounded,filled"]
+        molette[fillcolor="coral", style="filled"]
+        autres -> molette -> vis
+
+        node [shape=folder, height=0.5]
+        fichier[color=yellow, shape=tab]
+        dossier -> fichier node[color=green]
+        fichier -> texte[dir="both", arrowhead="olbox", arrowtail="box"]
+
+    }
+
+.. WARNING::
+
+    Ce qui est en bas dans le texte est en haut dans le graphique.
+
+**Cela donne**:
+
+.. graphviz:: graph/test.gv
+
+====================================================================================================
+Astuce images dans une table (list-table)
+====================================================================================================
+Utiliser dans notes Blender.rst::
+
+    .. |im1| image:: images/eveeReflexionAvec.jpg 
+       :width: 300 px
+
+    .. |im2| image:: images/eveeReflexionSans.jpg 
+       :width: 300 px
+
+    .. list-table::
+       :widths: 30 30
+       :header-rows: 1
+
+       * - Avec reflections
+         - Sans
+   
+       * - |im1|
+         - |im2|
 
 
 ================================

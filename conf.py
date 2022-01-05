@@ -31,8 +31,11 @@ master_doc = 'index'
 # ones.
 # extensions = [ 'sphinx_rtd_theme'
 # ]
-extensions = [ 
+extensions = [ 'sphinx.ext.graphviz', 'sphinxcontrib.plantuml'
 ]
+
+graphviz_output_format = "svg"
+plantuml_output_format = "svg_obj"
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']

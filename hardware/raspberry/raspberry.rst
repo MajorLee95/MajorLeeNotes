@@ -161,7 +161,39 @@ En sudo évidement:
 - shutdown -h now (en sudo)
 - poweroff
 
+====================================================================================================
+Essais écran 
+====================================================================================================
+KeDei v1.1
 
+Utilisation des données du forum rpi [Review] KeDei 3.5" `HDMI display with touch for Raspberry Pi`_
+
+.. _`HDMI display with touch for Raspberry Pi` : https://forums.raspberrypi.com/viewtopic.php?t=175616&sid=9d9f602c3792e2cb54f6e7485cc114d1
+
+Une petite erreur s'est glissée ::
+
+    hdmi_cvt 480 320 60 6 0 0 0
+    
+    au lieu de 
+
+    hdmi_cvt=480 320 60 6 0 0 0
+
+
+Testé sur RPI3 model B+ avec rapsbian Buster (finalement pas certain) sur un RPI 1 pas réussi à
+faire fonctionner. Sur le 3 même sans paramètrer le hdmi dans le config.txt cela fonctionne.
+
+Le RPI1 utilisé fonctionne très bien en hdmi sur un écran classique. Essayé 720x780 et 480x320 sans
+succès 
+
+Sur RPI1, l'écran s'obstine à afficher no signal quelque soit les config essayées.
+
+`Autre procédure non testée sur Projetsdiy.fr`_
+
+.. _`Autre procédure non testée sur Projetsdiy.fr` : https://projetsdiy.fr/test-ecran-lcd-35-480x320-pixels-hdmi-tactile-via-gpio-boitier-acrylique-raspberry-pi-3-raspbian/
+
+`site officiel KeDei`_
+
+.. _`site officiel KeDei` : http://en.kedei.net/
 
 
 =========

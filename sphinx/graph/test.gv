@@ -1,0 +1,37 @@
+digraph{
+    label = "Architecture"
+    labelloc="t"
+    rankdir="LR"
+    
+    splines="line";
+
+
+
+        node [shape=box, height=0.5]
+    subgraph cluster_0 {
+        label="sb1";
+        A -> B [label="lien série"];
+        C -> B [label = "RSEDA" ];
+
+
+    }
+
+    subgraph cluster_1 {
+        label= "sub graph"
+        // edge[dir = back]
+        // B -> D [color = red]
+        // node[color=blue]
+        // B -> X
+        A -> G -> C
+    }
+
+    autres[label="etiquette longue", fillcolor="turquoise", style="rounded,filled"]
+    molette[fillcolor="coral", style="filled"]
+    autres -> molette -> vis
+
+    node [shape=folder, height=0.5]
+    fichier[color=yellow, shape=tab]
+    dossier -> fichier node[color=green]
+    fichier -> texte
+
+}

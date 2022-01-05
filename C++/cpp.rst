@@ -749,8 +749,12 @@ ModelIo vite abandonnée.
 .. index::
     pair: UML; PlantUML
 
+.. _plantUMLRef:
+
 PlantUML
 ====================================================================================================
+Utilisé sur Electrical Power Strip IoT
+
 `Site officiel de PlantUML`_
 
 .. _`Site officiel de PlantUML` : https://plantuml.com/fr/
@@ -762,12 +766,17 @@ utiliser l'intégralité des graphiques listés, il faut avoir Graphviz install�
 .. index::
     single: Graphviz
 
-`site officiel de GraphViz`_ La doc est en ligne.
+`site officiel de GraphViz`_ La doc est en ligne. Voir aussi :ref:`Grphviz dans Spnix<graphviz_intoSphinx>`
+
 
 .. _`site officiel de GraphViz` : https://graphviz.org/
 
 
 Il y a évidement des extension Visual Studio Code ;-)
+
+Celle-ci est particulièrement utile car elle permet de visualiser en même temps qu'on écrit avec alt+d
+
+Rich PlantUML support for Visual Studio Code.
 
 Le :download:`guide du langage existe en pdf fr<fichiersJoints/PlantUML_Language_Reference_Guide_fr.pdf>`.
 

@@ -1260,7 +1260,7 @@ Où est python ?
 ::
 
     c:\>where.exe python
-    C:\Users\F073258\AppData\Local\Programs\Python\Python38\python.exe
+    C:\Users\nom\AppData\Local\Programs\Python\Python38\python.exe
     avec Windows search : python
         En 2 fois
         ouvrir l'emplacement du fichier
