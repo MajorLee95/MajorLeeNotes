@@ -193,7 +193,7 @@ A retranscrire ici projet 035-tempDataLogger document de conception 26/02/2020 .
 ====================================================================================================
 SBC
 ====================================================================================================
-Single boards compouter
+Single boards computer
 
 Il y a les petites
 
@@ -223,7 +223,7 @@ Comme la NVIDIA Jetson Xavier ou encore :
 
 Les fabricants (de petites)
 ====================================================================================================
-- Raspebrry fondation
+- Raspberry fondation
 - Orange pi
 - Banana pi
 - NVida Jetson nano (65€, 77€ AMZPrime)
@@ -296,7 +296,7 @@ Je les trouve mieu documenté à l'iimage de ce site `nanopi.io`_
 Prix indicatif au 17/04/2021
 
 
-Chez Orangepi
+Chez Orange pi
 ====================================================================================================
 ::
 
@@ -331,10 +331,17 @@ En général, difficile d'appro.
 Chez Bananapi
 ====================================================================================================
 ::
-    M2
+
+    F2P
+    F2S
+    W2
+    R2
+    M2 pro 65€
+    M2 Berry Allwiner V40 2x A7, XIFI, BT, SATA, CSI, MIPI, 1G DDR3 4xUSB2.0, FF RPi, 44.59€ AliE
+    M2 Ultra Allwiner V40, XIFI, BT, SATA, CSI, MIPI, 2G DDR3 2xUSB2.0, 8G eMMC, FF RPi, 76€ AliE
     M3
     M4 
-    M5
+    M5 S905X3 4x CortexA55, Mali-G31, pas de CSI, 1 HDMI pas de wifi ni BT, 4G DDR4, 16G eMMC, 4x USB 75€ AliE
     ZERO
 
 sous group LATTEPANDA

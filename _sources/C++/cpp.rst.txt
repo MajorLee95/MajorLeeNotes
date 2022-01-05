@@ -30,7 +30,7 @@ Ceci n'est pas un cours sur le C++, il y en a déjà plein et de très bons voir
 **Voir aussi la map cpp_notes.xmind**
 
 ================================
-C++ opérators (surcharge)
+C++ opérateurs (surcharge)
 ================================
 Même si l'on parle de classe, ceci n'est pas une méthode.
 C'est une fonction normale située à l'extérieur de toute classe.
@@ -39,7 +39,7 @@ Exemple:
 
 .. code:: cpp
 
-    bool operator==(Duree const& a, Duree const& b);
+    bool operator==(Durée const& a, Durée const& b);
     
 Surcharge opérateur ==, >, ... 
 ======================================     
@@ -127,7 +127,7 @@ puis on surcharge l'opérateur. Presque normalement si ce n'est le flux en entr�
         return flux;
     }
     //Cette portion de code vient du site Openclassrooms (licence CC BY,SA) cours C++   
-    
+
 ----------------------------------------------------------------------------------------------------
 
 .. index::
@@ -259,7 +259,7 @@ Une méthode statique ne peut accéder qu'aux attributs statiques de la classe.
 
 .. index::
     pair: C++; Référence
-  
+
 ================================
 Passage par référence
 ================================
@@ -271,7 +271,7 @@ variable passée et en plus pas la syntaxe -> si il s'agit d'un objet.
 
 Mais on modifie bien la variable source puisqu'il n'y a pas de copie.
 
-Voir ci-dessus dans `C++ opérators (surcharge)`_
+Voir ci-dessus dans `C++ opérateurs (surcharge)`_
 
  - ne change rien au niveau de l'appel de la fonction
 	- à condition d'un apel avec variable
@@ -419,7 +419,7 @@ d'implémentation.
 
 On ne peut pas créer d'instance de classe abstraite mais on peut créer un pointeur sur une classe
 abstraite (pour ensuite l'initialiser sur une classe fille).
- 
+
 ====================================
 Fonctions qui retourne un référence
 ====================================
@@ -520,7 +520,8 @@ Si il s'avère nécessaire de surcharger l'opérateur de copie, c'est qu'il est 
     
 .. index::
     single: Programmation; printf
-    
+
+
 ================================
 printf format
 ================================
@@ -537,7 +538,7 @@ dans le monde ARDUINO
 
 .. index::
     single: C++; typedef and co
-    
+
 ================================
 Typedef, struct & co
 ================================
@@ -715,12 +716,12 @@ Un truc sympa c'est de déclarer un nouveau type::
 Après on peut l'utiliser comme paramètre d'une autre fonction ::
 
     int setInterval(long d, timer_callback f);
-    
+
 ----------------------------------------------------------------------------------------------------
 
 .. index::
     pair: Doxygen; Arduino
-    
+
 ================================
 Doxygen avec Arduino
 ================================
@@ -748,8 +749,12 @@ ModelIo vite abandonnée.
 .. index::
     pair: UML; PlantUML
 
+.. _plantUMLRef:
+
 PlantUML
 ====================================================================================================
+Utilisé sur Electrical Power Strip IoT
+
 `Site officiel de PlantUML`_
 
 .. _`Site officiel de PlantUML` : https://plantuml.com/fr/
@@ -761,12 +766,17 @@ utiliser l'intégralité des graphiques listés, il faut avoir Graphviz install�
 .. index::
     single: Graphviz
 
-`site officiel de GraphViz`_ La doc est en ligne.
+`site officiel de GraphViz`_ La doc est en ligne. Voir aussi :ref:`Grphviz dans Spnix<graphviz_intoSphinx>`
+
 
 .. _`site officiel de GraphViz` : https://graphviz.org/
 
 
 Il y a évidement des extension Visual Studio Code ;-)
+
+Celle-ci est particulièrement utile car elle permet de visualiser en même temps qu'on écrit avec alt+d
+
+Rich PlantUML support for Visual Studio Code.
 
 Le :download:`guide du langage existe en pdf fr<fichiersJoints/PlantUML_Language_Reference_Guide_fr.pdf>`.
 

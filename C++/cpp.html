@@ -4,9 +4,11 @@
 <html lang="fr">
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mes notes sur C++ &#8212; Documentation MajorLee&#39;s notes </title>
     <link rel="stylesheet" href="../_static/nature.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
     <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
@@ -30,7 +32,8 @@
         <li class="right" >
           <a href="../hardware/nucleo/nucleo.html" title="NUCLEO board *"
              accesskey="P">précédent</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">Documentation MajorLee&#39;s notes </a> &#187;</li> 
+        <li class="nav-item nav-item-0"><a href="../index.html">Documentation MajorLee&#39;s notes </a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Mes notes sur C++</a></li> 
       </ul>
     </div>  
 
@@ -60,7 +63,7 @@
 <ul class="simple">
 <li><p><a class="reference internal" href="#mes-notes-sur-c" id="id26">Mes notes sur C++</a></p>
 <ul>
-<li><p><a class="reference internal" href="#c-operators-surcharge" id="id27">C++ opérators (surcharge)</a></p>
+<li><p><a class="reference internal" href="#c-operateurs-surcharge" id="id27">C++ opérateurs (surcharge)</a></p>
 <ul>
 <li><p><a class="reference internal" href="#surcharge-operateur" id="id28">Surcharge opérateur ==, &gt;, …</a></p></li>
 <li><p><a class="reference internal" href="#surcharge-des-operateurs-arithmetiques" id="id29">Surcharge des opérateurs arithmétiques</a></p></li>
@@ -154,12 +157,12 @@
 <p>Ceci n’est pas un cours sur le C++, il y en a déjà plein et de très bons voir celui par exemple de
 <a class="reference external" href="https://openclassrooms.com/fr/courses/1894236-programmez-avec-le-langage-c">Openclassrooms</a> <a class="footnote-reference brackets" href="#id2" id="id3">1</a></p>
 <p><strong>Voir aussi la map cpp_notes.xmind</strong></p>
-<div class="section" id="c-operators-surcharge">
-<h2><a class="toc-backref" href="#sommaire">C++ opérators (surcharge)</a><a class="headerlink" href="#c-operators-surcharge" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="section" id="c-operateurs-surcharge">
+<h2><a class="toc-backref" href="#sommaire">C++ opérateurs (surcharge)</a><a class="headerlink" href="#c-operateurs-surcharge" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Même si l’on parle de classe, ceci n’est pas une méthode.
 C’est une fonction normale située à l’extérieur de toute classe.</p>
 <p>Exemple:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">bool</span> <span class="k">operator</span><span class="o">==</span><span class="p">(</span><span class="n">Duree</span> <span class="k">const</span><span class="o">&amp;</span> <span class="n">a</span><span class="p">,</span> <span class="n">Duree</span> <span class="k">const</span><span class="o">&amp;</span> <span class="n">b</span><span class="p">);</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">bool</span> <span class="k">operator</span><span class="o">==</span><span class="p">(</span><span class="n">Durée</span> <span class="k">const</span><span class="o">&amp;</span> <span class="n">a</span><span class="p">,</span> <span class="n">Durée</span> <span class="k">const</span><span class="o">&amp;</span> <span class="n">b</span><span class="p">);</span>
 </pre></div>
 </div>
 <div class="section" id="surcharge-operateur">
@@ -338,7 +341,7 @@ le faire précédé du nom de la classe.</p>
 <p>Ne pas confondre avec un pointeur. A l’intérieur de la fonction on utilise seulement le nom de la
 variable passée et en plus pas la syntaxe -&gt; si il s’agit d’un objet.</p>
 <p>Mais on modifie bien la variable source puisqu’il n’y a pas de copie.</p>
-<p>Voir ci-dessus dans <a class="reference internal" href="#c-operators-surcharge">C++ opérators (surcharge)</a></p>
+<p>Voir ci-dessus dans <a class="reference internal" href="#c-operateurs-surcharge">C++ opérateurs (surcharge)</a></p>
 <blockquote>
 <div><ul class="simple">
 <li><dl class="simple">
@@ -704,12 +707,15 @@ arduino</p>
 <p>ModelIo vite abandonnée.</p>
 <p><a class="reference external" href="https://www.uml-diagrams.org/">Site sur les diagrammes UML</a> <a class="footnote-reference brackets" href="#id16" id="id17">8</a></p>
 <div class="section" id="plantuml">
-<span id="index-20"></span><h3><a class="toc-backref" href="#sommaire">PlantUML</a><a class="headerlink" href="#plantuml" title="Lien permanent vers ce titre">¶</a></h3>
+<span id="plantumlref"></span><span id="index-20"></span><h3><a class="toc-backref" href="#sommaire">PlantUML</a><a class="headerlink" href="#plantuml" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Utilisé sur Electrical Power Strip IoT</p>
 <p><a class="reference external" href="https://plantuml.com/fr/">Site officiel de PlantUML</a> <a class="footnote-reference brackets" href="#id18" id="id19">9</a></p>
 <p>PlantUML est surtout un langage de description comme le dot de Graphviz. D’ailleurs si on veut</p>
 <p>utiliser l’intégralité des graphiques listés, il faut avoir Graphviz installé ;-)</p>
-<p id="index-21"><a class="reference external" href="https://graphviz.org/">site officiel de GraphViz</a> <a class="footnote-reference brackets" href="#id20" id="id21">10</a> La doc est en ligne.</p>
+<p id="index-21"><a class="reference external" href="https://graphviz.org/">site officiel de GraphViz</a> <a class="footnote-reference brackets" href="#id20" id="id21">10</a> La doc est en ligne. Voir aussi <a class="reference internal" href="../sphinx/sphinx.html#graphviz-intosphinx"><span class="std std-ref">Grphviz dans Spnix</span></a></p>
 <p>Il y a évidement des extension Visual Studio Code ;-)</p>
+<p>Celle-ci est particulièrement utile car elle permet de visualiser en même temps qu’on écrit avec alt+d</p>
+<p>Rich PlantUML support for Visual Studio Code.</p>
 <p>Le <a class="reference download internal" download="" href="../_downloads/ce10494cef78726b363b50fb4f70cb17/PlantUML_Language_Reference_Guide_fr.pdf"><code class="xref download docutils literal notranslate"><span class="pre">guide</span> <span class="pre">du</span> <span class="pre">langage</span> <span class="pre">existe</span> <span class="pre">en</span> <span class="pre">pdf</span> <span class="pre">fr</span></code></a>.</p>
 <p>citation:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">PlantUML</span> <span class="n">est</span> <span class="n">un</span> <span class="n">composant</span> <span class="n">qui</span> <span class="n">permet</span> <span class="n">de</span> <span class="n">dessiner</span> <span class="n">rapidement</span> <span class="n">des</span><span class="p">:</span>
@@ -793,6 +799,7 @@ fichier .jar</p>
 </div>
 
 
+            <div class="clearer"></div>
           </div>
         </div>
       </div>
@@ -801,7 +808,7 @@ fichier .jar</p>
   <h3><a href="../index.html">Table des matières</a></h3>
   <ul>
 <li><a class="reference internal" href="#">Mes notes sur C++</a><ul>
-<li><a class="reference internal" href="#c-operators-surcharge">C++ opérators (surcharge)</a><ul>
+<li><a class="reference internal" href="#c-operateurs-surcharge">C++ opérateurs (surcharge)</a><ul>
 <li><a class="reference internal" href="#surcharge-operateur">Surcharge opérateur ==, &gt;, …</a></li>
 <li><a class="reference internal" href="#surcharge-des-operateurs-arithmetiques">Surcharge des opérateurs arithmétiques</a></li>
 <li><a class="reference internal" href="#surcharge-de-l-operateur">Surcharge de l’opérateur &lt;&lt;</a></li>
@@ -889,12 +896,13 @@ fichier .jar</p>
         <li class="right" >
           <a href="../hardware/nucleo/nucleo.html" title="NUCLEO board *"
              >précédent</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">Documentation MajorLee&#39;s notes </a> &#187;</li> 
+        <li class="nav-item nav-item-0"><a href="../index.html">Documentation MajorLee&#39;s notes </a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Mes notes sur C++</a></li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2019, J.SORANZO.
-      Créé avec <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.4.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.2.0.
     </div>
   </body>
 </html>

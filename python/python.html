@@ -4,9 +4,11 @@
 <html lang="fr">
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Python (mes notes) &#8212; Documentation MajorLee&#39;s notes </title>
     <link rel="stylesheet" href="../_static/nature.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
     <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
@@ -16,7 +18,7 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Recherche" href="../search.html" />
     <link rel="next" title="Les objets connectés" href="../lesObjetsConnectes/lesObjetsConnectes.html" />
-    <link rel="prev" title="Notes sur Qt *" href="../C++/Qt/Qt.html" /> 
+    <link rel="prev" title="Notes sur Qt *" href="../C%2B%2B/Qt/Qt.html" /> 
   </head><body>
     <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
@@ -28,9 +30,10 @@
           <a href="../lesObjetsConnectes/lesObjetsConnectes.html" title="Les objets connectés"
              accesskey="N">suivant</a> |</li>
         <li class="right" >
-          <a href="../C++/Qt/Qt.html" title="Notes sur Qt *"
+          <a href="../C%2B%2B/Qt/Qt.html" title="Notes sur Qt *"
              accesskey="P">précédent</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">Documentation MajorLee&#39;s notes </a> &#187;</li> 
+        <li class="nav-item nav-item-0"><a href="../index.html">Documentation MajorLee&#39;s notes </a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Python (mes notes)</a></li> 
       </ul>
     </div>  
 
@@ -49,7 +52,7 @@
 <dd class="field-even"><p>Août 2020</p>
 </dd>
 <dt class="field-odd">mise à jour</dt>
-<dd class="field-odd"><p>28/09/2021</p>
+<dd class="field-odd"><p>21/10/2021</p>
 </dd>
 <dt class="field-even">Societe</dt>
 <dd class="field-even"><p>VoRoBoTics</p>
@@ -61,39 +64,67 @@
 <div class="contents topic" id="sommaire">
 <p class="topic-title">Sommaire</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="#python-mes-notes" id="id39">Python (mes notes)</a></p>
+<li><p><a class="reference internal" href="#python-mes-notes" id="id63">Python (mes notes)</a></p>
 <ul>
-<li><p><a class="reference internal" href="#disclaimer" id="id40">Disclaimer</a></p></li>
-<li><p><a class="reference internal" href="#pourquoi-les-gens-aiment-python" id="id41">Pourquoi les gens aiment Python</a></p></li>
-<li><p><a class="reference internal" href="#docs" id="id42">Docs</a></p></li>
-<li><p><a class="reference internal" href="#documenter-du-code-python-et-relaton-avec-sphinx" id="id43">Documenter du code Python et relaton avec Sphinx</a></p></li>
-<li><p><a class="reference internal" href="#elements-de-langages" id="id44">Elements de langages</a></p>
+<li><p><a class="reference internal" href="#disclaimer" id="id64">Disclaimer</a></p></li>
+<li><p><a class="reference internal" href="#pourquoi-les-gens-aiment-python" id="id65">Pourquoi les gens aiment Python</a></p></li>
+<li><p><a class="reference internal" href="#docs" id="id66">Docs</a></p></li>
+<li><p><a class="reference internal" href="#outils-ide" id="id67">Outils, IDE…</a></p>
 <ul>
-<li><p><a class="reference internal" href="#notations" id="id45">Notations</a></p></li>
-<li><p><a class="reference internal" href="#tuples" id="id46">Tuples</a></p></li>
-<li><p><a class="reference internal" href="#listes" id="id47">Listes</a></p></li>
-<li><p><a class="reference internal" href="#dictionnaires" id="id48">Dictionnaires</a></p></li>
-<li><p><a class="reference internal" href="#enumerate" id="id49">Enumerate</a></p></li>
-<li><p><a class="reference internal" href="#fonctions" id="id50">Fonctions</a></p></li>
-<li><p><a class="reference internal" href="#modules" id="id51">Modules</a></p></li>
-<li><p><a class="reference internal" href="#les-exceptions" id="id52">Les exceptions</a></p></li>
-<li><p><a class="reference internal" href="#les-packages" id="id53">Les packages</a></p></li>
-<li><p><a class="reference internal" href="#les-fichiers" id="id54">Les fichiers</a></p></li>
-<li><p><a class="reference internal" href="#les-objets" id="id55">Les objets</a></p></li>
-<li><p><a class="reference internal" href="#iterateur-generateur" id="id56">Itérateur &amp; générateur</a></p></li>
+<li><p><a class="reference internal" href="#miniconda-conda" id="id68">Miniconda, conda</a></p></li>
+<li><p><a class="reference internal" href="#jupiter" id="id69">Jupiter</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#astuces" id="id57">Astuces</a></p>
+<li><p><a class="reference internal" href="#a-revoir" id="id70">A revoir</a></p></li>
+<li><p><a class="reference internal" href="#documenter-du-code-python-et-relation-avec-sphinx" id="id71">Documenter du code Python et relation avec Sphinx</a></p></li>
+<li><p><a class="reference internal" href="#elements-de-langages" id="id72">Éléments de langages</a></p>
 <ul>
-<li><p><a class="reference internal" href="#python2-to-3" id="id58">Python2 to 3</a></p></li>
+<li><p><a class="reference internal" href="#annotations" id="id73">Annotations</a></p></li>
+<li><p><a class="reference internal" href="#notations-operateurs" id="id74">Notations / opérateurs</a></p></li>
+<li><p><a class="reference internal" href="#tuples" id="id75">Tuples</a></p></li>
+<li><p><a class="reference internal" href="#listes" id="id76">Listes</a></p></li>
+<li><p><a class="reference internal" href="#dictionnaires" id="id77">Dictionnaires</a></p></li>
+<li><p><a class="reference internal" href="#enumerate" id="id78">Enumerate</a></p></li>
+<li><p><a class="reference internal" href="#fonctions" id="id79">Fonctions</a></p></li>
+<li><p><a class="reference internal" href="#modules" id="id80">Modules</a></p></li>
+<li><p><a class="reference internal" href="#les-exceptions" id="id81">Les exceptions</a></p></li>
+<li><p><a class="reference internal" href="#les-packages" id="id82">Les packages</a></p></li>
+<li><p><a class="reference internal" href="#les-fichiers" id="id83">Les fichiers</a></p></li>
+<li><p><a class="reference internal" href="#les-objets" id="id84">Les objets</a></p></li>
+<li><p><a class="reference internal" href="#iterateur-generateur" id="id85">Itérateur &amp; générateur</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#i2c" id="id59">I2C</a></p></li>
-<li><p><a class="reference internal" href="#pyserial" id="id60">PySerial</a></p></li>
-<li><p><a class="reference internal" href="#gestionnaires-graphiques" id="id61">Gestionnaires graphiques</a></p></li>
-<li><p><a class="reference internal" href="#a-revoir" id="id62">A revoir</a></p></li>
-<li><p><a class="reference internal" href="#appli-minimum-template" id="id63">Appli minimum (template)</a></p></li>
-<li><p><a class="reference internal" href="#weblinks" id="id64">Weblinks</a></p></li>
+<li><p><a class="reference internal" href="#astuces" id="id86">Astuces</a></p>
+<ul>
+<li><p><a class="reference internal" href="#tempo" id="id87">tempo</a></p></li>
+<li><p><a class="reference internal" href="#sur-les-chaines" id="id88">Sur les chaînes</a></p></li>
+<li><p><a class="reference internal" href="#tester-tester-tester" id="id89">Tester, tester, tester</a></p></li>
+<li><p><a class="reference internal" href="#print-inline" id="id90">Print inline</a></p></li>
+<li><p><a class="reference internal" href="#if" id="id91">if</a></p></li>
+<li><p><a class="reference internal" href="#ou-est-python" id="id92">Où est python ?</a></p></li>
+<li><p><a class="reference internal" href="#turtle" id="id93">Turtle</a></p></li>
+<li><p><a class="reference internal" href="#sur-l-aide" id="id94">sur l’Aide</a></p></li>
+<li><p><a class="reference internal" href="#sur-les-liste-dico" id="id95">Sur les liste, dico…</a></p></li>
+<li><p><a class="reference internal" href="#aficher-un-dictionnaire-ligne-a-ligne" id="id96">Aficher un dictionnaire ligne à ligne</a></p></li>
+<li><p><a class="reference internal" href="#multiplication-de-liste" id="id97">Multiplication de liste</a></p></li>
+<li><p><a class="reference internal" href="#byte-et-byarray" id="id98">byte et byarray</a></p></li>
+<li><p><a class="reference internal" href="#sur-les-modules-package" id="id99">Sur les modules, package…</a></p></li>
+<li><p><a class="reference internal" href="#sur-les-fichiers" id="id100">Sur Les fichiers</a></p></li>
+<li><p><a class="reference internal" href="#autres-astuces" id="id101">Autres astuces</a></p></li>
+<li><p><a class="reference internal" href="#ctrl-c" id="id102">Ctrl C</a></p></li>
+<li><p><a class="reference internal" href="#python2-to-3" id="id103">Python2 to 3</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#time" id="id104">Time</a></p></li>
+<li><p><a class="reference internal" href="#i2c" id="id105">I2C</a></p>
+<ul>
+<li><p><a class="reference internal" href="#wiring-pi" id="id106">Wiring pi</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#pyserial" id="id107">PySerial</a></p></li>
+<li><p><a class="reference internal" href="#gestionnaires-graphiques" id="id108">Gestionnaires graphiques</a></p></li>
+<li><p><a class="reference internal" href="#appli-minimum-template" id="id109">Appli minimum (template)</a></p></li>
+<li><p><a class="reference internal" href="#weblinks" id="id110">Weblinks</a></p></li>
 </ul>
 </li>
 </ul>
@@ -114,14 +145,73 @@ cours ou quoi que ce soit d’autre dans le genre. Ce serait plutôt un pense-b�
 <h2><a class="toc-backref" href="#sommaire">Docs</a><a class="headerlink" href="#docs" title="Lien permanent vers ce titre">¶</a></h2>
 <p><a class="reference external" href="https://docs.python.org/3/library/index.html">La librairie standard</a> <a class="footnote-reference brackets" href="#id1" id="id2">1</a></p>
 <p>Index des package sur <a class="reference external" href="https://pypi.org/">Pypi Python Package Index</a> <a class="footnote-reference brackets" href="#id3" id="id4">2</a></p>
+<div class="admonition warning">
+<p class="admonition-title">Avertissement</p>
+<p>Toute la doc Python est téléchargeable sur <a class="reference external" href="https://www.python.org/">https://www.python.org/</a> rubrique documentation dans
+plusieurs langues !</p>
 </div>
-<div class="section" id="documenter-du-code-python-et-relaton-avec-sphinx">
-<span id="documenterprojetpython"></span><span id="index-1"></span><h2><a class="toc-backref" href="#sommaire">Documenter du code Python et relaton avec Sphinx</a><a class="headerlink" href="#documenter-du-code-python-et-relaton-avec-sphinx" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Je ne trace ici que les éccueils auquels j’ai été confronté. Il y a de nombreux sites qui traitent
+</div>
+<div class="section" id="outils-ide">
+<h2><a class="toc-backref" href="#sommaire">Outils, IDE…</a><a class="headerlink" href="#outils-ide" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="section" id="miniconda-conda">
+<h3><a class="toc-backref" href="#sommaire">Miniconda, conda</a><a class="headerlink" href="#miniconda-conda" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Utilisation de miniconda3</p>
+<p><a class="reference external" href="https://docs.conda.io/en/latest/miniconda.html">Conda documentation</a> <a class="footnote-reference brackets" href="#id5" id="id6">3</a></p>
+<p><a class="reference external" href="https://docs.conda.io/projects/conda/en/latest/user-guide/cheatsheet.html">Conda cheat sheet</a> <a class="footnote-reference brackets" href="#id7" id="id8">4</a></p>
+<p>Mes commandes vraiment utiles:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">create</span> <span class="o">-</span><span class="n">n</span> <span class="n">toto</span> <span class="p">(</span><span class="n">par</span> <span class="n">défaut</span> <span class="n">python</span> <span class="mf">2.7</span><span class="p">)</span>
+<span class="n">conda</span> <span class="n">create</span> <span class="o">-</span><span class="n">n</span> <span class="n">toto</span> <span class="n">python</span><span class="o">=</span><span class="mf">3.6</span>
+<span class="n">conda</span> <span class="nb">list</span> <span class="o">-</span><span class="n">n</span> <span class="n">toto</span>
+<span class="n">conda</span> <span class="n">remove</span> <span class="o">--</span><span class="n">name</span> <span class="n">toto</span> <span class="o">--</span><span class="nb">all</span>
+<span class="n">conda</span> <span class="n">info</span> <span class="o">--</span><span class="n">envs</span>
+<span class="n">conda</span> <span class="o">--</span><span class="n">version</span>
+</pre></div>
+</div>
+<p><strong>Conda n’est pas lié à un répertoire !</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">env</span> <span class="n">create</span> <span class="o">-</span><span class="n">p</span> <span class="o">../</span><span class="n">venv</span> <span class="o">-</span><span class="n">f</span> <span class="n">locks</span><span class="o">/</span><span class="n">conda</span><span class="o">.</span><span class="n">yml</span>
+<span class="n">Commande</span> <span class="n">fonctionnelle</span> <span class="n">liste</span> <span class="n">des</span> <span class="n">packages</span> <span class="n">communs</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span>  <span class="n">create</span> <span class="n">versus</span> <span class="n">conda</span> <span class="n">env</span> <span class="n">create</span> <span class="p">:</span> <span class="n">la</span> <span class="n">version</span> <span class="n">avec</span> <span class="n">env</span> <span class="n">permet</span> <span class="n">de</span> <span class="n">créer</span> <span class="n">ou</span> <span class="n">d</span><span class="s1">&#39;exporter</span>
+<span class="n">un</span> <span class="n">environnement</span> <span class="n">grâce</span> <span class="n">aux</span> <span class="n">fichiers</span> <span class="n">yml</span>
+</pre></div>
+</div>
+<p>Pour exporter un environnement:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">env</span> <span class="n">export</span> <span class="o">--</span><span class="n">name</span> <span class="n">toto</span> <span class="o">--</span><span class="n">file</span> <span class="n">constructor_of_toto</span><span class="o">.</span><span class="n">yml</span>
+</pre></div>
+</div>
+<p>Conda est lié à un dépôt. qui peut contenir des package différents d’une plateforme à l’autre.
+Comme sur Raspberry pi: <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">info</span></code> indique ce dépôt:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">channel</span> <span class="n">URLs</span> <span class="p">:</span>  <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">repo</span><span class="o">.</span><span class="n">continuum</span><span class="o">.</span><span class="n">io</span><span class="o">/</span><span class="n">pkgs</span><span class="o">/</span><span class="n">free</span><span class="o">/</span><span class="n">linux</span><span class="o">-</span><span class="n">armv7l</span><span class="o">/</span>
+                <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">repo</span><span class="o">.</span><span class="n">continuum</span><span class="o">.</span><span class="n">io</span><span class="o">/</span><span class="n">pkgs</span><span class="o">/</span><span class="n">free</span><span class="o">/</span><span class="n">noarch</span><span class="o">/</span>
+                <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">repo</span><span class="o">.</span><span class="n">continuum</span><span class="o">.</span><span class="n">io</span><span class="o">/</span><span class="n">pkgs</span><span class="o">/</span><span class="n">pro</span><span class="o">/</span><span class="n">linux</span><span class="o">-</span><span class="n">armv7l</span><span class="o">/</span>
+                <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">repo</span><span class="o">.</span><span class="n">continuum</span><span class="o">.</span><span class="n">io</span><span class="o">/</span><span class="n">pkgs</span><span class="o">/</span><span class="n">pro</span><span class="o">/</span><span class="n">noarch</span><span class="o">/</span>
+</pre></div>
+</div>
+<p>Donc sur RPi avec conda, il ne faut même pas espérer faire du python autre que 3.4 et 2.7</p>
+<p>Et bien si, grâce à <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">config</span> <span class="pre">--add</span> <span class="pre">channels</span> <span class="pre">rpi</span></code> puis <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">search</span> <span class="pre">--full-name</span> <span class="pre">python</span></code></p>
+<p>Source : site : ANegron’s Blog <a class="reference external" href="https://www.anegron.site/2020/06/18/how-to-install-conda-and-docker-on-your-raspberry-pi/">How to install Conda and Docker on your Raspberry Pi</a> <a class="footnote-reference brackets" href="#id9" id="id10">5</a></p>
+</div>
+<div class="section" id="jupiter">
+<span id="jupiterprojet"></span><span id="index-1"></span><h3><a class="toc-backref" href="#sommaire">Jupiter</a><a class="headerlink" href="#jupiter" title="Lien permanent vers ce titre">¶</a></h3>
+<p>A revoir</p>
+<p><a class="reference external" href="https://jupyter.org/">Project Jupyter</a> <a class="footnote-reference brackets" href="#id11" id="id12">6</a> exists to develop open-source software, open-standards, and services for interactive
+computing across dozens of programming languages.</p>
+<p><a class="reference external" href="https://www.youtube.com/watch?v=g2yckh3_22E">Prise en main de l’outil Jupyter</a> <a class="footnote-reference brackets" href="#id13" id="id14">7</a></p>
+</div>
+</div>
+<div class="section" id="a-revoir">
+<h2><a class="toc-backref" href="#sommaire">A revoir</a><a class="headerlink" href="#a-revoir" title="Lien permanent vers ce titre">¶</a></h2>
+<p><a class="reference external" href="https://doc.scrapy.org/en/1.2/intro/overview.html">Scrapy</a> <a class="footnote-reference brackets" href="#id15" id="id16">8</a>  : permet de « grater » des page web</p>
+<p><a class="reference external" href="https://realpython.com/python-code-quality/">Python Code Quality: Tools &amp; Best Practices</a> <a class="footnote-reference brackets" href="#id17" id="id18">9</a></p>
+</div>
+<div class="section" id="documenter-du-code-python-et-relation-avec-sphinx">
+<span id="documenterprojetpython"></span><span id="index-2"></span><h2><a class="toc-backref" href="#sommaire">Documenter du code Python et relation avec Sphinx</a><a class="headerlink" href="#documenter-du-code-python-et-relation-avec-sphinx" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Je ne trace ici que les écueils auxquels j’ai été confronté. Il y a de nombreux sites qui traitent
 du sujet.</p>
-<p>Un très bon site pas à pas : <a class="reference external" href="https://blog.flozz.fr/2020/10/04/documenter-un-projet-python-avec-sphinx/">blog.flozz.fr</a> <a class="footnote-reference brackets" href="#id5" id="id6">3</a></p>
+<p>Un très bon site pas à pas : <a class="reference external" href="https://blog.flozz.fr/2020/10/04/documenter-un-projet-python-avec-sphinx/">blog.flozz.fr</a> <a class="footnote-reference brackets" href="#id19" id="id20">10</a></p>
 <p>Cela passe par docstring <code class="docutils literal notranslate"><span class="pre">&quot;&quot;&quot;</span> <span class="pre">&quot;&quot;&quot;</span></code></p>
-<p>Sphinx permet de transformer des fichier restructured text en fichier latex, htlm… Mais, il
+<p>Sphinx permet de transformer des fichier restructured text en fichier latex, html… Mais, il
 n’extrait pas tout seul les docstring du code Python pour cela il lui faut une extension.</p>
 <p>Comme autodoc qu’il faut ajouter dans le fichier config.py:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">extensions</span> <span class="o">=</span> <span class="p">[</span>
@@ -145,24 +235,52 @@ n’extrait pas tout seul les docstring du code Python pour cela il lui faut une
 </div>
 </div>
 <div class="section" id="elements-de-langages">
-<h2><a class="toc-backref" href="#sommaire">Elements de langages</a><a class="headerlink" href="#elements-de-langages" title="Lien permanent vers ce titre">¶</a></h2>
-<div class="section" id="notations">
-<h3><a class="toc-backref" href="#sommaire">Notations</a><a class="headerlink" href="#notations" title="Lien permanent vers ce titre">¶</a></h3>
-<ul class="simple">
-<li><p>Notation hexa : C’est 0x33</p></li>
+<h2><a class="toc-backref" href="#sommaire">Éléments de langages</a><a class="headerlink" href="#elements-de-langages" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="section" id="annotations">
+<h3><a class="toc-backref" href="#sommaire">Annotations</a><a class="headerlink" href="#annotations" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Depuis Python 3.6, on peut annoter les paramètres d’une fonction ou les</p>
+<p>voir:</p>
+<p><a class="reference external" href="https://zestedesavoir.com/tutoriels/954/notions-de-python-avancees/2-functions/2-annotations-signatures/">https://zestedesavoir.com/tutoriels/954/notions-de-python-avancees/2-functions/2-annotations-signatures/</a></p>
+</div>
+<div class="section" id="notations-operateurs">
+<h3><a class="toc-backref" href="#sommaire">Notations / opérateurs</a><a class="headerlink" href="#notations-operateurs" title="Lien permanent vers ce titre">¶</a></h3>
+<ul class="simple" id="index-3">
+<li><p>Notation hex : C’est 0x33</p></li>
 <li><p>Binaire : 0b</p></li>
 <li><p>Octal : 0o</p></li>
 </ul>
 <p>Long integer 123L</p>
-<p>Code sur plusieurs lignes c’est avec le caractères </p>
+<p>Code sur plusieurs lignes c’est avec le caractères \</p>
+<p id="index-4"><strong>Vrai, faux</strong></p>
+<p>True et False avec une majuscule</p>
+<p id="index-5"><strong>Opérateurs</strong></p>
+<p>Arithmétique : je ne parle pas des courants:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">%</span>   <span class="n">Modulo</span>
+<span class="o">**</span>  <span class="n">Puissance</span>
+<span class="o">//</span>  <span class="n">Division</span> <span class="n">entière</span>
+</pre></div>
+</div>
+<p>Tous les opérateurs arithmétiques peuvent être combinés avec = comme //= ou %= …</p>
+<p>les opérateurs logiques:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">X</span><span class="o">|</span><span class="n">Y</span> <span class="n">X</span> <span class="n">ou</span> <span class="n">Y</span><span class="p">,</span> <span class="o">^</span> <span class="n">ou</span> <span class="n">exclusif</span><span class="p">,</span> <span class="o">&amp;</span> <span class="n">pour</span> <span class="n">et</span><span class="p">,</span> <span class="o">~</span> <span class="n">pour</span> <span class="n">l</span><span class="s1">&#39;inversion</span>
+</pre></div>
+</div>
+<p>Les opérateurs booléens:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">X</span> <span class="ow">or</span> <span class="n">Y</span><span class="p">,</span> <span class="n">X</span> <span class="ow">and</span> <span class="n">Y</span> <span class="n">et</span> <span class="ow">not</span> <span class="n">X</span>
+</pre></div>
+</div>
+<p>Les opérateurs de comparaisons:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">==</span> <span class="n">et</span> <span class="o">!=</span> <span class="n">ou</span> <span class="o">&lt;&gt;</span>
+</pre></div>
+</div>
 </div>
 <div class="section" id="tuples">
-<span id="index-2"></span><h3><a class="toc-backref" href="#sommaire">Tuples</a><a class="headerlink" href="#tuples" title="Lien permanent vers ce titre">¶</a></h3>
+<span id="index-6"></span><h3><a class="toc-backref" href="#sommaire">Tuples</a><a class="headerlink" href="#tuples" title="Lien permanent vers ce titre">¶</a></h3>
 <p>Ce sont simplement des listes non modifiables syntaxe :
 () à l d [] par rapport à la syntaxe d’une liste.</p>
 </div>
 <div class="section" id="listes">
-<span id="index-3"></span><h3><a class="toc-backref" href="#sommaire">Listes</a><a class="headerlink" href="#listes" title="Lien permanent vers ce titre">¶</a></h3>
+<span id="index-7"></span><h3><a class="toc-backref" href="#sommaire">Listes</a><a class="headerlink" href="#listes" title="Lien permanent vers ce titre">¶</a></h3>
 <p>Toutes les méthodes de list:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">listMethode</span><span class="p">[</span><span class="n">listMethode</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="s1">&#39;clear&#39;</span><span class="p">):</span><span class="n">listMethode</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="s1">&#39;sort&#39;</span><span class="p">)]</span>
 <span class="go">&#39;clear&#39;, &#39;copy&#39;, &#39;append&#39;, &#39;insert&#39;, &#39;extend&#39;, &#39;pop&#39;, &#39;remove&#39;, &#39;index&#39;, &#39;count&#39;, &#39;reverse&#39;</span>
@@ -175,7 +293,7 @@ n’extrait pas tout seul les docstring du code Python pour cela il lui faut une
 <span class="n">ou</span> <span class="n">encore</span> <span class="n">troc</span> <span class="o">=</span> <span class="p">[]</span>
 </pre></div>
 </div>
-<p>Eléments de syntaxe: les crochets.</p>
+<p>Éléments de syntaxe: les crochets.</p>
 <p><strong>L’intérêt</strong>:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">seasons</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Spring&#39;</span><span class="p">,</span> <span class="s1">&#39;Summer&#39;</span><span class="p">,</span> <span class="s1">&#39;Fall&#39;</span><span class="p">,</span> <span class="s1">&#39;Winter&#39;</span><span class="p">]</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="nb">list</span><span class="p">(</span><span class="nb">enumerate</span><span class="p">(</span><span class="n">seasons</span><span class="p">))</span> <span class="c1">#liste de tuples (index, éléments)</span>
@@ -203,9 +321,9 @@ Pour accéder à plusieurs élément consécutifs : malist[x:y]</p>
 <p><strong>pile et queue</strong>
 Elle peuvent être utilisées en pile ou en queue cf. &lt;<a class="reference external" href="https://docs.python.org/3.1/tutorial/datastructures.html">https://docs.python.org/3.1/tutorial/datastructures.html</a>&gt;</p>
 <p>Grace à pop pour les piles et popleft pour les files d’attente.</p>
-<p>insert(0 , item) et pop() : pour les Quelques</p>
+<p>insert(0 , item) et pop() : pour les queues.</p>
 <p>append() et pop() : pour les piles ou insert(0, item) et pop(0) semble moins efficace
-(faut tout décaller)</p>
+(faut tout décaler)</p>
 <p>Concept très intéressant de tableau qui se vide au fur et à mesure de son traitement. Quand le
 tableau est vide, on a fini (récursivité…). De plus pop renvoi l’élément retirer ;-)</p>
 <p><strong>test d’appartenance</strong>:</p>
@@ -220,13 +338,18 @@ tableau est vide, on a fini (récursivité…). De plus pop renvoi l’élément
 <p>Mais on peut utiliser les compréhensions de listes:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">list2</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">list</span><span class="p">]</span>
 <span class="n">ou</span> <span class="n">plus</span> <span class="n">simplement</span> <span class="n">list2</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">list1</span><span class="p">)</span>
-<span class="n">ou</span> <span class="n">encore</span> <span class="n">lsit2</span><span class="o">=</span><span class="n">list1</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<span class="n">ou</span> <span class="n">encore</span> <span class="n">list2</span><span class="o">=</span><span class="n">list1</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
 </pre></div>
 </div>
-<p id="index-4"><strong>Compréhension de listes</strong> ou listes en intension</p>
+<p id="index-8"><strong>Compréhension de listes</strong> ou listes en intension</p>
+<p>La syntaxe est : <code class="docutils literal notranslate"><span class="pre">[</span> <span class="pre">action</span> <span class="pre">iterable]</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span> <span class="s1">&#39;a&#39;</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">rang</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span> <span class="p">]</span>
+    <span class="n">noter</span> <span class="n">que</span> <span class="n">i</span> <span class="n">n</span><span class="s1">&#39;est pas nécessairement utilisé dans action</span>
+</pre></div>
+</div>
 <p>C’est assurément un des grandes forces de Python et un élément de programmation nouveau.
 L’idée est de <strong>créer un liste</strong> en une seule ligne
-Voir <a class="reference external" href="http://sametmax.com/python-love-les-listes-en-intention-partie/">les comprehensions de liste sur Sam et Max</a> <a class="footnote-reference brackets" href="#id7" id="id8">4</a></p>
+Voir <a class="reference external" href="http://sametmax.com/python-love-les-listes-en-intention-partie/">les comprehensions de liste sur Sam et Max</a> <a class="footnote-reference brackets" href="#id21" id="id22">11</a></p>
 <p>Ca fabrique une liste !</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>[expression for element in sequence]
 moyen de filtrer les listes
@@ -276,16 +399,21 @@ la syntaxe au niveau definition est</p>
 </div>
 <p>la fonction reçoit un tuple des paramètres.</p>
 <p>L’appel d’une telle fonction peut se faire fonction( 1, 3, 6) ou fonction(*malisteDeParametres)</p>
-<p>Cela est réservé au paramètres non mommés et on peut combiner des paramètre et une liste.
-La liste doit se trouver en dernier ainsi que des parmaètres nommés qui se trouveront après.</p>
+<p>Cela est réservé au paramètres non nommés et on peut combiner des paramètre et une liste.
+La liste doit se trouver en dernier ainsi que des paramètres nommés qui se trouveront après.</p>
 <p><strong>enumerate</strong>
 Voir <a class="reference internal" href="#enumerate">Enumerate</a></p>
+<p>Exemples en vrac:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span> <span class="c1">#! crée une lise de 0 à 9</span>
+<span class="p">[</span><span class="n">x</span><span class="o">*</span><span class="n">y</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">vec1</span> <span class="k">for</span> <span class="n">y</span> <span class="ow">in</span> <span class="n">vec2</span><span class="p">]</span>
+</pre></div>
+</div>
 </div>
 <div class="section" id="dictionnaires">
-<span id="index-5"></span><h3><a class="toc-backref" href="#sommaire">Dictionnaires</a><a class="headerlink" href="#dictionnaires" title="Lien permanent vers ce titre">¶</a></h3>
-<p><a class="reference external" href="https://docs.python.org/3.1/tutorial/datastructures.html#dictionaries">Doc officielle sur les dictionnaires</a> <a class="footnote-reference brackets" href="#id9" id="id10">5</a></p>
+<span id="index-9"></span><h3><a class="toc-backref" href="#sommaire">Dictionnaires</a><a class="headerlink" href="#dictionnaires" title="Lien permanent vers ce titre">¶</a></h3>
+<p><a class="reference external" href="https://docs.python.org/3.1/tutorial/datastructures.html#dictionaries">Doc officielle sur les dictionnaires</a> <a class="footnote-reference brackets" href="#id23" id="id24">12</a></p>
 <p>Mot clé : dict, création: maVar = dict()</p>
-<p>Eléments de syntaxe: les accolades et les :</p>
+<p>Éléments de syntaxe: les accolades et les :</p>
 <p>On peut aussi créer des dictionnaires déjà remplis</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">placard</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;chemise&quot;</span><span class="p">:</span><span class="mi">3</span><span class="p">,</span> <span class="s2">&quot;pantalon&quot;</span><span class="p">:</span><span class="mi">6</span><span class="p">,</span> <span class="s2">&quot;tee-shirt&quot;</span><span class="p">:</span><span class="mi">7</span><span class="p">}</span> <span class="o">-</span> <span class="n">on</span> <span class="n">notera</span> <span class="n">les</span> <span class="n">accolades</span>
 </pre></div>
@@ -304,7 +432,7 @@ le même dictionnaire).</p>
         <span class="n">maVar</span><span class="p">[</span> <span class="s2">&quot;ici&quot;</span> <span class="p">]</span> <span class="o">=</span> <span class="mi">234</span>
         <span class="o">...</span>
         <span class="n">puis</span> <span class="n">maVar</span><span class="p">[</span> <span class="s2">&quot;ici&quot;</span> <span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;RESTE&#39;</span>
-            <span class="n">Reste</span> <span class="n">ecrase</span> <span class="mf">234.</span>
+            <span class="n">Reste</span> <span class="n">écrase</span> <span class="mf">234.</span>
 </pre></div>
 </div>
 <p>{ “banane”, “pomme”, “citron” } n’est pas un dictionnaire sans valeurs. C’est un set ou ensemble.
@@ -319,9 +447,9 @@ paramètres non nommés.</p>
 </div>
 </div>
 <div class="section" id="enumerate">
-<span id="index-6"></span><h3><a class="toc-backref" href="#sommaire">Enumerate</a><a class="headerlink" href="#enumerate" title="Lien permanent vers ce titre">¶</a></h3>
+<span id="index-10"></span><h3><a class="toc-backref" href="#sommaire">Enumerate</a><a class="headerlink" href="#enumerate" title="Lien permanent vers ce titre">¶</a></h3>
 <p>C’est un mot clé et une fonction qui retourne un tuple(indice, valeur) et qui s’applique à tous
-les itérators.</p>
+les iterators.</p>
 <p>Différence:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">lsie</span> <span class="o">=</span> <span class="p">[</span><span class="mi">12</span><span class="p">,</span><span class="mi">35</span><span class="p">,</span><span class="s1">&#39;rien&#39;</span><span class="p">,</span><span class="mf">65.3</span><span class="p">]</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="k">for</span> <span class="n">elt</span> <span class="ow">in</span> <span class="n">lsie</span><span class="p">:</span>
@@ -343,7 +471,7 @@ les itérators.</p>
 </div>
 </div>
 <div class="section" id="fonctions">
-<span id="index-7"></span><h3><a class="toc-backref" href="#sommaire">Fonctions</a><a class="headerlink" href="#fonctions" title="Lien permanent vers ce titre">¶</a></h3>
+<span id="index-11"></span><h3><a class="toc-backref" href="#sommaire">Fonctions</a><a class="headerlink" href="#fonctions" title="Lien permanent vers ce titre">¶</a></h3>
 <p>Syntaxe:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">fonctionName</span><span class="p">(</span><span class="n">parametres</span><span class="p">,</span> <span class="n">param</span> <span class="o">=</span> <span class="n">defValue</span><span class="p">)</span> <span class="p">:</span>
     <span class="k">return</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span><span class="n">d</span>
@@ -351,12 +479,12 @@ les itérators.</p>
 </div>
 <p>Les fonction peuvent retourner plusieurs valeurs.</p>
 <p>Pas de surcharge</p>
-<p id="index-8"><strong>fonction lambda</strong> ? f = lambda x: x * x</p>
-<p>Intérêt ? Ecrire du code plus concis.</p>
+<p id="index-12"><strong>fonction lambda</strong> ? f = lambda x: x * x</p>
+<p>Intérêt ? Écrire du code plus concis.</p>
 <p>lambda est un mot clé</p>
-<p><a class="reference external" href="https://python.developpez.com/cours/DiveIntoPython/php/frdiveintopython/power_of_introspection/lambda_functions.php">les fonctions lambda sur developpez</a> <a class="footnote-reference brackets" href="#id11" id="id12">6</a></p>
-<p>sur open classroom <a class="reference external" href="https://openclassrooms.com/courses/apprenez-a-programmer-en-python/pas-a-pas-vers-la-modularite-1-2#/id/r-231371">meilleur explication de la fonction lambda sur Openclassroom</a> <a class="footnote-reference brackets" href="#id13" id="id14">7</a></p>
-<p><a class="reference external" href="https://openclassrooms.com/courses/apprenez-a-programmer-en-python/parenthese-sur-le-tri-en-python#/id/r-2233424">Exemple du tri avec une lambda sur Openclassroom</a> <a class="footnote-reference brackets" href="#id15" id="id16">8</a></p>
+<p><a class="reference external" href="https://python.developpez.com/cours/DiveIntoPython/php/frdiveintopython/power_of_introspection/lambda_functions.php">les fonctions lambda sur developpez</a> <a class="footnote-reference brackets" href="#id25" id="id26">13</a></p>
+<p>sur open classroom <a class="reference external" href="https://openclassrooms.com/courses/apprenez-a-programmer-en-python/pas-a-pas-vers-la-modularite-1-2#/id/r-231371">meilleur explication de la fonction lambda sur Openclassroom</a> <a class="footnote-reference brackets" href="#id27" id="id28">14</a></p>
+<p><a class="reference external" href="https://openclassrooms.com/courses/apprenez-a-programmer-en-python/parenthese-sur-le-tri-en-python#/id/r-2233424">Exemple du tri avec une lambda sur Openclassroom</a> <a class="footnote-reference brackets" href="#id29" id="id30">15</a></p>
 <p>En résumé: on met dans une variable une fonction pour pouvoir l’appeler ensuite sauf qu’on ne donne
 pas de nom à la fonction.</p>
 <p>Fonctions avec nombre paramètre indéterminé:</p>
@@ -381,12 +509,12 @@ J&#39;ai reçu : (3.5, [4], &#39;...&#39;).
 &gt;&gt;&gt;
 </pre></div>
 </div>
-<p>Une liste peu devenir paramètres d’une fonction, Achement puissant:</p>
+<p>Une liste peu devenir paramètres d’une fonction, vachement puissant:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">liste_des_parametres</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="mi">36</span><span class="p">]</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="o">*</span><span class="n">liste_des_parametres</span><span class="p">)</span>
 </pre></div>
 </div>
-<p id="index-9"><strong>Les décorateurs</strong></p>
+<p id="index-13"><strong>Les décorateurs</strong></p>
 <p>Pour schématiser, une fonction modifiée par un décorateur ne s’exécutera pas elle-même mais
 appellera le décorateur. C’est au décorateur de décider s’il veut exécuter la fonction
 et dans quelles conditions. (from <em>openclassroom</em>). C’est un moyen simple de modifier le
@@ -395,7 +523,7 @@ manière qu’une autre fonction) qui est appelé avant l’appel de la fonction
 juste une ligne avant la définition de la fonction et est précédé par &#64;.</p>
 <p>On peut créer des décorateurs qui accepte des paramètres et dans ce cas on atteint vite 3 niveaux
 de définition de fonctions imbriquées. Cf. OpenClassromm</p>
-<p>Autres <a class="reference external" href="http://simeonfranklin.com/blog/2012/jul/1/python-decorators-in-12-steps/">explication très détaillée par Simeon Franklin</a> <a class="footnote-reference brackets" href="#id17" id="id18">9</a> en anglais.</p>
+<p>Autres <a class="reference external" href="http://simeonfranklin.com/blog/2012/jul/1/python-decorators-in-12-steps/">explication très détaillée par Simeon Franklin</a> <a class="footnote-reference brackets" href="#id31" id="id32">16</a> en anglais.</p>
 <p>partial() appartient functool</p>
 <p>super() sujet : class, hiérarchie</p>
 <p>Permet d’appeler explicitement une méthode de la classe mère si celle-ci est redéfinie
@@ -403,9 +531,9 @@ dans  la classe fille. Par exemple init</p>
 <hr class="docutils" />
 </div>
 <div class="section" id="modules">
-<span id="index-10"></span><h3><a class="toc-backref" href="#sommaire">Modules</a><a class="headerlink" href="#modules" title="Lien permanent vers ce titre">¶</a></h3>
+<span id="index-14"></span><h3><a class="toc-backref" href="#sommaire">Modules</a><a class="headerlink" href="#modules" title="Lien permanent vers ce titre">¶</a></h3>
 <p>C’est tout simplement un fichier .py qui contient des variables, des fonctions ou des classes.</p>
-<p id="index-11">Plusieurs mots clés sont associés à la notion de module:</p>
+<p id="index-15">Plusieurs mots clés sont associés à la notion de module:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span>
 <span class="nn">import</span>
 <span class="k">as</span>
@@ -453,7 +581,7 @@ si le module est programme principal et non issu d’un import.</p>
 <span class="n">help</span><span class="p">(</span><span class="s2">&quot;nomPackage.nomFonction ou nomPackage&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
-<p id="index-12">On peut même intégrer un test automatique cf. doctest.
+<p id="index-16">On peut même intégrer un test automatique cf. doctest.
 The doctestmodule makes unit testing as simple and painless as possible. To use it all
 we need to do is add examples to our docstrings, showing what we would type into the
 interactive Python interpreter (or IDLE) and what response we expect back.</p>
@@ -461,7 +589,7 @@ interactive Python interpreter (or IDLE) and what response we expect back.</p>
 <hr class="docutils" />
 </div>
 <div class="section" id="les-exceptions">
-<span id="index-13"></span><h3><a class="toc-backref" href="#sommaire">Les exceptions</a><a class="headerlink" href="#les-exceptions" title="Lien permanent vers ce titre">¶</a></h3>
+<span id="index-17"></span><h3><a class="toc-backref" href="#sommaire">Les exceptions</a><a class="headerlink" href="#les-exceptions" title="Lien permanent vers ce titre">¶</a></h3>
 <p>On peut intercepter les erreurs (ou exceptions) levées par notre code grâce aux blocs try except.
 La syntaxe d’une assertion est assert test:. Les assertions lèvent une exception AssertionError
 si le test échoue.</p>
@@ -524,7 +652,7 @@ d’entre eux traitant un type d’erreur spécifique:</p>
 <p>Sortir d’une boucle infinie par une iterruption clavier</p>
 </div>
 <div class="section" id="les-packages">
-<span id="index-14"></span><h3><a class="toc-backref" href="#sommaire">Les packages</a><a class="headerlink" href="#les-packages" title="Lien permanent vers ce titre">¶</a></h3>
+<span id="index-18"></span><h3><a class="toc-backref" href="#sommaire">Les packages</a><a class="headerlink" href="#les-packages" title="Lien permanent vers ce titre">¶</a></h3>
 <p>Il s’agit tout simplement d’un répertoire de module</p>
 <p>On peut importer un pakage entier ou seulement un module dans le package ou seulement une fonction
 d’un module dans un package.</p>
@@ -551,7 +679,7 @@ depuis la version 3.3</p>
 </ul>
 </div>
 <div class="section" id="les-fichiers">
-<span id="index-15"></span><h3><a class="toc-backref" href="#sommaire">Les fichiers</a><a class="headerlink" href="#les-fichiers" title="Lien permanent vers ce titre">¶</a></h3>
+<span id="index-19"></span><h3><a class="toc-backref" href="#sommaire">Les fichiers</a><a class="headerlink" href="#les-fichiers" title="Lien permanent vers ce titre">¶</a></h3>
 <p>outres le classique <code class="docutils literal notranslate"><span class="pre">fichier</span> <span class="pre">=</span> <span class="pre">open('gilename',</span> <span class="pre">'atttrib')</span></code> avec comme attribut:</p>
 <p>r, w, X, a, b, t, +</p>
 <p>X création exclusive, échoue si le fichier exsite déjà.</p>
@@ -563,16 +691,41 @@ depuis la version 3.3</p>
 </pre></div>
 </div>
 <p>Avantage : pas besoin de close</p>
-<p id="index-16">Un mot sur le module <strong>pickel</strong>: il permet la sérialisation de variable (cf doc officielle chapitre
+<p id="index-20">Un mot sur le module <strong>pickel</strong>: il permet la sérialisation de variable (cf doc officielle chapitre
 12). Il utilise 2 méthodes : dump et load. C’est très utile pour stocker des variables et les
 recharger par la suite.</p>
-<p>Décrit dans <a class="reference external" href="https://openclassrooms.com/fr/courses/235344-apprenez-a-programmer-en-python/232431-utilisez-des-fichiers#/id/r-232430">openclassroom pickle</a> <a class="footnote-reference brackets" href="#id19" id="id20">10</a></p>
+<p>Décrit dans <a class="reference external" href="https://openclassrooms.com/fr/courses/235344-apprenez-a-programmer-en-python/232431-utilisez-des-fichiers#/id/r-232430">openclassroom pickle</a> <a class="footnote-reference brackets" href="#id33" id="id34">17</a></p>
 <p>Dans tous les exemples que j’ai pu trouvé, on n’y voit jamais qu’une seule variable aussi complexe
-soit elle. J’ai lu un post qui disait de regrouper ses variables dans une liste avant de les
+soit elle. J’ai lu un post qui disait de regrouper ces variables dans une liste avant de les
 sauvegarder</p>
+<p>Exemple simpliste:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
+
+<span class="n">file_path</span> <span class="o">=</span> <span class="s2">&quot;D:/data123.txt&quot;</span>
+
+<span class="c1">#check if file is present</span>
+<span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isfile</span><span class="p">(</span><span class="n">file_path</span><span class="p">):</span>
+    <span class="c1">#open text file in read mode</span>
+    <span class="n">text_file</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">file_path</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">)</span>
+
+    <span class="c1">#read whole file to a string</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="n">text_file</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+
+    <span class="c1">#close file</span>
+    <span class="n">text_file</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Autre exemple encore plus simpliste:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;file.txt&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="n">contents</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">contents</span><span class="p">)</span>
+</pre></div>
+</div>
 </div>
 <div class="section" id="les-objets">
-<span id="index-17"></span><h3><a class="toc-backref" href="#sommaire">Les objets</a><a class="headerlink" href="#les-objets" title="Lien permanent vers ce titre">¶</a></h3>
+<span id="index-21"></span><h3><a class="toc-backref" href="#sommaire">Les objets</a><a class="headerlink" href="#les-objets" title="Lien permanent vers ce titre">¶</a></h3>
 <p>classe template:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">nomClasse</span><span class="p">:</span> <span class="c1"># Définition de notre classe</span>
 <span class="sd">&quot;&quot;&quot;Classe documentation&quot;&quot;&quot;</span>
@@ -588,13 +741,13 @@ sauvegarder</p>
 </div>
 <p><strong>Importance</strong> du paramètre self! Il faut mettre son grain de self un peu partout</p>
 <p>créer une instance:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Attention</span> <span class="p">:</span> <span class="n">var</span> <span class="o">=</span> <span class="n">nomclasse</span> <span class="n">ne</span> <span class="n">crée</span> <span class="n">pas</span> <span class="n">d</span><span class="s1">&#39;intance !!!</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Attention</span> <span class="p">:</span> <span class="n">var</span> <span class="o">=</span> <span class="n">nomclasse</span> <span class="n">ne</span> <span class="n">crée</span> <span class="n">pas</span> <span class="n">d</span><span class="s1">&#39;instance !!!</span>
 <span class="n">var</span> <span class="o">=</span> <span class="n">nomClasse</span><span class="p">()</span> <span class="n">oui</span>
 </pre></div>
 </div>
 <p>constructeur:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">var1</span><span class="p">,</span> <span class="n">var2</span><span class="o">...</span><span class="p">)</span>
-    <span class="c1"># double underscore init doubleunderscore</span>
+    <span class="c1"># double underscore init double underscore</span>
     <span class="bp">self</span><span class="o">.</span><span class="n">attribut1</span> <span class="o">=</span> <span class="n">var1</span><span class="o">...</span>
 
 <span class="n">le</span> <span class="n">constructeur</span> <span class="n">est</span> <span class="n">considéré</span> <span class="n">comme</span> <span class="n">une</span> <span class="n">méthode</span> <span class="n">spéciale</span> <span class="n">au</span> <span class="n">même</span> <span class="n">titre</span> <span class="n">que</span> <span class="vm">__dict__</span>
@@ -602,17 +755,17 @@ sauvegarder</p>
 </pre></div>
 </div>
 <p>Méthodes et self:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">on</span> <span class="n">peut</span> <span class="n">appeler</span> <span class="n">une</span> <span class="n">méthode</span> <span class="n">depuis</span> <span class="n">l</span><span class="s1">&#39;objet inctancieé ou depuis sa classe</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">on</span> <span class="n">peut</span> <span class="n">appeler</span> <span class="n">une</span> <span class="n">méthode</span> <span class="n">depuis</span> <span class="n">l</span><span class="s1">&#39;objet instancié ou depuis sa classe</span>
     <span class="n">a</span> <span class="o">=</span> <span class="n">objet</span><span class="p">()</span>
 <span class="n">a</span><span class="o">.</span><span class="n">methode</span><span class="p">(</span><span class="n">autreVar</span><span class="p">)</span>
 <span class="n">ou</span> <span class="n">objet</span><span class="o">.</span><span class="n">methode</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">autreVar</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>Ceci provient du fait que les méthdes ne sont pas recopiées dans chaque objet instancé seulement
+<p>Ceci provient du fait que les méthodes ne sont pas recopiées dans chaque objet instancié seulement
 les attributs sont différents</p>
-<p>Méthodes commence toutes avec self comme premier parmètre. Sauf les <strong>méthodes statiques</strong> et
+<p>Méthodes commence toutes avec self comme premier paramètre. Sauf les <strong>méthodes statiques</strong> et
 les <strong>méthodes de classe</strong></p>
-<p id="index-18"><strong>Getteurs et setteurs</strong>: bien que la notion de private n’existe pas, on peut, grace au mot clé
+<p id="index-22"><strong>Getters et setters</strong>: bien que la notion de private n’existe pas, on peut, grace au mot clé
 property créer des accesseurs et mutateurs</p>
 <p>Exemple:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Personne</span><span class="p">:</span>
@@ -651,18 +804,18 @@ property créer des accesseurs et mutateurs</p>
 <span class="n">lieu_residence</span> <span class="o">=</span> <span class="nb">property</span><span class="p">(</span><span class="n">_get_lieu_residence</span><span class="p">,</span> <span class="n">_set_lieu_residence</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>Autre façon de déclarer les getteurs et setteurs:</p>
+<p>Autre façon de déclarer les getters et setteurs:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">_width</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__width</span>
 <span class="k">def</span> <span class="nf">_setWidth</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">width</span><span class="p">):</span>
     <span class="c1"># Perform some computation</span>
     <span class="bp">self</span><span class="o">.</span><span class="n">__width</span> <span class="o">=</span> <span class="n">width</span>
 <span class="n">width</span> <span class="o">=</span> <span class="nb">property</span><span class="p">(</span><span class="n">fget</span><span class="o">=</span><span class="n">_width</span><span class="p">,</span> <span class="n">fset</span><span class="o">=</span><span class="n">_setWidth</span><span class="p">)</span>
-<span class="c1">#on nottera le jeu des doubles __ dans self.__width et sa disparition dans width = property</span>
+<span class="c1">#on notera le jeu des doubles __ dans self.__width et sa disparition dans width = property</span>
 </pre></div>
 </div>
 <p>Property permet de redéfinir un attribut en lui allouant des acesseur et mutateur. Cela permet
-de redéfinir le comportament des attributs sans casser le code utilisateur.</p>
+de redéfinir le comportement des attributs sans casser le code utilisateur.</p>
 <p>width est redéfini alors qu’à l’extérieur on fait tjrs objet.width</p>
 <p>Autre façon de transformer une méthode en propriété: grâce au décorateur <strong>&#64;property</strong>:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Position</span><span class="p">:</span>
@@ -674,11 +827,11 @@ de redéfinir le comportament des attributs sans casser le code utilisateur.</p>
 <span class="k">def</span> <span class="nf">longitude</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">longitude_deg</span> <span class="o">*</span> <span class="n">math</span><span class="o">.</span><span class="n">pi</span> <span class="o">/</span> <span class="mi">180</span>
 
-<span class="n">Utilisation</span> <span class="p">:</span> <span class="n">position</span><span class="o">.</span><span class="n">longitute</span>
+<span class="n">Utilisation</span> <span class="p">:</span> <span class="n">position</span><span class="o">.</span><span class="n">longitude</span>
 </pre></div>
 </div>
-<p id="index-19"><strong>Les méthodes spéciales</strong>:  elles sont encadrées par __</p>
-<p>Il en existe pour surcharger la pluspart des opérateurs:</p>
+<p id="index-23"><strong>Les méthodes spéciales</strong>:  elles sont encadrées par __</p>
+<p>Il en existe pour surcharger la plupart des opérateurs:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="fm">__add__</span> <span class="n">pour</span> <span class="o">+</span>
 <span class="fm">__gt__</span> <span class="n">pour</span> <span class="o">&gt;</span>
 <span class="fm">__mul__</span> <span class="n">pour</span> <span class="o">*</span>
@@ -687,7 +840,7 @@ de redéfinir le comportament des attributs sans casser le code utilisateur.</p>
 </pre></div>
 </div>
 <p>La liste complète est énorme &lt;<a class="reference external" href="https://www.mindmeister.com/fr/10510492/python-underscore">https://www.mindmeister.com/fr/10510492/python-underscore</a>&gt;</p>
-<p>Quelques unes parmis les plus intéressantes:</p>
+<p>Quelques unes parmi les plus intéressantes:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="fm">__init__</span>
 <span class="fm">__del__</span>
 <span class="fm">__repr__</span> <span class="n">pour</span> <span class="n">l</span><span class="s1">&#39;affichage de l&#39;</span><span class="n">objet</span>
@@ -790,28 +943,28 @@ constructeur.</p>
 </div>
 <p>Pour les méthodes static: ni self, ni cls + utiliser la fonction staticmethod</p>
 <p><strong>Métaclasse</strong> &lt;<a class="reference external" href="https://openclassrooms.com/fr/courses/235344-apprenez-a-programmer-en-python/233659-decouvrez-les-metaclasses">https://openclassrooms.com/fr/courses/235344-apprenez-a-programmer-en-python/233659-decouvrez-les-metaclasses</a>&gt;</p>
-<p>L’idée est créer des classe dynamiquement c’est à dire pendant l’éxécution.
+<p>L’idée est créer des classe dynamiquement c’est à dire pendant l’exécution.
 Fonctionnalité très avancées selon moi</p>
 </div>
 <div class="section" id="iterateur-generateur">
 <h3><a class="toc-backref" href="#sommaire">Itérateur &amp; générateur</a><a class="headerlink" href="#iterateur-generateur" title="Lien permanent vers ce titre">¶</a></h3>
 <p>Un itérateur est avant tout une classe qui va être chargé de parcourir l’objet conteneur
-: cf. <a class="reference external" href="https://openclassrooms.com/fr/courses/235344-apprenez-a-programmer-en-python/233261-decouvrez-la-boucle-for">opencs chapitre sur les boucles for</a> <a class="footnote-reference brackets" href="#id21" id="id22">11</a></p>
+: cf. <a class="reference external" href="https://openclassrooms.com/fr/courses/235344-apprenez-a-programmer-en-python/233261-decouvrez-la-boucle-for">opencs chapitre sur les boucles for</a> <a class="footnote-reference brackets" href="#id35" id="id36">18</a></p>
 <p>L’itérateur est créé dans la méthode spéciale __iter__ de la classe</p>
-<p>Si on veut créer son propre itérateur pour sa propre classe, cela sinifie qu’il faudra créer
+<p>Si on veut créer son propre itérateur pour sa propre classe, cela signifie qu’il faudra créer
 une nouvelle classe dont une instance est retournée pat __iter__.</p>
 <p>Donc en général __iter__ fait un <code class="docutils literal notranslate"><span class="pre">return</span> <span class="pre">monIterator(self)</span></code></p>
-<p>L’itérateur a une méthode spéciale __next__. next() ou __next__ lève l’éxception StopIteration
+<p>L’itérateur a une méthode spéciale __next__. next() ou __next__ lève l’exceptions StopIteration
 en fin d’itération.</p>
 <p>Il y a 2 fonctions spéciales python associées à ces méthodes : iter() et next().</p>
 <p>Un <strong>générateur</strong> est une fonction (ou méthode) qui contient le mot clé spécial yield</p>
-<p><a class="reference external" href="https://docs.python.org/3/glossary.html#term-generator">Doc python sur les generator</a> <a class="footnote-reference brackets" href="#id23" id="id24">12</a></p>
+<p><a class="reference external" href="https://docs.python.org/3/glossary.html#term-generator">Doc python sur les generator</a> <a class="footnote-reference brackets" href="#id37" id="id38">19</a></p>
 <p>C’est un moyen plus simple de créer et de manipuler des itérateurs</p>
 <p>L’avantage du générateur est qu’il n’est pas besoin de créer une class itérateur ni de méthode
-__next__ ni de lever l’éxception de fin</p>
+__next__ ni de lever l’exception de fin</p>
 <p>Utilisation classique</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">iter</span><span class="p">(</span> <span class="n">monGenerator</span><span class="p">()</span> <span class="p">)</span>
-<span class="n">on</span> <span class="n">peut</span> <span class="n">créer</span> <span class="n">des</span> <span class="n">fonctions</span> <span class="n">générateur</span> <span class="n">indépement</span> <span class="n">de</span> <span class="n">toute</span> <span class="n">classe</span>
+<span class="n">on</span> <span class="n">peut</span> <span class="n">créer</span> <span class="n">des</span> <span class="n">fonctions</span> <span class="n">générateur</span> <span class="n">independent</span> <span class="n">de</span> <span class="n">toute</span> <span class="n">classe</span>
     <span class="n">exemple</span> <span class="p">:</span> <span class="n">intervalle</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span> <span class="n">renvoi</span> <span class="n">des</span> <span class="n">nombre</span> <span class="n">de</span> <span class="mi">6</span> <span class="n">à</span> <span class="mi">10</span>
 
 <span class="n">Les</span> <span class="n">générateurs</span> <span class="n">accepte</span> <span class="n">des</span> <span class="n">co</span><span class="o">-</span><span class="n">routines</span> <span class="n">très</span> <span class="n">puissant</span>
@@ -819,24 +972,422 @@ __next__ ni de lever l’éxception de fin</p>
         <span class="n">y</span> <span class="n">a</span> <span class="n">pas</span> <span class="n">restart</span>
 </pre></div>
 </div>
-<p>Tout est sur openclassromm, <a class="reference external" href="https://openclassrooms.com/fr/courses/235344-apprenez-a-programmer-en-python/233261-decouvrez-la-boucle-for#/id/r-233202">chapitre sur les boucle for</a> <a class="footnote-reference brackets" href="#id25" id="id26">13</a></p>
+<p>Tout est sur openclassroom, <a class="reference external" href="https://openclassrooms.com/fr/courses/235344-apprenez-a-programmer-en-python/233261-decouvrez-la-boucle-for#/id/r-233202">chapitre sur les boucle for</a> <a class="footnote-reference brackets" href="#id39" id="id40">20</a></p>
 <p>Il s’agit d’une fonction très avancée dans leur création.</p>
 </div>
 </div>
 <div class="section" id="astuces">
 <h2><a class="toc-backref" href="#sommaire">Astuces</a><a class="headerlink" href="#astuces" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="section" id="tempo">
+<h3><a class="toc-backref" href="#sommaire">tempo</a><a class="headerlink" href="#tempo" title="Lien permanent vers ce titre">¶</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">time</span>
+
+<span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">0.1</span><span class="p">)</span> <span class="c1"># en secondes</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">time</span> <span class="kn">import</span> <span class="n">sleep</span>
+
+<span class="n">sleep</span><span class="p">(</span><span class="mf">0.1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="sur-les-chaines">
+<h3><a class="toc-backref" href="#sommaire">Sur les chaînes</a><a class="headerlink" href="#sur-les-chaines" title="Lien permanent vers ce titre">¶</a></h3>
+<p id="index-24">Formater une chaîne:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;la chaine </span><span class="si">{1}</span><span class="s2"> à formater </span><span class="si">{0}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">fomat</span><span class="p">(</span> <span class="n">varZero</span><span class="p">,</span> <span class="n">varUn</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Les chiffres dans les accolades sont facultatifs,
+il s’agit de la méthode format de la class intégrée str</p>
+<p>Tout est décrit en détail dans
+<a class="reference download internal" download="" href="../_downloads/1d7ac16e7a7f7f8d93df6b786cfae44c/library.pdf"><code class="xref download docutils literal notranslate"><span class="pre">The</span> <span class="pre">Python</span> <span class="pre">Library</span> <span class="pre">Reference</span></code></a> §Format String Syntax</p>
+<p id="index-25">Pour de l’hexa:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;:2X&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Valeur hex = 0x</span><span class="si">{:04X}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">a</span><span class="p">)</span> <span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Valeur hex = </span><span class="si">{:#04X}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">a</span><span class="p">)</span> <span class="p">)</span> <span class="c1"># mais directement 0X devant le nombre</span>
+<span class="n">b</span><span class="o">=</span><span class="mf">3.1425</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Valeur flottant 3 décimale = </span><span class="si">{:.3f}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">b</span><span class="p">)</span> <span class="p">)</span>
+</pre></div>
+</div>
+<p>Autre forme:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># formatage d&#39;une adresse</span>
+<span class="n">adresse</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">    </span><span class="si">{no_rue}</span><span class="s2">, </span><span class="si">{nom_rue}</span><span class="s2"></span>
+<span class="s2">    </span><span class="si">{code_postal}</span><span class="s2"> </span><span class="si">{nom_ville}</span><span class="s2"> (</span><span class="si">{pays}</span><span class="s2">)&quot;&quot;&quot;</span>
+<span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">no_rue</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">nom_rue</span><span class="o">=</span><span class="s2">&quot;rue des Postes&quot;</span><span class="p">,</span> <span class="n">code_postal</span><span class="o">=</span><span class="mi">75003</span><span class="p">,</span> <span class="n">nom_ville</span><span class="o">=</span><span class="s2">&quot;Paris&quot;</span><span class="p">,</span> <span class="n">pays</span><span class="o">=</span><span class="s2">&quot;France&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">adresse</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>La class template à l’air bien aussi:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>from string import Template
+&gt;&gt;&gt; s = Template(’$who likes $what’)
+&gt;&gt;&gt; s.substitute(who=’tim’, what=’kung pao’)
+’tim likes kung pao’
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">chaine</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>Génère tous les indices d’une chaîne</p>
+<p>Initialiser une chaîne avec n fois le même caractère: <code class="docutils literal notranslate"><span class="pre">chain</span> <span class="pre">=</span> <span class="pre">&quot;-&quot;*10</span></code></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Recherche</span> <span class="n">d</span><span class="s1">&#39;une lettre dans un mot</span>
+    <span class="k">for</span> <span class="n">lettre</span> <span class="ow">in</span> <span class="n">mot_complet</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">lettre</span> <span class="ow">in</span> <span class="n">lettres_trouvees</span><span class="p">:</span>
+<span class="n">join</span> <span class="nb">str</span> <span class="nb">list</span>
+    <span class="n">a</span><span class="o">=</span><span class="s2">&quot;toto&quot;</span> <span class="n">b</span><span class="o">=</span><span class="nb">list</span><span class="p">(</span><span class="n">a</span><span class="p">)</span> <span class="n">a</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+<span class="n">Supprimer</span> <span class="n">les</span> <span class="n">espaces</span>
+    <span class="n">méthode</span> <span class="n">strip</span><span class="p">,</span> <span class="n">rstrip</span> <span class="n">ou</span> <span class="n">lstrip</span>
+
+<span class="n">pickling</span> <span class="o">&lt;</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">docs</span><span class="o">.</span><span class="n">python</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="mi">3</span><span class="o">/</span><span class="n">library</span><span class="o">/</span><span class="n">pickle</span><span class="o">.</span><span class="n">html</span><span class="o">&gt;</span>
+    <span class="n">serialisation</span>
+    <span class="n">Chapitre</span> <span class="mi">12</span> <span class="n">de</span> <span class="n">la</span> <span class="n">doc</span> <span class="mf">3.4</span><span class="o">.</span><span class="mi">4</span>
+    <span class="n">see</span> <span class="n">also</span> <span class="n">HDF5</span> <span class="n">et</span> <span class="n">JSON</span>
+
+<span class="n">Chaîne</span> <span class="n">en</span> <span class="n">nombre</span> <span class="n">et</span> <span class="n">inversement</span>
+<span class="n">Chaîne</span> <span class="n">en</span> <span class="n">JSON</span>
+</pre></div>
+</div>
+<p><strong>Retour à la ligne</strong>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span> <span class="c1">#tout simplement !</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="tester-tester-tester">
+<h3><a class="toc-backref" href="#sommaire">Tester, tester, tester</a><a class="headerlink" href="#tester-tester-tester" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Cela doit devenir un réflexe, on peut tout expérimenter dans la console Python
+des commandes seules mais aussi des bouts de codes qu’on a mis dans un fichier TOUT !</p>
+<p>Jouer avec les fonctions, les classes dans des fichiers séparés, ça à l’air tout bête mais on peut
+mettre des fonctions, des classes dans des fichiers et jouer avec dans la console.</p>
+<p>Importer ses fichiers avec from mon_fichier import *</p>
+<p>Pour les tests réels du code on se tournera vers <a class="reference external" href="https://docs.pytest.org/en/6.2.x/#">pytest</a> <a class="footnote-reference brackets" href="#id41" id="id42">21</a> ou <a class="reference external" href="https://docs.python.org/3/library/unittest.html">unitest</a> <a class="footnote-reference brackets" href="#id43" id="id44">22</a></p>
+</div>
+<div class="section" id="print-inline">
+<h3><a class="toc-backref" href="#sommaire">Print inline</a><a class="headerlink" href="#print-inline" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Pour imprimer à la suite sans retour chariot <code class="docutils literal notranslate"><span class="pre">sys.stdout.write(lettre)</span> <span class="pre">sys.stdout.flush()</span></code></p>
+</div>
+<div class="section" id="if">
+<h3><a class="toc-backref" href="#sommaire">if</a><a class="headerlink" href="#if" title="Lien permanent vers ce titre">¶</a></h3>
+<p>C’est bête mais  <code class="docutils literal notranslate"><span class="pre">if:</span> <span class="pre">et</span> <span class="pre">elif:</span></code></p>
+<p>et pas <code class="docutils literal notranslate"><span class="pre">else</span> <span class="pre">if</span></code> ou <code class="docutils literal notranslate"><span class="pre">elsif</span></code></p>
+</div>
+<div class="section" id="ou-est-python">
+<h3><a class="toc-backref" href="#sommaire">Où est python ?</a><a class="headerlink" href="#ou-est-python" title="Lien permanent vers ce titre">¶</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">c</span><span class="p">:</span>\<span class="o">&gt;</span><span class="n">where</span><span class="o">.</span><span class="n">exe</span> <span class="n">python</span>
+<span class="n">C</span><span class="p">:</span>\<span class="n">Users</span>\<span class="n">nom</span>\<span class="n">AppData</span>\<span class="n">Local</span>\<span class="n">Programs</span>\<span class="n">Python</span>\<span class="n">Python38</span>\<span class="n">python</span><span class="o">.</span><span class="n">exe</span>
+<span class="n">avec</span> <span class="n">Windows</span> <span class="n">search</span> <span class="p">:</span> <span class="n">python</span>
+    <span class="n">En</span> <span class="mi">2</span> <span class="n">fois</span>
+    <span class="n">ouvrir</span> <span class="n">l</span><span class="s1">&#39;emplacement du fichier</span>
+        <span class="n">chemin</span> <span class="n">du</span> <span class="n">raccourci</span>
+    <span class="n">propriété</span> <span class="n">du</span> <span class="n">racourci</span>
+    <span class="n">ouvrir</span> <span class="n">emplacement</span> <span class="n">de</span> <span class="n">la</span> <span class="n">cible</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="turtle">
+<h3><a class="toc-backref" href="#sommaire">Turtle</a><a class="headerlink" href="#turtle" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Turtle &lt;<a class="reference external" href="https://docs.python.org/3.3/library/turtle.html?highlight=turtle">https://docs.python.org/3.3/library/turtle.html?highlight=turtle</a>&gt;</p>
+<p>Petit truc graphique rigolo, plus riche qu’on ne pourrait s’y attendre !</p>
+<p>Toujours terminé les script avec la fonction done()</p>
+<p>Une vidéo sympa &lt;<a class="reference external" href="https://www.youtube.com/watch?v=pxKu2pQ7ILo">https://www.youtube.com/watch?v=pxKu2pQ7ILo</a>&gt;</p>
+</div>
+<div class="section" id="sur-l-aide">
+<h3><a class="toc-backref" href="#sommaire">sur l’Aide</a><a class="headerlink" href="#sur-l-aide" title="Lien permanent vers ce titre">¶</a></h3>
+<p>help et help short form:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">object</span><span class="o">.</span><span class="vm">__dict__</span>
+<span class="nb">dir</span><span class="p">(</span><span class="n">objet</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Les 2 ne retournent pas tout à fait la même chose !</p>
+<p>Afficher la doc d’un package:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">help</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="sur-les-liste-dico">
+<h3><a class="toc-backref" href="#sommaire">Sur les liste, dico…</a><a class="headerlink" href="#sur-les-liste-dico" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Parcours d’une liste en une seule ligne, c’est en ça que python devient fort et on crée une nouvelle
+liste, ceci se nomme liste en intention ou compréhension de liste:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">nb</span> <span class="o">*</span> <span class="n">nb</span> <span class="k">for</span> <span class="n">nb</span> <span class="ow">in</span> <span class="n">liste_origine</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>Mais on peut également introduire un teste des valeurs dans cette opération:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">nb</span> <span class="k">for</span> <span class="n">nb</span> <span class="ow">in</span> <span class="n">liste_origine</span> <span class="k">if</span> <span class="n">nb</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>On peut vraiment faire des trucs puissants avec les listes en intention:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>[str(round(355/113, i)) for i in range(1, 6)]
+    donne : [’3.1’, ’3.14’, ’3.142’, ’3.1416’, ’3.14159’]
+</pre></div>
+</div>
+<p><strong>Range syntaxe</strong>: <code class="docutils literal notranslate"><span class="pre">range(0,10,2)</span></code> paramètres : debut, fin,pas</p>
+<p><strong>slice</strong>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Slice
+    L[4:16]
+        prend tous les termes de 4 à 15
+            terme de droite exclu
+            formée des éléments L[k] où k vérifie i≤k&lt;j
+    [-4:]
+        permet d&#39;avoir les 4 dernier items d&#39;une liste
+        C&#39;est vrai aussi pour les chaine de caractères
+            texte[-1] permet d&#39;avoir le dernier caractère
+    [:5]
+        les 5 premiers
+    [5:]
+        Du 5 ième à la fin
+    [4:24:3]
+        de 4 à 23 par pas de 3
+    [::-1]
+        retourne la liste
+        s == s[::-1]
+            détection de palindrome ;-)
+            ça doit être bien utile
+</pre></div>
+</div>
+<p><strong>any et all</strong> sur une liste</p>
+<p>any peut servir à faire un OU : <code class="docutils literal notranslate"><span class="pre">any([1,0,1,0,1])</span></code></p>
+<p>all peut servir faire un ET : <code class="docutils literal notranslate"><span class="pre">all([1,0,1,0,1])</span></code></p>
+<div class="admonition warning">
+<p class="admonition-title">Avertissement</p>
+<p>all retourn vrai sur une liste vide</p>
+</div>
+<p>Any et all sont des fonction Python qui s’appliquent sur des itérables (pas forcément des listes)</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">bit</span> <span class="n">bise</span>
+    <span class="n">N</span> <span class="o">&lt;&lt;</span> <span class="n">nbits</span> <span class="n">tout</span> <span class="n">simplement</span>
+<span class="n">tri</span> <span class="n">avec</span> <span class="n">la</span> <span class="n">fonction</span> <span class="nb">sorted</span>
+    <span class="n">Il</span> <span class="n">s</span><span class="s1">&#39;agit d&#39;</span><span class="n">une</span> <span class="n">fonction</span> <span class="o">&lt;</span><span class="n">strong</span><span class="o">&gt;</span><span class="n">builtin</span><span class="o">&lt;/</span><span class="n">strong</span><span class="o">&gt;</span><span class="p">,</span> <span class="n">c</span><span class="s1">&#39;est-à-dire qu&#39;</span><span class="n">elle</span> <span class="n">est</span> <span class="n">disponible</span> <span class="n">d</span><span class="s1">&#39;office dans Python sans avoir besoin d&#39;</span><span class="n">importer</span> <span class="n">quoique</span> <span class="n">ce</span> <span class="n">soit</span><span class="o">.</span>
+    <span class="n">accepte</span> <span class="n">des</span> <span class="n">arguments</span> <span class="p">:</span> <span class="n">keys</span> <span class="n">et</span> <span class="n">order</span>
+        <span class="nb">sorted</span><span class="p">(</span><span class="n">etudiants</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">etudiant</span><span class="p">:</span> <span class="n">etudiant</span><span class="o">.</span><span class="n">age</span><span class="p">,</span> <span class="n">reverse</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+        <span class="n">remarquer</span> <span class="n">le</span> <span class="n">paramètre</span> <span class="n">de</span> <span class="n">key</span> <span class="n">qui</span> <span class="n">attend</span> <span class="n">une</span> <span class="n">fonction</span> <span class="n">et</span> <span class="k">lambda</span>
+    <span class="n">Module</span> <span class="n">operator</span>
+        <span class="n">Le</span> <span class="n">module</span> <span class="n">operator</span> <span class="n">propose</span> <span class="n">les</span> <span class="n">fonctions</span> <span class="n">itemgetter</span> <span class="n">et</span> <span class="n">attrgetter</span> <span class="n">qui</span> <span class="n">peuvent</span> <span class="n">être</span> <span class="n">très</span> <span class="n">utiles</span> <span class="n">en</span> <span class="n">tant</span> <span class="n">que</span> <span class="n">fonction</span> <span class="n">clés</span><span class="p">,</span> <span class="n">si</span> <span class="n">on</span> <span class="n">veut</span> <span class="n">trier</span> <span class="n">une</span> <span class="n">liste</span> <span class="n">de</span> <span class="n">tuples</span> <span class="n">ou</span> <span class="n">une</span> <span class="n">liste</span> <span class="n">d</span><span class="s1">&#39;objets selon un attribut ;</span>
+    <span class="n">une</span> <span class="n">autre</span> <span class="n">façon</span> <span class="n">de</span> <span class="n">trier</span> <span class="n">est</span> <span class="n">d</span><span class="s1">&#39;utiliser la méthode sort de la clas list</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="aficher-un-dictionnaire-ligne-a-ligne">
+<h3><a class="toc-backref" href="#sommaire">Aficher un dictionnaire ligne à ligne</a><a class="headerlink" href="#aficher-un-dictionnaire-ligne-a-ligne" title="Lien permanent vers ce titre">¶</a></h3>
+<blockquote>
+<div><p>for k,v in d.items():     print(« {} : {} ».format(k,v) )</p>
+</div></blockquote>
+</div>
+<div class="section" id="multiplication-de-liste">
+<h3><a class="toc-backref" href="#sommaire">Multiplication de liste</a><a class="headerlink" href="#multiplication-de-liste" title="Lien permanent vers ce titre">¶</a></h3>
+<p>si x est une liste : x * 5 donne une liste qui recopie 5 fois la liste x:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">]</span> <span class="o">*</span> <span class="mi">5</span> <span class="n">donne</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">]</span>
+<span class="n">mais</span> <span class="p">[</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span> <span class="p">(</span><span class="mi">3</span><span class="p">)]</span> <span class="n">donne</span> <span class="n">une</span> <span class="n">liste</span> <span class="n">de</span> <span class="mi">3</span> <span class="n">listes</span> <span class="p">[[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">]]</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="byte-et-byarray">
+<span id="index-26"></span><h3><a class="toc-backref" href="#sommaire">byte et byarray</a><a class="headerlink" href="#byte-et-byarray" title="Lien permanent vers ce titre">¶</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">byte</span> <span class="n">est</span> <span class="n">immutable</span>
+<span class="nb">bytearray</span> <span class="n">est</span> <span class="n">la</span> <span class="n">version</span> <span class="n">mutable</span>
+<span class="n">byte</span><span class="p">(</span><span class="n">array</span><span class="p">)</span><span class="o">.</span><span class="n">fromhex</span><span class="p">(</span><span class="s1">&#39;ABF0 F623&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">hex</span><span class="p">(</span><span class="s1">&#39;-&#39;</span><span class="p">)</span>
+<span class="n">doc</span> <span class="n">pdf</span> <span class="o">&lt;../</span><span class="mi">03</span><span class="o">-</span><span class="n">Cours_Docs</span><span class="o">/</span><span class="n">programmation</span><span class="o">/</span><span class="n">Python</span><span class="o">/</span><span class="n">python</span><span class="o">-</span><span class="mf">3.9</span><span class="o">.</span><span class="mi">0</span><span class="o">-</span><span class="n">docs</span><span class="o">-</span><span class="n">pdf</span><span class="o">-</span><span class="n">a4</span><span class="o">/</span><span class="n">docs</span><span class="o">-</span><span class="n">pdf</span><span class="o">/</span><span class="n">library</span><span class="o">.</span><span class="n">pdf</span><span class="o">&gt;</span>
+<span class="nb">bytearray</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">autre</span> <span class="nb">bytearray</span><span class="p">)</span>
+    <span class="n">ou</span> <span class="o">+=</span>
+<span class="nb">list</span><span class="p">(</span><span class="nb">bytearray</span><span class="p">)</span> <span class="n">donne</span> <span class="n">une</span> <span class="n">liste</span> <span class="n">de</span> <span class="n">nombre</span>
+<span class="nb">bytearray</span><span class="p">(</span><span class="nb">list</span><span class="p">)</span>
+<span class="n">byarray</span><span class="p">(</span><span class="nb">int</span><span class="o">.</span><span class="n">to_bytes</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="n">byteorder</span><span class="o">=</span><span class="s1">&#39;big&#39;</span><span class="p">)</span> <span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="sur-les-modules-package">
+<h3><a class="toc-backref" href="#sommaire">Sur les modules, package…</a><a class="headerlink" href="#sur-les-modules-package" title="Lien permanent vers ce titre">¶</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>savoir si un package est importé
+    dir()
+install package
+    dans : C:\Python34\Scripts
+        commande pip
+            pip install C:\MountWD\00-Outils\06-ConceptionDeveloppement\Python\six-1.9.0-py2.py3-none-any.whl
+diff entre import os et from os import *
+    dans le premier on est obligé de mettre os.fonction()
+    dans le second cas les fonctions font parties de l&#39;espace de noms courant.
+    Mais quand il s&#39;agit d&#39;un package avec des sous package ?
+        from PyQt5.QtWidgets import QApplication,QWidget
+            Par cette instruction on greffe QApplication et QWidget à l&#39;espace de nom local ci bien que l&#39;accès à leur élémentsera un peu plus court au lieu de PyQt5.QtWidgets.QApplication.styleSheet() on écrira QApplication.styleSheet()
+            on pourrait aussi faire import PyQt5.QtWidgets.QApplication as QApp et faire QApp.styleSheet
+        différence entre ces 2 syntaxes
+            from serial.tools import list_ports
+                greffe list_ports sur l&#39;espace de nom local
+                list_ports.comports()
+                si on veut greffer tout le contenu de lit_ports sur l&#39;espace de nom loval on fait
+                    from serial.tools.list_ports import *
+            import serial.tools.list_ports
+                utilisation de la seule fonction de list_ports
+                    serial.tools.list_ports.comports()
+                Cette instruction import également serial et tools
+    import packageName
+        n&#39;importe que l&#39;espace de nom : packageName et le contenu de __init__.py
+force import
+    essayer reload(module)
+    import importlib
+    importlib.reload()
+</pre></div>
+</div>
+</div>
+<div class="section" id="sur-les-fichiers">
+<h3><a class="toc-backref" href="#sommaire">Sur Les fichiers</a><a class="headerlink" href="#sur-les-fichiers" title="Lien permanent vers ce titre">¶</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="vm">__file__</span>
+    <span class="n">se</span> <span class="n">dit</span> <span class="n">dunder</span> <span class="n">file</span> <span class="p">;</span><span class="o">-</span><span class="p">)</span>
+<span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="vm">__file__</span><span class="p">)</span>
+    <span class="n">dans</span> <span class="n">le</span> <span class="n">même</span> <span class="n">style</span><span class="p">:</span>
+    <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="nb">dir</span><span class="p">,</span> <span class="s1">&#39;data&#39;</span><span class="p">,</span> <span class="n">filename</span><span class="p">)</span>
+        <span class="n">dans</span> <span class="n">la</span> <span class="n">doc</span> <span class="n">de</span> <span class="n">reference</span> <span class="n">library</span><span class="o">.</span><span class="n">pdf</span> <span class="o">&lt;../</span><span class="mi">03</span><span class="o">-</span><span class="n">Cours_Docs</span><span class="o">/</span><span class="n">programmation</span><span class="o">/</span><span class="n">Python</span><span class="o">/</span><span class="n">python</span><span class="o">-</span><span class="mf">3.9</span><span class="o">.</span><span class="mi">0</span><span class="o">-</span><span class="n">docs</span><span class="o">-</span><span class="n">pdf</span><span class="o">-</span><span class="n">a4</span><span class="o">/</span><span class="n">docs</span><span class="o">-</span><span class="n">pdf</span><span class="o">/</span><span class="n">library</span><span class="o">.</span><span class="n">pdf</span><span class="o">&gt;</span>
+            <span class="n">chapitre</span> <span class="s2">&quot;FILE AND DIRECTORY ACCESS&quot;</span>
+</pre></div>
+</div>
+<p>Ouvrir un fichier avec with:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">try</span><span class="p">:</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">fIn</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+        <span class="n">file_content</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+        <span class="nb">print</span> <span class="s2">&quot;read file &quot;</span> <span class="o">+</span> <span class="n">fIn</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">file_content</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;no data in file &quot;</span> <span class="o">+</span> <span class="n">fIn</span><span class="p">)</span>
+        <span class="k">pass</span>
+    <span class="k">except</span> <span class="ne">IOError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;I/O error(</span><span class="si">{0}</span><span class="s2">): </span><span class="si">{1}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">errno</span><span class="p">,</span> <span class="n">e</span><span class="o">.</span><span class="n">strerror</span><span class="p">)</span> <span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="autres-astuces">
+<h3><a class="toc-backref" href="#sommaire">Autres astuces</a><a class="headerlink" href="#autres-astuces" title="Lien permanent vers ce titre">¶</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>event driven dans Tkinter
+    on peut ajouter des event grace aux méthodes communes
+        ok mais ? comment
+copie d&#39;objets
+    soit:
+obj_a = [1, 4, 5]
+obj_b = obj_a
+            obj_b n&#39;est pas une copie de obj_a
+                les 2 référence le même objet
+            alors que dans :
+obj_b = list(obj_a)
+                obj_b est bien une recopie de obj_a
+            on peut utilisé aussi le slicing pour réaliser une vraie copie
+                a=b[:]
+    Initialisation multiple
+        c&#39;est pas a,b,c = 0
+        c&#39;est a=b=c=0
+        Par contre attention avec les liste
+            A=B=C=[1,2,3]
+            une seule liste existe et A B et C en sont des alias
+    Fonctions : object classique en python
+        &gt;&gt;&gt; def add(x, y):
+...     return x + y
+&gt;&gt;&gt; def sub(x, y):
+...     return x - y
+&gt;&gt;&gt; def apply(func, x, y): # 1
+...     return func(x, y) # 2
+&gt;&gt;&gt; apply(add, 2, 1) # 3
+3
+&gt;&gt;&gt; apply(sub, 2, 1)
+1
+
+    operateur ternaire &lt;https://python.developpez.com/cours/DiveIntoPython/php/frdiveintopython/power_of_introspection/and_or.php&gt;
+        particularité des opérateur and et or
+
+    permutter 2 varibles
+        a,b = b,a
+    Connaître son environnement
+        object os.environ
+            object iterable
+            on peut écrire : os.environ[&#39;PATH&#39;]
+                retorune une chaine
+    Les décorations d&#39;un script exécutable:
+        # -* coding : Latin-1 -* import os #... os.system(&quot;pause&quot;)
+        Mettre fenêtre en pause
+            import os
+....
+os.system(&quot;pause&quot;)
+        if __name__ == &quot;__main__&quot;:         #code à executer
+        #! /usr/bin/env python3 # -*- coding: utf8 -*-
+</pre></div>
+</div>
+</div>
+<div class="section" id="ctrl-c">
+<h3><a class="toc-backref" href="#sommaire">Ctrl C</a><a class="headerlink" href="#ctrl-c" title="Lien permanent vers ce titre">¶</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/usr/bin/env python</span>
+<span class="kn">import</span> <span class="nn">signal</span>
+<span class="kn">import</span> <span class="nn">sys</span>
+
+<span class="k">def</span> <span class="nf">signal_handler</span><span class="p">(</span><span class="n">sig</span><span class="p">,</span> <span class="n">frame</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;You pressed Ctrl+C!&#39;</span><span class="p">)</span>
+    <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+
+<span class="n">signal</span><span class="o">.</span><span class="n">signal</span><span class="p">(</span><span class="n">signal</span><span class="o">.</span><span class="n">SIGINT</span><span class="p">,</span> <span class="n">signal_handler</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Press Ctrl+C&#39;</span><span class="p">)</span>
+<span class="n">signal</span><span class="o">.</span><span class="n">pause</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Trouvé sur <a class="reference external" href="https://stackoverflow.com/questions/1112343/how-do-i-capture-sigint-in-python">stackoverflow.com How do I capture SIGINT in Python?</a> <a class="footnote-reference brackets" href="#id45" id="id46">23</a></p>
+<p>autre façon meilleur et testée sur projet IOTEps:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">threading</span> <span class="kn">import</span> <span class="n">Event</span>
+
+<span class="n">exit</span> <span class="o">=</span> <span class="n">Event</span><span class="p">()</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="k">while</span> <span class="ow">not</span> <span class="n">exit</span><span class="o">.</span><span class="n">is_set</span><span class="p">():</span>
+    <span class="n">do_my_thing</span><span class="p">()</span>
+    <span class="n">exit</span><span class="o">.</span><span class="n">wait</span><span class="p">(</span><span class="mi">60</span><span class="p">)</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;All done!&quot;</span><span class="p">)</span>
+    <span class="c1"># perform any cleanup here</span>
+
+<span class="k">def</span> <span class="nf">quit</span><span class="p">(</span><span class="n">signo</span><span class="p">,</span> <span class="n">_frame</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Interrupted by </span><span class="si">%d</span><span class="s2">, shutting down&quot;</span> <span class="o">%</span> <span class="n">signo</span><span class="p">)</span>
+    <span class="n">exit</span><span class="o">.</span><span class="n">set</span><span class="p">()</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+
+    <span class="kn">import</span> <span class="nn">signal</span>
+    <span class="k">for</span> <span class="n">sig</span> <span class="ow">in</span> <span class="p">(</span><span class="s1">&#39;TERM&#39;</span><span class="p">,</span> <span class="s1">&#39;HUP&#39;</span><span class="p">,</span> <span class="s1">&#39;INT&#39;</span><span class="p">):</span>
+        <span class="n">signal</span><span class="o">.</span><span class="n">signal</span><span class="p">(</span><span class="nb">getattr</span><span class="p">(</span><span class="n">signal</span><span class="p">,</span> <span class="s1">&#39;SIG&#39;</span><span class="o">+</span><span class="n">sig</span><span class="p">),</span> <span class="n">quit</span><span class="p">);</span>
+
+    <span class="n">main</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Sur <a class="reference external" href="https://stackoverflow.com/questions/5114292/break-interrupt-a-time-sleep-in-python">Stackoverflow break/interrupt a time.sleep() in python</a> <a class="footnote-reference brackets" href="#id47" id="id48">24</a></p>
+</div>
 <div class="section" id="python2-to-3">
 <h3><a class="toc-backref" href="#sommaire">Python2 to 3</a><a class="headerlink" href="#python2-to-3" title="Lien permanent vers ce titre">¶</a></h3>
-<p id="index-20"><a class="reference external" href="http://python-future.org/compatible_idioms.html">Cheat Sheet: Writing Python 2-3 compatible code</a> <a class="footnote-reference brackets" href="#id27" id="id28">14</a></p>
+<p id="index-27"><a class="reference external" href="http://python-future.org/compatible_idioms.html">Cheat Sheet: Writing Python 2-3 compatible code</a> <a class="footnote-reference brackets" href="#id49" id="id50">25</a></p>
+</div>
+</div>
+<div class="section" id="time">
+<span id="index-28"></span><h2><a class="toc-backref" href="#sommaire">Time</a><a class="headerlink" href="#time" title="Lien permanent vers ce titre">¶</a></h2>
+<p>package standard (pas besoin de pip install)</p>
+<p>Construct a file name with time:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">time</span> <span class="n">strftime</span>
+<span class="n">filename</span><span class="o">=</span> <span class="s2">&quot;bprefixe_&quot;</span> <span class="o">+</span> <span class="n">strftime</span><span class="p">(</span><span class="s2">&quot;%Y%m</span><span class="si">%d</span><span class="s2">-%H%M%S&quot;</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;.txt&quot;</span>
+</pre></div>
 </div>
 </div>
 <div class="section" id="i2c">
 <h2><a class="toc-backref" href="#sommaire">I2C</a><a class="headerlink" href="#i2c" title="Lien permanent vers ce titre">¶</a></h2>
+<p>En pré-ambule hors Python:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">i2c</span><span class="o">-</span><span class="n">tools</span>
+<span class="n">sudo</span> <span class="n">i2cdetect</span> <span class="o">-</span><span class="n">y</span> <span class="mi">1</span>
+</pre></div>
+</div>
+<p>ça sent bon la Raspberry pi ;-)</p>
+<p>2 façon de faire smbus ou mieux <a class="reference external" href="https://github.com/kplindegaard/smbus2">smbus2</a> <a class="footnote-reference brackets" href="#id51" id="id52">26</a> est compatible python 3.x:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">smbus2</span>
+
+<span class="kn">from</span> <span class="nn">smbus2</span> <span class="kn">import</span> <span class="n">SMBus</span>
+</pre></div>
+</div>
+<p>Sur <a class="reference external" href="https://pypi.org/project/smbus2/">Pypi smbus2</a> <a class="footnote-reference brackets" href="#id53" id="id54">27</a></p>
+<p>et <a class="reference external" href="https://github.com/quick2wire/quick2wire-python-api">Quick2wire en Python3</a> <a class="footnote-reference brackets" href="#id55" id="id56">28</a></p>
+<div class="section" id="wiring-pi">
+<h3><a class="toc-backref" href="#sommaire">Wiring pi</a><a class="headerlink" href="#wiring-pi" title="Lien permanent vers ce titre">¶</a></h3>
+<p>C’est une librairie C non Python cf.</p>
+</div>
 </div>
 <div class="section" id="pyserial">
 <h2><a class="toc-backref" href="#sommaire">PySerial</a><a class="headerlink" href="#pyserial" title="Lien permanent vers ce titre">¶</a></h2>
 <p>pyserial</p>
-<p><a class="reference external" href="https://pyserial.readthedocs.io/en/latest/pyserial.html">Pas de doc pdf seulement doc en ligne</a> <a class="footnote-reference brackets" href="#id29" id="id30">15</a> mais un très bon readthedoc à noter que la doc sur
+<p><a class="reference external" href="https://pyserial.readthedocs.io/en/latest/pyserial.html">Pas de doc pdf seulement doc en ligne</a> <a class="footnote-reference brackets" href="#id57" id="id58">29</a> mais un très bon readthedoc à noter que la doc sur
 pythonhosted.org est identique.</p>
 <p>pySerial includes a small console based terminal program called Miniterm. It can be started with:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="o">-</span><span class="n">m</span> <span class="n">serial</span><span class="o">.</span><span class="n">tools</span><span class="o">.</span><span class="n">miniterm</span> <span class="o">&lt;</span><span class="n">port</span> <span class="n">name</span><span class="o">&gt;</span> <span class="p">(</span><span class="n">use</span> <span class="n">option</span> <span class="o">-</span><span class="n">h</span> <span class="n">to</span> <span class="n">get</span> <span class="n">a</span> <span class="n">listing</span> <span class="n">of</span> <span class="nb">all</span> <span class="n">options</span><span class="p">)</span><span class="o">.</span>
@@ -855,19 +1406,15 @@ pythonhosted.org est identique.</p>
 <p><strong>Astuce</strong>:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ser</span><span class="o">=</span><span class="n">serial</span><span class="o">.</span><span class="n">Serial</span><span class="p">()</span>
 <span class="n">ser</span> <span class="p">(</span><span class="n">dans</span> <span class="n">la</span> <span class="n">console</span> <span class="n">python</span><span class="p">)</span> <span class="n">permet</span> <span class="n">de</span> <span class="n">voir</span> <span class="n">les</span> <span class="n">paramètres</span> <span class="n">et</span> <span class="n">l</span><span class="s1">&#39;état ouvert/fermé</span>
+<span class="n">Ecrire</span> <span class="n">une</span> <span class="n">chaîne</span> <span class="n">ser</span><span class="o">.</span><span class="n">write</span><span class="p">(</span> <span class="s2">&quot;texte&quot;</span><span class="o">.</span><span class="n">encode</span><span class="p">()</span> <span class="p">)</span>
 </pre></div>
 </div>
 <p>On peut aussi donner tous les paramètres d’un coup au constructeur Serial.
-Voir <a class="reference external" href="https://pyserial.readthedocs.io/en/latest/shortintro.html">la doc short intro</a> <a class="footnote-reference brackets" href="#id33" id="id34">17</a></p>
-<p><a class="reference external" href="http://eli.thegreenplace.net/2009/08/20/frames-and-protocols-for-the-serial-port-in-python">Frames and protocols for the serial port - in Python</a> <a class="footnote-reference brackets" href="#id31" id="id32">16</a></p>
+Voir <a class="reference external" href="https://pyserial.readthedocs.io/en/latest/shortintro.html">la doc short intro</a> <a class="footnote-reference brackets" href="#id61" id="id62">31</a></p>
+<p><a class="reference external" href="http://eli.thegreenplace.net/2009/08/20/frames-and-protocols-for-the-serial-port-in-python">Frames and protocols for the serial port - in Python</a> <a class="footnote-reference brackets" href="#id59" id="id60">30</a></p>
 </div>
 <div class="section" id="gestionnaires-graphiques">
 <h2><a class="toc-backref" href="#sommaire">Gestionnaires graphiques</a><a class="headerlink" href="#gestionnaires-graphiques" title="Lien permanent vers ce titre">¶</a></h2>
-</div>
-<div class="section" id="a-revoir">
-<h2><a class="toc-backref" href="#sommaire">A revoir</a><a class="headerlink" href="#a-revoir" title="Lien permanent vers ce titre">¶</a></h2>
-<p><a class="reference external" href="https://doc.scrapy.org/en/1.2/intro/overview.html">Scrapy</a> <a class="footnote-reference brackets" href="#id35" id="id36">18</a>  : permet de « grater » des page web</p>
-<p><a class="reference external" href="https://realpython.com/python-code-quality/">Python Code Quality: Tools &amp; Best Practices</a> <a class="footnote-reference brackets" href="#id37" id="id38">19</a></p>
 </div>
 <div class="section" id="appli-minimum-template">
 <h2><a class="toc-backref" href="#sommaire">Appli minimum (template)</a><a class="headerlink" href="#appli-minimum-template" title="Lien permanent vers ce titre">¶</a></h2>
@@ -888,61 +1435,98 @@ Tkinter au total 4 templates.</p>
 <dd><p><a class="reference external" href="https://pypi.org/">https://pypi.org/</a></p>
 </dd>
 <dt class="label" id="id5"><span class="brackets"><a class="fn-backref" href="#id6">3</a></span></dt>
-<dd><p><a class="reference external" href="https://blog.flozz.fr/2020/10/04/documenter-un-projet-python-avec-sphinx/">https://blog.flozz.fr/2020/10/04/documenter-un-projet-python-avec-sphinx/</a></p>
+<dd><p><a class="reference external" href="https://docs.conda.io/en/latest/miniconda.html">https://docs.conda.io/en/latest/miniconda.html</a></p>
 </dd>
 <dt class="label" id="id7"><span class="brackets"><a class="fn-backref" href="#id8">4</a></span></dt>
-<dd><p><a class="reference external" href="http://sametmax.com/python-love-les-listes-en-intention-partie/">http://sametmax.com/python-love-les-listes-en-intention-partie/</a></p>
+<dd><p><a class="reference external" href="https://docs.conda.io/projects/conda/en/latest/user-guide/cheatsheet.html">https://docs.conda.io/projects/conda/en/latest/user-guide/cheatsheet.html</a></p>
 </dd>
 <dt class="label" id="id9"><span class="brackets"><a class="fn-backref" href="#id10">5</a></span></dt>
-<dd><p><a class="reference external" href="https://docs.python.org/3.1/tutorial/datastructures.html#dictionaries">https://docs.python.org/3.1/tutorial/datastructures.html#dictionaries</a></p>
+<dd><p><a class="reference external" href="https://www.anegron.site/2020/06/18/how-to-install-conda-and-docker-on-your-raspberry-pi/">https://www.anegron.site/2020/06/18/how-to-install-conda-and-docker-on-your-raspberry-pi/</a></p>
 </dd>
 <dt class="label" id="id11"><span class="brackets"><a class="fn-backref" href="#id12">6</a></span></dt>
-<dd><p><a class="reference external" href="https://python.developpez.com/cours/DiveIntoPython/php/frdiveintopython/power_of_introspection/lambda_functions.php">https://python.developpez.com/cours/DiveIntoPython/php/frdiveintopython/power_of_introspection/lambda_functions.php</a></p>
+<dd><p><a class="reference external" href="https://jupyter.org/">https://jupyter.org/</a></p>
 </dd>
 <dt class="label" id="id13"><span class="brackets"><a class="fn-backref" href="#id14">7</a></span></dt>
-<dd><p><a class="reference external" href="https://openclassrooms.com/courses/apprenez-a-programmer-en-python/pas-a-pas-vers-la-modularite-1-2#/id/r-231371">https://openclassrooms.com/courses/apprenez-a-programmer-en-python/pas-a-pas-vers-la-modularite-1-2#/id/r-231371</a></p>
+<dd><p><a class="reference external" href="https://www.youtube.com/watch?v=g2yckh3_22E">https://www.youtube.com/watch?v=g2yckh3_22E</a></p>
 </dd>
 <dt class="label" id="id15"><span class="brackets"><a class="fn-backref" href="#id16">8</a></span></dt>
-<dd><p><a class="reference external" href="https://openclassrooms.com/courses/apprenez-a-programmer-en-python/parenthese-sur-le-tri-en-python#/id/r-2233424">https://openclassrooms.com/courses/apprenez-a-programmer-en-python/parenthese-sur-le-tri-en-python#/id/r-2233424</a></p>
-</dd>
-<dt class="label" id="id17"><span class="brackets"><a class="fn-backref" href="#id18">9</a></span></dt>
-<dd><p><a class="reference external" href="http://simeonfranklin.com/blog/2012/jul/1/python-decorators-in-12-steps/">http://simeonfranklin.com/blog/2012/jul/1/python-decorators-in-12-steps/</a></p>
-</dd>
-<dt class="label" id="id19"><span class="brackets"><a class="fn-backref" href="#id20">10</a></span></dt>
-<dd><p><a class="reference external" href="https://openclassrooms.com/fr/courses/235344-apprenez-a-programmer-en-python/232431-utilisez-des-fichiers#/id/r-232430">https://openclassrooms.com/fr/courses/235344-apprenez-a-programmer-en-python/232431-utilisez-des-fichiers#/id/r-232430</a></p>
-</dd>
-<dt class="label" id="id21"><span class="brackets"><a class="fn-backref" href="#id22">11</a></span></dt>
-<dd><p><a class="reference external" href="https://openclassrooms.com/fr/courses/235344-apprenez-a-programmer-en-python/233261-decouvrez-la-boucle-for">https://openclassrooms.com/fr/courses/235344-apprenez-a-programmer-en-python/233261-decouvrez-la-boucle-for</a></p>
-</dd>
-<dt class="label" id="id23"><span class="brackets"><a class="fn-backref" href="#id24">12</a></span></dt>
-<dd><p><a class="reference external" href="https://docs.python.org/3/glossary.html#term-generator">https://docs.python.org/3/glossary.html#term-generator</a></p>
-</dd>
-<dt class="label" id="id25"><span class="brackets"><a class="fn-backref" href="#id26">13</a></span></dt>
-<dd><p><a class="reference external" href="https://openclassrooms.com/fr/courses/235344-apprenez-a-programmer-en-python/233261-decouvrez-la-boucle-for#/id/r-233202">https://openclassrooms.com/fr/courses/235344-apprenez-a-programmer-en-python/233261-decouvrez-la-boucle-for#/id/r-233202</a></p>
-</dd>
-<dt class="label" id="id27"><span class="brackets"><a class="fn-backref" href="#id28">14</a></span></dt>
-<dd><p><a class="reference external" href="http://python-future.org/compatible_idioms.html">http://python-future.org/compatible_idioms.html</a></p>
-</dd>
-<dt class="label" id="id29"><span class="brackets"><a class="fn-backref" href="#id30">15</a></span></dt>
-<dd><p><a class="reference external" href="https://pyserial.readthedocs.io/en/latest/pyserial.html">https://pyserial.readthedocs.io/en/latest/pyserial.html</a></p>
-</dd>
-<dt class="label" id="id31"><span class="brackets"><a class="fn-backref" href="#id32">16</a></span></dt>
-<dd><p><a class="reference external" href="http://eli.thegreenplace.net/2009/08/20/frames-and-protocols-for-the-serial-port-in-python">http://eli.thegreenplace.net/2009/08/20/frames-and-protocols-for-the-serial-port-in-python</a></p>
-</dd>
-<dt class="label" id="id33"><span class="brackets"><a class="fn-backref" href="#id34">17</a></span></dt>
-<dd><p><a class="reference external" href="https://pyserial.readthedocs.io/en/latest/shortintro.html">https://pyserial.readthedocs.io/en/latest/shortintro.html</a></p>
-</dd>
-<dt class="label" id="id35"><span class="brackets"><a class="fn-backref" href="#id36">18</a></span></dt>
 <dd><p><a class="reference external" href="https://doc.scrapy.org/en/1.2/intro/overview.html">https://doc.scrapy.org/en/1.2/intro/overview.html</a></p>
 </dd>
-<dt class="label" id="id37"><span class="brackets"><a class="fn-backref" href="#id38">19</a></span></dt>
+<dt class="label" id="id17"><span class="brackets"><a class="fn-backref" href="#id18">9</a></span></dt>
 <dd><p><a class="reference external" href="https://realpython.com/python-code-quality/">https://realpython.com/python-code-quality/</a></p>
+</dd>
+<dt class="label" id="id19"><span class="brackets"><a class="fn-backref" href="#id20">10</a></span></dt>
+<dd><p><a class="reference external" href="https://blog.flozz.fr/2020/10/04/documenter-un-projet-python-avec-sphinx/">https://blog.flozz.fr/2020/10/04/documenter-un-projet-python-avec-sphinx/</a></p>
+</dd>
+<dt class="label" id="id21"><span class="brackets"><a class="fn-backref" href="#id22">11</a></span></dt>
+<dd><p><a class="reference external" href="http://sametmax.com/python-love-les-listes-en-intention-partie/">http://sametmax.com/python-love-les-listes-en-intention-partie/</a></p>
+</dd>
+<dt class="label" id="id23"><span class="brackets"><a class="fn-backref" href="#id24">12</a></span></dt>
+<dd><p><a class="reference external" href="https://docs.python.org/3.1/tutorial/datastructures.html#dictionaries">https://docs.python.org/3.1/tutorial/datastructures.html#dictionaries</a></p>
+</dd>
+<dt class="label" id="id25"><span class="brackets"><a class="fn-backref" href="#id26">13</a></span></dt>
+<dd><p><a class="reference external" href="https://python.developpez.com/cours/DiveIntoPython/php/frdiveintopython/power_of_introspection/lambda_functions.php">https://python.developpez.com/cours/DiveIntoPython/php/frdiveintopython/power_of_introspection/lambda_functions.php</a></p>
+</dd>
+<dt class="label" id="id27"><span class="brackets"><a class="fn-backref" href="#id28">14</a></span></dt>
+<dd><p><a class="reference external" href="https://openclassrooms.com/courses/apprenez-a-programmer-en-python/pas-a-pas-vers-la-modularite-1-2#/id/r-231371">https://openclassrooms.com/courses/apprenez-a-programmer-en-python/pas-a-pas-vers-la-modularite-1-2#/id/r-231371</a></p>
+</dd>
+<dt class="label" id="id29"><span class="brackets"><a class="fn-backref" href="#id30">15</a></span></dt>
+<dd><p><a class="reference external" href="https://openclassrooms.com/courses/apprenez-a-programmer-en-python/parenthese-sur-le-tri-en-python#/id/r-2233424">https://openclassrooms.com/courses/apprenez-a-programmer-en-python/parenthese-sur-le-tri-en-python#/id/r-2233424</a></p>
+</dd>
+<dt class="label" id="id31"><span class="brackets"><a class="fn-backref" href="#id32">16</a></span></dt>
+<dd><p><a class="reference external" href="http://simeonfranklin.com/blog/2012/jul/1/python-decorators-in-12-steps/">http://simeonfranklin.com/blog/2012/jul/1/python-decorators-in-12-steps/</a></p>
+</dd>
+<dt class="label" id="id33"><span class="brackets"><a class="fn-backref" href="#id34">17</a></span></dt>
+<dd><p><a class="reference external" href="https://openclassrooms.com/fr/courses/235344-apprenez-a-programmer-en-python/232431-utilisez-des-fichiers#/id/r-232430">https://openclassrooms.com/fr/courses/235344-apprenez-a-programmer-en-python/232431-utilisez-des-fichiers#/id/r-232430</a></p>
+</dd>
+<dt class="label" id="id35"><span class="brackets"><a class="fn-backref" href="#id36">18</a></span></dt>
+<dd><p><a class="reference external" href="https://openclassrooms.com/fr/courses/235344-apprenez-a-programmer-en-python/233261-decouvrez-la-boucle-for">https://openclassrooms.com/fr/courses/235344-apprenez-a-programmer-en-python/233261-decouvrez-la-boucle-for</a></p>
+</dd>
+<dt class="label" id="id37"><span class="brackets"><a class="fn-backref" href="#id38">19</a></span></dt>
+<dd><p><a class="reference external" href="https://docs.python.org/3/glossary.html#term-generator">https://docs.python.org/3/glossary.html#term-generator</a></p>
+</dd>
+<dt class="label" id="id39"><span class="brackets"><a class="fn-backref" href="#id40">20</a></span></dt>
+<dd><p><a class="reference external" href="https://openclassrooms.com/fr/courses/235344-apprenez-a-programmer-en-python/233261-decouvrez-la-boucle-for#/id/r-233202">https://openclassrooms.com/fr/courses/235344-apprenez-a-programmer-en-python/233261-decouvrez-la-boucle-for#/id/r-233202</a></p>
+</dd>
+<dt class="label" id="id41"><span class="brackets"><a class="fn-backref" href="#id42">21</a></span></dt>
+<dd><p><a class="reference external" href="https://docs.pytest.org/en/6.2.x/#">https://docs.pytest.org/en/6.2.x/#</a></p>
+</dd>
+<dt class="label" id="id43"><span class="brackets"><a class="fn-backref" href="#id44">22</a></span></dt>
+<dd><p><a class="reference external" href="https://docs.python.org/3/library/unittest.html">https://docs.python.org/3/library/unittest.html</a></p>
+</dd>
+<dt class="label" id="id45"><span class="brackets"><a class="fn-backref" href="#id46">23</a></span></dt>
+<dd><p><a class="reference external" href="https://stackoverflow.com/questions/1112343/how-do-i-capture-sigint-in-python">https://stackoverflow.com/questions/1112343/how-do-i-capture-sigint-in-python</a></p>
+</dd>
+<dt class="label" id="id47"><span class="brackets"><a class="fn-backref" href="#id48">24</a></span></dt>
+<dd><p><a class="reference external" href="https://stackoverflow.com/questions/5114292/break-interrupt-a-time-sleep-in-python">https://stackoverflow.com/questions/5114292/break-interrupt-a-time-sleep-in-python</a></p>
+</dd>
+<dt class="label" id="id49"><span class="brackets"><a class="fn-backref" href="#id50">25</a></span></dt>
+<dd><p><a class="reference external" href="http://python-future.org/compatible_idioms.html">http://python-future.org/compatible_idioms.html</a></p>
+</dd>
+<dt class="label" id="id51"><span class="brackets"><a class="fn-backref" href="#id52">26</a></span></dt>
+<dd><p><a class="reference external" href="https://github.com/kplindegaard/smbus2">https://github.com/kplindegaard/smbus2</a></p>
+</dd>
+<dt class="label" id="id53"><span class="brackets"><a class="fn-backref" href="#id54">27</a></span></dt>
+<dd><p><a class="reference external" href="https://pypi.org/project/smbus2/">https://pypi.org/project/smbus2/</a></p>
+</dd>
+<dt class="label" id="id55"><span class="brackets"><a class="fn-backref" href="#id56">28</a></span></dt>
+<dd><p><a class="reference external" href="https://github.com/quick2wire/quick2wire-python-api">https://github.com/quick2wire/quick2wire-python-api</a></p>
+</dd>
+<dt class="label" id="id57"><span class="brackets"><a class="fn-backref" href="#id58">29</a></span></dt>
+<dd><p><a class="reference external" href="https://pyserial.readthedocs.io/en/latest/pyserial.html">https://pyserial.readthedocs.io/en/latest/pyserial.html</a></p>
+</dd>
+<dt class="label" id="id59"><span class="brackets"><a class="fn-backref" href="#id60">30</a></span></dt>
+<dd><p><a class="reference external" href="http://eli.thegreenplace.net/2009/08/20/frames-and-protocols-for-the-serial-port-in-python">http://eli.thegreenplace.net/2009/08/20/frames-and-protocols-for-the-serial-port-in-python</a></p>
+</dd>
+<dt class="label" id="id61"><span class="brackets"><a class="fn-backref" href="#id62">31</a></span></dt>
+<dd><p><a class="reference external" href="https://pyserial.readthedocs.io/en/latest/shortintro.html">https://pyserial.readthedocs.io/en/latest/shortintro.html</a></p>
 </dd>
 </dl>
 </div>
 </div>
 
 
+            <div class="clearer"></div>
           </div>
         </div>
       </div>
@@ -954,9 +1538,16 @@ Tkinter au total 4 templates.</p>
 <li><a class="reference internal" href="#disclaimer">Disclaimer</a></li>
 <li><a class="reference internal" href="#pourquoi-les-gens-aiment-python">Pourquoi les gens aiment Python</a></li>
 <li><a class="reference internal" href="#docs">Docs</a></li>
-<li><a class="reference internal" href="#documenter-du-code-python-et-relaton-avec-sphinx">Documenter du code Python et relaton avec Sphinx</a></li>
-<li><a class="reference internal" href="#elements-de-langages">Elements de langages</a><ul>
-<li><a class="reference internal" href="#notations">Notations</a></li>
+<li><a class="reference internal" href="#outils-ide">Outils, IDE…</a><ul>
+<li><a class="reference internal" href="#miniconda-conda">Miniconda, conda</a></li>
+<li><a class="reference internal" href="#jupiter">Jupiter</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#a-revoir">A revoir</a></li>
+<li><a class="reference internal" href="#documenter-du-code-python-et-relation-avec-sphinx">Documenter du code Python et relation avec Sphinx</a></li>
+<li><a class="reference internal" href="#elements-de-langages">Éléments de langages</a><ul>
+<li><a class="reference internal" href="#annotations">Annotations</a></li>
+<li><a class="reference internal" href="#notations-operateurs">Notations / opérateurs</a></li>
 <li><a class="reference internal" href="#tuples">Tuples</a></li>
 <li><a class="reference internal" href="#listes">Listes</a></li>
 <li><a class="reference internal" href="#dictionnaires">Dictionnaires</a></li>
@@ -971,13 +1562,32 @@ Tkinter au total 4 templates.</p>
 </ul>
 </li>
 <li><a class="reference internal" href="#astuces">Astuces</a><ul>
+<li><a class="reference internal" href="#tempo">tempo</a></li>
+<li><a class="reference internal" href="#sur-les-chaines">Sur les chaînes</a></li>
+<li><a class="reference internal" href="#tester-tester-tester">Tester, tester, tester</a></li>
+<li><a class="reference internal" href="#print-inline">Print inline</a></li>
+<li><a class="reference internal" href="#if">if</a></li>
+<li><a class="reference internal" href="#ou-est-python">Où est python ?</a></li>
+<li><a class="reference internal" href="#turtle">Turtle</a></li>
+<li><a class="reference internal" href="#sur-l-aide">sur l’Aide</a></li>
+<li><a class="reference internal" href="#sur-les-liste-dico">Sur les liste, dico…</a></li>
+<li><a class="reference internal" href="#aficher-un-dictionnaire-ligne-a-ligne">Aficher un dictionnaire ligne à ligne</a></li>
+<li><a class="reference internal" href="#multiplication-de-liste">Multiplication de liste</a></li>
+<li><a class="reference internal" href="#byte-et-byarray">byte et byarray</a></li>
+<li><a class="reference internal" href="#sur-les-modules-package">Sur les modules, package…</a></li>
+<li><a class="reference internal" href="#sur-les-fichiers">Sur Les fichiers</a></li>
+<li><a class="reference internal" href="#autres-astuces">Autres astuces</a></li>
+<li><a class="reference internal" href="#ctrl-c">Ctrl C</a></li>
 <li><a class="reference internal" href="#python2-to-3">Python2 to 3</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#i2c">I2C</a></li>
+<li><a class="reference internal" href="#time">Time</a></li>
+<li><a class="reference internal" href="#i2c">I2C</a><ul>
+<li><a class="reference internal" href="#wiring-pi">Wiring pi</a></li>
+</ul>
+</li>
 <li><a class="reference internal" href="#pyserial">PySerial</a></li>
 <li><a class="reference internal" href="#gestionnaires-graphiques">Gestionnaires graphiques</a></li>
-<li><a class="reference internal" href="#a-revoir">A revoir</a></li>
 <li><a class="reference internal" href="#appli-minimum-template">Appli minimum (template)</a></li>
 <li><a class="reference internal" href="#weblinks">Weblinks</a></li>
 </ul>
@@ -985,7 +1595,7 @@ Tkinter au total 4 templates.</p>
 </ul>
 
   <h4>Sujet précédent</h4>
-  <p class="topless"><a href="../C++/Qt/Qt.html"
+  <p class="topless"><a href="../C%2B%2B/Qt/Qt.html"
                         title="Chapitre précédent">Notes sur Qt *</a></p>
   <h4>Sujet suivant</h4>
   <p class="topless"><a href="../lesObjetsConnectes/lesObjetsConnectes.html"
@@ -1021,14 +1631,15 @@ Tkinter au total 4 templates.</p>
           <a href="../lesObjetsConnectes/lesObjetsConnectes.html" title="Les objets connectés"
              >suivant</a> |</li>
         <li class="right" >
-          <a href="../C++/Qt/Qt.html" title="Notes sur Qt *"
+          <a href="../C%2B%2B/Qt/Qt.html" title="Notes sur Qt *"
              >précédent</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">Documentation MajorLee&#39;s notes </a> &#187;</li> 
+        <li class="nav-item nav-item-0"><a href="../index.html">Documentation MajorLee&#39;s notes </a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Python (mes notes)</a></li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2019, J.SORANZO.
-      Créé avec <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.4.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.2.0.
     </div>
   </body>
 </html>

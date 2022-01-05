@@ -59,7 +59,23 @@ Les différents shell:
  - tcsh : Tenex C Shell. Amélioration du C Shell.
  - zsh : Z Shell. Shell assez récent reprenant les meilleures idées de bash, ksh et tcsh.
 
-- En début de script : #!/bin/bash
+
+.. index::
+    pair: Linux; Shebang
+
+Le fameux shebang qu'on met au début des scripts::
+
+- En début de script ::
+
+    #!/bin/sh -x
+    #!/bin/bash
+    #!/usr/bin/perl
+    #!/usr/bin/tcl
+    #!/bin/sed -f
+    #!/usr/awk -f
+    #!/usr/bin/python
+
+Connaître son shell : tout simplement help !
 
 ----------------------------------------------------------------------------------------------------
 
@@ -135,7 +151,7 @@ System
 
 - voir les dernière info hardware ``dmesg`` 
 
-
+- créer un lien symbolique : ``ln -s dossier_cible nom_du_lien``
  
 Pour les utilisateurs
 ======================================
@@ -160,7 +176,8 @@ Cron
 ================================
 Il s'agit ici de lancer un programme de manière cyclique sans intervention évidement.
 
-Dans le journal de manip de Pierre, `créer une tâche planifiée`_
+Dans le journal de manip de Pierre, `créer une tâche planifiée`_, il n'y a vraiment que la base 
+de la base ! 
 
 .. _`créer une tâche planifiée` : https://poltergeist42.github.io/JDM/Linux.html#creer-une-tache-planifie-cron
 
@@ -314,8 +331,22 @@ Suffixe::
     une règle de suffixe ne peut avoir de cible (autre après les :)
 
 
+.. index::
+    pair: Linux; Redirections
 
+====================================================================================================
+Redirections
+====================================================================================================
+::
+    
+    >> vers un fichier (append)
+    > vers un nouveau fichier
+    > /dev/null
 
+    2>error.log redirige les erreurs vers un fihcier de log (2 désigne stderr tout simplement)
+    ou 2>>err.log pour un append
+
+    2>&1 : indique qu'il faut rediriger les erreurs vers la sortie standard
 
 
 
