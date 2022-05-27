@@ -55,7 +55,7 @@ Outils, IDE...
 ====================================================================================================
 
 Miniconda, conda
-====================================================================================================
+----------------------------------------------------------------------------------------------------
 Utilisation de miniconda3
 
 `Conda documentation`_
@@ -118,7 +118,7 @@ Source : site : ANegron's Blog `How to install Conda and Docker on your Raspberr
 .. _jupiterProjet:
 
 Jupiter
-====================================================================================================
+----------------------------------------------------------------------------------------------------
 A revoir
 
 `Project Jupyter`_ exists to develop open-source software, open-standards, and services for interactive
@@ -131,9 +131,11 @@ computing across dozens of programming languages.
 .. _`Prise en main de l'outil Jupyter` : https://www.youtube.com/watch?v=g2yckh3_22E
 
 
-====================================================================================================
+----------------------------------------------------------------------------------------------------
+
+
 A revoir
-====================================================================================================
+----------------------------------------------------------------------------------------------------
 `Scrapy`_  : permet de "grater" des page web
 
 .. _`Scrapy` : https://doc.scrapy.org/en/1.2/intro/overview.html
@@ -188,7 +190,7 @@ Il peut être aussi fort util de renseigner le chemin vers les sources au début
 Éléments de langages
 ====================================================================================================
 Annotations
-====================================================================================================
+----------------------------------------------------------------------------------------------------
 Depuis Python 3.6, on peut annoter les paramètres d'une fonction ou les 
 
 voir:
@@ -197,7 +199,7 @@ https://zestedesavoir.com/tutoriels/954/notions-de-python-avancees/2-functions/2
 
 
 Notations / opérateurs
-====================================================================================================
+----------------------------------------------------------------------------------------------------
 
 .. index::
     pair: Python; Hexa
@@ -247,7 +249,7 @@ Les opérateurs de comparaisons::
     pair: Python;  Tuple
 
 Tuples
-====================================================================================================
+----------------------------------------------------------------------------------------------------
 Ce sont simplement des listes non modifiables syntaxe : 
 () à l d [] par rapport à la syntaxe d'une liste.
 
@@ -255,7 +257,7 @@ Ce sont simplement des listes non modifiables syntaxe :
     single: Python;  Liste
 
 Listes
-====================================================================================================
+----------------------------------------------------------------------------------------------------
 Toutes les méthodes de list::
 
     >>> listMethode[listMethode.index('clear'):listMethode.index('sort')]
@@ -283,6 +285,25 @@ Toutes les méthodes de list::
     maList.insert(6, "titi")
     maList.extend(autreListe)
 
+**Concaténer 2 listes**::
+
+    6 méthodes
+
+    for i in test_list2 :
+        test_list1.append(i)
+
+    list3 = list1 + list2
+
+    res_list = [y for x in [list1, list2] for y in x]
+
+    extended_list.extend(listtoadd)
+
+    res_list = [*test_list1, *test_list2]
+
+    res_list = list(itertools.chain(test_list1, test_list2))
+
+
+
 **Accès**
     Pour accéder à un élément : malist[indice] indice commence évidement à 0
     Pour accéder à plusieurs élément consécutifs : malist[x:y]
@@ -294,6 +315,10 @@ Toutes les méthodes de list::
     malist.pop() ou maList.popleft()
     ou del maList[3]
 
+
+**Longueur**
+La méthode count permet de conter le nombre d'occurence d'un élément dans la liste.
+Il faut utiliser la fonction len(malist)
 
 **pile et queue**
 Elle peuvent être utilisées en pile ou en queue cf. <https://docs.python.org/3.1/tutorial/datastructures.html>
@@ -405,13 +430,16 @@ Exemples en vrac:
     
     list(range(10)) #! crée une lise de 0 à 9
     [x*y for x in vec1 for y in vec2]
+    avec des un if :
+    listeRequetes = [ req[5][1:] for req in tablesEchanges if req[2] == 'VOL Numéro 1']
+    # tablesEchanges est une liste de listes
 
 
 .. index::
     pair: Python;  Dictionnaire
 
 Dictionnaires
-====================================================================================================
+----------------------------------------------------------------------------------------------------
 `Doc officielle sur les dictionnaires`_
 
 .. _`Doc officielle sur les dictionnaires` : https://docs.python.org/3.1/tutorial/datastructures.html#dictionaries
@@ -460,7 +488,7 @@ paramètres non nommés.
     single: Python; Enumerate
 
 Enumerate
-====================================================================================================
+----------------------------------------------------------------------------------------------------
 C'est un mot clé et une fonction qui retourne un tuple(indice, valeur) et qui s'applique à tous
 les iterators.
 
@@ -488,7 +516,7 @@ Différence::
     pair: Python;  Fonctions
 
 Fonctions
-====================================================================================================
+----------------------------------------------------------------------------------------------------
 Syntaxe::
 
     def fonctionName(parametres, param = defValue) :
@@ -582,7 +610,7 @@ dans  la classe fille. Par exemple init
     pair: Python; Modules
 
 Modules
-====================================================================================================
+----------------------------------------------------------------------------------------------------
 C'est tout simplement un fichier .py qui contient des variables, des fonctions ou des classes.
 
 
@@ -655,7 +683,7 @@ interactive Python interpreter (or IDLE) and what response we expect back.
     pair: Python; Exception
 
 Les exceptions
-====================================================================================================
+----------------------------------------------------------------------------------------------------
 On peut intercepter les erreurs (ou exceptions) levées par notre code grâce aux blocs try except.
 La syntaxe d'une assertion est assert test:. Les assertions lèvent une exception AssertionError
 si le test échoue.
@@ -725,7 +753,7 @@ Sortir d'une boucle infinie par une iterruption clavier
     pair: Python; package
 
 Les packages
-====================================================================================================
+----------------------------------------------------------------------------------------------------
 Il s'agit tout simplement d'un répertoire de module
 
 On peut importer un pakage entier ou seulement un module dans le package ou seulement une fonction
@@ -759,7 +787,7 @@ Liste des package hyper courant:
     pair: Python; Fichiers
 
 Les fichiers
-====================================================================================================
+----------------------------------------------------------------------------------------------------
 outres le classique ``fichier = open('gilename', 'atttrib')`` avec comme attribut:
 
 r, w, X, a, b, t, +
@@ -822,7 +850,7 @@ Autre exemple encore plus simpliste:
     pair: Python; Objets
 
 Les objets
-====================================================================================================
+----------------------------------------------------------------------------------------------------
 classe template::
 
         class nomClasse: # Définition de notre classe
@@ -1082,7 +1110,7 @@ Fonctionnalité très avancées selon moi
 
 
 Itérateur & générateur
-====================================================================================================
+----------------------------------------------------------------------------------------------------
 
 Un itérateur est avant tout une classe qui va être chargé de parcourir l'objet conteneur
 : cf. `opencs chapitre sur les boucles for`_
@@ -1129,11 +1157,21 @@ Tout est sur openclassroom, `chapitre sur les boucle for`_
 
 Il s'agit d'une fonction très avancée dans leur création.
 
+If expression
+----------------------------------------------------------------------------------------------------
+Introduit avec la version 2.5 vise à faire la même chose que ``exp ?valeur si vrai:valeur si faux``
+donc::
+
+    X if condition else Y
+    exemples:
+    result = 'even' if a % 2 == 0 else 'odd'
+    print (a if b else 0)
+
 ====================================================================================================
 Astuces
 ====================================================================================================
 tempo
-====================================================================================================
+----------------------------------------------------------------------------------------------------
 ::
     
     import time
@@ -1148,7 +1186,7 @@ tempo
 
 
 Sur les chaînes
-====================================================================================================
+----------------------------------------------------------------------------------------------------
 
 .. index::
     pair: Python; Formater un chaîne
@@ -1229,7 +1267,7 @@ Initialiser une chaîne avec n fois le même caractère: ``chain = "-"*10``
     print("\n") #tout simplement !
 
 Tester, tester, tester
-====================================================================================================
+----------------------------------------------------------------------------------------------------
 Cela doit devenir un réflexe, on peut tout expérimenter dans la console Python
 des commandes seules mais aussi des bouts de codes qu'on a mis dans un fichier TOUT !
 
@@ -1246,17 +1284,17 @@ Pour les tests réels du code on se tournera vers `pytest`_ ou `unitest`_
 .. _`unitest` : https://docs.python.org/3/library/unittest.html 
 
 Print inline
-====================================================================================================
+----------------------------------------------------------------------------------------------------
 Pour imprimer à la suite sans retour chariot ``sys.stdout.write(lettre) sys.stdout.flush()``
 
 if
-====================================================================================================
+----------------------------------------------------------------------------------------------------
 C'est bête mais  ``if: et elif:``
 
 et pas ``else if`` ou ``elsif``
 
 Où est python ?
-====================================================================================================
+----------------------------------------------------------------------------------------------------
 ::
 
     c:\>where.exe python
@@ -1269,7 +1307,7 @@ Où est python ?
         ouvrir emplacement de la cible
 
 Turtle
-====================================================================================================
+----------------------------------------------------------------------------------------------------
 Turtle <https://docs.python.org/3.3/library/turtle.html?highlight=turtle>
 
 Petit truc graphique rigolo, plus riche qu'on ne pourrait s'y attendre !
@@ -1280,7 +1318,7 @@ Une vidéo sympa <https://www.youtube.com/watch?v=pxKu2pQ7ILo>
 
 
 sur l'Aide
-====================================================================================================
+----------------------------------------------------------------------------------------------------
 help et help short form::
 
             object.__dict__
@@ -1293,7 +1331,7 @@ Afficher la doc d'un package::
     help()
 
 Sur les liste, dico...
-====================================================================================================
+----------------------------------------------------------------------------------------------------
 Parcours d'une liste en une seule ligne, c'est en ça que python devient fort et on crée une nouvelle 
 liste, ceci se nomme liste en intention ou compréhension de liste::
 
@@ -1360,12 +1398,12 @@ Any et all sont des fonction Python qui s'appliquent sur des itérables (pas for
 
 
 Aficher un dictionnaire ligne à ligne
-====================================================================================================
+----------------------------------------------------------------------------------------------------
 
         for k,v in d.items():     print("{} : {}".format(k,v) )
 
 Multiplication de liste
-====================================================================================================
+----------------------------------------------------------------------------------------------------
 si x est une liste : x * 5 donne une liste qui recopie 5 fois la liste x::
 
     [1,2] * 5 donne [1,2,1,2,1,2,1,2,1,2]
@@ -1376,7 +1414,7 @@ si x est une liste : x * 5 donne une liste qui recopie 5 fois la liste x::
     pair: Python; bytearray
 
 byte et byarray
-====================================================================================================
+----------------------------------------------------------------------------------------------------
 ::
 
     byte est immutable
@@ -1390,7 +1428,7 @@ byte et byarray
     byarray(int.to_bytes(4, byteorder='big') )
 
 Sur les modules, package...
-====================================================================================================
+----------------------------------------------------------------------------------------------------
 
 ::
 
@@ -1426,7 +1464,7 @@ Sur les modules, package...
 
 
 Sur Les fichiers
-====================================================================================================
+----------------------------------------------------------------------------------------------------
 ::
 
         __file__
@@ -1452,7 +1490,7 @@ Ouvrir un fichier avec with:
             print("I/O error({0}): {1}".format(e.errno, e.strerror) )
 
 Autres astuces
-====================================================================================================
+----------------------------------------------------------------------------------------------------
 ::
 
     event driven dans Tkinter
@@ -1508,7 +1546,7 @@ Autres astuces
 
 
 Ctrl C
-====================================================================================================
+----------------------------------------------------------------------------------------------------
 .. code:: python
 
     #!/usr/bin/env python
@@ -1564,7 +1602,7 @@ Sur `Stackoverflow break/interrupt a time.sleep() in python`_
 
 
 Python2 to 3
-====================================================================================================
+----------------------------------------------------------------------------------------------------
 
 .. index::
     single: Python; 2 to 3
@@ -1619,7 +1657,7 @@ et `Quick2wire en Python3`_
 
 
 Wiring pi
-====================================================================================================
+----------------------------------------------------------------------------------------------------
 C'est une librairie C non Python cf.
 
 ====================================================================================================

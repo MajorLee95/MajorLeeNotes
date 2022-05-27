@@ -244,6 +244,8 @@ Site officiel : `https://thinger.io/`_
 
 .. _`https://thinger.io/` : https://thinger.io
 
+Petite visite le 12/01/2022 : toujours actif !
+
 ::
 
 			Open Source
@@ -254,11 +256,9 @@ Site officiel : `https://thinger.io/`_
 			For Makers
 				Makers can register for free accounts to start building their IoT projects
 				in minutes, just using our cloud infrastructure.
-			Free offer (je ne l'ai pas retrouvé ! 25/12/2019)
+			Free offer (trouvé ! 12/01/2022) onglet pricing
 				Up to 2 Devices
-				Up to 4 Dashboards
-				Up to 4 Endpoints
-				Up to 4 Buckets
+				+ Dashboards, Endpoints, Buckets, access token
 				Standard bucket write rate (1/60s)
 					ie 4*24*30*60 = 172800 e/mois
 				Standard Endpoint calls rate (1/10s)
@@ -266,7 +266,9 @@ Site officiel : `https://thinger.io/`_
 				Shared Thinger.io Cloud
 				Community Support
                 
-L'offre commence à 29€/mois (offre maker !)
+L'offre commence à 25€/mois (offre maker !) au 12/01/2022
+
+fonded by CDTI (minister de l'innovation espagnol) et neotec
 				
 Samsung IoT ARTIK Cloud for IoT
 ======================================

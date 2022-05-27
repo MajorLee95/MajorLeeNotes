@@ -27,9 +27,9 @@ Notes sur git
 .. contents::
     :backlinks: top
 
-================================
+====================================================================================================
 Introduction
-================================
+====================================================================================================
 penser au fichier xmind : ProcessusDocumentaire.mm  Freeplane
 
 A mon avis, git prend tout son sens quand on l'utilise avec un dépôt distant. J'ai longtemps utilisé
@@ -90,7 +90,8 @@ Tutos en français
 Workflow
 ====================================================================================================
 Développeur (en équipe)
-====================================================================================================
+----------------------------------------------------------------------------------------------------
+
 En équipe peut aussi signifier, développer seul mais sur plusieurs machines différentes.
 Une des grosse difficultés que je rencontre c'est de répondre à la question ?
 
@@ -196,7 +197,7 @@ Un autre article un peu moins intéressant au niveau solution (moins riche) :
 .. _`Best practices for using git in large project` : https://stackoverflow.com/questions/32068654/best-practices-for-using-git-in-large-project
 
 Créer un dépôt serveur
-====================================================================================================
+----------------------------------------------------------------------------------------------------
 git init --bare --share tout simplement
 
 Petite subtilité au moment du clone : on peut cloner vers un sous répertoire dont le nom est
@@ -207,15 +208,29 @@ différent de celui de la source.
 ================================
 petits trucs utiles 
 ================================
+Mettre un projet déjà bien avancé sous GitHUB
+----------------------------------------------------------------------------------------------------
+Situation : j'ai un dossier projet déjà bien avancé et je souhaite le mettre sous github. Procédure:
+
+- tout d'abord en local, aller dans le dossier du projet
+- faire clic droit git bash here
+- git init
+- mettre en place .gitignore
+- git add .
+- git commit -m "premier commit"
+
+https://www.fxparlant.net/github-ajouter-un-projet-deja-cree/
+
+
 Créer une branche et s'y déplacer en une seule commande
-====================================================================================================
+----------------------------------------------------------------------------------------------------
 ::
 
     git checkout -b novelle_branch
 
 
 Logiciels 
-======================================
+----------------------------------------------------------------------------------------------------
 
 `gitKraken`_
 
@@ -238,22 +253,22 @@ Configurer Tortoise git avec des clé ssh:
 - configurer également network/ssh client : ``C:\Windows\System32\OpenSSH\ssh.exe``
          
 Suppression d'un fichier 
-======================================
+----------------------------------------------------------------------------------------------------
 git rm
         
 lister les fichiers indexé 
-======================================
+----------------------------------------------------------------------------------------------------
 A priori git ls-files
 
 Fichiers pas suivis git ls-files -o, sous-entendu --others (au pluriel)
 
 Mais vers ou pointe origine 
-======================================
+----------------------------------------------------------------------------------------------------
  - git ls-remote
  - git remote show origin !!!
         
 merger un seul fichier 
-======================================
+----------------------------------------------------------------------------------------------------
  - git fetch : récupère les branche distantes
  - git checkout La_branche contenant le fichier
  - git pull
@@ -268,7 +283,7 @@ Je me suis mis dans le dossier en question et je n'ai donné que le nom du fichi
 sous-entendu sans le chemin complet.
                 
 Écraser les dernière modif qui n'ont pas été commitées 
-===========================================================
+----------------------------------------------------------------------------------------------------
  - git checkout -- <file> (comme le signal la commande git status)
  - git reset --hard HEAD~1 (retour au dernier commit)
  - git rebase -i HEAD~10
@@ -283,7 +298,7 @@ sous-entendu sans le chemin complet.
     them back using git.
 
 Retirer un répertoire de l'index  
-======================================
+----------------------------------------------------------------------------------------------------
 Pour qu'il soit pris en compte par le git ignore::
 
     git rm --cached -r build
@@ -293,7 +308,7 @@ A condition de faire le add avant
 Puis de les retirer après de l'index
 
 lister les fichier dossier ignorés ? 
-======================================
+----------------------------------------------------------------------------------------------------
 git ls-files --others -i --exclude-standard::
             
 		git ls-files --stage
@@ -301,7 +316,7 @@ git ls-files --others -i --exclude-standard::
 attention dans .gitignore un répertoire se termine par / et pas \
         
 Rattacher la tête 
-======================================
+----------------------------------------------------------------------------------------------------
 Procédure::
 
     git checkout -b temp
@@ -312,7 +327,7 @@ Procédure::
       
         
 Annuler le dernier commit 
-======================================
+----------------------------------------------------------------------------------------------------
     
 Situation :
 - des fichiers modifiés
@@ -342,13 +357,13 @@ Autres possibilités::
         
         
 Lister les commit d'une branche distante 
-=========================================
+----------------------------------------------------------------------------------------------------
 - Utile quand on est out of date
 - git remote show origin
 - git ls-remote
 
 Dépôt git sur clé usb 
-======================================
+----------------------------------------------------------------------------------------------------
 
 Créer `un dépôt git sur une clé usb, sur wikibook`_
 
@@ -356,14 +371,14 @@ Créer `un dépôt git sur une clé usb, sur wikibook`_
 
 
 Trace l'arborescence sous forme textuelle
-===========================================
+----------------------------------------------------------------------------------------------------
 une ch'tite commande sympa::
 
 	git log --pretty=oneline --abbrev-commit --graph --decorate
     voir aussi git adog en début de chapitre
     
 clé SSH
-===========================================
+======================================
 
 - visiblement dépendante de l'ordinateur non ?
 - Au tout au moins réside dans un répertoire locale de la machine
@@ -386,10 +401,10 @@ Sous Windows::
 
 
 cherry-pick : écrémer
-===========================================
+----------------------------------------------------------------------------------------------------
 
 Lister les différences entre branches locale et branche distante
-======================================================================================
+----------------------------------------------------------------------------------------------------
 ::
 
     git diff maBranche origin/branche
@@ -398,7 +413,7 @@ Lister les différences entre branches locale et branche distante
     avant faire un git fetch
 
 git push
-===========================================
+----------------------------------------------------------------------------------------------------
 
 ::
 
@@ -411,7 +426,7 @@ git push
             Push all branches (i.e. refs under refs/heads/); cannot be used with other <refspec>.
 
 supprimer une branche distante
-===========================================
+----------------------------------------------------------------------------------------------------
 git push origin : <nombrancheasupprimer>
 
 le 17/10/2020 : git push origin +HEAD
@@ -425,12 +440,18 @@ git rebase -i HEAD~11
 
 git push origin HEAD:gh-pages --force
 
+Supprimer une branche locale
+----------------------------------------------------------------------------------------------------
+git branch --help
+
+git branch -d ou --delete (si pas pushée enfin je crois !)
+
 Merge branche distante
-===========================================
+----------------------------------------------------------------------------------------------------
 git pull non !
 
 Traquer une nouvelle branche distante
-===========================================
+----------------------------------------------------------------------------------------------------
 
 ::
 
@@ -444,14 +465,14 @@ Traquer une nouvelle branche distante
     branche locale est crée)
 
 Reconnecter une branche distante à une branche locale
-====================================================================================================
+----------------------------------------------------------------------------------------------------
 ::
 
     git branch --set-upstream-to=origin/master master
 
 
 créer un dépôt distant sur le serveur du VoLAB
-======================================================================================
+----------------------------------------------------------------------------------------------------
 ::
 
     git init --bare chemin
@@ -463,26 +484,26 @@ créer un dépôt distant sur le serveur du VoLAB
         soit changer origin si c'est un dépot existant
 
 Errors : git cannot lock ref d'une branche distante lors d'un pull
-======================================================================================
+----------------------------------------------------------------------------------------------------
 Le fichier dans l'arbo git était corrompu !
 
 lister les fichiers d'une branche
-===========================================
+----------------------------------------------------------------------------------------------------
 ::
 
     git ls-tree nom_de_la_branche -r (recursiv)
 
 nettoyage des liens pourri
-===========================================
+----------------------------------------------------------------------------------------------------
 
 git fetch --prune
     
 merge d'un répertoire d'une autre branche
-===========================================
+----------------------------------------------------------------------------------------------------
     git checkout branch chemin
 
 Déplacer le dernier commit d'une branche vers une autre branche
-======================================================================================
+----------------------------------------------------------------------------------------------------
 
 ::
 
