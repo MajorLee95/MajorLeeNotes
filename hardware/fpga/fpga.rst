@@ -1,12 +1,13 @@
 .. index::
     single: FPGA
-    
-++++++++++++++++++++++++++++++++
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 FPGA*
-++++++++++++++++++++++++++++++++
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 :Auteur: J.Soranzo
 :Date: Novembre 2019
+:update: 29/3/2022
 :Societe: VoRoBoTics
 :Entity: VoLAB
 
@@ -18,9 +19,9 @@ FPGA*
 
     <div class="clearer"></div>
 
-================================
+====================================================================================================
 GENERAL
-================================
+====================================================================================================
 
 Carte low cost sur le `site Joel Williams`_
 
@@ -28,9 +29,9 @@ Carte low cost sur le `site Joel Williams`_
 
 Taper fpga sur ebay !
 
-
 Doulos (ressources)
-====================================================================================================
+----------------------------------------------------------------------------------------------------
+
 `Doulos VHDL ressources`_
 
 .. _`Doulos VHDL ressources` : http://doulos.com/knowhow/vhdl/
@@ -39,7 +40,7 @@ Doulos (ressources)
 Carte low cost
 ====================================================================================================
 Carte XILINX compatible Arduino
-====================================================================================================
+----------------------------------------------------------------------------------------------------
 `Arduino-compatible Spartan-6 projet Hackaday`_ FPGA board sur forum Xilinx,Environ 70$
 
 .. _`Arduino-compatible Spartan-6 projet Hackaday` : https://hackaday.io/project/38-arduino-compatible-fpga-shield
@@ -57,11 +58,68 @@ Voir projet perso 014 designed with PRotel for Windows
 A ma dernière viste sur le site Tindie plus de carte FPGA Xilinx !
 
 Chez AliExpress
-====================================================================================================
+----------------------------------------------------------------------------------------------------
+
 Carte très simple à base de SPARTAN 
 
+====================================================================================================
+Little FPGA board
+====================================================================================================
+SeedStudio
+----------------------------------------------------------------------------------------------------
+Bonne surprise en ce mois de Mars 2022 `chez SEEEStudio`_
+
+.. _`chez SEEEStudio` : https://www.seeedstudio.com/catalogsearch/result/?q=fpga 
+
+- Sipeed Tang Nano FPGA Board powered by GW1N-1
+- Sipeed TANG PriMER FPGA
+
+
+.. image:: images/Spartan-Edge-Accelerater-Board-v1.0-wiki.jpg 
+   :width: 300 px
+
+
+- Spartan Edge Accelerator Board - Arduino FPGA Shield with ESP32 39.50$
+
+Avec `son wiki rès complet chez Seeedstudio`_
+
+.. _`son wiki rès complet chez Seeedstudio` : https://wiki.seeedstudio.com/Spartan-Edge-Accelerator-Board/
+
+ICEBraker
+----------------------------------------------------------------------------------------------------
+
+.. index::
+    pair: FPGA; Icebraker
+
+.. image:: images/icebreaker-iso_png_md-xl.jpg 
+   :width: 300 px
+
+
+`iCEBreaker FPGA`_ projet 2019-2020 de crowdfounding 65€
+
+.. _`iCEBreaker FPGA` : https://www.crowdsupply.com/1bitsquared/icebreaker-fpga
+
+Il y a un `1bit Squared store européen`_
+
+.. _`1bit Squared store européen` : https://1bitsquared.de/products/icebreaker
+
+Disponible sur `AMAZON Fransande Icebreaker 1.0E FPGA Lattice ICE40UP5K`_
+
+.. _`AMAZON Fransande Icebreaker 1.0E FPGA Lattice ICE40UP5K` : https://www.amazon.fr/Fransande-Icebreaker-ICE40UP5K-D%C3%A9Veloppement-Principal/dp/B08W2ZCT8Q/ref=sr_1_40?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=1LYDQ6ZJ8YGMX&keywords=fpga&qid=1648682715&sprefix=fpga%2Caps%2C98&sr=8-40
+
+Et sur `Aliexpress Icedisjoncteur – carte de développement FPGA à treillis 1.0E, RISC-V Open`_
+
+.. _`Aliexpress Icedisjoncteur – carte de développement FPGA à treillis 1.0E, RISC-V Open` : https://fr.aliexpress.com/item/1005001744188353.html?spm=a2g0o.productlist.0.0.2d304f57qtHUBx&algo_pvid=0af27d41-842e-4a1f-bc13-e2162b8dcee4&algo_exp_id=0af27d41-842e-4a1f-bc13-e2162b8dcee4-1&pdp_ext_f=%7B%22sku_id%22%3A%2212000017412500115%22%7D&pdp_pi=-1%3B40.61%3B-1%3B-1%40salePrice%3BEUR%3Bsearch-mainSearch
+
+
+
+
+
+
+====================================================================================================
 Contenu du Xmind 
-======================================
+====================================================================================================
+
 
 
 
@@ -132,7 +190,7 @@ Contenu du Xmind
                 Sparten 6 LX9
                 dispo chez Farnel
                     50.88€
-                        pas le bon lien (carte d'extension !
+                        pas le bon lien (carte d'extension !)
                     Attention c'est juste l'expansion board
                 Chez Farnell : plus stoké
 
@@ -195,15 +253,14 @@ Contenu du Xmind
                     474USD
                     Xilinx Zynq®-7000 
 
-
 .. index::
     pair: FPGA; Altera
-    
-================================
-ALTERA / INTEL FPGA
-================================
-MAX10 versus CYCLONE I, II, III, IV
+
 ====================================================================================================
+ALTERA / INTEL FPGA
+====================================================================================================
+MAX10 versus CYCLONE I, II, III, IV
+----------------------------------------------------------------------------------------------------
 LEs familles INTEL/FPGA en 2020: 
 
 - AGILEX: 10nm intensive application
@@ -233,7 +290,7 @@ Source : `site INTEL FPGA family`_
 
 
 DECA-MAX-10 de chez ARROW 
-======================================
+----------------------------------------------------------------------------------------------------
 .. image:: images/decaMax10.jpg 
    :width: 600 px
 
@@ -292,13 +349,17 @@ External peripherals
 .. _`ARROW DECA MAX-10` : https://www.arrow.com/fr-fr/products/deca/arrow-development-tools 
 
 BeMicro Max10 AVNET également
-======================================
+----------------------------------------------------------------------------------------------------
 
 ou `BeMicro Max10`_ : environ 30$, **10M08DAF484C8GES**
 
 8 LED, 2 BP, 8000 LE, 108kRAM, 12kFlash interne, 1 à 2 PLL, dual configuration memory
 
 50MHz oscillator
+
+.. image:: images/bemicromax10_fig.1.jpg 
+   :width: 300 px
+
 
 .. _`BeMicro Max10` :  https://www.arrow.com/fr-fr/reference-designs/bemicro-max10-fpga-evaluation-kit-adopts-alteras-non-volatile-max-10-fpga-built-on-55-nm-flash-process/45cdf7d717bc14e6dfb1044001fb7c4f 
 
@@ -331,7 +392,7 @@ External peripherals
 .. _`beMicroMax10 Design Example` : https://fpgacloud.intel.com/devstore/platform/?board=4 
 
 ALTERA Cyclone II EP2C5T144 CPLD FPGA Development Board 
-==========================================================
+----------------------------------------------------------------------------------------------------
 
 `Sur ebay`_ 11.51€
 
@@ -353,7 +414,7 @@ Carte plutôt facile à trouvé. Se pause alors le problème de l'outil Quartus
 
 
 ALTERA Cyclone IV 
-======================================
+----------------------------------------------------------------------------------------------------
 Moins de 40$
 
 `Nouveau 2019 Altera Cyclone Iv FPGA EP4CE6E22C8N Development Board USB V2.0 CPLD`_
@@ -400,16 +461,16 @@ Parmis ses playlistes, il y en a une sur les FPGA : `Playliste FPGA sur Electro-
    :width: 600 px
  
 Quartus
-======================================
+----------------------------------------------------------------------------------------------------
 Il faut lui créer un sous-dossier !
 
 `On line course`_
 
 .. _`On line course` :  https://www.intel.com/content/www/us/en/programmable/support/training/catalog.html?courseType=Online
- 
-================================
+
+====================================================================================================
 LATICE / TinyFPGA
-================================
+====================================================================================================
 
 Carte low cost et toutes petites: `TinyFPGA`_
 
@@ -437,24 +498,71 @@ MACH-XO2
 
 .. _`Programmer chez Elector` : https://www.elektor.fr/tinyfpga-programmer
 
-================================
+====================================================================================================
 XILINX
-================================
-Carte pour la vidéo à 400$
+====================================================================================================
+Carte pour de la vidéo compter environ 3 à 400$
 
 `Chez Numato Lab Opsis`_
 
 .. _`Chez Numato Lab Opsis` : https://numato.com/product/numato-opsis-fpga-based-open-video-platform/
 
-2 HDMI in et 2 HDMI out c'est du lourd et open source.
+2 HDMI in et 2 HDMI out + 1 DPIn and  1 DPOut  c'est du lourd et open source.
+
+Cartes DIGILENT
+----------------------------------------------------------------------------------------------------
+`Site officiel`_
+
+.. _`Site officiel` : https://digilent.com/shop/boards-and-components/system-boards/
+
+ARTIX x7 board
+****************************************************************************************************
+S7 : Spartan
+
+A7 : `Artix`_
+
+.. _`Artix` : https://digilent.com/shop/arty-a7-artix-7-fpga-development-board/
+
+Z7 : Zynq
+
+Partage une sressemblance pour ne pas dire un facteur de forme.
+
+.. image:: images/cartesArty.jpg 
+   :width: 500 px
+
+`ARTIX A7 Ref manuel`_ exclusivement en ligne ! 
+
+.. _`ARTIX A7 Ref manuel` : https://digilent.com/reference/programmable-logic/arty-a7/reference-manual?redirect=1 
+
+Facteur de forme intéressantant:
+
+.. image:: images/CMODA7.jpg 
+   :width: 300 px
 
 
+`Digilent CMOD A7`_
+
+.. _`Digilent CMOD A7` : https://digilent.com/shop/cmod-a7-35t-breadboardable-artix-7-fpga-module/
 
 
-================================
+Existe en `SPARTAN7 CMOD S7`_
+
+.. _`SPARTAN7 CMOD S7` : https://digilent.com/shop/cmod-s7-breadboardable-spartan-7-fpga-module/
+
+ZYBO Z7 pour la vidéo
+----------------------------------------------------------------------------------------------------
+249$ en version signle Core
+
+HDMI in et 1 HDMI out
+
+====================================================================================================
 UPDuino
-================================
+====================================================================================================
 UPduino v2.1: low cost FPGA board et openSource
+
+.. image:: images/upduino_2019-09-16T17_27_36.855Z-UPduino_v2.1_back.jpg 
+   :width: 300 px
+
 
 sur `tindie.com`_ : 19.95us$
 
@@ -499,15 +607,15 @@ Composant : ICE40UP5K-SG48
 .. _`Lattice ICE40 Ultra Plus 5K FPGA` :  https://www.latticesemi.com/en/Products/FPGAandCPLD/iCE40UltraPlus
 
 
-================================
+====================================================================================================
 Open source FPGA tools
-================================
+====================================================================================================
 Eh bien on peut dire que ça à l'air d'être un joyeux bordel !
 
 Il y a d'abord le `projet icestorm`_
 
 APIO
-================================================================================================
+----------------------------------------------------------------------------------------------------
 Puis APIO:
 
 .. image:: images/apio.jpg
@@ -529,7 +637,14 @@ Et qui dit PlatformIo dit... Python ;-) Notez que j'ai rien contre Python mais j
 plus...
 
 ICEstudio
-================================================================================================
+----------------------------------------------------------------------------------------------------
+04/2022 UPDATE `site pour download icestudio`_ en bas de page v0.9.0 dl et installée pc msi
+
+Install plantée. elle a tentée un pip install
+
+.. _`site pour download icestudio` : https://icestudio.io/#lk-overview
+
+
 Donc par dessus il y a Icestudio:
 
 .. image:: images/icestudio.jpg
@@ -554,7 +669,7 @@ J'ai l'impression que cela ne supporte que le Vérilog.
     pair: FPGA; Symbiflow
 
 Symbiflow
-================================================================================================
+----------------------------------------------------------------------------------------------------
 `Site officiel Symbiflow`_
 
 .. _`Site officiel Symbiflow` : https://symbiflow.github.io/
@@ -564,14 +679,16 @@ Currently, it targets the Xilinx 7-Series, Lattice iCE40, Lattice ECP5 FPGAs, Qu
 and is gradually being expanded to provide a comprehensive end-to-end FPGA synthesis flow.
 
 Simulateur open source
-====================================================================================================
+----------------------------------------------------------------------------------------------------
 
 ghdl Tristan Ginglod
 
 http://ghdl.free.fr/
 
-=========
+
+
+====================================================================================================
 Weblinks
-=========
+====================================================================================================
 
 .. target-notes::

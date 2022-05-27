@@ -1,0 +1,19 @@
+@startuml
+
+left to right direction
+
+rectangle BTSE {
+    agent furex_in
+    agent c
+}
+agent "Carte FUREX" as furex
+agent "Lien Furex" as furexLink
+rectangle "lien SAL" as salLink
+agent "voie SAL" as sal
+
+furex --> furexLink
+furex --> salLink
+furexLink --> furex_in:[115200]
+sal --> c
+
+@enduml

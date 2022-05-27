@@ -34,7 +34,7 @@ A compléter 22/7/2021
 .. index::
     pair: CPU Architecture; Harvard
     pair: CPU Architecture; Von Neumann
-    
+
 ====================================================================================================
 CPU Architecture
 ====================================================================================================
@@ -52,9 +52,9 @@ Source `wikipedia Harvard Archi`_
 
 .. _`wikipedia Harvard Archi` :  https://en.wikipedia.org/wiki/Harvard_architecture
 
-================================
+====================================================================================================
 Teensy (3.5)
-================================
+====================================================================================================
 `Site officiel Teensy`_
 
 LED power : je pense qu'il n'y en a pas.
@@ -73,9 +73,9 @@ Processeur : MK64FX512VMD12 120 MHz Cortex-M4F
 .. _`Site officiel Teensy` : https://www.pjrc.com/teensy/
 
 
-================================
+====================================================================================================
 Connecteur Wifi
-================================
+====================================================================================================
 IPEX ou IPX : petits connecteurs coaxiaux des cartes FriendlyArM nanoPC-T4 par exemple
 MHF connecteur
 
@@ -88,11 +88,12 @@ SMA connecteur des antennes Wifi
     single: ESP8266; broches disponibles
     single: ESP32
 
-================================
-ESP boards
-================================
-ESP8266
 ====================================================================================================
+ESP boards
+====================================================================================================
+ESP8266
+----------------------------------------------------------------------------------------------------
+
 
 Attention toutes les broches ne sont pas utilisables  pour faire ce qu'on veut!
 Il y a des contrainte.
@@ -104,7 +105,7 @@ Voir sur le site `randomTutorial ESP8266 pinout`_
 .. _`randomTutorial ESP8266 pinout` : https://randomnerdtutorials.com/esp8266-pinout-reference-gpios/
 
 ESP32
-====================================================================================================
+----------------------------------------------------------------------------------------------------
 `DFRaobot sort sa firebeetle`_ à 6.9$
 
 .. _`DFRaobot sort sa firebeetle` : https://www.dfrobot.com/product-1590.html
@@ -119,7 +120,7 @@ En dual in line on en trouve facilement même sur Amazon prime à 10€ lol ou `
 
 
 ESP32 vs ESP8266
-====================================================================================================
+----------------------------------------------------------------------------------------------------
 Sur `Arduinotutoriels`_
 
 .. _`Arduinotutoriels` : https://arduinotutoriels.com/esp32-vs-esp8266/
@@ -134,10 +135,11 @@ En résumé, ESP32 ajoute **Dual core**, Bluetooth 4.0 LE, 2 SPI et 1 I2C, 2 can
 
 .. index::
     single: Hardware; Cable SATA to USB3
-    
-================================
+
+====================================================================================================
 SATA to USB3
-================================    
+====================================================================================================
+
 Solution testée et maintes fois utilisées  `sur AMAZON SABERENT`_ à 9€90
 
 .. _`sur AMAZON SABERENT` : https://www.amazon.fr/Sabrent-Adaptateur-Optimis%C3%A9-support-EC-SSHD/dp/B011M8YACM/ref=sr_1_8?keywords=Sabrent&qid=1581088661&sr=8-8
@@ -166,7 +168,7 @@ Et enfin `sur le site de BATC`_
 LES CAPTEURS
 ====================================================================================================
 Eau 
-====================================================================================================
+----------------------------------------------------------------------------------------------------
 `Analog TDS Sensor/Meter for Arduino`_ 26/02/2020
 
 .. _`Analog TDS Sensor/Meter for Arduino` : https://www.dfrobot.com/product-1662.html
@@ -181,7 +183,7 @@ one liter of water.
 ----------------------------------------------------------------------------------------------------
 
 Air
-====================================================================================================
+----------------------------------------------------------------------------------------------------
 A retranscrire ici projet 035-tempDataLogger document de conception 26/02/2020 ...
 
 
@@ -222,7 +224,7 @@ Comme la NVIDIA Jetson Xavier ou encore :
     QBiP-1605A de GigaIPC
 
 Les fabricants (de petites)
-====================================================================================================
+----------------------------------------------------------------------------------------------------
 - Raspberry fondation
 - Orange pi
 - Banana pi
@@ -238,8 +240,8 @@ Les fabricants (de petites)
 - LIBRE COMPUTER
 
 
-Raspberry pi Zero et concurent
-====================================================================================================
+Raspberry pi Zero et concurrentes
+----------------------------------------------------------------------------------------------------
 
 On a (au 20/09/2021):
 
@@ -252,7 +254,7 @@ Autre question quelle celle qui a le meilleur rapport prix performances dans la 
 
 
 Sous groupe Friendlyarm
-====================================================================================================
+----------------------------------------------------------------------------------------------------
 A noter qu'il ont leur propre boutique vs Orangepi sur aliexpress.
 
 Je les trouve mieu documenté à l'iimage de ce site `nanopi.io`_
@@ -297,7 +299,7 @@ Prix indicatif au 17/04/2021
 
 
 Chez Orange pi
-====================================================================================================
+----------------------------------------------------------------------------------------------------
 ::
 
     2G Iot: A5, 256 DDR2, SIM 2G, 512M Flash, Wifi BT, 1USB2.0, LCD, CSI, mSD, 42x67, 11.82$, 40pin GPIO
@@ -329,7 +331,7 @@ Chez Orange pi
 En général, difficile d'appro.
 
 Chez Bananapi
-====================================================================================================
+----------------------------------------------------------------------------------------------------
 ::
 
     F2P
@@ -345,7 +347,7 @@ Chez Bananapi
     ZERO
 
 sous group LATTEPANDA
-====================================================================================================
+----------------------------------------------------------------------------------------------------
 - LTP 2G/32G : 99$, 4xIntel W10, 2GDDR3 emmc32g, WF/BT4 pas de videoin usb3
 
 ====================================================================================================
@@ -356,7 +358,7 @@ Analog power switching
     pair: Switching;  MOSFET
 
 Low power MOSFET ON/OFF
-====================================================================================================
+----------------------------------------------------------------------------------------------------
 On parle de high side switch
 
 Sur `electronics.stackexchange.com`_

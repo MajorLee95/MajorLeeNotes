@@ -118,6 +118,15 @@ Disque dur sympa
 
 .. _`SSD de petite taille sur Aliexpress` : https://fr.aliexpress.com/item/32848432283.html
 
+
+====================================================================================================
+Graver une images
+====================================================================================================
+Très simple avec la commande dd rien à installer::
+
+    dd if=nomDeLImage of=/dev/sda(b ou c) status=progress bs=4M
+
+
 .. index::
     single: Raspberry; SSD HDD boot
 

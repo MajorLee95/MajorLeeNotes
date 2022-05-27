@@ -186,6 +186,8 @@ A ajouter au config.py::
 
     extensions = [ 'sphinx.ext.graphviz', 'sphinxcontrib.plantuml' ]
 
+    plantuml = 'java -jar c:/plantuml/plantuml.jar'
+
     graphviz_output_format = "svg"
     plantuml_output_format = "svg_obj"
 

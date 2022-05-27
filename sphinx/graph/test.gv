@@ -7,7 +7,7 @@ digraph{
 
 
 
-        node [shape=box, height=0.5]
+    node [shape=box, height=0.5]
     subgraph cluster_0 {
         label="sb1";
         A -> B [label="lien série"];
@@ -26,8 +26,12 @@ digraph{
     }
 
     autres[label="etiquette longue", fillcolor="turquoise", style="rounded,filled"]
-    molette[fillcolor="coral", style="filled"]
-    autres -> molette -> vis
+    subgraph cluster_3 {
+        label = "BTSE"
+        a
+    }
+    autres -> a [label="115200"]
+    a -> vis
 
     node [shape=folder, height=0.5]
     fichier[color=yellow, shape=tab]
