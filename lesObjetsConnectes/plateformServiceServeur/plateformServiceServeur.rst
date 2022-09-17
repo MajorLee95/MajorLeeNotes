@@ -2,6 +2,15 @@
 Plateformes, services Web et serveurs
 ++++++++++++++++++++++++++++++++++++++
 
+
+:Auteur: J.Soranzo
+:Date: Novembre 2019
+:update: 14/06/2022
+:Societe: VoRoBoTics
+:Entity: VoLAB
+
+
+
 .. contents::
     :backlinks: top
 
@@ -17,8 +26,9 @@ M2M communication
 .. index::
 	single: MQTT
 
+
 MQTT
-====================================================================================================
+----------------------------------------------------------------------------------------------------
 
 MQTT1 (Message Queuing Telemetry Transport2) est un **protocole de messagerie** publish-subscribe 
 basé sur le protocole TCP/IP.
@@ -42,7 +52,7 @@ existe ( à noter qu'il est disponible sur RPI)
 	single: REST
 
 API REST
-====================================================================================================
+----------------------------------------------------------------------------------------------------
 
 API REST : mais qu'est-ce dont ?
 
@@ -79,7 +89,7 @@ valables.*
 	single: SOAP
 
 API SOAP
-====================================================================================================
+----------------------------------------------------------------------------------------------------
 Simple Object Access Protocol: repose surtout sur le **xml**.
 
 
@@ -94,7 +104,7 @@ protocole, comme SMTP.
 .. _`SOAP sur Guru99.com` : https://www.guru99.com/soap-simple-object-access-protocol.html
 
 Autres API
-====================================================================================================
+----------------------------------------------------------------------------------------------------
 CORBA Common Object Request Broker Architecture et AMF Action Message Format
 
 
@@ -108,9 +118,9 @@ Object Access Protocol (SOAP). Il a été créé à l'origine pour permettre l'�
 une animation Adobe Flash et d'autres systèmes comme une base de données ou un Webservice en
 utilisant des appels Remote Procedure Call. 
 
-======================================
+====================================================================================================
 9 meilleurs sites
-======================================
+====================================================================================================
 Selon le site How2Shout H2S `9 Best & Top Open source IoT Platforms To Develop the IOT Projects`_
 
 
@@ -133,14 +143,16 @@ Selon le site How2Shout H2S `9 Best & Top Open source IoT Platforms To Develop t
 
 .. _`Kaa IoT Platform` : https://www.kaaproject.org/ 
 
-======================================
+====================================================================================================
 Services WEB
-======================================
+====================================================================================================
 
 Easy IoT
-======================================
+----------------------------------------------------------------------------------------------------
+Toujours fonctionnel en 2022 mais plus aucune mise à jour. Donc à éviter sauf pour se faire la main.
 
-Fourni par iotlab7.com, basés en Slovénie. Le programme est co-financer par l'Union Européenne 
+
+Fourni par iotlab7.com, basés en **Slovénie**. Le programme est co-financer par l'Union Européenne 
 (Est-ce bien ou pas ?)
 
 C'est une plateform de service mais que l'on peut installer localement.
@@ -238,13 +250,13 @@ depuis plus de 2 ans n'a pas reçu de réponse.
 https://iot-playground.com/forum/beta-release/952-is-that-project-is-still-maintained
                 
 Thinger.io
-======================================
+----------------------------------------------------------------------------------------------------
 
 Site officiel : `https://thinger.io/`_
 
 .. _`https://thinger.io/` : https://thinger.io
 
-Petite visite le 12/01/2022 : toujours actif !
+Petite visite le 14/06/2022 : toujours très actif !
 
 ::
 
@@ -270,8 +282,16 @@ L'offre commence à 25€/mois (offre maker !) au 12/01/2022
 
 fonded by CDTI (minister de l'innovation espagnol) et neotec
 				
-Samsung IoT ARTIK Cloud for IoT
-======================================
+Samsung IoT ARTIK Cloud for IoT (ABORTED)
+----------------------------------------------------------------------------------------------------
+Site officiel Samsung IoT ARTIK
+
+`Sur le site lembarque.com`_
+
+.. _`Sur le site lembarque.com` : https://www.lembarque.com/article/samsung-met-definitivement-un-terme-a-ses-activites-liees-aux-modules-iot-artik
+
+18-03-2019 par Pierrick Arlot
+
 ::
 
 			Samsung ARTIK Cloud is an open data exchange platform designed to connect all devices.
@@ -284,7 +304,13 @@ Samsung IoT ARTIK Cloud for IoT
 			exemple de projet ARDUINO
 
 Adafruit IO
-======================================
+----------------------------------------------------------------------------------------------------
+`Site officiel Adafruitio`_
+
+.. _`Site officiel Adafruitio` : https://io.adafruit.com/
+
+Visité le 14/6/2022, toujours les 2 offres
+
 ::
 
 			simple 2 offres
@@ -302,7 +328,14 @@ Adafruit IO
 			ESP/ARDUINO support
             
 My Device.com / Cayenne
-======================================
+----------------------------------------------------------------------------------------------------
+`Site officiel Cayenne`_
+
+.. _`Site officiel Cayenne` : https://developers.mydevices.com/cayenne/features/
+
+Visité le 14/06/2022, ok
+
+
 ::
 
 			détecté le 25/09/17 tuto 
@@ -316,8 +349,7 @@ My Device.com / Cayenne
 					une lib à mettre dans l'interface ARDUINO
 			France Location
                 91 Boulevard National La Garenne Colombes Cedex, France
-				il y a une autre location aux US
-			Pas de pricing pour le moment. Lst info
+				il y a une autre location aux US Pas de pricing pour le moment. Lst info
 			J'ai créer un compte pour voir
 				cf keepass
 			Cayenne
@@ -360,7 +392,7 @@ My Device.com / Cayenne
 			ESP/ARDUINO support
             
 Blynk
-======================================
+----------------------------------------------------------------------------------------------------
 ::
 
 			Blynk is a Platform with iOS and Android apps to control Arduino, Raspberry Pi and the likes over the Internet.
@@ -375,7 +407,7 @@ Blynk
 			Plus de 400 cartes supportées dont l'ESP8266 et 32 of course
             
 Particle Cloud
-======================================
+----------------------------------------------------------------------------------------------------
 
 San Francisco. Adresse difficile à trouvée pas sur leur site.
 Fondée en 2011
@@ -412,7 +444,7 @@ Des outils de dev on line ou pas. Ce qui est sur c'est qu'ils ont des développe
 		
 Pas Arduinio, 2 plateformes de dev differente (photon et Argon différentes !)
 Chiant alors que c'est du C++ et qu'ils ont du void setup() et void loop() !!!!
-		
+
 ::
 
 	Particle Dev cannot be used to program 3rd-generation devices (Argon, Boron, and Xenon).
@@ -420,7 +452,7 @@ Chiant alors que c'est du C++ et qu'ils ont du void setup() et void loop() !!!!
 	You should instead use Particle Workbench powered by VS Code. 
 
 Micorsoft Azure
-======================================
+----------------------------------------------------------------------------------------------------
 ::
 
 			Bcp trop complexe de s'y retrouver dans leur offres
@@ -461,7 +493,7 @@ Micorsoft Azure
 					Rien que pour les IoT il y a une multitude d'appli avec des noms...
 
 AWS
-======================================
+----------------------------------------------------------------------------------------------------
 ::
 
 			Amazon Alexa
@@ -487,7 +519,7 @@ AWS
 					avec certaines contraintes
                     
 Google Cloud for IoT
-======================================
+----------------------------------------------------------------------------------------------------
 ::
 
 			très pro
@@ -499,7 +531,7 @@ Google Cloud for IoT
 			ESP/ARDUINO support
             
 OVH cloud iot
-======================================
+----------------------------------------------------------------------------------------------------
 Site officiel : `https://www.ovh.com/world/iot/`_
 
 .. _`https://www.ovh.com/world/iot/` : https://www.ovh.com/world/iot/
@@ -526,15 +558,15 @@ Site officiel : `https://www.ovh.com/world/iot/`_
 					dont 2 de sylvain un salarié
 
 SAP HANA Cloud Platform
-======================================
+----------------------------------------------------------------------------------------------------
 Vide
 
 pubNub
-======================================
+----------------------------------------------------------------------------------------------------
 The global data stream network for IoT, Mobile, and Web applications
             
 Ubidots
-======================================
+----------------------------------------------------------------------------------------------------
 ::
 
 			Ubidots is a codeless IoT Platform designed to help you prototype and scale your IoT projects to production
@@ -548,7 +580,7 @@ Ubidots
 					1 device / 10 variables is free
 
 IFTT
-======================================
+----------------------------------------------------------------------------------------------------
 ::
 
                     
@@ -561,7 +593,7 @@ IFTT
 				autres exemple d'utilisation
                 
 Weaved
-======================================
+----------------------------------------------------------------------------------------------------
 ::
 
 
@@ -569,14 +601,14 @@ Weaved
 			pas du tout open-source
             
 LOSANT
-======================================
+----------------------------------------------------------------------------------------------------
 ::
 
 			Losant is an easy-to-use and powerful Enterprise IoT Platform designed to help teams quickly and securely build complex real-time connected solutions.
 			Pricing : reequest a quote !
             
 IOStash
-======================================
+----------------------------------------------------------------------------------------------------
 ::
 
 			 IOStash is free for makers and hobbyists. 
@@ -584,7 +616,7 @@ IOStash
 			Multiple connectivity options including REST, MQTT, Sockets & CoAP
             
 remoteMe.org *
-======================================
+----------------------------------------------------------------------------------------------------
 
 Pas de communauté, pas de forum...
 
@@ -604,7 +636,7 @@ Pas de communauté, pas de forum...
 			un projet sur hackster.io
             
 wia **
-======================================
+----------------------------------------------------------------------------------------------------
 Site officiel : `https://www.wia.io/`_
 
 .. _`https://www.wia.io/` : https://www.wia.io/
@@ -634,7 +666,7 @@ Les offres::
 
 
 Bolt
-======================================
+----------------------------------------------------------------------------------------------------
 ::
 
 
@@ -648,7 +680,7 @@ Bolt
 			un exemple
             
 aRest.io
-======================================
+----------------------------------------------------------------------------------------------------
 ::
 
 			exemple projet
@@ -663,7 +695,7 @@ aRest.io
 				19$/mo
                 
 IC2Cloud
-======================================
+----------------------------------------------------------------------------------------------------
 ::
 
 
@@ -672,14 +704,14 @@ IC2Cloud
 			pas de forum
             
 Cumulocity
-======================================
+----------------------------------------------------------------------------------------------------
 
 `Cumulocity`_
 
 .. _`Cumulocity` :  https://www.softwareag.cloud/site/product/cumulocity-iot.html#/
 
 mozilla iot
-======================================
+----------------------------------------------------------------------------------------------------
 ::
 
 
@@ -689,7 +721,7 @@ mozilla iot
 			A creuser
 
 Circus of Things
-======================================
+----------------------------------------------------------------------------------------------------
 ::
 
 
@@ -699,7 +731,7 @@ Circus of Things
 				Le mot important est partage. Donc pas une plateforme comme les autres
 
 AskSensor
-======================================
+----------------------------------------------------------------------------------------------------
 
 Site `AskSensor`_
 
@@ -726,7 +758,7 @@ Les tarifs sont maintenant (Décembre 2019) sur `le site de AskSensor`_
    
 					
 cloudMQTT
-======================================
+----------------------------------------------------------------------------------------------------
 ::
 
 			A partir d'une offre gratuitejuqu'au dédié à 300$/mois et 5, 19 et 99$/mois
@@ -739,7 +771,7 @@ cloudMQTT
 				HEROKU
                 
 Thingsai.io
-======================================
+----------------------------------------------------------------------------------------------------
 ::
 
 			Exemple Hacksterio
@@ -751,7 +783,7 @@ Thingsai.io
 
 
 Cloud4Rpi
-=================
+----------------------------------------------------------------------------------------------------
 A creuser (le 21/11/19)
 Site officiel : `https://cloud4rpi.io/`_
 
@@ -762,12 +794,12 @@ Site officiel : `https://cloud4rpi.io/`_
 Qui ? Devsoft Baltic
 
 Arduino IOT
-==============
+----------------------------------------------------------------------------------------------------
 :A_creuser: (le 21/11/19)
 
 
 Wolkabout
-======================================
+----------------------------------------------------------------------------------------------------
 
 Site inernet `Wolkabout`_
 
@@ -789,17 +821,30 @@ Site inernet `Wolkabout`_
 Serveurs open source
 ====================================================================================================
 
+Domotiz
+----------------------------------------------------------------------------------------------------
+`Site officiel Domotiz`_
+
+.. _`Site officiel Domotiz` : https://domoticz.com/
+
+Dernière visite 14/06/2022
+
+2 projets en cours au lab en 2022 : Ali et Jean-Louis : évaluation Domotiz et Jeedom
+
 Jeedom
-======================================
+----------------------------------------------------------------------------------------------------
 ::
 
 			open source
 			est un serveur domotique français Open Source 
 			protocoles domotique sont supportés : Arduidom, ESPeasy, IPX800, 1-Wire (payant), EnOcean (payant), X10, RFXcom (payant), RFXLink (payant), GPIO, Z-Wave, MQTT, MySensors, Sigfox… 
 			Articles intéressants sur Projetsdiy.fr
-            
+
+Plugin support mqtt payant.
+
+
 MySensor
-======================================
+----------------------------------------------------------------------------------------------------
 ::
 
 			MySensors is an open source hardware and software community focusing on do-it-yourself home automation and Internet of Things
@@ -861,7 +906,7 @@ MySensor
 
                 
 Grafana
-======================================
+----------------------------------------------------------------------------------------------------
 `Granfana site officiel`_
 
 .. _`Granfana site officiel` : https://grafana.com/
@@ -901,7 +946,7 @@ Elasticsearch, OpenTSDB, Prometheus and InfluxDB.
     single: Objets connectés; Graphite
 
 Graphite
-====================================================================================================
+----------------------------------------------------------------------------------------------------
 `Graphite site officiel`_ 
 
 `.supinfo.com monitorer-son-serveur-avec-grafana-graphite-collectd`_
@@ -936,7 +981,7 @@ Appli et outils
 
 
 NodeRed
-======================================
+----------------------------------------------------------------------------------------------------
 ::
 
 		http://nodered.org/
@@ -964,14 +1009,14 @@ NodeRed
 			http://noderedguide.com/
 			nodeRed dashboard
 				https://projetsdiy.fr/node-red-dashboard-interface-partie1/
-                
+
 ----------------------------------------------------------------------------------------------------
 
 .. index::
     pair: Objets connectés; PlateformIO
                 
 Plateformio
-======================================
+----------------------------------------------------------------------------------------------------
 
 is an open source ecosystem for IoT development
 
@@ -996,7 +1041,7 @@ Dans la page d'accueil du github ESP8266 !
 Déjà à l'install faut choisir
             
 Thinkspeak
-======================================
+----------------------------------------------------------------------------------------------------
 ::
 
 
@@ -1008,14 +1053,14 @@ Thinkspeak
 	https://www.hackster.io/michal-kren/spacex-remote-monitoring-system-e57852?utm_campaign=new_projects&utm_content=0&utm_medium=email&utm_source=hackster&utm_term=project_name
     
 Telegram bot
-======================================
+----------------------------------------------------------------------------------------------------
 ::
 
 		a regarder avec intéret (le 12/2/2018)
 		bloqué au taf                    
 
 VCON.io
-====================================================================================================
+----------------------------------------------------------------------------------------------------
 `VCON.io site officiel`_
 
 Détecté le 25/3/2020, from vidéo YOUTUBE : `Arduino remote control and OTA via ESP8266 and Vcon.io`_

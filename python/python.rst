@@ -7,7 +7,7 @@ Python (mes notes)
 
 :Auteur: J.Soranzo
 :Date: Août 2020
-:mise à jour: 21/10/2021
+:mise à jour: 13/07/2021
 :Societe: VoRoBoTics
 :Entity: VoLAB
 
@@ -48,6 +48,29 @@ Index des package sur `Pypi Python Package Index`_
 
     Toute la doc Python est téléchargeable sur https://www.python.org/ rubrique documentation dans 
     plusieurs langues !
+
+*Note personnelle* : ne pas oublier le fichier de notes Freeplane (à convertir en notes Sphinx...)
+
+S'y trouvent :  
+
+- gestionnaires graphiques
+    - pygame
+    - pyQt
+    - ...
+- Astuces d'autres
+- perfectionnement opencs
+    - argparse
+    - logging
+    - pdb
+    - mathplotlib...
+- A revoir...
+- Les autres chapitre opencs
+    - regex
+    - time
+    - prog system
+    - multithreading
+    - unitest
+
 
 
 ====================================================================================================
@@ -1413,7 +1436,7 @@ si x est une liste : x * 5 donne une liste qui recopie 5 fois la liste x::
     pair: Python; byte
     pair: Python; bytearray
 
-byte et byarray
+byte et bytearray
 ----------------------------------------------------------------------------------------------------
 ::
 
@@ -1461,6 +1484,19 @@ Sur les modules, package...
         essayer reload(module)
         import importlib
         importlib.reload()
+
+Relative import
+****************************************************************************************************
+J'ai eu ce problème avec un module dans un sous répertoire de mon appli qui voulait importer un 
+fichier de constante au niveau juste au dessus.
+
+J'ai longuement chercher et il ne semble pas y avoir de solution très élégante (29/6/2022)
+
+Le plus complet que j'ai trouvé : `Relative imports in Python 3 sur Stackoverflow`_
+
+.. _`Relative imports in Python 3 sur Stackoverflow` : https://stackoverflow.com/questions/16981921/relative-imports-in-python-3
+
+Mais c'est tout de même pas trivial
 
 
 Sur Les fichiers
@@ -1703,7 +1739,9 @@ Voir `la doc short intro`_
 ====================================================================================================
 Gestionnaires graphiques
 ====================================================================================================
+tkinter
 
+pyQt5
 
 
 ====================================================================================================
@@ -1714,7 +1752,13 @@ Tkinter au total 4 templates.
 
 J'ai déjà un template avec Qt dans::
     
-    C:\MountWD\Donnees\ODJ\008_iao_wrk\Python\experimentations\appliMiniPyQt
+    \008_iao_wrk\Python\experimentations\appliMiniPyQt
+
+Template à base de tkinter en cours de construction (au 30/6/22)::
+
+    perso\0044-Iot_ESP_PPlug\projet\_3_software\pythonTools\pytemplt
+
+
 
 ====================================================================================================
 Weblinks

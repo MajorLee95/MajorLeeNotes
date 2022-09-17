@@ -173,6 +173,13 @@ qui nous a servit de point de départ. Il y a alors un pull sous jascent qui se 
 résolution de conflit). Le merge alors de notre branche sur la branche de base s'en trouve alors facilité.
 Les conflits ont alors déjà été résolus.
 
+.. WARNING:: Ne pas rebaser l'historique public
+   :class: without-title
+
+source : `Atlassian.com Git-rebase en français`_
+
+.. _`Atlassian.com Git-rebase en français` : https://www.atlassian.com/fr/git/tutorials/rewriting-history/git-rebase
+
 ====================================================================================================
 git bisec
 ====================================================================================================
@@ -378,7 +385,7 @@ une ch'tite commande sympa::
     voir aussi git adog en début de chapitre
     
 clé SSH
-======================================
+----------------------------------------------------------------------------------------------------
 
 - visiblement dépendante de l'ordinateur non ?
 - Au tout au moins réside dans un répertoire locale de la machine

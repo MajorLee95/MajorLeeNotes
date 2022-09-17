@@ -149,6 +149,50 @@ Ou dans Visual Studio Code : nouveau fichier, en bas à droite passer de ``plain
 puis taper html (normalement provoque l'affichage du snippet html:5)
 
 
+.. index::
+    single: binaires; ordre de grandeurs
+
+====================================================================================================
+Les nombres en binaires, ordres de grandeur
+====================================================================================================
+- 1k = 1024 = 2^10
+- 1 Méga = 1024 * 1024 = 2^20
+- 1 Giga = 1024 * 1024 * 1024 = 2^30 = 1 073 741 824 un peu plus de 1 milliard
+- 1 Téra = 2^40 = 1 099 511 627 776 un pleu plus de 1099 milliard
+
+Il existe des unité au dessus:
+
+- 1 Péta = 2^50
+- 1 Exa = 2^60
+
+- 2^8 : 256 
+- 2^16 : 16356 soit 1k
+- 2^32 = 4 294 967 296 soit un peu plus de 4 milliard  2^(32-20) = 2^12 Méga = 4096 Méga = 2^2 Giga !
+- 2^64 = 18 446 744 073 709 551 616 un peu plus de 18 milliard de milliard ou encore 18*10^18 2^24 Téra
+
+2^128:
+
+- 2^(2^6) = 340 282 366 920 938 463 463 374 607 431 768 211 456 comme on prononce ce nombre ?
+- 2^40 * 2^40 * 2^40 * 2^8 soit 256 Téra de Téra de Téra
+- 3.4*10^38 vs 10^9 : 38/9 environ 4 donc 3.4 milliard de milliard de milliard de milliard
+
+
+.. index::
+    single: Taille écrans
+    single: Format images
+
+====================================================================================================
+Taille des écrans
+====================================================================================================
+Source `wikipedia List of common resolutions`_
+
+.. _`wikipedia List of common resolutions` : https://en.wikipedia.org/wiki/List_of_common_resolutions
+
+.. image:: images/Vector_Video_Standards.svg 
+   :width: 600 px
+
+
+
 =========
 Weblinks
 =========
