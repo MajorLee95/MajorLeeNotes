@@ -31,7 +31,7 @@ Sphinx pour la documentation
 Voici mon utilisation de Sphinx !
 
 Pourquoi ?
-======================================
+----------------------------------------------------------------------------------------------------
 J'ai longtemps cherché un bon outil de documentation.
 
 Quels sont mes critéres ?
@@ -43,7 +43,7 @@ A compléter.
     pair: Doc-O-Matic; Documentation
     
 Doc-O-Matic
-======================================
+----------------------------------------------------------------------------------------------------
 Je le met ici mais je créerai un article plus tard quand j'aurai regardé de plus près
 
 Oui mais non parce que c'est payant ! Même la version de base.
@@ -53,7 +53,7 @@ Oui mais non parce que c'est payant ! Même la version de base.
 .. _`site Doc-O-Matic` : https://www.doc-o-matic.com/en/index.html
 
 Documenter du code source Python
-====================================================================================================
+----------------------------------------------------------------------------------------------------
 voir :ref:`Documenter du code Python et relaton avec Sphinx<documenterProjetPython>`
 
 
@@ -81,11 +81,13 @@ Autres docs
 Au VoLAB
 ================================
 
+Globalement, on utilise github-pages dont l'abréviation est gh-pages
+
 Méthode Pierre: `voir sur son journal de manip`_
 
-.. _`voir sur son journal de manip` : https://poltergeist42.github.io/JDM/DocUtils_RST_Sphinx.html
+.. _`voir sur son journal de manip` : https://poltergeist42.github.io/JDM/Documentation_Automatique.html
 
-Que je complèterais par:
+Que je compléterais par:
 
 #. Créer le répertoire du projet
 #. Créer à l'intérieur un répertoire 'projet' et un autre 'webdoc'
@@ -98,7 +100,7 @@ projet et faire un ``git init``
 .. NOTE::
     sphinx-quickstart crée automatiquement le répertoire source
 
-Commencer le boulot après.
+Commencer le boulot après...
 
 Retouches de conf.py:
 
@@ -126,16 +128,48 @@ Retouches de index.rst
     
     Supprimer : * :ref:`modindex` (on fait pas du Python ;-)
 
-.. index::
-    single: Sphinx; liens locaux
-    single: Sphinx; download
+Mise en places des gh-pages (précisions)
+----------------------------------------------------------------------------------------------------
+Au premier push du projet, git demande de faire --up-stream origine uri.
 
-================================
+Dans le dossier html avant le git clone de l'étape 8 on peut effacer le contenu du dossier (puisqu'on
+le génère avec un make html)
+
+Le commentaire associé à la commande::
+
+    git symbolic-ref HEAD refs/heads/gh-pages
+
+est très très important : *puis on bascule automatiquement sur cette nouvelle branche*
+
+C'est à l'étape 9.4 qu'on crée la branche distante::
+
+    git push origin gh-pages
+
+A partir de cette étape, on peut activer les pages sur gihub, dans setting/pages.
+
+.. image:: images/githubpagesInterface.jpg 
+   :width: 600 px
+
+
+
+
+.. index::
+    pair: Sphinx; css et gh-pages
+    pair: Rst; css et gh-pages
+    single: github.io; css
+
+
 css pas dans gh-pages
-================================
-Mettre de le fichier .nojekill dans le répertoire source et pas dans le répertoire html ;-)
+----------------------------------------------------------------------------------------------------
+Mettre de le fichier .nojekyll dans le répertoire source et pas dans le répertoire html ;-)
+
+Le 17/09/2022, en créant la doc de la CNC, je crois qu'il est nécessaire aussi dans le dossier html
 
 Ce fichier est utilisé par make html
+
+`Bypassing Jekyll on GitHub Pages`_
+
+.. _`Bypassing Jekyll on GitHub Pages` : https://github.blog/2009-12-29-bypassing-jekyll-on-github-pages/
 
 .. index::
     single: Sphinx; Liens
@@ -143,6 +177,17 @@ Ce fichier est utilisé par make html
 Autre soucis après un crash disque ne pas faire un ``git clone le_lien_github`` mais faire
 ``git clone le_liengithub .`` le point est très important.
 
+Dans sa doc Pierre, à l'étape 8, fait :
+
+.. code::
+
+    git clone [url_copiée_depuis_GitHub] html
+
+.. WARNING:: Préciser le répertoire de destination dans la commande git clone permet de changer le nom de l'arborescence distante.
+   :class: without-title
+
+Préciser le répertoire de destination dans la commande git clone permet de changer le nom de 
+l'arborescence distante.
 
 .. index::
     pair: Sphinx; csv intégration
@@ -206,7 +251,7 @@ Voir aussi : :ref:`plantUML dans C++<plantUMLRef>`
 .. _graphviz_intoSphinx:
 
 Graphviz
-====================================================================================================
+----------------------------------------------------------------------------------------------------
 
 
 Graphiz interactiv preview dans visual Studio Code : pas de touche de rac mais ctrl+shift+p et cherche
@@ -303,8 +348,12 @@ Utiliser dans notes Blender.rst::
 Les liens
 ================================
 
+.. index::
+    single: Sphinx; liens locaux
+    single: Sphinx; download
+
 Liens externes locaux (fichier word, pdf...)
-====================================================================================================
+----------------------------------------------------------------------------------------------------
 
 Exemple vers un fichier pdf stocké dans la même arborescence. Externe en ce sens que ce ne sont
 pas des fichier rst
@@ -325,7 +374,7 @@ Autre :download:`utilisation avec un word <exemple_roleDL.docx>`
 .. _`sur only` : https://www.sphinx-doc.org/en/master/usage/restructuredtext/directives.html#directive-only
 
 Liens internes locaux (lien vers fichier rst)
-====================================================
+----------------------------------------------------------------------------------------------------
 Lien simple dans le même fichier vers une section nommé du fichier
 `css pas dans gh-pages`_
 
@@ -352,7 +401,7 @@ Voir  `aide officielle ref`_
 .. _`aide officielle ref` : https://www.sphinx-doc.org/en/master/usage/restructuredtext/roles.html#ref-role
 
 Lien externe distant (url internet)
-====================================================================================================
+----------------------------------------------------------------------------------------------------
 exemple url externe au système documentaire:
 
 .. code::
@@ -379,7 +428,7 @@ La `page des themes Sphinx`_
 .. _`page des themes Sphinx` : https://sphinx-themes.org/
 
 testés 
-======================================
+----------------------------------------------------------------------------------------------------
 **PSphinxTheme**
 
 .. WARNING::
@@ -470,13 +519,13 @@ A partir de la ligne 530 du css, il y a la largeur du doc
 	}
 
 A tester 
-======================================
+----------------------------------------------------------------------------------------------------
 - catalystcloud
 - rtd Read The Doc https://sphinx-rtd-theme.readthedocs.io/en/stable/installing.html
 - Bizstyle ou  similaire allanc-sphinx : grégoire
 
 Rejetés
-====================================================================================================
+----------------------------------------------------------------------------------------------------
 - agoraplex.themes.sphinx : aucune des fonctionnalités recherchées
 
 ====================================================================================================
@@ -497,7 +546,7 @@ Petits trucs
     single: Sphinx; Doxylink
 
 Liens Doxygen
-====================================================================================================
+----------------------------------------------------------------------------------------------------
 doxylink : contributed extension
 
 `Doxylink documentation`_
@@ -511,7 +560,7 @@ doxylink : contributed extension
     single: Sphinx; Séparateur html
 
 Séparateur html
-====================================================================================================
+----------------------------------------------------------------------------------------------------
 Clearer::
 
     .. |clearer|  raw:: html
@@ -520,7 +569,7 @@ Clearer::
     _usage : |clearer|
  
 Autres astuces difficilement classable 
-==================================================================================================== 
+----------------------------------------------------------------------------------------------------
 7/3/20 J'ai trouvé ce site ou plutot ce MOOT de l'université de Grenoble : 
 
 `ReFlexPro, Univ. Grenoble Alpes`_

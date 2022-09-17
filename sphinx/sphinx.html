@@ -4,16 +4,15 @@
 <html lang="fr">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
     <title>Sphinx* &#8212; Documentation MajorLee&#39;s notes </title>
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/nature.css" />
+    <link rel="stylesheet" href="../_static/nature.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
     <script src="../_static/translations.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Recherche" href="../search.html" />
@@ -33,8 +32,7 @@
           <a href="../documenter/documenter.html" title="Documenter"
              accesskey="P">précédent</a> |</li>
         <li class="nav-item nav-item-0"><a href="../index.html">Documentation MajorLee&#39;s notes </a> &#187;</li>
-          <li class="nav-item nav-item-1"><a href="../documenter/documenter.html" accesskey="U">Documenter</a> &#187;</li>
-        <li class="nav-item nav-item-this"><a href="">Sphinx*</a></li> 
+          <li class="nav-item nav-item-1"><a href="../documenter/documenter.html" accesskey="U">Documenter</a> &#187;</li> 
       </ul>
     </div>  
 
@@ -43,8 +41,8 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <section id="sphinx">
-<h1><a class="toc-backref" href="#id27">Sphinx*</a><a class="headerlink" href="#sphinx" title="Lien permanent vers ce titre">¶</a></h1>
+  <div class="section" id="sphinx">
+<h1><a class="toc-backref" href="#id29">Sphinx*</a><a class="headerlink" href="#sphinx" title="Lien permanent vers ce titre">¶</a></h1>
 <dl class="field-list simple">
 <dt class="field-odd">Auteur</dt>
 <dd class="field-odd"><p>J.Soranzo</p>
@@ -62,89 +60,94 @@
 <div class="contents topic" id="sommaire">
 <p class="topic-title">Sommaire</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="#sphinx" id="id27">Sphinx*</a></p>
+<li><p><a class="reference internal" href="#sphinx" id="id29">Sphinx*</a></p>
 <ul>
-<li><p><a class="reference internal" href="#sphinx-pour-la-documentation" id="id28">Sphinx pour la documentation</a></p>
+<li><p><a class="reference internal" href="#sphinx-pour-la-documentation" id="id30">Sphinx pour la documentation</a></p>
 <ul>
-<li><p><a class="reference internal" href="#pourquoi" id="id29">Pourquoi ?</a></p></li>
-<li><p><a class="reference internal" href="#doc-o-matic" id="id30">Doc-O-Matic</a></p></li>
-<li><p><a class="reference internal" href="#documenter-du-code-source-python" id="id31">Documenter du code source Python</a></p></li>
+<li><p><a class="reference internal" href="#pourquoi" id="id31">Pourquoi ?</a></p></li>
+<li><p><a class="reference internal" href="#doc-o-matic" id="id32">Doc-O-Matic</a></p></li>
+<li><p><a class="reference internal" href="#documenter-du-code-source-python" id="id33">Documenter du code source Python</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#doc-officielle" id="id32">Doc officielle</a></p></li>
-<li><p><a class="reference internal" href="#autres-docs" id="id33">Autres docs</a></p></li>
-<li><p><a class="reference internal" href="#au-volab" id="id34">Au VoLAB</a></p></li>
-<li><p><a class="reference internal" href="#css-pas-dans-gh-pages" id="id35">css pas dans gh-pages</a></p></li>
-<li><p><a class="reference internal" href="#integrer-un-fichier-csv" id="id36">Intégrer un fichier csv</a></p></li>
-<li><p><a class="reference internal" href="#integrer-un-svg" id="id37">Intégrer un svg</a></p></li>
-<li><p><a class="reference internal" href="#integrer-du-graphviz-ou-plantuml" id="id38">Intégrer du Graphviz ou plantUML</a></p>
+<li><p><a class="reference internal" href="#doc-officielle" id="id34">Doc officielle</a></p></li>
+<li><p><a class="reference internal" href="#autres-docs" id="id35">Autres docs</a></p></li>
+<li><p><a class="reference internal" href="#au-volab" id="id36">Au VoLAB</a></p>
 <ul>
-<li><p><a class="reference internal" href="#graphviz" id="id39">Graphviz</a></p></li>
+<li><p><a class="reference internal" href="#mise-en-places-des-gh-pages-precisions" id="id37">Mise en places des gh-pages (précisions)</a></p></li>
+<li><p><a class="reference internal" href="#css-pas-dans-gh-pages" id="id38">css pas dans gh-pages</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#astuce-images-dans-une-table-list-table" id="id40">Astuce images dans une table (list-table)</a></p></li>
-<li><p><a class="reference internal" href="#les-liens" id="id41">Les liens</a></p>
+<li><p><a class="reference internal" href="#integrer-un-fichier-csv" id="id39">Intégrer un fichier csv</a></p></li>
+<li><p><a class="reference internal" href="#integrer-un-svg" id="id40">Intégrer un svg</a></p></li>
+<li><p><a class="reference internal" href="#integrer-du-graphviz-ou-plantuml" id="id41">Intégrer du Graphviz ou plantUML</a></p>
 <ul>
-<li><p><a class="reference internal" href="#liens-externes-locaux-fichier-word-pdf" id="id42">Liens externes locaux (fichier word, pdf…)</a></p></li>
-<li><p><a class="reference internal" href="#liens-internes-locaux-lien-vers-fichier-rst" id="id43">Liens internes locaux (lien vers fichier rst)</a></p></li>
-<li><p><a class="reference internal" href="#lien-externe-distant-url-internet" id="id44">Lien externe distant (url internet)</a></p></li>
+<li><p><a class="reference internal" href="#graphviz" id="id42">Graphviz</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#themes" id="id45">Themes</a></p>
+<li><p><a class="reference internal" href="#astuce-images-dans-une-table-list-table" id="id43">Astuce images dans une table (list-table)</a></p></li>
+<li><p><a class="reference internal" href="#les-liens" id="id44">Les liens</a></p>
 <ul>
-<li><p><a class="reference internal" href="#testes" id="id46">testés</a></p></li>
-<li><p><a class="reference internal" href="#a-tester" id="id47">A tester</a></p></li>
-<li><p><a class="reference internal" href="#rejetes" id="id48">Rejetés</a></p></li>
+<li><p><a class="reference internal" href="#liens-externes-locaux-fichier-word-pdf" id="id45">Liens externes locaux (fichier word, pdf…)</a></p></li>
+<li><p><a class="reference internal" href="#liens-internes-locaux-lien-vers-fichier-rst" id="id46">Liens internes locaux (lien vers fichier rst)</a></p></li>
+<li><p><a class="reference internal" href="#lien-externe-distant-url-internet" id="id47">Lien externe distant (url internet)</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#sphinx-to-pdf" id="id49">Sphinx to pdf</a></p></li>
-<li><p><a class="reference internal" href="#petits-trucs" id="id50">Petits trucs</a></p>
+<li><p><a class="reference internal" href="#themes" id="id48">Themes</a></p>
 <ul>
-<li><p><a class="reference internal" href="#liens-doxygen" id="id51">Liens Doxygen</a></p></li>
-<li><p><a class="reference internal" href="#separateur-html" id="id52">Séparateur html</a></p></li>
-<li><p><a class="reference internal" href="#autres-astuces-difficilement-classable" id="id53">Autres astuces difficilement classable</a></p></li>
+<li><p><a class="reference internal" href="#testes" id="id49">testés</a></p></li>
+<li><p><a class="reference internal" href="#a-tester" id="id50">A tester</a></p></li>
+<li><p><a class="reference internal" href="#rejetes" id="id51">Rejetés</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#weblinks" id="id54">Weblinks</a></p></li>
+<li><p><a class="reference internal" href="#sphinx-to-pdf" id="id52">Sphinx to pdf</a></p></li>
+<li><p><a class="reference internal" href="#petits-trucs" id="id53">Petits trucs</a></p>
+<ul>
+<li><p><a class="reference internal" href="#liens-doxygen" id="id54">Liens Doxygen</a></p></li>
+<li><p><a class="reference internal" href="#separateur-html" id="id55">Séparateur html</a></p></li>
+<li><p><a class="reference internal" href="#autres-astuces-difficilement-classable" id="id56">Autres astuces difficilement classable</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#weblinks" id="id57">Weblinks</a></p></li>
 </ul>
 </li>
 </ul>
 </div>
-<section id="sphinx-pour-la-documentation">
-<span id="index-0"></span><h2><a class="toc-backref" href="#id28">Sphinx pour la documentation</a><a class="headerlink" href="#sphinx-pour-la-documentation" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="section" id="sphinx-pour-la-documentation">
+<span id="index-0"></span><h2><a class="toc-backref" href="#id30">Sphinx pour la documentation</a><a class="headerlink" href="#sphinx-pour-la-documentation" title="Lien permanent vers ce titre">¶</a></h2>
 <a class="reference internal image-reference" href="../_images/sphinxlogo.jpg"><img alt="alternate text" class="align-left" src="../_images/sphinxlogo.jpg" style="width: 408.0px; height: 98.0px;" /></a>
 <p><div class="clearer"></div></p>
 <p>Voici mon utilisation de Sphinx !</p>
-<section id="pourquoi">
-<h3><a class="toc-backref" href="#id29">Pourquoi ?</a><a class="headerlink" href="#pourquoi" title="Lien permanent vers ce titre">¶</a></h3>
+<div class="section" id="pourquoi">
+<h3><a class="toc-backref" href="#id31">Pourquoi ?</a><a class="headerlink" href="#pourquoi" title="Lien permanent vers ce titre">¶</a></h3>
 <p>J’ai longtemps cherché un bon outil de documentation.</p>
 <p>Quels sont mes critéres ?</p>
 <p>A compléter.</p>
-</section>
-<section id="doc-o-matic">
-<span id="index-1"></span><h3><a class="toc-backref" href="#id30">Doc-O-Matic</a><a class="headerlink" href="#doc-o-matic" title="Lien permanent vers ce titre">¶</a></h3>
+</div>
+<div class="section" id="doc-o-matic">
+<span id="index-1"></span><h3><a class="toc-backref" href="#id32">Doc-O-Matic</a><a class="headerlink" href="#doc-o-matic" title="Lien permanent vers ce titre">¶</a></h3>
 <p>Je le met ici mais je créerai un article plus tard quand j’aurai regardé de plus près</p>
 <p>Oui mais non parce que c’est payant ! Même la version de base.</p>
 <p><a class="reference external" href="https://www.doc-o-matic.com/en/index.html">site Doc-O-Matic</a> <a class="footnote-reference brackets" href="#id1" id="id2">1</a></p>
-</section>
-<section id="documenter-du-code-source-python">
-<h3><a class="toc-backref" href="#id31">Documenter du code source Python</a><a class="headerlink" href="#documenter-du-code-source-python" title="Lien permanent vers ce titre">¶</a></h3>
+</div>
+<div class="section" id="documenter-du-code-source-python">
+<h3><a class="toc-backref" href="#id33">Documenter du code source Python</a><a class="headerlink" href="#documenter-du-code-source-python" title="Lien permanent vers ce titre">¶</a></h3>
 <p>voir <a class="reference internal" href="../python/python.html#documenterprojetpython"><span class="std std-ref">Documenter du code Python et relaton avec Sphinx</span></a></p>
-</section>
-</section>
-<section id="doc-officielle">
-<h2><a class="toc-backref" href="#id32">Doc officielle</a><a class="headerlink" href="#doc-officielle" title="Lien permanent vers ce titre">¶</a></h2>
+</div>
+</div>
+<div class="section" id="doc-officielle">
+<h2><a class="toc-backref" href="#id34">Doc officielle</a><a class="headerlink" href="#doc-officielle" title="Lien permanent vers ce titre">¶</a></h2>
 <p><a class="reference external" href="https://www.sphinx-doc.org/en/master/index.html">Site officiel Sphinx</a> <a class="footnote-reference brackets" href="#id3" id="id4">2</a></p>
 <p><a class="reference external" href="https://rest-sphinx-memo.readthedocs.io/en/latest/ReST.html">Memo rst  Sphinx readthedoc</a> <a class="footnote-reference brackets" href="#id5" id="id6">3</a></p>
-</section>
-<section id="autres-docs">
-<h2><a class="toc-backref" href="#id33">Autres docs</a><a class="headerlink" href="#autres-docs" title="Lien permanent vers ce titre">¶</a></h2>
+</div>
+<div class="section" id="autres-docs">
+<h2><a class="toc-backref" href="#id35">Autres docs</a><a class="headerlink" href="#autres-docs" title="Lien permanent vers ce titre">¶</a></h2>
 <p><a class="reference external" href="http://openalea.gforge.inria.fr/doc/openalea/doc/_build/html/source/sphinx/rest_syntax.html#figure-directive">Cheat sheet sur openalea.gforge.inria.fr</a> <a class="footnote-reference brackets" href="#id7" id="id8">4</a></p>
-</section>
-<section id="au-volab">
-<h2><a class="toc-backref" href="#id34">Au VoLAB</a><a class="headerlink" href="#au-volab" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Méthode Pierre: <a class="reference external" href="https://poltergeist42.github.io/JDM/DocUtils_RST_Sphinx.html">voir sur son journal de manip</a> <a class="footnote-reference brackets" href="#id9" id="id10">5</a></p>
-<p>Que je complèterais par:</p>
+</div>
+<div class="section" id="au-volab">
+<h2><a class="toc-backref" href="#id36">Au VoLAB</a><a class="headerlink" href="#au-volab" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Globalement, on utilise github-pages dont l’abréviation est gh-pages</p>
+<p>Méthode Pierre: <a class="reference external" href="https://poltergeist42.github.io/JDM/Documentation_Automatique.html">voir sur son journal de manip</a> <a class="footnote-reference brackets" href="#id9" id="id10">5</a></p>
+<p>Que je compléterais par:</p>
 <ol class="arabic simple">
 <li><p>Créer le répertoire du projet</p></li>
 <li><p>Créer à l’intérieur un répertoire “projet” et un autre “webdoc”</p></li>
@@ -157,7 +160,7 @@ projet et faire un <code class="docutils literal notranslate"><span class="pre">
 <p class="admonition-title">Note</p>
 <p>sphinx-quickstart crée automatiquement le répertoire source</p>
 </div>
-<p>Commencer le boulot après.</p>
+<p>Commencer le boulot après…</p>
 <p>Retouches de conf.py:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">master_doc</span> <span class="o">=</span> <span class="s1">&#39;index&#39;</span>
 
@@ -180,25 +183,54 @@ projet et faire un <code class="docutils literal notranslate"><span class="pre">
 Supprimer : * :ref:`modindex` (on fait pas du Python ;-)
 </pre></div>
 </div>
-</section>
-<section id="css-pas-dans-gh-pages">
-<span id="index-2"></span><h2><a class="toc-backref" href="#id35">css pas dans gh-pages</a><a class="headerlink" href="#css-pas-dans-gh-pages" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Mettre de le fichier .nojekill dans le répertoire source et pas dans le répertoire html ;-)</p>
+<div class="section" id="mise-en-places-des-gh-pages-precisions">
+<h3><a class="toc-backref" href="#id37">Mise en places des gh-pages (précisions)</a><a class="headerlink" href="#mise-en-places-des-gh-pages-precisions" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Au premier push du projet, git demande de faire –up-stream origine uri.</p>
+<p>Dans le dossier html avant le git clone de l’étape 8 on peut effacer le contenu du dossier (puisqu’on
+le génère avec un make html)</p>
+<p>Le commentaire associé à la commande:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">symbolic</span><span class="o">-</span><span class="n">ref</span> <span class="n">HEAD</span> <span class="n">refs</span><span class="o">/</span><span class="n">heads</span><span class="o">/</span><span class="n">gh</span><span class="o">-</span><span class="n">pages</span>
+</pre></div>
+</div>
+<p>est très très important : <em>puis on bascule automatiquement sur cette nouvelle branche</em></p>
+<p>C’est à l’étape 9.4 qu’on crée la branche distante:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">push</span> <span class="n">origin</span> <span class="n">gh</span><span class="o">-</span><span class="n">pages</span>
+</pre></div>
+</div>
+<p>A partir de cette étape, on peut activer les pages sur gihub, dans setting/pages.</p>
+<a class="reference internal image-reference" href="../_images/githubpagesInterface.jpg"><img alt="../_images/githubpagesInterface.jpg" src="../_images/githubpagesInterface.jpg" style="width: 600px;" /></a>
+</div>
+<div class="section" id="css-pas-dans-gh-pages">
+<span id="index-2"></span><h3><a class="toc-backref" href="#id38">css pas dans gh-pages</a><a class="headerlink" href="#css-pas-dans-gh-pages" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Mettre de le fichier .nojekyll dans le répertoire source et pas dans le répertoire html ;-)</p>
+<p>Le 17/09/2022, en créant la doc de la CNC, je crois qu’il est nécessaire aussi dans le dossier html</p>
 <p>Ce fichier est utilisé par make html</p>
+<p><a class="reference external" href="https://github.blog/2009-12-29-bypassing-jekyll-on-github-pages/">Bypassing Jekyll on GitHub Pages</a> <a class="footnote-reference brackets" href="#id11" id="id12">6</a></p>
 <p id="index-3">Autre soucis après un crash disque ne pas faire un <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">clone</span> <span class="pre">le_lien_github</span></code> mais faire
 <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">clone</span> <span class="pre">le_liengithub</span> <span class="pre">.</span></code> le point est très important.</p>
-</section>
-<section id="integrer-un-fichier-csv">
-<span id="index-4"></span><h2><a class="toc-backref" href="#id36">Intégrer un fichier csv</a><a class="headerlink" href="#integrer-un-fichier-csv" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Dans sa doc Pierre, à l’étape 8, fait :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">clone</span> <span class="p">[</span><span class="n">url_copiée_depuis_GitHub</span><span class="p">]</span> <span class="n">html</span>
+</pre></div>
+</div>
+<div class="without-title admonition warning">
+<p class="admonition-title">Avertissement</p>
+<p>Préciser le répertoire de destination dans la commande git clone permet de changer le nom de l’arborescence distante.</p>
+</div>
+<p>Préciser le répertoire de destination dans la commande git clone permet de changer le nom de
+l’arborescence distante.</p>
+</div>
+</div>
+<div class="section" id="integrer-un-fichier-csv">
+<span id="index-4"></span><h2><a class="toc-backref" href="#id39">Intégrer un fichier csv</a><a class="headerlink" href="#integrer-un-fichier-csv" title="Lien permanent vers ce titre">¶</a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">csv</span><span class="o">-</span><span class="n">table</span><span class="p">::</span> <span class="n">Legende</span>
 <span class="p">:</span><span class="n">file</span><span class="p">:</span> <span class="n">fichier</span><span class="o">.</span><span class="n">csv</span>
 <span class="p">:</span><span class="n">header</span><span class="o">-</span><span class="n">rows</span><span class="p">:</span> <span class="mi">1</span>
 </pre></div>
 </div>
-<p>make file automatique <a class="reference external" href="https://webdevdesigner.com/q/convert-xls-to-csv-on-command-line-21100/">voir site webdevdesigner.com</a> <a class="footnote-reference brackets" href="#id11" id="id12">6</a> excel to csv n ligne de commande</p>
-</section>
-<section id="integrer-un-svg">
-<h2><a class="toc-backref" href="#id37">Intégrer un svg</a><a class="headerlink" href="#integrer-un-svg" title="Lien permanent vers ce titre">¶</a></h2>
+<p>make file automatique <a class="reference external" href="https://webdevdesigner.com/q/convert-xls-to-csv-on-command-line-21100/">voir site webdevdesigner.com</a> <a class="footnote-reference brackets" href="#id13" id="id14">7</a> excel to csv n ligne de commande</p>
+</div>
+<div class="section" id="integrer-un-svg">
+<h2><a class="toc-backref" href="#id40">Intégrer un svg</a><a class="headerlink" href="#integrer-un-svg" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Sphinx supporte les svg mais lors de la génération du pdf cela coince. Donc plutôt que d’essayer de
 faire des conditions avec des directives autant tout mettre tout de suite en png.</p>
 <p>Et pour qu’ils soient à jour l’idée est d’ajouter au fichier make.bat (sous Linux c’est le ficher
@@ -212,9 +244,9 @@ Makefile) la commande Inkscape qui les génère:</p>
 </pre></div>
 </div>
 <p>L’avantage du Makefile est qu’on peut se passer de la question <code class="docutils literal notranslate"><span class="pre">Generer</span> <span class="pre">les</span> <span class="pre">fichiers</span> <span class="pre">externe</span> <span class="pre">?</span></code></p>
-</section>
-<section id="integrer-du-graphviz-ou-plantuml">
-<h2><a class="toc-backref" href="#id38">Intégrer du Graphviz ou plantUML</a><a class="headerlink" href="#integrer-du-graphviz-ou-plantuml" title="Lien permanent vers ce titre">¶</a></h2>
+</div>
+<div class="section" id="integrer-du-graphviz-ou-plantuml">
+<h2><a class="toc-backref" href="#id41">Intégrer du Graphviz ou plantUML</a><a class="headerlink" href="#integrer-du-graphviz-ou-plantuml" title="Lien permanent vers ce titre">¶</a></h2>
 <p>A ajouter au config.py:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">extensions</span> <span class="o">=</span> <span class="p">[</span> <span class="s1">&#39;sphinx.ext.graphviz&#39;</span><span class="p">,</span> <span class="s1">&#39;sphinxcontrib.plantuml&#39;</span> <span class="p">]</span>
 
@@ -233,15 +265,15 @@ Makefile) la commande Inkscape qui les génère:</p>
 </pre></div>
 </div>
 <p>Utiliser sur le projet Electrical Power Stip IoT.</p>
-<p>Voir aussi : <a class="reference internal" href="../C%2B%2B/cpp.html#plantumlref"><span class="std std-ref">plantUML dans C++</span></a></p>
-<section id="graphviz">
-<span id="graphviz-intosphinx"></span><h3><a class="toc-backref" href="#id39">Graphviz</a><a class="headerlink" href="#graphviz" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Voir aussi : <a class="reference internal" href="../C++/cpp.html#plantumlref"><span class="std std-ref">plantUML dans C++</span></a></p>
+<div class="section" id="graphviz">
+<span id="graphviz-intosphinx"></span><h3><a class="toc-backref" href="#id42">Graphviz</a><a class="headerlink" href="#graphviz" title="Lien permanent vers ce titre">¶</a></h3>
 <p>Graphiz interactiv preview dans visual Studio Code : pas de touche de rac mais ctrl+shift+p et cherche
 Graphviz interactive preview.
 L’extension est :</p>
 <a class="reference internal image-reference" href="../_images/graphizPreviewer.jpg"><img alt="../_images/graphizPreviewer.jpg" src="../_images/graphizPreviewer.jpg" style="width: 300px;" /></a>
-<p><a class="reference external" href="https://graphviz.org/">site officiel de GraphViz</a> <a class="footnote-reference brackets" href="#id15" id="id16">8</a> La doc est en ligne.</p>
-<p>Petite astuce dans la doc <a class="reference external" href="https://graphviz.org/doc/info/attrs.html">allez au chapitre attributs</a> <a class="footnote-reference brackets" href="#id13" id="id14">7</a>, la Gallery d’exemples peut être aussi très
+<p><a class="reference external" href="https://graphviz.org/">site officiel de GraphViz</a> <a class="footnote-reference brackets" href="#id17" id="id18">9</a> La doc est en ligne.</p>
+<p>Petite astuce dans la doc <a class="reference external" href="https://graphviz.org/doc/info/attrs.html">allez au chapitre attributs</a> <a class="footnote-reference brackets" href="#id15" id="id16">8</a>, la Gallery d’exemples peut être aussi très
 utile.</p>
 <a class="reference internal image-reference" href="../_images/exempleGraphviz.JPG"><img alt="../_images/exempleGraphviz.JPG" src="../_images/exempleGraphviz.JPG" style="width: 600px;" /></a>
 <p>Le code:</p>
@@ -331,10 +363,10 @@ utile.</p>
     fichier -&gt; texte
 
 }</p></object></div>
-</section>
-</section>
-<section id="astuce-images-dans-une-table-list-table">
-<h2><a class="toc-backref" href="#id40">Astuce images dans une table (list-table)</a><a class="headerlink" href="#astuce-images-dans-une-table-list-table" title="Lien permanent vers ce titre">¶</a></h2>
+</div>
+</div>
+<div class="section" id="astuce-images-dans-une-table-list-table">
+<h2><a class="toc-backref" href="#id43">Astuce images dans une table (list-table)</a><a class="headerlink" href="#astuce-images-dans-une-table-list-table" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Utiliser dans notes Blender.rst:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="o">|</span><span class="n">im1</span><span class="o">|</span> <span class="n">image</span><span class="p">::</span> <span class="n">images</span><span class="o">/</span><span class="n">eveeReflexionAvec</span><span class="o">.</span><span class="n">jpg</span>
    <span class="p">:</span><span class="n">width</span><span class="p">:</span> <span class="mi">300</span> <span class="n">px</span>
@@ -353,20 +385,20 @@ utile.</p>
      <span class="o">-</span> <span class="o">|</span><span class="n">im2</span><span class="o">|</span>
 </pre></div>
 </div>
-</section>
-<section id="les-liens">
-<h2><a class="toc-backref" href="#id41">Les liens</a><a class="headerlink" href="#les-liens" title="Lien permanent vers ce titre">¶</a></h2>
-<section id="liens-externes-locaux-fichier-word-pdf">
-<h3><a class="toc-backref" href="#id42">Liens externes locaux (fichier word, pdf…)</a><a class="headerlink" href="#liens-externes-locaux-fichier-word-pdf" title="Lien permanent vers ce titre">¶</a></h3>
+</div>
+<div class="section" id="les-liens">
+<h2><a class="toc-backref" href="#id44">Les liens</a><a class="headerlink" href="#les-liens" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="section" id="liens-externes-locaux-fichier-word-pdf">
+<span id="index-5"></span><h3><a class="toc-backref" href="#id45">Liens externes locaux (fichier word, pdf…)</a><a class="headerlink" href="#liens-externes-locaux-fichier-word-pdf" title="Lien permanent vers ce titre">¶</a></h3>
 <p>Exemple vers un fichier pdf stocké dans la même arborescence. Externe en ce sens que ce ne sont
 pas des fichier rst</p>
 <p>On peut utiliser le role :download:</p>
-<p><a class="reference external" href="http://www.sphinx-doc.org/en/master/usage/restructuredtext/roles.html#role-download">Page Sphinx sur download</a> <a class="footnote-reference brackets" href="#id17" id="id18">9</a></p>
-<p>Exemple <a class="reference download internal" download="" href="../_downloads/aa0f5a7e99ae2263feea060924045fd7/sphinx.pdf"><code class="xref download docutils literal notranslate"><span class="pre">doc</span> <span class="pre">pdf</span> <span class="pre">sphinx</span></code></a></p>
-<p>Autre <a class="reference download internal" download="" href="../_downloads/99f335bc35e6ec3fb60128d09bf82691/exemple_roleDL.docx"><code class="xref download docutils literal notranslate"><span class="pre">utilisation</span> <span class="pre">avec</span> <span class="pre">un</span> <span class="pre">word</span></code></a></p>
-</section>
-<section id="liens-internes-locaux-lien-vers-fichier-rst">
-<h3><a class="toc-backref" href="#id43">Liens internes locaux (lien vers fichier rst)</a><a class="headerlink" href="#liens-internes-locaux-lien-vers-fichier-rst" title="Lien permanent vers ce titre">¶</a></h3>
+<p><a class="reference external" href="http://www.sphinx-doc.org/en/master/usage/restructuredtext/roles.html#role-download">Page Sphinx sur download</a> <a class="footnote-reference brackets" href="#id19" id="id20">10</a></p>
+<p>Exemple <a class="reference download internal" download="" href="../_downloads/9bd2884b00bbd55d7ef0baf48410b374/sphinx.pdf"><code class="xref download docutils literal notranslate"><span class="pre">doc</span> <span class="pre">pdf</span> <span class="pre">sphinx</span></code></a></p>
+<p>Autre <a class="reference download internal" download="" href="../_downloads/2792ab031f081e96fa10d23dc7c34ccf/exemple_roleDL.docx"><code class="xref download docutils literal notranslate"><span class="pre">utilisation</span> <span class="pre">avec</span> <span class="pre">un</span> <span class="pre">word</span></code></a></p>
+</div>
+<div class="section" id="liens-internes-locaux-lien-vers-fichier-rst">
+<h3><a class="toc-backref" href="#id46">Liens internes locaux (lien vers fichier rst)</a><a class="headerlink" href="#liens-internes-locaux-lien-vers-fichier-rst" title="Lien permanent vers ce titre">¶</a></h3>
 <p>Lien simple dans le même fichier vers une section nommé du fichier
 <a class="reference internal" href="#css-pas-dans-gh-pages">css pas dans gh-pages</a></p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>`nom_de_la_section`_
@@ -383,20 +415,20 @@ Attention le _ dans la définition est obligatoire mais pas dans l&#39;utilisati
 Astuce : si la définition précède un titre pas besoin de nom_a_afficher
 </pre></div>
 </div>
-<p>Voir  <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/restructuredtext/roles.html#ref-role">aide officielle ref</a> <a class="footnote-reference brackets" href="#id19" id="id20">10</a></p>
-</section>
-<section id="lien-externe-distant-url-internet">
-<h3><a class="toc-backref" href="#id44">Lien externe distant (url internet)</a><a class="headerlink" href="#lien-externe-distant-url-internet" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Voir  <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/restructuredtext/roles.html#ref-role">aide officielle ref</a> <a class="footnote-reference brackets" href="#id21" id="id22">11</a></p>
+</div>
+<div class="section" id="lien-externe-distant-url-internet">
+<h3><a class="toc-backref" href="#id47">Lien externe distant (url internet)</a><a class="headerlink" href="#lien-externe-distant-url-internet" title="Lien permanent vers ce titre">¶</a></h3>
 <p>exemple url externe au système documentaire:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>`link_desc`_
 
 .. _`link_desc` : url
 </pre></div>
 </div>
-</section>
-</section>
-<section id="themes">
-<h2><a class="toc-backref" href="#id45">Themes</a><a class="headerlink" href="#themes" title="Lien permanent vers ce titre">¶</a></h2>
+</div>
+</div>
+<div class="section" id="themes">
+<h2><a class="toc-backref" href="#id48">Themes</a><a class="headerlink" href="#themes" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Recherche d’un thème avec barre de navigation fixe</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -404,9 +436,9 @@ Astuce : si la définition précède un titre pas besoin de nom_a_afficher
 au moins pour le theme classic</p>
 </div>
 <p>Le pb est que les options ne sont pas commune d’un thème à l’autre.</p>
-<p>La <a class="reference external" href="https://sphinx-themes.org/">page des themes Sphinx</a> <a class="footnote-reference brackets" href="#id21" id="id22">11</a></p>
-<section id="testes">
-<h3><a class="toc-backref" href="#id46">testés</a><a class="headerlink" href="#testes" title="Lien permanent vers ce titre">¶</a></h3>
+<p>La <a class="reference external" href="https://sphinx-themes.org/">page des themes Sphinx</a> <a class="footnote-reference brackets" href="#id23" id="id24">12</a></p>
+<div class="section" id="testes">
+<h3><a class="toc-backref" href="#id49">testés</a><a class="headerlink" href="#testes" title="Lien permanent vers ce titre">¶</a></h3>
 <p><strong>PSphinxTheme</strong></p>
 <div class="admonition warning">
 <p class="admonition-title">Avertissement</p>
@@ -478,39 +510,39 @@ Source sur github</p>
 <span class="p">}</span>
 </pre></div>
 </div>
-</section>
-<section id="a-tester">
-<h3><a class="toc-backref" href="#id47">A tester</a><a class="headerlink" href="#a-tester" title="Lien permanent vers ce titre">¶</a></h3>
+</div>
+<div class="section" id="a-tester">
+<h3><a class="toc-backref" href="#id50">A tester</a><a class="headerlink" href="#a-tester" title="Lien permanent vers ce titre">¶</a></h3>
 <ul class="simple">
 <li><p>catalystcloud</p></li>
 <li><p>rtd Read The Doc <a class="reference external" href="https://sphinx-rtd-theme.readthedocs.io/en/stable/installing.html">https://sphinx-rtd-theme.readthedocs.io/en/stable/installing.html</a></p></li>
 <li><p>Bizstyle ou  similaire allanc-sphinx : grégoire</p></li>
 </ul>
-</section>
-<section id="rejetes">
-<h3><a class="toc-backref" href="#id48">Rejetés</a><a class="headerlink" href="#rejetes" title="Lien permanent vers ce titre">¶</a></h3>
+</div>
+<div class="section" id="rejetes">
+<h3><a class="toc-backref" href="#id51">Rejetés</a><a class="headerlink" href="#rejetes" title="Lien permanent vers ce titre">¶</a></h3>
 <ul class="simple">
 <li><p>agoraplex.themes.sphinx : aucune des fonctionnalités recherchées</p></li>
 </ul>
-</section>
-</section>
-<section id="sphinx-to-pdf">
-<h2><a class="toc-backref" href="#id49">Sphinx to pdf</a><a class="headerlink" href="#sphinx-to-pdf" title="Lien permanent vers ce titre">¶</a></h2>
+</div>
+</div>
+<div class="section" id="sphinx-to-pdf">
+<h2><a class="toc-backref" href="#id52">Sphinx to pdf</a><a class="headerlink" href="#sphinx-to-pdf" title="Lien permanent vers ce titre">¶</a></h2>
 <p>make latexpdf</p>
 <p>mais il faut installer basic-miktex-2.9.7216-x64.exe et perl.exe</p>
 <p>Essais du 17/06/2020: problème d’encodage pour latex. Installation de nombreuses dépendances latex
 en automatique</p>
-</section>
-<section id="petits-trucs">
-<h2><a class="toc-backref" href="#id50">Petits trucs</a><a class="headerlink" href="#petits-trucs" title="Lien permanent vers ce titre">¶</a></h2>
-<section id="liens-doxygen">
-<span id="index-5"></span><h3><a class="toc-backref" href="#id51">Liens Doxygen</a><a class="headerlink" href="#liens-doxygen" title="Lien permanent vers ce titre">¶</a></h3>
+</div>
+<div class="section" id="petits-trucs">
+<h2><a class="toc-backref" href="#id53">Petits trucs</a><a class="headerlink" href="#petits-trucs" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="section" id="liens-doxygen">
+<span id="index-6"></span><h3><a class="toc-backref" href="#id54">Liens Doxygen</a><a class="headerlink" href="#liens-doxygen" title="Lien permanent vers ce titre">¶</a></h3>
 <p>doxylink : contributed extension</p>
-<p><a class="reference external" href="https://sphinxcontrib-doxylink.readthedocs.io/en/stable/">Doxylink documentation</a> <a class="footnote-reference brackets" href="#id23" id="id24">12</a></p>
+<p><a class="reference external" href="https://sphinxcontrib-doxylink.readthedocs.io/en/stable/">Doxylink documentation</a> <a class="footnote-reference brackets" href="#id25" id="id26">13</a></p>
 <hr class="docutils" />
-</section>
-<section id="separateur-html">
-<span id="index-6"></span><h3><a class="toc-backref" href="#id52">Séparateur html</a><a class="headerlink" href="#separateur-html" title="Lien permanent vers ce titre">¶</a></h3>
+</div>
+<div class="section" id="separateur-html">
+<span id="index-7"></span><h3><a class="toc-backref" href="#id55">Séparateur html</a><a class="headerlink" href="#separateur-html" title="Lien permanent vers ce titre">¶</a></h3>
 <p>Clearer:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="o">|</span><span class="n">clearer</span><span class="o">|</span>  <span class="n">raw</span><span class="p">::</span> <span class="n">html</span>
 
@@ -518,15 +550,15 @@ en automatique</p>
 <span class="n">_usage</span> <span class="p">:</span> <span class="o">|</span><span class="n">clearer</span><span class="o">|</span>
 </pre></div>
 </div>
-</section>
-<section id="autres-astuces-difficilement-classable">
-<h3><a class="toc-backref" href="#id53">Autres astuces difficilement classable</a><a class="headerlink" href="#autres-astuces-difficilement-classable" title="Lien permanent vers ce titre">¶</a></h3>
+</div>
+<div class="section" id="autres-astuces-difficilement-classable">
+<h3><a class="toc-backref" href="#id56">Autres astuces difficilement classable</a><a class="headerlink" href="#autres-astuces-difficilement-classable" title="Lien permanent vers ce titre">¶</a></h3>
 <p>7/3/20 J’ai trouvé ce site ou plutot ce MOOT de l’université de Grenoble :</p>
-<p><a class="reference external" href="http://espe-rtd-reflexpro.u-ga.fr/docs/sandbox2/fr/latest/syntaxe_sphinx.html#les-bases-de-la-syntaxe-de-sphinx">ReFlexPro, Univ. Grenoble Alpes</a> <a class="footnote-reference brackets" href="#id25" id="id26">13</a></p>
-</section>
-</section>
-<section id="weblinks">
-<h2><a class="toc-backref" href="#id54">Weblinks</a><a class="headerlink" href="#weblinks" title="Lien permanent vers ce titre">¶</a></h2>
+<p><a class="reference external" href="http://espe-rtd-reflexpro.u-ga.fr/docs/sandbox2/fr/latest/syntaxe_sphinx.html#les-bases-de-la-syntaxe-de-sphinx">ReFlexPro, Univ. Grenoble Alpes</a> <a class="footnote-reference brackets" href="#id27" id="id28">14</a></p>
+</div>
+</div>
+<div class="section" id="weblinks">
+<h2><a class="toc-backref" href="#id57">Weblinks</a><a class="headerlink" href="#weblinks" title="Lien permanent vers ce titre">¶</a></h2>
 <dl class="footnote brackets">
 <dt class="label" id="id1"><span class="brackets"><a class="fn-backref" href="#id2">1</a></span></dt>
 <dd><p><a class="reference external" href="https://www.doc-o-matic.com/en/index.html">https://www.doc-o-matic.com/en/index.html</a></p>
@@ -541,46 +573,47 @@ en automatique</p>
 <dd><p><a class="reference external" href="http://openalea.gforge.inria.fr/doc/openalea/doc/_build/html/source/sphinx/rest_syntax.html#figure-directive">http://openalea.gforge.inria.fr/doc/openalea/doc/_build/html/source/sphinx/rest_syntax.html#figure-directive</a></p>
 </dd>
 <dt class="label" id="id9"><span class="brackets"><a class="fn-backref" href="#id10">5</a></span></dt>
-<dd><p><a class="reference external" href="https://poltergeist42.github.io/JDM/DocUtils_RST_Sphinx.html">https://poltergeist42.github.io/JDM/DocUtils_RST_Sphinx.html</a></p>
+<dd><p><a class="reference external" href="https://poltergeist42.github.io/JDM/Documentation_Automatique.html">https://poltergeist42.github.io/JDM/Documentation_Automatique.html</a></p>
 </dd>
 <dt class="label" id="id11"><span class="brackets"><a class="fn-backref" href="#id12">6</a></span></dt>
-<dd><p><a class="reference external" href="https://webdevdesigner.com/q/convert-xls-to-csv-on-command-line-21100/">https://webdevdesigner.com/q/convert-xls-to-csv-on-command-line-21100/</a></p>
+<dd><p><a class="reference external" href="https://github.blog/2009-12-29-bypassing-jekyll-on-github-pages/">https://github.blog/2009-12-29-bypassing-jekyll-on-github-pages/</a></p>
 </dd>
 <dt class="label" id="id13"><span class="brackets"><a class="fn-backref" href="#id14">7</a></span></dt>
-<dd><p><a class="reference external" href="https://graphviz.org/doc/info/attrs.html">https://graphviz.org/doc/info/attrs.html</a></p>
+<dd><p><a class="reference external" href="https://webdevdesigner.com/q/convert-xls-to-csv-on-command-line-21100/">https://webdevdesigner.com/q/convert-xls-to-csv-on-command-line-21100/</a></p>
 </dd>
 <dt class="label" id="id15"><span class="brackets"><a class="fn-backref" href="#id16">8</a></span></dt>
-<dd><p><a class="reference external" href="https://graphviz.org/">https://graphviz.org/</a></p>
+<dd><p><a class="reference external" href="https://graphviz.org/doc/info/attrs.html">https://graphviz.org/doc/info/attrs.html</a></p>
 </dd>
 <dt class="label" id="id17"><span class="brackets"><a class="fn-backref" href="#id18">9</a></span></dt>
-<dd><p><a class="reference external" href="http://www.sphinx-doc.org/en/master/usage/restructuredtext/roles.html#role-download">http://www.sphinx-doc.org/en/master/usage/restructuredtext/roles.html#role-download</a></p>
+<dd><p><a class="reference external" href="https://graphviz.org/">https://graphviz.org/</a></p>
 </dd>
 <dt class="label" id="id19"><span class="brackets"><a class="fn-backref" href="#id20">10</a></span></dt>
-<dd><p><a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/restructuredtext/roles.html#ref-role">https://www.sphinx-doc.org/en/master/usage/restructuredtext/roles.html#ref-role</a></p>
+<dd><p><a class="reference external" href="http://www.sphinx-doc.org/en/master/usage/restructuredtext/roles.html#role-download">http://www.sphinx-doc.org/en/master/usage/restructuredtext/roles.html#role-download</a></p>
 </dd>
 <dt class="label" id="id21"><span class="brackets"><a class="fn-backref" href="#id22">11</a></span></dt>
-<dd><p><a class="reference external" href="https://sphinx-themes.org/">https://sphinx-themes.org/</a></p>
+<dd><p><a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/restructuredtext/roles.html#ref-role">https://www.sphinx-doc.org/en/master/usage/restructuredtext/roles.html#ref-role</a></p>
 </dd>
 <dt class="label" id="id23"><span class="brackets"><a class="fn-backref" href="#id24">12</a></span></dt>
-<dd><p><a class="reference external" href="https://sphinxcontrib-doxylink.readthedocs.io/en/stable/">https://sphinxcontrib-doxylink.readthedocs.io/en/stable/</a></p>
+<dd><p><a class="reference external" href="https://sphinx-themes.org/">https://sphinx-themes.org/</a></p>
 </dd>
 <dt class="label" id="id25"><span class="brackets"><a class="fn-backref" href="#id26">13</a></span></dt>
+<dd><p><a class="reference external" href="https://sphinxcontrib-doxylink.readthedocs.io/en/stable/">https://sphinxcontrib-doxylink.readthedocs.io/en/stable/</a></p>
+</dd>
+<dt class="label" id="id27"><span class="brackets"><a class="fn-backref" href="#id28">14</a></span></dt>
 <dd><p><a class="reference external" href="http://espe-rtd-reflexpro.u-ga.fr/docs/sandbox2/fr/latest/syntaxe_sphinx.html#les-bases-de-la-syntaxe-de-sphinx">http://espe-rtd-reflexpro.u-ga.fr/docs/sandbox2/fr/latest/syntaxe_sphinx.html#les-bases-de-la-syntaxe-de-sphinx</a></p>
 </dd>
 </dl>
-</section>
-</section>
+</div>
+</div>
 
 
-            <div class="clearer"></div>
           </div>
         </div>
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-  <div>
-    <h3><a href="../index.html">Table des matières</a></h3>
-    <ul>
+  <h3><a href="../index.html">Table des matières</a></h3>
+  <ul>
 <li><a class="reference internal" href="#">Sphinx*</a><ul>
 <li><a class="reference internal" href="#sphinx-pour-la-documentation">Sphinx pour la documentation</a><ul>
 <li><a class="reference internal" href="#pourquoi">Pourquoi ?</a></li>
@@ -590,8 +623,11 @@ en automatique</p>
 </li>
 <li><a class="reference internal" href="#doc-officielle">Doc officielle</a></li>
 <li><a class="reference internal" href="#autres-docs">Autres docs</a></li>
-<li><a class="reference internal" href="#au-volab">Au VoLAB</a></li>
+<li><a class="reference internal" href="#au-volab">Au VoLAB</a><ul>
+<li><a class="reference internal" href="#mise-en-places-des-gh-pages-precisions">Mise en places des gh-pages (précisions)</a></li>
 <li><a class="reference internal" href="#css-pas-dans-gh-pages">css pas dans gh-pages</a></li>
+</ul>
+</li>
 <li><a class="reference internal" href="#integrer-un-fichier-csv">Intégrer un fichier csv</a></li>
 <li><a class="reference internal" href="#integrer-un-svg">Intégrer un svg</a></li>
 <li><a class="reference internal" href="#integrer-du-graphviz-ou-plantuml">Intégrer du Graphviz ou plantUML</a><ul>
@@ -623,17 +659,12 @@ en automatique</p>
 </li>
 </ul>
 
-  </div>
-  <div>
-    <h4>Sujet précédent</h4>
-    <p class="topless"><a href="../documenter/documenter.html"
-                          title="Chapitre précédent">Documenter</a></p>
-  </div>
-  <div>
-    <h4>Sujet suivant</h4>
-    <p class="topless"><a href="../latex/latex.html"
-                          title="Chapitre suivant">LaTex notes</a></p>
-  </div>
+  <h4>Sujet précédent</h4>
+  <p class="topless"><a href="../documenter/documenter.html"
+                        title="Chapitre précédent">Documenter</a></p>
+  <h4>Sujet suivant</h4>
+  <p class="topless"><a href="../latex/latex.html"
+                        title="Chapitre suivant">LaTex notes</a></p>
   <div role="note" aria-label="source link">
     <h3>Cette page</h3>
     <ul class="this-page-menu">
@@ -645,7 +676,7 @@ en automatique</p>
   <h3 id="searchlabel">Recherche rapide</h3>
     <div class="searchformwrapper">
     <form class="search" action="../search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="text" name="q" aria-labelledby="searchlabel" />
       <input type="submit" value="Go" />
     </form>
     </div>
@@ -668,13 +699,12 @@ en automatique</p>
           <a href="../documenter/documenter.html" title="Documenter"
              >précédent</a> |</li>
         <li class="nav-item nav-item-0"><a href="../index.html">Documentation MajorLee&#39;s notes </a> &#187;</li>
-          <li class="nav-item nav-item-1"><a href="../documenter/documenter.html" >Documenter</a> &#187;</li>
-        <li class="nav-item nav-item-this"><a href="">Sphinx*</a></li> 
+          <li class="nav-item nav-item-1"><a href="../documenter/documenter.html" >Documenter</a> &#187;</li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2019, J.SORANZO.
-      Créé en utilisant <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.4.0.
+      Créé avec <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.4.
     </div>
   </body>
 </html>
