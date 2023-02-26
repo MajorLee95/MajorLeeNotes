@@ -1,42 +1,38 @@
-++++++++++++++++++++++++++++++++
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 Astuces informatiques
-++++++++++++++++++++++++++++++++
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-:Auteur: J.Soranzo
+.. include:: ../volabid.rst
+
+
 :Date: Novembre 2019
-:Societe: VoLAB
-:Entity: VoRoBoTics
-
-.. contents:: Table_name
-    :backlinks: top
-
+:Mise à jour: 28/01/2023
 
 .. index::
     pair: Astuce; Microsoft
 
 
-================================
+====================================================================================================
 Microsoft
-================================
+====================================================================================================
 
 Connaître le type de licence Windows10 
-===========================================================================
-
+----------------------------------------------------------------------------------------------------
 slmgr -dli
 
 défaire des connexions réseau existantes 
-==========================================
+----------------------------------------------------------------------------------------------------
 net use /DELETE *
 
 Copier une arborescence 
-======================================
+----------------------------------------------------------------------------------------------------
 Copy arbo :XCOPY source destination  /T /E
 
 
 .. index:: Copier des fichiers
 
 copy de fichiers plus rapide
-======================================
+----------------------------------------------------------------------------------------------------
 
 Commande pour copier de fichiers plus rapidement qu'avec l'explorer de Windows.
 
@@ -55,11 +51,11 @@ Ou alors :index:`fastcopy` !
     single: Clavier virtuel
 
 Afficher le clavier virtuel
-======================================
+----------------------------------------------------------------------------------------------------
 Dans la barre de recherche taper : **osk** (testé sous W7 & W10)
 
 Identifier un driver
-===============================
+----------------------------------------------------------------------------------------------------
 Pour identifier un :index:`driver`.
 
 
@@ -73,7 +69,7 @@ Site `driveridentifier.com`_
 .. index:: Gestionnaire de fichier, Barre des tâches
 
 Gestionnaire de périphérique dans la barre des tâches 
-======================================================= 
+----------------------------------------------------------------------------------------------------
   
 Le gestionnaire de fichier dans la barre des taches:
 Créer tout simplement un lien vers le fichier suivant:
@@ -91,14 +87,14 @@ permet d'y accéder rapidement.
 
 
 Modification d'une variable en mode console 
-=============================================================
+----------------------------------------------------------------------------------------------------
 ::
 
     set PATH=%PATH%;nouveau_chemin
 
 
 Configuration réseau en cmd admmin 
-====================================================================================================
+----------------------------------------------------------------------------------------------------
 
 utilisation de netsh.  `Une page web netsh utile`_
 
@@ -133,7 +129,7 @@ avec interface. Pour remonter d'un cran c'est .. et pour tout quitter bye. Derni
 
 
 Clear de la console
-====================================================================================================
+----------------------------------------------------------------------------------------------------
 Sous Linux clear
 
 Sous Windows cls !
@@ -193,8 +189,24 @@ Source `wikipedia List of common resolutions`_
 
 
 
-=========
+.. index::
+    pair: Temps; timestamp
+    pair: Temps; LinuxTime
+    single: EPOC
+
+====================================================================================================
+EPOC TIME
+====================================================================================================
+ou LINUX TIME ou TIMESTAMP
+
+The site `Epoch & Unix Timestamp Conversion Tools`_
+
+.. _`Epoch & Unix Timestamp Conversion Tools` : https://www.epochconverter.com/
+
+Sur Dan's Tools
+
+====================================================================================================
 Weblinks
-=========
+====================================================================================================
 
 .. target-notes::

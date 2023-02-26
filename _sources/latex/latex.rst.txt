@@ -28,4 +28,6 @@ LaTex notes
 ================================
 Installation
 ================================
-Comme il est dit sur le site du projet, LaTex n'est pas une application au sens Windows du terme.
+Comme il est dit sur le site du projet, LaTex n'est pas une application au sens Windows du terme !
+
+Je ne l'utilise pas (01/2023)

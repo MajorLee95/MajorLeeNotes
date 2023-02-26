@@ -4,7 +4,7 @@
 <html lang="fr">
   <head>
     <meta charset="utf-8" />
-    <title>Python (mes notes) &#8212; Documentation MajorLee&#39;s notes </title>
+    <title>Python* (mes notes) &#8212; Documentation MajorLee&#39;s notes </title>
     <link rel="stylesheet" href="../_static/nature.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
@@ -41,7 +41,7 @@
           <div class="body" role="main">
             
   <div class="section" id="python-mes-notes">
-<span id="index-0"></span><h1><a class="toc-backref" href="#sommaire">Python (mes notes)</a><a class="headerlink" href="#python-mes-notes" title="Lien permanent vers ce titre">¶</a></h1>
+<span id="index-0"></span><h1><a class="toc-backref" href="#sommaire">Python* (mes notes)</a><a class="headerlink" href="#python-mes-notes" title="Lien permanent vers ce titre">¶</a></h1>
 <dl class="field-list simple">
 <dt class="field-odd">Auteur</dt>
 <dd class="field-odd"><p>J.Soranzo</p>
@@ -50,7 +50,7 @@
 <dd class="field-even"><p>Août 2020</p>
 </dd>
 <dt class="field-odd">mise à jour</dt>
-<dd class="field-odd"><p>13/07/2021</p>
+<dd class="field-odd"><p>04/02/2023</p>
 </dd>
 <dt class="field-even">Societe</dt>
 <dd class="field-even"><p>VoRoBoTics</p>
@@ -62,7 +62,7 @@
 <div class="contents topic" id="sommaire">
 <p class="topic-title">Sommaire</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="#python-mes-notes" id="id65">Python (mes notes)</a></p>
+<li><p><a class="reference internal" href="#python-mes-notes" id="id65">Python* (mes notes)</a></p>
 <ul>
 <li><p><a class="reference internal" href="#disclaimer" id="id66">Disclaimer</a></p></li>
 <li><p><a class="reference internal" href="#pourquoi-les-gens-aiment-python" id="id67">Pourquoi les gens aiment Python</a></p></li>
@@ -118,16 +118,26 @@
 <li><p><a class="reference internal" href="#python2-to-3" id="id107">Python2 to 3</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#time" id="id108">Time</a></p></li>
+<li><p><a class="reference internal" href="#time-et-datetime" id="id108">Time et dateTime</a></p></li>
 <li><p><a class="reference internal" href="#i2c" id="id109">I2C</a></p>
 <ul>
 <li><p><a class="reference internal" href="#wiring-pi" id="id110">Wiring pi</a></p></li>
 </ul>
 </li>
 <li><p><a class="reference internal" href="#pyserial" id="id111">PySerial</a></p></li>
-<li><p><a class="reference internal" href="#gestionnaires-graphiques" id="id112">Gestionnaires graphiques</a></p></li>
-<li><p><a class="reference internal" href="#appli-minimum-template" id="id113">Appli minimum (template)</a></p></li>
-<li><p><a class="reference internal" href="#weblinks" id="id114">Weblinks</a></p></li>
+<li><p><a class="reference internal" href="#gestionnaires-graphiques" id="id112">Gestionnaires graphiques</a></p>
+<ul>
+<li><p><a class="reference internal" href="#tkinter" id="id113">tkinter</a></p></li>
+<li><p><a class="reference internal" href="#pyqt5" id="id114">pyQt5</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#appli-minimum-template" id="id115">Appli minimum (template)</a></p></li>
+<li><p><a class="reference internal" href="#snippets" id="id116">Snippets</a></p>
+<ul>
+<li><p><a class="reference internal" href="#chemins" id="id117">Chemins</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#weblinks" id="id118">Weblinks</a></p></li>
 </ul>
 </li>
 </ul>
@@ -1436,12 +1446,21 @@ os.system(&quot;pause&quot;)
 <p id="index-27"><a class="reference external" href="http://python-future.org/compatible_idioms.html">Cheat Sheet: Writing Python 2-3 compatible code</a> <a class="footnote-reference brackets" href="#id51" id="id52">26</a></p>
 </div>
 </div>
-<div class="section" id="time">
-<span id="index-28"></span><h2><a class="toc-backref" href="#sommaire">Time</a><a class="headerlink" href="#time" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="section" id="time-et-datetime">
+<span id="index-28"></span><h2><a class="toc-backref" href="#sommaire">Time et dateTime</a><a class="headerlink" href="#time-et-datetime" title="Lien permanent vers ce titre">¶</a></h2>
 <p>package standard (pas besoin de pip install)</p>
 <p>Construct a file name with time:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">time</span> <span class="n">strftime</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">time</span> <span class="kn">import</span> <span class="n">strftime</span>
 <span class="n">filename</span><span class="o">=</span> <span class="s2">&quot;bprefixe_&quot;</span> <span class="o">+</span> <span class="n">strftime</span><span class="p">(</span><span class="s2">&quot;%Y%m</span><span class="si">%d</span><span class="s2">-%H%M%S&quot;</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;.txt&quot;</span>
+</pre></div>
+</div>
+<p>Temps utc:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span>
+<span class="n">date</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span><span class="o">.</span><span class="n">timestamp</span><span class="p">())</span>
+</pre></div>
+</div>
+<p>Afficher une date:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">%d</span><span class="s1">/%m/%Y, %H:%M&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1497,8 +1516,14 @@ Voir <a class="reference external" href="https://pyserial.readthedocs.io/en/late
 </div>
 <div class="section" id="gestionnaires-graphiques">
 <h2><a class="toc-backref" href="#sommaire">Gestionnaires graphiques</a><a class="headerlink" href="#gestionnaires-graphiques" title="Lien permanent vers ce titre">¶</a></h2>
-<p>tkinter</p>
-<p>pyQt5</p>
+<div class="section" id="tkinter">
+<h3><a class="toc-backref" href="#sommaire">tkinter</a><a class="headerlink" href="#tkinter" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Voir fichiers Freeplane. Todo: convertir en rst</p>
+</div>
+<div class="section" id="pyqt5">
+<h3><a class="toc-backref" href="#sommaire">pyQt5</a><a class="headerlink" href="#pyqt5" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Voir fichiers Freeplane. Todo: convertir en rst</p>
+</div>
 </div>
 <div class="section" id="appli-minimum-template">
 <h2><a class="toc-backref" href="#sommaire">Appli minimum (template)</a><a class="headerlink" href="#appli-minimum-template" title="Lien permanent vers ce titre">¶</a></h2>
@@ -1511,6 +1536,28 @@ Tkinter au total 4 templates.</p>
 <p>Template à base de tkinter en cours de construction (au 30/6/22):</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">perso</span>\<span class="mi">0044</span><span class="o">-</span><span class="n">Iot_ESP_PPlug</span>\<span class="n">projet</span>\<span class="n">_3_software</span>\<span class="n">pythonTools</span>\<span class="n">pytemplt</span>
 </pre></div>
+</div>
+</div>
+<div class="section" id="snippets">
+<h2><a class="toc-backref" href="#sommaire">Snippets</a><a class="headerlink" href="#snippets" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="section" id="chemins">
+<h3><a class="toc-backref" href="#sommaire">Chemins</a><a class="headerlink" href="#chemins" title="Lien permanent vers ce titre">¶</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;basename:    &#39;</span><span class="p">,</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">basename</span><span class="p">(</span><span class="vm">__file__</span><span class="p">))</span>
+
+<span class="nb">dir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="vm">__file__</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;dirname:     &#39;</span><span class="p">,</span> <span class="nb">dir</span> <span class="p">)</span>
+
+<span class="n">fichier</span> <span class="o">=</span> <span class="s1">&#39;nomDuFichier.ext&#39;</span>
+
+<span class="n">fullDir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span> <span class="nb">dir</span><span class="p">,</span> <span class="n">fichier</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span> <span class="s2">&quot;fulldir = &quot;</span><span class="p">,</span> <span class="n">fullDir</span> <span class="p">)</span>
+
+<span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">fullDir</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;fichier trouvé&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
 </div>
 </div>
 <div class="section" id="weblinks">
@@ -1624,7 +1671,7 @@ Tkinter au total 4 templates.</p>
         <div class="sphinxsidebarwrapper">
   <h3><a href="../index.html">Table des matières</a></h3>
   <ul>
-<li><a class="reference internal" href="#">Python (mes notes)</a><ul>
+<li><a class="reference internal" href="#">Python* (mes notes)</a><ul>
 <li><a class="reference internal" href="#disclaimer">Disclaimer</a></li>
 <li><a class="reference internal" href="#pourquoi-les-gens-aiment-python">Pourquoi les gens aiment Python</a></li>
 <li><a class="reference internal" href="#docs">Docs</a></li>
@@ -1675,14 +1722,22 @@ Tkinter au total 4 templates.</p>
 <li><a class="reference internal" href="#python2-to-3">Python2 to 3</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#time">Time</a></li>
+<li><a class="reference internal" href="#time-et-datetime">Time et dateTime</a></li>
 <li><a class="reference internal" href="#i2c">I2C</a><ul>
 <li><a class="reference internal" href="#wiring-pi">Wiring pi</a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#pyserial">PySerial</a></li>
-<li><a class="reference internal" href="#gestionnaires-graphiques">Gestionnaires graphiques</a></li>
+<li><a class="reference internal" href="#gestionnaires-graphiques">Gestionnaires graphiques</a><ul>
+<li><a class="reference internal" href="#tkinter">tkinter</a></li>
+<li><a class="reference internal" href="#pyqt5">pyQt5</a></li>
+</ul>
+</li>
 <li><a class="reference internal" href="#appli-minimum-template">Appli minimum (template)</a></li>
+<li><a class="reference internal" href="#snippets">Snippets</a><ul>
+<li><a class="reference internal" href="#chemins">Chemins</a></li>
+</ul>
+</li>
 <li><a class="reference internal" href="#weblinks">Weblinks</a></li>
 </ul>
 </li>

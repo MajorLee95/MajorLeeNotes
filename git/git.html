@@ -64,61 +64,66 @@
 <div class="contents topic" id="sommaire">
 <p class="topic-title">Sommaire</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="#notes-sur-git" id="id25">Notes sur git</a></p>
+<li><p><a class="reference internal" href="#notes-sur-git" id="id30">Notes sur git</a></p>
 <ul>
-<li><p><a class="reference internal" href="#introduction" id="id26">Introduction</a></p></li>
-<li><p><a class="reference internal" href="#github-config-ssh" id="id27">Github config ssh</a></p></li>
-<li><p><a class="reference internal" href="#commandes-de-base-ou-kit-de-survie-minimum" id="id28">Commandes de base (ou kit de survie minimum)</a></p></li>
-<li><p><a class="reference internal" href="#tutos-en-francais" id="id29">Tutos en français</a></p></li>
-<li><p><a class="reference internal" href="#workflow" id="id30">Workflow</a></p>
+<li><p><a class="reference internal" href="#introduction" id="id31">Introduction</a></p></li>
+<li><p><a class="reference internal" href="#github-config-ssh" id="id32">Github config ssh</a></p></li>
+<li><p><a class="reference internal" href="#commandes-de-base-ou-kit-de-survie-minimum" id="id33">Commandes de base (ou kit de survie minimum)</a></p></li>
+<li><p><a class="reference internal" href="#tutos-en-francais" id="id34">Tutos en français</a></p></li>
+<li><p><a class="reference internal" href="#workflow" id="id35">Workflow</a></p>
 <ul>
-<li><p><a class="reference internal" href="#developpeur-en-equipe" id="id31">Développeur (en équipe)</a></p></li>
+<li><p><a class="reference internal" href="#developpeur-en-equipe" id="id36">Développeur (en équipe)</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#commits-atomiques" id="id32">Commits atomiques</a></p></li>
-<li><p><a class="reference internal" href="#git-rebase" id="id33">git rebase</a></p></li>
-<li><p><a class="reference internal" href="#git-bisec" id="id34">git bisec</a></p></li>
-<li><p><a class="reference internal" href="#gerer-les-depots-immenses" id="id35">Gérer les dépôts immenses…</a></p>
+<li><p><a class="reference internal" href="#commits-atomiques" id="id37">Commits atomiques</a></p></li>
+<li><p><a class="reference internal" href="#git-rebase" id="id38">git rebase</a></p>
 <ul>
-<li><p><a class="reference internal" href="#creer-un-depot-serveur" id="id36">Créer un dépôt serveur</a></p></li>
+<li><p><a class="reference internal" href="#regle-d-or-l-historique-partage-jamais-tu-ne-rebaseras" id="id39">Règle d’or: L’historique partagé jamais tu ne rebaseras</a></p></li>
+<li><p><a class="reference internal" href="#article-connexe-reecrire-l-historique-sur-atlassian" id="id40">Article connexe : Réécrire l’historique sur Atlassian</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#petits-trucs-utiles" id="id37">petits trucs utiles</a></p>
+<li><p><a class="reference internal" href="#git-bisec" id="id41">git bisec</a></p></li>
+<li><p><a class="reference internal" href="#gerer-les-depots-immenses" id="id42">Gérer les dépôts immenses…</a></p>
 <ul>
-<li><p><a class="reference internal" href="#mettre-un-projet-deja-bien-avance-sous-github" id="id38">Mettre un projet déjà bien avancé sous GitHUB</a></p></li>
-<li><p><a class="reference internal" href="#creer-une-branche-et-s-y-deplacer-en-une-seule-commande" id="id39">Créer une branche et s’y déplacer en une seule commande</a></p></li>
-<li><p><a class="reference internal" href="#logiciels" id="id40">Logiciels</a></p></li>
-<li><p><a class="reference internal" href="#suppression-d-un-fichier" id="id41">Suppression d’un fichier</a></p></li>
-<li><p><a class="reference internal" href="#lister-les-fichiers-indexe" id="id42">lister les fichiers indexé</a></p></li>
-<li><p><a class="reference internal" href="#mais-vers-ou-pointe-origine" id="id43">Mais vers ou pointe origine</a></p></li>
-<li><p><a class="reference internal" href="#merger-un-seul-fichier" id="id44">merger un seul fichier</a></p></li>
-<li><p><a class="reference internal" href="#ecraser-les-derniere-modif-qui-n-ont-pas-ete-commitees" id="id45">Écraser les dernière modif qui n’ont pas été commitées</a></p></li>
-<li><p><a class="reference internal" href="#retirer-un-repertoire-de-l-index" id="id46">Retirer un répertoire de l’index</a></p></li>
-<li><p><a class="reference internal" href="#lister-les-fichier-dossier-ignores" id="id47">lister les fichier dossier ignorés ?</a></p></li>
-<li><p><a class="reference internal" href="#rattacher-la-tete" id="id48">Rattacher la tête</a></p></li>
-<li><p><a class="reference internal" href="#annuler-le-dernier-commit" id="id49">Annuler le dernier commit</a></p></li>
-<li><p><a class="reference internal" href="#lister-les-commit-d-une-branche-distante" id="id50">Lister les commit d’une branche distante</a></p></li>
-<li><p><a class="reference internal" href="#depot-git-sur-cle-usb" id="id51">Dépôt git sur clé usb</a></p></li>
-<li><p><a class="reference internal" href="#trace-l-arborescence-sous-forme-textuelle" id="id52">Trace l’arborescence sous forme textuelle</a></p></li>
-<li><p><a class="reference internal" href="#cle-ssh" id="id53">clé SSH</a></p></li>
-<li><p><a class="reference internal" href="#cherry-pick-ecremer" id="id54">cherry-pick : écrémer</a></p></li>
-<li><p><a class="reference internal" href="#lister-les-differences-entre-branches-locale-et-branche-distante" id="id55">Lister les différences entre branches locale et branche distante</a></p></li>
-<li><p><a class="reference internal" href="#git-push" id="id56">git push</a></p></li>
-<li><p><a class="reference internal" href="#supprimer-une-branche-distante" id="id57">supprimer une branche distante</a></p></li>
-<li><p><a class="reference internal" href="#supprimer-une-branche-locale" id="id58">Supprimer une branche locale</a></p></li>
-<li><p><a class="reference internal" href="#merge-branche-distante" id="id59">Merge branche distante</a></p></li>
-<li><p><a class="reference internal" href="#traquer-une-nouvelle-branche-distante" id="id60">Traquer une nouvelle branche distante</a></p></li>
-<li><p><a class="reference internal" href="#reconnecter-une-branche-distante-a-une-branche-locale" id="id61">Reconnecter une branche distante à une branche locale</a></p></li>
-<li><p><a class="reference internal" href="#creer-un-depot-distant-sur-le-serveur-du-volab" id="id62">créer un dépôt distant sur le serveur du VoLAB</a></p></li>
-<li><p><a class="reference internal" href="#errors-git-cannot-lock-ref-d-une-branche-distante-lors-d-un-pull" id="id63">Errors : git cannot lock ref d’une branche distante lors d’un pull</a></p></li>
-<li><p><a class="reference internal" href="#lister-les-fichiers-d-une-branche" id="id64">lister les fichiers d’une branche</a></p></li>
-<li><p><a class="reference internal" href="#nettoyage-des-liens-pourri" id="id65">nettoyage des liens pourri</a></p></li>
-<li><p><a class="reference internal" href="#merge-d-un-repertoire-d-une-autre-branche" id="id66">merge d’un répertoire d’une autre branche</a></p></li>
-<li><p><a class="reference internal" href="#deplacer-le-dernier-commit-d-une-branche-vers-une-autre-branche" id="id67">Déplacer le dernier commit d’une branche vers une autre branche</a></p></li>
+<li><p><a class="reference internal" href="#creer-un-depot-serveur" id="id43">Créer un dépôt serveur</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#exemple-de-la-commande-git-help-everyday" id="id68">Exemple de la commande git help everyday</a></p></li>
-<li><p><a class="reference internal" href="#weblinks" id="id69">Weblinks</a></p></li>
+<li><p><a class="reference internal" href="#petits-trucs-utiles" id="id44">petits trucs utiles</a></p>
+<ul>
+<li><p><a class="reference internal" href="#mettre-un-projet-deja-bien-avance-sous-github" id="id45">Mettre un projet déjà bien avancé sous GitHUB</a></p></li>
+<li><p><a class="reference internal" href="#creer-une-branche-et-s-y-deplacer-en-une-seule-commande" id="id46">Créer une branche et s’y déplacer en une seule commande</a></p></li>
+<li><p><a class="reference internal" href="#logiciels" id="id47">Logiciels</a></p></li>
+<li><p><a class="reference internal" href="#suppression-d-un-fichier" id="id48">Suppression d’un fichier</a></p></li>
+<li><p><a class="reference internal" href="#lister-les-fichiers-indexe" id="id49">lister les fichiers indexé</a></p></li>
+<li><p><a class="reference internal" href="#mais-vers-ou-pointe-origine" id="id50">Mais vers ou pointe origine</a></p></li>
+<li><p><a class="reference internal" href="#merger-un-seul-fichier" id="id51">merger un seul fichier</a></p></li>
+<li><p><a class="reference internal" href="#ecraser-les-derniere-modif-qui-n-ont-pas-ete-commitees" id="id52">Écraser les dernière modif qui n’ont pas été commitées</a></p></li>
+<li><p><a class="reference internal" href="#retirer-un-repertoire-de-l-index" id="id53">Retirer un répertoire de l’index</a></p></li>
+<li><p><a class="reference internal" href="#lister-les-fichier-dossier-ignores" id="id54">lister les fichier dossier ignorés ?</a></p></li>
+<li><p><a class="reference internal" href="#rattacher-la-tete" id="id55">Rattacher la tête</a></p></li>
+<li><p><a class="reference internal" href="#annuler-le-dernier-commit" id="id56">Annuler le dernier commit</a></p></li>
+<li><p><a class="reference internal" href="#lister-les-commit-d-une-branche-distante" id="id57">Lister les commit d’une branche distante</a></p></li>
+<li><p><a class="reference internal" href="#depot-git-sur-cle-usb" id="id58">Dépôt git sur clé usb</a></p></li>
+<li><p><a class="reference internal" href="#trace-l-arborescence-sous-forme-textuelle" id="id59">Trace l’arborescence sous forme textuelle</a></p></li>
+<li><p><a class="reference internal" href="#cle-ssh" id="id60">clé SSH</a></p></li>
+<li><p><a class="reference internal" href="#cherry-pick-ecremer" id="id61">cherry-pick : écrémer</a></p></li>
+<li><p><a class="reference internal" href="#lister-les-differences-entre-branches-locale-et-branche-distante" id="id62">Lister les différences entre branches locale et branche distante</a></p></li>
+<li><p><a class="reference internal" href="#git-push" id="id63">git push</a></p></li>
+<li><p><a class="reference internal" href="#supprimer-une-branche-distante" id="id64">supprimer une branche distante</a></p></li>
+<li><p><a class="reference internal" href="#supprimer-une-branche-locale" id="id65">Supprimer une branche locale</a></p></li>
+<li><p><a class="reference internal" href="#merge-branche-distante" id="id66">Merge branche distante</a></p></li>
+<li><p><a class="reference internal" href="#traquer-une-nouvelle-branche-distante" id="id67">Traquer une nouvelle branche distante</a></p></li>
+<li><p><a class="reference internal" href="#reconnecter-une-branche-distante-a-une-branche-locale" id="id68">Reconnecter une branche distante à une branche locale</a></p></li>
+<li><p><a class="reference internal" href="#creer-un-depot-distant-sur-le-serveur-du-volab" id="id69">créer un dépôt distant sur le serveur du VoLAB</a></p></li>
+<li><p><a class="reference internal" href="#errors-git-cannot-lock-ref-d-une-branche-distante-lors-d-un-pull" id="id70">Errors : git cannot lock ref d’une branche distante lors d’un pull</a></p></li>
+<li><p><a class="reference internal" href="#lister-les-fichiers-d-une-branche" id="id71">lister les fichiers d’une branche</a></p></li>
+<li><p><a class="reference internal" href="#nettoyage-des-liens-pourri" id="id72">nettoyage des liens pourri</a></p></li>
+<li><p><a class="reference internal" href="#merge-d-un-repertoire-d-une-autre-branche" id="id73">merge d’un répertoire d’une autre branche</a></p></li>
+<li><p><a class="reference internal" href="#deplacer-le-dernier-commit-d-une-branche-vers-une-autre-branche" id="id74">Déplacer le dernier commit d’une branche vers une autre branche</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#exemple-de-la-commande-git-help-everyday" id="id75">Exemple de la commande git help everyday</a></p></li>
+<li><p><a class="reference internal" href="#weblinks" id="id76">Weblinks</a></p></li>
 </ul>
 </li>
 </ul>
@@ -218,7 +223,7 @@ seulement ce qu’on veut pour que le commentaire du commit corresponde bien au 
 </div>
 <div class="section" id="git-rebase">
 <h2><a class="toc-backref" href="#sommaire">git rebase</a><a class="headerlink" href="#git-rebase" title="Lien permanent vers ce titre">¶</a></h2>
-<p><a class="reference external" href="https://www.miximum.fr/blog/git-rebase/">https://www.miximum.fr/blog/git-rebase/</a></p>
+<p><a class="reference external" href="https://www.miximum.fr/blog/git-rebase/">Git rebase : qu’est-ce que c’est ? Comment s’en servir ?</a> <a class="footnote-reference brackets" href="#id9" id="id10">5</a></p>
 <ul class="simple">
 <li><p>conserver un historique propre ;</p></li>
 <li><p>corriger des erreurs de fusion ;</p></li>
@@ -237,11 +242,35 @@ Les conflits ont alors déjà été résolus.</p>
 <p class="admonition-title">Avertissement</p>
 <p>Ne pas rebaser l’historique public</p>
 </div>
-<p>source : <a class="reference external" href="https://www.atlassian.com/fr/git/tutorials/rewriting-history/git-rebase">Atlassian.com Git-rebase en français</a> <a class="footnote-reference brackets" href="#id9" id="id10">5</a></p>
+<p>source : <a class="reference external" href="https://www.atlassian.com/fr/git/tutorials/rewriting-history/git-rebase">Atlassian.com Git-rebase en français</a> <a class="footnote-reference brackets" href="#id12" id="id13">6</a></p>
+<div class="section" id="regle-d-or-l-historique-partage-jamais-tu-ne-rebaseras">
+<h3><a class="toc-backref" href="#sommaire">Règle d’or: L’historique partagé jamais tu ne rebaseras</a><a class="headerlink" href="#regle-d-or-l-historique-partage-jamais-tu-ne-rebaseras" title="Lien permanent vers ce titre">¶</a></h3>
+<div class="without-title admonition warning">
+<p class="admonition-title">Avertissement</p>
+<p>Tant que vous rebasez vos petites branches en local, tout va bien. Mais attention,</p>
+<p>si vous rebasez une branche qui se trouve déjà sur le serveur, c’est la catastrophe.</p>
+</div>
+<p><a class="reference external" href="https://www.miximum.fr/blog/git-rebase/">Git rebase : qu’est-ce que c’est ? Comment s’en servir ?</a> <a class="footnote-reference brackets" href="#id9" id="id11">5</a> §L’historique partagé jamais tu ne rebaseras</p>
+<p>dit autrement:</p>
+<div class="without-title admonition warning">
+<p class="admonition-title">Avertissement</p>
+<p>N’utilisez jamais la commande git rebase sur les branches publiques. C’est la règle d’or !</p>
+</div>
+</div>
+<div class="section" id="article-connexe-reecrire-l-historique-sur-atlassian">
+<h3><a class="toc-backref" href="#sommaire">Article connexe : Réécrire l’historique sur Atlassian</a><a class="headerlink" href="#article-connexe-reecrire-l-historique-sur-atlassian" title="Lien permanent vers ce titre">¶</a></h3>
+<p><a class="reference external" href="https://www.atlassian.com/fr/git/tutorials/rewriting-history">Réécrire l’historique</a> <a class="footnote-reference brackets" href="#id14" id="id15">7</a></p>
+<p>Il y a cette phrase dans le §Ne pas modifier les commits publics:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Évitez</span> <span class="n">de</span> <span class="n">modifier</span> <span class="n">un</span> <span class="n">commit</span> <span class="n">sur</span> <span class="n">lequel</span> <span class="n">repose</span> <span class="n">le</span> <span class="n">travail</span> <span class="n">d</span><span class="s1">&#39;autres développeurs.</span>
+</pre></div>
+</div>
+<p>Même si ce n’est pas en apparence pas le cas. En effet, dès qu’un commit se trouve sur un dépôt distant
+on ne peut pas savoir si une branche n’a pas été tirée d’un commit sur un dépôt local…</p>
+</div>
 </div>
 <div class="section" id="git-bisec">
 <h2><a class="toc-backref" href="#sommaire">git bisec</a><a class="headerlink" href="#git-bisec" title="Lien permanent vers ce titre">¶</a></h2>
-<p><a class="reference external" href="http://adopteungit.fr/commande/bisect/2016/09/04/la-chasse-aux-bugs-avec-git-bisect.html">La chasse aux bugs avec git bisect</a> <a class="footnote-reference brackets" href="#id11" id="id12">6</a></p>
+<p><a class="reference external" href="http://adopteungit.fr/commande/bisect/2016/09/04/la-chasse-aux-bugs-avec-git-bisect.html">La chasse aux bugs avec git bisect</a> <a class="footnote-reference brackets" href="#id16" id="id17">8</a></p>
 </div>
 <div class="section" id="gerer-les-depots-immenses">
 <h2><a class="toc-backref" href="#sommaire">Gérer les dépôts immenses…</a><a class="headerlink" href="#gerer-les-depots-immenses" title="Lien permanent vers ce titre">¶</a></h2>
@@ -249,9 +278,9 @@ Les conflits ont alors déjà été résolus.</p>
 <p class="admonition-title">Important</p>
 <p>how to manage a project with source code, electronique schematic and source documentation ?</p>
 </div>
-<p>Un article : <a class="reference external" href="https://www.atlassian.com/git/tutorials/big-repositories">How to handle big repositories with Git</a> <a class="footnote-reference brackets" href="#id13" id="id14">7</a></p>
+<p>Un article : <a class="reference external" href="https://www.atlassian.com/git/tutorials/big-repositories">How to handle big repositories with Git</a> <a class="footnote-reference brackets" href="#id18" id="id19">9</a></p>
 <p>Un autre article un peu moins intéressant au niveau solution (moins riche) :
-<a class="reference external" href="https://stackoverflow.com/questions/32068654/best-practices-for-using-git-in-large-project">Best practices for using git in large project</a> <a class="footnote-reference brackets" href="#id15" id="id16">8</a></p>
+<a class="reference external" href="https://stackoverflow.com/questions/32068654/best-practices-for-using-git-in-large-project">Best practices for using git in large project</a> <a class="footnote-reference brackets" href="#id20" id="id21">10</a></p>
 <div class="section" id="creer-un-depot-serveur">
 <h3><a class="toc-backref" href="#sommaire">Créer un dépôt serveur</a><a class="headerlink" href="#creer-un-depot-serveur" title="Lien permanent vers ce titre">¶</a></h3>
 <p>git init –bare –share tout simplement</p>
@@ -282,9 +311,9 @@ différent de celui de la source.</p>
 </div>
 <div class="section" id="logiciels">
 <h3><a class="toc-backref" href="#sommaire">Logiciels</a><a class="headerlink" href="#logiciels" title="Lien permanent vers ce titre">¶</a></h3>
-<p><a class="reference external" href="https://www.gitkraken.com/">gitKraken</a> <a class="footnote-reference brackets" href="#id17" id="id18">9</a></p>
+<p><a class="reference external" href="https://www.gitkraken.com/">gitKraken</a> <a class="footnote-reference brackets" href="#id22" id="id23">11</a></p>
 <p>Nécessite de créer un compte sur leur site ? Pourquoi au juste ?</p>
-<p><a class="reference external" href="https://tortoisegit.org/">tortoisegit</a> <a class="footnote-reference brackets" href="#id19" id="id20">10</a></p>
+<p><a class="reference external" href="https://tortoisegit.org/">tortoisegit</a> <a class="footnote-reference brackets" href="#id24" id="id25">12</a></p>
 <blockquote>
 <div><ul class="simple">
 <li><p>dl dans outils/conception</p></li>
@@ -425,7 +454,7 @@ Cette commande permet de revenir à l’état du dernier commit (ne pas confondr
 </div>
 <div class="section" id="depot-git-sur-cle-usb">
 <h3><a class="toc-backref" href="#sommaire">Dépôt git sur clé usb</a><a class="headerlink" href="#depot-git-sur-cle-usb" title="Lien permanent vers ce titre">¶</a></h3>
-<p>Créer <a class="reference external" href="https://en.wikibooks.org/wiki/Git/Repository_on_a_USB_stick">un dépôt git sur une clé usb, sur wikibook</a> <a class="footnote-reference brackets" href="#id21" id="id22">11</a></p>
+<p>Créer <a class="reference external" href="https://en.wikibooks.org/wiki/Git/Repository_on_a_USB_stick">un dépôt git sur une clé usb, sur wikibook</a> <a class="footnote-reference brackets" href="#id26" id="id27">13</a></p>
 </div>
 <div class="section" id="trace-l-arborescence-sous-forme-textuelle">
 <h3><a class="toc-backref" href="#sommaire">Trace l’arborescence sous forme textuelle</a><a class="headerlink" href="#trace-l-arborescence-sous-forme-textuelle" title="Lien permanent vers ce titre">¶</a></h3>
@@ -442,7 +471,7 @@ Cette commande permet de revenir à l’état du dernier commit (ne pas confondr
 <li><p>Au tout au moins réside dans un répertoire locale de la machine</p></li>
 <li><p>Comment les entrées dans un nouvel environnement ?</p></li>
 </ul>
-<p><a class="reference external" href="https://fr.w3docs.com/snippets/git/comment-generer-une-cle-ssh-pour-git.html">Article intéressant sur W3C clé ssh</a> <a class="footnote-reference brackets" href="#id23" id="id24">12</a></p>
+<p><a class="reference external" href="https://fr.w3docs.com/snippets/git/comment-generer-une-cle-ssh-pour-git.html">Article intéressant sur W3C clé ssh</a> <a class="footnote-reference brackets" href="#id28" id="id29">14</a></p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ls</span> <span class="o">-</span><span class="n">al</span> <span class="o">~/.</span><span class="n">ssh</span>
 </pre></div>
 </div>
@@ -731,28 +760,34 @@ Examples
 <dt class="label" id="id7"><span class="brackets"><a class="fn-backref" href="#id8">4</a></span></dt>
 <dd><p><a class="reference external" href="https://github.com/lgiraudel/adopteungit">https://github.com/lgiraudel/adopteungit</a></p>
 </dd>
-<dt class="label" id="id9"><span class="brackets"><a class="fn-backref" href="#id10">5</a></span></dt>
+<dt class="label" id="id9"><span class="brackets">5</span><span class="fn-backref">(<a href="#id10">1</a>,<a href="#id11">2</a>)</span></dt>
+<dd><p><a class="reference external" href="https://www.miximum.fr/blog/git-rebase/">https://www.miximum.fr/blog/git-rebase/</a></p>
+</dd>
+<dt class="label" id="id12"><span class="brackets"><a class="fn-backref" href="#id13">6</a></span></dt>
 <dd><p><a class="reference external" href="https://www.atlassian.com/fr/git/tutorials/rewriting-history/git-rebase">https://www.atlassian.com/fr/git/tutorials/rewriting-history/git-rebase</a></p>
 </dd>
-<dt class="label" id="id11"><span class="brackets"><a class="fn-backref" href="#id12">6</a></span></dt>
+<dt class="label" id="id14"><span class="brackets"><a class="fn-backref" href="#id15">7</a></span></dt>
+<dd><p><a class="reference external" href="https://www.atlassian.com/fr/git/tutorials/rewriting-history">https://www.atlassian.com/fr/git/tutorials/rewriting-history</a></p>
+</dd>
+<dt class="label" id="id16"><span class="brackets"><a class="fn-backref" href="#id17">8</a></span></dt>
 <dd><p><a class="reference external" href="http://adopteungit.fr/commande/bisect/2016/09/04/la-chasse-aux-bugs-avec-git-bisect.html">http://adopteungit.fr/commande/bisect/2016/09/04/la-chasse-aux-bugs-avec-git-bisect.html</a></p>
 </dd>
-<dt class="label" id="id13"><span class="brackets"><a class="fn-backref" href="#id14">7</a></span></dt>
+<dt class="label" id="id18"><span class="brackets"><a class="fn-backref" href="#id19">9</a></span></dt>
 <dd><p><a class="reference external" href="https://www.atlassian.com/git/tutorials/big-repositories">https://www.atlassian.com/git/tutorials/big-repositories</a></p>
 </dd>
-<dt class="label" id="id15"><span class="brackets"><a class="fn-backref" href="#id16">8</a></span></dt>
+<dt class="label" id="id20"><span class="brackets"><a class="fn-backref" href="#id21">10</a></span></dt>
 <dd><p><a class="reference external" href="https://stackoverflow.com/questions/32068654/best-practices-for-using-git-in-large-project">https://stackoverflow.com/questions/32068654/best-practices-for-using-git-in-large-project</a></p>
 </dd>
-<dt class="label" id="id17"><span class="brackets"><a class="fn-backref" href="#id18">9</a></span></dt>
+<dt class="label" id="id22"><span class="brackets"><a class="fn-backref" href="#id23">11</a></span></dt>
 <dd><p><a class="reference external" href="https://www.gitkraken.com/">https://www.gitkraken.com/</a></p>
 </dd>
-<dt class="label" id="id19"><span class="brackets"><a class="fn-backref" href="#id20">10</a></span></dt>
+<dt class="label" id="id24"><span class="brackets"><a class="fn-backref" href="#id25">12</a></span></dt>
 <dd><p><a class="reference external" href="https://tortoisegit.org/">https://tortoisegit.org/</a></p>
 </dd>
-<dt class="label" id="id21"><span class="brackets"><a class="fn-backref" href="#id22">11</a></span></dt>
+<dt class="label" id="id26"><span class="brackets"><a class="fn-backref" href="#id27">13</a></span></dt>
 <dd><p><a class="reference external" href="https://en.wikibooks.org/wiki/Git/Repository_on_a_USB_stick">https://en.wikibooks.org/wiki/Git/Repository_on_a_USB_stick</a></p>
 </dd>
-<dt class="label" id="id23"><span class="brackets"><a class="fn-backref" href="#id24">12</a></span></dt>
+<dt class="label" id="id28"><span class="brackets"><a class="fn-backref" href="#id29">14</a></span></dt>
 <dd><p><a class="reference external" href="https://fr.w3docs.com/snippets/git/comment-generer-une-cle-ssh-pour-git.html">https://fr.w3docs.com/snippets/git/comment-generer-une-cle-ssh-pour-git.html</a></p>
 </dd>
 </dl>
@@ -777,7 +812,11 @@ Examples
 </ul>
 </li>
 <li><a class="reference internal" href="#commits-atomiques">Commits atomiques</a></li>
-<li><a class="reference internal" href="#git-rebase">git rebase</a></li>
+<li><a class="reference internal" href="#git-rebase">git rebase</a><ul>
+<li><a class="reference internal" href="#regle-d-or-l-historique-partage-jamais-tu-ne-rebaseras">Règle d’or: L’historique partagé jamais tu ne rebaseras</a></li>
+<li><a class="reference internal" href="#article-connexe-reecrire-l-historique-sur-atlassian">Article connexe : Réécrire l’historique sur Atlassian</a></li>
+</ul>
+</li>
 <li><a class="reference internal" href="#git-bisec">git bisec</a></li>
 <li><a class="reference internal" href="#gerer-les-depots-immenses">Gérer les dépôts immenses…</a><ul>
 <li><a class="reference internal" href="#creer-un-depot-serveur">Créer un dépôt serveur</a></li>

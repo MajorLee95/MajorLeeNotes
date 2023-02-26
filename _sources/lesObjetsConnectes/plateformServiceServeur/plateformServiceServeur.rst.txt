@@ -49,12 +49,15 @@ existe ( à noter qu'il est disponible sur RPI)
 ----------------------------------------------------------------------------------------------------
 
 .. index::
-	single: REST
+	pair: Web design; REST
+
+
+.. _refApiRestObjetConnecte:
 
 API REST
 ----------------------------------------------------------------------------------------------------
 
-API REST : mais qu'est-ce dont ?
+API REST : mais qu'est-ce dont ? (voir aussi le chapitre web design*)
 
 `APIREST sur wikipédia`_
 
@@ -146,6 +149,25 @@ Selon le site How2Shout H2S `9 Best & Top Open source IoT Platforms To Develop t
 ====================================================================================================
 Services WEB
 ====================================================================================================
+
+Edge impulse
+----------------------------------------------------------------------------------------------------
+Détecté le 01/01/2023 dans `Cold Storage Monitoring System Based on Cellular& Wi-Fi Mesh`_ projet 
+Hackster.io
+
+.. _`Cold Storage Monitoring System Based on Cellular& Wi-Fi Mesh` : https://www.hackster.io/pradeeplogu0/cold-storage-monitoring-system-based-on-cellular-wi-fi-mesh-e9ea3c
+
+Site officiel : `edgeimpulse.com`_ :
+
+Edge Impulse is the leading development platform for machine learning on edge devices, free for developers and trusted by enterprises.
+
+Traduction Google: 
+
+Edge Impulse est la principale plate-forme de développement pour l'apprentissage automatique sur les 
+appareils périphériques, gratuite pour les développeurs et approuvée par les entreprises.
+
+.. _`edgeimpulse.com` : https://www.edgeimpulse.com/
+
 
 Easy IoT
 ----------------------------------------------------------------------------------------------------

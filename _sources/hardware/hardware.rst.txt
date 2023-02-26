@@ -238,6 +238,37 @@ Les fabricants (de petites)
 - ROCK64
 - ODROID
 - LIBRE COMPUTER
+- PIN64
+
+Sous groupe PIN64
+----------------------------------------------------------------------------------------------------
+Ox64 : 8$
+****************************************************************************************************
+
+
+Détectée en 2023, SBC très petite.
+
+`0x64 wiki`_
+
+.. _`0x64 wiki` : https://wiki.pine64.org/wiki/Ox64
+
+.. image:: images/400px-Ox64_board.jpg 
+   :width: 300 px
+
+ROCKPro64
+****************************************************************************************************
+
+`ROCKPro64 4GB Single Board Computer`_ 80$ en 4G et 60 en 2
+
+.. _`ROCKPro64 4GB Single Board Computer` : https://pine64.com/product/rockpro64-4gb-single-board-computer/
+
+
+SoC : RK3399
+
+`ROCKPro64 wiki`_ je suis pas fan
+
+.. _`ROCKPro64 wiki` : https://wiki.pine64.org/wiki/ROCKPro64
+
 
 
 Raspberry pi Zero et concurrentes
@@ -319,10 +350,12 @@ Chez Orange pi
     PI3
     PI4
     PI4B
+    PI5 RK3588S
     Plus 2E
     R1
     R1 Plus
-    RK3399
+    RK3399 EOL
+
     
     Zero LTS
     Zero Plus2
