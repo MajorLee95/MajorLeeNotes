@@ -1,11 +1,11 @@
 ++++++++++++++++++++++++++++++++
-Documenter
+Documenter *
 ++++++++++++++++++++++++++++++++
 
-:Auteur: J.Soranzo
+.. include:: ../volabid.rst
+
 :Date: Novembre 2019
-:Societe: VoLAB
-:Entity: VoRoBoTics
+:mise à jour: 13/01/2023
 
 .. toctree::
    :maxdepth: 2
@@ -40,11 +40,16 @@ framamind : en ligne (donc pas pour moi)
 
 Je recherche un outil en ligne capable d'importer du XMIND
 
+Il y a aussi `Freeplane`_, un fork de Freemand plus abouti
+
+.. _`Freeplane` : https://docs.freeplane.org/
+
+
 ================================
 Documenter un projet
 ================================
 Etat d'avancement: après avoir fortement utilisé Libreoffice et les cartes heuristiques avec 
-Feemind d'abord puis avec Xmind, aujourd'hui j'utilise de préférence Sphinx et les fichiers 
+Feemind d'abord puis avec Xmind, aujourd'hui, vrai en 2023, j'utilise de préférence Sphinx et les fichiers 
 Restrucured Text.
 
 J'ai abandonné Xmind pour la prise de notes car il produit des fichiers beaucoup trop long à ouvrir.
@@ -58,7 +63,7 @@ Il s'agit d'un grand projet dans lequel sont apparus de petits sous projet.
 
 Comment faut-il versionné tout cela ? Un gros monolithe ou plein de petits projets ?
 
-Je n'ai pas encore (Février 2020) trouvé de réponse satisfaisante...
+Je n'ai pas encore (Février 2020 puis en Janvier 2023) trouvé de réponse satisfaisante...
 
 ----------------------------------------------------------------------------------------------------
 

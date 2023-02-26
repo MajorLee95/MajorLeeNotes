@@ -2,17 +2,18 @@
     single: Python
 
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-Python (mes notes)
+Python* (mes notes)
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 :Auteur: J.Soranzo
 :Date: Août 2020
-:mise à jour: 13/07/2021
+:mise à jour: 04/02/2023
 :Societe: VoRoBoTics
 :Entity: VoLAB
 
 .. contents::
     :backlinks: top
+
 
 
 ====================================================================================================
@@ -1652,7 +1653,7 @@ Python2 to 3
     pair: Python; Time
 
 ====================================================================================================
-Time
+Time et dateTime
 ====================================================================================================
 package standard (pas besoin de pip install)
 
@@ -1660,9 +1661,21 @@ Construct a file name with time:
 
 .. code:: python
 
-    from time strftime
+    from time import strftime
     filename= "bprefixe_" + strftime("%Y%m%d-%H%M%S") + ".txt"
 
+Temps utc:
+
+.. code:: python
+
+    from datetime import datetime
+    date = int(datetime.now().timestamp())
+
+Afficher une date:
+
+.. code:: python
+
+    datetime.now().strftime('%d/%m/%Y, %H:%M')
 
 ====================================================================================================
 I2C
@@ -1740,8 +1753,12 @@ Voir `la doc short intro`_
 Gestionnaires graphiques
 ====================================================================================================
 tkinter
+----------------------------------------------------------------------------------------------------
+Voir fichiers Freeplane. Todo: convertir en rst
 
 pyQt5
+----------------------------------------------------------------------------------------------------
+Voir fichiers Freeplane. Todo: convertir en rst
 
 
 ====================================================================================================
@@ -1757,6 +1774,32 @@ J'ai déjà un template avec Qt dans::
 Template à base de tkinter en cours de construction (au 30/6/22)::
 
     perso\0044-Iot_ESP_PPlug\projet\_3_software\pythonTools\pytemplt
+
+====================================================================================================
+Snippets
+====================================================================================================
+
+Chemins
+----------------------------------------------------------------------------------------------------
+.. code:: python
+
+    import os
+
+    print('basename:    ', os.path.basename(__file__))
+
+    dir = os.path.dirname(os.path.abspath(__file__))
+    print('dirname:     ', dir )
+
+    fichier = 'nomDuFichier.ext'
+
+    fullDir = os.path.join( dir, fichier)
+    print( "fulldir = ", fullDir )
+
+    if os.path.exists(fullDir):
+        print('fichier trouvé')
+
+
+
 
 
 

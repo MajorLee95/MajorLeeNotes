@@ -89,6 +89,15 @@ Major LEE Glossaire
     UEFI
         Unified Extensible Firmware interface successeur de l'EFI
 
+    CRUD
+        Creat Read Update Delete : pour les requête API
+
+    LTE
+        Long Term Evolution (la 4G)
+
+    GSM
+        Global System for Mobile Communications (GSM)
+
 
 .. _`Application Binary Interface` :  https://en.wikipedia.org/wiki/Application_binary_interface
         

@@ -155,7 +155,11 @@ Mais on y apprend également comment réorganiser ces tout petits commits.
 ====================================================================================================
 git rebase
 ====================================================================================================
-https://www.miximum.fr/blog/git-rebase/
+`Git rebase : qu'est-ce que c'est ? Comment s'en servir ?`_
+
+.. _`Git rebase : qu'est-ce que c'est ? Comment s'en servir ?` : https://www.miximum.fr/blog/git-rebase/
+
+
 
 
 - conserver un historique propre ;
@@ -176,9 +180,40 @@ Les conflits ont alors déjà été résolus.
 .. WARNING:: Ne pas rebaser l'historique public
    :class: without-title
 
+
 source : `Atlassian.com Git-rebase en français`_
 
 .. _`Atlassian.com Git-rebase en français` : https://www.atlassian.com/fr/git/tutorials/rewriting-history/git-rebase
+
+Règle d'or: L'historique partagé jamais tu ne rebaseras
+----------------------------------------------------------------------------------------------------
+
+.. WARNING:: Tant que vous rebasez vos petites branches en local, tout va bien. Mais attention, 
+    :class: without-title
+
+    si vous rebasez une branche qui se trouve déjà sur le serveur, c'est la catastrophe.
+
+`Git rebase : qu'est-ce que c'est ? Comment s'en servir ?`_ §L'historique partagé jamais tu ne rebaseras
+
+dit autrement:
+
+.. WARNING:: N'utilisez jamais la commande git rebase sur les branches publiques. C'est la règle d'or !
+   :class: without-title
+
+
+
+Article connexe : Réécrire l'historique sur Atlassian
+----------------------------------------------------------------------------------------------------
+`Réécrire l'historique`_
+
+.. _`Réécrire l'historique` : https://www.atlassian.com/fr/git/tutorials/rewriting-history
+
+Il y a cette phrase dans le §Ne pas modifier les commits publics::
+
+    Évitez de modifier un commit sur lequel repose le travail d'autres développeurs.
+
+Même si ce n'est pas en apparence pas le cas. En effet, dès qu'un commit se trouve sur un dépôt distant
+on ne peut pas savoir si une branche n'a pas été tirée d'un commit sur un dépôt local...
 
 ====================================================================================================
 git bisec
