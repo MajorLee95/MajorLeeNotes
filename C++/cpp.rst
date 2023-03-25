@@ -7,6 +7,7 @@ Mes notes sur C++
 
 :Auteur: J.Soranzo
 :Date: Novembre 2019
+:Update: 15/03/2023
 :Societe: VoRoBoTics
 :Entity: VoLAB
 
@@ -29,9 +30,22 @@ Ceci n'est pas un cours sur le C++, il y en a déjà plein et de très bons voir
 
 **Voir aussi la map cpp_notes.xmind**
 
-================================
+====================================================================================================
+Codding Styles/ formatting
+====================================================================================================
+
+`Google C++ Style Guide`_
+
+.. _`Google C++ Style Guide` : https://google.github.io/styleguide/cppguide.html
+
+Dans Vscode::
+
+    C_Cpp.clang_format_fallbackStyle = { BasedOnStyle: Google, IndentWidth: 4 }
+
+
+====================================================================================================
 C++ opérateurs (surcharge)
-================================
+====================================================================================================
 Même si l'on parle de classe, ceci n'est pas une méthode.
 C'est une fonction normale située à l'extérieur de toute classe.
 
@@ -42,7 +56,7 @@ Exemple:
     bool operator==(Durée const& a, Durée const& b);
     
 Surcharge opérateur ==, >, ... 
-======================================     
+----------------------------------------------------------------------------------------------------
 Exemple complet:
 
 .. code:: cpp
@@ -65,7 +79,7 @@ Exemple complet:
 .. NOTE::    Attention au mot clé const à la fin de la méthode estEgale !
 
 Surcharge des opérateurs arithmétiques
-=======================================
+----------------------------------------------------------------------------------------------------
 Exemple avec +, on commence par surcharger l'opérateur de raccourci +=.
 
 Comme il modifie l'objet lui-même cette surcharge est un méthode de l'objet.
@@ -104,7 +118,7 @@ Puis on peut surcharger + avec une fonction classique
     
 
 Surcharge de l'opérateur <<
-======================================
+----------------------------------------------------------------------------------------------------
 Cette surcharge est un peu particulière. On commence, normalement pas créer un méthode dans l'objet
 
 Exemple la méthode affiche()
@@ -217,7 +231,7 @@ le type qu'on veut utiliser entre < et >::
     Prototype et corps de la fonction template DOIVENT se trouver dans le .h
     
 Spécialisation
-======================================
+----------------------------------------------------------------------------------------------------
 Une fois le template créé, on peut le spécialiser pour un type en particulier. Cela permet de
 changer le comportement de la focntion pour un type en particulier.
 
@@ -397,7 +411,7 @@ On pourrait aussi parler de list
     single: Itérator, Itérer
     
 Itérer un tableau rappel
-======================================
+----------------------------------------------------------------------------------------------------
 .. code:: cpp
     
     int tableau[] ...
@@ -495,7 +509,7 @@ sous forme de pointeurs**. Il est alors **nécessaire** de faire cette surcharge
     //Sauf les commentaires !
 
 Surcharge de l'opérateur =     
-======================================
+----------------------------------------------------------------------------------------------------
 Si il s'avère nécessaire de surcharger l'opérateur de copie, c'est qu'il est nécessaire de le faire
 également pour l'opérateur =
 
@@ -543,11 +557,11 @@ dans le monde ARDUINO
 Typedef, struct & co
 ================================
 Typedef 
-======================================
+----------------------------------------------------------------------------------------------------
 typedef *type_connu nouveau_nom*; **Alternative C++11** : using _newName = _oldType ;
 
 struct
-======================================
+----------------------------------------------------------------------------------------------------
 
 .. code:: cpp
 
@@ -595,13 +609,13 @@ arduino
     autrePoint_T deuxeimePoint;
 
 enum 
-======================================
+----------------------------------------------------------------------------------------------------
 Même schéma que struct
 
 		enum _enumName { _elements;  };
 
 typedef et les fonctions 
-======================================        
+----------------------------------------------------------------------------------------------------        
 typedef pour déclarer des profile de fonction (souvent avec des pointeur sur fonction):
 
 .. code:: cpp
@@ -611,7 +625,7 @@ typedef pour déclarer des profile de fonction (souvent avec des pointeur sur fo
     t_somefunc afunc = &product;
 
 Champs de bits
-======================================
+----------------------------------------------------------------------------------------------------
 Union champs de bits
 
 .. code:: cpp
@@ -631,7 +645,7 @@ Union champs de bits
 Il est vivement conseillé de faire des essais afin d'être sur de l'endianess de la machine
 
 Exemple trame série
-======================================
+----------------------------------------------------------------------------------------------------
 
 .. code:: cpp
 
@@ -752,7 +766,7 @@ ModelIo vite abandonnée.
 .. _plantUMLRef:
 
 PlantUML
-====================================================================================================
+----------------------------------------------------------------------------------------------------
 Utilisé sur Electrical Power Strip IoT
 
 `Site officiel de PlantUML`_

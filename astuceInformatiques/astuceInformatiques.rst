@@ -2,7 +2,7 @@
 Astuces informatiques
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-.. include:: ../volabid.rst
+.. include:: ../idBloc.rst
 
 
 :Date: Novembre 2019

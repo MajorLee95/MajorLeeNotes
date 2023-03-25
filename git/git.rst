@@ -85,6 +85,14 @@ Tutos en français
 
 .. _`Découvrir Git : introduction et premiers pas` : https://www.miximum.fr/blog/decouvrir-git/
 
+====================================================================================================
+Git FAQ
+====================================================================================================
+
+`FAQ Git : retrouvez les meilleures réponses à vos questions pour apprendre Git, de niveau débutant à expert`_
+
+.. _`FAQ Git : retrouvez les meilleures réponses à vos questions pour apprendre Git, de niveau débutant à expert` : https://alm.developpez.com/faq/git/
+
 
 ====================================================================================================
 Workflow
@@ -227,7 +235,7 @@ Gérer les dépôts immenses...
 ====================================================================================================
 .. IMPORTANT::
 
-    how to manage a project with source code, electronique schematic and source documentation ?
+    how to manage a project with source code, electronic schematic and source documentation ?
 
 Un article : `How to handle big repositories with Git`_
 
@@ -245,7 +253,21 @@ git init --bare --share tout simplement
 Petite subtilité au moment du clone : on peut cloner vers un sous répertoire dont le nom est
 différent de celui de la source.
 
- 
+====================================================================================================
+branches orphelines
+====================================================================================================
+
+Pourquoi créer des branches orphelines ?
+
+- vous souhaitez avoir une branche dédiée pour votre documentation.
+
+- vous souhaitez recommencer un projet dans une nouvelle technologie.
+
+- vous souhaitez fusionner deux repositories qui n’ont pas le même historique.
+
+::
+
+    git checkout --orphan nom_de_la_branche
 
 ================================
 petits trucs utiles 
