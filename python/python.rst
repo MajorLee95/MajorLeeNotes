@@ -1677,6 +1677,15 @@ Afficher une date:
 
     datetime.now().strftime('%d/%m/%Y, %H:%M')
 
+.. code:: python
+
+    from datetime import timedelta
+    from datetime import datetime
+
+    t1=datetime.now().strftime('%d/%m/%Y %H:%M:%S')
+    t2=(datetime.now()+timedelta(seconds=60)).strftime('%d/%m/%Y %H:%M:%S')
+    print(f"t1:{t1} - t2 : {t2}")
+
 ====================================================================================================
 I2C
 ====================================================================================================
@@ -1760,6 +1769,9 @@ pyQt5
 ----------------------------------------------------------------------------------------------------
 Voir fichiers Freeplane. Todo: convertir en rst
 
+Pysimplegui
+----------------------------------------------------------------------------------------------------
+Voir fichiers Freeplane. Todo: convertir en rst (et encore j'ai jsute mis une ligne pour m'en rappeler)
 
 ====================================================================================================
 Appli minimum (template)
@@ -1798,10 +1810,55 @@ Chemins
     if os.path.exists(fullDir):
         print('fichier trouvé')
 
+====================================================================================================
+Advenced Python
+====================================================================================================
+
+- `Python sleep(): How to Add Time Delays to Your Code`_ 
+
+On commence par cet article qui se ramifie vers pleins de sujets intéressants.
+
+.. _`Python sleep(): How to Add Time Delays to Your Code` : https://realpython.com/python-sleep/
+
+- `Sending Emails With Python`_
+
+- `Adding a Python sleep() Call With Decorators`_
+
+- `Primer on Python Decorators`_
+
+- `An Intro to Threading in Python`_
+
+- `Python Concurrency & Parallel Programming`_
+
+- `Async IO in Python: A Complete Walkthrough`_
 
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+.. _`Sending Emails With Python` : https://realpython.com/python-send-email/
+
+.. _`Adding a Python sleep() Call With Decorators` : https://realpython.com/python-sleep/#adding-a-python-sleep-call-with-decorators
+
+.. _`Primer on Python Decorators` : https://realpython.com/primer-on-python-decorators/
+
+.. _`An Intro to Threading in Python` : https://realpython.com/intro-to-python-threading/
+
+.. _`Python Concurrency & Parallel Programming` : https://realpython.com/learning-paths/python-concurrency-parallel-programming/
+
+.. _`Async IO in Python: A Complete Walkthrough` : https://realpython.com/async-io-python/
 
 ====================================================================================================
 Weblinks

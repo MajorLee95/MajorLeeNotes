@@ -38,7 +38,7 @@ n'avais pas de sauvegarde... Tous ces précieux commit qui se sont envolés...
 
 Ce dépôt distant peut être:
 
-- un dépôt sur github.com ou sur gitlab.com
+- un dépôt sur github.com ou sur gitlab.com ou encore Bitbucket.com
 
 .. HINT::
 
@@ -272,6 +272,8 @@ Pourquoi créer des branches orphelines ?
 ================================
 petits trucs utiles 
 ================================
+
+
 Mettre un projet déjà bien avancé sous GitHUB
 ----------------------------------------------------------------------------------------------------
 Situation : j'ai un dossier projet déjà bien avancé et je souhaite le mettre sous github. Procédure:
@@ -491,7 +493,13 @@ git push
 
 supprimer une branche distante
 ----------------------------------------------------------------------------------------------------
-git push origin : <nombrancheasupprimer>
+git push origin :<nombrancheasupprimer> ou git push origin --delete <branchDistante>
+
+On peut aussi les effacer côté serveur (gitlab, bitbucker)
+
+Mettre à jour la liste locale des branche remote::
+
+    git fetch -p
 
 le 17/10/2020 : git push origin +HEAD
 

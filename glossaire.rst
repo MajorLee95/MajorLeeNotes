@@ -13,6 +13,9 @@ Major LEE Glossaire
     CDN
         Content Delivary Network, réseau de distribution de contenu. Exemple pour bootstrap
 
+    CRM
+        Customer Relationship Management ou gestion de la relation client
+
     CI
         Continuous Integration (test de non reg automatique): les plus connus CircleCI, Jenkins, CruisControl
 
