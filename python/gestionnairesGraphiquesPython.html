@@ -1,0 +1,730 @@
+
+<!DOCTYPE html>
+
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Les gestionnaires graphiques dans Python &#8212; Documentation MajorLee&#39;s notes </title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/nature.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/translations.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Recherche" href="../search.html" />
+    <link rel="next" title="Les objets connectés" href="../lesObjetsConnectes/lesObjetsConnectes.html" />
+    <link rel="prev" title="Python* (mes notes)" href="python.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="Index général"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../lesObjetsConnectes/lesObjetsConnectes.html" title="Les objets connectés"
+             accesskey="N">suivant</a> |</li>
+        <li class="right" >
+          <a href="python.html" title="Python* (mes notes)"
+             accesskey="P">précédent</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Documentation MajorLee&#39;s notes </a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="python.html" accesskey="U">Python* (mes notes)</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Les gestionnaires graphiques dans Python</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="les-gestionnaires-graphiques-dans-python">
+<h1><a class="toc-backref" href="#sommaire">Les gestionnaires graphiques dans Python</a><a class="headerlink" href="#les-gestionnaires-graphiques-dans-python" title="Lien permanent vers ce titre">¶</a></h1>
+<dl class="field-list simple">
+<dt class="field-odd">Auteur</dt>
+<dd class="field-odd"><p>J.Soranzo</p>
+</dd>
+<dt class="field-even">Entity</dt>
+<dd class="field-even"><p><a class="reference external" href="http://www.vorobotics.com/wp/">VoRoBoTics</a> <a class="footnote-reference brackets" href="#id2" id="id3">1</a></p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Création</dt>
+<dd class="field-odd"><p>12/2023</p>
+</dd>
+<dt class="field-even">Maj</dt>
+<dd class="field-even"><p>12/2023</p>
+</dd>
+</dl>
+<div class="contents topic" id="sommaire">
+<p class="topic-title">Sommaire</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#les-gestionnaires-graphiques-dans-python" id="id4">Les gestionnaires graphiques dans Python</a></p>
+<ul>
+<li><p><a class="reference internal" href="#gestionnaires-graphiques" id="id5">Gestionnaires graphiques</a></p>
+<ul>
+<li><p><a class="reference internal" href="#tkinter" id="id6">tkinter</a></p></li>
+<li><p><a class="reference internal" href="#pyqt5" id="id7">pyQt5</a></p></li>
+<li><p><a class="reference internal" href="#pysimplegui" id="id8">Pysimplegui</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#id1" id="id9">tkInter</a></p>
+<ul>
+<li><p><a class="reference internal" href="#docs" id="id10">Docs</a></p></li>
+<li><p><a class="reference internal" href="#trucs-et-astuce" id="id11">Trucs et astuce</a></p></li>
+<li><p><a class="reference internal" href="#outils" id="id12">Outils</a></p></li>
+<li><p><a class="reference internal" href="#structuration" id="id13">Structuration</a></p></li>
+<li><p><a class="reference internal" href="#limitations" id="id14">Limitations</a></p></li>
+<li><p><a class="reference internal" href="#gestionnaires-de-geom" id="id15">Gestionnaires de geom</a></p></li>
+<li><p><a class="reference internal" href="#petite-recette-de-cuisine" id="id16">Petite recette de cuisine</a></p>
+<ul>
+<li><p><a class="reference internal" href="#canvas-versus-frame" id="id17">Canvas versus frame</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#appli-minimum" id="id18">Appli minimum</a></p></li>
+<li><p><a class="reference internal" href="#le-reste-a-traiter" id="id19">Le reste à traiter</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#from-mindmap-le-reste" id="id20">From mindmap (le reste)</a></p></li>
+<li><p><a class="reference internal" href="#weblinks" id="id21">Weblinks</a></p></li>
+</ul>
+</li>
+</ul>
+</div>
+<section id="gestionnaires-graphiques">
+<h2><a class="toc-backref" href="#sommaire">Gestionnaires graphiques</a><a class="headerlink" href="#gestionnaires-graphiques" title="Lien permanent vers ce titre">¶</a></h2>
+<section id="tkinter">
+<h3><a class="toc-backref" href="#sommaire">tkinter</a><a class="headerlink" href="#tkinter" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Voir fichiers Freeplane. Todo: convertir en rst en cour ci-dessous</p>
+</section>
+<section id="pyqt5">
+<h3><a class="toc-backref" href="#sommaire">pyQt5</a><a class="headerlink" href="#pyqt5" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Voir fichiers Freeplane. Todo: convertir en rst</p>
+</section>
+<section id="pysimplegui">
+<h3><a class="toc-backref" href="#sommaire">Pysimplegui</a><a class="headerlink" href="#pysimplegui" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Voir fichiers Freeplane. Todo: convertir en rst (et encore j’ai jsute mis une ligne pour m’en rappeler)</p>
+</section>
+</section>
+<section id="id1">
+<h2><a class="toc-backref" href="#sommaire">tkInter</a><a class="headerlink" href="#id1" title="Lien permanent vers ce titre">¶</a></h2>
+<section id="docs">
+<h3><a class="toc-backref" href="#sommaire">Docs</a><a class="headerlink" href="#docs" title="Lien permanent vers ce titre">¶</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Super</span> <span class="n">doc</span> <span class="n">en</span> <span class="n">pdf</span> <span class="n">du</span> <span class="n">site</span> <span class="n">New</span> <span class="n">Mexico</span> <span class="n">Tech</span> <span class="o">&lt;</span><span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">infohost</span><span class="o">.</span><span class="n">nmt</span><span class="o">.</span><span class="n">edu</span><span class="o">/</span><span class="n">tcc</span><span class="o">/</span><span class="n">help</span><span class="o">/</span><span class="n">pubs</span><span class="o">/</span><span class="n">tkinter</span><span class="o">/</span><span class="n">web</span><span class="o">/</span><span class="n">index</span><span class="o">.</span><span class="n">html</span><span class="o">&gt;</span>
+    <span class="n">téléchargé</span> <span class="o">&lt;../</span><span class="mi">03</span><span class="o">-</span><span class="n">Cours_Docs</span><span class="o">/</span><span class="n">programmation</span><span class="o">/</span><span class="n">Python</span><span class="o">/</span><span class="n">tkinter</span><span class="o">.</span><span class="n">pdf</span><span class="o">&gt;</span>
+        <span class="n">on</span> <span class="n">WDD</span>
+    <span class="n">C</span><span class="s1">&#39;est surtout la doc de tlc/tk qui est importante</span>
+        <span class="n">tkinter</span> <span class="n">est</span> <span class="n">juste</span> <span class="n">un</span> <span class="n">wrapper</span> <span class="n">entre</span> <span class="n">Python</span> <span class="n">et</span> <span class="n">tcl</span><span class="o">/</span><span class="n">tk</span>
+        <span class="n">Correction</span> <span class="mi">6</span><span class="o">/</span><span class="mi">7</span><span class="o">/</span><span class="mi">15</span><span class="p">,</span> <span class="n">grace</span> <span class="n">à</span> <span class="n">ce</span> <span class="n">doc</span><span class="p">,</span> <span class="n">la</span> <span class="n">doctcl</span><span class="o">/</span><span class="n">tk</span> <span class="n">devient</span> <span class="n">moins</span> <span class="n">nécessaire</span>
+        <span class="n">Surtout</span> <span class="n">que</span> <span class="n">la</span> <span class="n">gym</span> <span class="n">du</span> <span class="n">wrapper</span> <span class="n">n</span><span class="s1">&#39;est pas simple</span>
+    <span class="n">C</span><span class="s1">&#39;est surtout un ref doc sans exemple</span>
+    <span class="n">Chapitre</span> <span class="mi">27</span> <span class="n">à</span> <span class="n">reconsidérer</span> <span class="mi">6</span><span class="o">/</span><span class="mi">11</span><span class="o">/</span><span class="mi">2020</span>
+    <span class="n">tkinter</span> <span class="n">rérérence</span> <span class="o">&lt;</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">web</span><span class="o">.</span><span class="n">archive</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">web</span><span class="o">/</span><span class="mi">20190524140835</span><span class="o">/</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">infohost</span><span class="o">.</span><span class="n">nmt</span><span class="o">.</span><span class="n">edu</span><span class="o">/</span><span class="n">tcc</span><span class="o">/</span><span class="n">help</span><span class="o">/</span><span class="n">pubs</span><span class="o">/</span><span class="n">tkinter</span><span class="o">/</span><span class="n">web</span><span class="o">/</span><span class="n">index</span><span class="o">.</span><span class="n">html</span><span class="o">&gt;</span>
+        <span class="n">JohnW</span><span class="o">.</span> <span class="n">Shipman</span>
+        <span class="n">Super</span> <span class="n">doc</span> <span class="n">en</span> <span class="n">pdf</span> <span class="n">du</span> <span class="n">site</span> <span class="n">New</span> <span class="n">Mexico</span> <span class="n">Tech</span>
+        <span class="n">pdf</span> <span class="n">dans</span> <span class="n">coursEtDoc</span><span class="o">/</span><span class="n">programmation</span><span class="o">/</span><span class="n">python</span>
+            <span class="n">JohnW</span><span class="o">.</span> <span class="n">Shipman</span>
+<span class="n">DOC</span> <span class="n">Officielle</span> <span class="o">&lt;</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">docs</span><span class="o">.</span><span class="n">python</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">fr</span><span class="o">/</span><span class="mi">3</span><span class="o">/</span><span class="n">library</span><span class="o">/</span><span class="n">tkinter</span><span class="o">.</span><span class="n">html</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</section>
+<section id="trucs-et-astuce">
+<h3><a class="toc-backref" href="#sommaire">Trucs et astuce</a><a class="headerlink" href="#trucs-et-astuce" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Astuce tkInter:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Lier un fonction à un bouton par une fonction lambda permet de passer des paramètres à la callback utilisée</p></li>
+</ul>
+</div></blockquote>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Truc</span> <span class="n">rigolo</span>
+<span class="n">tkinter</span><span class="o">.</span><span class="n">_test</span><span class="p">()</span>
+</pre></div>
+</div>
+</section>
+<section id="outils">
+<h3><a class="toc-backref" href="#sommaire">Outils</a><a class="headerlink" href="#outils" title="Lien permanent vers ce titre">¶</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Il existe un tkinterdesigner qui se nomme Page
+    http://page.sourceforge.net/
+    Je l&#39;ai téléchargé et installé (MSI 08/2020)
+        redo en 12/07/2022 sur le MSI
+        J&#39;ai eu un peu de mal à le lancer
+        winpage.bat
+            double click dessus
+    Cela fonctionne si on suit le tuto du pdf. J&#39;ai juste créé un bouton
+        où ?
+        Dans le répertoire doc
+    Mais je me demande si je ne préfère pas faire à la main !
+    le répertoire examples est bien fourni
+    s&#39;install directement en c:/page
+    essais
+        C:\MountWD\Donnees\ODJ\008_iao_wrk\Python\experimentations\tkinter_exemples\pageUiDesigner
+            08/2020
+        intéressant pour expérimenter des Widget
+</pre></div>
+</div>
+</section>
+<section id="structuration">
+<h3><a class="toc-backref" href="#sommaire">Structuration</a><a class="headerlink" href="#structuration" title="Lien permanent vers ce titre">¶</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>tkinter c&#39;est &lt;https://docs.python.org/3.4/library/tkinter.html#tkinter-modules&gt;
+    17 Widgets
+        Button
+        Canvas
+            A canvas is a rectangular area intended for drawing pictures or other complex layouts. On it you can place graphics, text, widgets, or frames.
+        Checkbutton
+        Entry
+        Frame
+            A frame is basically just a container for other widgets.
+            Frame widgets are a valuable tool in making your application modular. You can group a set of related widgets into a compound widget by putting them into a frame.
+        Label
+        LabelFrame
+        Listbox
+        Menu
+        Menubutton
+        Message
+            This widget is similar to the Label widget but it is intended for displaying messages over multiple lines.
+        OptionMenu
+        Radiobutton
+        Scale
+        Scrollbar
+        Spinbox
+        Text
+            Text widgets are a much more generalized method for handling multiple lines of text than the Label widget. Text widgets are pretty much a complete text editor in a window
+        +ttk qui
+            Redéfini des Wgts et en défini 4 nouvx
+                import tkinter as tk
+                from tkinter import ttk
+                Sauvegarde l&#39;espace de nom de tkinter donc:
+                on utilise la syntaxe ttk.wdg
+                                        • Section 31, “ttk.Combobox” (p. 115).
+                • Section 37, “ttk.Notebook” (p. 126).
+                • Section 39, “ttk.Progressbar” (p. 130).
+                • Section 43, “ttk.Separator” (p. 137)
+                Les autres sont mis à la sauce de l&#39;interface graphique de la plateform
+
+        13 sous package ou modules
+            import tkinter.messagebox
+            import tkinter.filedialog
+            PACKAGE CONTENTS
+                colorchooser
+                commondialog
+                constants
+                dialog
+                dnd
+                filedialog
+                font
+                messagebox
+                scrolledtext
+                simpledialog
+                test (package)
+                tix
+                ttk
+        Des méthodes communes
+            3 gestionnaires de géométrie différents &lt;http://effbot.org/zone/tkinter-geometry.htm&gt;
+                pack
+                    .pack() empile les widget sur une colonne centrée les uns aux dessus des autres dans le widget parent
+                    .pack(fill=X ) permet de prendre toute la largeur duparentWidget
+                        de même avec fill=Y pour la verticale
+                    .pack( side = LEFT ) permet d&#39;aligner les wdg depuis la gauche vers la droite
+                grid
+                et place
+                    place( x,y )
+    Une gestion d&#39;événements
+</pre></div>
+</div>
+<div class="without-title admonition warning">
+<p class="admonition-title">Avertissement</p>
+<p>tkMessageBox est devenu tkinter.messagebox</p>
+<dl class="simple">
+<dt>S’appelle au travers de ses méthode</dt><dd><p>messagebox.askyesnocancel(title= »Hello », message= »coucou »)</p>
+</dd>
+<dt>Nécessite de faire :from tkinter import messagebox</dt><dd><p>(j’ai pas réussi à le faire marcher autrement)</p>
+</dd>
+</dl>
+</div>
+</section>
+<section id="limitations">
+<h3><a class="toc-backref" href="#sommaire">Limitations</a><a class="headerlink" href="#limitations" title="Lien permanent vers ce titre">¶</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Ne</span> <span class="n">supporte</span> <span class="n">pas</span> <span class="n">le</span> <span class="n">multithreading</span>
+    <span class="n">génant</span> <span class="n">pour</span> <span class="n">exécuter</span> <span class="n">une</span> <span class="n">tâche</span> <span class="n">périodique</span>
+    <span class="n">il</span> <span class="n">y</span> <span class="n">a</span> <span class="n">une</span> <span class="n">méthode</span> <span class="n">applicable</span> <span class="n">à</span> <span class="n">tout</span> <span class="n">widget</span> <span class="o">.</span><span class="n">after</span>
+        <span class="n">chapitre</span> <span class="mi">26</span> <span class="n">du</span> <span class="n">livre</span> <span class="n">sur</span> <span class="n">tkinter</span><span class="o">.</span><span class="n">pdf</span>
+        <span class="kn">from</span> <span class="nn">tkinter</span> <span class="kn">import</span> <span class="o">*</span>
+        <span class="kn">import</span> <span class="nn">subprocess</span>
+
+        <span class="n">output</span> <span class="o">=</span> <span class="n">subprocess</span><span class="o">.</span><span class="n">check_output</span><span class="p">(</span><span class="s1">&#39;sleep 2 ; date&#39;</span><span class="p">,</span> <span class="n">shell</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+        <span class="n">win</span> <span class="o">=</span> <span class="n">Tk</span><span class="p">()</span>
+        <span class="n">f1</span> <span class="o">=</span> <span class="n">Frame</span><span class="p">(</span> <span class="n">win</span> <span class="p">)</span>
+        <span class="n">tp</span> <span class="o">=</span> <span class="n">Label</span><span class="p">(</span> <span class="n">f1</span> <span class="p">,</span> <span class="n">text</span><span class="o">=</span><span class="s1">&#39;Date: &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">output</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]))</span>
+        <span class="n">f1</span><span class="o">.</span><span class="n">pack</span><span class="p">()</span>
+        <span class="n">tp</span><span class="o">.</span><span class="n">pack</span><span class="p">()</span>
+
+        <span class="k">def</span> <span class="nf">task</span><span class="p">():</span>
+            <span class="n">output</span> <span class="o">=</span> <span class="n">subprocess</span><span class="o">.</span><span class="n">check_output</span><span class="p">(</span><span class="s1">&#39;date&#39;</span><span class="p">,</span> <span class="n">shell</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+            <span class="n">tp</span><span class="o">.</span><span class="n">configure</span><span class="p">(</span><span class="n">text</span> <span class="o">=</span> <span class="s1">&#39;Date: &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">output</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]))</span>
+            <span class="n">win</span><span class="o">.</span><span class="n">after</span><span class="p">(</span><span class="mi">2000</span><span class="p">,</span> <span class="n">task</span><span class="p">)</span>
+        <span class="n">win</span><span class="o">.</span><span class="n">after</span><span class="p">(</span><span class="mi">2000</span><span class="p">,</span> <span class="n">task</span><span class="p">)</span>
+
+        <span class="n">win</span><span class="o">.</span><span class="n">mainloop</span><span class="p">()</span>
+
+<span class="n">le</span> <span class="n">gestionnaire</span> <span class="n">graphique</span> <span class="n">grid</span> <span class="n">à</span> <span class="n">tendance</span> <span class="n">à</span> <span class="n">n</span><span class="s1">&#39;en faire qu&#39;</span><span class="n">à</span> <span class="n">sa</span> <span class="n">tête</span> <span class="n">pour</span> <span class="n">positionner</span> <span class="n">les</span> <span class="n">objets</span>
+<span class="n">utiliser</span> <span class="n">pack</span><span class="p">,</span> <span class="n">c</span><span class="s1">&#39;est ce que tout le monde fait ou presque</span>
+
+<span class="n">Exemple</span> <span class="n">de</span> <span class="n">limitation</span><span class="p">:</span> <span class="n">une</span> <span class="n">zone</span> <span class="n">de</span> <span class="n">texte</span> <span class="n">n</span><span class="s1">&#39;a pas de scroll bar automatique (on est obligé de l&#39;</span><span class="n">ajouter</span> <span class="n">à</span> <span class="n">part</span><span class="p">)</span>
+    <span class="n">non</span> <span class="n">voir</span> <span class="n">les</span> <span class="n">autres</span> <span class="n">modules</span> <span class="n">contenu</span> <span class="n">dans</span> <span class="n">la</span> <span class="n">package</span>
+<span class="n">Même</span> <span class="n">avec</span> <span class="n">ttk</span><span class="p">,</span> <span class="n">il</span> <span class="n">reste</span> <span class="n">des</span> <span class="n">manques</span><span class="o">.</span>
+</pre></div>
+</div>
+</section>
+<section id="gestionnaires-de-geom">
+<h3><a class="toc-backref" href="#sommaire">Gestionnaires de geom</a><a class="headerlink" href="#gestionnaires-de-geom" title="Lien permanent vers ce titre">¶</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Il y a 3 gestionnaires de géométrie &lt;#4omhr2i30b381akekijnvatgo6&gt;
+    To display it, you need to call a special method: either grid, pack (which we’ve used in all examples this far), or place.
+    pack()
+        The pack() method mainly uses a packing algorithm in order to place widgets in a Frame or window in a specified order.  This method is mainly used to organize the widgets in a block.
+        3 paramètres seulement fill, expand, side
+        En vrai, il y en a un peu plus
+            help (tk.Button.pack)
+    grid()
+        The most used geometry manager is grid() because it provides all the power of pack() function but in an easier and maintainable way.
+        You can easily specify the location of a widget just by calling grid() function and passing the row and column indices to the row and column keyword arguments, respectively
+    place()
+        This method basically organizes the widget in accordance with its x and y coordinates. Both x and y coordinates are in pixels
+            Thus the origin (where x and y are both 0) is the top-left corner of the Frame or the window
+            Thus, the y argument specifies the number of pixels of space from the top of the window, to place the widget, and the x argument specifies the number of pixels from the left of the window
+        geom manager utilisé par l&#39;utilitaire Page
+    site &lt;https://www.studytonight.com/tkinter/python-tkinter-geometry-manager&gt;
+</pre></div>
+</div>
+</section>
+<section id="petite-recette-de-cuisine">
+<h3><a class="toc-backref" href="#sommaire">Petite recette de cuisine</a><a class="headerlink" href="#petite-recette-de-cuisine" title="Lien permanent vers ce titre">¶</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">fen</span> <span class="o">=</span> <span class="n">tkinter</span><span class="o">.</span><span class="n">Tk</span><span class="p">()</span>
+    <span class="n">avec</span> <span class="n">un</span> <span class="n">T</span> <span class="n">majuscule</span>
+    <span class="n">Dans</span> <span class="n">cette</span> <span class="n">fenêtre</span> <span class="n">on</span> <span class="n">peut</span> <span class="n">alors</span> <span class="n">mettre</span> <span class="n">des</span> <span class="n">Widgets</span>
+    <span class="n">Comme</span> <span class="n">un</span> <span class="n">Canevas</span>
+        <span class="n">can</span> <span class="o">=</span> <span class="n">tk</span><span class="o">.</span><span class="n">Canvas</span><span class="p">(</span><span class="n">fen</span><span class="p">,</span> <span class="n">width</span> <span class="o">=</span> <span class="mi">400</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span> <span class="mi">200</span><span class="p">,</span> <span class="n">bg</span> <span class="o">=</span> <span class="s1">&#39;ivory&#39;</span><span class="p">)</span>
+        <span class="n">can</span><span class="o">.</span><span class="n">pack</span><span class="p">()</span>
+    <span class="n">ou</span> <span class="n">un</span> <span class="n">Frame</span>
+        <span class="n">Dans</span> <span class="n">le</span> <span class="n">frame</span> <span class="n">on</span> <span class="n">peut</span> <span class="n">mettre</span> <span class="n">des</span> <span class="n">button</span> <span class="n">un</span> <span class="n">autre</span> <span class="n">Frame</span><span class="o">...</span>
+    <span class="n">ou</span> <span class="n">un</span> <span class="n">Button</span>
+</pre></div>
+</div>
+<p>Snippet pour un bouton:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>bout = tkinter.Button(fen, text=&#39;le text du bouton&#39;, command = fen.destroy)
+    à noter qu&#39;à la fin on ne met pas de paranthèse à la méthode destroy, on passe son adresse à la fonction
+    à la place de destroy, on peut utiliser quit
+        quit permet de quitter le gestionnaire d&#39;événement mais ne détruit pas la fenêtre
+        Cette méthode sert à fermer (quitter) le réceptionnaire d’événements (mainloop) associé à cette fenêtre.
+    et surtout après bout.pack()
+        ou bout.grid(row=i, column=j)
+</pre></div>
+</div>
+<section id="canvas-versus-frame">
+<h4><a class="toc-backref" href="#sommaire">Canvas versus frame</a><a class="headerlink" href="#canvas-versus-frame" title="Lien permanent vers ce titre">¶</a></h4>
+<p>A <strong>Frame</strong> is designed to be a container for other widgets. It really doesn’t do anything but provide
+a border and color, and to collect a set of widgets into a logical group.</p>
+<p>A <strong>Canvas</strong> is something that can act as a container for other widgets (as can just about any widget),
+but it also has features that let you draw circles, lines, rectangles, and other objects on it.</p>
+<p>A <strong>Canvas</strong> can also be scrolled, whereas a frame cannot.</p>
+</section>
+</section>
+<section id="appli-minimum">
+<h3><a class="toc-backref" href="#sommaire">Appli minimum</a><a class="headerlink" href="#appli-minimum" title="Lien permanent vers ce titre">¶</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">version</span> <span class="n">non</span> <span class="n">objet</span>
+    <span class="n">reste</span> <span class="n">à</span> <span class="n">faire</span><span class="o">...</span>
+
+<span class="n">version</span> <span class="n">objet</span>
+    <span class="mi">2</span> <span class="n">façons</span> <span class="n">de</span> <span class="n">faire</span> <span class="n">rencontrées</span> <span class="n">lors</span> <span class="n">de</span> <span class="n">mes</span> <span class="n">recherche</span>
+        <span class="n">façon</span> <span class="n">opneclassroom</span>
+            <span class="n">on</span> <span class="n">dérive</span> <span class="n">la</span> <span class="n">classe</span> <span class="n">Frame</span>
+            <span class="n">fenetre</span> <span class="o">=</span> <span class="n">Tk</span><span class="p">()</span>
+
+            <span class="n">interface</span> <span class="o">=</span> <span class="n">Interface</span><span class="p">(</span><span class="n">fenetre</span><span class="p">)</span>
+            <span class="n">interface</span><span class="o">.</span><span class="n">mainloop</span><span class="p">()</span>
+            <span class="n">interface</span><span class="o">.</span><span class="n">destroy</span><span class="p">()</span>
+
+        <span class="n">façon</span> <span class="n">Object</span><span class="o">-</span><span class="n">Oriented</span> <span class="n">Programming</span> <span class="ow">in</span> <span class="n">Python</span> <span class="o">&lt;</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">python</span><span class="o">-</span><span class="n">textbok</span><span class="o">.</span><span class="n">readthedocs</span><span class="o">.</span><span class="n">io</span><span class="o">/</span><span class="n">en</span><span class="o">/</span><span class="mf">1.0</span><span class="o">/</span><span class="n">index</span><span class="o">.</span><span class="n">html</span><span class="o">&gt;</span>
+            <span class="n">on</span> <span class="n">part</span> <span class="n">de</span> <span class="n">rien</span>
+            <span class="n">root</span> <span class="o">=</span> <span class="n">Tk</span><span class="p">()</span>
+            <span class="n">my_gui</span> <span class="o">=</span> <span class="n">MyFirstGUI</span><span class="p">(</span><span class="n">root</span><span class="p">)</span>
+            <span class="n">root</span><span class="o">.</span><span class="n">mainloop</span><span class="p">()</span>
+
+        <span class="n">Il</span> <span class="n">me</span> <span class="n">semble</span> <span class="n">que</span> <span class="n">la</span> <span class="n">différence</span> <span class="n">est</span> <span class="n">dans</span> <span class="n">l</span><span class="s1">&#39;utilisation</span>
+            <span class="n">Euh</span> <span class="n">non</span> <span class="n">finalement</span> <span class="n">c</span><span class="s1">&#39;est pareil</span>
+            <span class="n">Il</span> <span class="n">y</span> <span class="n">a</span> <span class="n">une</span> <span class="n">légère</span> <span class="n">subtilité</span>
+                <span class="n">qui</span> <span class="n">contient</span> <span class="n">mainloop</span><span class="p">()</span>
+                <span class="n">Dans</span> <span class="n">un</span> <span class="n">cas</span> <span class="n">openCr</span> <span class="n">c</span><span class="s1">&#39;est interface et la fenêtre en est un fille</span>
+                <span class="n">Dans</span> <span class="n">l</span><span class="s1">&#39;autre cas root reste root</span>
+</pre></div>
+</div>
+</section>
+<section id="le-reste-a-traiter">
+<h3><a class="toc-backref" href="#sommaire">Le reste à traiter</a><a class="headerlink" href="#le-reste-a-traiter" title="Lien permanent vers ce titre">¶</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>import tkinter ou from tkinter import*
+    ou encore import thinker as tk
+        ensuite on fait systematiquement tk.
+http://fsincere.free.fr/isn/python/cours_python_tkinter.php
+
+
+
+
+
+Event
+    connection
+        p157 du pdf
+            Chapitre 54
+            tkinter.pdf &lt;file:/C:/MountWD/Donnees/008_iao_wrk/03-Cours_Docs/programmation/Python/tkinter.pdf&gt;
+        ie binding
+            w.bind()
+            w.bind_class()
+            w.bind_all()
+        La description de l&#39;événnement est faite grace à une séquence texte
+            chaine donc &#39;&#39;
+            La sequence peut contenir plusieurs pattern qui doivent tous être valident pour déclencher le handler (fonction)
+            Chaque pattern est entouré de &lt;...&gt;
+                donc de base &#39;&lt;...&gt;&#39;
+                &lt;[modifier-]...type[-detail]&gt;
+                    types
+                        Button
+                        KeyPress
+                        FocusIn
+                        ...
+                    Modifiers
+                        Seulement 7
+                        Alt
+                            ex : Alt-KeyPress-h
+                            &lt;Alt-KeyPress-h&gt;&#39;
+                        Shift
+                        Any
+                        ...
+                    -détail
+                        Par exemple le nom des touches
+                            cf p158 du pdf
+                        num bouton souris
+                    You can use shorter forms of the events.
+                        Quelle est la règle exacte ????
+    revoir les méthodes commune dédiées aux events.
+        page 99 du pdf sur tkinter
+
+Applimin
+
+exemples
+    tous les exemples dans le dossier \Python\experimentations\tkinter_exemples sont en code sequentiel
+    il y a un exemple Oo à la fin du chapitre openclassroom
+    https://vincent.developpez.com/cours-tutoriels/python/tkinter/apprendre-creer-interface-graphique-tkinter-python-3 &lt;https://vincent.developpez.com/cours-tutoriels/python/tkinter/apprendre-creer-interface-graphique-tkinter-python-3/#LVIII&gt;
+        pas Oo
+    https://python-textbok.readthedocs.io/en/1.0/Introduction_to_GUI_Programming.html
+        Oo
+</pre></div>
+</div>
+</section>
+</section>
+<section id="from-mindmap-le-reste">
+<h2><a class="toc-backref" href="#sommaire">From mindmap (le reste)</a><a class="headerlink" href="#from-mindmap-le-reste" title="Lien permanent vers ce titre">¶</a></h2>
+<p>pyWx:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">PyWx</span>
+    <span class="n">ne</span> <span class="n">supporte</span> <span class="n">pas</span> <span class="mf">3.</span><span class="n">x</span>
+        <span class="n">est</span> <span class="n">resté</span> <span class="n">en</span> <span class="mf">2.7</span>
+    <span class="n">WxPy</span> <span class="n">d</span><span class="s1">&#39;ailleurs</span>
+</pre></div>
+</div>
+<p>pyQt:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>    pyQt
+        Workflow
+            Installation
+                un .exe
+                    j&#39;ai des installateur qui date de 2014
+                        v5.3.1
+                en 2020, il y a un dépôt &lt;https://pypi.org/project/PyQt5/#files&gt;
+                    v5.13.0
+                Pour vérifier l&#39;installation
+                    &gt;&gt;&gt; from PyQt5.QtWidgets import QApplication, QLabel &gt;&gt;&gt; app = QApplication([]) &gt;&gt;&gt; label = QLabel(&quot;Hello World!&quot;) &gt;&gt;&gt; label.show() &gt;&gt;&gt; app.exec_()
+            PyQt is able to generate Python code from Qt Designer.
+                Mais Qt Designer ne fait pas partie du Pack
+                    si justement !!!
+                    où ?
+                    prendre soit d&#39;installer pyQT5.tools (pip install)
+                    Ensuite on le trouve dans : repertoirInstallPython\Lib\site-packages\pyqt5_tools\Qt\bin
+                Comment ?
+                    PyQt5 UI code generator 5.3.1
+                    en ligne de commande !!! pyuic5
+            Avec Qt Designer
+                On design graphiquement l&#39;interface
+                    Cela produit un fichier .ui
+                    Avec QtDesigner qui produi un fichier .ui
+                On converti le fichier ui en fichier python avec
+                    pyuic5.bat
+                        dans C:\Python34\Lib\site-packages\PyQt5
+                Le mieux est de copier le fichier pyuic5.bat dans le répertoire de travail
+                    pas nécessaire PATH redéfini
+                Commande : pyuic5 toto.ui -o toto.py [-x -i 0]
+                    x genere code de fin
+                    i 0 remplace les espace par des tab
+            Ne reste plus qu&#39;à mettre en place le cannevas pour l&#39;application
+                appli min
+                    Version non objet
+                        #!/usr/bin/env python
+# coding: utf-8
+
+from PyQt4 import QtGui, QtCore
+import sys
+
+app = QtGui.QApplication(sys.argv)
+hello = QtGui.QPushButton(&quot;Hello World!&quot;, None)
+hello.show()
+app.exec_()
+                    Version objet Qt
+                        grace à pyuic5 on peut avoir automatiquement un semblant d&#39;appel commutateur -x
+                            if __name__ == &quot;__main__&quot;:
+    import sys
+    app = QtWidgets.QApplication(sys.argv)
+    FindAndReplaceDlg = QtWidgets.QDialog()
+    ui = Ui_FindAndReplaceDlg()
+    ui.setupUi(FindAndReplaceDlg)
+    FindAndReplaceDlg.show()
+    sys.exit(app.exec_())
+                        La création d&#39;une class fille de ui_maBoiteDeDialogue devient alors nécessaire pour ajouter des fonctionnalités/fonctions qui ne sont pas faisables dans QtDesigner
+                            Avec
+                                Les import qui vont bien
+                                la déclaration de la classe fille avec héritage multiple ( QDialog et classe mère ui_...
+                                Avec une fonction __ini__ qui appelle celle de la classe mère (comme pour toute classe fille en python)
+                                    role de la fonction super()
+                                lancement également de setupUi()
+                                    méthode de la classe fille
+                                Et bien évidement à la fin du fichier un code d&#39;autotest
+                                    on peut même y mettre des connection de signaux  et plein de code au besoin
+                                    if __name__ == &quot;__main__&quot;:
+    app = QApplication(sys.argv)
+    form = maBoiteDeDialog()
+    form.show()
+    app.exec_()
+                            Exemples
+                                from PyQt5.QtCore import *
+from PyQt5.QtGui import *
+from PyQt5.QtWidgets import *
+import ui_maBoiteDeDialogue
+
+class classFifille(QDialog,
+        ui_maBoiteDeDialogue.Ui_maBoiteDeDialogue):
+
+        def __init__(self, text, parent=None):
+            super(classFifille, self).__init__(parent)
+        self.setupUi(self)
+                                if __name__ == &quot;__main__&quot;:
+    import sys
+
+    text = &quot;&quot;&quot;US experience shows that, unlike traditional patents,
+software patents do not encourage innovation and R&amp;D, quite the
+contrary. In particular they hurt small and medium-sized enterprises
+and generally newcomers in the market. They will just weaken the market
+and increase spending on patents and litigation, at the expense of
+technological innovation and research. Especially dangerous are
+attempts to abuse the patent system by preventing interoperability as a
+means of avoiding competition with technological ability.
+--- Extract quoted from Linus Torvalds and Alan Cox&#39;s letter
+to the President of the European Parliament
+http://www.effi.org/patentit/patents_torvalds_cox.html&quot;&quot;&quot;
+
+    def found(where):
+        print (&quot;Found at %d&quot; % where)
+
+    def nomore():
+        print (&quot;No more found&quot;)
+
+    app = QApplication(sys.argv)
+    form = FindAndReplaceDlg(text)
+    # form.connect(form, SIGNAL(&quot;found&quot;), found)
+    form.found.connect(found)
+    # form.connect(form, SIGNAL(&quot;notfound&quot;), nomore)
+    form.nofound.connect(nomore)
+    form.show()
+    app.exec_()
+                        J&#39;ai créé un modèle d&#39;appli mini dans
+                            C:\MountWD\Donnees\008_iao_wrk\Python\experimentations\appliMiniPyQt &lt;file:/C:/MountWD/Donnees/008_iao_wrk/Python/experimentations/appliMiniPyQt&gt;
+            Ce qui sommes toute est un wokflow assez lourd
+                on s&#39;éloigne vite de la simplicité inspirée par Python
+            Au moins celui là il fonctionne
+                de plus grâce à Qt Designer on peut plus facilement exploiter la richesse de widget de Qt
+        La doc officielle est limité au stric référence guide &lt;http://pyqt.sourceforge.net/Docs/PyQt5/&gt;
+            Grosse liste alphabétique des Class
+            pas de tuto
+            Chapitres utiles
+                Les signaux &lt;http://pyqt.sourceforge.net/Docs/PyQt5/signals_slots.html&gt;
+                    Signaux prédéfini sur les objects
+                        On peut les connaitre dans QtDesigner
+                        Il y a plusieur façon de connecter un signal à un slot
+                            QtDesigner ne permet pas de faire la connection entre un signal prédéfini et un handler
+                            ou à un handler
+                            grâce à la méthode .connect()
+                                doit être hérité de QtObject
+                                    QtCore.QObject.connect(self.ui.button_open,QtCore.SIGNAL(&quot;clicked()&quot;), self.file_dialog)
+                            Connection semi-auto aec le décorateur : @pyqtSlot
+                    Signaux utilisateur
+                        On défini un signal
+                            avec pyqtsignal()
+                        On le connect à un handler (un fonction)
+                            signal.connect(fonction)
+                        En l&#39;émet au moment oportun
+                            signal.emit()
+                        Exemple
+                            from PyQt5.QtCore import QObject, pyqtSignal
+
+class Foo(QObject):
+
+    # Define a new signal called &#39;trigger&#39; that has no arguments.
+    trigger = pyqtSignal()
+
+    def connect_and_emit_trigger(self):
+        # Connect the trigger signal to a slot.
+        self.trigger.connect(self.handle_trigger)
+
+        # Emit the signal.
+        self.trigger.emit()
+
+    def handle_trigger(self):
+        # Show that the slot has been called.
+
+        print &quot;trigger signal received&quot;
+
+            quelques uns sur le wiki
+            Vite redirigé vers la doc de Qt
+            Tutos qui ont l&#39;air intéressant &lt;http://www.rkblog.rk.edu.pl/w/p/extending-pyqt4-text-editor/&gt;
+        Conclusion
+            Le mécanisme fondamental des signaux et slot est lourd
+                mais très puissant quand il est bien maitrisé
+            On est quasiment obligé de travailler en objet
+        Fichier ressource .qrc
+            stock les images tel les icones cf menu fichier
+            nécessite un fichier qrc
+            qui se produit grace à Qt Designer
+
+            Ensuite après création, il faut le convertir grâce pyrcc5.exe (comme pour le fichier ui)
+        Connecting by slot name &lt;http://pyqt.sourceforge.net/Docs/PyQt5/signals_slots.html&gt;
+            fonctionnalité puissante de connection automatiques des signaux de l&#39;interface vers des fonction écrite par le codeur
+        versions
+            Raspberry pi
+                pyqt4
+                    Install PyQt4 for Python 3.4 &lt;https://raspberrypi.stackexchange.com/questions/38843/install-pyqt4-for-python-3-4&gt;
+    gtk+
+        ne supporte pas 3.x
+        Peut être utilisé avec Glade
+            Glade is a RAD tool to enable quick &amp; easy development of user interfaces for the GTK+ toolkit and the GNOME desktop environment.
+                RAD Rapid Application Developpement
+        on part gtk3
+            seulement sous Linux
+            puis on se retoruve sur PyGObject aka PyGi &lt;https://wiki.gnome.org/action/show/Projects/PyGObject&gt;
+                et on fini sur une erreur à  l&#39;install
+    pygame
+        compatible python 3
+        ça s&#39;install dans la douleur
+            cela l&#39;est déjà sur Rpi (Jessy)
+    pysimplegui
+        12/05/23
+        A revoir
+</pre></div>
+</div>
+</section>
+<section id="weblinks">
+<h2><a class="toc-backref" href="#sommaire">Weblinks</a><a class="headerlink" href="#weblinks" title="Lien permanent vers ce titre">¶</a></h2>
+<dl class="footnote brackets">
+<dt class="label" id="id2"><span class="brackets"><a class="fn-backref" href="#id3">1</a></span></dt>
+<dd><p><a class="reference external" href="http://www.vorobotics.com/wp/">http://www.vorobotics.com/wp/</a></p>
+</dd>
+</dl>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../index.html">Table des matières</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Les gestionnaires graphiques dans Python</a><ul>
+<li><a class="reference internal" href="#gestionnaires-graphiques">Gestionnaires graphiques</a><ul>
+<li><a class="reference internal" href="#tkinter">tkinter</a></li>
+<li><a class="reference internal" href="#pyqt5">pyQt5</a></li>
+<li><a class="reference internal" href="#pysimplegui">Pysimplegui</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id1">tkInter</a><ul>
+<li><a class="reference internal" href="#docs">Docs</a></li>
+<li><a class="reference internal" href="#trucs-et-astuce">Trucs et astuce</a></li>
+<li><a class="reference internal" href="#outils">Outils</a></li>
+<li><a class="reference internal" href="#structuration">Structuration</a></li>
+<li><a class="reference internal" href="#limitations">Limitations</a></li>
+<li><a class="reference internal" href="#gestionnaires-de-geom">Gestionnaires de geom</a></li>
+<li><a class="reference internal" href="#petite-recette-de-cuisine">Petite recette de cuisine</a><ul>
+<li><a class="reference internal" href="#canvas-versus-frame">Canvas versus frame</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#appli-minimum">Appli minimum</a></li>
+<li><a class="reference internal" href="#le-reste-a-traiter">Le reste à traiter</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#from-mindmap-le-reste">From mindmap (le reste)</a></li>
+<li><a class="reference internal" href="#weblinks">Weblinks</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Sujet précédent</h4>
+  <p class="topless"><a href="python.html"
+                        title="Chapitre précédent">Python* (mes notes)</a></p>
+  <h4>Sujet suivant</h4>
+  <p class="topless"><a href="../lesObjetsConnectes/lesObjetsConnectes.html"
+                        title="Chapitre suivant">Les objets connectés</a></p>
+  <div role="note" aria-label="source link">
+    <h3>Cette page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/python/gestionnairesGraphiquesPython.rst.txt"
+            rel="nofollow">Montrer le code source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Recherche rapide</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="Index général"
+             >index</a></li>
+        <li class="right" >
+          <a href="../lesObjetsConnectes/lesObjetsConnectes.html" title="Les objets connectés"
+             >suivant</a> |</li>
+        <li class="right" >
+          <a href="python.html" title="Python* (mes notes)"
+             >précédent</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Documentation MajorLee&#39;s notes </a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="python.html" >Python* (mes notes)</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Les gestionnaires graphiques dans Python</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2019, J.SORANZO.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.0.2.
+    </div>
+  </body>
+</html>

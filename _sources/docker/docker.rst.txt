@@ -10,9 +10,9 @@ Docker*
 .. contents::
     :backlinks: top
 
-================================
+====================================================================================================
 Start-up /install
-================================
+====================================================================================================
 Pas la même install qu'il s'agisse de Windwos10pro d'un côté et Windwos10 family ou 7 de l'autre
 
 `Note Docker Pierre`_
@@ -46,7 +46,8 @@ Au cours de ce tutoriel en englais on apprends à déployer une apppli web stati
 2 appli dynamiques
 
 Dockerhub
-====================================================================================================
+----------------------------------------------------------------------------------------------------
+
 
 Le `site docker hub`_ directement sur la page de recherche/exploration
 
@@ -56,12 +57,12 @@ Le `site docker hub`_ directement sur la page de recherche/exploration
 
 on y trouve par exemple une image nommée gcc, gitlab, nextcloud, owncloud, mongo-express, drupal...
 
-================================
+====================================================================================================
 Notes
-================================
+====================================================================================================
 
 Définitions
-================================
+----------------------------------------------------------------------------------------------------
 
 J'aime bien cette définition :
 Quand une application tourne dans un conteneur, elle a l’illusion d’être la seule à avoir accès 
@@ -98,7 +99,7 @@ Article très intéressant  `Docker est mort, vive Docker`_ sur le fonctionnemen
 
 
 Ma présentation rapide pratique
-====================================================================================================
+----------------------------------------------------------------------------------------------------
 
 Docker ça fait tourner des images que l'on peut récupérer sur dockerhub ou dans un autre dépôt.
 Ok c'est cool mais ce qui est encore plus cool c'est qu'on peut construire de nouvelles images
@@ -132,7 +133,7 @@ Exemple ::
       Cela dit ce n'est pas un handicap, c'est même voulu mais c'est déroutant pour les novices
 
 Grands principes
-====================================================================================================
+----------------------------------------------------------------------------------------------------
 
 Tiré de `Docker Architecture dans la doc officielle`_
 
@@ -163,7 +164,7 @@ Tiré de `Images and layers dans la doc officielle`_
 .. _`Images and layers dans la doc officielle` : https://docs.docker.com/storage/storagedriver/#images-and-layers
 
 Ma vision du fonctionnement
-====================================================================================================
+----------------------------------------------------------------------------------------------------
 ::
 
     docker run : regarde si une image correspondant au nom fourni existe et la lance
@@ -271,7 +272,7 @@ Dans un répertoire vierge créer un fichier nommer dockerfile
 Lancer la commande docker build (éventuellement avec -t pour préciser un nom d'image)
 
 Syntaxe des fichiers Dockerfile 
-===========================================================
+----------------------------------------------------------------------------------------------------
 
 `Docker file ref`_
 
@@ -322,7 +323,7 @@ Les principale commandes::
 
 
 Un exercice
-====================================================================================================
+----------------------------------------------------------------------------------------------------
 
 un ubuntu
 installer nano 
@@ -607,7 +608,7 @@ La cession complète::
 My tips
 ====================================================================================================
 Mode interractif : je suis resté blocké sur ce pb: soit un nginx lancer en mode ti avec en plus -d
-Comment on inteeragit avec le container (à part par le navigateur)
+Comment on interagit avec le container (à part par le navigateur)
 
 Comment sait-on qu'un container a été lancé en mode ti ?
 
@@ -635,7 +636,7 @@ Docker dashboard : gestion intéractive graphique des container/appli compose
 **en cours d'éxécution**
 
 Docker port
-====================================================================================================
+----------------------------------------------------------------------------------------------------
 Dans docker port container_name
 L'affichage produit est ::
 
@@ -649,14 +650,14 @@ On a d'abord le port de l'hôte suivi du port de l'image !
 
 
 Faire du python2 sans l'installer
-====================================================================================================
+----------------------------------------------------------------------------------------------------
 
 ::
 
     docker run -i -t python:2
 
 docker run, start and restart
-====================================================================================================
+----------------------------------------------------------------------------------------------------
 run créé un nouveau container avec un nouveau top layer vierge.
 
 start permet de relancer un container arrêté sans perdre les données temporaire
@@ -664,14 +665,34 @@ start permet de relancer un container arrêté sans perdre les données temporai
 restart fair un stop puis un start !
 
 Savoir si une image a été montée avec un volume ou un bind
-====================================================================================================
+----------------------------------------------------------------------------------------------------
 docker inspect container_name
 
 Docker run --name --rm
-====================================================================================================
+----------------------------------------------------------------------------------------------------
 Tout est dans le titre, on peut donner un titre à container ! ne s'abrège pas.
 
 --rm le supprime quand on sort, très pratique pour les tests de la commande run elle-même
+
+.. index::
+    pair: Docker; Portainer
+    pair: Docker; Gestionnaire de container
+
+Portainer
+----------------------------------------------------------------------------------------------------
+.. SEEALSO:: **SITE OFFICIEL**
+    :class: without-title
+    
+    `portainer.io`_
+
+.. _`portainer.io` : https://www.portainer.io/
+
+.. SEEALSO:: **SITE OFFICIEL**
+    :class: without-title
+    
+    `Doc officielle`_
+
+.. _`Doc officielle` : https://docs.portainer.io/ 
 
 
 .. index::

@@ -4,19 +4,21 @@
 <html lang="fr">
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>Docker* &#8212; Documentation MajorLee&#39;s notes </title>
-    <link rel="stylesheet" href="../_static/nature.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/nature.css" />
     <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
-    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
-    <script src="../_static/language_data.js"></script>
     <script src="../_static/translations.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Recherche" href="../search.html" />
-    <link rel="next" title="Arduino" href="../arduino/arduino.html" />
+    <link rel="next" title="Arduino*" href="../arduino/arduino.html" />
     <link rel="prev" title="Notes sur git" href="../git/git.html" /> 
   </head><body>
     <div class="related" role="navigation" aria-label="related navigation">
@@ -26,12 +28,13 @@
           <a href="../genindex.html" title="Index général"
              accesskey="I">index</a></li>
         <li class="right" >
-          <a href="../arduino/arduino.html" title="Arduino"
+          <a href="../arduino/arduino.html" title="Arduino*"
              accesskey="N">suivant</a> |</li>
         <li class="right" >
           <a href="../git/git.html" title="Notes sur git"
              accesskey="P">précédent</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">Documentation MajorLee&#39;s notes </a> &#187;</li> 
+        <li class="nav-item nav-item-0"><a href="../index.html">Documentation MajorLee&#39;s notes </a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Docker*</a></li> 
       </ul>
     </div>  
 
@@ -40,7 +43,7 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <div class="section" id="docker">
+  <section id="docker">
 <h1><a class="toc-backref" href="#sommaire">Docker*</a><a class="headerlink" href="#docker" title="Lien permanent vers ce titre">¶</a></h1>
 <dl class="field-list simple">
 <dt class="field-odd">Auteur</dt>
@@ -59,56 +62,57 @@
 <div class="contents topic" id="sommaire">
 <p class="topic-title">Sommaire</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="#docker" id="id78">Docker*</a></p>
+<li><p><a class="reference internal" href="#docker" id="id82">Docker*</a></p>
 <ul>
-<li><p><a class="reference internal" href="#start-up-install" id="id79">Start-up /install</a></p>
+<li><p><a class="reference internal" href="#start-up-install" id="id83">Start-up /install</a></p>
 <ul>
-<li><p><a class="reference internal" href="#dockerhub" id="id80">Dockerhub</a></p></li>
+<li><p><a class="reference internal" href="#dockerhub" id="id84">Dockerhub</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#notes" id="id81">Notes</a></p>
+<li><p><a class="reference internal" href="#notes" id="id85">Notes</a></p>
 <ul>
-<li><p><a class="reference internal" href="#definitions" id="id82">Définitions</a></p></li>
-<li><p><a class="reference internal" href="#ma-presentation-rapide-pratique" id="id83">Ma présentation rapide pratique</a></p></li>
-<li><p><a class="reference internal" href="#grands-principes" id="id84">Grands principes</a></p></li>
-<li><p><a class="reference internal" href="#ma-vision-du-fonctionnement" id="id85">Ma vision du fonctionnement</a></p></li>
+<li><p><a class="reference internal" href="#definitions" id="id86">Définitions</a></p></li>
+<li><p><a class="reference internal" href="#ma-presentation-rapide-pratique" id="id87">Ma présentation rapide pratique</a></p></li>
+<li><p><a class="reference internal" href="#grands-principes" id="id88">Grands principes</a></p></li>
+<li><p><a class="reference internal" href="#ma-vision-du-fonctionnement" id="id89">Ma vision du fonctionnement</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#documentation" id="id86">Documentation</a></p></li>
-<li><p><a class="reference internal" href="#retour-dans-la-doc-officielle" id="id87">Retour dans la doc officielle.</a></p></li>
-<li><p><a class="reference internal" href="#commandes-principales" id="id88">Commandes principales</a></p></li>
-<li><p><a class="reference internal" href="#creer-une-image" id="id89">Créer une image</a></p>
+<li><p><a class="reference internal" href="#documentation" id="id90">Documentation</a></p></li>
+<li><p><a class="reference internal" href="#retour-dans-la-doc-officielle" id="id91">Retour dans la doc officielle.</a></p></li>
+<li><p><a class="reference internal" href="#commandes-principales" id="id92">Commandes principales</a></p></li>
+<li><p><a class="reference internal" href="#creer-une-image" id="id93">Créer une image</a></p>
 <ul>
-<li><p><a class="reference internal" href="#syntaxe-des-fichiers-dockerfile" id="id90">Syntaxe des fichiers Dockerfile</a></p></li>
-<li><p><a class="reference internal" href="#un-exercice" id="id91">Un exercice</a></p></li>
+<li><p><a class="reference internal" href="#syntaxe-des-fichiers-dockerfile" id="id94">Syntaxe des fichiers Dockerfile</a></p></li>
+<li><p><a class="reference internal" href="#un-exercice" id="id95">Un exercice</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#docker-compose" id="id92">Docker compose</a></p></li>
-<li><p><a class="reference internal" href="#piloter-un-port-serie-de-la-machine-hote" id="id93">Piloter un port série de la machine hote</a></p></li>
-<li><p><a class="reference internal" href="#volumes-et-bind-mounts" id="id94">volumes et bind mounts</a></p></li>
-<li><p><a class="reference internal" href="#volume-et-sauvegarde" id="id95">Volume et sauvegarde</a></p></li>
-<li><p><a class="reference internal" href="#networks" id="id96">Networks</a></p></li>
-<li><p><a class="reference internal" href="#docker-services-swarm" id="id97">Docker services/Swarm</a></p></li>
-<li><p><a class="reference internal" href="#general-application-development-best-practices" id="id98">General application development best practices</a></p></li>
-<li><p><a class="reference internal" href="#acceder-aux-donnees-cachees-de-docker-sous-windows-y-compris-les-volumes" id="id99">Accéder aux données cachées de Docker sous Windows y compris les volumes</a></p></li>
-<li><p><a class="reference internal" href="#my-tips" id="id100">My tips</a></p>
+<li><p><a class="reference internal" href="#docker-compose" id="id96">Docker compose</a></p></li>
+<li><p><a class="reference internal" href="#piloter-un-port-serie-de-la-machine-hote" id="id97">Piloter un port série de la machine hote</a></p></li>
+<li><p><a class="reference internal" href="#volumes-et-bind-mounts" id="id98">volumes et bind mounts</a></p></li>
+<li><p><a class="reference internal" href="#volume-et-sauvegarde" id="id99">Volume et sauvegarde</a></p></li>
+<li><p><a class="reference internal" href="#networks" id="id100">Networks</a></p></li>
+<li><p><a class="reference internal" href="#docker-services-swarm" id="id101">Docker services/Swarm</a></p></li>
+<li><p><a class="reference internal" href="#general-application-development-best-practices" id="id102">General application development best practices</a></p></li>
+<li><p><a class="reference internal" href="#acceder-aux-donnees-cachees-de-docker-sous-windows-y-compris-les-volumes" id="id103">Accéder aux données cachées de Docker sous Windows y compris les volumes</a></p></li>
+<li><p><a class="reference internal" href="#my-tips" id="id104">My tips</a></p>
 <ul>
-<li><p><a class="reference internal" href="#docker-port" id="id101">Docker port</a></p></li>
-<li><p><a class="reference internal" href="#faire-du-python2-sans-l-installer" id="id102">Faire du python2 sans l’installer</a></p></li>
-<li><p><a class="reference internal" href="#docker-run-start-and-restart" id="id103">docker run, start and restart</a></p></li>
-<li><p><a class="reference internal" href="#savoir-si-une-image-a-ete-montee-avec-un-volume-ou-un-bind" id="id104">Savoir si une image a été montée avec un volume ou un bind</a></p></li>
-<li><p><a class="reference internal" href="#docker-run-name-rm" id="id105">Docker run –name –rm</a></p></li>
+<li><p><a class="reference internal" href="#docker-port" id="id105">Docker port</a></p></li>
+<li><p><a class="reference internal" href="#faire-du-python2-sans-l-installer" id="id106">Faire du python2 sans l’installer</a></p></li>
+<li><p><a class="reference internal" href="#docker-run-start-and-restart" id="id107">docker run, start and restart</a></p></li>
+<li><p><a class="reference internal" href="#savoir-si-une-image-a-ete-montee-avec-un-volume-ou-un-bind" id="id108">Savoir si une image a été montée avec un volume ou un bind</a></p></li>
+<li><p><a class="reference internal" href="#docker-run-name-rm" id="id109">Docker run –name –rm</a></p></li>
+<li><p><a class="reference internal" href="#portainer" id="id110">Portainer</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#repository-locaux" id="id106">Repository locaux</a></p></li>
-<li><p><a class="reference internal" href="#voir-docker-a-l-oeuvre" id="id107">Voir Docker à l’oeuvre</a></p></li>
-<li><p><a class="reference internal" href="#vocabulaire" id="id108">Vocabulaire</a></p></li>
-<li><p><a class="reference internal" href="#weblinks" id="id109">Weblinks</a></p></li>
+<li><p><a class="reference internal" href="#repository-locaux" id="id111">Repository locaux</a></p></li>
+<li><p><a class="reference internal" href="#voir-docker-a-l-oeuvre" id="id112">Voir Docker à l’oeuvre</a></p></li>
+<li><p><a class="reference internal" href="#vocabulaire" id="id113">Vocabulaire</a></p></li>
+<li><p><a class="reference internal" href="#weblinks" id="id114">Weblinks</a></p></li>
 </ul>
 </li>
 </ul>
 </div>
-<div class="section" id="start-up-install">
+<section id="start-up-install">
 <h2><a class="toc-backref" href="#sommaire">Start-up /install</a><a class="headerlink" href="#start-up-install" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Pas la même install qu’il s’agisse de Windwos10pro d’un côté et Windwos10 family ou 7 de l’autre</p>
 <p><a class="reference external" href="https://poltergeist42.github.io/JDM/Docker.html">Note Docker Pierre</a> <a class="footnote-reference brackets" href="#id1" id="id2">1</a></p>
@@ -128,16 +132,16 @@ simple</p>
 <p>Un bon tut, je crois : <a class="reference external" href="https://docker-curriculum.com/">docker-curriculum</a> <a class="footnote-reference brackets" href="#id6" id="id7">3</a></p>
 <p>Au cours de ce tutoriel en englais on apprends à déployer une apppli web static et
 2 appli dynamiques</p>
-<div class="section" id="dockerhub">
+<section id="dockerhub">
 <h3><a class="toc-backref" href="#sommaire">Dockerhub</a><a class="headerlink" href="#dockerhub" title="Lien permanent vers ce titre">¶</a></h3>
 <p>Le <a class="reference external" href="https://hub.docker.com/search?q=&amp;type=image">site docker hub</a> <a class="footnote-reference brackets" href="#id8" id="id9">4</a> directement sur la page de recherche/exploration</p>
 <p>3 702 709 available images le 06/07/2020.</p>
 <p>on y trouve par exemple une image nommée gcc, gitlab, nextcloud, owncloud, mongo-express, drupal…</p>
-</div>
-</div>
-<div class="section" id="notes">
+</section>
+</section>
+<section id="notes">
 <h2><a class="toc-backref" href="#sommaire">Notes</a><a class="headerlink" href="#notes" title="Lien permanent vers ce titre">¶</a></h2>
-<div class="section" id="definitions">
+<section id="definitions">
 <h3><a class="toc-backref" href="#sommaire">Définitions</a><a class="headerlink" href="#definitions" title="Lien permanent vers ce titre">¶</a></h3>
 <p>J’aime bien cette définition :
 Quand une application tourne dans un conteneur, elle a l’illusion d’être la seule à avoir accès
@@ -157,8 +161,8 @@ sous entendu c’est que ce sont des applications plutôt à forte propension WE
 <p><strong>Images</strong>: la carcasse: quand on fait un docker build on crée une image « An image is a read-only template »</p>
 <p><strong>Container</strong>: l’image en cours d’exécuton : quand on fait docker run « A container is a runnable instance of an image »</p>
 <p><strong>Layer</strong>: chaque commande d’un dockerfile.</p>
-</div>
-<div class="section" id="ma-presentation-rapide-pratique">
+</section>
+<section id="ma-presentation-rapide-pratique">
 <h3><a class="toc-backref" href="#sommaire">Ma présentation rapide pratique</a><a class="headerlink" href="#ma-presentation-rapide-pratique" title="Lien permanent vers ce titre">¶</a></h3>
 <p>Docker ça fait tourner des images que l’on peut récupérer sur dockerhub ou dans un autre dépôt.
 Ok c’est cool mais ce qui est encore plus cool c’est qu’on peut construire de nouvelles images
@@ -187,8 +191,8 @@ Exemple</p>
 <span class="n">Cela</span> <span class="n">dit</span> <span class="n">ce</span> <span class="n">n</span><span class="s1">&#39;est pas un handicap, c&#39;</span><span class="n">est</span> <span class="n">même</span> <span class="n">voulu</span> <span class="n">mais</span> <span class="n">c</span><span class="s1">&#39;est déroutant pour les novices</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="grands-principes">
+</section>
+<section id="grands-principes">
 <h3><a class="toc-backref" href="#sommaire">Grands principes</a><a class="headerlink" href="#grands-principes" title="Lien permanent vers ce titre">¶</a></h3>
 <p>Tiré de <a class="reference external" href="https://docs.docker.com/get-started/overview/#docker-architecture">Docker Architecture dans la doc officielle</a> <a class="footnote-reference brackets" href="#id14" id="id15">7</a></p>
 <p>dockerd : docker deamon gère les images, container, réseaux et volumes</p>
@@ -203,8 +207,8 @@ un layer dit container layer en lecture/écriture dans lequel sont fait les modi
 <p>La majeur différence entre une images et un container est en fait représentée par ce dernier layer en
 lecture écriture dont le contenu disparaît quand le container est arrêté.</p>
 <p>Tiré de <a class="reference external" href="https://docs.docker.com/storage/storagedriver/#images-and-layers">Images and layers dans la doc officielle</a> <a class="footnote-reference brackets" href="#id16" id="id17">8</a></p>
-</div>
-<div class="section" id="ma-vision-du-fonctionnement">
+</section>
+<section id="ma-vision-du-fonctionnement">
 <h3><a class="toc-backref" href="#sommaire">Ma vision du fonctionnement</a><a class="headerlink" href="#ma-vision-du-fonctionnement" title="Lien permanent vers ce titre">¶</a></h3>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">docker</span> <span class="n">run</span> <span class="p">:</span> <span class="n">regarde</span> <span class="n">si</span> <span class="n">une</span> <span class="n">image</span> <span class="n">correspondant</span> <span class="n">au</span> <span class="n">nom</span> <span class="n">fourni</span> <span class="n">existe</span> <span class="n">et</span> <span class="n">la</span> <span class="n">lance</span>
 <span class="p">(</span><span class="n">devient</span> <span class="n">un</span> <span class="n">container</span><span class="p">)</span>
@@ -219,17 +223,17 @@ se retrouve dans la liste forunie par <code class="docutils literal notranslate"
 <blockquote>
 <div><p>docker bu</p>
 </div></blockquote>
-</div>
-</div>
-<div class="section" id="documentation">
+</section>
+</section>
+<section id="documentation">
 <h2><a class="toc-backref" href="#sommaire">Documentation</a><a class="headerlink" href="#documentation" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Officiellement c’est là : <a class="reference external" href="https://docs.docker.com/">Docker’s documentation</a> <a class="footnote-reference brackets" href="#id18" id="id19">9</a></p>
 <p>Mais c’est mieux de commencer par l”<a class="reference external" href="https://docs.docker.com/install/">onglet Product manual</a> <a class="footnote-reference brackets" href="#id20" id="id21">10</a> et plus particulièrement avec les</p>
 <p><a class="reference external" href="https://docs.docker.com/docker-for-windows/">docker for Windows</a> <a class="footnote-reference brackets" href="#id22" id="id23">11</a>, <a class="reference external" href="https://docs.docker.com/docker-for-mac/">docker for Mac</a> <a class="footnote-reference brackets" href="#id24" id="id25">12</a></p>
 <p>La référence pour les options et commandes de la ligne de commande est:
 <a class="reference external" href="https://docs.docker.com/engine/reference/commandline/cli/">Use the Docker command line</a> <a class="footnote-reference brackets" href="#id26" id="id27">13</a></p>
-</div>
-<div class="section" id="retour-dans-la-doc-officielle">
+</section>
+<section id="retour-dans-la-doc-officielle">
 <h2><a class="toc-backref" href="#sommaire">Retour dans la doc officielle.</a><a class="headerlink" href="#retour-dans-la-doc-officielle" title="Lien permanent vers ce titre">¶</a></h2>
 <p><a class="reference external" href="https://docs.docker.com/develop/">Rappel du chemin vers la doc officielle</a> <a class="footnote-reference brackets" href="#id28" id="id29">14</a></p>
 <ul class="simple">
@@ -240,8 +244,8 @@ se retrouve dans la liste forunie par <code class="docutils literal notranslate"
 <li><p>General application development best practices</p></li>
 </ul>
 <p>J’attaque le premier point mais c’est plus le deuxième qui m’intéresse</p>
-</div>
-<div class="section" id="commandes-principales">
+</section>
+<section id="commandes-principales">
 <h2><a class="toc-backref" href="#sommaire">Commandes principales</a><a class="headerlink" href="#commandes-principales" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Il y a des centaines de commandes docker (61 commandes principale en version 19.03).
 Caractéristiques : elles commence toutes par docker.
@@ -277,12 +281,12 @@ docker exec -it container_id bash : permet de passer en CLI dans un container en
 </div>
 <p>Interactive terminals do not work in PowerShell ISE (but they do in PowerShell).
 See docker/for-win/issues/223.</p>
-</div>
-<div class="section" id="creer-une-image">
+</section>
+<section id="creer-une-image">
 <h2><a class="toc-backref" href="#sommaire">Créer une image</a><a class="headerlink" href="#creer-une-image" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Dans un répertoire vierge créer un fichier nommer dockerfile</p>
 <p>Lancer la commande docker build (éventuellement avec -t pour préciser un nom d’image)</p>
-<div class="section" id="syntaxe-des-fichiers-dockerfile">
+<section id="syntaxe-des-fichiers-dockerfile">
 <h3><a class="toc-backref" href="#sommaire">Syntaxe des fichiers Dockerfile</a><a class="headerlink" href="#syntaxe-des-fichiers-dockerfile" title="Lien permanent vers ce titre">¶</a></h3>
 <p><a class="reference external" href="https://docs.docker.com/engine/reference/builder/">Docker file ref</a> <a class="footnote-reference brackets" href="#id32" id="id33">16</a></p>
 <p>Les commandes dans les dockerfile ne sont pas sensibles à la casse mais par convention on les met
@@ -315,8 +319,8 @@ qu’il faut connaître à mes yeux que des best practices. En revenche ensuite,
 </pre></div>
 </div>
 <p><a class="reference external" href="https://nickjanetakis.com/blog/docker-tip-2-the-difference-between-copy-and-add-in-a-dockerile">Différence entre ADD et COPY</a> <a class="footnote-reference brackets" href="#id36" id="id37">18</a></p>
-</div>
-<div class="section" id="un-exercice">
+</section>
+<section id="un-exercice">
 <h3><a class="toc-backref" href="#sommaire">Un exercice</a><a class="headerlink" href="#un-exercice" title="Lien permanent vers ce titre">¶</a></h3>
 <p>un ubuntu
 installer nano
@@ -324,18 +328,18 @@ copier un fichier texte
 et se retrouver dans le prompt</p>
 <p>Solution:</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">dockerfile</span>
- <span class="n">FROM</span> <span class="n">ubuntu</span>
+<span class="w"> </span><span class="n">FROM</span><span class="w"> </span><span class="n">ubuntu</span>
 
-<span class="n">RUN</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">update</span> <span class="o">-</span><span class="n">yq</span> \
-<span class="o">&amp;&amp;</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">nano</span> <span class="o">-</span><span class="n">yq</span>
+<span class="n">RUN</span><span class="w"> </span><span class="n">apt</span><span class="o">-</span><span class="n">get</span><span class="w"> </span><span class="n">update</span><span class="w"> </span><span class="o">-</span><span class="n">yq</span><span class="w"> </span>\
+<span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">apt</span><span class="o">-</span><span class="n">get</span><span class="w"> </span><span class="n">install</span><span class="w"> </span><span class="n">nano</span><span class="w"> </span><span class="o">-</span><span class="n">yq</span>
 
-<span class="n">docker</span> <span class="n">build</span> <span class="o">-</span><span class="n">t</span> <span class="n">mybuntu</span>
-<span class="n">docker</span> <span class="n">run</span> <span class="o">-</span><span class="n">ti</span> <span class="n">mybuntu</span>
+<span class="n">docker</span><span class="w"> </span><span class="n">build</span><span class="w"> </span><span class="o">-</span><span class="n">t</span><span class="w"> </span><span class="n">mybuntu</span>
+<span class="n">docker</span><span class="w"> </span><span class="n">run</span><span class="w"> </span><span class="o">-</span><span class="n">ti</span><span class="w"> </span><span class="n">mybuntu</span>
 </pre></div>
 </div>
-</div>
-</div>
-<div class="section" id="docker-compose">
+</section>
+</section>
+<section id="docker-compose">
 <span id="index-1"></span><h2><a class="toc-backref" href="#sommaire">Docker compose</a><a class="headerlink" href="#docker-compose" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Docker compose permet de lancer plusieurs images en même temps.</p>
 <p>Dans un répertoire vide (conseillé) créer un fichier docker-compose.yml</p>
@@ -347,12 +351,12 @@ et se retrouver dans le prompt</p>
 <p>On peut aussi ajouter un <a class="reference external" href="https://docs.docker.com/compose/environment-variables/">fichier pour des variables</a> <a class="footnote-reference brackets" href="#id40" id="id41">20</a> . Le nom de ce fichier par défaut est .env</p>
 <p>Petit trucs sur la substitution des variables denvironnement:</p>
 <p>On peut préciser <a class="reference external" href="https://docs.docker.com/compose/compose-file/#variable-substitution">une valeur par défaut</a> <a class="footnote-reference brackets" href="#id42" id="id43">21</a> : <code class="docutils literal notranslate"><span class="pre">${WORDPRESS_DATA_DIR:-./wordpress}:/var/www/html</span></code></p>
-</div>
-<div class="section" id="piloter-un-port-serie-de-la-machine-hote">
+</section>
+<section id="piloter-un-port-serie-de-la-machine-hote">
 <h2><a class="toc-backref" href="#sommaire">Piloter un port série de la machine hote</a><a class="headerlink" href="#piloter-un-port-serie-de-la-machine-hote" title="Lien permanent vers ce titre">¶</a></h2>
 <p><a class="reference external" href="https://www.losant.com/blog/how-to-access-serial-devices-in-docker">https://www.losant.com/blog/how-to-access-serial-devices-in-docker</a></p>
-</div>
-<div class="section" id="volumes-et-bind-mounts">
+</section>
+<section id="volumes-et-bind-mounts">
 <h2><a class="toc-backref" href="#sommaire">volumes et bind mounts</a><a class="headerlink" href="#volumes-et-bind-mounts" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Ce sont 2 manières différentes d’avoir des données persistantes.</p>
 <p>Les volumes sont mieux que les binds mounts:</p>
@@ -397,8 +401,8 @@ Docker comme <em>vieux/sshfs plugin</em></p>
 <p><a class="reference external" href="https://docs.docker.com/storage/volumes/#use-a-volume-driver">Doc sur les volumes drivers</a> <a class="footnote-reference brackets" href="#id52" id="id53">26</a></p>
 </li>
 </ul>
-</div>
-<div class="section" id="volume-et-sauvegarde">
+</section>
+<section id="volume-et-sauvegarde">
 <h2><a class="toc-backref" href="#sommaire">Volume et sauvegarde</a><a class="headerlink" href="#volume-et-sauvegarde" title="Lien permanent vers ce titre">¶</a></h2>
 <p>En parcourant la doc sur les volumes, après <em>start a container with volume</em>, je suis tombé sur :
 <em>start a service with volumes</em> ! ? Qu’est-ce donc que cette histoire de service ?
@@ -408,8 +412,8 @@ Voir <a class="reference internal" href="#docker-services-swarm">Docker services
 et de faire un tar cvf du volume vers le bind !!</p>
 <p><a class="reference external" href="https://docs.docker.com/storage/volumes/#backup-a-container">Tout ceci expliqué dans la doc officielle</a> <a class="footnote-reference brackets" href="#id54" id="id55">27</a></p>
 <p>Et pour la restauration, on procède de manière inverse.</p>
-</div>
-<div class="section" id="networks">
+</section>
+<section id="networks">
 <h2><a class="toc-backref" href="#sommaire">Networks</a><a class="headerlink" href="#networks" title="Lien permanent vers ce titre">¶</a></h2>
 <p><a class="reference external" href="https://docs.docker.com/network/">Doc officielle networking</a> <a class="footnote-reference brackets" href="#id56" id="id57">28</a></p>
 <p>Tout d’abord, il faut savoir qu’il y a 5 type de driver de réseau dans Docker:</p>
@@ -436,8 +440,8 @@ des container fonctionnant sur des démon différents. Et surtout les user-defin
 </div>
 <p><a class="reference external" href="https://docs.docker.com/network/bridge/">Doc officielle docker network bridge</a> <a class="footnote-reference brackets" href="#id58" id="id59">29</a></p>
 <p>Et aussi <a class="reference external" href="https://docs.docker.com/engine/reference/commandline/network_create/">la référence de la ligne de commande docker network create</a> <a class="footnote-reference brackets" href="#id60" id="id61">30</a></p>
-</div>
-<div class="section" id="docker-services-swarm">
+</section>
+<section id="docker-services-swarm">
 <h2><a class="toc-backref" href="#sommaire">Docker services/Swarm</a><a class="headerlink" href="#docker-services-swarm" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Notion de Swarm : Un Swarm est un groupe de machines exécutant le moteur Docker et faisant partie
 du même cluster. Docker swarm vous permet de lancer des commandes Docker auxquelles vous êtes
@@ -445,8 +449,8 @@ habitué sur un cluster depuis une machine maître nommée manager/leader Swarm.
 rejoignent un Swarm, elles sont appelés nœuds.</p>
 <p><a class="reference external" href="https://docs.docker.com/engine/reference/commandline/service/">Page officielle de la documentation sur les service</a> <a class="footnote-reference brackets" href="#id62" id="id63">31</a></p>
 <p><a class="reference external" href="https://devopssec.fr/article/comprendre-gerer-manipuler-un-cluster-docker-swarm">Source ci-dessus sur devopssec.fr</a> <a class="footnote-reference brackets" href="#id64" id="id65">32</a></p>
-</div>
-<div class="section" id="general-application-development-best-practices">
+</section>
+<section id="general-application-development-best-practices">
 <h2><a class="toc-backref" href="#sommaire">General application development best practices</a><a class="headerlink" href="#general-application-development-best-practices" title="Lien permanent vers ce titre">¶</a></h2>
 <p><a class="reference external" href="https://docs.docker.com/develop/dev-best-practices/">Page officielle Docker development best practices</a> <a class="footnote-reference brackets" href="#id66" id="id67">33</a></p>
 <p>On this page:</p>
@@ -470,8 +474,8 @@ rejoignent un Swarm, elles sont appelés nœuds.</p>
 <p>Je ne savais même pas qu’on pouvait le faire !</p>
 <p>One case where it is appropriate to use bind mounts is during development.
 For production, use a volume instead,</p>
-</div>
-<div class="section" id="acceder-aux-donnees-cachees-de-docker-sous-windows-y-compris-les-volumes">
+</section>
+<section id="acceder-aux-donnees-cachees-de-docker-sous-windows-y-compris-les-volumes">
 <h2><a class="toc-backref" href="#sommaire">Accéder aux données cachées de Docker sous Windows y compris les volumes</a><a class="headerlink" href="#acceder-aux-donnees-cachees-de-docker-sous-windows-y-compris-les-volumes" title="Lien permanent vers ce titre">¶</a></h2>
 <div class="admonition hint">
 <p class="admonition-title">Indication</p>
@@ -512,11 +516,11 @@ se trouve dans le dossier /var/lib/docker</p>
 <span class="n">builder</span>  <span class="n">buildkit</span>  <span class="n">containerd</span>  <span class="n">containers</span>  <span class="n">image</span>  <span class="n">network</span>  <span class="n">overlay2</span>  <span class="n">plugins</span>  <span class="n">runtimes</span>  <span class="n">swarm</span>  <span class="n">tmp</span>  <span class="n">trust</span>  <span class="n">volumes</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="my-tips">
+</section>
+<section id="my-tips">
 <h2><a class="toc-backref" href="#sommaire">My tips</a><a class="headerlink" href="#my-tips" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Mode interractif : je suis resté blocké sur ce pb: soit un nginx lancer en mode ti avec en plus -d
-Comment on inteeragit avec le container (à part par le navigateur)</p>
+Comment on interagit avec le container (à part par le navigateur)</p>
 <p>Comment sait-on qu’un container a été lancé en mode ti ?</p>
 <p id="index-2">Disque image locations : peut-être configurer dans la fenêtre setting de docker onglet Ressources/
 advanced</p>
@@ -529,7 +533,7 @@ advanced</p>
 </div>
 <p>Docker dashboard : gestion intéractive graphique des container/appli compose
 <strong>en cours d’éxécution</strong></p>
-<div class="section" id="docker-port">
+<section id="docker-port">
 <h3><a class="toc-backref" href="#sommaire">Docker port</a><a class="headerlink" href="#docker-port" title="Lien permanent vers ce titre">¶</a></h3>
 <p>Dans docker port container_name
 L’affichage produit est</p>
@@ -541,46 +545,59 @@ L’affichage produit est</p>
 </pre></div>
 </div>
 <p>On a d’abord le port de l’hôte suivi du port de l’image !</p>
-</div>
-<div class="section" id="faire-du-python2-sans-l-installer">
+</section>
+<section id="faire-du-python2-sans-l-installer">
 <h3><a class="toc-backref" href="#sommaire">Faire du python2 sans l’installer</a><a class="headerlink" href="#faire-du-python2-sans-l-installer" title="Lien permanent vers ce titre">¶</a></h3>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">docker</span> <span class="n">run</span> <span class="o">-</span><span class="n">i</span> <span class="o">-</span><span class="n">t</span> <span class="n">python</span><span class="p">:</span><span class="mi">2</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="docker-run-start-and-restart">
+</section>
+<section id="docker-run-start-and-restart">
 <h3><a class="toc-backref" href="#sommaire">docker run, start and restart</a><a class="headerlink" href="#docker-run-start-and-restart" title="Lien permanent vers ce titre">¶</a></h3>
 <p>run créé un nouveau container avec un nouveau top layer vierge.</p>
 <p>start permet de relancer un container arrêté sans perdre les données temporaire</p>
 <p>restart fair un stop puis un start !</p>
-</div>
-<div class="section" id="savoir-si-une-image-a-ete-montee-avec-un-volume-ou-un-bind">
+</section>
+<section id="savoir-si-une-image-a-ete-montee-avec-un-volume-ou-un-bind">
 <h3><a class="toc-backref" href="#sommaire">Savoir si une image a été montée avec un volume ou un bind</a><a class="headerlink" href="#savoir-si-une-image-a-ete-montee-avec-un-volume-ou-un-bind" title="Lien permanent vers ce titre">¶</a></h3>
 <p>docker inspect container_name</p>
-</div>
-<div class="section" id="docker-run-name-rm">
+</section>
+<section id="docker-run-name-rm">
 <h3><a class="toc-backref" href="#sommaire">Docker run –name –rm</a><a class="headerlink" href="#docker-run-name-rm" title="Lien permanent vers ce titre">¶</a></h3>
 <p>Tout est dans le titre, on peut donner un titre à container ! ne s’abrège pas.</p>
 <p>–rm le supprime quand on sort, très pratique pour les tests de la commande run elle-même</p>
+</section>
+<section id="portainer">
+<span id="index-4"></span><h3><a class="toc-backref" href="#sommaire">Portainer</a><a class="headerlink" href="#portainer" title="Lien permanent vers ce titre">¶</a></h3>
+<div class="without-title admonition seealso">
+<p class="admonition-title">Voir aussi</p>
+<p><strong>SITE OFFICIEL</strong></p>
+<p><a class="reference external" href="https://www.portainer.io/">portainer.io</a> <a class="footnote-reference brackets" href="#id68" id="id69">34</a></p>
 </div>
+<div class="without-title admonition seealso">
+<p class="admonition-title">Voir aussi</p>
+<p><strong>SITE OFFICIEL</strong></p>
+<p><a class="reference external" href="https://docs.portainer.io/">Doc officielle</a> <a class="footnote-reference brackets" href="#id70" id="id71">35</a></p>
 </div>
-<div class="section" id="repository-locaux">
-<span id="index-4"></span><h2><a class="toc-backref" href="#sommaire">Repository locaux</a><a class="headerlink" href="#repository-locaux" title="Lien permanent vers ce titre">¶</a></h2>
-<p><a class="reference external" href="https://docs.docker.com/registry/deploying/">Deploy a registry server</a> <a class="footnote-reference brackets" href="#id68" id="id69">34</a></p>
-</div>
-<div class="section" id="voir-docker-a-l-oeuvre">
+</section>
+</section>
+<section id="repository-locaux">
+<span id="index-5"></span><h2><a class="toc-backref" href="#sommaire">Repository locaux</a><a class="headerlink" href="#repository-locaux" title="Lien permanent vers ce titre">¶</a></h2>
+<p><a class="reference external" href="https://docs.docker.com/registry/deploying/">Deploy a registry server</a> <a class="footnote-reference brackets" href="#id72" id="id73">36</a></p>
+</section>
+<section id="voir-docker-a-l-oeuvre">
 <h2><a class="toc-backref" href="#sommaire">Voir Docker à l’oeuvre</a><a class="headerlink" href="#voir-docker-a-l-oeuvre" title="Lien permanent vers ce titre">¶</a></h2>
-<p>L”<a class="reference external" href="https://hub.docker.com/r/prakhar1989/catnip">exemple de prakhar1989 catnip</a> <a class="footnote-reference brackets" href="#id70" id="id71">35</a> dont le fichier dockerfile est accessible sous github.</p>
-<p><a class="reference external" href="https://docs.docker.com/samples/">Docker sample home</a> <a class="footnote-reference brackets" href="#id72" id="id73">36</a></p>
-</div>
-<div class="section" id="vocabulaire">
+<p>L”<a class="reference external" href="https://hub.docker.com/r/prakhar1989/catnip">exemple de prakhar1989 catnip</a> <a class="footnote-reference brackets" href="#id74" id="id75">37</a> dont le fichier dockerfile est accessible sous github.</p>
+<p><a class="reference external" href="https://docs.docker.com/samples/">Docker sample home</a> <a class="footnote-reference brackets" href="#id76" id="id77">38</a></p>
+</section>
+<section id="vocabulaire">
 <h2><a class="toc-backref" href="#sommaire">Vocabulaire</a><a class="headerlink" href="#vocabulaire" title="Lien permanent vers ce titre">¶</a></h2>
-<p id="index-5">Stateful vs Stateless : se dit à propos d’une application ou d’un service et par extension cela
+<p id="index-6">Stateful vs Stateless : se dit à propos d’une application ou d’un service et par extension cela
 s’applique aux container.</p>
-<p><a class="reference external" href="https://www.contino.io/insights/stateless-vs-stateful-containers-whats-the-difference-and-why-does-it-matter">Stateless vs Stateful article sur contino.io</a> <a class="footnote-reference brackets" href="#id74" id="id75">37</a></p>
+<p><a class="reference external" href="https://www.contino.io/insights/stateless-vs-stateful-containers-whats-the-difference-and-why-does-it-matter">Stateless vs Stateful article sur contino.io</a> <a class="footnote-reference brackets" href="#id78" id="id79">39</a></p>
 <p>A stateless application is one that neither reads nor stores information about its state from
 one time that it is run to the next.</p>
-<p>Une <a class="reference external" href="https://blog.engineering.publicissapient.fr/2007/07/24/service-stateful-vs-service-stateless/">explication sur Publicis Sapiens</a> <a class="footnote-reference brackets" href="#id76" id="id77">38</a></p>
+<p>Une <a class="reference external" href="https://blog.engineering.publicissapient.fr/2007/07/24/service-stateful-vs-service-stateless/">explication sur Publicis Sapiens</a> <a class="footnote-reference brackets" href="#id80" id="id81">40</a></p>
 <p>Un moyen de stockage est nécessaire pour une application, un service stateful.</p>
 <p>Images :</p>
 <blockquote>
@@ -595,11 +612,11 @@ busybox and hello-world images are official images.</p>
 <p><strong>User images</strong> are images created and shared by users like you and me. They build on base
 images and add additional functionality. Typically, these are formatted as user/image-name.</p>
 </div></blockquote>
-<p id="index-6"><strong>detached mode</strong> mode détaché : à compléter le 6/07/2020, en gros c’est la même chose que &amp;
+<p id="index-7"><strong>detached mode</strong> mode détaché : à compléter le 6/07/2020, en gros c’est la même chose que &amp;
 à la fin d’un commande Linux</p>
 <p>Swarm mode</p>
-</div>
-<div class="section" id="weblinks">
+</section>
+<section id="weblinks">
 <h2><a class="toc-backref" href="#sommaire">Weblinks</a><a class="headerlink" href="#weblinks" title="Lien permanent vers ce titre">¶</a></h2>
 <dl class="footnote brackets">
 <dt class="label" id="id1"><span class="brackets">1</span><span class="fn-backref">(<a href="#id2">1</a>,<a href="#id3">2</a>)</span></dt>
@@ -702,25 +719,32 @@ images and add additional functionality. Typically, these are formatted as user/
 <dd><p><a class="reference external" href="https://docs.docker.com/develop/dev-best-practices/">https://docs.docker.com/develop/dev-best-practices/</a></p>
 </dd>
 <dt class="label" id="id68"><span class="brackets"><a class="fn-backref" href="#id69">34</a></span></dt>
-<dd><p><a class="reference external" href="https://docs.docker.com/registry/deploying/">https://docs.docker.com/registry/deploying/</a></p>
+<dd><p><a class="reference external" href="https://www.portainer.io/">https://www.portainer.io/</a></p>
 </dd>
 <dt class="label" id="id70"><span class="brackets"><a class="fn-backref" href="#id71">35</a></span></dt>
-<dd><p><a class="reference external" href="https://hub.docker.com/r/prakhar1989/catnip">https://hub.docker.com/r/prakhar1989/catnip</a></p>
+<dd><p><a class="reference external" href="https://docs.portainer.io/">https://docs.portainer.io/</a></p>
 </dd>
 <dt class="label" id="id72"><span class="brackets"><a class="fn-backref" href="#id73">36</a></span></dt>
-<dd><p><a class="reference external" href="https://docs.docker.com/samples/">https://docs.docker.com/samples/</a></p>
+<dd><p><a class="reference external" href="https://docs.docker.com/registry/deploying/">https://docs.docker.com/registry/deploying/</a></p>
 </dd>
 <dt class="label" id="id74"><span class="brackets"><a class="fn-backref" href="#id75">37</a></span></dt>
-<dd><p><a class="reference external" href="https://www.contino.io/insights/stateless-vs-stateful-containers-whats-the-difference-and-why-does-it-matter">https://www.contino.io/insights/stateless-vs-stateful-containers-whats-the-difference-and-why-does-it-matter</a></p>
+<dd><p><a class="reference external" href="https://hub.docker.com/r/prakhar1989/catnip">https://hub.docker.com/r/prakhar1989/catnip</a></p>
 </dd>
 <dt class="label" id="id76"><span class="brackets"><a class="fn-backref" href="#id77">38</a></span></dt>
+<dd><p><a class="reference external" href="https://docs.docker.com/samples/">https://docs.docker.com/samples/</a></p>
+</dd>
+<dt class="label" id="id78"><span class="brackets"><a class="fn-backref" href="#id79">39</a></span></dt>
+<dd><p><a class="reference external" href="https://www.contino.io/insights/stateless-vs-stateful-containers-whats-the-difference-and-why-does-it-matter">https://www.contino.io/insights/stateless-vs-stateful-containers-whats-the-difference-and-why-does-it-matter</a></p>
+</dd>
+<dt class="label" id="id80"><span class="brackets"><a class="fn-backref" href="#id81">40</a></span></dt>
 <dd><p><a class="reference external" href="https://blog.engineering.publicissapient.fr/2007/07/24/service-stateful-vs-service-stateless/">https://blog.engineering.publicissapient.fr/2007/07/24/service-stateful-vs-service-stateless/</a></p>
 </dd>
 </dl>
-</div>
-</div>
+</section>
+</section>
 
 
+            <div class="clearer"></div>
           </div>
         </div>
       </div>
@@ -762,6 +786,7 @@ images and add additional functionality. Typically, these are formatted as user/
 <li><a class="reference internal" href="#docker-run-start-and-restart">docker run, start and restart</a></li>
 <li><a class="reference internal" href="#savoir-si-une-image-a-ete-montee-avec-un-volume-ou-un-bind">Savoir si une image a été montée avec un volume ou un bind</a></li>
 <li><a class="reference internal" href="#docker-run-name-rm">Docker run –name –rm</a></li>
+<li><a class="reference internal" href="#portainer">Portainer</a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#repository-locaux">Repository locaux</a></li>
@@ -777,7 +802,7 @@ images and add additional functionality. Typically, these are formatted as user/
                         title="Chapitre précédent">Notes sur git</a></p>
   <h4>Sujet suivant</h4>
   <p class="topless"><a href="../arduino/arduino.html"
-                        title="Chapitre suivant">Arduino</a></p>
+                        title="Chapitre suivant">Arduino*</a></p>
   <div role="note" aria-label="source link">
     <h3>Cette page</h3>
     <ul class="this-page-menu">
@@ -806,17 +831,18 @@ images and add additional functionality. Typically, these are formatted as user/
           <a href="../genindex.html" title="Index général"
              >index</a></li>
         <li class="right" >
-          <a href="../arduino/arduino.html" title="Arduino"
+          <a href="../arduino/arduino.html" title="Arduino*"
              >suivant</a> |</li>
         <li class="right" >
           <a href="../git/git.html" title="Notes sur git"
              >précédent</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">Documentation MajorLee&#39;s notes </a> &#187;</li> 
+        <li class="nav-item nav-item-0"><a href="../index.html">Documentation MajorLee&#39;s notes </a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Docker*</a></li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2019, J.SORANZO.
-      Créé avec <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.4.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.0.2.
     </div>
   </body>
 </html>

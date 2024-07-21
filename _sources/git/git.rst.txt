@@ -38,7 +38,7 @@ n'avais pas de sauvegarde... Tous ces précieux commit qui se sont envolés...
 
 Ce dépôt distant peut être:
 
-- un dépôt sur github.com ou sur gitlab.com
+- un dépôt sur github.com ou sur gitlab.com ou encore Bitbucket.com
 
 .. HINT::
 
@@ -84,6 +84,39 @@ Tutos en français
 `Découvrir Git : introduction et premiers pas`_
 
 .. _`Découvrir Git : introduction et premiers pas` : https://www.miximum.fr/blog/decouvrir-git/
+
+
+====================================================================================================
+Logiciels 
+====================================================================================================
+
+`gitKraken`_
+
+.. _`gitKraken` : https://www.gitkraken.com/
+
+Nécessite de créer un compte sur leur site ? Pourquoi au juste ?
+
+`tortoisegit`_
+
+ - dl dans outils/conception       
+ - Ajoute un menu contextuel
+			avec plein de commandes
+            
+.. _`tortoisegit` : https://tortoisegit.org/
+
+Configurer Tortoise git avec des clé ssh:
+
+- mettre ses clés dans ~/.ssh
+- dans les setting du dépot remplacer htt:// par git@ avec : au lieu du premier /
+- configurer également network/ssh client : ``C:\Windows\System32\OpenSSH\ssh.exe``
+
+====================================================================================================
+Git FAQ
+====================================================================================================
+
+`FAQ Git : retrouvez les meilleures réponses à vos questions pour apprendre Git, de niveau débutant à expert`_
+
+.. _`FAQ Git : retrouvez les meilleures réponses à vos questions pour apprendre Git, de niveau débutant à expert` : https://alm.developpez.com/faq/git/
 
 
 ====================================================================================================
@@ -227,7 +260,7 @@ Gérer les dépôts immenses...
 ====================================================================================================
 .. IMPORTANT::
 
-    how to manage a project with source code, electronique schematic and source documentation ?
+    how to manage a project with source code, electronic schematic and source documentation ?
 
 Un article : `How to handle big repositories with Git`_
 
@@ -245,11 +278,26 @@ git init --bare --share tout simplement
 Petite subtilité au moment du clone : on peut cloner vers un sous répertoire dont le nom est
 différent de celui de la source.
 
- 
+====================================================================================================
+branches orphelines
+====================================================================================================
 
-================================
-petits trucs utiles 
-================================
+Pourquoi créer des branches orphelines ?
+
+- vous souhaitez avoir une branche dédiée pour votre documentation.
+
+- vous souhaitez recommencer un projet dans une nouvelle technologie.
+
+- vous souhaitez fusionner deux repositories qui n’ont pas le même historique.
+
+::
+
+    git checkout --orphan nom_de_la_branche
+
+====================================================================================================
+Petits trucs utiles 
+====================================================================================================
+
 Mettre un projet déjà bien avancé sous GitHUB
 ----------------------------------------------------------------------------------------------------
 Situation : j'ai un dossier projet déjà bien avancé et je souhaite le mettre sous github. Procédure:
@@ -264,53 +312,103 @@ Situation : j'ai un dossier projet déjà bien avancé et je souhaite le mettre 
 https://www.fxparlant.net/github-ajouter-un-projet-deja-cree/
 
 
-Créer une branche et s'y déplacer en une seule commande
+Branches
 ----------------------------------------------------------------------------------------------------
+
+Créer une branche et s'y déplacer en une seule commande
+****************************************************************************************************
 ::
 
     git checkout -b novelle_branch
 
+Lister les branches (locales ET distantes)
+****************************************************************************************************
+::
 
-Logiciels 
+    git branch -a (--all)
+
+Lister les différences entre branche locale et branche distante
+****************************************************************************************************
+::
+
+    git diff maBranche origin/branche
+        ne se connecte pas au serveur en réalité
+        fait la diff par rapport au copies locale
+    avant faire un git fetch
+
+supprimer une branche distante
+****************************************************************************************************
+git push origin :<nombrancheasupprimer> ou git push origin --delete <branchDistante>
+
+On peut aussi les effacer côté serveur (gitlab, bitbucker)
+
+Mettre à jour la liste locale des branche remote::
+
+    git fetch -p
+
+le 17/10/2020 : git push origin +HEAD
+
+Gros pb
+
+git rebase -i HEAD~11
+(vi) drop versus pick
+
+:wq
+
+git push origin HEAD:gh-pages --force
+
+Supprimer une branche locale
+****************************************************************************************************
+git branch --help
+
+git branch -d ou --delete (si pas pushée enfin je crois !)
+
+Merge branche distante
+****************************************************************************************************
+git pull non !
+
+Traquer une nouvelle branche distante
+****************************************************************************************************
+
+::
+
+	le 31/03
+        avec tortoise
+        on commence par un git fetch origin pour mettre à jour la base locale
+        puis un checkout de la branche distante => créé une branche locale. et c'est suffisant !
+
+    git branch -- track <branch> <branche_distante> (7/6/21: j'ignore ?)
+    ou plus simplement git checkout --track origin/branche_distante (si elle n'est pas traquée une nouvelle 
+    branche locale est crée)
+
+Reconnecter une branche distante à une branche locale
+****************************************************************************************************
+::
+
+    git branch --set-upstream-to=origin/master master
+
+Renommer une branche locale
+****************************************************************************************************
+::
+
+    git branch -m new-name (--move)
+
+
+
+Gestion de fichiers
 ----------------------------------------------------------------------------------------------------
-
-`gitKraken`_
-
-.. _`gitKraken` : https://www.gitkraken.com/
-
-Nécessite de créer un compte sur leur site ? Pourquoi au juste ?
-
-`tortoisegit`_
-
- - dl dans outils/conception       
- - Ajoute un menu contextuel
-			avec plein de commandes
-            
-.. _`tortoisegit` : https://tortoisegit.org/
-
-Configurer Tortoise git avec des clé ssh:
-
-- mettre ses clés dans ~/.ssh
-- dans les setting du dépot remplacer htt:// par git@ avec : au lieu du premier /
-- configurer également network/ssh client : ``C:\Windows\System32\OpenSSH\ssh.exe``
-         
-Suppression d'un fichier 
-----------------------------------------------------------------------------------------------------
-git rm
-        
 lister les fichiers indexé 
-----------------------------------------------------------------------------------------------------
+****************************************************************************************************
 A priori git ls-files
+
+Suppression d'un fichier 
+****************************************************************************************************
+git rm
 
 Fichiers pas suivis git ls-files -o, sous-entendu --others (au pluriel)
 
-Mais vers ou pointe origine 
-----------------------------------------------------------------------------------------------------
- - git ls-remote
- - git remote show origin !!!
-        
 merger un seul fichier 
-----------------------------------------------------------------------------------------------------
+****************************************************************************************************
  - git fetch : récupère les branche distantes
  - git checkout La_branche contenant le fichier
  - git pull
@@ -323,12 +421,39 @@ exemple data/index.html ?
 
 Je me suis mis dans le dossier en question et je n'ai donné que le nom du fichier et cela fonctionne
 sous-entendu sans le chemin complet.
-                
-Écraser les dernière modif qui n'ont pas été commitées 
+
+lister les fichier dossier ignorés ? 
+****************************************************************************************************
+git ls-files --others -i --exclude-standard::
+            
+		git ls-files --stage
+        
+attention dans .gitignore un répertoire se termine par / et pas \
+
+lister les fichiers d'une branche
+****************************************************************************************************
+::
+
+    git ls-tree nom_de_la_branche -r (recursiv)
+
+
+
+
+Gestion des commits
 ----------------------------------------------------------------------------------------------------
- - git checkout -- <file> (comme le signal la commande git status)
- - git reset --hard HEAD~1 (retour au dernier commit)
- - git rebase -i HEAD~10
+Mais vers ou pointe origine 
+****************************************************************************************************
+ - git ls-remote
+ - git remote show origin !!!
+
+Écraser les dernière modif qui n'ont pas été commitées 
+****************************************************************************************************
+::
+
+    - git checkout -- <file> (comme le signal la commande git status, noter l'espace entre -- et le nom du fichier)
+    - git reset --hard HEAD~1 (retour au dernier commit)
+    - git rebase -i HEAD~10
+    - git checkout .
  
  A propos de git reset --hard HEAD~1::
  
@@ -339,37 +464,8 @@ sous-entendu sans le chemin complet.
     tracked by git (speak: committed or at least added to the index), you have no way of getting 
     them back using git.
 
-Retirer un répertoire de l'index  
-----------------------------------------------------------------------------------------------------
-Pour qu'il soit pris en compte par le git ignore::
-
-    git rm --cached -r build
-    
-A condition de faire le add avant
-
-Puis de les retirer après de l'index
-
-lister les fichier dossier ignorés ? 
-----------------------------------------------------------------------------------------------------
-git ls-files --others -i --exclude-standard::
-            
-		git ls-files --stage
-        
-attention dans .gitignore un répertoire se termine par / et pas \
-        
-Rattacher la tête 
-----------------------------------------------------------------------------------------------------
-Procédure::
-
-    git checkout -b temp
-    git branch -f master temp
-    git checkout master
-    git branch -d temp
-        
-      
-        
 Annuler le dernier commit 
-----------------------------------------------------------------------------------------------------
+****************************************************************************************************
     
 Situation :
 - des fichiers modifiés
@@ -395,14 +491,84 @@ Autres possibilités::
 
     git revert
     ou git add . suivi d'un git commit --amend
-        
-        
-        
+
+
 Lister les commit d'une branche distante 
-----------------------------------------------------------------------------------------------------
+****************************************************************************************************
 - Utile quand on est out of date
 - git remote show origin
-- git ls-remote
+- git ls-remote         
+
+Déplacer le dernier commit d'une branche vers une autre branche
+****************************************************************************************************
+::
+
+    git checkout l'autre branche
+    git merge la branche où se trouve le commit fautif
+    git checkout la branche du commit fautif
+    git reset --hard HEAD~1
+        
+
+merge d'un répertoire d'une autre branche
+****************************************************************************************************
+    git checkout branch chemin
+
+Dépôts distant
+----------------------------------------------------------------------------------------------------
+Annuler un pull
+****************************************************************************************************
+::
+
+    git merge --abort      
+
+git push vers Github (add new project)
+****************************************************************************************************
+::
+
+    Situation
+        git local
+        je veux le mettre sous github
+        adding-an-existing-project-to-github-using-the-command-line/
+        git push --all
+            from official ref
+            Push all branches (i.e. refs under refs/heads/); cannot be used with other <refspec>.
+
+push force
+----------------------------------------------------------------------------------------------------
+::
+
+    git push --force-with-lease
+
+
+
+Retirer un répertoire de l'index  
+----------------------------------------------------------------------------------------------------
+Pour qu'il soit pris en compte par le git ignore::
+
+    git rm --cached -r build
+    
+A condition de faire le add avant
+
+Puis de les retirer après de l'index
+
+
+        
+Rattacher la tête 
+----------------------------------------------------------------------------------------------------
+Procédure::
+
+    git checkout -b temp
+    git branch -f master temp
+    git checkout master
+    git branch -d temp
+        
+      
+        
+
+        
+        
+        
+
 
 Dépôt git sur clé usb 
 ----------------------------------------------------------------------------------------------------
@@ -442,75 +608,15 @@ Sous Windows::
     ssh-agent error 1058 : service est mis sur disable dans Windows, le passer sur manuel !
 
 
-cherry-pick : écrémer
+cherry-pick : 
 ----------------------------------------------------------------------------------------------------
+écrémer
 
-Lister les différences entre branches locale et branche distante
-----------------------------------------------------------------------------------------------------
-::
 
-    git diff maBranche origin/branche
-        ne se connecte pas au serveur en réalité
-        fait la diff par rapport au copies locale
-    avant faire un git fetch
 
-git push
-----------------------------------------------------------------------------------------------------
 
-::
 
-    Situation
-        git local
-        je veux le mettre sous github
-        adding-an-existing-project-to-github-using-the-command-line/
-        git push --all
-            from official ref
-            Push all branches (i.e. refs under refs/heads/); cannot be used with other <refspec>.
 
-supprimer une branche distante
-----------------------------------------------------------------------------------------------------
-git push origin : <nombrancheasupprimer>
-
-le 17/10/2020 : git push origin +HEAD
-
-Gros pb
-
-git rebase -i HEAD~11
-(vi) drop versus pick
-
-:wq
-
-git push origin HEAD:gh-pages --force
-
-Supprimer une branche locale
-----------------------------------------------------------------------------------------------------
-git branch --help
-
-git branch -d ou --delete (si pas pushée enfin je crois !)
-
-Merge branche distante
-----------------------------------------------------------------------------------------------------
-git pull non !
-
-Traquer une nouvelle branche distante
-----------------------------------------------------------------------------------------------------
-
-::
-
-	le 31/03
-        avec tortoise
-        on commence par un git fetch origin pour mettre à jour la base locale
-        puis un checkout de la branche distante => créé une branche locale. et c'est suffisant !
-
-    git branch -- track <branch> <branche_distante> (7/6/21: j'ignore ?)
-    ou plus simplement git checkout --track origin/branche_distante (si elle n'est pas traquée une nouvelle 
-    branche locale est crée)
-
-Reconnecter une branche distante à une branche locale
-----------------------------------------------------------------------------------------------------
-::
-
-    git branch --set-upstream-to=origin/master master
 
 
 créer un dépôt distant sur le serveur du VoLAB
@@ -529,30 +635,16 @@ Errors : git cannot lock ref d'une branche distante lors d'un pull
 ----------------------------------------------------------------------------------------------------
 Le fichier dans l'arbo git était corrompu !
 
-lister les fichiers d'une branche
-----------------------------------------------------------------------------------------------------
-::
 
-    git ls-tree nom_de_la_branche -r (recursiv)
 
 nettoyage des liens pourri
 ----------------------------------------------------------------------------------------------------
 
 git fetch --prune
     
-merge d'un répertoire d'une autre branche
-----------------------------------------------------------------------------------------------------
-    git checkout branch chemin
 
-Déplacer le dernier commit d'une branche vers une autre branche
-----------------------------------------------------------------------------------------------------
 
-::
 
-    git checkout l'autre branche
-    git merge la branche où se trouve le commit fautif
-    git checkout la branche du commit fautif
-    git reset --hard HEAD~1
 
 
 

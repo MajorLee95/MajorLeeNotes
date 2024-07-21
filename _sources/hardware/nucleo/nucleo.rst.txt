@@ -1,6 +1,3 @@
-.. index::
-    single: NUCLEO; Board
-    
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 NUCLEO board *
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -14,6 +11,9 @@ NUCLEO board *
     :backlinks: top
 
 .. _refNucleoBoard:
+
+.. index::
+    single: NUCLEO; Board
 
 ====================================================================================================
 Présentation
@@ -30,8 +30,9 @@ LQFP64 package, LQFP144 package
 
 RCC acronym : Reset and Control Clcok
 
-Carte NUCLEO-F401RE 
-====================================================================================================
+
+Carte NUCLEO-F401RE
+----------------------------------------------------------------------------------------------------
 Chip: STM32F401RE (R = 64pin package, E = 512k FLASH)
 
 .. image:: images/nucleoF401reBoard.jpg
@@ -79,7 +80,7 @@ dans le fichier::
 
 
 Carte NUCLEO-F429ZI
-====================================================================================================
+----------------------------------------------------------------------------------------------------
 Chip: STM32F429ZI (Z = 144pin package, I = 2048k FLASH)
 
 32b Arm® Cortex®-M4 MCU+FPU, 225DMIPS, up to 2MB Flash/256+4KB RAM, USB
@@ -107,7 +108,7 @@ Prix indicatif : 26€ `NUCLEO-F429ZI chez MOUSER`_
 .. _`NUCLEO-F401RE chez MOUSER` : https://www.mouser.fr/ProductDetail/STMicroelectronics/NUCLEO-F401RE?qs=sGAEpiMZZMu3sxpa5v1qrjJpfJ%2F%252BCrSiyHUXpPlRNo4%3D
 
 NUCLEO-F746ZG
-====================================================================================================
+----------------------------------------------------------------------------------------------------
 (Z = 144pin package, G = 1024k FLASH)
 
 Cortex M7 (architecture ARM V7)
@@ -151,6 +152,10 @@ Sans oublier `Cortex M sur wikipedia`_
 ====================================================================================================
 Outils de développement
 ====================================================================================================
+.. NOTE:: 2023 : Utiliser de préférence STM32Cube IDE (qui intègre MX)
+   :class: without-title
+
+
 STM32CubeMX est l'outil indispensable et **IL FAUT COMMENCER par LUI** voir `UM1718_CubeMX.pdf`_
 J'utilise actuellement (04/2020) la version 5.6.0
 
@@ -177,8 +182,9 @@ Exemple la commande Format du menu Source ! On fini par la trouver dans l'aide d
 .. _`le site openstm32.org` : https://www.openstm32.org/HomePage
 
 
-Autres outils de développement 
-====================================================================================================
+Autres outils de développement
+----------------------------------------------------------------------------------------------------
+
 Officiellement sur le `site ST outils de dev`_, il y a :
 
 .. image:: images/outilsDev.jpg
@@ -210,7 +216,7 @@ Il y en a des tas !!! Il y a même des fichiers .chm dans les packages. Exemples
     NUCLEO-F401 snif
 
 gettingStarted_firmware_en.DM00105925.pdf
-====================================================================================================
+----------------------------------------------------------------------------------------------------
 Getting started with the STM32 Nucleo board firmware package UM1726
 
 16 pages DocID025839 Rev 2 de avil **2014**
@@ -245,7 +251,7 @@ Adresse de cette copie d'écran : page `nucleo-F401RE Tools and Softwares`_
 J'abandonne donc l'étude du présent document pour me consacré à ce document plus récent.
 
 STM32CubeF4GettingStarted.pdf 
-====================================================================================================
+----------------------------------------------------------------------------------------------------
 **Getting started with STM32CubeF4 MCU Package for STM32F4 Series** UM1730 février 2019 28 pages
 
 manip du 22/03/2020 : tentative d'ouvir l'exemple GPIO toggle
@@ -323,7 +329,7 @@ de laisser faire le wizard. Et même là c'est gagné! Voit `STM32Workbench mini
 
    
 UM1718_CubeMX.pdf
-====================================================================================================
+----------------------------------------------------------------------------------------------------
 STM32CubeMX for STM32 configuration and initialization C code generation 
 
 UM1718 User manual 363 pages rev 31 12/2019.
@@ -360,7 +366,7 @@ L'HELP de cubeMX renvoi vers le présent document.
 
 
 getting-started-with-stm32-nucleo-board-software-development-tools-stmicroelectronics.pdf
-====================================================================================================
+----------------------------------------------------------------------------------------------------
 dm00105928- UM1727 22 pages de Janvier 2016
 
 Getting started with STM32 Nucleo board softwaredevelopment tools, **UM1730** semble plus à jour.
@@ -371,7 +377,7 @@ Petite description des différentes chaînes de dev
 
 
 UM1725 Description of STM32F4 HAL and LL drivers DM00105879
-====================================================================================================
+----------------------------------------------------------------------------------------------------
 1838 pages Fev 2017
 
 C'est assurément un document **MAJEUR** dans l'utilisation des STM32.
@@ -645,7 +651,7 @@ si limpide !
 Du coup dans mon espace de travail, j'ai:
 
 toggleLeDCubeMX
-====================================================================================================
+----------------------------------------------------------------------------------------------------
 - un message RS sur UART2 toutes les 1s dans une boucle while
 - la LED sur PA5 qui clignote à 200ms grâce au TIM2 sous interruption.
 
@@ -653,7 +659,7 @@ Le plus gros du boulot est dans CubeMX mais l'interface de CubeMX est tellement 
 présente pas de grosses difficultés.
 
 pushButtonInterrup
-====================================================================================================
+----------------------------------------------------------------------------------------------------
 Objectif: utiliser le bouton poussoir de la carte sous interruption.
 
 On commence dans CubeMX, mais avant une petite recherche Youtube. On ne trouve que pour Keil mais
@@ -721,7 +727,7 @@ en cas de rebond justement
     }
 
 uartAndRXIt
-====================================================================================================
+----------------------------------------------------------------------------------------------------
 Commençons dans la doc de l'API puis par une recherche internet pour une fois afin de voir si la doc
 est suffisante. Ne pas oublier les exemples fournis dans STM32Cube_FW_F4_V1.25.0 !
 
@@ -777,7 +783,7 @@ Elle n'a pas de timeout. Mais comme elle n'est pas bloquante, on peut gérer les
 réponse ailleurs donc...
 
 RX with DMA
-====================================================================================================
+----------------------------------------------------------------------------------------------------
 Pas vraiment plus compliqué. Dans Cube MX, il faut aller dans l'onglet DMA de l'UART concerné et 
 activer DMA RX
 
@@ -802,7 +808,7 @@ Pour être plus efficient, iol y a la technique suivante
     single: STM32; IDLE line interrupt
     
 RX through idle line interrupt
-====================================================================================================
+----------------------------------------------------------------------------------------------------
 
 Intéressant :IDLE line interrupt
 
@@ -864,7 +870,7 @@ En n'oubliant pas d'ajouter dans la fonction main.c:
     
     
 STM32 I2C scanner 
-====================================================================================================
+----------------------------------------------------------------------------------------------------
 Cela peut s'avérer utile pour vérifier les branchements.
 
 Directement trouvé sur le `github  de ProjectsByJRP`_
@@ -881,7 +887,7 @@ Affichage avec des **printf** sur UART2
 
     
 STM32 I2C OLED 0.96
-====================================================================================================
+----------------------------------------------------------------------------------------------------
 Recherche internet : `écran OLED 0.96" IIC`_
 
 Caractéristiques principales::
@@ -1058,7 +1064,7 @@ Tips
 **ctrl+space** dans l'editeur de STM32Workbench pour le code complétion
 
 Doxygen support
-====================================================================================================
+----------------------------------------------------------------------------------------------------
 Visiblement c'est pas la préocupation principal.
 On peut activer le support de doxygen dans Preference/Editor Documentation Tolls Comment
 (liste déroulante)
@@ -1070,7 +1076,7 @@ Je me suis créé des template qui commencent tous par doxy comme cela dans l'é
  suivit de ctrl+SPACE et j'ai ma liste de template.
 
 NULCEO-F401 doesn't start in stand alone mode
-====================================================================================================
+----------------------------------------------------------------------------------------------------
 I have a board with ST-LINK v2.J23 firmware and board doesn't start in stan alone mode 
 (ie not connect to a computer) powered by a battery pack for example.
 
@@ -1090,11 +1096,11 @@ It open a STLink upgrade dialog
    :width: 300 px 
 
 NOP
-====================================================================================================
+----------------------------------------------------------------------------------------------------
 Afin de pouvoir placer un point d'arrêt dans une fonction vide il existe la macro __NOP()
 
 UART console in IDE
-====================================================================================================
+----------------------------------------------------------------------------------------------------
 In System Workbench : `voir sur EEBLOG`_
 
 `Sur openstm32.org`_

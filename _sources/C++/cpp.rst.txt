@@ -7,6 +7,7 @@ Mes notes sur C++
 
 :Auteur: J.Soranzo
 :Date: Novembre 2019
+:Update: 15/03/2023
 :Societe: VoRoBoTics
 :Entity: VoLAB
 
@@ -27,11 +28,69 @@ Ceci n'est pas un cours sur le C++, il y en a déjà plein et de très bons voir
 
 .. _`Openclassrooms` : https://openclassrooms.com/fr/courses/1894236-programmez-avec-le-langage-c
 
+.. SEEALSO:: **SITE D'AIDE**
+    :class: without-title
+    
+    `Les meilleurs cours et tutoriels pour apprendre la programmation C++`_
+
+.. _`Les meilleurs cours et tutoriels pour apprendre la programmation C++` : https://cpp.developpez.com/cours/
+
+
+.. SEEALSO:: **SITE D'AIDE**
+    :class: without-title
+    
+    `Penser en C++`_
+
+.. _`Penser en C++` : https://bruce-eckel.developpez.com/livres/cpp/traduction/ticpp2vol1/
+
+
 **Voir aussi la map cpp_notes.xmind**
 
-================================
+====================================================================================================
+Classe membre d'une autre classe
+====================================================================================================
+Il ne s'agit pas ici d'évoquer les classe fille et encore moins les classe virtuelle mais simplement
+une classe utilisée en tant que membre (attribut) d'une autre classe avec un constructeur ayant des
+paramètres.
+
+.. SEEALSO:: **SITE D'AIDE**
+    :class: without-title
+    
+    `comment intégrer une classe dans une autre classe`_
+
+.. _`comment intégrer une classe dans une autre classe` : https://www.developpez.net/forums/d1847623/c-cpp/cpp/debuter/integrer-classe-classe/
+
+
+====================================================================================================
+Rappels éventuels du C
+====================================================================================================
+
+.. index::
+    pair: C; Volatile
+    pair: C++; Volatile
+
+Variable volatile
+----------------------------------------------------------------------------------------------------
+En qualifiant par volatile le type d'une variable, le programmeur prévient le compilateur que cette 
+variable peut être modifiée par un moyen extérieur au programme.
+
+
+====================================================================================================
+Codding Styles/ formatting
+====================================================================================================
+
+`Google C++ Style Guide`_
+
+.. _`Google C++ Style Guide` : https://google.github.io/styleguide/cppguide.html
+
+Dans Vscode::
+
+    C_Cpp.clang_format_fallbackStyle = { BasedOnStyle: Google, IndentWidth: 4 }
+
+
+====================================================================================================
 C++ opérateurs (surcharge)
-================================
+====================================================================================================
 Même si l'on parle de classe, ceci n'est pas une méthode.
 C'est une fonction normale située à l'extérieur de toute classe.
 
@@ -42,7 +101,7 @@ Exemple:
     bool operator==(Durée const& a, Durée const& b);
     
 Surcharge opérateur ==, >, ... 
-======================================     
+----------------------------------------------------------------------------------------------------
 Exemple complet:
 
 .. code:: cpp
@@ -65,7 +124,7 @@ Exemple complet:
 .. NOTE::    Attention au mot clé const à la fin de la méthode estEgale !
 
 Surcharge des opérateurs arithmétiques
-=======================================
+----------------------------------------------------------------------------------------------------
 Exemple avec +, on commence par surcharger l'opérateur de raccourci +=.
 
 Comme il modifie l'objet lui-même cette surcharge est un méthode de l'objet.
@@ -104,7 +163,7 @@ Puis on peut surcharger + avec une fonction classique
     
 
 Surcharge de l'opérateur <<
-======================================
+----------------------------------------------------------------------------------------------------
 Cette surcharge est un peu particulière. On commence, normalement pas créer un méthode dans l'objet
 
 Exemple la méthode affiche()
@@ -217,7 +276,7 @@ le type qu'on veut utiliser entre < et >::
     Prototype et corps de la fonction template DOIVENT se trouver dans le .h
     
 Spécialisation
-======================================
+----------------------------------------------------------------------------------------------------
 Une fois le template créé, on peut le spécialiser pour un type en particulier. Cela permet de
 changer le comportement de la focntion pour un type en particulier.
 
@@ -237,7 +296,7 @@ L'ordre des déclarations est important : d'abord la version générique puis la
 
 .. index::
     pair: C++; Statique
-    pair: c++; static
+    pair: C++; static
 
 ================================
 Membres statiques
@@ -254,6 +313,12 @@ Une méthode statique ne peut accéder qu'aux attributs statiques de la classe.
 
     bool CRtc::initErr = false;
     NTPClient *CRtc::p_timeClient = nullptr;
+
+Variables static C
+----------------------------------------------------------------------------------------------------
+Une variable déclarée avec static aura sa portée limitée à l'unité de compilation où elle est 
+déclarée. Du coup 2 variables avec le même nom pourront être déclarées dans 2 unité de compilation 
+séparées. Sa durée de vie est celle du programme.
 
 ----------------------------------------------------------------------------------------------------
 
@@ -397,7 +462,7 @@ On pourrait aussi parler de list
     single: Itérator, Itérer
     
 Itérer un tableau rappel
-======================================
+----------------------------------------------------------------------------------------------------
 .. code:: cpp
     
     int tableau[] ...
@@ -495,7 +560,7 @@ sous forme de pointeurs**. Il est alors **nécessaire** de faire cette surcharge
     //Sauf les commentaires !
 
 Surcharge de l'opérateur =     
-======================================
+----------------------------------------------------------------------------------------------------
 Si il s'avère nécessaire de surcharger l'opérateur de copie, c'est qu'il est nécessaire de le faire
 également pour l'opérateur =
 
@@ -543,11 +608,11 @@ dans le monde ARDUINO
 Typedef, struct & co
 ================================
 Typedef 
-======================================
+----------------------------------------------------------------------------------------------------
 typedef *type_connu nouveau_nom*; **Alternative C++11** : using _newName = _oldType ;
 
 struct
-======================================
+----------------------------------------------------------------------------------------------------
 
 .. code:: cpp
 
@@ -595,13 +660,13 @@ arduino
     autrePoint_T deuxeimePoint;
 
 enum 
-======================================
+----------------------------------------------------------------------------------------------------
 Même schéma que struct
 
 		enum _enumName { _elements;  };
 
 typedef et les fonctions 
-======================================        
+----------------------------------------------------------------------------------------------------        
 typedef pour déclarer des profile de fonction (souvent avec des pointeur sur fonction):
 
 .. code:: cpp
@@ -611,7 +676,7 @@ typedef pour déclarer des profile de fonction (souvent avec des pointeur sur fo
     t_somefunc afunc = &product;
 
 Champs de bits
-======================================
+----------------------------------------------------------------------------------------------------
 Union champs de bits
 
 .. code:: cpp
@@ -631,7 +696,7 @@ Union champs de bits
 Il est vivement conseillé de faire des essais afin d'être sur de l'endianess de la machine
 
 Exemple trame série
-======================================
+----------------------------------------------------------------------------------------------------
 
 .. code:: cpp
 
@@ -752,7 +817,7 @@ ModelIo vite abandonnée.
 .. _plantUMLRef:
 
 PlantUML
-====================================================================================================
+----------------------------------------------------------------------------------------------------
 Utilisé sur Electrical Power Strip IoT
 
 `Site officiel de PlantUML`_

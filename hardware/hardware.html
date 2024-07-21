@@ -4,16 +4,18 @@
 <html lang="fr">
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>Hardware notes &#8212; Documentation MajorLee&#39;s notes </title>
-    <link rel="stylesheet" href="../_static/nature.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/nature.css" />
     <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
-    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
-    <script src="../_static/language_data.js"></script>
     <script src="../_static/translations.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Recherche" href="../search.html" />
     <link rel="next" title="Robotique" href="robotique/robotique.html" />
@@ -31,7 +33,8 @@
         <li class="right" >
           <a href="../linux/linux.html" title="LINUX *"
              accesskey="P">précédent</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">Documentation MajorLee&#39;s notes </a> &#187;</li> 
+        <li class="nav-item nav-item-0"><a href="../index.html">Documentation MajorLee&#39;s notes </a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Hardware notes</a></li> 
       </ul>
     </div>  
 
@@ -40,7 +43,7 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <div class="section" id="hardware-notes">
+  <section id="hardware-notes">
 <h1><a class="toc-backref" href="#hardware-tdm">Hardware notes</a><a class="headerlink" href="#hardware-notes" title="Lien permanent vers ce titre">¶</a></h1>
 <dl class="field-list simple">
 <dt class="field-odd">Auteur</dt>
@@ -232,13 +235,13 @@
 </li>
 </ul>
 </div>
-<div class="section" id="pcb-data">
+<section id="pcb-data">
 <h2><a class="toc-backref" href="#hardware-tdm">PCB data</a><a class="headerlink" href="#pcb-data" title="Lien permanent vers ce titre">¶</a></h2>
 <p>A compléter 22/7/2021</p>
 <a class="reference internal image-reference" href="../_images/grilleVsMills.jpg"><img alt="../_images/grilleVsMills.jpg" src="../_images/grilleVsMills.jpg" style="width: 300px;" /></a>
 <hr class="docutils" />
-</div>
-<div class="section" id="cpu-architecture">
+</section>
+<section id="cpu-architecture">
 <span id="index-0"></span><h2><a class="toc-backref" href="#hardware-tdm">CPU Architecture</a><a class="headerlink" href="#cpu-architecture" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Harvard et Von Neumann</p>
 <p>Harvard :  computer architecture with separate storage and signal pathways for instructions and data</p>
@@ -247,8 +250,8 @@ où les données et les instructions partage souvent les mêmes memoires mais so
 caches différents.</p>
 <p>Von Neumann architecture, where program instructions and data share the same memory and pathways.</p>
 <p>Source <a class="reference external" href="https://en.wikipedia.org/wiki/Harvard_architecture">wikipedia Harvard Archi</a> <a class="footnote-reference brackets" href="#id3" id="id4">1</a></p>
-</div>
-<div class="section" id="teensy-3-5">
+</section>
+<section id="teensy-3-5">
 <h2><a class="toc-backref" href="#hardware-tdm">Teensy (3.5)</a><a class="headerlink" href="#teensy-3-5" title="Lien permanent vers ce titre">¶</a></h2>
 <p><a class="reference external" href="https://www.pjrc.com/teensy/">Site officiel Teensy</a> <a class="footnote-reference brackets" href="#id5" id="id6">2</a></p>
 <p>LED power : je pense qu’il n’y en a pas.
@@ -259,32 +262,32 @@ ref : 6360 T8406 ? 16MHz</p>
 <p>Processeur : MK64FX512VMD12 120 MHz Cortex-M4F</p>
 <p>3.3V signals, 5V tolerant</p>
 <p>512K FLASH, 256K RAM, 4K EEPROM, 17 timer</p>
-</div>
-<div class="section" id="connecteur-wifi">
+</section>
+<section id="connecteur-wifi">
 <h2><a class="toc-backref" href="#hardware-tdm">Connecteur Wifi</a><a class="headerlink" href="#connecteur-wifi" title="Lien permanent vers ce titre">¶</a></h2>
 <p>IPEX ou IPX : petits connecteurs coaxiaux des cartes FriendlyArM nanoPC-T4 par exemple
 MHF connecteur</p>
 <p>SMA connecteur des antennes Wifi</p>
 <hr class="docutils" />
-</div>
-<div class="section" id="esp-boards">
+</section>
+<section id="esp-boards">
 <span id="index-1"></span><h2><a class="toc-backref" href="#hardware-tdm">ESP boards</a><a class="headerlink" href="#esp-boards" title="Lien permanent vers ce titre">¶</a></h2>
-<div class="section" id="esp8266">
+<section id="esp8266">
 <h3><a class="toc-backref" href="#hardware-tdm">ESP8266</a><a class="headerlink" href="#esp8266" title="Lien permanent vers ce titre">¶</a></h3>
 <p>Attention toutes les broches ne sont pas utilisables  pour faire ce qu’on veut!
 Il y a des contrainte.</p>
 <p>Monoceur 32 bits</p>
 <p>Voir sur le site <a class="reference external" href="https://randomnerdtutorials.com/esp8266-pinout-reference-gpios/">randomTutorial ESP8266 pinout</a> <a class="footnote-reference brackets" href="#id7" id="id8">3</a></p>
-</div>
-<div class="section" id="esp32">
+</section>
+<section id="esp32">
 <h3><a class="toc-backref" href="#hardware-tdm">ESP32</a><a class="headerlink" href="#esp32" title="Lien permanent vers ce titre">¶</a></h3>
 <p><a class="reference external" href="https://www.dfrobot.com/product-1590.html">DFRaobot sort sa firebeetle</a> <a class="footnote-reference brackets" href="#id9" id="id10">4</a> à 6.9$</p>
 <p>Existe en WeMOS qu’on trouve facilement sur Ebay, Aliexpress et Amazon pour environ 5€ livré.
 Mais dans cette version la carte n’est pas vraiment breadboard frendly les 2 rangées côte à côte
 c’est pas géant.</p>
 <p>En dual in line on en trouve facilement même sur Amazon prime à 10€ lol ou <a class="reference external" href="https://fr.aliexpress.com/item/32959541446.html?albpd=fr32959541446&amp;acnt=248-630-5778&amp;aff_platform=aaf&amp;albpg=539263010115&amp;netw=u&amp;albcp=10191220526&amp;pvid=6da13e78-e411-4a07-8ba1-6ba1d5f3ebaf&amp;sk=UneMJZVf&amp;scm=1007.23534.123999.0&amp;trgt=539263010115&amp;terminal_id=dc405bfbfa4646238f25fa75bee476aa&amp;needSmbHouyi=false&amp;albbt=Google_7_shopping&amp;src=google&amp;crea=fr32959541446&amp;aff_fcid=6b4f0e3a21d547fcb80dae3f14e7bcb4-1619075408988-07981-UneMJZVf&amp;gclid=Cj0KCQjwvYSEBhDjARIsAJMn0lgXhfg6yLDy4jCB3HKIzpxUOGMqDdKdXSceSx8nPQWkjJ7Og46MOFsaAkKnEALw_wcB&amp;albag=107473525328&amp;aff_fsk=UneMJZVf&amp;albch=shopping&amp;albagn=888888&amp;isSmbAutoCall=false&amp;aff_trace_key=6b4f0e3a21d547fcb80dae3f14e7bcb4-1619075408988-07981-UneMJZVf&amp;rmsg=do_not_replacement&amp;device=c&amp;gclsrc=aw.ds">4.2€ livré sur Aliexpress</a> <a class="footnote-reference brackets" href="#id11" id="id12">5</a></p>
-</div>
-<div class="section" id="esp32-vs-esp8266">
+</section>
+<section id="esp32-vs-esp8266">
 <h3><a class="toc-backref" href="#hardware-tdm">ESP32 vs ESP8266</a><a class="headerlink" href="#esp32-vs-esp8266" title="Lien permanent vers ce titre">¶</a></h3>
 <p>Sur <a class="reference external" href="https://arduinotutoriels.com/esp32-vs-esp8266/">Arduinotutoriels</a> <a class="footnote-reference brackets" href="#id13" id="id14">6</a></p>
 <p>En résumé, ESP32 ajoute <strong>Dual core</strong>, Bluetooth 4.0 LE, 2 SPI et 1 I2C, 2 canaux ADC 8 bits et 19 GPIO</p>
@@ -293,36 +296,36 @@ c’est pas géant.</p>
 <p>Rappel : on peut faire tourner freeRTos sur un ESP.</p>
 </div>
 <hr class="docutils" />
-</div>
-</div>
-<div class="section" id="sata-to-usb3">
+</section>
+</section>
+<section id="sata-to-usb3">
 <span id="index-2"></span><h2><a class="toc-backref" href="#hardware-tdm">SATA to USB3</a><a class="headerlink" href="#sata-to-usb3" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Solution testée et maintes fois utilisées  <a class="reference external" href="https://www.amazon.fr/Sabrent-Adaptateur-Optimis%C3%A9-support-EC-SSHD/dp/B011M8YACM/ref=sr_1_8?keywords=Sabrent&amp;qid=1581088661&amp;sr=8-8">sur AMAZON SABERENT</a> <a class="footnote-reference brackets" href="#id15" id="id16">7</a> à 9€90</p>
-</div>
-<div class="section" id="mipi-csi-prolangateur">
+</section>
+<section id="mipi-csi-prolangateur">
 <h2><a class="toc-backref" href="#hardware-tdm">MIPI CSI prolangateur</a><a class="headerlink" href="#mipi-csi-prolangateur" title="Lien permanent vers ce titre">¶</a></h2>
 <p><a class="reference external" href="https://www.tindie.com/products/freto/pi-camera-hdmi-cable-extension/">Pi Camera HDMI Cable Extension</a> <a class="footnote-reference brackets" href="#id17" id="id18">8</a></p>
 <p><a class="reference external" href="http://petitstudio.blogspot.com/2015/05/hdmi-cables-are-not-all-same.html">Subtilitées sur Petit Studio</a> <a class="footnote-reference brackets" href="#id19" id="id20">9</a></p>
 <p><a class="reference external" href="https://www.amazon.com/Arducam-Extension-Module-Raspberry-Specific/dp/B06XDNBM63">Sur Amazon</a> <a class="footnote-reference brackets" href="#id21" id="id22">10</a></p>
 <p>Et enfin <a class="reference external" href="https://wiki.batc.org.uk/CSI-2_to_HDMI">sur le site de BATC</a> <a class="footnote-reference brackets" href="#id23" id="id24">11</a></p>
-</div>
-<div class="section" id="les-capteurs">
+</section>
+<section id="les-capteurs">
 <h2><a class="toc-backref" href="#hardware-tdm">LES CAPTEURS</a><a class="headerlink" href="#les-capteurs" title="Lien permanent vers ce titre">¶</a></h2>
-<div class="section" id="eau">
+<section id="eau">
 <h3><a class="toc-backref" href="#hardware-tdm">Eau</a><a class="headerlink" href="#eau" title="Lien permanent vers ce titre">¶</a></h3>
 <p><a class="reference external" href="https://www.dfrobot.com/product-1662.html">Analog TDS Sensor/Meter for Arduino</a> <a class="footnote-reference brackets" href="#id25" id="id26">12</a> 26/02/2020</p>
 <p>TDS (Total Dissolved Solids) indicates that how many milligrams of soluble solids dissolved in
 one liter of water.</p>
 <p><a class="reference external" href="https://www.hackster.io/robotics-bangladesh/portable-liquids-classification-device-d207a3?utm_campaign=new_projects&amp;utm_content=3&amp;utm_medium=email&amp;utm_source=hackster&amp;utm_term=project_name">Example d’utilisation sur Hackster.io</a> <a class="footnote-reference brackets" href="#id27" id="id28">13</a></p>
-</div>
+</section>
 <hr class="docutils" />
-<div class="section" id="air">
+<section id="air">
 <h3><a class="toc-backref" href="#hardware-tdm">Air</a><a class="headerlink" href="#air" title="Lien permanent vers ce titre">¶</a></h3>
 <p>A retranscrire ici projet 035-tempDataLogger document de conception 26/02/2020 …</p>
 <hr class="docutils" />
-</div>
-</div>
-<div class="section" id="sbc">
+</section>
+</section>
+<section id="sbc">
 <span id="index-3"></span><h2><a class="toc-backref" href="#hardware-tdm">SBC</a><a class="headerlink" href="#sbc" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Single boards computer</p>
 <p>Il y a les petites</p>
@@ -335,11 +338,13 @@ one liter of water.</p>
 <p>Elles coûtent souvent plusieurs centaines d’Euro…</p>
 <a class="reference internal image-reference" href="../_images/thin-mini-itx.jpg"><img alt="../_images/thin-mini-itx.jpg" class="align-center" src="../_images/thin-mini-itx.jpg" style="width: 500px;" /></a>
 <p>Comme la NVIDIA Jetson Xavier ou encore :</p>
-<div class="figure align-center" id="id1">
+<figure class="align-center" id="id1">
 <a class="reference internal image-reference" href="../_images/QBiP-1605A.png"><img alt="../_images/QBiP-1605A.png" src="../_images/QBiP-1605A.png" style="width: 500px;" /></a>
-<p class="caption"><span class="caption-text">QBiP-1605A de GigaIPC</span><a class="headerlink" href="#id1" title="Lien permanent vers cette image">¶</a></p>
-</div>
-<div class="section" id="les-fabricants-de-petites">
+<figcaption>
+<p><span class="caption-text">QBiP-1605A de GigaIPC</span><a class="headerlink" href="#id1" title="Lien permanent vers cette image">¶</a></p>
+</figcaption>
+</figure>
+<section id="les-fabricants-de-petites">
 <h3><a class="toc-backref" href="#hardware-tdm">Les fabricants (de petites)</a><a class="headerlink" href="#les-fabricants-de-petites" title="Lien permanent vers ce titre">¶</a></h3>
 <ul class="simple">
 <li><p>Raspberry fondation</p></li>
@@ -357,23 +362,23 @@ one liter of water.</p>
 <li><p>LIBRE COMPUTER</p></li>
 <li><p>PIN64</p></li>
 </ul>
-</div>
-<div class="section" id="sous-groupe-pin64">
+</section>
+<section id="sous-groupe-pin64">
 <h3><a class="toc-backref" href="#hardware-tdm">Sous groupe PIN64</a><a class="headerlink" href="#sous-groupe-pin64" title="Lien permanent vers ce titre">¶</a></h3>
-<div class="section" id="ox64-8">
+<section id="ox64-8">
 <h4><a class="toc-backref" href="#hardware-tdm">Ox64 : 8$</a><a class="headerlink" href="#ox64-8" title="Lien permanent vers ce titre">¶</a></h4>
 <p>Détectée en 2023, SBC très petite.</p>
 <p><a class="reference external" href="https://wiki.pine64.org/wiki/Ox64">0x64 wiki</a> <a class="footnote-reference brackets" href="#id33" id="id34">16</a></p>
 <a class="reference internal image-reference" href="../_images/400px-Ox64_board.jpg"><img alt="../_images/400px-Ox64_board.jpg" src="../_images/400px-Ox64_board.jpg" style="width: 300px;" /></a>
-</div>
-<div class="section" id="rockpro64">
+</section>
+<section id="rockpro64">
 <h4><a class="toc-backref" href="#hardware-tdm">ROCKPro64</a><a class="headerlink" href="#rockpro64" title="Lien permanent vers ce titre">¶</a></h4>
 <p><a class="reference external" href="https://pine64.com/product/rockpro64-4gb-single-board-computer/">ROCKPro64 4GB Single Board Computer</a> <a class="footnote-reference brackets" href="#id35" id="id36">17</a> 80$ en 4G et 60 en 2</p>
 <p>SoC : RK3399</p>
 <p><a class="reference external" href="https://wiki.pine64.org/wiki/ROCKPro64">ROCKPro64 wiki</a> <a class="footnote-reference brackets" href="#id37" id="id38">18</a> je suis pas fan</p>
-</div>
-</div>
-<div class="section" id="raspberry-pi-zero-et-concurrentes">
+</section>
+</section>
+<section id="raspberry-pi-zero-et-concurrentes">
 <h3><a class="toc-backref" href="#hardware-tdm">Raspberry pi Zero et concurrentes</a><a class="headerlink" href="#raspberry-pi-zero-et-concurrentes" title="Lien permanent vers ce titre">¶</a></h3>
 <p>On a (au 20/09/2021):</p>
 <ul class="simple">
@@ -382,8 +387,8 @@ one liter of water.</p>
 </ul>
 <p>Question : y existe-il un carte avec du WF, du CSI, de l’emmc à moins de 30€</p>
 <p>Autre question quelle celle qui a le meilleur rapport prix performances dans la gamme des 30€</p>
-</div>
-<div class="section" id="sous-groupe-friendlyarm">
+</section>
+<section id="sous-groupe-friendlyarm">
 <h3><a class="toc-backref" href="#hardware-tdm">Sous groupe Friendlyarm</a><a class="headerlink" href="#sous-groupe-friendlyarm" title="Lien permanent vers ce titre">¶</a></h3>
 <p>A noter qu’il ont leur propre boutique vs Orangepi sur aliexpress.</p>
 <p>Je les trouve mieu documenté à l’iimage de ce site <a class="reference external" href="http://nanopi.io/index.html">nanopi.io</a> <a class="footnote-reference brackets" href="#id39" id="id40">19</a></p>
@@ -421,8 +426,8 @@ Zero Pi : Allwinner H3, 512MB DDR3, USB2.0GEth,  17$
 </pre></div>
 </div>
 <p>Prix indicatif au 17/04/2021</p>
-</div>
-<div class="section" id="chez-orange-pi">
+</section>
+<section id="chez-orange-pi">
 <h3><a class="toc-backref" href="#hardware-tdm">Chez Orange pi</a><a class="headerlink" href="#chez-orange-pi" title="Lien permanent vers ce titre">¶</a></h3>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>2G Iot: A5, 256 DDR2, SIM 2G, 512M Flash, Wifi BT, 1USB2.0, LCD, CSI, mSD, 42x67, 11.82$, 40pin GPIO
 3G-IOT-A: MT6572, 256 DDR2, SIM 3G, 512M emmc Flash, Wifi BT, 1USB2.0, LCD, CSI, mSD, 52x68, 20$, 40pin GPIO
@@ -454,8 +459,8 @@ Zero2 : H616 (4x A53) MaliG31, 512M DDR3, Wifi BT5.0, microHDMI 3USB2.0 : 28€ 
 </pre></div>
 </div>
 <p>En général, difficile d’appro.</p>
-</div>
-<div class="section" id="chez-bananapi">
+</section>
+<section id="chez-bananapi">
 <h3><a class="toc-backref" href="#hardware-tdm">Chez Bananapi</a><a class="headerlink" href="#chez-bananapi" title="Lien permanent vers ce titre">¶</a></h3>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>F2P
 F2S
@@ -470,32 +475,34 @@ M5 S905X3 4x CortexA55, Mali-G31, pas de CSI, 1 HDMI pas de wifi ni BT, 4G DDR4,
 ZERO
 </pre></div>
 </div>
-</div>
-<div class="section" id="sous-group-lattepanda">
+</section>
+<section id="sous-group-lattepanda">
 <h3><a class="toc-backref" href="#hardware-tdm">sous group LATTEPANDA</a><a class="headerlink" href="#sous-group-lattepanda" title="Lien permanent vers ce titre">¶</a></h3>
 <ul class="simple">
 <li><p>LTP 2G/32G : 99$, 4xIntel W10, 2GDDR3 emmc32g, WF/BT4 pas de videoin usb3</p></li>
 </ul>
-</div>
-</div>
-<div class="section" id="analog-power-switching">
+</section>
+</section>
+<section id="analog-power-switching">
 <h2><a class="toc-backref" href="#hardware-tdm">Analog power switching</a><a class="headerlink" href="#analog-power-switching" title="Lien permanent vers ce titre">¶</a></h2>
-<div class="section" id="low-power-mosfet-on-off">
+<section id="low-power-mosfet-on-off">
 <span id="index-4"></span><h3><a class="toc-backref" href="#hardware-tdm">Low power MOSFET ON/OFF</a><a class="headerlink" href="#low-power-mosfet-on-off" title="Lien permanent vers ce titre">¶</a></h3>
 <p>On parle de high side switch</p>
 <p>Sur <a class="reference external" href="https://electronics.stackexchange.com/questions/78223/3-3v-high-side-switch?rq=1">electronics.stackexchange.com</a> <a class="footnote-reference brackets" href="#id41" id="id42">20</a></p>
-<div class="figure align-left" id="id2" style="width: 100%">
+<figure class="align-left" id="id2" style="width: 100%">
 <a class="reference internal image-reference" href="../_images/highSideRefDesign.png"><img alt="../_images/highSideRefDesign.png" src="../_images/highSideRefDesign.png" style="width: 300px;" /></a>
-<p class="caption"><span class="caption-text">Ref design</span><a class="headerlink" href="#id2" title="Lien permanent vers cette image">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-text">Ref design</span><a class="headerlink" href="#id2" title="Lien permanent vers cette image">¶</a></p>
+</figcaption>
+</figure>
 <a class="reference internal image-reference" href="../_images/DMC2038LVT.jpg"><img alt="../_images/DMC2038LVT.jpg" src="../_images/DMC2038LVT.jpg" style="width: 200px;" /></a>
 <a class="reference internal image-reference" href="../_images/DMC2038LVT_2.jpg"><img alt="../_images/DMC2038LVT_2.jpg" src="../_images/DMC2038LVT_2.jpg" style="width: 200px;" /></a>
-<p><a class="reference download internal" download="" href="../_downloads/0c2777f7d00c5416b3cfe197aa04d1ee/NTD20N03datasheet.pdf"><code class="xref download docutils literal notranslate"><span class="pre">NTD20N03</span></code></a> ne convient pas car canal N</p>
-<p>Mon essai avec <a class="reference download internal" download="" href="../_downloads/f5e4e1d53835316197855a33288c355a/2N7000.pdf"><code class="xref download docutils literal notranslate"><span class="pre">2N7000</span></code></a> et
+<p><a class="reference download internal" download="" href="../_downloads/427111a75c4f0b333f554149bf609ee7/NTD20N03datasheet.pdf"><code class="xref download docutils literal notranslate"><span class="pre">NTD20N03</span></code></a> ne convient pas car canal N</p>
+<p>Mon essai avec <a class="reference download internal" download="" href="../_downloads/d6cf374f435652ebd5395012671fd064/2N7000.pdf"><code class="xref download docutils literal notranslate"><span class="pre">2N7000</span></code></a> et
 commandé par un <a class="reference external" href="http://digistump.com/products/1">Digispark</a> <a class="footnote-reference brackets" href="#id43" id="id44">21</a></p>
-</div>
-</div>
-<div class="section" id="weblinks">
+</section>
+</section>
+<section id="weblinks">
 <h2><a class="toc-backref" href="#hardware-tdm">Weblinks</a><a class="headerlink" href="#weblinks" title="Lien permanent vers ce titre">¶</a></h2>
 <dl class="footnote brackets">
 <dt class="label" id="id3"><span class="brackets"><a class="fn-backref" href="#id4">1</a></span></dt>
@@ -562,10 +569,11 @@ commandé par un <a class="reference external" href="http://digistump.com/produc
 <dd><p><a class="reference external" href="http://digistump.com/products/1">http://digistump.com/products/1</a></p>
 </dd>
 </dl>
-</div>
-</div>
+</section>
+</section>
 
 
+            <div class="clearer"></div>
           </div>
         </div>
       </div>
@@ -653,12 +661,13 @@ commandé par un <a class="reference external" href="http://digistump.com/produc
         <li class="right" >
           <a href="../linux/linux.html" title="LINUX *"
              >précédent</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">Documentation MajorLee&#39;s notes </a> &#187;</li> 
+        <li class="nav-item nav-item-0"><a href="../index.html">Documentation MajorLee&#39;s notes </a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Hardware notes</a></li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2019, J.SORANZO.
-      Créé avec <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.4.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.0.2.
     </div>
   </body>
 </html>

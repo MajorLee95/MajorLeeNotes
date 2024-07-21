@@ -412,10 +412,10 @@ exemple url externe au système documentaire:
     
     .. _`link_desc` : url
 
-
-================================
+====================================================================================================
 Themes
-================================
+====================================================================================================
+
 Recherche d'un thème avec barre de navigation fixe
 
 .. note::
@@ -428,6 +428,30 @@ Le pb est que les options ne sont pas commune d'un thème à l'autre.
 La `page des themes Sphinx`_
 
 .. _`page des themes Sphinx` : https://sphinx-themes.org/
+
+Nouveau en 2023
+----------------------------------------------------------------------------------------------------
+Ahd
+****************************************************************************************************
+
+.. SEEALSO:: **SITE OFFICIEL**
+    :class: without-title
+    
+    `sphinx-ahd-theme 5.3.8 sur pypi.org`_
+
+.. _`sphinx-ahd-theme 5.3.8 sur pypi.org` : https://pypi.org/project/sphinx-ahd-theme/
+
+Nefertiti
+****************************************************************************************************
+.. WARNING:: ATTENTION INSTALL SPHINX 7.x !!!!!!!!!!!!!!!!!!!!!!!!!!!
+    :class: without-title
+
+.. SEEALSO:: **SITE OFFICIEL**
+    :class: without-title
+    
+    `Nefertiti for Sphinx`_
+
+.. _`Nefertiti for Sphinx` : https://sphinx-nefertiti.readthedocs.io/en/latest/index.html
 
 testés 
 ----------------------------------------------------------------------------------------------------

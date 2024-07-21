@@ -4,19 +4,21 @@
 <html lang="fr">
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>NUCLEO board * &#8212; Documentation MajorLee&#39;s notes </title>
-    <link rel="stylesheet" href="../../_static/nature.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/nature.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css" />
-    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
     <script src="../../_static/doctools.js"></script>
-    <script src="../../_static/language_data.js"></script>
     <script src="../../_static/translations.js"></script>
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Recherche" href="../../search.html" />
-    <link rel="next" title="Mes notes sur C++" href="../../C++/cpp.html" />
+    <link rel="next" title="Mes notes sur C++" href="../../C%2B%2B/cpp.html" />
     <link rel="prev" title="Raspberry pi*" href="../raspberry/raspberry.html" /> 
   </head><body>
     <div class="related" role="navigation" aria-label="related navigation">
@@ -26,13 +28,14 @@
           <a href="../../genindex.html" title="Index général"
              accesskey="I">index</a></li>
         <li class="right" >
-          <a href="../../C++/cpp.html" title="Mes notes sur C++"
+          <a href="../../C%2B%2B/cpp.html" title="Mes notes sur C++"
              accesskey="N">suivant</a> |</li>
         <li class="right" >
           <a href="../raspberry/raspberry.html" title="Raspberry pi*"
              accesskey="P">précédent</a> |</li>
         <li class="nav-item nav-item-0"><a href="../../index.html">Documentation MajorLee&#39;s notes </a> &#187;</li>
-          <li class="nav-item nav-item-1"><a href="../hardware.html" accesskey="U">Hardware notes</a> &#187;</li> 
+          <li class="nav-item nav-item-1"><a href="../hardware.html" accesskey="U">Hardware notes</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">NUCLEO board *</a></li> 
       </ul>
     </div>  
 
@@ -41,8 +44,8 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <div class="section" id="nucleo-board">
-<span id="index-0"></span><h1><a class="toc-backref" href="#sommaire">NUCLEO board *</a><a class="headerlink" href="#nucleo-board" title="Lien permanent vers ce titre">¶</a></h1>
+  <section id="nucleo-board">
+<h1><a class="toc-backref" href="#sommaire">NUCLEO board *</a><a class="headerlink" href="#nucleo-board" title="Lien permanent vers ce titre">¶</a></h1>
 <dl class="field-list simple">
 <dt class="field-odd">Auteur</dt>
 <dd class="field-odd"><p>J.Soranzo</p>
@@ -113,15 +116,15 @@
 </li>
 </ul>
 </div>
-<div class="section" id="presentation">
-<span id="refnucleoboard"></span><h2><a class="toc-backref" href="#sommaire">Présentation</a><a class="headerlink" href="#presentation" title="Lien permanent vers ce titre">¶</a></h2>
+<span class="target" id="refnucleoboard"></span><section id="presentation">
+<span id="index-0"></span><h2><a class="toc-backref" href="#sommaire">Présentation</a><a class="headerlink" href="#presentation" title="Lien permanent vers ce titre">¶</a></h2>
 <p>3 type de cartes 32, 64, 144 : fonction de la taille du boîtier du composant utiliés!</p>
 <p>LQFP64 package, LQFP144 package</p>
 <p><a class="reference external" href="https://wiki.st.com/stm32mcu/wiki/Main_Page">STM32MCU wiki</a> <a class="footnote-reference brackets" href="#id5" id="id6">3</a></p>
 <p><a class="reference external" href="https://www.st.com/en/evaluation-tools/stm32-nucleo-boards.html#overview">NUCLEO-overview</a> <a class="footnote-reference brackets" href="#id1" id="id2">1</a></p>
 <p><a class="reference external" href="https://www.mouser.fr/new/stmicroelectronics/stm-stm32-nucleo-144-dev-boards/">NUCLEO-144_MOUSER</a> <a class="footnote-reference brackets" href="#id3" id="id4">2</a></p>
 <p>RCC acronym : Reset and Control Clcok</p>
-<div class="section" id="carte-nucleo-f401re">
+<section id="carte-nucleo-f401re">
 <h3><a class="toc-backref" href="#sommaire">Carte NUCLEO-F401RE</a><a class="headerlink" href="#carte-nucleo-f401re" title="Lien permanent vers ce titre">¶</a></h3>
 <p>Chip: STM32F401RE (R = 64pin package, E = 512k FLASH)</p>
 <a class="reference internal image-reference" href="../../_images/nucleoF401reBoard.jpg"><img alt="../../_images/nucleoF401reBoard.jpg" src="../../_images/nucleoF401reBoard.jpg" style="width: 500px;" /></a>
@@ -149,8 +152,8 @@ dans le fichier:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">/</span><span class="n">CMSIS</span><span class="o">/</span><span class="n">Device</span><span class="o">/</span><span class="n">ST</span><span class="o">/</span><span class="n">STM32F4xx</span><span class="o">/</span><span class="n">Include</span><span class="o">/</span><span class="n">stm32f401xe</span><span class="o">.</span><span class="n">h</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="carte-nucleo-f429zi">
+</section>
+<section id="carte-nucleo-f429zi">
 <h3><a class="toc-backref" href="#sommaire">Carte NUCLEO-F429ZI</a><a class="headerlink" href="#carte-nucleo-f429zi" title="Lien permanent vers ce titre">¶</a></h3>
 <p>Chip: STM32F429ZI (Z = 144pin package, I = 2048k FLASH)</p>
 <p>32b Arm® Cortex®-M4 MCU+FPU, 225DMIPS, up to 2MB Flash/256+4KB RAM, USB
@@ -159,8 +162,8 @@ OTG HS/FS, Ethernet, 17 TIMs, 3 ADCs, 20 com. interfaces, camera &amp; LCD-TFT</
 <a class="reference internal image-reference" href="../../_images/F429_features.jpg"><img alt="../../_images/F429_features.jpg" src="../../_images/F429_features.jpg" style="width: 500px;" /></a>
 <p>Carte NUCLE144</p>
 <p>Prix indicatif : 26€ <a class="reference external" href="https://www.mouser.fr/ProductDetail/STMicroelectronics/NUCLEO-F429ZI?qs=mKNKSX85ZJcE6FU0UkiXTA==&amp;vip=1&amp;gclid=CjwKCAjwguzzBRBiEiwAgU0FT1UiJxq6z6simiBPlGAwmrXBhkqT_WmzdohmaAP8F2i-SyZEE2RqPRoConUQAvD_BwE">NUCLEO-F429ZI chez MOUSER</a> <a class="footnote-reference brackets" href="#id7" id="id8">4</a></p>
-</div>
-<div class="section" id="nucleo-f746zg">
+</section>
+<section id="nucleo-f746zg">
 <h3><a class="toc-backref" href="#sommaire">NUCLEO-F746ZG</a><a class="headerlink" href="#nucleo-f746zg" title="Lien permanent vers ce titre">¶</a></h3>
 <p>(Z = 144pin package, G = 1024k FLASH)</p>
 <p>Cortex M7 (architecture ARM V7)</p>
@@ -170,9 +173,9 @@ L1 cache, 320k ( 64k of data TCM RAM for critical real-time data) + 16KB of inst
 <p>single precision FPU</p>
 <p>Prix indicatif : 22€</p>
 <p>Nécessite d’installer STM32CubeF7</p>
-</div>
-</div>
-<div class="section" id="differences-entre-cartes">
+</section>
+</section>
+<section id="differences-entre-cartes">
 <h2><a class="toc-backref" href="#sommaire">Différences entre cartes</a><a class="headerlink" href="#differences-entre-cartes" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Quelle différence entre un F429-ZI et une NUCLEO-F746ZG ?</p>
 <p>Je n’ai personnelement pas trouvé de source facile et fiable.</p>
@@ -181,9 +184,13 @@ L1 cache, 320k ( 64k of data TCM RAM for critical real-time data) + 16KB of inst
 <p>Cortex M4F versus M7 ?</p>
 <p>Un <a class="reference external" href="https://community.arm.com/developer/ip-products/processors/f/cortex-m-forum/5686/m4-m7-comparision">article sur community arm</a> <a class="footnote-reference brackets" href="#id12" id="id13">6</a></p>
 <p>Sans oublier <a class="reference external" href="https://en.wikipedia.org/wiki/ARM_Cortex-M#Cortex-M7">Cortex M sur wikipedia</a> <a class="footnote-reference brackets" href="#id14" id="id15">7</a></p>
-</div>
-<div class="section" id="outils-de-developpement">
+</section>
+<section id="outils-de-developpement">
 <h2><a class="toc-backref" href="#sommaire">Outils de développement</a><a class="headerlink" href="#outils-de-developpement" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="without-title admonition note">
+<p class="admonition-title">Note</p>
+<p>2023 : Utiliser de préférence STM32Cube IDE (qui intègre MX)</p>
+</div>
 <p>STM32CubeMX est l’outil indispensable et <strong>IL FAUT COMMENCER par LUI</strong> voir <a class="reference internal" href="#um1718-cubemx-pdf">UM1718_CubeMX.pdf</a>
 J’utilise actuellement (04/2020) la version 5.6.0</p>
 <p>STM32 workbench développé par ACSYSY ou AC6. Dans la litérature ST cette suite logiciel se nome
@@ -198,7 +205,7 @@ au même que AC6)</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">C</span><span class="o">/</span><span class="n">C</span><span class="o">++</span> <span class="n">Development</span> <span class="n">User</span> <span class="n">Guide</span><span class="o">/</span><span class="n">Reference</span><span class="o">/</span><span class="n">C</span><span class="o">/</span><span class="n">C</span><span class="o">++</span> <span class="n">Menubar</span><span class="o">/</span><span class="n">Source</span> <span class="n">Menu</span>
 </pre></div>
 </div>
-<div class="section" id="autres-outils-de-developpement">
+<section id="autres-outils-de-developpement">
 <h3><a class="toc-backref" href="#sommaire">Autres outils de développement</a><a class="headerlink" href="#autres-outils-de-developpement" title="Lien permanent vers ce titre">¶</a></h3>
 <p>Officiellement sur le <a class="reference external" href="https://www.st.com/en/development-tools/stm32-ides.html">site ST outils de dev</a> <a class="footnote-reference brackets" href="#id23" id="id24">11</a>, il y a :</p>
 <a class="reference internal image-reference" href="../../_images/outilsDev.jpg"><img alt="../../_images/outilsDev.jpg" src="../../_images/outilsDev.jpg" style="width: 600px;" /></a>
@@ -208,17 +215,17 @@ au même que AC6)</p>
 intégration avec STM32cubeMX.</p>
 <p>KEIL uVision</p>
 <p>Qt possible également : il faudra que j’explore cela !</p>
-</div>
-</div>
-<div class="section" id="les-pdf-etudies">
+</section>
+</section>
+<section id="les-pdf-etudies">
 <h2><a class="toc-backref" href="#sommaire">Les pdf étudiés</a><a class="headerlink" href="#les-pdf-etudies" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Il y en a des tas !!! Il y a même des fichiers .chm dans les packages. Exemples:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">STM32Cube_FW_F4_V1</span><span class="o">.</span><span class="mf">25.0</span>\<span class="n">Drivers</span>\<span class="n">BSP</span>\<span class="n">STM32F4xx</span><span class="o">-</span><span class="n">Nucleo</span>
-<span class="n">STM32Cube_FW_F4_V1</span><span class="o">.</span><span class="mf">25.0</span>\<span class="n">Drivers</span>\<span class="n">STM32F4xx_HAL_Driver</span> <span class="n">et</span> <span class="n">là</span> <span class="n">pas</span> <span class="n">de</span> <span class="n">bol</span> <span class="n">il</span> <span class="n">n</span><span class="s1">&#39;y a rien pour</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">STM32Cube_FW_F4_V1</span><span class="mf">.25.0</span>\<span class="n">Drivers</span>\<span class="n">BSP</span>\<span class="n">STM32F4xx</span><span class="o">-</span><span class="n">Nucleo</span>
+<span class="n">STM32Cube_FW_F4_V1</span><span class="mf">.25.0</span>\<span class="n">Drivers</span>\<span class="n">STM32F4xx_HAL_Driver</span> <span class="n">et</span> <span class="n">là</span> <span class="n">pas</span> <span class="n">de</span> <span class="n">bol</span> <span class="n">il</span> <span class="n">n</span><span class="s1">&#39;y a rien pour</span>
 <span class="n">NUCLEO</span><span class="o">-</span><span class="n">F401</span> <span class="n">snif</span>
 </pre></div>
 </div>
-<div class="section" id="gettingstarted-firmware-en-dm00105925-pdf">
+<section id="gettingstarted-firmware-en-dm00105925-pdf">
 <h3><a class="toc-backref" href="#sommaire">gettingStarted_firmware_en.DM00105925.pdf</a><a class="headerlink" href="#gettingstarted-firmware-en-dm00105925-pdf" title="Lien permanent vers ce titre">¶</a></h3>
 <p>Getting started with the STM32 Nucleo board firmware package UM1726</p>
 <p>16 pages DocID025839 Rev 2 de avil <strong>2014</strong></p>
@@ -243,13 +250,13 @@ document d’explication plus récent que celui-ci : UM1730 de février 2019</p>
 <a class="reference internal image-reference" href="../../_images/stm32package.jpg"><img alt="../../_images/stm32package.jpg" src="../../_images/stm32package.jpg" style="width: 800px;" /></a>
 <p>Adresse de cette copie d’écran : page <a class="reference external" href="https://www.st.com/content/st_com/en/products/evaluation-tools/product-evaluation-tools/mcu-mpu-eval-tools/stm32-mcu-mpu-eval-tools/stm32-nucleo-boards/nucleo-f401re.html#tools-software">nucleo-F401RE Tools and Softwares</a> <a class="footnote-reference brackets" href="#id25" id="id26">12</a></p>
 <p>J’abandonne donc l’étude du présent document pour me consacré à ce document plus récent.</p>
-</div>
-<div class="section" id="stm32cubef4gettingstarted-pdf">
+</section>
+<section id="stm32cubef4gettingstarted-pdf">
 <h3><a class="toc-backref" href="#sommaire">STM32CubeF4GettingStarted.pdf</a><a class="headerlink" href="#stm32cubef4gettingstarted-pdf" title="Lien permanent vers ce titre">¶</a></h3>
 <p><strong>Getting started with STM32CubeF4 MCU Package for STM32F4 Series</strong> UM1730 février 2019 28 pages</p>
 <p>manip du 22/03/2020 : tentative d’ouvir l’exemple GPIO toggle</p>
 <p>Workspace:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">...</span>\<span class="n">STM32Cube_FW_F4_V1</span><span class="o">.</span><span class="mf">25.0</span>\<span class="n">Projects</span>\<span class="n">STM32F401RE</span><span class="o">-</span><span class="n">Nucleo</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">...</span>\<span class="n">STM32Cube_FW_F4_V1</span><span class="mf">.25.0</span>\<span class="n">Projects</span>\<span class="n">STM32F401RE</span><span class="o">-</span><span class="n">Nucleo</span>
 </pre></div>
 </div>
 <p>Quand on change d’espace de travail, l’application redémarre entièrement et est très longue à
@@ -260,8 +267,8 @@ redémarrer !</p>
 </dl>
 <p><strong>Essai 1</strong> : import avec copy to workspace: 6 warning invalid projet path (des chemin relatifs):</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Description</span> <span class="n">Resource</span>        <span class="n">Path</span>    <span class="n">Location</span>        <span class="n">Type</span>
-<span class="n">Invalid</span> <span class="n">project</span> <span class="n">path</span><span class="p">:</span> <span class="n">Include</span> <span class="n">path</span> <span class="ow">not</span> <span class="n">found</span> <span class="p">(</span><span class="n">C</span><span class="p">:</span>\<span class="n">MountWD</span>\<span class="mi">00</span><span class="o">-</span><span class="n">Outils</span>\<span class="mi">06</span><span class="o">-</span><span class="n">ConceptionDeveloppement</span>\<span class="n">ST</span>\<span class="n">STM32Cube_FW_F4_V1</span><span class="o">.</span><span class="mf">25.0</span>\<span class="n">Projects</span>\<span class="n">Inc</span><span class="p">)</span><span class="o">.</span>     <span class="n">STM32F4xx</span><span class="o">-</span><span class="n">Nucleo</span>                <span class="n">pathentry</span>       <span class="n">Path</span> <span class="n">Entry</span> <span class="n">Problem</span>
-<span class="n">Invalid</span> <span class="n">project</span> <span class="n">path</span><span class="p">:</span> <span class="n">Include</span> <span class="n">path</span> <span class="ow">not</span> <span class="n">found</span> <span class="p">(</span><span class="n">C</span><span class="p">:</span>\<span class="n">MountWD</span>\<span class="mi">00</span><span class="o">-</span><span class="n">Outils</span>\<span class="mi">06</span><span class="o">-</span><span class="n">ConceptionDeveloppement</span>\<span class="n">ST</span>\<span class="n">STM32Cube_FW_F4_V1</span><span class="o">.</span><span class="mf">25.0</span>\<span class="n">Projects</span>\<span class="n">STM32F401RE</span><span class="o">-</span><span class="n">Nucleo</span>\<span class="n">STM32F4xx</span><span class="o">-</span><span class="n">Nucleo</span>\<span class="n">Debug</span><span class="p">)</span><span class="o">.</span>       <span class="n">STM32F4xx</span><span class="o">-</span><span class="n">Nucleo</span>                <span class="n">pathentry</span>       <span class="n">Path</span> <span class="n">Entry</span> <span class="n">Problem</span>
+<span class="n">Invalid</span> <span class="n">project</span> <span class="n">path</span><span class="p">:</span> <span class="n">Include</span> <span class="n">path</span> <span class="ow">not</span> <span class="n">found</span> <span class="p">(</span><span class="n">C</span><span class="p">:</span>\<span class="n">MountWD</span>\<span class="mi">00</span><span class="o">-</span><span class="n">Outils</span>\<span class="mi">06</span><span class="o">-</span><span class="n">ConceptionDeveloppement</span>\<span class="n">ST</span>\<span class="n">STM32Cube_FW_F4_V1</span><span class="mf">.25.0</span>\<span class="n">Projects</span>\<span class="n">Inc</span><span class="p">)</span><span class="o">.</span>     <span class="n">STM32F4xx</span><span class="o">-</span><span class="n">Nucleo</span>                <span class="n">pathentry</span>       <span class="n">Path</span> <span class="n">Entry</span> <span class="n">Problem</span>
+<span class="n">Invalid</span> <span class="n">project</span> <span class="n">path</span><span class="p">:</span> <span class="n">Include</span> <span class="n">path</span> <span class="ow">not</span> <span class="n">found</span> <span class="p">(</span><span class="n">C</span><span class="p">:</span>\<span class="n">MountWD</span>\<span class="mi">00</span><span class="o">-</span><span class="n">Outils</span>\<span class="mi">06</span><span class="o">-</span><span class="n">ConceptionDeveloppement</span>\<span class="n">ST</span>\<span class="n">STM32Cube_FW_F4_V1</span><span class="mf">.25.0</span>\<span class="n">Projects</span>\<span class="n">STM32F401RE</span><span class="o">-</span><span class="n">Nucleo</span>\<span class="n">STM32F4xx</span><span class="o">-</span><span class="n">Nucleo</span>\<span class="n">Debug</span><span class="p">)</span><span class="o">.</span>       <span class="n">STM32F4xx</span><span class="o">-</span><span class="n">Nucleo</span>                <span class="n">pathentry</span>       <span class="n">Path</span> <span class="n">Entry</span> <span class="n">Problem</span>
 <span class="n">Invalid</span> <span class="n">project</span> <span class="n">path</span><span class="p">:</span> <span class="n">Include</span> <span class="n">path</span> <span class="ow">not</span> <span class="n">found</span> <span class="p">(</span><span class="n">C</span><span class="p">:</span>\<span class="n">MountWD</span>\<span class="n">Drivers</span>\<span class="n">BSP</span>\<span class="n">STM32F4xx</span><span class="o">-</span><span class="n">Nucleo</span><span class="p">)</span><span class="o">.</span>     <span class="n">STM32F4xx</span><span class="o">-</span><span class="n">Nucleo</span>                <span class="n">pathentry</span>       <span class="n">Path</span> <span class="n">Entry</span> <span class="n">Problem</span>
 <span class="n">Invalid</span> <span class="n">project</span> <span class="n">path</span><span class="p">:</span> <span class="n">Include</span> <span class="n">path</span> <span class="ow">not</span> <span class="n">found</span> <span class="p">(</span><span class="n">C</span><span class="p">:</span>\<span class="n">MountWD</span>\<span class="n">Drivers</span>\<span class="n">CMSIS</span>\<span class="n">Device</span>\<span class="n">ST</span>\<span class="n">STM32F4xx</span>\<span class="n">Include</span><span class="p">)</span><span class="o">.</span>        <span class="n">STM32F4xx</span><span class="o">-</span><span class="n">Nucleo</span>                <span class="n">pathentry</span>       <span class="n">Path</span> <span class="n">Entry</span> <span class="n">Problem</span>
 <span class="n">Invalid</span> <span class="n">project</span> <span class="n">path</span><span class="p">:</span> <span class="n">Include</span> <span class="n">path</span> <span class="ow">not</span> <span class="n">found</span> <span class="p">(</span><span class="n">C</span><span class="p">:</span>\<span class="n">MountWD</span>\<span class="n">Drivers</span>\<span class="n">CMSIS</span>\<span class="n">Include</span><span class="p">)</span><span class="o">.</span>    <span class="n">STM32F4xx</span><span class="o">-</span><span class="n">Nucleo</span>                <span class="n">pathentry</span>       <span class="n">Path</span> <span class="n">Entry</span> <span class="n">Problem</span>
@@ -306,8 +313,8 @@ La confusion, la confusion… Je ne l’ai trouvé dans les fichiers : <a class=
 </div>
 <p>Avec l’expérience, je dirais qu’en ce qui concerne STM32Workbench, il est nettement préférable
 de laisser faire le wizard. Et même là c’est gagné! Voit <a class="reference internal" href="#stm32workbench-minimum-project">STM32Workbench minimum project</a></p>
-</div>
-<div class="section" id="um1718-cubemx-pdf">
+</section>
+<section id="um1718-cubemx-pdf">
 <h3><a class="toc-backref" href="#sommaire">UM1718_CubeMX.pdf</a><a class="headerlink" href="#um1718-cubemx-pdf" title="Lien permanent vers ce titre">¶</a></h3>
 <p>STM32CubeMX for STM32 configuration and initialization C code generation</p>
 <p>UM1718 User manual 363 pages rev 31 12/2019.</p>
@@ -332,20 +339,20 @@ HAL driver user manuals for STM32F4xx (UM1725)</p>
 <p>J’en déduit qu’il vaut mieux répondre non. Mais cubeMX configure quand même tout ce qui est horloge
 et reset.</p>
 <p>L’HELP de cubeMX renvoi vers le présent document.</p>
-</div>
-<div class="section" id="getting-started-with-stm32-nucleo-board-software-development-tools-stmicroelectronics-pdf">
+</section>
+<section id="getting-started-with-stm32-nucleo-board-software-development-tools-stmicroelectronics-pdf">
 <h3><a class="toc-backref" href="#sommaire">getting-started-with-stm32-nucleo-board-software-development-tools-stmicroelectronics.pdf</a><a class="headerlink" href="#getting-started-with-stm32-nucleo-board-software-development-tools-stmicroelectronics-pdf" title="Lien permanent vers ce titre">¶</a></h3>
 <p>dm00105928- UM1727 22 pages de Janvier 2016</p>
 <p>Getting started with STM32 Nucleo board softwaredevelopment tools, <strong>UM1730</strong> semble plus à jour.</p>
 <p>Petite description des différentes chaînes de dev</p>
 <p><strong>N’apporte rien !</strong></p>
-</div>
-<div class="section" id="um1725-description-of-stm32f4-hal-and-ll-drivers-dm00105879">
+</section>
+<section id="um1725-description-of-stm32f4-hal-and-ll-drivers-dm00105879">
 <h3><a class="toc-backref" href="#sommaire">UM1725 Description of STM32F4 HAL and LL drivers DM00105879</a><a class="headerlink" href="#um1725-description-of-stm32f4-hal-and-ll-drivers-dm00105879" title="Lien permanent vers ce titre">¶</a></h3>
 <p>1838 pages Fev 2017</p>
 <p>C’est assurément un document <strong>MAJEUR</strong> dans l’utilisation des STM32.</p>
 <p>L’étude de ce document va de paire avec l’étude du répertoire en question:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">...</span>\<span class="n">STM32Cube_FW_F4_V1</span><span class="o">.</span><span class="mf">25.0</span>\<span class="n">Drivers</span>\<span class="n">STM32F4xx_HAL_Driver</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">...</span>\<span class="n">STM32Cube_FW_F4_V1</span><span class="mf">.25.0</span>\<span class="n">Drivers</span>\<span class="n">STM32F4xx_HAL_Driver</span>
 </pre></div>
 </div>
 <p>Il est à noter que tout le code contient des commentaire compatible avec Doxygen donc on peut
@@ -540,9 +547,9 @@ C’est vraiment la bible.</p>
 <p>Un aspect très intéressant dans la description est le point de vue des fonctions bloquantes et non
 bloquante est systématiquement étudiées.</p>
 <p>Place à l’utilisation maintenant !</p>
-</div>
-</div>
-<div class="section" id="mes-manips-de-2015">
+</section>
+</section>
+<section id="mes-manips-de-2015">
 <h2><a class="toc-backref" href="#sommaire">Mes manips de 2015</a><a class="headerlink" href="#mes-manips-de-2015" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Décembre 2015, journal de manip en version OpenOffice, aidé du <a class="reference external" href="http://leanpub.com/mastering-stm32">livre de Carmine Noviello</a> <a class="footnote-reference brackets" href="#id33" id="id34">16</a></p>
 <p>Dans son livre Carmine porpose d’installer un chaine de développement basée sur Eclipse et GCC
@@ -574,13 +581,13 @@ et s’en explique…</p>
 </div>
 <p>Manip micro Python cf journal au 25/12/2015 (à récupérer pour mettre ici)</p>
 <p>Et <a class="reference external" href="https://github.com/stm32duino/wiki/wiki/Getting-Started">STM32duino</a> <a class="footnote-reference brackets" href="#id35" id="id36">17</a> ?</p>
-</div>
-<div class="section" id="mes-manips-2020">
+</section>
+<section id="mes-manips-2020">
 <h2><a class="toc-backref" href="#sommaire">Mes manips 2020</a><a class="headerlink" href="#mes-manips-2020" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Après bien des déboires avec SW4STM32 d’AC6, j’ai découvert STM32CubeMX et la oh! miracle ça devient
 si limpide !</p>
 <p>Du coup dans mon espace de travail, j’ai:</p>
-<div class="section" id="toggleledcubemx">
+<section id="toggleledcubemx">
 <h3><a class="toc-backref" href="#sommaire">toggleLeDCubeMX</a><a class="headerlink" href="#toggleledcubemx" title="Lien permanent vers ce titre">¶</a></h3>
 <ul class="simple">
 <li><p>un message RS sur UART2 toutes les 1s dans une boucle while</p></li>
@@ -588,8 +595,8 @@ si limpide !</p>
 </ul>
 <p>Le plus gros du boulot est dans CubeMX mais l’interface de CubeMX est tellement simple que cela ne
 présente pas de grosses difficultés.</p>
-</div>
-<div class="section" id="pushbuttoninterrup">
+</section>
+<section id="pushbuttoninterrup">
 <h3><a class="toc-backref" href="#sommaire">pushButtonInterrup</a><a class="headerlink" href="#pushbuttoninterrup" title="Lien permanent vers ce titre">¶</a></h3>
 <p>Objectif: utiliser le bouton poussoir de la carte sous interruption.</p>
 <p>On commence dans CubeMX, mais avant une petite recherche Youtube. On ne trouve que pour Keil mais
@@ -602,19 +609,19 @@ la partie CubeMX doit être la même. Mots clés: cubeMx AC6 push button</p>
 <p>On pourrait avec getTick interdire l’it push button pendant 25ms par exemple.</p>
 <blockquote>
 <div><p>Ma solution:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="nf">EXTI15_10_IRQHandler</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span><span class="w"> </span><span class="nf">EXTI15_10_IRQHandler</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
 <span class="p">{</span>
-  <span class="cm">/* USER CODE BEGIN EXTI15_10_IRQn 0 */</span>
+<span class="w">  </span><span class="cm">/* USER CODE BEGIN EXTI15_10_IRQn 0 */</span>
 <span class="c1">//  if (HAL_GPIO_ReadPin(GPIOC, GPIO_PIN_13) == GPIO_PIN_SET</span>
 <span class="c1">//                  &amp;&amp; btnIntDelay == 0 ){</span>
-    <span class="k">if</span> <span class="p">(</span><span class="n">btnIntDelay</span> <span class="o">==</span> <span class="mi">0</span> <span class="p">){</span>
-        <span class="n">btnIntDelay</span> <span class="o">=</span> <span class="n">HAL_GetTick</span><span class="p">();</span>
-        <span class="n">HAL_GPIO_TogglePin</span><span class="p">(</span><span class="n">GPIOA</span><span class="p">,</span> <span class="n">GPIO_PIN_5</span><span class="p">);</span>
-    <span class="p">}</span>
-  <span class="cm">/* USER CODE END EXTI15_10_IRQn 0 */</span>
-  <span class="n">HAL_GPIO_EXTI_IRQHandler</span><span class="p">(</span><span class="n">GPIO_PIN_13</span><span class="p">);</span>
-  <span class="cm">/* USER CODE BEGIN EXTI15_10_IRQn 1 */</span>
-    <span class="p">....</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">btnIntDelay</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="p">){</span>
+<span class="w">        </span><span class="n">btnIntDelay</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">HAL_GetTick</span><span class="p">();</span>
+<span class="w">        </span><span class="n">HAL_GPIO_TogglePin</span><span class="p">(</span><span class="n">GPIOA</span><span class="p">,</span><span class="w"> </span><span class="n">GPIO_PIN_5</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="cm">/* USER CODE END EXTI15_10_IRQn 0 */</span>
+<span class="w">  </span><span class="n">HAL_GPIO_EXTI_IRQHandler</span><span class="p">(</span><span class="n">GPIO_PIN_13</span><span class="p">);</span>
+<span class="w">  </span><span class="cm">/* USER CODE BEGIN EXTI15_10_IRQn 1 */</span>
+<span class="w">    </span><span class="p">....</span>
 </pre></div>
 </div>
 </div></blockquote>
@@ -622,27 +629,27 @@ la partie CubeMX doit être la même. Mots clés: cubeMx AC6 push button</p>
 en cas de rebond justement</p>
 <blockquote>
 <div><p>Et dans le main:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">while</span> <span class="p">(</span><span class="mi">1</span><span class="p">){</span>
-      <span class="k">if</span> <span class="p">(</span> <span class="n">btnIntDelay</span> <span class="o">!=</span> <span class="mi">0</span> <span class="p">){</span>
-              <span class="k">if</span> <span class="p">(</span><span class="n">HAL_GetTick</span><span class="p">()</span> <span class="o">-</span> <span class="n">btnIntDelay</span> <span class="o">&gt;=</span> <span class="mi">25</span><span class="p">){</span>
-                      <span class="n">btnIntDelay</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-              <span class="p">}</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="mi">1</span><span class="p">){</span>
+<span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">btnIntDelay</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="p">){</span>
+<span class="w">              </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">HAL_GetTick</span><span class="p">()</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">btnIntDelay</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">25</span><span class="p">){</span>
+<span class="w">                      </span><span class="n">btnIntDelay</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">              </span><span class="p">}</span>
 <span class="p">}</span>
 </pre></div>
 </div>
 <p>Mieux, au lieu d’intervenir dans la fonction EXTI15_10_IRQHandler, utiliser
 <code class="docutils literal notranslate"><span class="pre">HAL_GPIO_EXTI_Callback(uint16_t</span> <span class="pre">GPIO_Pin)</span></code>:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="nf">HAL_GPIO_EXTI_Callback</span><span class="p">(</span><span class="kt">uint16_t</span> <span class="n">GPIO_Pin</span><span class="p">){</span>
-    <span class="k">if</span> <span class="p">(</span><span class="n">btnIntDelay</span> <span class="o">==</span> <span class="mi">0</span> <span class="o">&amp;&amp;</span> <span class="n">GPIO_Pin</span> <span class="o">==</span> <span class="n">GPIO_PIN_13</span><span class="p">){</span>
-        <span class="n">btnIntDelay</span> <span class="o">=</span> <span class="n">HAL_GetTick</span><span class="p">();</span>
-        <span class="n">HAL_GPIO_TogglePin</span><span class="p">(</span><span class="n">GPIOA</span><span class="p">,</span> <span class="n">GPIO_PIN_5</span><span class="p">);</span>
-    <span class="p">}</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span><span class="w"> </span><span class="nf">HAL_GPIO_EXTI_Callback</span><span class="p">(</span><span class="kt">uint16_t</span><span class="w"> </span><span class="n">GPIO_Pin</span><span class="p">){</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">btnIntDelay</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">GPIO_Pin</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">GPIO_PIN_13</span><span class="p">){</span>
+<span class="w">        </span><span class="n">btnIntDelay</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">HAL_GetTick</span><span class="p">();</span>
+<span class="w">        </span><span class="n">HAL_GPIO_TogglePin</span><span class="p">(</span><span class="n">GPIOA</span><span class="p">,</span><span class="w"> </span><span class="n">GPIO_PIN_5</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
 </pre></div>
 </div>
 </div></blockquote>
-</div>
-<div class="section" id="uartandrxit">
+</section>
+<section id="uartandrxit">
 <h3><a class="toc-backref" href="#sommaire">uartAndRXIt</a><a class="headerlink" href="#uartandrxit" title="Lien permanent vers ce titre">¶</a></h3>
 <p>Commençons dans la doc de l’API puis par une recherche internet pour une fois afin de voir si la doc
 est suffisante. Ne pas oublier les exemples fournis dans STM32Cube_FW_F4_V1.25.0 !</p>
@@ -653,22 +660,22 @@ sous l’onglet NVIC dans l’interface de configuration UART (j’ai choisi UAR
 <p>Sans rien faire d’autre que d’ajouter <code class="docutils literal notranslate"><span class="pre">__HAL_UART_ENABLE_IT(&amp;huart2,</span> <span class="pre">UART_IT_RXNE);</span></code>, j’ai bien
 un branchement à <code class="docutils literal notranslate"><span class="pre">void</span> <span class="pre">USART2_IRQHandler(void)</span></code> mais seulement sur le premier caractère.</p>
 <p>J’ai réussi à obtenir de bon résultats avec:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="nf">USART2_IRQHandler</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span><span class="w"> </span><span class="nf">USART2_IRQHandler</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
 <span class="p">{</span>
-  <span class="cm">/* USER CODE BEGIN USART2_IRQn 0 */</span>
+<span class="w">  </span><span class="cm">/* USER CODE BEGIN USART2_IRQn 0 */</span>
 
-  <span class="cm">/* USER CODE END USART2_IRQn 0 */</span>
-  <span class="n">HAL_UART_IRQHandler</span><span class="p">(</span><span class="o">&amp;</span><span class="n">huart2</span><span class="p">);</span>
-  <span class="cm">/* USER CODE BEGIN USART2_IRQn 1 */</span>
-  <span class="n">__HAL_UART_FLUSH_DRREGISTER</span><span class="p">(</span><span class="o">&amp;</span><span class="n">huart2</span><span class="p">);</span>
-  <span class="n">__HAL_UART_CLEAR_FLAG</span><span class="p">(</span><span class="o">&amp;</span><span class="n">huart2</span><span class="p">,</span> <span class="n">UART_IT_RXNE</span><span class="p">);</span>
-  <span class="n">__HAL_UART_ENABLE_IT</span><span class="p">(</span><span class="o">&amp;</span><span class="n">huart2</span><span class="p">,</span> <span class="n">UART_IT_RXNE</span><span class="p">);</span>
-  <span class="cm">/* USER CODE END USART2_IRQn 1 */</span>
+<span class="w">  </span><span class="cm">/* USER CODE END USART2_IRQn 0 */</span>
+<span class="w">  </span><span class="n">HAL_UART_IRQHandler</span><span class="p">(</span><span class="o">&amp;</span><span class="n">huart2</span><span class="p">);</span>
+<span class="w">  </span><span class="cm">/* USER CODE BEGIN USART2_IRQn 1 */</span>
+<span class="w">  </span><span class="n">__HAL_UART_FLUSH_DRREGISTER</span><span class="p">(</span><span class="o">&amp;</span><span class="n">huart2</span><span class="p">);</span>
+<span class="w">  </span><span class="n">__HAL_UART_CLEAR_FLAG</span><span class="p">(</span><span class="o">&amp;</span><span class="n">huart2</span><span class="p">,</span><span class="w"> </span><span class="n">UART_IT_RXNE</span><span class="p">);</span>
+<span class="w">  </span><span class="n">__HAL_UART_ENABLE_IT</span><span class="p">(</span><span class="o">&amp;</span><span class="n">huart2</span><span class="p">,</span><span class="w"> </span><span class="n">UART_IT_RXNE</span><span class="p">);</span>
+<span class="w">  </span><span class="cm">/* USER CODE END USART2_IRQn 1 */</span>
 <span class="p">}</span>
 </pre></div>
 </div>
 <p>Autre façon de procéder avec <code class="docutils literal notranslate"><span class="pre">HAL_UART_Receive_IT(&amp;huart2,</span> <span class="pre">&amp;carac,</span> <span class="pre">1);</span></code> dans le main puis:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="nf">HAL_UART_RxCpltCallback</span><span class="p">(</span><span class="n">UART_HandleTypeDef</span> <span class="o">*</span><span class="n">huart</span><span class="p">){</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span><span class="w"> </span><span class="nf">HAL_UART_RxCpltCallback</span><span class="p">(</span><span class="n">UART_HandleTypeDef</span><span class="w"> </span><span class="o">*</span><span class="n">huart</span><span class="p">){</span>
 <span class="c1">//concaténation avec un buffer plus grand ici par exemple</span>
 <span class="c1">//vérification si la transmission est complète</span>
 <span class="c1">//flag tansmission terminée</span>
@@ -677,32 +684,32 @@ un branchement à <code class="docutils literal notranslate"><span class="pre">v
 <span class="c1">//</span>
 <span class="c1">//    }</span>
 <span class="c1">//Réactivation de la réception d&#39;un caractère</span>
-<span class="n">HAL_UART_Receive_IT</span><span class="p">(</span><span class="o">&amp;</span><span class="n">huart2</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">carac</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>
+<span class="n">HAL_UART_Receive_IT</span><span class="p">(</span><span class="o">&amp;</span><span class="n">huart2</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">carac</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>}</p>
 <p>La fonction <code class="docutils literal notranslate"><span class="pre">HAL_UART_Receive_IT</span></code> est très bien si on connait la taille des message à transmettre.</p>
 <p>Elle n’a pas de timeout. Mais comme elle n’est pas bloquante, on peut gérer les problèmes de non
 réponse ailleurs donc…</p>
-</div>
-<div class="section" id="rx-with-dma">
+</section>
+<section id="rx-with-dma">
 <h3><a class="toc-backref" href="#sommaire">RX with DMA</a><a class="headerlink" href="#rx-with-dma" title="Lien permanent vers ce titre">¶</a></h3>
 <p>Pas vraiment plus compliqué. Dans Cube MX, il faut aller dans l’onglet DMA de l’UART concerné et
 activer DMA RX</p>
 <a class="reference internal image-reference" href="../../_images/cubeMXUARTDMA.jpg"><img alt="../../_images/cubeMXUARTDMA.jpg" src="../../_images/cubeMXUARTDMA.jpg" style="width: 600px;" /></a>
 <p>Et dans le code on utlise :</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">HAL_UART_Receive_DMA</span><span class="p">(</span><span class="o">&amp;</span><span class="n">huart2</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">c</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span> <span class="c1">//dans le main et dans la fonction suivante</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">HAL_UART_Receive_DMA</span><span class="p">(</span><span class="o">&amp;</span><span class="n">huart2</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">c</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span><span class="w"> </span><span class="c1">//dans le main et dans la fonction suivante</span>
 <span class="c1">//pour lancer la réception c: uint8_t</span>
 <span class="c1">//recevoir un caractère à la fois n&#39;est pas très efficient !</span>
 
 <span class="c1">//et</span>
 
-<span class="kt">void</span> <span class="n">HAL_UART_RxCpltCallback</span> <span class="p">(</span><span class="n">UART_HandleTypeDef</span> <span class="o">*</span><span class="n">huart</span><span class="p">)</span>
+<span class="kt">void</span><span class="w"> </span><span class="n">HAL_UART_RxCpltCallback</span><span class="w"> </span><span class="p">(</span><span class="n">UART_HandleTypeDef</span><span class="w"> </span><span class="o">*</span><span class="n">huart</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Pour être plus efficient, iol y a la technique suivante</p>
-</div>
-<div class="section" id="rx-through-idle-line-interrupt">
+</section>
+<section id="rx-through-idle-line-interrupt">
 <span id="index-2"></span><h3><a class="toc-backref" href="#sommaire">RX through idle line interrupt</a><a class="headerlink" href="#rx-through-idle-line-interrupt" title="Lien permanent vers ce titre">¶</a></h3>
 <p>Intéressant :IDLE line interrupt</p>
 <p><strong>Référence</strong>:</p>
@@ -718,37 +725,37 @@ callback USAR_UART_IDLECallback().</p>
 <p>A l’intérieur de ces fonctions, on utilise <code class="docutils literal notranslate"><span class="pre">huart.Instance</span> <span class="pre">==</span> <span class="pre">USART2</span></code> afin de déterminer si on
 traite bien le bon UART (pour être tout à fait générique).</p>
 <p>J’ai obtenu de bon résultats avec le code suivant dans le fichier stm32f4xx_it.c:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="nf">USART2_IRQHandler</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span><span class="w"> </span><span class="nf">USART2_IRQHandler</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
 <span class="p">{</span>
-  <span class="cm">/* USER CODE BEGIN USART2_IRQn 0 */</span>
+<span class="w">  </span><span class="cm">/* USER CODE BEGIN USART2_IRQn 0 */</span>
 
-  <span class="cm">/* USER CODE END USART2_IRQn 0 */</span>
-  <span class="n">HAL_UART_IRQHandler</span><span class="p">(</span><span class="o">&amp;</span><span class="n">huart2</span><span class="p">);</span>
-  <span class="cm">/* USER CODE BEGIN USART2_IRQn 1 */</span>
-  <span class="n">USER_UART_rxIddleCallback</span><span class="p">(</span> <span class="o">&amp;</span><span class="n">huart2</span> <span class="p">);</span>
-  <span class="cm">/* USER CODE END USART2_IRQn 1 */</span>
+<span class="w">  </span><span class="cm">/* USER CODE END USART2_IRQn 0 */</span>
+<span class="w">  </span><span class="n">HAL_UART_IRQHandler</span><span class="p">(</span><span class="o">&amp;</span><span class="n">huart2</span><span class="p">);</span>
+<span class="w">  </span><span class="cm">/* USER CODE BEGIN USART2_IRQn 1 */</span>
+<span class="w">  </span><span class="n">USER_UART_rxIddleCallback</span><span class="p">(</span><span class="w"> </span><span class="o">&amp;</span><span class="n">huart2</span><span class="w"> </span><span class="p">);</span>
+<span class="w">  </span><span class="cm">/* USER CODE END USART2_IRQn 1 */</span>
 <span class="p">}</span>
 </pre></div>
 </div>
 <p>puis en ajoutant à la fin du main.c</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="nf">USER_UART_rxIddleCallback</span><span class="p">(</span> <span class="n">UART_HandleTypeDef</span> <span class="o">*</span><span class="n">huart</span> <span class="p">){</span>
-    <span class="n">__NOP</span><span class="p">();</span>
-    <span class="n">HAL_UART_DMAStop</span><span class="p">(</span> <span class="o">&amp;</span><span class="n">huart2</span> <span class="p">);</span>
-    <span class="kt">uint8_t</span> <span class="n">data_length</span>  <span class="o">=</span> <span class="n">RX_BUF_SIZE</span> <span class="o">-</span> <span class="n">__HAL_DMA_GET_COUNTER</span><span class="p">(</span><span class="o">&amp;</span><span class="n">hdma_usart2_rx</span><span class="p">);</span>
-    <span class="n">memset</span><span class="p">(</span><span class="n">receive_buff</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="n">data_length</span><span class="p">);</span>
-    <span class="n">data_length</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span><span class="w"> </span><span class="nf">USER_UART_rxIddleCallback</span><span class="p">(</span><span class="w"> </span><span class="n">UART_HandleTypeDef</span><span class="w"> </span><span class="o">*</span><span class="n">huart</span><span class="w"> </span><span class="p">){</span>
+<span class="w">    </span><span class="n">__NOP</span><span class="p">();</span>
+<span class="w">    </span><span class="n">HAL_UART_DMAStop</span><span class="p">(</span><span class="w"> </span><span class="o">&amp;</span><span class="n">huart2</span><span class="w"> </span><span class="p">);</span>
+<span class="w">    </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">data_length</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="n">RX_BUF_SIZE</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">__HAL_DMA_GET_COUNTER</span><span class="p">(</span><span class="o">&amp;</span><span class="n">hdma_usart2_rx</span><span class="p">);</span>
+<span class="w">    </span><span class="n">memset</span><span class="p">(</span><span class="n">receive_buff</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="n">data_length</span><span class="p">);</span>
+<span class="w">    </span><span class="n">data_length</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
 
-    <span class="n">HAL_UART_Receive_DMA</span><span class="p">(</span><span class="o">&amp;</span><span class="n">huart2</span><span class="p">,</span> <span class="p">(</span><span class="kt">uint8_t</span> <span class="o">*</span><span class="p">)</span><span class="n">receive_buff</span><span class="p">,</span> <span class="n">RX_BUF_SIZE</span><span class="p">);</span>
+<span class="w">    </span><span class="n">HAL_UART_Receive_DMA</span><span class="p">(</span><span class="o">&amp;</span><span class="n">huart2</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="kt">uint8_t</span><span class="w"> </span><span class="o">*</span><span class="p">)</span><span class="n">receive_buff</span><span class="p">,</span><span class="w"> </span><span class="n">RX_BUF_SIZE</span><span class="p">);</span>
 <span class="p">}</span>
 </pre></div>
 </div>
 <p>En n’oubliant pas d’ajouter dans la fonction main.c:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">__HAL_UART_ENABLE_IT</span><span class="p">(</span><span class="o">&amp;</span><span class="n">huart2</span><span class="p">,</span> <span class="n">UART_IT_IDLE</span><span class="p">);</span>
-<span class="n">HAL_UART_Receive_DMA</span><span class="p">(</span><span class="o">&amp;</span><span class="n">huart2</span><span class="p">,</span> <span class="p">(</span><span class="kt">uint8_t</span> <span class="o">*</span><span class="p">)</span><span class="n">receive_buff</span><span class="p">,</span> <span class="n">RX_BUF_SIZE</span><span class="p">);</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">__HAL_UART_ENABLE_IT</span><span class="p">(</span><span class="o">&amp;</span><span class="n">huart2</span><span class="p">,</span><span class="w"> </span><span class="n">UART_IT_IDLE</span><span class="p">);</span>
+<span class="n">HAL_UART_Receive_DMA</span><span class="p">(</span><span class="o">&amp;</span><span class="n">huart2</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="kt">uint8_t</span><span class="w"> </span><span class="o">*</span><span class="p">)</span><span class="n">receive_buff</span><span class="p">,</span><span class="w"> </span><span class="n">RX_BUF_SIZE</span><span class="p">);</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="stm32-i2c-scanner">
+</section>
+<section id="stm32-i2c-scanner">
 <h3><a class="toc-backref" href="#sommaire">STM32 I2C scanner</a><a class="headerlink" href="#stm32-i2c-scanner" title="Lien permanent vers ce titre">¶</a></h3>
 <p>Cela peut s’avérer utile pour vérifier les branchements.</p>
 <p>Directement trouvé sur le <a class="reference external" href="https://github.com/ProjectsByJRP/stm32_hal_i2c_bus_scan">github  de ProjectsByJRP</a> <a class="footnote-reference brackets" href="#id43" id="id44">21</a></p>
@@ -757,8 +764,8 @@ des copiés/collés plutot qu’en copiant directement le code. Tout se passe da
 <p>Le principe est toujours le même, on essais une transaction simple pour toutes les adresses de
 composants entre 1 et 127 et si on reçoit un ack, on considère qu’il y a un composant.</p>
 <p>Affichage avec des <strong>printf</strong> sur UART2</p>
-</div>
-<div class="section" id="stm32-i2c-oled-0-96">
+</section>
+<section id="stm32-i2c-oled-0-96">
 <h3><a class="toc-backref" href="#sommaire">STM32 I2C OLED 0.96</a><a class="headerlink" href="#stm32-i2c-oled-0-96" title="Lien permanent vers ce titre">¶</a></h3>
 <p>Recherche internet : <a class="reference external" href="https://www.banggood.com/0_96-Inch-OLED-I2C-IIC-Communication-Display-12864-LCD-Module-p-1535708.html?rmmds=detail-left-hotproducts__1&amp;ID=229&amp;cur_warehouse=CN">écran OLED 0.96 » IIC</a> <a class="footnote-reference brackets" href="#id45" id="id46">22</a></p>
 <p>Caractéristiques principales:</p>
@@ -782,9 +789,9 @@ pData, uint16_t Size, uint32_t Timeout)</p>
 <p id="index-3"><strong>Convertion d’image bitmap vers C</strong>
 Voir le <a class="reference external" href="https://javl.github.io/image2cpp/">github de Jasper van Loenen</a> <a class="footnote-reference brackets" href="#id55" id="id56">27</a></p>
 <hr class="docutils" />
-</div>
-</div>
-<div class="section" id="stm32workbench-minimum-project">
+</section>
+</section>
+<section id="stm32workbench-minimum-project">
 <span id="index-4"></span><h2><a class="toc-backref" href="#sommaire">STM32Workbench minimum project</a><a class="headerlink" href="#stm32workbench-minimum-project" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Si on commence par utiliser STM32CubeMX, ce qui suit <strong>n’est pas utile</strong> !</p>
 <p>SW4STM32</p>
@@ -823,8 +830,8 @@ UM1730 §4.2), il faut commencer par initialiser HAL et l’horloge.</p>
 <p>La deuxième doit être définie localement. Tous les exemples présent contiennent cette fonction donc
 copier/coller . Il faut prnedre avec la fonction static void Error_Handler(void) pour que cela
 compile.</p>
-</div>
-<div class="section" id="autres-drivers-et-outils">
+</section>
+<section id="autres-drivers-et-outils">
 <h2><a class="toc-backref" href="#sommaire">Autres drivers et outils</a><a class="headerlink" href="#autres-drivers-et-outils" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Lors de la création d’un projet dans la dernière boîte de dialogue, Project Firmware configuration,
 il y a 2 zones particulière avec des cases à cocher:
@@ -839,8 +846,8 @@ il y a 2 zones particulière avec des cases à cocher:
 <li><p>TouchGFX</p></li>
 </ul>
 <hr class="docutils" />
-</div>
-<div class="section" id="cmsis">
+</section>
+<section id="cmsis">
 <span id="index-5"></span><h2><a class="toc-backref" href="#sommaire">CMSIS</a><a class="headerlink" href="#cmsis" title="Lien permanent vers ce titre">¶</a></h2>
 <p><a class="reference external" href="https://arm-software.github.io/CMSIS_5/General/html/index.html">Page officielle CMSIS</a> <a class="footnote-reference brackets" href="#id57" id="id58">28</a></p>
 <p>Ce que c’est:</p>
@@ -852,15 +859,15 @@ developers, and reducing the time to market for new devices.
 </pre></div>
 </div>
 <p>D’après ce que j’ai pu comprendre CMSIS est utilisé en grand partie par la/les librairies ST</p>
-</div>
-<div class="section" id="freertos-sur-nucleo">
+</section>
+<section id="freertos-sur-nucleo">
 <h2><a class="toc-backref" href="#sommaire">FreeRTOS sur NUCLEO</a><a class="headerlink" href="#freertos-sur-nucleo" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Voir dans: <a class="reference internal" href="../../rtos/rtos.html#reffreertosstm32"><span class="std std-ref">FreeRTOS on STM32 NUCLEO</span></a></p>
-</div>
-<div class="section" id="tips">
+</section>
+<section id="tips">
 <h2><a class="toc-backref" href="#sommaire">Tips</a><a class="headerlink" href="#tips" title="Lien permanent vers ce titre">¶</a></h2>
 <p><strong>ctrl+space</strong> dans l’editeur de STM32Workbench pour le code complétion</p>
-<div class="section" id="doxygen-support">
+<section id="doxygen-support">
 <h3><a class="toc-backref" href="#sommaire">Doxygen support</a><a class="headerlink" href="#doxygen-support" title="Lien permanent vers ce titre">¶</a></h3>
 <p>Visiblement c’est pas la préocupation principal.
 On peut activer le support de doxygen dans Preference/Editor Documentation Tolls Comment
@@ -871,8 +878,8 @@ de commentaire pour une fonction. Je n’ai jamais réussi à le faire fonctionn
 <dt>Je me suis créé des template qui commencent tous par doxy comme cela dans l’éditeur je tape doxy</dt><dd><p>suivit de ctrl+SPACE et j’ai ma liste de template.</p>
 </dd>
 </dl>
-</div>
-<div class="section" id="nulceo-f401-doesn-t-start-in-stand-alone-mode">
+</section>
+<section id="nulceo-f401-doesn-t-start-in-stand-alone-mode">
 <h3><a class="toc-backref" href="#sommaire">NULCEO-F401 doesn’t start in stand alone mode</a><a class="headerlink" href="#nulceo-f401-doesn-t-start-in-stand-alone-mode" title="Lien permanent vers ce titre">¶</a></h3>
 <p>I have a board with ST-LINK v2.J23 firmware and board doesn’t start in stan alone mode
 (ie not connect to a computer) powered by a battery pack for example.</p>
@@ -883,12 +890,12 @@ install STM32 ST Link utility and use ST-LINK/Firmware update.</p>
 <a class="reference internal image-reference" href="../../_images/stlinkUtility.jpg"><img alt="../../_images/stlinkUtility.jpg" src="../../_images/stlinkUtility.jpg" style="width: 500px;" /></a>
 <p>It open a STLink upgrade dialog</p>
 <a class="reference internal image-reference" href="../../_images/stLinkUpgrade.jpg"><img alt="../../_images/stLinkUpgrade.jpg" src="../../_images/stLinkUpgrade.jpg" style="width: 300px;" /></a>
-</div>
-<div class="section" id="nop">
+</section>
+<section id="nop">
 <h3><a class="toc-backref" href="#sommaire">NOP</a><a class="headerlink" href="#nop" title="Lien permanent vers ce titre">¶</a></h3>
 <p>Afin de pouvoir placer un point d’arrêt dans une fonction vide il existe la macro __NOP()</p>
-</div>
-<div class="section" id="uart-console-in-ide">
+</section>
+<section id="uart-console-in-ide">
 <h3><a class="toc-backref" href="#sommaire">UART console in IDE</a><a class="headerlink" href="#uart-console-in-ide" title="Lien permanent vers ce titre">¶</a></h3>
 <p>In System Workbench : <a class="reference external" href="http://eeblog.co.uk/2018/11/28/serial-terminal-window-in-system-workbench/">voir sur EEBLOG</a> <a class="footnote-reference brackets" href="#id59" id="id60">29</a></p>
 <p><a class="reference external" href="https://www.openstm32.org/forumthread5463">Sur openstm32.org</a> <a class="footnote-reference brackets" href="#id61" id="id62">30</a></p>
@@ -902,9 +909,9 @@ install STM32 ST Link utility and use ST-LINK/Firmware update.</p>
 </ol>
 <p>Quand une console est « pincée », elle arrête de switchée automatiquement entre les différentes
 consoles possibles.</p>
-</div>
-</div>
-<div class="section" id="weblinks">
+</section>
+</section>
+<section id="weblinks">
 <h2><a class="toc-backref" href="#sommaire">Weblinks</a><a class="headerlink" href="#weblinks" title="Lien permanent vers ce titre">¶</a></h2>
 <dl class="footnote brackets">
 <dt class="label" id="id1"><span class="brackets">1</span><span class="fn-backref">(<a href="#id2">1</a>,<a href="#id11">2</a>)</span></dt>
@@ -998,10 +1005,11 @@ consoles possibles.</p>
 <dd><p><a class="reference external" href="https://www.openstm32.org/forumthread5463">https://www.openstm32.org/forumthread5463</a></p>
 </dd>
 </dl>
-</div>
-</div>
+</section>
+</section>
 
 
+            <div class="clearer"></div>
           </div>
         </div>
       </div>
@@ -1060,7 +1068,7 @@ consoles possibles.</p>
   <p class="topless"><a href="../raspberry/raspberry.html"
                         title="Chapitre précédent">Raspberry pi*</a></p>
   <h4>Sujet suivant</h4>
-  <p class="topless"><a href="../../C++/cpp.html"
+  <p class="topless"><a href="../../C%2B%2B/cpp.html"
                         title="Chapitre suivant">Mes notes sur C++</a></p>
   <div role="note" aria-label="source link">
     <h3>Cette page</h3>
@@ -1090,18 +1098,19 @@ consoles possibles.</p>
           <a href="../../genindex.html" title="Index général"
              >index</a></li>
         <li class="right" >
-          <a href="../../C++/cpp.html" title="Mes notes sur C++"
+          <a href="../../C%2B%2B/cpp.html" title="Mes notes sur C++"
              >suivant</a> |</li>
         <li class="right" >
           <a href="../raspberry/raspberry.html" title="Raspberry pi*"
              >précédent</a> |</li>
         <li class="nav-item nav-item-0"><a href="../../index.html">Documentation MajorLee&#39;s notes </a> &#187;</li>
-          <li class="nav-item nav-item-1"><a href="../hardware.html" >Hardware notes</a> &#187;</li> 
+          <li class="nav-item nav-item-1"><a href="../hardware.html" >Hardware notes</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">NUCLEO board *</a></li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2019, J.SORANZO.
-      Créé avec <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.4.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.0.2.
     </div>
   </body>
 </html>

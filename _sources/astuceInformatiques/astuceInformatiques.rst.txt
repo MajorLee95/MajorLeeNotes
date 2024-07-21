@@ -2,11 +2,11 @@
 Astuces informatiques
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-.. include:: ../volabid.rst
+.. include:: ../idBlock.rst
 
 
 :Date: Novembre 2019
-:Mise à jour: 28/01/2023
+:Mise à jour: la date git fait foi
 
 .. index::
     pair: Astuce; Microsoft
@@ -65,8 +65,21 @@ Site `driveridentifier.com`_
 
   Ne pas passer par le site mais taper directement dans google:
   driveridentifier lenomdudriver
+
+.. index::
+    pair: Windows; Gestionnaire de tâches
+
+Gestionnaire de tâches ou de disk (en mode admin)
+----------------------------------------------------------------------------------------------------
+Depuis cmd en mode admin par exemple... taper taskmgr ou diskmgmt.msc
+
+Sinon dans la barre de recherche taskm ou diskmgmt.msc... clic droit exécuter en tant qu'administrateur.
   
 .. index:: Gestionnaire de fichier, Barre des tâches
+
+
+.. DANGER:: texte
+    :class: without-title
 
 Gestionnaire de périphérique dans la barre des tâches 
 ----------------------------------------------------------------------------------------------------
