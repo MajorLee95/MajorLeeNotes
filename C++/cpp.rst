@@ -28,7 +28,52 @@ Ceci n'est pas un cours sur le C++, il y en a déjà plein et de très bons voir
 
 .. _`Openclassrooms` : https://openclassrooms.com/fr/courses/1894236-programmez-avec-le-langage-c
 
+.. SEEALSO:: **SITE D'AIDE**
+    :class: without-title
+    
+    `Les meilleurs cours et tutoriels pour apprendre la programmation C++`_
+
+.. _`Les meilleurs cours et tutoriels pour apprendre la programmation C++` : https://cpp.developpez.com/cours/
+
+
+.. SEEALSO:: **SITE D'AIDE**
+    :class: without-title
+    
+    `Penser en C++`_
+
+.. _`Penser en C++` : https://bruce-eckel.developpez.com/livres/cpp/traduction/ticpp2vol1/
+
+
 **Voir aussi la map cpp_notes.xmind**
+
+====================================================================================================
+Classe membre d'une autre classe
+====================================================================================================
+Il ne s'agit pas ici d'évoquer les classe fille et encore moins les classe virtuelle mais simplement
+une classe utilisée en tant que membre (attribut) d'une autre classe avec un constructeur ayant des
+paramètres.
+
+.. SEEALSO:: **SITE D'AIDE**
+    :class: without-title
+    
+    `comment intégrer une classe dans une autre classe`_
+
+.. _`comment intégrer une classe dans une autre classe` : https://www.developpez.net/forums/d1847623/c-cpp/cpp/debuter/integrer-classe-classe/
+
+
+====================================================================================================
+Rappels éventuels du C
+====================================================================================================
+
+.. index::
+    pair: C; Volatile
+    pair: C++; Volatile
+
+Variable volatile
+----------------------------------------------------------------------------------------------------
+En qualifiant par volatile le type d'une variable, le programmeur prévient le compilateur que cette 
+variable peut être modifiée par un moyen extérieur au programme.
+
 
 ====================================================================================================
 Codding Styles/ formatting
@@ -251,7 +296,7 @@ L'ordre des déclarations est important : d'abord la version générique puis la
 
 .. index::
     pair: C++; Statique
-    pair: c++; static
+    pair: C++; static
 
 ================================
 Membres statiques
@@ -268,6 +313,12 @@ Une méthode statique ne peut accéder qu'aux attributs statiques de la classe.
 
     bool CRtc::initErr = false;
     NTPClient *CRtc::p_timeClient = nullptr;
+
+Variables static C
+----------------------------------------------------------------------------------------------------
+Une variable déclarée avec static aura sa portée limitée à l'unité de compilation où elle est 
+déclarée. Du coup 2 variables avec le même nom pourront être déclarées dans 2 unité de compilation 
+séparées. Sa durée de vie est celle du programme.
 
 ----------------------------------------------------------------------------------------------------
 

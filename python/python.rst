@@ -5,11 +5,17 @@
 Python* (mes notes)
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-:Auteur: J.Soranzo
+ .. include:: ../idBlock.rst
+
 :Date: Août 2020
 :mise à jour: 04/02/2023
-:Societe: VoRoBoTics
-:Entity: VoLAB
+
+
+.. toctree::
+    :titlesonly:
+    :caption: sous-articles
+
+    gestionnairesGraphiquesPython
 
 .. contents::
     :backlinks: top
@@ -1718,6 +1724,11 @@ Wiring pi
 ----------------------------------------------------------------------------------------------------
 C'est une librairie C non Python cf.
 
+
+
+.. index::
+    pair: Serial; Pyserial
+
 ====================================================================================================
 PySerial
 ====================================================================================================
@@ -1758,20 +1769,22 @@ Voir `la doc short intro`_
 
 .. _`la doc short intro` : https://pyserial.readthedocs.io/en/latest/shortintro.html
 
-====================================================================================================
-Gestionnaires graphiques
-====================================================================================================
-tkinter
+Lister les port série
 ----------------------------------------------------------------------------------------------------
-Voir fichiers Freeplane. Todo: convertir en rst
+::
 
-pyQt5
-----------------------------------------------------------------------------------------------------
-Voir fichiers Freeplane. Todo: convertir en rst
+    import serial.tools.list_ports
+    serialPorts = serial.tools.list_ports.comports()
 
-Pysimplegui
-----------------------------------------------------------------------------------------------------
-Voir fichiers Freeplane. Todo: convertir en rst (et encore j'ai jsute mis une ligne pour m'en rappeler)
+    for port, desc, hwid in sorted(serialPorts): 
+        try:
+            print("Essaie port : " + port)
+            ser.port = port
+            ser.open()               
+            valideSerials.append( {'port': port, 'description': desc } )
+            ser.close()
+        except:
+            pass
 
 ====================================================================================================
 Appli minimum (template)
@@ -1859,6 +1872,11 @@ On commence par cet article qui se ramifie vers pleins de sujets intéressants.
 .. _`Python Concurrency & Parallel Programming` : https://realpython.com/learning-paths/python-concurrency-parallel-programming/
 
 .. _`Async IO in Python: A Complete Walkthrough` : https://realpython.com/async-io-python/
+
+
+
+
+
 
 ====================================================================================================
 Weblinks

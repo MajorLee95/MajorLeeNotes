@@ -31,8 +31,12 @@ master_doc = 'index'
 # ones.
 # extensions = [ 'sphinx_rtd_theme'
 # ]
-extensions = [ 'sphinx.ext.graphviz', 'sphinxcontrib.plantuml'
+# extensions = [ 'sphinx.ext.graphviz', 'sphinxcontrib.plantuml', 'sphinx_ahd_theme'
+# ]
+
+extensions = [ 'sphinx.ext.graphviz', 'sphinxcontrib.plantuml', 
 ]
+
 
 graphviz_output_format = "svg"
 plantuml_output_format = "svg_obj"
@@ -58,6 +62,7 @@ exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 #
+# html_theme = 'sphinx_ahd_theme'
 html_theme = 'nature'
 # html_theme = "sphinx_rtd_theme"
 # html_theme = 'cloud'

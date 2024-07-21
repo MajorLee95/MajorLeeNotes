@@ -95,7 +95,32 @@ System
    cette commande ne dit pas par exemple sur quoi est mappé le périphérique
    
    Par exemple lsusb tty.
+
 - List des port com : ``ls /dev/tty*``
+
+A la place, il est nécessaire de scripter::
+
+    #!/bin/bash
+
+    for sysdevpath in $(find /sys/bus/usb/devices/usb*/ -name dev); do
+        (
+            syspath="${sysdevpath%/dev}"
+            devname="$(udevadm info -q name -p $syspath)"
+            [[ "$devname" == "bus/"* ]] && exit
+            eval "$(udevadm info -q property --export -p $syspath)"
+            [[ -z "$ID_SERIAL" ]] && exit
+            echo "/dev/$devname - $ID_SERIAL"
+        )
+    done
+
+.. SEEALSO:: **SITE D'AIDE**
+    :class: without-title
+    
+    `command to determine ports of a device (like /dev/ttyUSB0)`_
+
+.. _`command to determine ports of a device (like /dev/ttyUSB0)` : https://unix.stackexchange.com/questions/144029/command-to-determine-ports-of-a-device-like-dev-ttyusb0
+
+
 - Lister les disque:
 
  - lshw -C disk
@@ -262,16 +287,48 @@ Ou monter un répertoire d'une autre machine
 ====================================================================================================
 Les Makefile (en bref)
 ====================================================================================================
-Mis ici en attendant d'avoir un emplacment dédié à la compilation
+Mis ici en attendant d'avoir un emplacement dédié à la compilation
+
+:download:`Concevoir un Makefile<fichiersJoints/make.pdf>`
+
+make tout seul exécute la première target du ficher Makefile
+
+all: n'est pas une target spécial au sens de make mais c'est une habitude.
+
+Target %: tous les noms de fichiers !!!
+
+Que dire de cet exemple::
+
+    SHELL:=/bin/bash
+
+    ifeq ($(IDF_PATH),)
+
+    THIS_MK_FILE:=$(notdir $(lastword $(MAKEFILE_LIST)))
+    THIS_DIR:=$(abspath $(dir $(lastword $(MAKEFILE_LIST))))
+    IDF_PATH=$(THIS_DIR)/sdk/esp32-esp-idf
+
+    all:
+        . $(IDF_PATH)/export.sh && $(MAKE) "$@"
+
+    %:
+        . $(IDF_PATH)/export.sh && $(MAKE) "$@"
+
+    else
+
+    all:
+        $(IDF_PATH)/tools/idf.py $(IDFPY_ARGS) "$@"
+
+    %:
+        $(IDF_PATH)/tools/idf.py $(IDFPY_ARGS) "$@"
+
+    endif
 
 Commentaires : #
 
-.PHONY : 
+.PHONY : une règle .PHONY ne rencontrera jamais le problème d’être déjà à jour. Utile pour les 
+règles qui ne produisent aucun fichier et qui sont donc toujours à jour ! Une bonne pratique est 
+de déclarer dans .PHONY toutes les règles de nettoyage de votre projet.
 
-
-`ce mon lien`_
-
-.. _`ce mon lien` : file:///C:/Users/F073258/Documents/jojoBag/taf/cocotier_2021/travauxPAD/documentation/build/html/home.html 
 
 `make sur Wikipédia`_
 
