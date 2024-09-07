@@ -4,16 +4,15 @@
 <html lang="fr">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
     <title>Notes sur Qt * &#8212; Documentation MajorLee&#39;s notes </title>
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/nature.css" />
+    <link rel="stylesheet" href="../../_static/nature.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css" />
-    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
     <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
     <script src="../../_static/translations.js"></script>
     <link rel="shortcut icon" href="../../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../../genindex.html" />
@@ -34,8 +33,7 @@
           <a href="../visualCpp/visual.html" title="Note concernant Visal C++ 2013 *"
              accesskey="P">précédent</a> |</li>
         <li class="nav-item nav-item-0"><a href="../../index.html">Documentation MajorLee&#39;s notes </a> &#187;</li>
-          <li class="nav-item nav-item-1"><a href="../cpp.html" accesskey="U">Mes notes sur C++</a> &#187;</li>
-        <li class="nav-item nav-item-this"><a href="">Notes sur Qt *</a></li> 
+          <li class="nav-item nav-item-1"><a href="../cpp.html" accesskey="U">Mes notes sur C++</a> &#187;</li> 
       </ul>
     </div>  
 
@@ -44,7 +42,7 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <section id="notes-sur-qt">
+  <div class="section" id="notes-sur-qt">
 <h1><a class="toc-backref" href="#table-des-matieres-qt">Notes sur Qt *</a><a class="headerlink" href="#notes-sur-qt" title="Lien permanent vers ce titre">¶</a></h1>
 <dl class="field-list simple">
 <dt class="field-odd">Auteur</dt>
@@ -134,7 +132,7 @@
 </li>
 </ul>
 </div>
-<section id="presentation">
+<div class="section" id="presentation">
 <h2><a class="toc-backref" href="#table-des-matieres-qt">Présentation</a><a class="headerlink" href="#presentation" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Bon <a class="reference external" href="https://openclassrooms.com/fr/courses/1894236-programmez-avec-le-langage-c/1898935-initiez-vous-a-qt">cours sur Openclassroom</a> <a class="footnote-reference brackets" href="#id6" id="id7">2</a></p>
 <p>Une <a class="reference external" href="https://www.youtube.com/watch?v=050zzD4c-5c">vidéo globale</a> <a class="footnote-reference brackets" href="#id4" id="id5">1</a> sur Youtube (traite seulement des applications QWidget)</p>
@@ -150,7 +148,7 @@ setteurs s’appellent bien setAttribut.</p>
 <p class="admonition-title">Note</p>
 <p>La règle de nommage est le lowerCamelCase</p>
 </div>
-<section id="les-outils-qt">
+<div class="section" id="les-outils-qt">
 <h3><a class="toc-backref" href="#table-des-matieres-qt">Les outils Qt</a><a class="headerlink" href="#les-outils-qt" title="Lien permanent vers ce titre">¶</a></h3>
 <p>Qt est un framework certes. C’est donc une énorme bibliothèque.</p>
 <p>Mais c’est aussi un ensemble d’outils parmis lesquels on est un peu perdu quand on débute.</p>
@@ -163,17 +161,17 @@ Qt creator, avec Qt Designer on s’évite d’avoir à fournir des positions en
 de sa/ses boîte de dialogues.</p>
 <p>Les premiers chapitres dédiés à Qt dans les <a class="reference external" href="https://openclassrooms.com/fr/courses/1894236-programmez-avec-le-langage-c/1898935-initiez-vous-a-qt">cours sur Openclassroom</a> <a class="footnote-reference brackets" href="#id6" id="id8">2</a> n’utilisent pas Qt Designer et montrent
 comment faire sans.</p>
-</section>
-</section>
-<section id="installation">
+</div>
+</div>
+<div class="section" id="installation">
 <span id="index-2"></span><h2><a class="toc-backref" href="#table-des-matieres-qt">Installation</a><a class="headerlink" href="#installation" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Il faut son permis de conduire ! Bien que certaines case soient déjà cochées cela ne suffit pas.</p>
 <p>Il faut choisir au moins un environnement (kits) mingw par exemple (32 et 64 bits).</p>
 <p>Ne pas hésiter à consulter : <a class="reference external" href="https://guillaumebelz.github.io/qtinstall/">Installation et premiers pas avec Qt 5.12</a> <a class="footnote-reference brackets" href="#id11" id="id12">4</a></p>
-</section>
-<section id="service-minimum">
+</div>
+<div class="section" id="service-minimum">
 <h2><a class="toc-backref" href="#table-des-matieres-qt">Service minimum</a><a class="headerlink" href="#service-minimum" title="Lien permanent vers ce titre">¶</a></h2>
-<section id="appli-console">
+<div class="section" id="appli-console">
 <h3><a class="toc-backref" href="#table-des-matieres-qt">Appli console</a><a class="headerlink" href="#appli-console" title="Lien permanent vers ce titre">¶</a></h3>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;QCoreApplication&gt;</span>
 <span class="w">    </span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
@@ -191,8 +189,8 @@ comment faire sans.</p>
 <span class="w">    </span><span class="p">}</span>
 </pre></div>
 </div>
-</section>
-<section id="appli-graphique">
+</div>
+<div class="section" id="appli-graphique">
 <h3><a class="toc-backref" href="#table-des-matieres-qt">Appli graphique</a><a class="headerlink" href="#appli-graphique" title="Lien permanent vers ce titre">¶</a></h3>
 <p>N’importe quel QWidget peut faire office de fénêtre. Donc pour créer un fenêtre minimum,
 il suffit de créer un QWidget : <em>QWidget fen;</em> suivi d’un <em>fen.show();</em></p>
@@ -289,8 +287,8 @@ la case <em>Generate form</em> on a alors une appliminimum qui utilise la <a cla
 </pre></div>
 </div>
 <hr class="docutils" />
-</section>
-<section id="utilisation-avec-qt-designer">
+</div>
+<div class="section" id="utilisation-avec-qt-designer">
 <span id="index-3"></span><h3><a class="toc-backref" href="#table-des-matieres-qt">Utilisation avec Qt Designer</a><a class="headerlink" href="#utilisation-avec-qt-designer" title="Lien permanent vers ce titre">¶</a></h3>
 <p>C’est pas aussi trivial qu’il n’y parait !</p>
 <p>Il n’y a pas vraiment de tuto internet C++/Qt Designer ceux qu’on trouve c’est pour Python !</p>
@@ -308,12 +306,12 @@ Qt Desinger…</p>
 <p>A propos de la mise à jour du fichier d’entête ui_claasFenetre.h : ce n’est pas qmake qui met à
 jour ce fichier mais bien le processus de compilation et donc le make file…</p>
 </div>
-</section>
-</section>
+</div>
+</div>
 <hr class="docutils" />
-<section id="autres-choses">
+<div class="section" id="autres-choses">
 <h2><a class="toc-backref" href="#table-des-matieres-qt">Autres choses</a><a class="headerlink" href="#autres-choses" title="Lien permanent vers ce titre">¶</a></h2>
-<section id="qt-et-repertoires">
+<div class="section" id="qt-et-repertoires">
 <h3><a class="toc-backref" href="#table-des-matieres-qt">Qt et répertoires</a><a class="headerlink" href="#qt-et-repertoires" title="Lien permanent vers ce titre">¶</a></h3>
 <p>Qt a tendance à prendre ses aises dans le répertoire du projet:</p>
 <ul class="simple">
@@ -323,27 +321,27 @@ jour ce fichier mais bien le processus de compilation et donc le make file…</p
 <p>Le fait que les fichiers compilés se trouve à un niveau supérieur peut être déroutant au début mais
 a l’usage cela peut s’avérer utile quand, par exemple, on veut récupérer ses fichiers sources
 de plusieurs projets en méme temps pour les déplacer sur une autre machine.</p>
-</section>
-<section id="mode-debug">
+</div>
+<div class="section" id="mode-debug">
 <span id="index-4"></span><h3><a class="toc-backref" href="#table-des-matieres-qt">Mode debug</a><a class="headerlink" href="#mode-debug" title="Lien permanent vers ce titre">¶</a></h3>
 <a class="reference internal image-reference" href="../../_images/ScreenshotdebugBoutons.png"><img alt="boutons de debug" class="align-center" src="../../_images/ScreenshotdebugBoutons.png" style="width: 500.0px; height: 268.0px;" /></a>
 <dl class="simple">
 <dt>Attention ces boutons verts ne sont pas identiques. Celui du haut lance un nouveau debug</dt><dd><p>Celui du bas refait la même cession !</p>
 </dd>
 </dl>
-</section>
-</section>
+</div>
+</div>
 <hr class="docutils" />
-<section id="classes-qui-me-semblent-les-plus-utiles">
+<div class="section" id="classes-qui-me-semblent-les-plus-utiles">
 <h2><a class="toc-backref" href="#table-des-matieres-qt">Classes qui me semblent les plus utiles</a><a class="headerlink" href="#classes-qui-me-semblent-les-plus-utiles" title="Lien permanent vers ce titre">¶</a></h2>
-<section id="de-base">
+<div class="section" id="de-base">
 <h3><a class="toc-backref" href="#table-des-matieres-qt">De base</a><a class="headerlink" href="#de-base" title="Lien permanent vers ce titre">¶</a></h3>
 <p><a class="reference external" href="https://doc.qt.io/qt-5/qwidget.html">QWidget</a> <a class="footnote-reference brackets" href="#id21" id="id22">9</a> : une fenêtre est un widget, donc .show() s’applique.</p>
 <p><a class="reference external" href="https://doc.qt.io/qt-5/qpushbutton.html">QPushButton</a> <a class="footnote-reference brackets" href="#id23" id="id24">10</a> est aussi un widget</p>
 <p><a class="reference external" href="https://doc.qt.io/qt-5/qlineedit.html">QLineEdit</a> <a class="footnote-reference brackets" href="#id19" id="id20">8</a> pour entrer du texte</p>
 <p>QTextEdit + les layouts.</p>
-</section>
-<section id="advanced">
+</div>
+<div class="section" id="advanced">
 <h3><a class="toc-backref" href="#table-des-matieres-qt">Advanced</a><a class="headerlink" href="#advanced" title="Lien permanent vers ce titre">¶</a></h3>
 <p><a class="reference external" href="https://doc.qt.io/qt-5/qfilesystemmodel.html#example-usage">QFileSystemModel</a> <a class="footnote-reference brackets" href="#id25" id="id26">11</a> et <a class="reference external" href="https://doc.qt.io/qt-5/qfilesystemmodel.html#example-usage">QTreeView</a> <a class="footnote-reference brackets" href="#id25" id="id27">11</a> permettent de faire une arborescence disque en quelques lignes…</p>
 <p>Il y a l”<a class="reference external" href="https://openclassrooms.com/fr/courses/1894236-programmez-avec-le-langage-c/1902176-decouvrez-l-architecture-mvc-avec-les-widgets-complexes#/id/r-1902175">exemple de QStringList</a> <a class="footnote-reference brackets" href="#id28" id="id29">12</a> avec sélection dans OpenClassroom</p>
@@ -370,29 +368,29 @@ alors cast sur un QPushButton par exemple:</p>
 </pre></div>
 </div>
 <p>On nottera au passage la nouvelle syntaxe possible de connect qui n’utilise pas SIGNAL() et SLOT()</p>
-</section>
-</section>
-<section id="apres-modification-du-fichier-pro">
+</div>
+</div>
+<div class="section" id="apres-modification-du-fichier-pro">
 <h2><a class="toc-backref" href="#table-des-matieres-qt">Après modification du fichier pro</a><a class="headerlink" href="#apres-modification-du-fichier-pro" title="Lien permanent vers ce titre">¶</a></h2>
 <p id="index-7">QApplication not found.</p>
 <p>Ajouter : QT += widgets</p>
 <p>Et <strong>Exécuter qmake</strong>.</p>
-</section>
-<section id="qt-widgets-vs-qt-quick-application">
+</div>
+<div class="section" id="qt-widgets-vs-qt-quick-application">
 <h2><a class="toc-backref" href="#table-des-matieres-qt">Qt widgets vs Qt Quick application</a><a class="headerlink" href="#qt-widgets-vs-qt-quick-application" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Qt Quick plutôt dédié aux applications de style mobile (Développement en QML et javascript).</p>
 <p>Qt Widget plutôt pour les applications de style Desktop.</p>
 <hr class="docutils" />
-</section>
-<section id="comprendre-signals-et-slots">
+</div>
+<div class="section" id="comprendre-signals-et-slots">
 <span id="index-8"></span><h2><a class="toc-backref" href="#table-des-matieres-qt">Comprendre signals et slots</a><a class="headerlink" href="#comprendre-signals-et-slots" title="Lien permanent vers ce titre">¶</a></h2>
-<section id="id1">
+<div class="section" id="id1">
 <h3><a class="toc-backref" href="#table-des-matieres-qt">Présentation</a><a class="headerlink" href="#id1" title="Lien permanent vers ce titre">¶</a></h3>
 <p>Signaux : données émises (messages) par une classe en réaction à un évènement</p>
 <p>Slot méthode spéciale qui permet de réagir à un évènement</p>
 <p>Un signal déclenche en général un slot. On dit un signal est connecté à un slot.</p>
-</section>
-<section id="utilisation">
+</div>
+<div class="section" id="utilisation">
 <h3><a class="toc-backref" href="#table-des-matieres-qt">Utilisation</a><a class="headerlink" href="#utilisation" title="Lien permanent vers ce titre">¶</a></h3>
 <p>Pour connecter un signal à un slot, on utilise la méthode connect() <strong>(méthode statique de QObject)</strong></p>
 <p>Exemple:</p>
@@ -419,13 +417,13 @@ BEGIN_MESSAGE_MAP de VisualCpp</p>
 <p class="admonition-title">Note</p>
 <p>Ne pas oublier que les slot et les signaux s’héritent</p>
 </div>
-</section>
-<section id="connaitre-l-emetteur-d-un-signal-dans-un-slot">
+</div>
+<div class="section" id="connaitre-l-emetteur-d-un-signal-dans-un-slot">
 <span id="index-9"></span><h3><a class="toc-backref" href="#table-des-matieres-qt">Connaître l’émetteur d’un signal dans un slot</a><a class="headerlink" href="#connaitre-l-emetteur-d-un-signal-dans-un-slot" title="Lien permanent vers ce titre">¶</a></h3>
 <p>Pour déterminer l’objet à l’origine d’un signal (cas de plusieurs objetc connecté au même slot),
 on utilise la méthode <a class="reference external" href="https://doc.qt.io/qt-5/qobject.html#sender">sender()</a> <a class="footnote-reference brackets" href="#id32" id="id33">14</a> de la class QObject</p>
-</section>
-<section id="creation">
+</div>
+<div class="section" id="creation">
 <h3><a class="toc-backref" href="#table-des-matieres-qt">Création</a><a class="headerlink" href="#creation" title="Lien permanent vers ce titre">¶</a></h3>
 <p>Pour pouvoir créer son propre signal <strong>ou</strong> slot dans une classe, il faut que celle-ci dérive
 directement ou indirectement de QObject (un QWidget c’est bon par exemple)</p>
@@ -512,31 +510,31 @@ méthode avec ses paramètre (on sépare de <em>emit</em> avec un espace - pas d
 <p>Après avoir ajouté la macro Q_OBJECT, faire un qmake sinon erreur vTable</p>
 </div>
 <p>Pour plus de détails voir <a class="reference external" href="https://openclassrooms.com/fr/courses/1894236-programmez-avec-le-langage-c/1899731-utilisez-les-signaux-et-les-slots#/id/r-1909507">signaux et slot dans OpenClassroom</a> <a class="footnote-reference brackets" href="#id34" id="id35">15</a></p>
-</section>
-<section id="autoconnect">
+</div>
+<div class="section" id="autoconnect">
 <span id="index-10"></span><h3><a class="toc-backref" href="#table-des-matieres-qt">Autoconnect</a><a class="headerlink" href="#autoconnect" title="Lien permanent vers ce titre">¶</a></h3>
 <p>Il n’est pas nécessaire de réaliser la connexion dans le cas d’un bouton par exemple.</p>
 <p>Si on respecte une certaine convention, Qt reconnait et fait la connexion pour nous.</p>
 <p>on_bouton_clicked() ( dommage se n’est pas du lowerCamelCase ! )</p>
 <p>La <a class="reference external" href="https://openclassrooms.com/fr/courses/1894236-programmez-avec-le-langage-c/1901673-modelisez-ses-fenetres-avec-qt-designer#/id/r-1911443">méthode auto-connect</a> <a class="footnote-reference brackets" href="#id36" id="id37">16</a> est expliquée sur Openclassroom</p>
-</section>
-</section>
+</div>
+</div>
 <hr class="docutils" />
-<section id="petits-tracas">
+<div class="section" id="petits-tracas">
 <h2><a class="toc-backref" href="#table-des-matieres-qt">Petits tracas</a><a class="headerlink" href="#petits-tracas" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Sous Linux appli console : n’affiche rien (en mode debug)</p>
 <p>Supprimer dans le fichier pro CONFIG += console</p>
 <p>qmake + clean up + build all</p>
 <hr class="docutils" />
-</section>
-<section id="cout">
+</div>
+<div class="section" id="cout">
 <span id="index-11"></span><h2><a class="toc-backref" href="#table-des-matieres-qt">cout</a><a class="headerlink" href="#cout" title="Lien permanent vers ce titre">¶</a></h2>
-<section id="undifined-cout">
+<div class="section" id="undifined-cout">
 <h3><a class="toc-backref" href="#table-des-matieres-qt">undifined cout</a><a class="headerlink" href="#undifined-cout" title="Lien permanent vers ce titre">¶</a></h3>
 <p>#include &lt;iostream&gt;</p>
 <p>using namespace std;</p>
-</section>
-<section id="qstring-vs-cout">
+</div>
+<div class="section" id="qstring-vs-cout">
 <h3><a class="toc-backref" href="#table-des-matieres-qt">QString vs cout</a><a class="headerlink" href="#qstring-vs-cout" title="Lien permanent vers ce titre">¶</a></h3>
 <p>L’opérateur &lt;&lt; n’étant as surchargé dans <span class="target" id="index-12"></span>QString, cout ne sait pas afficher QString.
 Il faut opérer une conversion comme par exemple:</p>
@@ -544,9 +542,9 @@ Il faut opérer une conversion comme par exemple:</p>
 </pre></div>
 </div>
 <hr class="docutils" />
-</section>
-</section>
-<section id="boite-de-dialogue-standard">
+</div>
+</div>
+<div class="section" id="boite-de-dialogue-standard">
 <span id="index-13"></span><h2><a class="toc-backref" href="#table-des-matieres-qt">Boîte de dialogue standard</a><a class="headerlink" href="#boite-de-dialogue-standard" title="Lien permanent vers ce titre">¶</a></h2>
 <a class="reference internal image-reference" href="../../_images/standardDialog.jpg"><img alt="QtStandard dialog" class="align-left" src="../../_images/standardDialog.jpg" style="width: 500px;" /></a>
 <dl class="simple">
@@ -574,9 +572,9 @@ Static Public Members.</p>
 </div>
 <p>Les niveaux de sévérité de QMessageBox : question, information, warning, critical  qui correspondent
 à des membres statiques…</p>
-</section>
+</div>
 <hr class="docutils" />
-<section id="qt-layout">
+<div class="section" id="qt-layout">
 <h2><a class="toc-backref" href="#table-des-matieres-qt">Qt layout</a><a class="headerlink" href="#qt-layout" title="Lien permanent vers ce titre">¶</a></h2>
 <dl class="simple">
 <dt>La classe QLayout est un classe abastraite ayant de nombreuses classes filles:</dt><dd><ul class="simple">
@@ -611,11 +609,11 @@ pas de QWidget.</p>
 sont étiquette.</p>
 </div>
 <hr class="docutils" id="index-14" />
-</section>
-<section id="communication-reseau">
+</div>
+<div class="section" id="communication-reseau">
 <span id="index-15"></span><h2><a class="toc-backref" href="#table-des-matieres-qt">Communication réseau</a><a class="headerlink" href="#communication-reseau" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Référence : <a class="reference external" href="https://openclassrooms.com/fr/courses/1894236-programmez-avec-le-langage-c/1902751-communiquez-en-reseau-avec-son-programme">OpenClassRoom Communiquez en réseau</a> <a class="footnote-reference brackets" href="#id15" id="id40">6</a></p>
-<section id="architecture-client-serveur">
+<div class="section" id="architecture-client-serveur">
 <h3><a class="toc-backref" href="#table-des-matieres-qt">Architecture client/serveur</a><a class="headerlink" href="#architecture-client-serveur" title="Lien permanent vers ce titre">¶</a></h3>
 <p>Côté serveur:</p>
 <ol class="arabic simple">
@@ -647,10 +645,10 @@ sender() de la classe QObject.</p>
 QIODevice.</p>
 </div>
 <p><a class="reference external" href="https://doc.qt.io/qt-5/qdatastream.html#details">Doc officielle QDataStream</a> <a class="footnote-reference brackets" href="#id41" id="id42">18</a></p>
-</section>
-</section>
+</div>
+</div>
 <hr class="docutils" />
-<section id="tips">
+<div class="section" id="tips">
 <h2><a class="toc-backref" href="#table-des-matieres-qt">Tips</a><a class="headerlink" href="#tips" title="Lien permanent vers ce titre">¶</a></h2>
 <p>#include &lt;QtWidgets&gt; évite de faire des includes un à un en fonction des Widgets utilisés. C’est un
 méga include.</p>
@@ -658,8 +656,8 @@ méga include.</p>
 <p>Voir la <a class="reference external" href="https://doc.qt.io/qt-5/qwidget.html#setLayout">documentation de setlayout</a> <a class="footnote-reference brackets" href="#id43" id="id44">19</a></p>
 <p>Slot auto-connect : voir <a class="reference internal" href="#autoconnect">Autoconnect</a></p>
 <hr class="docutils" />
-</section>
-<section id="deploiement">
+</div>
+<div class="section" id="deploiement">
 <span id="index-16"></span><h2><a class="toc-backref" href="#table-des-matieres-qt">Deploiement</a><a class="headerlink" href="#deploiement" title="Lien permanent vers ce titre">¶</a></h2>
 <p>deployment en anglais</p>
 <p>Il y a bien évidement la page de référence de la <a class="reference external" href="https://doc.qt.io/qt-5/windows-deployment.html">documentation Qt sur le déploiement</a> <a class="footnote-reference brackets" href="#id45" id="id46">20</a></p>
@@ -696,39 +694,39 @@ méga include.</p>
 <p>On pourra soit bosser directement dans le dossier realese avec windeployqt soit dans un nouveau
 dossier en y recopiant le .exe (inutile de chercher à spécifier un source dir et un dest dir)</p>
 <p>La technique exposée ci-dessus ne fonctionne pas toujour ! Mieux vaut passer par windeployqt.</p>
-<section id="qt-static-linking">
+<div class="section" id="qt-static-linking">
 <h3><a class="toc-backref" href="#table-des-matieres-qt">Qt static linking</a><a class="headerlink" href="#qt-static-linking" title="Lien permanent vers ce titre">¶</a></h3>
 <p>Cela se passe dans le fichier .pro principalement donc inutile de chercher une cas à cocher !</p>
 <p>Semble très complexe et déconseillé.</p>
 <hr class="docutils" />
-</section>
-</section>
-<section id="qt-and-snippets">
+</div>
+</div>
+<div class="section" id="qt-and-snippets">
 <span id="index-17"></span><h2><a class="toc-backref" href="#table-des-matieres-qt">Qt and snippets</a><a class="headerlink" href="#qt-and-snippets" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Les snippets Doxygen simple existent nativement dans Qt suffit de commencer à taper &#64;pour que la
 liste de complétion de code les affiche.</p>
-<section id="id2">
+<div class="section" id="id2">
 <h3><a class="toc-backref" href="#table-des-matieres-qt">Création</a><a class="headerlink" href="#id2" title="Lien permanent vers ce titre">¶</a></h3>
 <p>Menu Outils/options…</p>
 <p>Ligne : Editeur de texte/onglets Extraits de code</p>
 <p>Là on peut créer ses propres extraits de code.</p>
-</section>
-<section id="id3">
+</div>
+<div class="section" id="id3">
 <h3><a class="toc-backref" href="#table-des-matieres-qt">Utilisation</a><a class="headerlink" href="#id3" title="Lien permanent vers ce titre">¶</a></h3>
 <p>L’utilisation des snippets dans Qt passe par le même procédé que la complétion de code.
 Il suffit de commencer à taper le nom du snippet. On pourra par exemple faire précéder tous les
 snippet Doxygen par doxy_. Ainsi en tapant doxy_ on obtient dans l’éditeur la liste de tout ses
 snippets Doxygen.</p>
-</section>
-<section id="sauvegardes">
+</div>
+<div class="section" id="sauvegardes">
 <h3><a class="toc-backref" href="#table-des-matieres-qt">Sauvegardes</a><a class="headerlink" href="#sauvegardes" title="Lien permanent vers ce titre">¶</a></h3>
 <p>Les snippets ne se trouvent pas dans</p>
 <p>%QTINSTALLDIR%ToolsQtCreatorshareqtcreatorsnippets</p>
 <p>mais dans</p>
 <p>C:Users_votreLoginAppDataRoamingQtProjectqtcreatorsnippets</p>
-</section>
-</section>
-<section id="weblinks">
+</div>
+</div>
+<div class="section" id="weblinks">
 <h2><a class="toc-backref" href="#table-des-matieres-qt">Weblinks</a><a class="headerlink" href="#weblinks" title="Lien permanent vers ce titre">¶</a></h2>
 <dl class="footnote brackets">
 <dt class="label" id="id4"><span class="brackets"><a class="fn-backref" href="#id5">1</a></span></dt>
@@ -798,11 +796,10 @@ snippets Doxygen.</p>
 <dd><p><a class="reference external" href="https://wiki.qt.io/Deploy_an_Application_on_Windows/fr">https://wiki.qt.io/Deploy_an_Application_on_Windows/fr</a></p>
 </dd>
 </dl>
-</section>
-</section>
+</div>
+</div>
 
 
-            <div class="clearer"></div>
           </div>
         </div>
       </div>
@@ -910,13 +907,12 @@ snippets Doxygen.</p>
           <a href="../visualCpp/visual.html" title="Note concernant Visal C++ 2013 *"
              >précédent</a> |</li>
         <li class="nav-item nav-item-0"><a href="../../index.html">Documentation MajorLee&#39;s notes </a> &#187;</li>
-          <li class="nav-item nav-item-1"><a href="../cpp.html" >Mes notes sur C++</a> &#187;</li>
-        <li class="nav-item nav-item-this"><a href="">Notes sur Qt *</a></li> 
+          <li class="nav-item nav-item-1"><a href="../cpp.html" >Mes notes sur C++</a> &#187;</li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2019, J.SORANZO.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.0.2.
+      Créé avec <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.4.
     </div>
   </body>
 </html>

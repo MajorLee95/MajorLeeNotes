@@ -4,16 +4,15 @@
 <html lang="fr">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
     <title>Raspberry pi* &#8212; Documentation MajorLee&#39;s notes </title>
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/nature.css" />
+    <link rel="stylesheet" href="../../_static/nature.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css" />
-    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
     <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
     <script src="../../_static/translations.js"></script>
     <link rel="shortcut icon" href="../../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../../genindex.html" />
@@ -34,8 +33,7 @@
           <a href="../fpga/fpga.html" title="FPGA*"
              accesskey="P">précédent</a> |</li>
         <li class="nav-item nav-item-0"><a href="../../index.html">Documentation MajorLee&#39;s notes </a> &#187;</li>
-          <li class="nav-item nav-item-1"><a href="../hardware.html" accesskey="U">Hardware notes</a> &#187;</li>
-        <li class="nav-item nav-item-this"><a href="">Raspberry pi*</a></li> 
+          <li class="nav-item nav-item-1"><a href="../hardware.html" accesskey="U">Hardware notes</a> &#187;</li> 
       </ul>
     </div>  
 
@@ -44,7 +42,7 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <section id="raspberry-pi">
+  <div class="section" id="raspberry-pi">
 <span id="index-0"></span><h1><a class="toc-backref" href="#sommaire">Raspberry pi*</a><a class="headerlink" href="#raspberry-pi" title="Lien permanent vers ce titre">¶</a></h1>
 <dl class="field-list simple">
 <dt class="field-odd">Auteur</dt>
@@ -93,11 +91,11 @@
 </li>
 </ul>
 </div>
-<section id="differentes-cartes">
+<div class="section" id="differentes-cartes">
 <h2><a class="toc-backref" href="#sommaire">Différentes cartes</a><a class="headerlink" href="#differentes-cartes" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Très bon comparatif sur <a class="reference external" href="https://socialcompare.com/fr/comparison/raspberrypi-models-comparison">socialcompare.com</a> <a class="footnote-reference brackets" href="#id1" id="id2">1</a></p>
-</section>
-<section id="processeurs">
+</div>
+<div class="section" id="processeurs">
 <h2><a class="toc-backref" href="#sommaire">Processeurs</a><a class="headerlink" href="#processeurs" title="Lien permanent vers ce titre">¶</a></h2>
 <ul class="simple">
 <li><p>RPi3 model B  BCM2837 à 1.2MHz cortex A53</p></li>
@@ -109,23 +107,23 @@ un facteur de forme différent</p>
 <p>Description complète sur <a class="reference external" href="https://en.wikipedia.org/wiki/Raspberry_Pi">Wikipédia Raspberry pi</a> <a class="footnote-reference brackets" href="#id3" id="id4">2</a></p>
 <p>A titre de comparaison la carte Friendly arm NEO-PC T4 RK3399 2 A72 4 A53 : ARMV8-A (un peu plus
 de 110€ sur aliexpress au 7/4/2021)</p>
-</section>
-<section id="les-cameras">
+</div>
+<div class="section" id="les-cameras">
 <h2><a class="toc-backref" href="#sommaire">Les caméras</a><a class="headerlink" href="#les-cameras" title="Lien permanent vers ce titre">¶</a></h2>
-<section id="greens">
+<div class="section" id="greens">
 <h3><a class="toc-backref" href="#sommaire">Greens</a><a class="headerlink" href="#greens" title="Lien permanent vers ce titre">¶</a></h3>
 <ul class="simple">
 <li><p>V1 : OmniVision OV5647 5 Mp</p></li>
 <li><p>v2 : Sony IMX219, 8 Megapixels</p></li>
 <li><p>HQ : Sony IMXZ477 12.3 Megapixels</p></li>
 </ul>
-</section>
-<section id="black">
+</div>
+<div class="section" id="black">
 <h3><a class="toc-backref" href="#sommaire">Black</a><a class="headerlink" href="#black" title="Lien permanent vers ce titre">¶</a></h3>
 <p>V2: Sans le filtre infrarouge !</p>
-</section>
-</section>
-<section id="i2c-etat-des-lieux-13-10-2021">
+</div>
+</div>
+<div class="section" id="i2c-etat-des-lieux-13-10-2021">
 <h2><a class="toc-backref" href="#sommaire">I2C : état des lieux (13/10/2021)</a><a class="headerlink" href="#i2c-etat-des-lieux-13-10-2021" title="Lien permanent vers ce titre">¶</a></h2>
 <p><a class="reference external" href="http://wiringpi.com/">Wiring pi</a> <a class="footnote-reference brackets" href="#id5" id="id6">3</a> Wiring pi is  deprecated… C’est directement dans les news du site de Gordon.
 Donc merci à lui pour ces 10 ans passées au service des autres.</p>
@@ -147,50 +145,50 @@ Donc merci à lui pour ces 10 ans passées au service des autres.</p>
 </pre></div>
 </div>
 <p><a class="reference external" href="https://github.com/joan2937/pigpio">pigpio</a> <a class="footnote-reference brackets" href="#id7" id="id8">4</a></p>
-</section>
-<section id="boitiers">
+</div>
+<div class="section" id="boitiers">
 <h2><a class="toc-backref" href="#sommaire">Boîtiers</a><a class="headerlink" href="#boitiers" title="Lien permanent vers ce titre">¶</a></h2>
 <a class="reference internal image-reference" href="../../_images/ArgonPiCase.jpg"><img alt="Argon pi case" class="align-center" src="../../_images/ArgonPiCase.jpg" style="width: 200px;" /></a>
 <p>Boîtier vraiment spécial <a class="reference external" href="https://www.amazon.com/gp/product/B07WP8WC3V/ref=as_li_qf_asin_il_tl?ie=UTF8&amp;tag=andreassspies-20&amp;creative=9325&amp;linkCode=as2&amp;creativeASIN=B07WP8WC3V&amp;linkId=5f33cb45ff5d861b244b7646a9304c6e">Argon ONE Raspberry</a> <a class="footnote-reference brackets" href="#id9" id="id10">5</a></p>
 <p>Disponible <a class="reference external" href="https://fr.aliexpress.com/item/4000379064637.html?spm=a2g0o.productlist.0.0.7c9b14aeJTUktf&amp;algo_pvid=3db7baeb-ea60-4b8d-8aa5-877a2ea400e2&amp;algo_expid=3db7baeb-ea60-4b8d-8aa5-877a2ea400e2-9&amp;btsid=b5a432b2-6dcd-44d1-9553-6b95a39eda98&amp;ws_ab_test=searchweb0_0,searchweb201602_3,searchweb201603_53">aussi sur Aliexpress</a> <a class="footnote-reference brackets" href="#id11" id="id12">6</a></p>
-<section id="autres-boitier-avec-ecrou-photo">
+<div class="section" id="autres-boitier-avec-ecrou-photo">
 <h3><a class="toc-backref" href="#sommaire">Autres boîtier avec écrou photo</a><a class="headerlink" href="#autres-boitier-avec-ecrou-photo" title="Lien permanent vers ce titre">¶</a></h3>
 <p><a class="reference external" href="https://www.amazon.fr/LABISTS-Alimentation-Interrupteur-Ventilateur-Dissipateurs/dp/B082XYTTZX/ref=asc_df_B082XYTTZX/?tag=googshopfr-21&amp;linkCode=df0&amp;hvadid=411537567752&amp;hvpos=&amp;hvnetw=g&amp;hvrand=769575774449413025&amp;hvpone=&amp;hvptwo=&amp;hvqmt=&amp;hvdev=c&amp;hvdvcmdl=&amp;hvlocint=&amp;hvlocphy=9056230&amp;hvtargid=pla-873617557431&amp;psc=1&amp;tag=&amp;ref=&amp;adgrpid=89565690397&amp;hvpone=&amp;hvptwo=&amp;hvadid=411537567752&amp;hvpos=&amp;hvnetw=g&amp;hvrand=769575774449413025&amp;hvqmt=&amp;hvdev=c&amp;hvdvcmdl=&amp;hvlocint=&amp;hvlocphy=9056230&amp;hvtargid=pla-873617557431">LABISTS Raspberry Pi 4 Boitier</a> <a class="footnote-reference brackets" href="#id13" id="id14">7</a></p>
 <p>Avec alim 5V/3A, cable HDMI, hublo pour caméra, ventilateur et dissipateurs…</p>
 <p>17€ sur AMZON</p>
-</section>
-</section>
-<section id="disque-dur-sympa">
+</div>
+</div>
+<div class="section" id="disque-dur-sympa">
 <h2><a class="toc-backref" href="#sommaire">Disque dur sympa</a><a class="headerlink" href="#disque-dur-sympa" title="Lien permanent vers ce titre">¶</a></h2>
 <p><a class="reference external" href="https://fr.aliexpress.com/item/32848432283.html">SSD de petite taille sur Aliexpress</a> <a class="footnote-reference brackets" href="#id15" id="id16">8</a></p>
-</section>
-<section id="graver-une-images">
+</div>
+<div class="section" id="graver-une-images">
 <h2><a class="toc-backref" href="#sommaire">Graver une images</a><a class="headerlink" href="#graver-une-images" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Très simple avec la commande dd rien à installer:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">dd</span> <span class="k">if</span><span class="o">=</span><span class="n">nomDeLImage</span> <span class="n">of</span><span class="o">=/</span><span class="n">dev</span><span class="o">/</span><span class="n">sda</span><span class="p">(</span><span class="n">b</span> <span class="n">ou</span> <span class="n">c</span><span class="p">)</span> <span class="n">status</span><span class="o">=</span><span class="n">progress</span> <span class="n">bs</span><span class="o">=</span><span class="mi">4</span><span class="n">M</span>
 </pre></div>
 </div>
-</section>
-<section id="comment-booter-sur-ssd">
+</div>
+<div class="section" id="comment-booter-sur-ssd">
 <span id="index-1"></span><h2><a class="toc-backref" href="#sommaire">Comment booter sur SSD</a><a class="headerlink" href="#comment-booter-sur-ssd" title="Lien permanent vers ce titre">¶</a></h2>
 <p><a class="reference external" href="https://www.youtube.com/watch?v=gp6XW-fGVjo">Vidéo du gaz avec l’accent Suisse</a> <a class="footnote-reference brackets" href="#id17" id="id18">9</a></p>
 <p><a class="reference external" href="https://jamesachambers.com">Puis le site de James A. Chambers</a> <a class="footnote-reference brackets" href="#id19" id="id20">10</a> Legandary Technology Blog moi j’ai eu des pb de certificats
 pour visiter ce site</p>
 <hr class="docutils" />
-</section>
-<section id="boot-from-external-hdd">
+</div>
+<div class="section" id="boot-from-external-hdd">
 <span id="index-2"></span><h2><a class="toc-backref" href="#sommaire">Boot from external HDD</a><a class="headerlink" href="#boot-from-external-hdd" title="Lien permanent vers ce titre">¶</a></h2>
 <p><a class="reference external" href="https://www.maketecheasier.com/boot-up-raspberry-pi-3-external-hard-disk/">Un tuto qui m’a l’air facile</a> <a class="footnote-reference brackets" href="#id21" id="id22">11</a></p>
-</section>
-<section id="rappel-eteindre">
+</div>
+<div class="section" id="rappel-eteindre">
 <span id="index-3"></span><h2><a class="toc-backref" href="#sommaire">Rappel éteindre</a><a class="headerlink" href="#rappel-eteindre" title="Lien permanent vers ce titre">¶</a></h2>
 <p>En sudo évidement:</p>
 <ul class="simple">
 <li><p>shutdown -h now (en sudo)</p></li>
 <li><p>poweroff</p></li>
 </ul>
-</section>
-<section id="essais-ecran">
+</div>
+<div class="section" id="essais-ecran">
 <h2><a class="toc-backref" href="#sommaire">Essais écran</a><a class="headerlink" href="#essais-ecran" title="Lien permanent vers ce titre">¶</a></h2>
 <p>KeDei v1.1</p>
 <p>Utilisation des données du forum rpi [Review] KeDei 3.5 » <a class="reference external" href="https://forums.raspberrypi.com/viewtopic.php?t=175616&amp;sid=9d9f602c3792e2cb54f6e7485cc114d1">HDMI display with touch for Raspberry Pi</a> <a class="footnote-reference brackets" href="#id23" id="id24">12</a></p>
@@ -209,8 +207,8 @@ succès</p>
 <p>Sur RPI1, l’écran s’obstine à afficher no signal quelque soit les config essayées.</p>
 <p><a class="reference external" href="https://projetsdiy.fr/test-ecran-lcd-35-480x320-pixels-hdmi-tactile-via-gpio-boitier-acrylique-raspberry-pi-3-raspbian/">Autre procédure non testée sur Projetsdiy.fr</a> <a class="footnote-reference brackets" href="#id25" id="id26">13</a></p>
 <p><a class="reference external" href="http://en.kedei.net/">site officiel KeDei</a> <a class="footnote-reference brackets" href="#id27" id="id28">14</a></p>
-</section>
-<section id="weblinks">
+</div>
+<div class="section" id="weblinks">
 <h2><a class="toc-backref" href="#sommaire">Weblinks</a><a class="headerlink" href="#weblinks" title="Lien permanent vers ce titre">¶</a></h2>
 <dl class="footnote brackets">
 <dt class="label" id="id1"><span class="brackets"><a class="fn-backref" href="#id2">1</a></span></dt>
@@ -256,11 +254,10 @@ succès</p>
 <dd><p><a class="reference external" href="http://en.kedei.net/">http://en.kedei.net/</a></p>
 </dd>
 </dl>
-</section>
-</section>
+</div>
+</div>
 
 
-            <div class="clearer"></div>
           </div>
         </div>
       </div>
@@ -332,13 +329,12 @@ succès</p>
           <a href="../fpga/fpga.html" title="FPGA*"
              >précédent</a> |</li>
         <li class="nav-item nav-item-0"><a href="../../index.html">Documentation MajorLee&#39;s notes </a> &#187;</li>
-          <li class="nav-item nav-item-1"><a href="../hardware.html" >Hardware notes</a> &#187;</li>
-        <li class="nav-item nav-item-this"><a href="">Raspberry pi*</a></li> 
+          <li class="nav-item nav-item-1"><a href="../hardware.html" >Hardware notes</a> &#187;</li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2019, J.SORANZO.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.0.2.
+      Créé avec <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.4.
     </div>
   </body>
 </html>

@@ -326,6 +326,8 @@ Lister les branches (locales ET distantes)
 ::
 
     git branch -a (--all)
+    et si on veut savoir laquelle est connectée à son homologue distant
+    git branch -vv
 
 Lister les différences entre branche locale et branche distante
 ****************************************************************************************************

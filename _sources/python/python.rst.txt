@@ -1143,9 +1143,16 @@ Itérateur & générateur
 ----------------------------------------------------------------------------------------------------
 
 Un itérateur est avant tout une classe qui va être chargé de parcourir l'objet conteneur
-: cf. `opencs chapitre sur les boucles for`_
+: cf. `opencs chapitre sur les boucles for`_ (ce lien ne mène plus à une info pertinante en 2024)
 
 .. _`opencs chapitre sur les boucles for` : https://openclassrooms.com/fr/courses/235344-apprenez-a-programmer-en-python/233261-decouvrez-la-boucle-for
+
+.. SEEALSO:: **SITE DE RESSOURCES**
+    :class: without-title
+    
+    `Qu’est-ce qu’un générateur en Python`_
+
+.. _`Qu’est-ce qu’un générateur en Python` : https://www.pythoniste.fr/python/quest-ce-quun-generateur-en-python/
 
 
 L'itérateur est créé dans la méthode spéciale __iter__ de la classe
@@ -1227,6 +1234,10 @@ Formater une chaîne::
 
 Les chiffres dans les accolades sont facultatifs,
 il s'agit de la méthode format de la class intégrée str
+
+Forme abrégée::
+
+    f"Ma variable vaut : {variabel}"
 
 Tout est décrit en détail dans 
 :download:`The Python Library Reference<fichiersJoints/library.pdf>` §Format String Syntax
@@ -1874,9 +1885,49 @@ On commence par cet article qui se ramifie vers pleins de sujets intéressants.
 .. _`Async IO in Python: A Complete Walkthrough` : https://realpython.com/async-io-python/
 
 
+.. index::
+    pair: Python;  venv
 
+====================================================================================================
+venv
+====================================================================================================
+Présentation
+----------------------------------------------------------------------------------------------------
+Permet de créer un environnement virtuel Python. Ce qui permet de ne pas pourrir ses packages globaux avec
+des choses indésirées ou des effets de bord.
 
+Usages et limites
+----------------------------------------------------------------------------------------------------
+**On ne déplace pas et on ne copie pas** un environnement virtuel et **pip show**.
+En général, il est spécifique à une machine donnée ou tout au mois à un arborescence. sauf si on ne bosse
+qu'avec des chemins génériques comme ``C:\Program Files\Python312\`` en effet le fichier :
 
+**pyvenv.cfg** garde une trace de l'interpéteur utilisé lors de la création y compris de son chemin, comme
+par exemple: ``home = C:\Users\userName\AppData\Local\Programs\Python\Python38-32``. On note ici 
+un des inconvénients d'une install dédié à un seul utilisateur ou des install dont on change le nom
+par défaut.
+
+Création
+----------------------------------------------------------------------------------------------------
+::
+
+    python -m venv .venvp (ou un autre nom)
+
+Avec cette commande, on a le python par défaut de la machine. Si on en veut un autre, il faut tout
+d'abord l'intaller (dans ce cas attention à la modification des variables d'environnement) puis
+donner le chemin complet lors de la création de l'environnement virtuel.
+
+pip commandes essanielles
+----------------------------------------------------------------------------------------------------
+::
+
+    pip show package 
+
+    pip freeze
+
+    pip list
+
+    pip install -r req.txt
 
 ====================================================================================================
 Weblinks
