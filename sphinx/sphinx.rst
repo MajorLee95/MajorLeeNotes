@@ -22,9 +22,9 @@ Sphinx pour la documentation
 ======================================
 
 .. image:: images/sphinxlogo.jpg
-   :scale: 100 %
-   :alt: alternate text
-   :align: left
+    :scale: 100 %
+    :alt: alternate text
+    :align: left
 
 |clearer|
 
@@ -148,7 +148,7 @@ C'est à l'étape 9.4 qu'on crée la branche distante::
 A partir de cette étape, on peut activer les pages sur gihub, dans setting/pages.
 
 .. image:: images/githubpagesInterface.jpg 
-   :width: 600 px
+    :width: 600 px
 
 
 
@@ -261,7 +261,7 @@ Graphviz interactive preview.
 L'extension est : 
 
 .. image:: images/graphizPreviewer.jpg 
-   :width: 300 px
+    :width: 300 px
 
 `site officiel de GraphViz`_ La doc est en ligne.
 
@@ -274,7 +274,7 @@ utile.
 .. _`site officiel de GraphViz` : https://graphviz.org/
 
 .. image:: images/exempleGraphviz.JPG 
-   :width: 600 px
+    :width: 600 px
 
 Le code::
 
@@ -466,8 +466,8 @@ testés
 Ne support pas body_max_width dommage
 
 .. image:: images/guzzle.jpg
-   :width: 300 px
-   :align: center
+    :width: 300 px
+    :align: center
 
 **cloud**
 
@@ -484,8 +484,8 @@ configuration du theme::
     Python38-32\Lib\site-packages\cloud_sptheme\themes\cloud\theme.conf
 
 .. image:: images/cloud.jpg
-   :width: 300 px
-   :align: center
+    :width: 300 px
+    :align: center
 
 Installaton par pip install du fichier wheels fourni sur le site.
 
@@ -563,6 +563,17 @@ mais il faut installer basic-miktex-2.9.7216-x64.exe et perl.exe
 
 Essais du 17/06/2020: problème d'encodage pour latex. Installation de nombreuses dépendances latex
 en automatique
+
+Nouvel article non testé, le 16/09/2024:
+
+.. SEEALSO:: **SITE DE RESSOURCES**
+    :class: without-title
+    
+    `How to create a PDF-out-of-Sphinx-documentation-tool`_
+
+.. _`How to create a PDF-out-of-Sphinx-documentation-tool` : https://stackoverflow.com/questions/39534718/how-to-create-a-pdf-out-of-sphinx-documentation-tool
+
+Attention l'intallation de rst2pdf risque de casser la config. Donc le faire avec du venv.
 
 ====================================================================================================
 Petits trucs

@@ -659,6 +659,10 @@ arduino
     typedef struct { int x; int y; } autrePoint_T;
     autrePoint_T deuxeimePoint;
 
+    //ou encore sans typedef:
+    struct name_t{ int x; int y; };
+    name_T deuxeimePoint;
+
 enum 
 ----------------------------------------------------------------------------------------------------
 Même schéma que struct
@@ -794,6 +798,45 @@ Il y 2 parmaètres à fixer dans Doxygen pour prendre en compte les fichiers .in
 
     FILE_PATTERNS = [...] *.ino sous Input
     EXTENSION_MAPPING = ino=c under "Project" 
+
+
+.. index::
+    pair: cpp; String
+
+====================================================================================================
+String et char [] **TBC au 26/10/24**
+====================================================================================================
+un bonne fois pour toutes
+
+On parle de std::String en cpp pure (https://cplusplus.com/reference/string/) mais de String chez ARDUINO 
+
+zt de C String pour char * : https://cplusplus.com/reference/cstring/
+
+
+Taille d'un chaîne
+----------------------------------------------------------------------------------------------------
+string.size() ou .length() (synonymes) mais pas chez ARDUINO seulement length();
+
+et en C string : size_t strlen( const char * str ) mais par chez ARDUINO (en fait si : pas dans le ref mais compile quand même !)
+
+trouver
+----------------------------------------------------------------------------------------------------
+cpp::
+    TBC
+
+
+Rechercher
+
+
+nettoyer
+
+longueur
+
+c_str to String et inversement
+----------------------------------------------------------------------------------------------------
+.c-str() existe aussi chez ARDUINO
+
+
 
 ----------------------------------------------------------------------------------------------------
 
