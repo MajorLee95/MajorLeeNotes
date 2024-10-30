@@ -8,7 +8,7 @@ Hardware notes
 :Entity: VoLAB
 
 .. toctree::
-   :maxdepth: 3
+   :maxdepth: 2
    :caption: Sous-articles:
 
    robotique/robotique
@@ -19,6 +19,8 @@ Hardware notes
 .. contents:: Hardware tdm
     :backlinks: top
 
+.. index::
+    single: PCB
 
 ====================================================================================================
 PCB data
@@ -106,9 +108,9 @@ Voir sur le site `randomTutorial ESP8266 pinout`_
 
 ESP32
 ----------------------------------------------------------------------------------------------------
-`DFRaobot sort sa firebeetle`_ à 6.9$
+`DFRobot sort sa firebeetle`_ à 6.9$
 
-.. _`DFRaobot sort sa firebeetle` : https://www.dfrobot.com/product-1590.html
+.. _`DFRobot sort sa firebeetle` : https://www.dfrobot.com/product-1590.html
 
 Existe en WeMOS qu'on trouve facilement sur Ebay, Aliexpress et Amazon pour environ 5€ livré.
 Mais dans cette version la carte n'est pas vraiment breadboard frendly les 2 rangées côte à côte

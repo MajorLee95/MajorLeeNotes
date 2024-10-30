@@ -1,20 +1,19 @@
-
 <!DOCTYPE html>
 
 <html lang="fr">
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
     <title>FPGA* &#8212; Documentation MajorLee&#39;s notes </title>
-    <link rel="stylesheet" href="../../_static/nature.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css" />
-    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
-    <script src="../../_static/jquery.js"></script>
-    <script src="../../_static/underscore.js"></script>
-    <script src="../../_static/doctools.js"></script>
-    <script src="../../_static/language_data.js"></script>
-    <script src="../../_static/translations.js"></script>
-    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../../_static/nature.css?v=8fc2db88" />
+    <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css?v=eafc0fe6" />
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js?v=3b36ad44"></script>
+    <script src="../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../_static/sphinx_highlight.js?v=4825356b"></script>
+    <script src="../../_static/translations.js?v=d99ca74e"></script>
+    <link rel="icon" href="../../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Recherche" href="../../search.html" />
     <link rel="next" title="Raspberry pi*" href="../raspberry/raspberry.html" />
@@ -33,7 +32,8 @@
           <a href="../robotique/merureDistance.html" title="Robotique : mesure de distance"
              accesskey="P">précédent</a> |</li>
         <li class="nav-item nav-item-0"><a href="../../index.html">Documentation MajorLee&#39;s notes </a> &#187;</li>
-          <li class="nav-item nav-item-1"><a href="../hardware.html" accesskey="U">Hardware notes</a> &#187;</li> 
+          <li class="nav-item nav-item-1"><a href="../hardware.html" accesskey="U">Hardware notes</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">FPGA*</a></li> 
       </ul>
     </div>  
 
@@ -42,26 +42,26 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <div class="section" id="fpga">
-<span id="index-0"></span><h1><a class="toc-backref" href="#sommaire">FPGA*</a><a class="headerlink" href="#fpga" title="Lien permanent vers ce titre">¶</a></h1>
+  <section id="fpga">
+<span id="index-0"></span><h1><a class="toc-backref" href="#sommaire" role="doc-backlink">FPGA*</a><a class="headerlink" href="#fpga" title="Lien permanent vers cette rubrique">¶</a></h1>
 <dl class="field-list simple">
-<dt class="field-odd">Auteur</dt>
+<dt class="field-odd">Auteur<span class="colon">:</span></dt>
 <dd class="field-odd"><p>J.Soranzo</p>
 </dd>
-<dt class="field-even">Date</dt>
+<dt class="field-even">Date<span class="colon">:</span></dt>
 <dd class="field-even"><p>Novembre 2019</p>
 </dd>
-<dt class="field-odd">update</dt>
+<dt class="field-odd">update<span class="colon">:</span></dt>
 <dd class="field-odd"><p>29/3/2022</p>
 </dd>
-<dt class="field-even">Societe</dt>
+<dt class="field-even">Societe<span class="colon">:</span></dt>
 <dd class="field-even"><p>VoRoBoTics</p>
 </dd>
-<dt class="field-odd">Entity</dt>
+<dt class="field-odd">Entity<span class="colon">:</span></dt>
 <dd class="field-odd"><p>VoLAB</p>
 </dd>
 </dl>
-<div class="contents topic" id="sommaire">
+<nav class="contents" id="sommaire">
 <p class="topic-title">Sommaire</p>
 <ul class="simple">
 <li><p><a class="reference internal" href="#fpga" id="id85">FPGA*</a></p>
@@ -118,36 +118,36 @@
 </ul>
 </li>
 </ul>
-</div>
-<div class="section" id="general">
-<h2><a class="toc-backref" href="#sommaire">GENERAL</a><a class="headerlink" href="#general" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Carte low cost sur le <a class="reference external" href="https://joelw.id.au/FPGA/CheapFPGADevelopmentBoards">site Joel Williams</a> <a class="footnote-reference brackets" href="#id2" id="id3">1</a></p>
+</nav>
+<section id="general">
+<h2><a class="toc-backref" href="#sommaire" role="doc-backlink">GENERAL</a><a class="headerlink" href="#general" title="Lien permanent vers cette rubrique">¶</a></h2>
+<p>Carte low cost sur le <a class="reference external" href="https://joelw.id.au/FPGA/CheapFPGADevelopmentBoards">site Joel Williams</a> <a class="footnote-reference brackets" href="#id2" id="id3" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a></p>
 <p>Taper fpga sur ebay !</p>
-<div class="section" id="doulos-ressources">
-<h3><a class="toc-backref" href="#sommaire">Doulos (ressources)</a><a class="headerlink" href="#doulos-ressources" title="Lien permanent vers ce titre">¶</a></h3>
-<p><a class="reference external" href="http://doulos.com/knowhow/vhdl/">Doulos VHDL ressources</a> <a class="footnote-reference brackets" href="#id4" id="id5">2</a></p>
-</div>
-</div>
-<div class="section" id="carte-low-cost">
-<h2><a class="toc-backref" href="#sommaire">Carte low cost</a><a class="headerlink" href="#carte-low-cost" title="Lien permanent vers ce titre">¶</a></h2>
-<div class="section" id="carte-xilinx-compatible-arduino">
-<h3><a class="toc-backref" href="#sommaire">Carte XILINX compatible Arduino</a><a class="headerlink" href="#carte-xilinx-compatible-arduino" title="Lien permanent vers ce titre">¶</a></h3>
-<p><a class="reference external" href="https://hackaday.io/project/38-arduino-compatible-fpga-shield">Arduino-compatible Spartan-6 projet Hackaday</a> <a class="footnote-reference brackets" href="#id6" id="id7">3</a> FPGA board sur forum Xilinx,Environ 70$</p>
+<section id="doulos-ressources">
+<h3><a class="toc-backref" href="#sommaire" role="doc-backlink">Doulos (ressources)</a><a class="headerlink" href="#doulos-ressources" title="Lien permanent vers cette rubrique">¶</a></h3>
+<p><a class="reference external" href="http://doulos.com/knowhow/vhdl/">Doulos VHDL ressources</a> <a class="footnote-reference brackets" href="#id4" id="id5" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a></p>
+</section>
+</section>
+<section id="carte-low-cost">
+<h2><a class="toc-backref" href="#sommaire" role="doc-backlink">Carte low cost</a><a class="headerlink" href="#carte-low-cost" title="Lien permanent vers cette rubrique">¶</a></h2>
+<section id="carte-xilinx-compatible-arduino">
+<h3><a class="toc-backref" href="#sommaire" role="doc-backlink">Carte XILINX compatible Arduino</a><a class="headerlink" href="#carte-xilinx-compatible-arduino" title="Lien permanent vers cette rubrique">¶</a></h3>
+<p><a class="reference external" href="https://hackaday.io/project/38-arduino-compatible-fpga-shield">Arduino-compatible Spartan-6 projet Hackaday</a> <a class="footnote-reference brackets" href="#id6" id="id7" role="doc-noteref"><span class="fn-bracket">[</span>3<span class="fn-bracket">]</span></a> FPGA board sur forum Xilinx,Environ 70$</p>
 <p>Le projet sur hackaday.io <a class="reference external" href="http://store.hackaday.com">http://store.hackaday.com</a> (lien mort 28/09/2020)</p>
 <p>Voir projet perso 014 designed with PRotel for Windows</p>
-<p><a class="reference external" href="https://www.tindie.com/search/?q=fpga">FPGA sur le site Tindie</a> <a class="footnote-reference brackets" href="#id8" id="id9">4</a></p>
+<p><a class="reference external" href="https://www.tindie.com/search/?q=fpga">FPGA sur le site Tindie</a> <a class="footnote-reference brackets" href="#id8" id="id9" role="doc-noteref"><span class="fn-bracket">[</span>4<span class="fn-bracket">]</span></a></p>
 <p>A ma dernière viste sur le site Tindie plus de carte FPGA Xilinx !</p>
-</div>
-<div class="section" id="chez-aliexpress">
-<h3><a class="toc-backref" href="#sommaire">Chez AliExpress</a><a class="headerlink" href="#chez-aliexpress" title="Lien permanent vers ce titre">¶</a></h3>
+</section>
+<section id="chez-aliexpress">
+<h3><a class="toc-backref" href="#sommaire" role="doc-backlink">Chez AliExpress</a><a class="headerlink" href="#chez-aliexpress" title="Lien permanent vers cette rubrique">¶</a></h3>
 <p>Carte très simple à base de SPARTAN</p>
-</div>
-</div>
-<div class="section" id="little-fpga-board">
-<h2><a class="toc-backref" href="#sommaire">Little FPGA board</a><a class="headerlink" href="#little-fpga-board" title="Lien permanent vers ce titre">¶</a></h2>
-<div class="section" id="seedstudio">
-<h3><a class="toc-backref" href="#sommaire">SeedStudio</a><a class="headerlink" href="#seedstudio" title="Lien permanent vers ce titre">¶</a></h3>
-<p>Bonne surprise en ce mois de Mars 2022 <a class="reference external" href="https://www.seeedstudio.com/catalogsearch/result/?q=fpga">chez SEEEStudio</a> <a class="footnote-reference brackets" href="#id10" id="id11">5</a></p>
+</section>
+</section>
+<section id="little-fpga-board">
+<h2><a class="toc-backref" href="#sommaire" role="doc-backlink">Little FPGA board</a><a class="headerlink" href="#little-fpga-board" title="Lien permanent vers cette rubrique">¶</a></h2>
+<section id="seedstudio">
+<h3><a class="toc-backref" href="#sommaire" role="doc-backlink">SeedStudio</a><a class="headerlink" href="#seedstudio" title="Lien permanent vers cette rubrique">¶</a></h3>
+<p>Bonne surprise en ce mois de Mars 2022 <a class="reference external" href="https://www.seeedstudio.com/catalogsearch/result/?q=fpga">chez SEEEStudio</a> <a class="footnote-reference brackets" href="#id10" id="id11" role="doc-noteref"><span class="fn-bracket">[</span>5<span class="fn-bracket">]</span></a></p>
 <ul class="simple">
 <li><p>Sipeed Tang Nano FPGA Board powered by GW1N-1</p></li>
 <li><p>Sipeed TANG PriMER FPGA</p></li>
@@ -156,19 +156,19 @@
 <ul class="simple">
 <li><p>Spartan Edge Accelerator Board - Arduino FPGA Shield with ESP32 39.50$</p></li>
 </ul>
-<p>Avec <a class="reference external" href="https://wiki.seeedstudio.com/Spartan-Edge-Accelerator-Board/">son wiki rès complet chez Seeedstudio</a> <a class="footnote-reference brackets" href="#id12" id="id13">6</a></p>
-</div>
-<div class="section" id="icebraker">
-<h3><a class="toc-backref" href="#sommaire">ICEBraker</a><a class="headerlink" href="#icebraker" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Avec <a class="reference external" href="https://wiki.seeedstudio.com/Spartan-Edge-Accelerator-Board/">son wiki rès complet chez Seeedstudio</a> <a class="footnote-reference brackets" href="#id12" id="id13" role="doc-noteref"><span class="fn-bracket">[</span>6<span class="fn-bracket">]</span></a></p>
+</section>
+<section id="icebraker">
+<h3><a class="toc-backref" href="#sommaire" role="doc-backlink">ICEBraker</a><a class="headerlink" href="#icebraker" title="Lien permanent vers cette rubrique">¶</a></h3>
 <a class="reference internal image-reference" href="../../_images/icebreaker-iso_png_md-xl.jpg" id="index-1"><img alt="../../_images/icebreaker-iso_png_md-xl.jpg" id="index-1" src="../../_images/icebreaker-iso_png_md-xl.jpg" style="width: 300px;" /></a>
-<p><a class="reference external" href="https://www.crowdsupply.com/1bitsquared/icebreaker-fpga">iCEBreaker FPGA</a> <a class="footnote-reference brackets" href="#id14" id="id15">7</a> projet 2019-2020 de crowdfounding 65€</p>
-<p>Il y a un <a class="reference external" href="https://1bitsquared.de/products/icebreaker">1bit Squared store européen</a> <a class="footnote-reference brackets" href="#id16" id="id17">8</a></p>
-<p>Disponible sur <a class="reference external" href="https://www.amazon.fr/Fransande-Icebreaker-ICE40UP5K-D%C3%A9Veloppement-Principal/dp/B08W2ZCT8Q/ref=sr_1_40?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&amp;crid=1LYDQ6ZJ8YGMX&amp;keywords=fpga&amp;qid=1648682715&amp;sprefix=fpga%2Caps%2C98&amp;sr=8-40">AMAZON Fransande Icebreaker 1.0E FPGA Lattice ICE40UP5K</a> <a class="footnote-reference brackets" href="#id18" id="id19">9</a></p>
-<p>Et sur <a class="reference external" href="https://fr.aliexpress.com/item/1005001744188353.html?spm=a2g0o.productlist.0.0.2d304f57qtHUBx&amp;algo_pvid=0af27d41-842e-4a1f-bc13-e2162b8dcee4&amp;algo_exp_id=0af27d41-842e-4a1f-bc13-e2162b8dcee4-1&amp;pdp_ext_f=%7B%22sku_id%22%3A%2212000017412500115%22%7D&amp;pdp_pi=-1%3B40.61%3B-1%3B-1%40salePrice%3BEUR%3Bsearch-mainSearch">Aliexpress Icedisjoncteur – carte de développement FPGA à treillis 1.0E, RISC-V Open</a> <a class="footnote-reference brackets" href="#id20" id="id21">10</a></p>
-</div>
-</div>
-<div class="section" id="contenu-du-xmind">
-<h2><a class="toc-backref" href="#sommaire">Contenu du Xmind</a><a class="headerlink" href="#contenu-du-xmind" title="Lien permanent vers ce titre">¶</a></h2>
+<p><a class="reference external" href="https://www.crowdsupply.com/1bitsquared/icebreaker-fpga">iCEBreaker FPGA</a> <a class="footnote-reference brackets" href="#id14" id="id15" role="doc-noteref"><span class="fn-bracket">[</span>7<span class="fn-bracket">]</span></a> projet 2019-2020 de crowdfounding 65€</p>
+<p>Il y a un <a class="reference external" href="https://1bitsquared.de/products/icebreaker">1bit Squared store européen</a> <a class="footnote-reference brackets" href="#id16" id="id17" role="doc-noteref"><span class="fn-bracket">[</span>8<span class="fn-bracket">]</span></a></p>
+<p>Disponible sur <a class="reference external" href="https://www.amazon.fr/Fransande-Icebreaker-ICE40UP5K-D%C3%A9Veloppement-Principal/dp/B08W2ZCT8Q/ref=sr_1_40?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&amp;crid=1LYDQ6ZJ8YGMX&amp;keywords=fpga&amp;qid=1648682715&amp;sprefix=fpga%2Caps%2C98&amp;sr=8-40">AMAZON Fransande Icebreaker 1.0E FPGA Lattice ICE40UP5K</a> <a class="footnote-reference brackets" href="#id18" id="id19" role="doc-noteref"><span class="fn-bracket">[</span>9<span class="fn-bracket">]</span></a></p>
+<p>Et sur <a class="reference external" href="https://fr.aliexpress.com/item/1005001744188353.html?spm=a2g0o.productlist.0.0.2d304f57qtHUBx&amp;algo_pvid=0af27d41-842e-4a1f-bc13-e2162b8dcee4&amp;algo_exp_id=0af27d41-842e-4a1f-bc13-e2162b8dcee4-1&amp;pdp_ext_f=%7B%22sku_id%22%3A%2212000017412500115%22%7D&amp;pdp_pi=-1%3B40.61%3B-1%3B-1%40salePrice%3BEUR%3Bsearch-mainSearch">Aliexpress Icedisjoncteur – carte de développement FPGA à treillis 1.0E, RISC-V Open</a> <a class="footnote-reference brackets" href="#id20" id="id21" role="doc-noteref"><span class="fn-bracket">[</span>10<span class="fn-bracket">]</span></a></p>
+</section>
+</section>
+<section id="contenu-du-xmind">
+<h2><a class="toc-backref" href="#sommaire" role="doc-backlink">Contenu du Xmind</a><a class="headerlink" href="#contenu-du-xmind" title="Lien permanent vers cette rubrique">¶</a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>FPGA
 
         Autre carte Xilinx
@@ -298,11 +298,11 @@ Small Size: 20x48mm
                 Xilinx Zynq®-7000
 </pre></div>
 </div>
-</div>
-<div class="section" id="altera-intel-fpga">
-<span id="index-2"></span><h2><a class="toc-backref" href="#sommaire">ALTERA / INTEL FPGA</a><a class="headerlink" href="#altera-intel-fpga" title="Lien permanent vers ce titre">¶</a></h2>
-<div class="section" id="max10-versus-cyclone-i-ii-iii-iv">
-<h3><a class="toc-backref" href="#sommaire">MAX10 versus CYCLONE I, II, III, IV</a><a class="headerlink" href="#max10-versus-cyclone-i-ii-iii-iv" title="Lien permanent vers ce titre">¶</a></h3>
+</section>
+<section id="altera-intel-fpga">
+<span id="index-2"></span><h2><a class="toc-backref" href="#sommaire" role="doc-backlink">ALTERA / INTEL FPGA</a><a class="headerlink" href="#altera-intel-fpga" title="Lien permanent vers cette rubrique">¶</a></h2>
+<section id="max10-versus-cyclone-i-ii-iii-iv">
+<h3><a class="toc-backref" href="#sommaire" role="doc-backlink">MAX10 versus CYCLONE I, II, III, IV</a><a class="headerlink" href="#max10-versus-cyclone-i-ii-iii-iv" title="Lien permanent vers cette rubrique">¶</a></h3>
 <p>LEs familles INTEL/FPGA en 2020:</p>
 <ul class="simple">
 <li><p>AGILEX: 10nm intensive application</p></li>
@@ -320,12 +320,12 @@ Contre 2 familles de C iV de 7 et 9 tailles famillles GX( EP4CE6 à 115 ) et GX 
 <p>Cyclone 5 c’est 6 sous-familles  ou variants dont 3 integre directement des CORTEX -A9 !
 (Optimized for transiver applications…)</p>
 <p>Cyclone 10 : 2 familles LP et GX. LP sans doute pour low power</p>
-<p>Source : <a class="reference external" href="https://www.intel.com/content/www/us/en/products/programmable/fpga.html">site INTEL FPGA family</a> <a class="footnote-reference brackets" href="#id22" id="id23">11</a></p>
-</div>
-<div class="section" id="deca-max-10-de-chez-arrow">
-<h3><a class="toc-backref" href="#sommaire">DECA-MAX-10 de chez ARROW</a><a class="headerlink" href="#deca-max-10-de-chez-arrow" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Source : <a class="reference external" href="https://www.intel.com/content/www/us/en/products/programmable/fpga.html">site INTEL FPGA family</a> <a class="footnote-reference brackets" href="#id22" id="id23" role="doc-noteref"><span class="fn-bracket">[</span>11<span class="fn-bracket">]</span></a></p>
+</section>
+<section id="deca-max-10-de-chez-arrow">
+<h3><a class="toc-backref" href="#sommaire" role="doc-backlink">DECA-MAX-10 de chez ARROW</a><a class="headerlink" href="#deca-max-10-de-chez-arrow" title="Lien permanent vers cette rubrique">¶</a></h3>
 <a class="reference internal image-reference" href="../../_images/decaMax10.jpg"><img alt="../../_images/decaMax10.jpg" src="../../_images/decaMax10.jpg" style="width: 600px;" /></a>
-<p><a class="reference external" href="https://www.arrow.com/fr-fr/products/deca/arrow-development-tools">ARROW DECA MAX-10</a> <a class="footnote-reference brackets" href="#id24" id="id25">12</a> : environ 155$</p>
+<p><a class="reference external" href="https://www.arrow.com/fr-fr/products/deca/arrow-development-tools">ARROW DECA MAX-10</a> <a class="footnote-reference brackets" href="#id24" id="id25" role="doc-noteref"><span class="fn-bracket">[</span>12<span class="fn-bracket">]</span></a> : environ 155$</p>
 <p>10M50DAF484C6G FPGA</p>
 <p>50k LE, 1638 KRM,</p>
 <p>ARROW</p>
@@ -371,10 +371,10 @@ micorsd,</p>
 <li><p>Two MAX 10 FPGA ADC SMA inputs</p></li>
 </ul>
 </div></blockquote>
-</div>
-<div class="section" id="bemicro-max10-avnet-egalement">
-<h3><a class="toc-backref" href="#sommaire">BeMicro Max10 AVNET également</a><a class="headerlink" href="#bemicro-max10-avnet-egalement" title="Lien permanent vers ce titre">¶</a></h3>
-<p>ou <a class="reference external" href="https://www.arrow.com/fr-fr/reference-designs/bemicro-max10-fpga-evaluation-kit-adopts-alteras-non-volatile-max-10-fpga-built-on-55-nm-flash-process/45cdf7d717bc14e6dfb1044001fb7c4f">BeMicro Max10</a> <a class="footnote-reference brackets" href="#id26" id="id27">13</a> : environ 30$, <strong>10M08DAF484C8GES</strong></p>
+</section>
+<section id="bemicro-max10-avnet-egalement">
+<h3><a class="toc-backref" href="#sommaire" role="doc-backlink">BeMicro Max10 AVNET également</a><a class="headerlink" href="#bemicro-max10-avnet-egalement" title="Lien permanent vers cette rubrique">¶</a></h3>
+<p>ou <a class="reference external" href="https://www.arrow.com/fr-fr/reference-designs/bemicro-max10-fpga-evaluation-kit-adopts-alteras-non-volatile-max-10-fpga-built-on-55-nm-flash-process/45cdf7d717bc14e6dfb1044001fb7c4f">BeMicro Max10</a> <a class="footnote-reference brackets" href="#id26" id="id27" role="doc-noteref"><span class="fn-bracket">[</span>13<span class="fn-bracket">]</span></a> : environ 30$, <strong>10M08DAF484C8GES</strong></p>
 <p>8 LED, 2 BP, 8000 LE, 108kRAM, 12kFlash interne, 1 à 2 PLL, dual configuration memory</p>
 <p>50MHz oscillator</p>
 <a class="reference internal image-reference" href="../../_images/bemicromax10_fig.1.jpg"><img alt="../../_images/bemicromax10_fig.1.jpg" src="../../_images/bemicromax10_fig.1.jpg" style="width: 300px;" /></a>
@@ -406,27 +406,27 @@ micorsd,</p>
 </ul>
 </dd>
 </dl>
-<p><a class="reference external" href="https://fpgacloud.intel.com/devstore/platform/?board=4">beMicroMax10 Design Example</a> <a class="footnote-reference brackets" href="#id28" id="id29">14</a> (maintenant que c’est Intel !)</p>
-</div>
-<div class="section" id="altera-cyclone-ii-ep2c5t144-cpld-fpga-development-board">
-<h3><a class="toc-backref" href="#sommaire">ALTERA Cyclone II EP2C5T144 CPLD FPGA Development Board</a><a class="headerlink" href="#altera-cyclone-ii-ep2c5t144-cpld-fpga-development-board" title="Lien permanent vers ce titre">¶</a></h3>
-<p><a class="reference external" href="https://www.ebay.fr/itm/ALTERA-FPGA-Cyslonell-EP2C5T144-Minimum-System-Lernen-Development-Platte/322774547075?_trkparms=aid%3D555018%26algo%3DPL.SIM%26ao%3D2%26asc%3D20160323102634%26meid%3Da93f2964d1e940c8b5ecf75fc224f7f5%26pid%3D100623%26rk%3D1%26rkt%3D6%26sd%3D321573901213%26itm%3D322774547075%26pmt%3D1%26noa%3D0%26pg%3D2047675&amp;_trksid=p2047675.c100623.m-1">Sur ebay</a> <a class="footnote-reference brackets" href="#id30" id="id31">15</a> 11.51€</p>
-<p><a class="reference external" href="https://www.dx.com/p/altera-fpga-cycloneii-ep2c5t144-minimum-system-learning-development-board-module-blue-2027404.html#.XejsF3aJLam">Sur Deal Extrem</a> <a class="footnote-reference brackets" href="#id32" id="id33">16</a> 16.84$</p>
-<p><a class="reference external" href="https://www.amazon.com/RioRand-EP2C5T144-Altera-Cyclone-Development/dp/B00LEMKR92">Sur amazone</a> <a class="footnote-reference brackets" href="#id34" id="id35">17</a> 19.99$</p>
+<p><a class="reference external" href="https://fpgacloud.intel.com/devstore/platform/?board=4">beMicroMax10 Design Example</a> <a class="footnote-reference brackets" href="#id28" id="id29" role="doc-noteref"><span class="fn-bracket">[</span>14<span class="fn-bracket">]</span></a> (maintenant que c’est Intel !)</p>
+</section>
+<section id="altera-cyclone-ii-ep2c5t144-cpld-fpga-development-board">
+<h3><a class="toc-backref" href="#sommaire" role="doc-backlink">ALTERA Cyclone II EP2C5T144 CPLD FPGA Development Board</a><a class="headerlink" href="#altera-cyclone-ii-ep2c5t144-cpld-fpga-development-board" title="Lien permanent vers cette rubrique">¶</a></h3>
+<p><a class="reference external" href="https://www.ebay.fr/itm/ALTERA-FPGA-Cyslonell-EP2C5T144-Minimum-System-Lernen-Development-Platte/322774547075?_trkparms=aid%3D555018%26algo%3DPL.SIM%26ao%3D2%26asc%3D20160323102634%26meid%3Da93f2964d1e940c8b5ecf75fc224f7f5%26pid%3D100623%26rk%3D1%26rkt%3D6%26sd%3D321573901213%26itm%3D322774547075%26pmt%3D1%26noa%3D0%26pg%3D2047675&amp;_trksid=p2047675.c100623.m-1">Sur ebay</a> <a class="footnote-reference brackets" href="#id30" id="id31" role="doc-noteref"><span class="fn-bracket">[</span>15<span class="fn-bracket">]</span></a> 11.51€</p>
+<p><a class="reference external" href="https://www.dx.com/p/altera-fpga-cycloneii-ep2c5t144-minimum-system-learning-development-board-module-blue-2027404.html#.XejsF3aJLam">Sur Deal Extrem</a> <a class="footnote-reference brackets" href="#id32" id="id33" role="doc-noteref"><span class="fn-bracket">[</span>16<span class="fn-bracket">]</span></a> 16.84$</p>
+<p><a class="reference external" href="https://www.amazon.com/RioRand-EP2C5T144-Altera-Cyclone-Development/dp/B00LEMKR92">Sur amazone</a> <a class="footnote-reference brackets" href="#id34" id="id35" role="doc-noteref"><span class="fn-bracket">[</span>17<span class="fn-bracket">]</span></a> 19.99$</p>
 <p>Il faut un USB-Blaster, Y en a à pas cher</p>
 <p>Offre groupée Amazone avec bookin Verilog ?en 12/2019</p>
 <p>Carte plutôt facile à trouvé. Se pause alors le problème de l’outil Quartus</p>
-</div>
-<div class="section" id="altera-cyclone-iv">
-<h3><a class="toc-backref" href="#sommaire">ALTERA Cyclone IV</a><a class="headerlink" href="#altera-cyclone-iv" title="Lien permanent vers ce titre">¶</a></h3>
+</section>
+<section id="altera-cyclone-iv">
+<h3><a class="toc-backref" href="#sommaire" role="doc-backlink">ALTERA Cyclone IV</a><a class="headerlink" href="#altera-cyclone-iv" title="Lien permanent vers cette rubrique">¶</a></h3>
 <p>Moins de 40$</p>
-<p><a class="reference external" href="https://www.ebay.fr/itm/New-2019-Altera-Cyclone-IV-FPGA-EP4CE6E22C8N-Development-Board-USB-V2-0-CPLD/163044282291?hash=item25f6324fb3:g:QlgAAOSwCGVX5KLz">Nouveau 2019 Altera Cyclone Iv FPGA EP4CE6E22C8N Development Board USB V2.0 CPLD</a> <a class="footnote-reference brackets" href="#id36" id="id37">18</a></p>
+<p><a class="reference external" href="https://www.ebay.fr/itm/New-2019-Altera-Cyclone-IV-FPGA-EP4CE6E22C8N-Development-Board-USB-V2-0-CPLD/163044282291?hash=item25f6324fb3:g:QlgAAOSwCGVX5KLz">Nouveau 2019 Altera Cyclone Iv FPGA EP4CE6E22C8N Development Board USB V2.0 CPLD</a> <a class="footnote-reference brackets" href="#id36" id="id37" role="doc-noteref"><span class="fn-bracket">[</span>18<span class="fn-bracket">]</span></a></p>
 <p>Le pb avec de telles cartes, dont on ne connait que peut sur les origines, est la doc !</p>
-<p>J’ai trouvé <a class="reference external" href="https://www.youtube.com/watch?v=woBspKIFK3A">une vidéo sur Youtube</a> <a class="footnote-reference brackets" href="#id38" id="id39">19</a> (pas super mais je la garde pour les improuvments)
-et un <a class="reference external" href="https://drive.google.com/drive/folders/0B3UvX75P-bRdcXZNaWQ1dEs0R2M">lien Google doc non officiel</a> <a class="footnote-reference brackets" href="#id40" id="id41">20</a></p>
+<p>J’ai trouvé <a class="reference external" href="https://www.youtube.com/watch?v=woBspKIFK3A">une vidéo sur Youtube</a> <a class="footnote-reference brackets" href="#id38" id="id39" role="doc-noteref"><span class="fn-bracket">[</span>19<span class="fn-bracket">]</span></a> (pas super mais je la garde pour les improuvments)
+et un <a class="reference external" href="https://drive.google.com/drive/folders/0B3UvX75P-bRdcXZNaWQ1dEs0R2M">lien Google doc non officiel</a> <a class="footnote-reference brackets" href="#id40" id="id41" role="doc-noteref"><span class="fn-bracket">[</span>20<span class="fn-bracket">]</span></a></p>
 <p>Mais si on réfléchi 2 minutes le concepte de la carte plus simple juste pris en temps que coeur,
 ne serait-il pas mieux ?</p>
-<p>Comme <a class="reference external" href="https://www.waveshare.com/product/CoreEP4CE6.htm">ce genre de carte</a> <a class="footnote-reference brackets" href="#id42" id="id43">21</a> avec les broches tournées vers le bas</p>
+<p>Comme <a class="reference external" href="https://www.waveshare.com/product/CoreEP4CE6.htm">ce genre de carte</a> <a class="footnote-reference brackets" href="#id42" id="id43" role="doc-noteref"><span class="fn-bracket">[</span>21<span class="fn-bracket">]</span></a> avec les broches tournées vers le bas</p>
 <dl class="simple">
 <dt>CoreEP4CE6, ALTERA Core Board</dt><dd><ul class="simple">
 <li><p>EP4CE6E22C8N:the ALTERA Cyclone IV FPGA device which features:</p></li>
@@ -442,62 +442,62 @@ ne serait-il pas mieux ?</p>
 </dd>
 </dl>
 <p>Juillet 2020 sur la chaîne d’Heliox on parle de la chaine de  Électro-Bidouilleur</p>
-<p>Parmis ses playlistes, il y en a une sur les FPGA : <a class="reference external" href="https://www.youtube.com/watch?v=6p0UO1i2iy4&amp;list=PLfiqNnhpCsNsn6g_VjZ4VizI3iQJcMS27">Playliste FPGA sur Electro-Bidouilleur</a> <a class="footnote-reference brackets" href="#id44" id="id45">22</a></p>
+<p>Parmis ses playlistes, il y en a une sur les FPGA : <a class="reference external" href="https://www.youtube.com/watch?v=6p0UO1i2iy4&amp;list=PLfiqNnhpCsNsn6g_VjZ4VizI3iQJcMS27">Playliste FPGA sur Electro-Bidouilleur</a> <a class="footnote-reference brackets" href="#id44" id="id45" role="doc-noteref"><span class="fn-bracket">[</span>22<span class="fn-bracket">]</span></a></p>
 <a class="reference internal image-reference" href="../../_images/ebayCyclone4.jpg"><img alt="../../_images/ebayCyclone4.jpg" src="../../_images/ebayCyclone4.jpg" style="width: 600px;" /></a>
-</div>
-<div class="section" id="quartus">
-<h3><a class="toc-backref" href="#sommaire">Quartus</a><a class="headerlink" href="#quartus" title="Lien permanent vers ce titre">¶</a></h3>
+</section>
+<section id="quartus">
+<h3><a class="toc-backref" href="#sommaire" role="doc-backlink">Quartus</a><a class="headerlink" href="#quartus" title="Lien permanent vers cette rubrique">¶</a></h3>
 <p>Il faut lui créer un sous-dossier !</p>
-<p><a class="reference external" href="https://www.intel.com/content/www/us/en/programmable/support/training/catalog.html?courseType=Online">On line course</a> <a class="footnote-reference brackets" href="#id46" id="id47">23</a></p>
-</div>
-</div>
-<div class="section" id="latice-tinyfpga">
-<h2><a class="toc-backref" href="#sommaire">LATICE / TinyFPGA</a><a class="headerlink" href="#latice-tinyfpga" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Carte low cost et toutes petites: <a class="reference external" href="https://tinyfpga.com/">TinyFPGA</a> <a class="footnote-reference brackets" href="#id48" id="id49">24</a></p>
-<p><a class="reference external" href="https://www.eeweb.com/profile/duane-benson-2/articles/a-look-at-tinyfpga-boards">Autre source d’information</a> <a class="footnote-reference brackets" href="#id50" id="id51">25</a></p>
-<p><a class="reference external" href="https://www.elektor.fr/tinyfpga-a1">A1</a> <a class="footnote-reference brackets" href="#id52" id="id53">26</a> : 256 logic cells 16.95€</p>
-<p><a class="reference external" href="https://www.elektor.fr/tinyfpga-ax2">AX2</a> <a class="footnote-reference brackets" href="#id54" id="id55">27</a> : 1200 LE 23.95€</p>
+<p><a class="reference external" href="https://www.intel.com/content/www/us/en/programmable/support/training/catalog.html?courseType=Online">On line course</a> <a class="footnote-reference brackets" href="#id46" id="id47" role="doc-noteref"><span class="fn-bracket">[</span>23<span class="fn-bracket">]</span></a></p>
+</section>
+</section>
+<section id="latice-tinyfpga">
+<h2><a class="toc-backref" href="#sommaire" role="doc-backlink">LATICE / TinyFPGA</a><a class="headerlink" href="#latice-tinyfpga" title="Lien permanent vers cette rubrique">¶</a></h2>
+<p>Carte low cost et toutes petites: <a class="reference external" href="https://tinyfpga.com/">TinyFPGA</a> <a class="footnote-reference brackets" href="#id48" id="id49" role="doc-noteref"><span class="fn-bracket">[</span>24<span class="fn-bracket">]</span></a></p>
+<p><a class="reference external" href="https://www.eeweb.com/profile/duane-benson-2/articles/a-look-at-tinyfpga-boards">Autre source d’information</a> <a class="footnote-reference brackets" href="#id50" id="id51" role="doc-noteref"><span class="fn-bracket">[</span>25<span class="fn-bracket">]</span></a></p>
+<p><a class="reference external" href="https://www.elektor.fr/tinyfpga-a1">A1</a> <a class="footnote-reference brackets" href="#id52" id="id53" role="doc-noteref"><span class="fn-bracket">[</span>26<span class="fn-bracket">]</span></a> : 256 logic cells 16.95€</p>
+<p><a class="reference external" href="https://www.elektor.fr/tinyfpga-ax2">AX2</a> <a class="footnote-reference brackets" href="#id54" id="id55" role="doc-noteref"><span class="fn-bracket">[</span>27<span class="fn-bracket">]</span></a> : 1200 LE 23.95€</p>
 <p>MACH-XO2</p>
-<p><a class="reference external" href="https://www.elektor.fr/tinyfpga-programmer">Programmer chez Elector</a> <a class="footnote-reference brackets" href="#id56" id="id57">28</a> à 15€</p>
-</div>
-<div class="section" id="xilinx">
-<h2><a class="toc-backref" href="#sommaire">XILINX</a><a class="headerlink" href="#xilinx" title="Lien permanent vers ce titre">¶</a></h2>
+<p><a class="reference external" href="https://www.elektor.fr/tinyfpga-programmer">Programmer chez Elector</a> <a class="footnote-reference brackets" href="#id56" id="id57" role="doc-noteref"><span class="fn-bracket">[</span>28<span class="fn-bracket">]</span></a> à 15€</p>
+</section>
+<section id="xilinx">
+<h2><a class="toc-backref" href="#sommaire" role="doc-backlink">XILINX</a><a class="headerlink" href="#xilinx" title="Lien permanent vers cette rubrique">¶</a></h2>
 <p>Carte pour de la vidéo compter environ 3 à 400$</p>
-<p><a class="reference external" href="https://numato.com/product/numato-opsis-fpga-based-open-video-platform/">Chez Numato Lab Opsis</a> <a class="footnote-reference brackets" href="#id58" id="id59">29</a></p>
+<p><a class="reference external" href="https://numato.com/product/numato-opsis-fpga-based-open-video-platform/">Chez Numato Lab Opsis</a> <a class="footnote-reference brackets" href="#id58" id="id59" role="doc-noteref"><span class="fn-bracket">[</span>29<span class="fn-bracket">]</span></a></p>
 <p>2 HDMI in et 2 HDMI out + 1 DPIn and  1 DPOut  c’est du lourd et open source.</p>
-<div class="section" id="cartes-digilent">
-<h3><a class="toc-backref" href="#sommaire">Cartes DIGILENT</a><a class="headerlink" href="#cartes-digilent" title="Lien permanent vers ce titre">¶</a></h3>
-<p><a class="reference external" href="https://digilent.com/shop/boards-and-components/system-boards/">Site officiel</a> <a class="footnote-reference brackets" href="#id60" id="id61">30</a></p>
-<div class="section" id="artix-x7-board">
-<h4><a class="toc-backref" href="#sommaire">ARTIX x7 board</a><a class="headerlink" href="#artix-x7-board" title="Lien permanent vers ce titre">¶</a></h4>
+<section id="cartes-digilent">
+<h3><a class="toc-backref" href="#sommaire" role="doc-backlink">Cartes DIGILENT</a><a class="headerlink" href="#cartes-digilent" title="Lien permanent vers cette rubrique">¶</a></h3>
+<p><a class="reference external" href="https://digilent.com/shop/boards-and-components/system-boards/">Site officiel</a> <a class="footnote-reference brackets" href="#id60" id="id61" role="doc-noteref"><span class="fn-bracket">[</span>30<span class="fn-bracket">]</span></a></p>
+<section id="artix-x7-board">
+<h4><a class="toc-backref" href="#sommaire" role="doc-backlink">ARTIX x7 board</a><a class="headerlink" href="#artix-x7-board" title="Lien permanent vers cette rubrique">¶</a></h4>
 <p>S7 : Spartan</p>
-<p>A7 : <a class="reference external" href="https://digilent.com/shop/arty-a7-artix-7-fpga-development-board/">Artix</a> <a class="footnote-reference brackets" href="#id62" id="id63">31</a></p>
+<p>A7 : <a class="reference external" href="https://digilent.com/shop/arty-a7-artix-7-fpga-development-board/">Artix</a> <a class="footnote-reference brackets" href="#id62" id="id63" role="doc-noteref"><span class="fn-bracket">[</span>31<span class="fn-bracket">]</span></a></p>
 <p>Z7 : Zynq</p>
 <p>Partage une sressemblance pour ne pas dire un facteur de forme.</p>
 <a class="reference internal image-reference" href="../../_images/cartesArty.jpg"><img alt="../../_images/cartesArty.jpg" src="../../_images/cartesArty.jpg" style="width: 500px;" /></a>
-<p><a class="reference external" href="https://digilent.com/reference/programmable-logic/arty-a7/reference-manual?redirect=1">ARTIX A7 Ref manuel</a> <a class="footnote-reference brackets" href="#id64" id="id65">32</a> exclusivement en ligne !</p>
+<p><a class="reference external" href="https://digilent.com/reference/programmable-logic/arty-a7/reference-manual?redirect=1">ARTIX A7 Ref manuel</a> <a class="footnote-reference brackets" href="#id64" id="id65" role="doc-noteref"><span class="fn-bracket">[</span>32<span class="fn-bracket">]</span></a> exclusivement en ligne !</p>
 <p>Facteur de forme intéressantant:</p>
 <a class="reference internal image-reference" href="../../_images/CMODA7.jpg"><img alt="../../_images/CMODA7.jpg" src="../../_images/CMODA7.jpg" style="width: 300px;" /></a>
-<p><a class="reference external" href="https://digilent.com/shop/cmod-a7-35t-breadboardable-artix-7-fpga-module/">Digilent CMOD A7</a> <a class="footnote-reference brackets" href="#id66" id="id67">33</a></p>
-<p>Existe en <a class="reference external" href="https://digilent.com/shop/cmod-s7-breadboardable-spartan-7-fpga-module/">SPARTAN7 CMOD S7</a> <a class="footnote-reference brackets" href="#id68" id="id69">34</a></p>
-</div>
-</div>
-<div class="section" id="zybo-z7-pour-la-video">
-<h3><a class="toc-backref" href="#sommaire">ZYBO Z7 pour la vidéo</a><a class="headerlink" href="#zybo-z7-pour-la-video" title="Lien permanent vers ce titre">¶</a></h3>
+<p><a class="reference external" href="https://digilent.com/shop/cmod-a7-35t-breadboardable-artix-7-fpga-module/">Digilent CMOD A7</a> <a class="footnote-reference brackets" href="#id66" id="id67" role="doc-noteref"><span class="fn-bracket">[</span>33<span class="fn-bracket">]</span></a></p>
+<p>Existe en <a class="reference external" href="https://digilent.com/shop/cmod-s7-breadboardable-spartan-7-fpga-module/">SPARTAN7 CMOD S7</a> <a class="footnote-reference brackets" href="#id68" id="id69" role="doc-noteref"><span class="fn-bracket">[</span>34<span class="fn-bracket">]</span></a></p>
+</section>
+</section>
+<section id="zybo-z7-pour-la-video">
+<h3><a class="toc-backref" href="#sommaire" role="doc-backlink">ZYBO Z7 pour la vidéo</a><a class="headerlink" href="#zybo-z7-pour-la-video" title="Lien permanent vers cette rubrique">¶</a></h3>
 <p>249$ en version signle Core</p>
 <p>HDMI in et 1 HDMI out</p>
-</div>
-</div>
-<div class="section" id="upduino">
-<h2><a class="toc-backref" href="#sommaire">UPDuino</a><a class="headerlink" href="#upduino" title="Lien permanent vers ce titre">¶</a></h2>
+</section>
+</section>
+<section id="upduino">
+<h2><a class="toc-backref" href="#sommaire" role="doc-backlink">UPDuino</a><a class="headerlink" href="#upduino" title="Lien permanent vers cette rubrique">¶</a></h2>
 <p>UPduino v2.1: low cost FPGA board et openSource</p>
 <a class="reference internal image-reference" href="../../_images/upduino_2019-09-16T17_27_36.855Z-UPduino_v2.1_back.jpg"><img alt="../../_images/upduino_2019-09-16T17_27_36.855Z-UPduino_v2.1_back.jpg" src="../../_images/upduino_2019-09-16T17_27_36.855Z-UPduino_v2.1_back.jpg" style="width: 300px;" /></a>
-<p>sur <a class="reference external" href="https://www.tindie.com/products/tinyvision_ai/upduino-v21-low-cost-fpga-board/">tindie.com</a> <a class="footnote-reference brackets" href="#id70" id="id71">35</a> : 19.95us$</p>
+<p>sur <a class="reference external" href="https://www.tindie.com/products/tinyvision_ai/upduino-v21-low-cost-fpga-board/">tindie.com</a> <a class="footnote-reference brackets" href="#id70" id="id71" role="doc-noteref"><span class="fn-bracket">[</span>35<span class="fn-bracket">]</span></a> : 19.95us$</p>
 <p>Ce projet n’est pas très clair. Qui en est à l’origine ?</p>
 <p>Ce serait tinyvision-ai.inc (qui n’ont qu’un pauvre github), mais on peut y lire:</p>
-<p>The original design for the UPduino v2.0 was from <a class="reference external" href="http://gnarlygrey.com/?i=1">GnarlyGrey</a> <a class="footnote-reference brackets" href="#id72" id="id73">36</a></p>
-<p>Peut être programmer avec les outils du <a class="reference external" href="http://www.clifford.at/icestorm/">projet icestorm</a> <a class="footnote-reference brackets" href="#id74" id="id75">37</a></p>
-<p><a class="reference external" href="https://www.latticesemi.com/en/Products/FPGAandCPLD/iCE40UltraPlus">Lattice ICE40 Ultra Plus 5K FPGA</a> <a class="footnote-reference brackets" href="#id77" id="id78">38</a> with 5300LUT</p>
+<p>The original design for the UPduino v2.0 was from <a class="reference external" href="http://gnarlygrey.com/?i=1">GnarlyGrey</a> <a class="footnote-reference brackets" href="#id72" id="id73" role="doc-noteref"><span class="fn-bracket">[</span>36<span class="fn-bracket">]</span></a></p>
+<p>Peut être programmer avec les outils du <a class="reference external" href="http://www.clifford.at/icestorm/">projet icestorm</a> <a class="footnote-reference brackets" href="#id74" id="id75" role="doc-noteref"><span class="fn-bracket">[</span>37<span class="fn-bracket">]</span></a></p>
+<p><a class="reference external" href="https://www.latticesemi.com/en/Products/FPGAandCPLD/iCE40UltraPlus">Lattice ICE40 Ultra Plus 5K FPGA</a> <a class="footnote-reference brackets" href="#id77" id="id78" role="doc-noteref"><span class="fn-bracket">[</span>38<span class="fn-bracket">]</span></a> with 5300LUT</p>
 <p>FTDI FT232H USB programmer,
 30 GPIO on 0.1” headers,
 8MB SPI Flash,
@@ -509,13 +509,13 @@ Arduino nano footprint compatible</p>
 <p>Composant : ICE40UP5K-SG48</p>
 <a class="reference internal image-reference" href="../../_images/ice40up5kRessources.jpg"><img alt="ICE40UP5K" class="align-left" src="../../_images/ice40up5kRessources.jpg" style="width: 800px;" /></a>
 <p><div class="clearer"></div></p>
-</div>
-<div class="section" id="open-source-fpga-tools">
-<h2><a class="toc-backref" href="#sommaire">Open source FPGA tools</a><a class="headerlink" href="#open-source-fpga-tools" title="Lien permanent vers ce titre">¶</a></h2>
+</section>
+<section id="open-source-fpga-tools">
+<h2><a class="toc-backref" href="#sommaire" role="doc-backlink">Open source FPGA tools</a><a class="headerlink" href="#open-source-fpga-tools" title="Lien permanent vers cette rubrique">¶</a></h2>
 <p>Eh bien on peut dire que ça à l’air d’être un joyeux bordel !</p>
-<p>Il y a d’abord le <a class="reference external" href="http://www.clifford.at/icestorm/">projet icestorm</a> <a class="footnote-reference brackets" href="#id74" id="id76">37</a></p>
-<div class="section" id="apio">
-<h3><a class="toc-backref" href="#sommaire">APIO</a><a class="headerlink" href="#apio" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Il y a d’abord le <a class="reference external" href="http://www.clifford.at/icestorm/">projet icestorm</a> <a class="footnote-reference brackets" href="#id74" id="id76" role="doc-noteref"><span class="fn-bracket">[</span>37<span class="fn-bracket">]</span></a></p>
+<section id="apio">
+<h3><a class="toc-backref" href="#sommaire" role="doc-backlink">APIO</a><a class="headerlink" href="#apio" title="Lien permanent vers cette rubrique">¶</a></h3>
 <p>Puis APIO:</p>
 <a class="reference internal image-reference" href="../../_images/apio.jpg"><img alt="APIO" class="align-left" src="../../_images/apio.jpg" style="width: 200px;" /></a>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Open</span> <span class="n">source</span> <span class="n">ecosystem</span> <span class="k">for</span> <span class="nb">open</span> <span class="n">FPGA</span> <span class="n">boards</span><span class="o">.</span> <span class="n">It</span> <span class="n">was</span> <span class="n">inspired</span> <span class="n">by</span> <span class="n">PlatformIO</span><span class="o">.</span>
@@ -529,171 +529,215 @@ Arduino nano footprint compatible</p>
 </div>
 <p>Et qui dit PlatformIo dit… Python ;-) Notez que j’ai rien contre Python mais j’ai rien pour non
 plus…</p>
-</div>
-<div class="section" id="icestudio">
-<h3><a class="toc-backref" href="#sommaire">ICEstudio</a><a class="headerlink" href="#icestudio" title="Lien permanent vers ce titre">¶</a></h3>
-<p>04/2022 UPDATE <a class="reference external" href="https://icestudio.io/#lk-overview">site pour download icestudio</a> <a class="footnote-reference brackets" href="#id79" id="id80">39</a> en bas de page v0.9.0 dl et installée pc msi</p>
+</section>
+<section id="icestudio">
+<h3><a class="toc-backref" href="#sommaire" role="doc-backlink">ICEstudio</a><a class="headerlink" href="#icestudio" title="Lien permanent vers cette rubrique">¶</a></h3>
+<p>04/2022 UPDATE <a class="reference external" href="https://icestudio.io/#lk-overview">site pour download icestudio</a> <a class="footnote-reference brackets" href="#id79" id="id80" role="doc-noteref"><span class="fn-bracket">[</span>39<span class="fn-bracket">]</span></a> en bas de page v0.9.0 dl et installée pc msi</p>
 <p>Install plantée. elle a tentée un pip install</p>
 <p>Donc par dessus il y a Icestudio:</p>
 <a class="reference internal image-reference" href="../../_images/icestudio.jpg"><img alt="APIO" class="align-left" src="../../_images/icestudio.jpg" style="width: 200px;" /></a>
 <p><div class="clearer"></div></p>
-<p>Et en se baladant sur le github de <a class="reference external" href="https://github.com/FPGAwars/icestudio">icestudio</a> <a class="footnote-reference brackets" href="#id81" id="id82">40</a>, on découvre d’autres cartes (c’est beau la
+<p>Et en se baladant sur le github de <a class="reference external" href="https://github.com/FPGAwars/icestudio">icestudio</a> <a class="footnote-reference brackets" href="#id81" id="id82" role="doc-noteref"><span class="fn-bracket">[</span>40<span class="fn-bracket">]</span></a>, on découvre d’autres cartes (c’est beau la
 magie du surf)</p>
 <p>Au final cela s’installe bien. Une bonne surprise. (Sur Windows7 en tout cas) mais cela install
 aussi Python 2.7</p>
 <p>J’ai l’impression que cela ne supporte que le Vérilog.</p>
-</div>
-<div class="section" id="symbiflow">
-<span id="index-3"></span><h3><a class="toc-backref" href="#sommaire">Symbiflow</a><a class="headerlink" href="#symbiflow" title="Lien permanent vers ce titre">¶</a></h3>
-<p><a class="reference external" href="https://symbiflow.github.io/">Site officiel Symbiflow</a> <a class="footnote-reference brackets" href="#id83" id="id84">41</a></p>
+</section>
+<section id="symbiflow">
+<span id="index-3"></span><h3><a class="toc-backref" href="#sommaire" role="doc-backlink">Symbiflow</a><a class="headerlink" href="#symbiflow" title="Lien permanent vers cette rubrique">¶</a></h3>
+<p><a class="reference external" href="https://symbiflow.github.io/">Site officiel Symbiflow</a> <a class="footnote-reference brackets" href="#id83" id="id84" role="doc-noteref"><span class="fn-bracket">[</span>41<span class="fn-bracket">]</span></a></p>
 <p>SymbiFlow is a fully open source toolchain for the development of FPGAs of multiple vendors.
 Currently, it targets the Xilinx 7-Series, Lattice iCE40, Lattice ECP5 FPGAs, QuickLogic EOS S3
 and is gradually being expanded to provide a comprehensive end-to-end FPGA synthesis flow.</p>
-</div>
-<div class="section" id="simulateur-open-source">
-<h3><a class="toc-backref" href="#sommaire">Simulateur open source</a><a class="headerlink" href="#simulateur-open-source" title="Lien permanent vers ce titre">¶</a></h3>
+</section>
+<section id="simulateur-open-source">
+<h3><a class="toc-backref" href="#sommaire" role="doc-backlink">Simulateur open source</a><a class="headerlink" href="#simulateur-open-source" title="Lien permanent vers cette rubrique">¶</a></h3>
 <p>ghdl Tristan Ginglod</p>
 <p><a class="reference external" href="http://ghdl.free.fr/">http://ghdl.free.fr/</a></p>
-</div>
-</div>
-<div class="section" id="weblinks">
-<h2><a class="toc-backref" href="#sommaire">Weblinks</a><a class="headerlink" href="#weblinks" title="Lien permanent vers ce titre">¶</a></h2>
-<dl class="footnote brackets">
-<dt class="label" id="id2"><span class="brackets"><a class="fn-backref" href="#id3">1</a></span></dt>
-<dd><p><a class="reference external" href="https://joelw.id.au/FPGA/CheapFPGADevelopmentBoards">https://joelw.id.au/FPGA/CheapFPGADevelopmentBoards</a></p>
-</dd>
-<dt class="label" id="id4"><span class="brackets"><a class="fn-backref" href="#id5">2</a></span></dt>
-<dd><p><a class="reference external" href="http://doulos.com/knowhow/vhdl/">http://doulos.com/knowhow/vhdl/</a></p>
-</dd>
-<dt class="label" id="id6"><span class="brackets"><a class="fn-backref" href="#id7">3</a></span></dt>
-<dd><p><a class="reference external" href="https://hackaday.io/project/38-arduino-compatible-fpga-shield">https://hackaday.io/project/38-arduino-compatible-fpga-shield</a></p>
-</dd>
-<dt class="label" id="id8"><span class="brackets"><a class="fn-backref" href="#id9">4</a></span></dt>
-<dd><p><a class="reference external" href="https://www.tindie.com/search/?q=fpga">https://www.tindie.com/search/?q=fpga</a></p>
-</dd>
-<dt class="label" id="id10"><span class="brackets"><a class="fn-backref" href="#id11">5</a></span></dt>
-<dd><p><a class="reference external" href="https://www.seeedstudio.com/catalogsearch/result/?q=fpga">https://www.seeedstudio.com/catalogsearch/result/?q=fpga</a></p>
-</dd>
-<dt class="label" id="id12"><span class="brackets"><a class="fn-backref" href="#id13">6</a></span></dt>
-<dd><p><a class="reference external" href="https://wiki.seeedstudio.com/Spartan-Edge-Accelerator-Board/">https://wiki.seeedstudio.com/Spartan-Edge-Accelerator-Board/</a></p>
-</dd>
-<dt class="label" id="id14"><span class="brackets"><a class="fn-backref" href="#id15">7</a></span></dt>
-<dd><p><a class="reference external" href="https://www.crowdsupply.com/1bitsquared/icebreaker-fpga">https://www.crowdsupply.com/1bitsquared/icebreaker-fpga</a></p>
-</dd>
-<dt class="label" id="id16"><span class="brackets"><a class="fn-backref" href="#id17">8</a></span></dt>
-<dd><p><a class="reference external" href="https://1bitsquared.de/products/icebreaker">https://1bitsquared.de/products/icebreaker</a></p>
-</dd>
-<dt class="label" id="id18"><span class="brackets"><a class="fn-backref" href="#id19">9</a></span></dt>
-<dd><p><a class="reference external" href="https://www.amazon.fr/Fransande-Icebreaker-ICE40UP5K-D%C3%A9Veloppement-Principal/dp/B08W2ZCT8Q/ref=sr_1_40?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&amp;crid=1LYDQ6ZJ8YGMX&amp;keywords=fpga&amp;qid=1648682715&amp;sprefix=fpga%2Caps%2C98&amp;sr=8-40">https://www.amazon.fr/Fransande-Icebreaker-ICE40UP5K-D%C3%A9Veloppement-Principal/dp/B08W2ZCT8Q/ref=sr_1_40?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&amp;crid=1LYDQ6ZJ8YGMX&amp;keywords=fpga&amp;qid=1648682715&amp;sprefix=fpga%2Caps%2C98&amp;sr=8-40</a></p>
-</dd>
-<dt class="label" id="id20"><span class="brackets"><a class="fn-backref" href="#id21">10</a></span></dt>
-<dd><p><a class="reference external" href="https://fr.aliexpress.com/item/1005001744188353.html?spm=a2g0o.productlist.0.0.2d304f57qtHUBx&amp;algo_pvid=0af27d41-842e-4a1f-bc13-e2162b8dcee4&amp;algo_exp_id=0af27d41-842e-4a1f-bc13-e2162b8dcee4-1&amp;pdp_ext_f=%7B%22sku_id%22%3A%2212000017412500115%22%7D&amp;pdp_pi=-1%3B40.61%3B-1%3B-1%40salePrice%3BEUR%3Bsearch-mainSearch">https://fr.aliexpress.com/item/1005001744188353.html?spm=a2g0o.productlist.0.0.2d304f57qtHUBx&amp;algo_pvid=0af27d41-842e-4a1f-bc13-e2162b8dcee4&amp;algo_exp_id=0af27d41-842e-4a1f-bc13-e2162b8dcee4-1&amp;pdp_ext_f=%7B%22sku_id%22%3A%2212000017412500115%22%7D&amp;pdp_pi=-1%3B40.61%3B-1%3B-1%40salePrice%3BEUR%3Bsearch-mainSearch</a></p>
-</dd>
-<dt class="label" id="id22"><span class="brackets"><a class="fn-backref" href="#id23">11</a></span></dt>
-<dd><p><a class="reference external" href="https://www.intel.com/content/www/us/en/products/programmable/fpga.html">https://www.intel.com/content/www/us/en/products/programmable/fpga.html</a></p>
-</dd>
-<dt class="label" id="id24"><span class="brackets"><a class="fn-backref" href="#id25">12</a></span></dt>
-<dd><p><a class="reference external" href="https://www.arrow.com/fr-fr/products/deca/arrow-development-tools">https://www.arrow.com/fr-fr/products/deca/arrow-development-tools</a></p>
-</dd>
-<dt class="label" id="id26"><span class="brackets"><a class="fn-backref" href="#id27">13</a></span></dt>
-<dd><p><a class="reference external" href="https://www.arrow.com/fr-fr/reference-designs/bemicro-max10-fpga-evaluation-kit-adopts-alteras-non-volatile-max-10-fpga-built-on-55-nm-flash-process/45cdf7d717bc14e6dfb1044001fb7c4f">https://www.arrow.com/fr-fr/reference-designs/bemicro-max10-fpga-evaluation-kit-adopts-alteras-non-volatile-max-10-fpga-built-on-55-nm-flash-process/45cdf7d717bc14e6dfb1044001fb7c4f</a></p>
-</dd>
-<dt class="label" id="id28"><span class="brackets"><a class="fn-backref" href="#id29">14</a></span></dt>
-<dd><p><a class="reference external" href="https://fpgacloud.intel.com/devstore/platform/?board=4">https://fpgacloud.intel.com/devstore/platform/?board=4</a></p>
-</dd>
-<dt class="label" id="id30"><span class="brackets"><a class="fn-backref" href="#id31">15</a></span></dt>
-<dd><p><a class="reference external" href="https://www.ebay.fr/itm/ALTERA-FPGA-Cyslonell-EP2C5T144-Minimum-System-Lernen-Development-Platte/322774547075?_trkparms=aid%3D555018%26algo%3DPL.SIM%26ao%3D2%26asc%3D20160323102634%26meid%3Da93f2964d1e940c8b5ecf75fc224f7f5%26pid%3D100623%26rk%3D1%26rkt%3D6%26sd%3D321573901213%26itm%3D322774547075%26pmt%3D1%26noa%3D0%26pg%3D2047675&amp;_trksid=p2047675.c100623.m-1">https://www.ebay.fr/itm/ALTERA-FPGA-Cyslonell-EP2C5T144-Minimum-System-Lernen-Development-Platte/322774547075?_trkparms=aid%3D555018%26algo%3DPL.SIM%26ao%3D2%26asc%3D20160323102634%26meid%3Da93f2964d1e940c8b5ecf75fc224f7f5%26pid%3D100623%26rk%3D1%26rkt%3D6%26sd%3D321573901213%26itm%3D322774547075%26pmt%3D1%26noa%3D0%26pg%3D2047675&amp;_trksid=p2047675.c100623.m-1</a></p>
-</dd>
-<dt class="label" id="id32"><span class="brackets"><a class="fn-backref" href="#id33">16</a></span></dt>
-<dd><p><a class="reference external" href="https://www.dx.com/p/altera-fpga-cycloneii-ep2c5t144-minimum-system-learning-development-board-module-blue-2027404.html#.XejsF3aJLam">https://www.dx.com/p/altera-fpga-cycloneii-ep2c5t144-minimum-system-learning-development-board-module-blue-2027404.html#.XejsF3aJLam</a></p>
-</dd>
-<dt class="label" id="id34"><span class="brackets"><a class="fn-backref" href="#id35">17</a></span></dt>
-<dd><p><a class="reference external" href="https://www.amazon.com/RioRand-EP2C5T144-Altera-Cyclone-Development/dp/B00LEMKR92">https://www.amazon.com/RioRand-EP2C5T144-Altera-Cyclone-Development/dp/B00LEMKR92</a></p>
-</dd>
-<dt class="label" id="id36"><span class="brackets"><a class="fn-backref" href="#id37">18</a></span></dt>
-<dd><p><a class="reference external" href="https://www.ebay.fr/itm/New-2019-Altera-Cyclone-IV-FPGA-EP4CE6E22C8N-Development-Board-USB-V2-0-CPLD/163044282291?hash=item25f6324fb3:g:QlgAAOSwCGVX5KLz">https://www.ebay.fr/itm/New-2019-Altera-Cyclone-IV-FPGA-EP4CE6E22C8N-Development-Board-USB-V2-0-CPLD/163044282291?hash=item25f6324fb3:g:QlgAAOSwCGVX5KLz</a></p>
-</dd>
-<dt class="label" id="id38"><span class="brackets"><a class="fn-backref" href="#id39">19</a></span></dt>
-<dd><p><a class="reference external" href="https://www.youtube.com/watch?v=woBspKIFK3A">https://www.youtube.com/watch?v=woBspKIFK3A</a></p>
-</dd>
-<dt class="label" id="id40"><span class="brackets"><a class="fn-backref" href="#id41">20</a></span></dt>
-<dd><p><a class="reference external" href="https://drive.google.com/drive/folders/0B3UvX75P-bRdcXZNaWQ1dEs0R2M">https://drive.google.com/drive/folders/0B3UvX75P-bRdcXZNaWQ1dEs0R2M</a></p>
-</dd>
-<dt class="label" id="id42"><span class="brackets"><a class="fn-backref" href="#id43">21</a></span></dt>
-<dd><p><a class="reference external" href="https://www.waveshare.com/product/CoreEP4CE6.htm">https://www.waveshare.com/product/CoreEP4CE6.htm</a></p>
-</dd>
-<dt class="label" id="id44"><span class="brackets"><a class="fn-backref" href="#id45">22</a></span></dt>
-<dd><p><a class="reference external" href="https://www.youtube.com/watch?v=6p0UO1i2iy4&amp;list=PLfiqNnhpCsNsn6g_VjZ4VizI3iQJcMS27">https://www.youtube.com/watch?v=6p0UO1i2iy4&amp;list=PLfiqNnhpCsNsn6g_VjZ4VizI3iQJcMS27</a></p>
-</dd>
-<dt class="label" id="id46"><span class="brackets"><a class="fn-backref" href="#id47">23</a></span></dt>
-<dd><p><a class="reference external" href="https://www.intel.com/content/www/us/en/programmable/support/training/catalog.html?courseType=Online">https://www.intel.com/content/www/us/en/programmable/support/training/catalog.html?courseType=Online</a></p>
-</dd>
-<dt class="label" id="id48"><span class="brackets"><a class="fn-backref" href="#id49">24</a></span></dt>
-<dd><p><a class="reference external" href="https://tinyfpga.com/">https://tinyfpga.com/</a></p>
-</dd>
-<dt class="label" id="id50"><span class="brackets"><a class="fn-backref" href="#id51">25</a></span></dt>
-<dd><p><a class="reference external" href="https://www.eeweb.com/profile/duane-benson-2/articles/a-look-at-tinyfpga-boards">https://www.eeweb.com/profile/duane-benson-2/articles/a-look-at-tinyfpga-boards</a></p>
-</dd>
-<dt class="label" id="id52"><span class="brackets"><a class="fn-backref" href="#id53">26</a></span></dt>
-<dd><p><a class="reference external" href="https://www.elektor.fr/tinyfpga-a1">https://www.elektor.fr/tinyfpga-a1</a></p>
-</dd>
-<dt class="label" id="id54"><span class="brackets"><a class="fn-backref" href="#id55">27</a></span></dt>
-<dd><p><a class="reference external" href="https://www.elektor.fr/tinyfpga-ax2">https://www.elektor.fr/tinyfpga-ax2</a></p>
-</dd>
-<dt class="label" id="id56"><span class="brackets"><a class="fn-backref" href="#id57">28</a></span></dt>
-<dd><p><a class="reference external" href="https://www.elektor.fr/tinyfpga-programmer">https://www.elektor.fr/tinyfpga-programmer</a></p>
-</dd>
-<dt class="label" id="id58"><span class="brackets"><a class="fn-backref" href="#id59">29</a></span></dt>
-<dd><p><a class="reference external" href="https://numato.com/product/numato-opsis-fpga-based-open-video-platform/">https://numato.com/product/numato-opsis-fpga-based-open-video-platform/</a></p>
-</dd>
-<dt class="label" id="id60"><span class="brackets"><a class="fn-backref" href="#id61">30</a></span></dt>
-<dd><p><a class="reference external" href="https://digilent.com/shop/boards-and-components/system-boards/">https://digilent.com/shop/boards-and-components/system-boards/</a></p>
-</dd>
-<dt class="label" id="id62"><span class="brackets"><a class="fn-backref" href="#id63">31</a></span></dt>
-<dd><p><a class="reference external" href="https://digilent.com/shop/arty-a7-artix-7-fpga-development-board/">https://digilent.com/shop/arty-a7-artix-7-fpga-development-board/</a></p>
-</dd>
-<dt class="label" id="id64"><span class="brackets"><a class="fn-backref" href="#id65">32</a></span></dt>
-<dd><p><a class="reference external" href="https://digilent.com/reference/programmable-logic/arty-a7/reference-manual?redirect=1">https://digilent.com/reference/programmable-logic/arty-a7/reference-manual?redirect=1</a></p>
-</dd>
-<dt class="label" id="id66"><span class="brackets"><a class="fn-backref" href="#id67">33</a></span></dt>
-<dd><p><a class="reference external" href="https://digilent.com/shop/cmod-a7-35t-breadboardable-artix-7-fpga-module/">https://digilent.com/shop/cmod-a7-35t-breadboardable-artix-7-fpga-module/</a></p>
-</dd>
-<dt class="label" id="id68"><span class="brackets"><a class="fn-backref" href="#id69">34</a></span></dt>
-<dd><p><a class="reference external" href="https://digilent.com/shop/cmod-s7-breadboardable-spartan-7-fpga-module/">https://digilent.com/shop/cmod-s7-breadboardable-spartan-7-fpga-module/</a></p>
-</dd>
-<dt class="label" id="id70"><span class="brackets"><a class="fn-backref" href="#id71">35</a></span></dt>
-<dd><p><a class="reference external" href="https://www.tindie.com/products/tinyvision_ai/upduino-v21-low-cost-fpga-board/">https://www.tindie.com/products/tinyvision_ai/upduino-v21-low-cost-fpga-board/</a></p>
-</dd>
-<dt class="label" id="id72"><span class="brackets"><a class="fn-backref" href="#id73">36</a></span></dt>
-<dd><p><a class="reference external" href="http://gnarlygrey.com/?i=1">http://gnarlygrey.com/?i=1</a></p>
-</dd>
-<dt class="label" id="id74"><span class="brackets">37</span><span class="fn-backref">(<a href="#id75">1</a>,<a href="#id76">2</a>)</span></dt>
-<dd><p><a class="reference external" href="http://www.clifford.at/icestorm/">http://www.clifford.at/icestorm/</a></p>
-</dd>
-<dt class="label" id="id77"><span class="brackets"><a class="fn-backref" href="#id78">38</a></span></dt>
-<dd><p><a class="reference external" href="https://www.latticesemi.com/en/Products/FPGAandCPLD/iCE40UltraPlus">https://www.latticesemi.com/en/Products/FPGAandCPLD/iCE40UltraPlus</a></p>
-</dd>
-<dt class="label" id="id79"><span class="brackets"><a class="fn-backref" href="#id80">39</a></span></dt>
-<dd><p><a class="reference external" href="https://icestudio.io/#lk-overview">https://icestudio.io/#lk-overview</a></p>
-</dd>
-<dt class="label" id="id81"><span class="brackets"><a class="fn-backref" href="#id82">40</a></span></dt>
-<dd><p><a class="reference external" href="https://github.com/FPGAwars/icestudio">https://github.com/FPGAwars/icestudio</a></p>
-</dd>
-<dt class="label" id="id83"><span class="brackets"><a class="fn-backref" href="#id84">41</a></span></dt>
-<dd><p><a class="reference external" href="https://symbiflow.github.io/">https://symbiflow.github.io/</a></p>
-</dd>
-</dl>
-</div>
-</div>
+</section>
+</section>
+<section id="weblinks">
+<h2><a class="toc-backref" href="#sommaire" role="doc-backlink">Weblinks</a><a class="headerlink" href="#weblinks" title="Lien permanent vers cette rubrique">¶</a></h2>
+<aside class="footnote-list brackets">
+<aside class="footnote brackets" id="id2" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id3">1</a><span class="fn-bracket">]</span></span>
+<p><a class="reference external" href="https://joelw.id.au/FPGA/CheapFPGADevelopmentBoards">https://joelw.id.au/FPGA/CheapFPGADevelopmentBoards</a></p>
+</aside>
+<aside class="footnote brackets" id="id4" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id5">2</a><span class="fn-bracket">]</span></span>
+<p><a class="reference external" href="http://doulos.com/knowhow/vhdl/">http://doulos.com/knowhow/vhdl/</a></p>
+</aside>
+<aside class="footnote brackets" id="id6" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id7">3</a><span class="fn-bracket">]</span></span>
+<p><a class="reference external" href="https://hackaday.io/project/38-arduino-compatible-fpga-shield">https://hackaday.io/project/38-arduino-compatible-fpga-shield</a></p>
+</aside>
+<aside class="footnote brackets" id="id8" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id9">4</a><span class="fn-bracket">]</span></span>
+<p><a class="reference external" href="https://www.tindie.com/search/?q=fpga">https://www.tindie.com/search/?q=fpga</a></p>
+</aside>
+<aside class="footnote brackets" id="id10" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id11">5</a><span class="fn-bracket">]</span></span>
+<p><a class="reference external" href="https://www.seeedstudio.com/catalogsearch/result/?q=fpga">https://www.seeedstudio.com/catalogsearch/result/?q=fpga</a></p>
+</aside>
+<aside class="footnote brackets" id="id12" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id13">6</a><span class="fn-bracket">]</span></span>
+<p><a class="reference external" href="https://wiki.seeedstudio.com/Spartan-Edge-Accelerator-Board/">https://wiki.seeedstudio.com/Spartan-Edge-Accelerator-Board/</a></p>
+</aside>
+<aside class="footnote brackets" id="id14" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id15">7</a><span class="fn-bracket">]</span></span>
+<p><a class="reference external" href="https://www.crowdsupply.com/1bitsquared/icebreaker-fpga">https://www.crowdsupply.com/1bitsquared/icebreaker-fpga</a></p>
+</aside>
+<aside class="footnote brackets" id="id16" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id17">8</a><span class="fn-bracket">]</span></span>
+<p><a class="reference external" href="https://1bitsquared.de/products/icebreaker">https://1bitsquared.de/products/icebreaker</a></p>
+</aside>
+<aside class="footnote brackets" id="id18" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id19">9</a><span class="fn-bracket">]</span></span>
+<p><a class="reference external" href="https://www.amazon.fr/Fransande-Icebreaker-ICE40UP5K-D%C3%A9Veloppement-Principal/dp/B08W2ZCT8Q/ref=sr_1_40?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&amp;crid=1LYDQ6ZJ8YGMX&amp;keywords=fpga&amp;qid=1648682715&amp;sprefix=fpga%2Caps%2C98&amp;sr=8-40">https://www.amazon.fr/Fransande-Icebreaker-ICE40UP5K-D%C3%A9Veloppement-Principal/dp/B08W2ZCT8Q/ref=sr_1_40?__mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&amp;crid=1LYDQ6ZJ8YGMX&amp;keywords=fpga&amp;qid=1648682715&amp;sprefix=fpga%2Caps%2C98&amp;sr=8-40</a></p>
+</aside>
+<aside class="footnote brackets" id="id20" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id21">10</a><span class="fn-bracket">]</span></span>
+<p><a class="reference external" href="https://fr.aliexpress.com/item/1005001744188353.html?spm=a2g0o.productlist.0.0.2d304f57qtHUBx&amp;algo_pvid=0af27d41-842e-4a1f-bc13-e2162b8dcee4&amp;algo_exp_id=0af27d41-842e-4a1f-bc13-e2162b8dcee4-1&amp;pdp_ext_f=%7B%22sku_id%22%3A%2212000017412500115%22%7D&amp;pdp_pi=-1%3B40.61%3B-1%3B-1%40salePrice%3BEUR%3Bsearch-mainSearch">https://fr.aliexpress.com/item/1005001744188353.html?spm=a2g0o.productlist.0.0.2d304f57qtHUBx&amp;algo_pvid=0af27d41-842e-4a1f-bc13-e2162b8dcee4&amp;algo_exp_id=0af27d41-842e-4a1f-bc13-e2162b8dcee4-1&amp;pdp_ext_f=%7B%22sku_id%22%3A%2212000017412500115%22%7D&amp;pdp_pi=-1%3B40.61%3B-1%3B-1%40salePrice%3BEUR%3Bsearch-mainSearch</a></p>
+</aside>
+<aside class="footnote brackets" id="id22" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id23">11</a><span class="fn-bracket">]</span></span>
+<p><a class="reference external" href="https://www.intel.com/content/www/us/en/products/programmable/fpga.html">https://www.intel.com/content/www/us/en/products/programmable/fpga.html</a></p>
+</aside>
+<aside class="footnote brackets" id="id24" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id25">12</a><span class="fn-bracket">]</span></span>
+<p><a class="reference external" href="https://www.arrow.com/fr-fr/products/deca/arrow-development-tools">https://www.arrow.com/fr-fr/products/deca/arrow-development-tools</a></p>
+</aside>
+<aside class="footnote brackets" id="id26" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id27">13</a><span class="fn-bracket">]</span></span>
+<p><a class="reference external" href="https://www.arrow.com/fr-fr/reference-designs/bemicro-max10-fpga-evaluation-kit-adopts-alteras-non-volatile-max-10-fpga-built-on-55-nm-flash-process/45cdf7d717bc14e6dfb1044001fb7c4f">https://www.arrow.com/fr-fr/reference-designs/bemicro-max10-fpga-evaluation-kit-adopts-alteras-non-volatile-max-10-fpga-built-on-55-nm-flash-process/45cdf7d717bc14e6dfb1044001fb7c4f</a></p>
+</aside>
+<aside class="footnote brackets" id="id28" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id29">14</a><span class="fn-bracket">]</span></span>
+<p><a class="reference external" href="https://fpgacloud.intel.com/devstore/platform/?board=4">https://fpgacloud.intel.com/devstore/platform/?board=4</a></p>
+</aside>
+<aside class="footnote brackets" id="id30" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id31">15</a><span class="fn-bracket">]</span></span>
+<p><a class="reference external" href="https://www.ebay.fr/itm/ALTERA-FPGA-Cyslonell-EP2C5T144-Minimum-System-Lernen-Development-Platte/322774547075?_trkparms=aid%3D555018%26algo%3DPL.SIM%26ao%3D2%26asc%3D20160323102634%26meid%3Da93f2964d1e940c8b5ecf75fc224f7f5%26pid%3D100623%26rk%3D1%26rkt%3D6%26sd%3D321573901213%26itm%3D322774547075%26pmt%3D1%26noa%3D0%26pg%3D2047675&amp;_trksid=p2047675.c100623.m-1">https://www.ebay.fr/itm/ALTERA-FPGA-Cyslonell-EP2C5T144-Minimum-System-Lernen-Development-Platte/322774547075?_trkparms=aid%3D555018%26algo%3DPL.SIM%26ao%3D2%26asc%3D20160323102634%26meid%3Da93f2964d1e940c8b5ecf75fc224f7f5%26pid%3D100623%26rk%3D1%26rkt%3D6%26sd%3D321573901213%26itm%3D322774547075%26pmt%3D1%26noa%3D0%26pg%3D2047675&amp;_trksid=p2047675.c100623.m-1</a></p>
+</aside>
+<aside class="footnote brackets" id="id32" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id33">16</a><span class="fn-bracket">]</span></span>
+<p><a class="reference external" href="https://www.dx.com/p/altera-fpga-cycloneii-ep2c5t144-minimum-system-learning-development-board-module-blue-2027404.html#.XejsF3aJLam">https://www.dx.com/p/altera-fpga-cycloneii-ep2c5t144-minimum-system-learning-development-board-module-blue-2027404.html#.XejsF3aJLam</a></p>
+</aside>
+<aside class="footnote brackets" id="id34" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id35">17</a><span class="fn-bracket">]</span></span>
+<p><a class="reference external" href="https://www.amazon.com/RioRand-EP2C5T144-Altera-Cyclone-Development/dp/B00LEMKR92">https://www.amazon.com/RioRand-EP2C5T144-Altera-Cyclone-Development/dp/B00LEMKR92</a></p>
+</aside>
+<aside class="footnote brackets" id="id36" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id37">18</a><span class="fn-bracket">]</span></span>
+<p><a class="reference external" href="https://www.ebay.fr/itm/New-2019-Altera-Cyclone-IV-FPGA-EP4CE6E22C8N-Development-Board-USB-V2-0-CPLD/163044282291?hash=item25f6324fb3:g:QlgAAOSwCGVX5KLz">https://www.ebay.fr/itm/New-2019-Altera-Cyclone-IV-FPGA-EP4CE6E22C8N-Development-Board-USB-V2-0-CPLD/163044282291?hash=item25f6324fb3:g:QlgAAOSwCGVX5KLz</a></p>
+</aside>
+<aside class="footnote brackets" id="id38" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id39">19</a><span class="fn-bracket">]</span></span>
+<p><a class="reference external" href="https://www.youtube.com/watch?v=woBspKIFK3A">https://www.youtube.com/watch?v=woBspKIFK3A</a></p>
+</aside>
+<aside class="footnote brackets" id="id40" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id41">20</a><span class="fn-bracket">]</span></span>
+<p><a class="reference external" href="https://drive.google.com/drive/folders/0B3UvX75P-bRdcXZNaWQ1dEs0R2M">https://drive.google.com/drive/folders/0B3UvX75P-bRdcXZNaWQ1dEs0R2M</a></p>
+</aside>
+<aside class="footnote brackets" id="id42" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id43">21</a><span class="fn-bracket">]</span></span>
+<p><a class="reference external" href="https://www.waveshare.com/product/CoreEP4CE6.htm">https://www.waveshare.com/product/CoreEP4CE6.htm</a></p>
+</aside>
+<aside class="footnote brackets" id="id44" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id45">22</a><span class="fn-bracket">]</span></span>
+<p><a class="reference external" href="https://www.youtube.com/watch?v=6p0UO1i2iy4&amp;list=PLfiqNnhpCsNsn6g_VjZ4VizI3iQJcMS27">https://www.youtube.com/watch?v=6p0UO1i2iy4&amp;list=PLfiqNnhpCsNsn6g_VjZ4VizI3iQJcMS27</a></p>
+</aside>
+<aside class="footnote brackets" id="id46" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id47">23</a><span class="fn-bracket">]</span></span>
+<p><a class="reference external" href="https://www.intel.com/content/www/us/en/programmable/support/training/catalog.html?courseType=Online">https://www.intel.com/content/www/us/en/programmable/support/training/catalog.html?courseType=Online</a></p>
+</aside>
+<aside class="footnote brackets" id="id48" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id49">24</a><span class="fn-bracket">]</span></span>
+<p><a class="reference external" href="https://tinyfpga.com/">https://tinyfpga.com/</a></p>
+</aside>
+<aside class="footnote brackets" id="id50" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id51">25</a><span class="fn-bracket">]</span></span>
+<p><a class="reference external" href="https://www.eeweb.com/profile/duane-benson-2/articles/a-look-at-tinyfpga-boards">https://www.eeweb.com/profile/duane-benson-2/articles/a-look-at-tinyfpga-boards</a></p>
+</aside>
+<aside class="footnote brackets" id="id52" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id53">26</a><span class="fn-bracket">]</span></span>
+<p><a class="reference external" href="https://www.elektor.fr/tinyfpga-a1">https://www.elektor.fr/tinyfpga-a1</a></p>
+</aside>
+<aside class="footnote brackets" id="id54" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id55">27</a><span class="fn-bracket">]</span></span>
+<p><a class="reference external" href="https://www.elektor.fr/tinyfpga-ax2">https://www.elektor.fr/tinyfpga-ax2</a></p>
+</aside>
+<aside class="footnote brackets" id="id56" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id57">28</a><span class="fn-bracket">]</span></span>
+<p><a class="reference external" href="https://www.elektor.fr/tinyfpga-programmer">https://www.elektor.fr/tinyfpga-programmer</a></p>
+</aside>
+<aside class="footnote brackets" id="id58" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id59">29</a><span class="fn-bracket">]</span></span>
+<p><a class="reference external" href="https://numato.com/product/numato-opsis-fpga-based-open-video-platform/">https://numato.com/product/numato-opsis-fpga-based-open-video-platform/</a></p>
+</aside>
+<aside class="footnote brackets" id="id60" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id61">30</a><span class="fn-bracket">]</span></span>
+<p><a class="reference external" href="https://digilent.com/shop/boards-and-components/system-boards/">https://digilent.com/shop/boards-and-components/system-boards/</a></p>
+</aside>
+<aside class="footnote brackets" id="id62" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id63">31</a><span class="fn-bracket">]</span></span>
+<p><a class="reference external" href="https://digilent.com/shop/arty-a7-artix-7-fpga-development-board/">https://digilent.com/shop/arty-a7-artix-7-fpga-development-board/</a></p>
+</aside>
+<aside class="footnote brackets" id="id64" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id65">32</a><span class="fn-bracket">]</span></span>
+<p><a class="reference external" href="https://digilent.com/reference/programmable-logic/arty-a7/reference-manual?redirect=1">https://digilent.com/reference/programmable-logic/arty-a7/reference-manual?redirect=1</a></p>
+</aside>
+<aside class="footnote brackets" id="id66" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id67">33</a><span class="fn-bracket">]</span></span>
+<p><a class="reference external" href="https://digilent.com/shop/cmod-a7-35t-breadboardable-artix-7-fpga-module/">https://digilent.com/shop/cmod-a7-35t-breadboardable-artix-7-fpga-module/</a></p>
+</aside>
+<aside class="footnote brackets" id="id68" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id69">34</a><span class="fn-bracket">]</span></span>
+<p><a class="reference external" href="https://digilent.com/shop/cmod-s7-breadboardable-spartan-7-fpga-module/">https://digilent.com/shop/cmod-s7-breadboardable-spartan-7-fpga-module/</a></p>
+</aside>
+<aside class="footnote brackets" id="id70" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id71">35</a><span class="fn-bracket">]</span></span>
+<p><a class="reference external" href="https://www.tindie.com/products/tinyvision_ai/upduino-v21-low-cost-fpga-board/">https://www.tindie.com/products/tinyvision_ai/upduino-v21-low-cost-fpga-board/</a></p>
+</aside>
+<aside class="footnote brackets" id="id72" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id73">36</a><span class="fn-bracket">]</span></span>
+<p><a class="reference external" href="http://gnarlygrey.com/?i=1">http://gnarlygrey.com/?i=1</a></p>
+</aside>
+<aside class="footnote brackets" id="id74" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span>37<span class="fn-bracket">]</span></span>
+<span class="backrefs">(<a role="doc-backlink" href="#id75">1</a>,<a role="doc-backlink" href="#id76">2</a>)</span>
+<p><a class="reference external" href="http://www.clifford.at/icestorm/">http://www.clifford.at/icestorm/</a></p>
+</aside>
+<aside class="footnote brackets" id="id77" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id78">38</a><span class="fn-bracket">]</span></span>
+<p><a class="reference external" href="https://www.latticesemi.com/en/Products/FPGAandCPLD/iCE40UltraPlus">https://www.latticesemi.com/en/Products/FPGAandCPLD/iCE40UltraPlus</a></p>
+</aside>
+<aside class="footnote brackets" id="id79" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id80">39</a><span class="fn-bracket">]</span></span>
+<p><a class="reference external" href="https://icestudio.io/#lk-overview">https://icestudio.io/#lk-overview</a></p>
+</aside>
+<aside class="footnote brackets" id="id81" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id82">40</a><span class="fn-bracket">]</span></span>
+<p><a class="reference external" href="https://github.com/FPGAwars/icestudio">https://github.com/FPGAwars/icestudio</a></p>
+</aside>
+<aside class="footnote brackets" id="id83" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id84">41</a><span class="fn-bracket">]</span></span>
+<p><a class="reference external" href="https://symbiflow.github.io/">https://symbiflow.github.io/</a></p>
+</aside>
+</aside>
+</section>
+</section>
 
 
+            <div class="clearer"></div>
           </div>
         </div>
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-  <h3><a href="../../index.html">Table des matières</a></h3>
-  <ul>
+  <div>
+    <h3><a href="../../index.html">Table des matières</a></h3>
+    <ul>
 <li><a class="reference internal" href="#">FPGA*</a><ul>
 <li><a class="reference internal" href="#general">GENERAL</a><ul>
 <li><a class="reference internal" href="#doulos-ressources">Doulos (ressources)</a></li>
@@ -741,12 +785,17 @@ and is gradually being expanded to provide a comprehensive end-to-end FPGA synth
 </li>
 </ul>
 
-  <h4>Sujet précédent</h4>
-  <p class="topless"><a href="../robotique/merureDistance.html"
-                        title="Chapitre précédent">Robotique : mesure de distance</a></p>
-  <h4>Sujet suivant</h4>
-  <p class="topless"><a href="../raspberry/raspberry.html"
-                        title="Chapitre suivant">Raspberry pi*</a></p>
+  </div>
+  <div>
+    <h4>Sujet précédent</h4>
+    <p class="topless"><a href="../robotique/merureDistance.html"
+                          title="Chapitre précédent">Robotique : mesure de distance</a></p>
+  </div>
+  <div>
+    <h4>Sujet suivant</h4>
+    <p class="topless"><a href="../raspberry/raspberry.html"
+                          title="Chapitre suivant">Raspberry pi*</a></p>
+  </div>
   <div role="note" aria-label="source link">
     <h3>Cette page</h3>
     <ul class="this-page-menu">
@@ -758,12 +807,12 @@ and is gradually being expanded to provide a comprehensive end-to-end FPGA synth
   <h3 id="searchlabel">Recherche rapide</h3>
     <div class="searchformwrapper">
     <form class="search" action="../../search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
       <input type="submit" value="Go" />
     </form>
     </div>
 </div>
-<script>$('#searchbox').show(0);</script>
+<script>document.getElementById('searchbox').style.display = "block"</script>
         </div>
       </div>
       <div class="clearer"></div>
@@ -781,12 +830,13 @@ and is gradually being expanded to provide a comprehensive end-to-end FPGA synth
           <a href="../robotique/merureDistance.html" title="Robotique : mesure de distance"
              >précédent</a> |</li>
         <li class="nav-item nav-item-0"><a href="../../index.html">Documentation MajorLee&#39;s notes </a> &#187;</li>
-          <li class="nav-item nav-item-1"><a href="../hardware.html" >Hardware notes</a> &#187;</li> 
+          <li class="nav-item nav-item-1"><a href="../hardware.html" >Hardware notes</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">FPGA*</a></li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2019, J.SORANZO.
-      Créé avec <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.4.
+    &#169; Copyright 2019, J.SORANZO.
+      Créé en utilisant <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.1.2.
     </div>
   </body>
 </html>

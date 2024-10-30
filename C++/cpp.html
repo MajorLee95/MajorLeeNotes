@@ -1,20 +1,19 @@
-
 <!DOCTYPE html>
 
 <html lang="fr">
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
     <title>Mes notes sur C++ &#8212; Documentation MajorLee&#39;s notes </title>
-    <link rel="stylesheet" href="../_static/nature.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
-    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/language_data.js"></script>
-    <script src="../_static/translations.js"></script>
-    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../_static/nature.css?v=8fc2db88" />
+    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css?v=eafc0fe6" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js?v=3b36ad44"></script>
+    <script src="../_static/doctools.js?v=888ff710"></script>
+    <script src="../_static/sphinx_highlight.js?v=4825356b"></script>
+    <script src="../_static/translations.js?v=d99ca74e"></script>
+    <link rel="icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Recherche" href="../search.html" />
     <link rel="next" title="Note concernant Visal C++ 2013 *" href="visualCpp/visual.html" />
@@ -32,7 +31,8 @@
         <li class="right" >
           <a href="../hardware/nucleo/nucleo.html" title="NUCLEO board *"
              accesskey="P">précédent</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">Documentation MajorLee&#39;s notes </a> &#187;</li> 
+        <li class="nav-item nav-item-0"><a href="../index.html">Documentation MajorLee&#39;s notes </a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Mes notes sur C++</a></li> 
       </ul>
     </div>  
 
@@ -41,26 +41,26 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <div class="section" id="mes-notes-sur-c">
-<span id="index-0"></span><h1><a class="toc-backref" href="#sommaire">Mes notes sur C++</a><a class="headerlink" href="#mes-notes-sur-c" title="Lien permanent vers ce titre">¶</a></h1>
+  <section id="mes-notes-sur-c">
+<span id="index-0"></span><h1><a class="toc-backref" href="#sommaire" role="doc-backlink">Mes notes sur C++</a><a class="headerlink" href="#mes-notes-sur-c" title="Lien permanent vers cette rubrique">¶</a></h1>
 <dl class="field-list simple">
-<dt class="field-odd">Auteur</dt>
+<dt class="field-odd">Auteur<span class="colon">:</span></dt>
 <dd class="field-odd"><p>J.Soranzo</p>
 </dd>
-<dt class="field-even">Date</dt>
+<dt class="field-even">Date<span class="colon">:</span></dt>
 <dd class="field-even"><p>Novembre 2019</p>
 </dd>
-<dt class="field-odd">Update</dt>
+<dt class="field-odd">Update<span class="colon">:</span></dt>
 <dd class="field-odd"><p>15/03/2023</p>
 </dd>
-<dt class="field-even">Societe</dt>
+<dt class="field-even">Societe<span class="colon">:</span></dt>
 <dd class="field-even"><p>VoRoBoTics</p>
 </dd>
-<dt class="field-odd">Entity</dt>
+<dt class="field-odd">Entity<span class="colon">:</span></dt>
 <dd class="field-odd"><p>VoLAB</p>
 </dd>
 </dl>
-<div class="contents topic" id="sommaire">
+<nav class="contents" id="sommaire">
 <p class="topic-title">Sommaire</p>
 <ul class="simple">
 <li><p><a class="reference internal" href="#mes-notes-sur-c" id="id34">Mes notes sur C++</a></p>
@@ -120,19 +120,26 @@
 <li><p><a class="reference internal" href="#smart-pointer" id="id66">Smart pointer</a></p></li>
 <li><p><a class="reference internal" href="#callback-how-to" id="id67">callback how to</a></p></li>
 <li><p><a class="reference internal" href="#doxygen-avec-arduino" id="id68">Doxygen avec Arduino</a></p></li>
-<li><p><a class="reference internal" href="#uml" id="id69">UML</a></p>
+<li><p><a class="reference internal" href="#string-et-char-tbc-au-26-10-24" id="id69">String et char [] <strong>TBC au 26/10/24</strong></a></p>
 <ul>
-<li><p><a class="reference internal" href="#plantuml" id="id70">PlantUML</a></p></li>
+<li><p><a class="reference internal" href="#taille-d-un-chaine" id="id70">Taille d’un chaîne</a></p></li>
+<li><p><a class="reference internal" href="#trouver" id="id71">trouver</a></p></li>
+<li><p><a class="reference internal" href="#c-str-to-string-et-inversement" id="id72">c_str to String et inversement</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#ast-abstract-syntax-trees" id="id71">AST Abstract Syntax Trees</a></p></li>
-<li><p><a class="reference internal" href="#weblinks" id="id72">Weblinks</a></p></li>
+<li><p><a class="reference internal" href="#uml" id="id73">UML</a></p>
+<ul>
+<li><p><a class="reference internal" href="#plantuml" id="id74">PlantUML</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#ast-abstract-syntax-trees" id="id75">AST Abstract Syntax Trees</a></p></li>
+<li><p><a class="reference internal" href="#weblinks" id="id76">Weblinks</a></p></li>
 </ul>
 </li>
 </ul>
-</div>
+</nav>
 <div class="toctree-wrapper compound">
-<p class="caption"><span class="caption-text">Sous-articles:</span></p>
+<p class="caption" role="heading"><span class="caption-text">Sous-articles:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="visualCpp/visual.html">Note concernant Visal C++ 2013 *</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="visualCpp/visual.html#configuration">Configuration</a></li>
@@ -168,55 +175,55 @@
 </ul>
 </div>
 <p>Ceci n’est pas un cours sur le C++, il y en a déjà plein et de très bons voir celui par exemple de
-<a class="reference external" href="https://openclassrooms.com/fr/courses/1894236-programmez-avec-le-langage-c">Openclassrooms</a> <a class="footnote-reference brackets" href="#id2" id="id3">1</a></p>
+<a class="reference external" href="https://openclassrooms.com/fr/courses/1894236-programmez-avec-le-langage-c">Openclassrooms</a> <a class="footnote-reference brackets" href="#id2" id="id3" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a></p>
 <div class="without-title admonition seealso">
 <p class="admonition-title">Voir aussi</p>
 <p><strong>SITE D’AIDE</strong></p>
-<p><a class="reference external" href="https://cpp.developpez.com/cours/">Les meilleurs cours et tutoriels pour apprendre la programmation C++</a> <a class="footnote-reference brackets" href="#id4" id="id5">2</a></p>
+<p><a class="reference external" href="https://cpp.developpez.com/cours/">Les meilleurs cours et tutoriels pour apprendre la programmation C++</a> <a class="footnote-reference brackets" href="#id4" id="id5" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a></p>
 </div>
 <div class="without-title admonition seealso">
 <p class="admonition-title">Voir aussi</p>
 <p><strong>SITE D’AIDE</strong></p>
-<p><a class="reference external" href="https://bruce-eckel.developpez.com/livres/cpp/traduction/ticpp2vol1/">Penser en C++</a> <a class="footnote-reference brackets" href="#id6" id="id7">3</a></p>
+<p><a class="reference external" href="https://bruce-eckel.developpez.com/livres/cpp/traduction/ticpp2vol1/">Penser en C++</a> <a class="footnote-reference brackets" href="#id6" id="id7" role="doc-noteref"><span class="fn-bracket">[</span>3<span class="fn-bracket">]</span></a></p>
 </div>
 <p><strong>Voir aussi la map cpp_notes.xmind</strong></p>
-<div class="section" id="classe-membre-d-une-autre-classe">
-<h2><a class="toc-backref" href="#sommaire">Classe membre d’une autre classe</a><a class="headerlink" href="#classe-membre-d-une-autre-classe" title="Lien permanent vers ce titre">¶</a></h2>
+<section id="classe-membre-d-une-autre-classe">
+<h2><a class="toc-backref" href="#sommaire" role="doc-backlink">Classe membre d’une autre classe</a><a class="headerlink" href="#classe-membre-d-une-autre-classe" title="Lien permanent vers cette rubrique">¶</a></h2>
 <p>Il ne s’agit pas ici d’évoquer les classe fille et encore moins les classe virtuelle mais simplement
 une classe utilisée en tant que membre (attribut) d’une autre classe avec un constructeur ayant des
 paramètres.</p>
 <div class="without-title admonition seealso">
 <p class="admonition-title">Voir aussi</p>
 <p><strong>SITE D’AIDE</strong></p>
-<p><a class="reference external" href="https://www.developpez.net/forums/d1847623/c-cpp/cpp/debuter/integrer-classe-classe/">comment intégrer une classe dans une autre classe</a> <a class="footnote-reference brackets" href="#id8" id="id9">4</a></p>
+<p><a class="reference external" href="https://www.developpez.net/forums/d1847623/c-cpp/cpp/debuter/integrer-classe-classe/">comment intégrer une classe dans une autre classe</a> <a class="footnote-reference brackets" href="#id8" id="id9" role="doc-noteref"><span class="fn-bracket">[</span>4<span class="fn-bracket">]</span></a></p>
 </div>
-</div>
-<div class="section" id="rappels-eventuels-du-c">
-<h2><a class="toc-backref" href="#sommaire">Rappels éventuels du C</a><a class="headerlink" href="#rappels-eventuels-du-c" title="Lien permanent vers ce titre">¶</a></h2>
-<div class="section" id="variable-volatile">
-<span id="index-1"></span><h3><a class="toc-backref" href="#sommaire">Variable volatile</a><a class="headerlink" href="#variable-volatile" title="Lien permanent vers ce titre">¶</a></h3>
+</section>
+<section id="rappels-eventuels-du-c">
+<h2><a class="toc-backref" href="#sommaire" role="doc-backlink">Rappels éventuels du C</a><a class="headerlink" href="#rappels-eventuels-du-c" title="Lien permanent vers cette rubrique">¶</a></h2>
+<section id="variable-volatile">
+<span id="index-1"></span><h3><a class="toc-backref" href="#sommaire" role="doc-backlink">Variable volatile</a><a class="headerlink" href="#variable-volatile" title="Lien permanent vers cette rubrique">¶</a></h3>
 <p>En qualifiant par volatile le type d’une variable, le programmeur prévient le compilateur que cette
 variable peut être modifiée par un moyen extérieur au programme.</p>
-</div>
-</div>
-<div class="section" id="codding-styles-formatting">
-<h2><a class="toc-backref" href="#sommaire">Codding Styles/ formatting</a><a class="headerlink" href="#codding-styles-formatting" title="Lien permanent vers ce titre">¶</a></h2>
-<p><a class="reference external" href="https://google.github.io/styleguide/cppguide.html">Google C++ Style Guide</a> <a class="footnote-reference brackets" href="#id10" id="id11">5</a></p>
+</section>
+</section>
+<section id="codding-styles-formatting">
+<h2><a class="toc-backref" href="#sommaire" role="doc-backlink">Codding Styles/ formatting</a><a class="headerlink" href="#codding-styles-formatting" title="Lien permanent vers cette rubrique">¶</a></h2>
+<p><a class="reference external" href="https://google.github.io/styleguide/cppguide.html">Google C++ Style Guide</a> <a class="footnote-reference brackets" href="#id10" id="id11" role="doc-noteref"><span class="fn-bracket">[</span>5<span class="fn-bracket">]</span></a></p>
 <p>Dans Vscode:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">C_Cpp</span><span class="o">.</span><span class="n">clang_format_fallbackStyle</span> <span class="o">=</span> <span class="p">{</span> <span class="n">BasedOnStyle</span><span class="p">:</span> <span class="n">Google</span><span class="p">,</span> <span class="n">IndentWidth</span><span class="p">:</span> <span class="mi">4</span> <span class="p">}</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="c-operateurs-surcharge">
-<h2><a class="toc-backref" href="#sommaire">C++ opérateurs (surcharge)</a><a class="headerlink" href="#c-operateurs-surcharge" title="Lien permanent vers ce titre">¶</a></h2>
+</section>
+<section id="c-operateurs-surcharge">
+<h2><a class="toc-backref" href="#sommaire" role="doc-backlink">C++ opérateurs (surcharge)</a><a class="headerlink" href="#c-operateurs-surcharge" title="Lien permanent vers cette rubrique">¶</a></h2>
 <p>Même si l’on parle de classe, ceci n’est pas une méthode.
 C’est une fonction normale située à l’extérieur de toute classe.</p>
 <p>Exemple:</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">bool</span><span class="w"> </span><span class="k">operator</span><span class="o">==</span><span class="p">(</span><span class="n">Durée</span><span class="w"> </span><span class="k">const</span><span class="o">&amp;</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">Durée</span><span class="w"> </span><span class="k">const</span><span class="o">&amp;</span><span class="w"> </span><span class="n">b</span><span class="p">);</span>
 </pre></div>
 </div>
-<div class="section" id="surcharge-operateur">
-<h3><a class="toc-backref" href="#sommaire">Surcharge opérateur ==, &gt;, …</a><a class="headerlink" href="#surcharge-operateur" title="Lien permanent vers ce titre">¶</a></h3>
+<section id="surcharge-operateur">
+<h3><a class="toc-backref" href="#sommaire" role="doc-backlink">Surcharge opérateur ==, &gt;, …</a><a class="headerlink" href="#surcharge-operateur" title="Lien permanent vers cette rubrique">¶</a></h3>
 <p>Exemple complet:</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">bool</span><span class="w"> </span><span class="nf">Duree::estEgale</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">Duree</span><span class="w"> </span><span class="o">&amp;</span><span class="n">a</span><span class="p">)</span><span class="w"> </span><span class="k">const</span>
 <span class="p">{</span>
@@ -238,9 +245,9 @@ C’est une fonction normale située à l’extérieur de toute classe.</p>
 <p class="admonition-title">Note</p>
 <p>Attention au mot clé const à la fin de la méthode estEgale !</p>
 </div>
-</div>
-<div class="section" id="surcharge-des-operateurs-arithmetiques">
-<h3><a class="toc-backref" href="#sommaire">Surcharge des opérateurs arithmétiques</a><a class="headerlink" href="#surcharge-des-operateurs-arithmetiques" title="Lien permanent vers ce titre">¶</a></h3>
+</section>
+<section id="surcharge-des-operateurs-arithmetiques">
+<h3><a class="toc-backref" href="#sommaire" role="doc-backlink">Surcharge des opérateurs arithmétiques</a><a class="headerlink" href="#surcharge-des-operateurs-arithmetiques" title="Lien permanent vers cette rubrique">¶</a></h3>
 <p>Exemple avec +, on commence par surcharger l’opérateur de raccourci +=.</p>
 <p>Comme il modifie l’objet lui-même cette surcharge est un méthode de l’objet.</p>
 <div class="admonition note">
@@ -274,9 +281,9 @@ C’est une fonction normale située à l’extérieur de toute classe.</p>
 <p>Puisque a est passée sous forme de constante, on ne peut écrire a +=b d’où la copie qui utilise
 le constructeur de copie.</p>
 </div>
-</div>
-<div class="section" id="surcharge-de-l-operateur">
-<h3><a class="toc-backref" href="#sommaire">Surcharge de l’opérateur &lt;&lt;</a><a class="headerlink" href="#surcharge-de-l-operateur" title="Lien permanent vers ce titre">¶</a></h3>
+</section>
+<section id="surcharge-de-l-operateur">
+<h3><a class="toc-backref" href="#sommaire" role="doc-backlink">Surcharge de l’opérateur &lt;&lt;</a><a class="headerlink" href="#surcharge-de-l-operateur" title="Lien permanent vers cette rubrique">¶</a></h3>
 <p>Cette surcharge est un peu particulière. On commence, normalement pas créer un méthode dans l’objet</p>
 <p>Exemple la méthode affiche()</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span><span class="w"> </span><span class="nf">Duree::afficher</span><span class="p">(</span><span class="n">ostream</span><span class="w"> </span><span class="o">&amp;</span><span class="n">flux</span><span class="p">)</span><span class="w"> </span><span class="k">const</span>
@@ -296,10 +303,10 @@ le constructeur de copie.</p>
 </pre></div>
 </div>
 <hr class="docutils" />
-</div>
-</div>
-<div class="section" id="namespace">
-<span id="index-2"></span><h2><a class="toc-backref" href="#sommaire">Namespace</a><a class="headerlink" href="#namespace" title="Lien permanent vers ce titre">¶</a></h2>
+</section>
+</section>
+<section id="namespace">
+<span id="index-2"></span><h2><a class="toc-backref" href="#sommaire" role="doc-backlink">Namespace</a><a class="headerlink" href="#namespace" title="Lien permanent vers cette rubrique">¶</a></h2>
 <p>Cela permet de préciser un nom de variable, de clase et/ou de fonction.</p>
 <p>Exemple 2 variable/ou fonctions/ ou classe ayant le même nom : rectangle dans 2  couples de
 fichiers .h et .cpp</p>
@@ -327,12 +334,12 @@ fichiers .h et .cpp</p>
 nom dans un espace en particuler et comme on ne sait pas à l’avance où vont être inclu les .h
 A priori, partout, on risque d’avoir des conflits de noms.</p>
 <p>Quelques références:</p>
-<p><a class="reference external" href="https://docs.microsoft.com/fr-fr/cpp/cpp/namespaces-cpp?view=vs-2019">Namesspace sur le site Microsoft</a> <a class="footnote-reference brackets" href="#id12" id="id13">6</a></p>
-<p><a class="reference external" href="https://cpp.developpez.com/faq/cpp/?page=Les-namespaces">Namespace sur developpez.com</a> <a class="footnote-reference brackets" href="#id14" id="id15">7</a></p>
+<p><a class="reference external" href="https://docs.microsoft.com/fr-fr/cpp/cpp/namespaces-cpp?view=vs-2019">Namesspace sur le site Microsoft</a> <a class="footnote-reference brackets" href="#id12" id="id13" role="doc-noteref"><span class="fn-bracket">[</span>6<span class="fn-bracket">]</span></a></p>
+<p><a class="reference external" href="https://cpp.developpez.com/faq/cpp/?page=Les-namespaces">Namespace sur developpez.com</a> <a class="footnote-reference brackets" href="#id14" id="id15" role="doc-noteref"><span class="fn-bracket">[</span>7<span class="fn-bracket">]</span></a></p>
 <hr class="docutils" />
-</div>
-<div class="section" id="template">
-<span id="index-3"></span><h2><a class="toc-backref" href="#sommaire">Template</a><a class="headerlink" href="#template" title="Lien permanent vers ce titre">¶</a></h2>
+</section>
+<section id="template">
+<span id="index-3"></span><h2><a class="toc-backref" href="#sommaire" role="doc-backlink">Template</a><a class="headerlink" href="#template" title="Lien permanent vers cette rubrique">¶</a></h2>
 <p>Permet de ne pas avoir à réécrire le même code d’une fonction (voir d’une classe entière)
 pour différentes classes en argument.</p>
 <p>Dès qu’on voit &lt;truc&gt; c’est qu’il doit y avoir du template la dessous.</p>
@@ -344,7 +351,7 @@ pour différentes classes en argument.</p>
 </div>
 <p>Template et typename sont des mots clés. T devient le type de variable utilisé dans la fonction.</p>
 <p>Il faut que le corps de la fonction soit strictement identique pour tous les objets traités.</p>
-<p>Voir l”<a class="reference external" href="https://openclassrooms.com/fr/courses/1894236-programmez-avec-le-langage-c/1903999-creez-des-templates">exemple de la fonction maximum sur Openclassroom</a> <a class="footnote-reference brackets" href="#id16" id="id17">8</a></p>
+<p>Voir l”<a class="reference external" href="https://openclassrooms.com/fr/courses/1894236-programmez-avec-le-langage-c/1903999-creez-des-templates">exemple de la fonction maximum sur Openclassroom</a> <a class="footnote-reference brackets" href="#id16" id="id17" role="doc-noteref"><span class="fn-bracket">[</span>8<span class="fn-bracket">]</span></a></p>
 <p>Au niveau appel, on précise à chaque appel de la fonction,
 le type qu’on veut utiliser entre &lt; et &gt;:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">_fontion</span><span class="o">&lt;</span><span class="n">type_utilisé</span><span class="o">&gt;</span><span class="p">(</span><span class="n">param1</span><span class="p">,</span> <span class="n">param2</span><span class="p">,</span> <span class="o">...</span><span class="p">)</span>
@@ -354,8 +361,8 @@ le type qu’on veut utiliser entre &lt; et &gt;:</p>
 <p class="admonition-title">Avertissement</p>
 <p>Prototype et corps de la fonction template DOIVENT se trouver dans le .h</p>
 </div>
-<div class="section" id="specialisation">
-<h3><a class="toc-backref" href="#sommaire">Spécialisation</a><a class="headerlink" href="#specialisation" title="Lien permanent vers ce titre">¶</a></h3>
+<section id="specialisation">
+<h3><a class="toc-backref" href="#sommaire" role="doc-backlink">Spécialisation</a><a class="headerlink" href="#specialisation" title="Lien permanent vers cette rubrique">¶</a></h3>
 <p>Une fois le template créé, on peut le spécialiser pour un type en particulier. Cela permet de
 changer le comportement de la focntion pour un type en particulier.</p>
 <p>C’est la partie déclarative qui change:</p>
@@ -368,10 +375,10 @@ changer le comportement de la focntion pour un type en particulier.</p>
 - on précise le type dans le header de la fonction</p>
 <p>L’ordre des déclarations est important : d’abord la version générique puis la ou les spécialisations</p>
 <hr class="docutils" />
-</div>
-</div>
-<div class="section" id="membres-statiques">
-<span id="index-4"></span><h2><a class="toc-backref" href="#sommaire">Membres statiques</a><a class="headerlink" href="#membres-statiques" title="Lien permanent vers ce titre">¶</a></h2>
+</section>
+</section>
+<section id="membres-statiques">
+<span id="index-4"></span><h2><a class="toc-backref" href="#sommaire" role="doc-backlink">Membres statiques</a><a class="headerlink" href="#membres-statiques" title="Lien permanent vers cette rubrique">¶</a></h2>
 <p>Un attribut statique peut être accédé de l’intérieur comme de l’extérieur de la classe.</p>
 <p>Une méthode statique ne peut accéder qu’aux attributs statiques de la classe.</p>
 <div class="admonition warning">
@@ -383,16 +390,16 @@ le faire précédé du nom de la classe.</p>
 <span class="n">NTPClient</span><span class="w"> </span><span class="o">*</span><span class="n">CRtc</span><span class="o">::</span><span class="n">p_timeClient</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">nullptr</span><span class="p">;</span>
 </pre></div>
 </div>
-<div class="section" id="variables-static-c">
-<h3><a class="toc-backref" href="#sommaire">Variables static C</a><a class="headerlink" href="#variables-static-c" title="Lien permanent vers ce titre">¶</a></h3>
+<section id="variables-static-c">
+<h3><a class="toc-backref" href="#sommaire" role="doc-backlink">Variables static C</a><a class="headerlink" href="#variables-static-c" title="Lien permanent vers cette rubrique">¶</a></h3>
 <p>Une variable déclarée avec static aura sa portée limitée à l’unité de compilation où elle est
 déclarée. Du coup 2 variables avec le même nom pourront être déclarées dans 2 unité de compilation
 séparées. Sa durée de vie est celle du programme.</p>
 <hr class="docutils" />
-</div>
-</div>
-<div class="section" id="passage-par-reference">
-<span id="index-5"></span><h2><a class="toc-backref" href="#sommaire">Passage par référence</a><a class="headerlink" href="#passage-par-reference" title="Lien permanent vers ce titre">¶</a></h2>
+</section>
+</section>
+<section id="passage-par-reference">
+<span id="index-5"></span><h2><a class="toc-backref" href="#sommaire" role="doc-backlink">Passage par référence</a><a class="headerlink" href="#passage-par-reference" title="Lien permanent vers cette rubrique">¶</a></h2>
 <p>int fonction( int &amp;variable )</p>
 <p>Ne pas confondre avec un pointeur. A l’intérieur de la fonction on utilise seulement le nom de la
 variable passée et en plus pas la syntaxe -&gt; si il s’agit d’un objet.</p>
@@ -423,39 +430,39 @@ variable passée et en plus pas la syntaxe -&gt; si il s’agit d’un objet.</p
 </ul>
 </div></blockquote>
 <hr class="docutils" />
-</div>
-<div class="section" id="heritage">
-<span id="index-6"></span><h2><a class="toc-backref" href="#sommaire">Héritage</a><a class="headerlink" href="#heritage" title="Lien permanent vers ce titre">¶</a></h2>
+</section>
+<section id="heritage">
+<span id="index-6"></span><h2><a class="toc-backref" href="#sommaire" role="doc-backlink">Héritage</a><a class="headerlink" href="#heritage" title="Lien permanent vers cette rubrique">¶</a></h2>
 <p>Il y a héritage quand on peut dire : « A est un B ».</p>
 <p>Une voiture est un véhicule</p>
 <p>un carré est une forme géomètrique</p>
 <p>Une fenêtre est un objet graphique</p>
 <p>Un bouton est un widget</p>
 <hr class="docutils" />
-</div>
-<div class="section" id="polymorphisme">
-<span id="index-7"></span><h2><a class="toc-backref" href="#sommaire">Polymorphisme</a><a class="headerlink" href="#polymorphisme" title="Lien permanent vers ce titre">¶</a></h2>
+</section>
+<section id="polymorphisme">
+<span id="index-7"></span><h2><a class="toc-backref" href="#sommaire" role="doc-backlink">Polymorphisme</a><a class="headerlink" href="#polymorphisme" title="Lien permanent vers cette rubrique">¶</a></h2>
 <p>Dans le cas de l’héritage, c’est quand une méthode d’une classe adapte automatiquement son
 comportement en fonction de la nature de l’objet qui lui est passé.</p>
 <p>C’est rendu possible grâce au mot clé virtual (il est nécessaire alors de passer soit un <strong>pointeur
 ou une référence</strong>).</p>
 <p>On parle aussi de <span class="target" id="index-8"></span>résolution dynamique de liens.</p>
 <p>Le destructeur doit toujours être virtuel si on utilise le polymorphisme.</p>
-<p><a class="reference external" href="https://openclassrooms.com/fr/courses/1894236-programmez-avec-le-langage-c/1898632-mettez-en-oeuvre-le-polymorphisme#/id/r-1908359">Plus d’informations sur Openclassroom</a> <a class="footnote-reference brackets" href="#id18" id="id19">9</a></p>
-</div>
-<div class="section" id="classe-amie-et-fonction-amie">
-<span id="index-9"></span><h2><a class="toc-backref" href="#sommaire">Classe amie et fonction amie</a><a class="headerlink" href="#classe-amie-et-fonction-amie" title="Lien permanent vers ce titre">¶</a></h2>
+<p><a class="reference external" href="https://openclassrooms.com/fr/courses/1894236-programmez-avec-le-langage-c/1898632-mettez-en-oeuvre-le-polymorphisme#/id/r-1908359">Plus d’informations sur Openclassroom</a> <a class="footnote-reference brackets" href="#id18" id="id19" role="doc-noteref"><span class="fn-bracket">[</span>9<span class="fn-bracket">]</span></a></p>
+</section>
+<section id="classe-amie-et-fonction-amie">
+<span id="index-9"></span><h2><a class="toc-backref" href="#sommaire" role="doc-backlink">Classe amie et fonction amie</a><a class="headerlink" href="#classe-amie-et-fonction-amie" title="Lien permanent vers cette rubrique">¶</a></h2>
 <p>Une simple fonction peut être déclarée amie d’une classe. L’intérêt qu’elle peut accéder aux
 méthodes privées de la classe.</p>
 <p>Le mot clé est friend. Pour une fonction cela donne:</p>
 <p>friend <em>type fonction();</em> <strong>que l’on place à l’intérieur de la déclaration de la classe</strong></p>
 <p>Pour une classe, il faut indiqué dans le header de quelle classe elle est amie</p>
 <p>friend class <em>monAmie;</em></p>
-<p><a class="reference external" href="https://openclassrooms.com/fr/courses/1894236-programmez-avec-le-langage-c/1898734-utilisez-les-elements-statiques-et-lamitie#/id/r-1908555">Exemple sur OCRoom</a> <a class="footnote-reference brackets" href="#id20" id="id21">10</a></p>
+<p><a class="reference external" href="https://openclassrooms.com/fr/courses/1894236-programmez-avec-le-langage-c/1898734-utilisez-les-elements-statiques-et-lamitie#/id/r-1908555">Exemple sur OCRoom</a> <a class="footnote-reference brackets" href="#id20" id="id21" role="doc-noteref"><span class="fn-bracket">[</span>10<span class="fn-bracket">]</span></a></p>
 <hr class="docutils" />
-</div>
-<div class="section" id="vector">
-<span id="index-10"></span><h2><a class="toc-backref" href="#sommaire">Vector</a><a class="headerlink" href="#vector" title="Lien permanent vers ce titre">¶</a></h2>
+</section>
+<section id="vector">
+<span id="index-10"></span><h2><a class="toc-backref" href="#sommaire" role="doc-backlink">Vector</a><a class="headerlink" href="#vector" title="Lien permanent vers cette rubrique">¶</a></h2>
 <p>la syntaxe vector&lt;int&gt; tableau(10) permet de créer des tableau dynamique.</p>
 <div class="admonition warning">
 <p class="admonition-title">Avertissement</p>
@@ -467,7 +474,7 @@ méthodes privées de la classe.</p>
 <p>Pour ajouter des éléemtns, on utilise la méthode push_back()</p>
 <p>Pour supprimer des éléments, on utilise la méthode pop_back()</p>
 <p>Pour connaître la taille, on utilise la méthode size()</p>
-<p>Voir sur <a class="reference external" href="https://fr.cppreference.com/w/cpp/container/vector">vector sur cppreference.com</a> <a class="footnote-reference brackets" href="#id22" id="id23">11</a> cette classe est beaucoup plus riche.</p>
+<p>Voir sur <a class="reference external" href="https://fr.cppreference.com/w/cpp/container/vector">vector sur cppreference.com</a> <a class="footnote-reference brackets" href="#id22" id="id23" role="doc-noteref"><span class="fn-bracket">[</span>11<span class="fn-bracket">]</span></a> cette classe est beaucoup plus riche.</p>
 <p>Une petite paranthèse sur iterator : introduit les fonctions next(), prev(), advance()</p>
 <p>#include &lt;iterator&gt; (fait partie de std::)</p>
 <p>On pourrait aussi parler de list</p>
@@ -479,8 +486,8 @@ méthodes privées de la classe.</p>
 <span class="o">//</span><span class="kn">from</span> <span class="nn">cppreference.com</span>
 </pre></div>
 </div>
-<div class="section" id="iterer-un-tableau-rappel">
-<span id="index-11"></span><h3><a class="toc-backref" href="#sommaire">Itérer un tableau rappel</a><a class="headerlink" href="#iterer-un-tableau-rappel" title="Lien permanent vers ce titre">¶</a></h3>
+<section id="iterer-un-tableau-rappel">
+<span id="index-11"></span><h3><a class="toc-backref" href="#sommaire" role="doc-backlink">Itérer un tableau rappel</a><a class="headerlink" href="#iterer-un-tableau-rappel" title="Lien permanent vers cette rubrique">¶</a></h3>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="n">tableau</span><span class="p">[]</span><span class="w"> </span><span class="p">...</span>
 <span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">tableau</span><span class="p">)</span><span class="w"> </span><span class="n">focntionne</span>
 
@@ -488,18 +495,18 @@ méthodes privées de la classe.</p>
 <span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="o">&amp;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">v</span><span class="p">)</span><span class="w">  </span><span class="c1">//subtilité &amp;</span>
 </pre></div>
 </div>
-</div>
-</div>
-<div class="section" id="classe-abstraite-et-methodes-virtuelles-pures">
-<span id="index-12"></span><h2><a class="toc-backref" href="#sommaire">Classe abstraite et méthodes virtuelles pures</a><a class="headerlink" href="#classe-abstraite-et-methodes-virtuelles-pures" title="Lien permanent vers ce titre">¶</a></h2>
+</section>
+</section>
+<section id="classe-abstraite-et-methodes-virtuelles-pures">
+<span id="index-12"></span><h2><a class="toc-backref" href="#sommaire" role="doc-backlink">Classe abstraite et méthodes virtuelles pures</a><a class="headerlink" href="#classe-abstraite-et-methodes-virtuelles-pures" title="Lien permanent vers cette rubrique">¶</a></h2>
 <p>Une classe abstraite est une classe qui contient <strong>au moins</strong> une méthode virtuelle pure.</p>
 <p>Une méthode virtuelle pure est une classe virtuelle dont le proto se termine par =0 et qui n’a pas
 d’implémentation.</p>
 <p>On ne peut pas créer d’instance de classe abstraite mais on peut créer un pointeur sur une classe
 abstraite (pour ensuite l’initialiser sur une classe fille).</p>
-</div>
-<div class="section" id="fonctions-qui-retourne-un-reference">
-<h2><a class="toc-backref" href="#sommaire">Fonctions qui retourne un référence</a><a class="headerlink" href="#fonctions-qui-retourne-un-reference" title="Lien permanent vers ce titre">¶</a></h2>
+</section>
+<section id="fonctions-qui-retourne-un-reference">
+<h2><a class="toc-backref" href="#sommaire" role="doc-backlink">Fonctions qui retourne un référence</a><a class="headerlink" href="#fonctions-qui-retourne-un-reference" title="Lien permanent vers cette rubrique">¶</a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>returning a reference !
     super puissant !
     cf exemple 13 chapitre 5 du livre Beginning Visual C++® 2013 de Ivor Horton
@@ -522,9 +529,9 @@ Donc oui c’est hyperdangereux !</p>
 <p>Never, ever, return a reference to a local variable from a function.</p>
 <p>Permet la surcharcharge de l’opérateur = comme dans l’exemle du livre d’Ivor Horton page 342.</p>
 <hr class="docutils" />
-</div>
-<div class="section" id="constructeur-de-copie">
-<span id="index-13"></span><h2><a class="toc-backref" href="#sommaire">Constructeur de copie</a><a class="headerlink" href="#constructeur-de-copie" title="Lien permanent vers ce titre">¶</a></h2>
+</section>
+<section id="constructeur-de-copie">
+<span id="index-13"></span><h2><a class="toc-backref" href="#sommaire" role="doc-backlink">Constructeur de copie</a><a class="headerlink" href="#constructeur-de-copie" title="Lien permanent vers cette rubrique">¶</a></h2>
 <p>Comme le <span class="target" id="index-14"></span>constructeur par défaut, tout compilateur qui se respect crée automatiquement
 un <span class="target" id="index-15"></span>constructeur de copie. Ainsi qu’un opérateur d’affectation par défaut qui peut être très
 dangereux pour des objets qui affecte de la memoire dynamique à leur attributs !</p>
@@ -555,8 +562,8 @@ sous forme de pointeurs</strong>. Il est alors <strong>nécessaire</strong> de f
 <span class="c1">//Sauf les commentaires !</span>
 </pre></div>
 </div>
-<div class="section" id="id1">
-<h3><a class="toc-backref" href="#sommaire">Surcharge de l’opérateur =</a><a class="headerlink" href="#id1" title="Lien permanent vers ce titre">¶</a></h3>
+<section id="id1">
+<h3><a class="toc-backref" href="#sommaire" role="doc-backlink">Surcharge de l’opérateur =</a><a class="headerlink" href="#id1" title="Lien permanent vers cette rubrique">¶</a></h3>
 <p>Si il s’avère nécessaire de surcharger l’opérateur de copie, c’est qu’il est nécessaire de le faire
 également pour l’opérateur =</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">Classe</span><span class="o">&amp;</span><span class="w"> </span><span class="n">Classe</span><span class="o">::</span><span class="k">operator</span><span class="o">=</span><span class="p">(</span><span class="n">Classe</span><span class="w"> </span><span class="k">const</span><span class="o">&amp;</span><span class="w"> </span><span class="n">objetACopier</span><span class="p">)</span>
@@ -576,25 +583,25 @@ sous forme de pointeurs</strong>. Il est alors <strong>nécessaire</strong> de f
 </pre></div>
 </div>
 <hr class="docutils" />
-</div>
-</div>
-<div class="section" id="printf-format">
-<span id="index-16"></span><h2><a class="toc-backref" href="#sommaire">printf format</a><a class="headerlink" href="#printf-format" title="Lien permanent vers ce titre">¶</a></h2>
+</section>
+</section>
+<section id="printf-format">
+<span id="index-16"></span><h2><a class="toc-backref" href="#sommaire" role="doc-backlink">printf format</a><a class="headerlink" href="#printf-format" title="Lien permanent vers cette rubrique">¶</a></h2>
 <p>Format utilisable dans les <span class="target" id="index-17"></span>printf</p>
 <p>%05d pour un entier signé précédé de 0</p>
 <p>%05lu entier long non signé précédé de 0</p>
 <p>autres possibilitées : les fonctions du style ultoa()</p>
 <p>%c : pour que cela fonctionne bie, il faut que la chaine soit de la forme “x” et pas « x » au moins
 dans le monde ARDUINO</p>
-</div>
-<div class="section" id="typedef-struct-co">
-<span id="index-18"></span><h2><a class="toc-backref" href="#sommaire">Typedef, struct &amp; co</a><a class="headerlink" href="#typedef-struct-co" title="Lien permanent vers ce titre">¶</a></h2>
-<div class="section" id="typedef">
-<h3><a class="toc-backref" href="#sommaire">Typedef</a><a class="headerlink" href="#typedef" title="Lien permanent vers ce titre">¶</a></h3>
+</section>
+<section id="typedef-struct-co">
+<span id="index-18"></span><h2><a class="toc-backref" href="#sommaire" role="doc-backlink">Typedef, struct &amp; co</a><a class="headerlink" href="#typedef-struct-co" title="Lien permanent vers cette rubrique">¶</a></h2>
+<section id="typedef">
+<h3><a class="toc-backref" href="#sommaire" role="doc-backlink">Typedef</a><a class="headerlink" href="#typedef" title="Lien permanent vers cette rubrique">¶</a></h3>
 <p>typedef <em>type_connu nouveau_nom</em>; <strong>Alternative C++11</strong> : using _newName = _oldType ;</p>
-</div>
-<div class="section" id="struct">
-<h3><a class="toc-backref" href="#sommaire">struct</a><a class="headerlink" href="#struct" title="Lien permanent vers ce titre">¶</a></h3>
+</section>
+<section id="struct">
+<h3><a class="toc-backref" href="#sommaire" role="doc-backlink">struct</a><a class="headerlink" href="#struct" title="Lien permanent vers cette rubrique">¶</a></h3>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">struct</span><span class="w"> </span><span class="nc">_structName</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">_elelments</span><span class="p">;</span><span class="w"> </span><span class="p">};</span>
 </pre></div>
 </div>
@@ -627,27 +634,31 @@ arduino</p>
 
 <span class="k">typedef</span><span class="w"> </span><span class="k">struct</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="p">;</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">y</span><span class="p">;</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="n">autrePoint_T</span><span class="p">;</span>
 <span class="n">autrePoint_T</span><span class="w"> </span><span class="n">deuxeimePoint</span><span class="p">;</span>
+
+<span class="c1">//ou encore sans typedef:</span>
+<span class="k">struct</span><span class="w"> </span><span class="nc">name_t</span><span class="p">{</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="p">;</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">y</span><span class="p">;</span><span class="w"> </span><span class="p">};</span>
+<span class="n">name_T</span><span class="w"> </span><span class="n">deuxeimePoint</span><span class="p">;</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="enum">
-<h3><a class="toc-backref" href="#sommaire">enum</a><a class="headerlink" href="#enum" title="Lien permanent vers ce titre">¶</a></h3>
+</section>
+<section id="enum">
+<h3><a class="toc-backref" href="#sommaire" role="doc-backlink">enum</a><a class="headerlink" href="#enum" title="Lien permanent vers cette rubrique">¶</a></h3>
 <p>Même schéma que struct</p>
 <blockquote>
 <div><p>enum _enumName { _elements;  };</p>
 </div></blockquote>
-</div>
-<div class="section" id="typedef-et-les-fonctions">
-<h3><a class="toc-backref" href="#sommaire">typedef et les fonctions</a><a class="headerlink" href="#typedef-et-les-fonctions" title="Lien permanent vers ce titre">¶</a></h3>
+</section>
+<section id="typedef-et-les-fonctions">
+<h3><a class="toc-backref" href="#sommaire" role="doc-backlink">typedef et les fonctions</a><a class="headerlink" href="#typedef-et-les-fonctions" title="Lien permanent vers cette rubrique">¶</a></h3>
 <p>typedef pour déclarer des profile de fonction (souvent avec des pointeur sur fonction):</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">typedef</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="p">(</span><span class="o">*</span><span class="n">t_somefunc</span><span class="p">)(</span><span class="kt">int</span><span class="p">,</span><span class="kt">int</span><span class="p">);</span>
 <span class="kt">int</span><span class="w"> </span><span class="nf">product</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">u</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">v</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">u</span><span class="o">*</span><span class="n">v</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
 <span class="n">t_somefunc</span><span class="w"> </span><span class="n">afunc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">&amp;</span><span class="n">product</span><span class="p">;</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="champs-de-bits">
-<h3><a class="toc-backref" href="#sommaire">Champs de bits</a><a class="headerlink" href="#champs-de-bits" title="Lien permanent vers ce titre">¶</a></h3>
+</section>
+<section id="champs-de-bits">
+<h3><a class="toc-backref" href="#sommaire" role="doc-backlink">Champs de bits</a><a class="headerlink" href="#champs-de-bits" title="Lien permanent vers cette rubrique">¶</a></h3>
 <p>Union champs de bits</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">union</span><span class="w"> </span><span class="nc">CINAStatHyb_t</span><span class="p">{</span>
 <span class="k">struct</span><span class="w"> </span><span class="p">{</span>
@@ -663,9 +674,9 @@ arduino</p>
 </pre></div>
 </div>
 <p>Il est vivement conseillé de faire des essais afin d’être sur de l’endianess de la machine</p>
-</div>
-<div class="section" id="exemple-trame-serie">
-<h3><a class="toc-backref" href="#sommaire">Exemple trame série</a><a class="headerlink" href="#exemple-trame-serie" title="Lien permanent vers ce titre">¶</a></h3>
+</section>
+<section id="exemple-trame-serie">
+<h3><a class="toc-backref" href="#sommaire" role="doc-backlink">Exemple trame série</a><a class="headerlink" href="#exemple-trame-serie" title="Lien permanent vers cette rubrique">¶</a></h3>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">typedef</span><span class="w"> </span><span class="k">union</span><span class="p">{</span>
 <span class="w">    </span><span class="k">struct</span><span class="p">{</span>
 <span class="w">        </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">DHTstatus</span><span class="p">;</span>
@@ -713,10 +724,10 @@ arduino</p>
 <span class="p">}</span>
 </pre></div>
 </div>
-</div>
-</div>
-<div class="section" id="smart-pointer">
-<h2><a class="toc-backref" href="#sommaire">Smart pointer</a><a class="headerlink" href="#smart-pointer" title="Lien permanent vers ce titre">¶</a></h2>
+</section>
+</section>
+<section id="smart-pointer">
+<h2><a class="toc-backref" href="#sommaire" role="doc-backlink">Smart pointer</a><a class="headerlink" href="#smart-pointer" title="Lien permanent vers cette rubrique">¶</a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">smart</span> <span class="n">pointer</span>
     <span class="n">A</span> <span class="n">revoir</span>
         <span class="n">wrox</span><span class="o">-</span><span class="n">press</span><span class="o">-</span><span class="n">ivor</span><span class="o">-</span><span class="n">horton</span><span class="o">-</span><span class="n">s</span><span class="o">-</span><span class="n">beginning</span><span class="o">-</span><span class="n">visual</span><span class="o">-</span><span class="n">c</span><span class="o">-</span><span class="mi">2013</span><span class="o">-</span><span class="mf">2014.</span><span class="n">pdf</span>
@@ -734,9 +745,9 @@ arduino</p>
     <span class="n">weak_ptr</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="callback-how-to">
-<h2><a class="toc-backref" href="#sommaire">callback how to</a><a class="headerlink" href="#callback-how-to" title="Lien permanent vers ce titre">¶</a></h2>
+</section>
+<section id="callback-how-to">
+<h2><a class="toc-backref" href="#sommaire" role="doc-backlink">callback how to</a><a class="headerlink" href="#callback-how-to" title="Lien permanent vers cette rubrique">¶</a></h2>
 <p>A approfondir</p>
 <p>Un truc sympa c’est de déclarer un nouveau type:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">typedef</span> <span class="n">void</span> <span class="p">(</span><span class="o">*</span><span class="n">timer_callback</span><span class="p">)(</span><span class="n">void</span><span class="p">);</span>
@@ -747,32 +758,57 @@ arduino</p>
 </pre></div>
 </div>
 <hr class="docutils" />
-</div>
-<div class="section" id="doxygen-avec-arduino">
-<span id="index-19"></span><h2><a class="toc-backref" href="#sommaire">Doxygen avec Arduino</a><a class="headerlink" href="#doxygen-avec-arduino" title="Lien permanent vers ce titre">¶</a></h2>
+</section>
+<section id="doxygen-avec-arduino">
+<span id="index-19"></span><h2><a class="toc-backref" href="#sommaire" role="doc-backlink">Doxygen avec Arduino</a><a class="headerlink" href="#doxygen-avec-arduino" title="Lien permanent vers cette rubrique">¶</a></h2>
 <p>Il y 2 parmaètres à fixer dans Doxygen pour prendre en compte les fichiers .ino:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">FILE_PATTERNS</span> <span class="o">=</span> <span class="p">[</span><span class="o">...</span><span class="p">]</span> <span class="o">*.</span><span class="n">ino</span> <span class="n">sous</span> <span class="n">Input</span>
 <span class="n">EXTENSION_MAPPING</span> <span class="o">=</span> <span class="n">ino</span><span class="o">=</span><span class="n">c</span> <span class="n">under</span> <span class="s2">&quot;Project&quot;</span>
 </pre></div>
 </div>
+</section>
+<section id="string-et-char-tbc-au-26-10-24">
+<span id="index-20"></span><h2><a class="toc-backref" href="#sommaire" role="doc-backlink">String et char [] <strong>TBC au 26/10/24</strong></a><a class="headerlink" href="#string-et-char-tbc-au-26-10-24" title="Lien permanent vers cette rubrique">¶</a></h2>
+<p>un bonne fois pour toutes</p>
+<p>On parle de std::String en cpp pure (https://cplusplus.com/reference/string/) mais de String chez ARDUINO</p>
+<p>zt de C String pour char * : <a class="reference external" href="https://cplusplus.com/reference/cstring/">https://cplusplus.com/reference/cstring/</a></p>
+<section id="taille-d-un-chaine">
+<h3><a class="toc-backref" href="#sommaire" role="doc-backlink">Taille d’un chaîne</a><a class="headerlink" href="#taille-d-un-chaine" title="Lien permanent vers cette rubrique">¶</a></h3>
+<p>string.size() ou .length() (synonymes) mais pas chez ARDUINO seulement length();</p>
+<p>et en C string : size_t strlen( const char * str ) mais par chez ARDUINO (en fait si : pas dans le ref mais compile quand même !)</p>
+</section>
+<section id="trouver">
+<h3><a class="toc-backref" href="#sommaire" role="doc-backlink">trouver</a><a class="headerlink" href="#trouver" title="Lien permanent vers cette rubrique">¶</a></h3>
+<dl class="simple">
+<dt>cpp::</dt><dd><p>TBC</p>
+</dd>
+</dl>
+<p>Rechercher</p>
+<p>nettoyer</p>
+<p>longueur</p>
+</section>
+<section id="c-str-to-string-et-inversement">
+<h3><a class="toc-backref" href="#sommaire" role="doc-backlink">c_str to String et inversement</a><a class="headerlink" href="#c-str-to-string-et-inversement" title="Lien permanent vers cette rubrique">¶</a></h3>
+<p>.c-str() existe aussi chez ARDUINO</p>
 <hr class="docutils" />
-</div>
-<div class="section" id="uml">
-<span id="index-20"></span><h2><a class="toc-backref" href="#sommaire">UML</a><a class="headerlink" href="#uml" title="Lien permanent vers ce titre">¶</a></h2>
+</section>
+</section>
+<section id="uml">
+<span id="index-21"></span><h2><a class="toc-backref" href="#sommaire" role="doc-backlink">UML</a><a class="headerlink" href="#uml" title="Lien permanent vers cette rubrique">¶</a></h2>
 <p>Pour le moment tout est dans le fichier Freemind cpp-notes (voir dossier projet IotEps - essais ModelIO)</p>
 <p>ModelIo vite abandonnée.</p>
-<p><a class="reference external" href="https://www.uml-diagrams.org/">Site sur les diagrammes UML</a> <a class="footnote-reference brackets" href="#id24" id="id25">12</a></p>
-<div class="section" id="plantuml">
-<span id="plantumlref"></span><span id="index-21"></span><h3><a class="toc-backref" href="#sommaire">PlantUML</a><a class="headerlink" href="#plantuml" title="Lien permanent vers ce titre">¶</a></h3>
+<p><a class="reference external" href="https://www.uml-diagrams.org/">Site sur les diagrammes UML</a> <a class="footnote-reference brackets" href="#id24" id="id25" role="doc-noteref"><span class="fn-bracket">[</span>12<span class="fn-bracket">]</span></a></p>
+<section id="plantuml">
+<span id="plantumlref"></span><span id="index-22"></span><h3><a class="toc-backref" href="#sommaire" role="doc-backlink">PlantUML</a><a class="headerlink" href="#plantuml" title="Lien permanent vers cette rubrique">¶</a></h3>
 <p>Utilisé sur Electrical Power Strip IoT</p>
-<p><a class="reference external" href="https://plantuml.com/fr/">Site officiel de PlantUML</a> <a class="footnote-reference brackets" href="#id26" id="id27">13</a></p>
+<p><a class="reference external" href="https://plantuml.com/fr/">Site officiel de PlantUML</a> <a class="footnote-reference brackets" href="#id26" id="id27" role="doc-noteref"><span class="fn-bracket">[</span>13<span class="fn-bracket">]</span></a></p>
 <p>PlantUML est surtout un langage de description comme le dot de Graphviz. D’ailleurs si on veut</p>
 <p>utiliser l’intégralité des graphiques listés, il faut avoir Graphviz installé ;-)</p>
-<p id="index-22"><a class="reference external" href="https://graphviz.org/">site officiel de GraphViz</a> <a class="footnote-reference brackets" href="#id28" id="id29">14</a> La doc est en ligne. Voir aussi <a class="reference internal" href="../sphinx/sphinx.html#graphviz-intosphinx"><span class="std std-ref">Grphviz dans Spnix</span></a></p>
+<p id="index-23"><a class="reference external" href="https://graphviz.org/">site officiel de GraphViz</a> <a class="footnote-reference brackets" href="#id28" id="id29" role="doc-noteref"><span class="fn-bracket">[</span>14<span class="fn-bracket">]</span></a> La doc est en ligne. Voir aussi <a class="reference internal" href="../sphinx/sphinx.html#graphviz-intosphinx"><span class="std std-ref">Grphviz dans Spnix</span></a></p>
 <p>Il y a évidement des extension Visual Studio Code ;-)</p>
 <p>Celle-ci est particulièrement utile car elle permet de visualiser en même temps qu’on écrit avec alt+d</p>
 <p>Rich PlantUML support for Visual Studio Code.</p>
-<p>Le <a class="reference download internal" download="" href="../_downloads/ce10494cef78726b363b50fb4f70cb17/PlantUML_Language_Reference_Guide_fr.pdf"><code class="xref download docutils literal notranslate"><span class="pre">guide</span> <span class="pre">du</span> <span class="pre">langage</span> <span class="pre">existe</span> <span class="pre">en</span> <span class="pre">pdf</span> <span class="pre">fr</span></code></a>.</p>
+<p>Le <a class="reference download internal" download="" href="../_downloads/b751874659edfaa9373f6b4bf02bc30a/PlantUML_Language_Reference_Guide_fr.pdf"><code class="xref download docutils literal notranslate"><span class="pre">guide</span> <span class="pre">du</span> <span class="pre">langage</span> <span class="pre">existe</span> <span class="pre">en</span> <span class="pre">pdf</span> <span class="pre">fr</span></code></a>.</p>
 <p>citation:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">PlantUML</span> <span class="n">est</span> <span class="n">un</span> <span class="n">composant</span> <span class="n">qui</span> <span class="n">permet</span> <span class="n">de</span> <span class="n">dessiner</span> <span class="n">rapidement</span> <span class="n">des</span><span class="p">:</span>
     <span class="n">diagrammes</span> <span class="n">de</span> <span class="n">séquence</span>
@@ -803,77 +839,95 @@ arduino</p>
 fichier .jar</p>
 <p>Le lancemet est brutal, pas de fioritures!</p>
 <a class="reference internal image-reference" href="../_images/plantUMLstartUpScreen.JPG"><img alt="../_images/plantUMLstartUpScreen.JPG" src="../_images/plantUMLstartUpScreen.JPG" style="width: 300px;" /></a>
-<p>Il existe de nombreux outils en ligne pour expérimenter comme <a class="reference external" href="https://www.planttext.com/">planttext.com</a> <a class="footnote-reference brackets" href="#id30" id="id31">15</a></p>
-</div>
-</div>
-<div class="section" id="ast-abstract-syntax-trees">
-<span id="abstractsyntaxtrees"></span><h2><a class="toc-backref" href="#sommaire">AST Abstract Syntax Trees</a><a class="headerlink" href="#ast-abstract-syntax-trees" title="Lien permanent vers ce titre">¶</a></h2>
-<p><a class="reference external" href="https://fr.wikipedia.org/wiki/Arbre_de_la_syntaxe_abstraite">AST sur wikipédia</a> <a class="footnote-reference brackets" href="#id32" id="id33">16</a></p>
+<p>Il existe de nombreux outils en ligne pour expérimenter comme <a class="reference external" href="https://www.planttext.com/">planttext.com</a> <a class="footnote-reference brackets" href="#id30" id="id31" role="doc-noteref"><span class="fn-bracket">[</span>15<span class="fn-bracket">]</span></a></p>
+</section>
+</section>
+<section id="ast-abstract-syntax-trees">
+<span id="abstractsyntaxtrees"></span><h2><a class="toc-backref" href="#sommaire" role="doc-backlink">AST Abstract Syntax Trees</a><a class="headerlink" href="#ast-abstract-syntax-trees" title="Lien permanent vers cette rubrique">¶</a></h2>
+<p><a class="reference external" href="https://fr.wikipedia.org/wiki/Arbre_de_la_syntaxe_abstraite">AST sur wikipédia</a> <a class="footnote-reference brackets" href="#id32" id="id33" role="doc-noteref"><span class="fn-bracket">[</span>16<span class="fn-bracket">]</span></a></p>
 <p>Serait un moyen possible pour tenter de documenter du code…</p>
-</div>
-<div class="section" id="weblinks">
-<h2><a class="toc-backref" href="#sommaire">Weblinks</a><a class="headerlink" href="#weblinks" title="Lien permanent vers ce titre">¶</a></h2>
-<dl class="footnote brackets">
-<dt class="label" id="id2"><span class="brackets"><a class="fn-backref" href="#id3">1</a></span></dt>
-<dd><p><a class="reference external" href="https://openclassrooms.com/fr/courses/1894236-programmez-avec-le-langage-c">https://openclassrooms.com/fr/courses/1894236-programmez-avec-le-langage-c</a></p>
-</dd>
-<dt class="label" id="id4"><span class="brackets"><a class="fn-backref" href="#id5">2</a></span></dt>
-<dd><p><a class="reference external" href="https://cpp.developpez.com/cours/">https://cpp.developpez.com/cours/</a></p>
-</dd>
-<dt class="label" id="id6"><span class="brackets"><a class="fn-backref" href="#id7">3</a></span></dt>
-<dd><p><a class="reference external" href="https://bruce-eckel.developpez.com/livres/cpp/traduction/ticpp2vol1/">https://bruce-eckel.developpez.com/livres/cpp/traduction/ticpp2vol1/</a></p>
-</dd>
-<dt class="label" id="id8"><span class="brackets"><a class="fn-backref" href="#id9">4</a></span></dt>
-<dd><p><a class="reference external" href="https://www.developpez.net/forums/d1847623/c-cpp/cpp/debuter/integrer-classe-classe/">https://www.developpez.net/forums/d1847623/c-cpp/cpp/debuter/integrer-classe-classe/</a></p>
-</dd>
-<dt class="label" id="id10"><span class="brackets"><a class="fn-backref" href="#id11">5</a></span></dt>
-<dd><p><a class="reference external" href="https://google.github.io/styleguide/cppguide.html">https://google.github.io/styleguide/cppguide.html</a></p>
-</dd>
-<dt class="label" id="id12"><span class="brackets"><a class="fn-backref" href="#id13">6</a></span></dt>
-<dd><p><a class="reference external" href="https://docs.microsoft.com/fr-fr/cpp/cpp/namespaces-cpp?view=vs-2019">https://docs.microsoft.com/fr-fr/cpp/cpp/namespaces-cpp?view=vs-2019</a></p>
-</dd>
-<dt class="label" id="id14"><span class="brackets"><a class="fn-backref" href="#id15">7</a></span></dt>
-<dd><p><a class="reference external" href="https://cpp.developpez.com/faq/cpp/?page=Les-namespaces">https://cpp.developpez.com/faq/cpp/?page=Les-namespaces</a></p>
-</dd>
-<dt class="label" id="id16"><span class="brackets"><a class="fn-backref" href="#id17">8</a></span></dt>
-<dd><p><a class="reference external" href="https://openclassrooms.com/fr/courses/1894236-programmez-avec-le-langage-c/1903999-creez-des-templates">https://openclassrooms.com/fr/courses/1894236-programmez-avec-le-langage-c/1903999-creez-des-templates</a></p>
-</dd>
-<dt class="label" id="id18"><span class="brackets"><a class="fn-backref" href="#id19">9</a></span></dt>
-<dd><p><a class="reference external" href="https://openclassrooms.com/fr/courses/1894236-programmez-avec-le-langage-c/1898632-mettez-en-oeuvre-le-polymorphisme#/id/r-1908359">https://openclassrooms.com/fr/courses/1894236-programmez-avec-le-langage-c/1898632-mettez-en-oeuvre-le-polymorphisme#/id/r-1908359</a></p>
-</dd>
-<dt class="label" id="id20"><span class="brackets"><a class="fn-backref" href="#id21">10</a></span></dt>
-<dd><p><a class="reference external" href="https://openclassrooms.com/fr/courses/1894236-programmez-avec-le-langage-c/1898734-utilisez-les-elements-statiques-et-lamitie#/id/r-1908555">https://openclassrooms.com/fr/courses/1894236-programmez-avec-le-langage-c/1898734-utilisez-les-elements-statiques-et-lamitie#/id/r-1908555</a></p>
-</dd>
-<dt class="label" id="id22"><span class="brackets"><a class="fn-backref" href="#id23">11</a></span></dt>
-<dd><p><a class="reference external" href="https://fr.cppreference.com/w/cpp/container/vector">https://fr.cppreference.com/w/cpp/container/vector</a></p>
-</dd>
-<dt class="label" id="id24"><span class="brackets"><a class="fn-backref" href="#id25">12</a></span></dt>
-<dd><p><a class="reference external" href="https://www.uml-diagrams.org/">https://www.uml-diagrams.org/</a></p>
-</dd>
-<dt class="label" id="id26"><span class="brackets"><a class="fn-backref" href="#id27">13</a></span></dt>
-<dd><p><a class="reference external" href="https://plantuml.com/fr/">https://plantuml.com/fr/</a></p>
-</dd>
-<dt class="label" id="id28"><span class="brackets"><a class="fn-backref" href="#id29">14</a></span></dt>
-<dd><p><a class="reference external" href="https://graphviz.org/">https://graphviz.org/</a></p>
-</dd>
-<dt class="label" id="id30"><span class="brackets"><a class="fn-backref" href="#id31">15</a></span></dt>
-<dd><p><a class="reference external" href="https://www.planttext.com/">https://www.planttext.com/</a></p>
-</dd>
-<dt class="label" id="id32"><span class="brackets"><a class="fn-backref" href="#id33">16</a></span></dt>
-<dd><p><a class="reference external" href="https://fr.wikipedia.org/wiki/Arbre_de_la_syntaxe_abstraite">https://fr.wikipedia.org/wiki/Arbre_de_la_syntaxe_abstraite</a></p>
-</dd>
-</dl>
-</div>
-</div>
+</section>
+<section id="weblinks">
+<h2><a class="toc-backref" href="#sommaire" role="doc-backlink">Weblinks</a><a class="headerlink" href="#weblinks" title="Lien permanent vers cette rubrique">¶</a></h2>
+<aside class="footnote-list brackets">
+<aside class="footnote brackets" id="id2" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id3">1</a><span class="fn-bracket">]</span></span>
+<p><a class="reference external" href="https://openclassrooms.com/fr/courses/1894236-programmez-avec-le-langage-c">https://openclassrooms.com/fr/courses/1894236-programmez-avec-le-langage-c</a></p>
+</aside>
+<aside class="footnote brackets" id="id4" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id5">2</a><span class="fn-bracket">]</span></span>
+<p><a class="reference external" href="https://cpp.developpez.com/cours/">https://cpp.developpez.com/cours/</a></p>
+</aside>
+<aside class="footnote brackets" id="id6" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id7">3</a><span class="fn-bracket">]</span></span>
+<p><a class="reference external" href="https://bruce-eckel.developpez.com/livres/cpp/traduction/ticpp2vol1/">https://bruce-eckel.developpez.com/livres/cpp/traduction/ticpp2vol1/</a></p>
+</aside>
+<aside class="footnote brackets" id="id8" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id9">4</a><span class="fn-bracket">]</span></span>
+<p><a class="reference external" href="https://www.developpez.net/forums/d1847623/c-cpp/cpp/debuter/integrer-classe-classe/">https://www.developpez.net/forums/d1847623/c-cpp/cpp/debuter/integrer-classe-classe/</a></p>
+</aside>
+<aside class="footnote brackets" id="id10" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id11">5</a><span class="fn-bracket">]</span></span>
+<p><a class="reference external" href="https://google.github.io/styleguide/cppguide.html">https://google.github.io/styleguide/cppguide.html</a></p>
+</aside>
+<aside class="footnote brackets" id="id12" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id13">6</a><span class="fn-bracket">]</span></span>
+<p><a class="reference external" href="https://docs.microsoft.com/fr-fr/cpp/cpp/namespaces-cpp?view=vs-2019">https://docs.microsoft.com/fr-fr/cpp/cpp/namespaces-cpp?view=vs-2019</a></p>
+</aside>
+<aside class="footnote brackets" id="id14" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id15">7</a><span class="fn-bracket">]</span></span>
+<p><a class="reference external" href="https://cpp.developpez.com/faq/cpp/?page=Les-namespaces">https://cpp.developpez.com/faq/cpp/?page=Les-namespaces</a></p>
+</aside>
+<aside class="footnote brackets" id="id16" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id17">8</a><span class="fn-bracket">]</span></span>
+<p><a class="reference external" href="https://openclassrooms.com/fr/courses/1894236-programmez-avec-le-langage-c/1903999-creez-des-templates">https://openclassrooms.com/fr/courses/1894236-programmez-avec-le-langage-c/1903999-creez-des-templates</a></p>
+</aside>
+<aside class="footnote brackets" id="id18" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id19">9</a><span class="fn-bracket">]</span></span>
+<p><a class="reference external" href="https://openclassrooms.com/fr/courses/1894236-programmez-avec-le-langage-c/1898632-mettez-en-oeuvre-le-polymorphisme#/id/r-1908359">https://openclassrooms.com/fr/courses/1894236-programmez-avec-le-langage-c/1898632-mettez-en-oeuvre-le-polymorphisme#/id/r-1908359</a></p>
+</aside>
+<aside class="footnote brackets" id="id20" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id21">10</a><span class="fn-bracket">]</span></span>
+<p><a class="reference external" href="https://openclassrooms.com/fr/courses/1894236-programmez-avec-le-langage-c/1898734-utilisez-les-elements-statiques-et-lamitie#/id/r-1908555">https://openclassrooms.com/fr/courses/1894236-programmez-avec-le-langage-c/1898734-utilisez-les-elements-statiques-et-lamitie#/id/r-1908555</a></p>
+</aside>
+<aside class="footnote brackets" id="id22" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id23">11</a><span class="fn-bracket">]</span></span>
+<p><a class="reference external" href="https://fr.cppreference.com/w/cpp/container/vector">https://fr.cppreference.com/w/cpp/container/vector</a></p>
+</aside>
+<aside class="footnote brackets" id="id24" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id25">12</a><span class="fn-bracket">]</span></span>
+<p><a class="reference external" href="https://www.uml-diagrams.org/">https://www.uml-diagrams.org/</a></p>
+</aside>
+<aside class="footnote brackets" id="id26" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id27">13</a><span class="fn-bracket">]</span></span>
+<p><a class="reference external" href="https://plantuml.com/fr/">https://plantuml.com/fr/</a></p>
+</aside>
+<aside class="footnote brackets" id="id28" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id29">14</a><span class="fn-bracket">]</span></span>
+<p><a class="reference external" href="https://graphviz.org/">https://graphviz.org/</a></p>
+</aside>
+<aside class="footnote brackets" id="id30" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id31">15</a><span class="fn-bracket">]</span></span>
+<p><a class="reference external" href="https://www.planttext.com/">https://www.planttext.com/</a></p>
+</aside>
+<aside class="footnote brackets" id="id32" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id33">16</a><span class="fn-bracket">]</span></span>
+<p><a class="reference external" href="https://fr.wikipedia.org/wiki/Arbre_de_la_syntaxe_abstraite">https://fr.wikipedia.org/wiki/Arbre_de_la_syntaxe_abstraite</a></p>
+</aside>
+</aside>
+</section>
+</section>
 
 
+            <div class="clearer"></div>
           </div>
         </div>
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-  <h3><a href="../index.html">Table des matières</a></h3>
-  <ul>
+  <div>
+    <h3><a href="../index.html">Table des matières</a></h3>
+    <ul>
 <li><a class="reference internal" href="#">Mes notes sur C++</a><ul>
 <li><a class="reference internal" href="#classe-membre-d-une-autre-classe">Classe membre d’une autre classe</a></li>
 <li><a class="reference internal" href="#rappels-eventuels-du-c">Rappels éventuels du C</a><ul>
@@ -923,6 +977,12 @@ fichier .jar</p>
 <li><a class="reference internal" href="#smart-pointer">Smart pointer</a></li>
 <li><a class="reference internal" href="#callback-how-to">callback how to</a></li>
 <li><a class="reference internal" href="#doxygen-avec-arduino">Doxygen avec Arduino</a></li>
+<li><a class="reference internal" href="#string-et-char-tbc-au-26-10-24">String et char [] <strong>TBC au 26/10/24</strong></a><ul>
+<li><a class="reference internal" href="#taille-d-un-chaine">Taille d’un chaîne</a></li>
+<li><a class="reference internal" href="#trouver">trouver</a></li>
+<li><a class="reference internal" href="#c-str-to-string-et-inversement">c_str to String et inversement</a></li>
+</ul>
+</li>
 <li><a class="reference internal" href="#uml">UML</a><ul>
 <li><a class="reference internal" href="#plantuml">PlantUML</a></li>
 </ul>
@@ -933,12 +993,17 @@ fichier .jar</p>
 </li>
 </ul>
 
-  <h4>Sujet précédent</h4>
-  <p class="topless"><a href="../hardware/nucleo/nucleo.html"
-                        title="Chapitre précédent">NUCLEO board *</a></p>
-  <h4>Sujet suivant</h4>
-  <p class="topless"><a href="visualCpp/visual.html"
-                        title="Chapitre suivant">Note concernant Visal C++ 2013 *</a></p>
+  </div>
+  <div>
+    <h4>Sujet précédent</h4>
+    <p class="topless"><a href="../hardware/nucleo/nucleo.html"
+                          title="Chapitre précédent">NUCLEO board *</a></p>
+  </div>
+  <div>
+    <h4>Sujet suivant</h4>
+    <p class="topless"><a href="visualCpp/visual.html"
+                          title="Chapitre suivant">Note concernant Visal C++ 2013 *</a></p>
+  </div>
   <div role="note" aria-label="source link">
     <h3>Cette page</h3>
     <ul class="this-page-menu">
@@ -950,12 +1015,12 @@ fichier .jar</p>
   <h3 id="searchlabel">Recherche rapide</h3>
     <div class="searchformwrapper">
     <form class="search" action="../search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
       <input type="submit" value="Go" />
     </form>
     </div>
 </div>
-<script>$('#searchbox').show(0);</script>
+<script>document.getElementById('searchbox').style.display = "block"</script>
         </div>
       </div>
       <div class="clearer"></div>
@@ -972,12 +1037,13 @@ fichier .jar</p>
         <li class="right" >
           <a href="../hardware/nucleo/nucleo.html" title="NUCLEO board *"
              >précédent</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">Documentation MajorLee&#39;s notes </a> &#187;</li> 
+        <li class="nav-item nav-item-0"><a href="../index.html">Documentation MajorLee&#39;s notes </a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Mes notes sur C++</a></li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2019, J.SORANZO.
-      Créé avec <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.4.
+    &#169; Copyright 2019, J.SORANZO.
+      Créé en utilisant <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.1.2.
     </div>
   </body>
 </html>

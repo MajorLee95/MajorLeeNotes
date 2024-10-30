@@ -26,6 +26,7 @@ Bienvenue dans les notes de  MajorLee's
    arduino/arduino
    reseauInternet/reseauInternet
    rtos/rtos.rst
+   mesProjets/mesProjets
    glossaire
    Readme
 
